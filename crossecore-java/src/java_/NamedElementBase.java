@@ -1,0 +1,114 @@
+package java_;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.notify.impl.NotificationImpl;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.*;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+public class NamedElementBase 
+extends ASTNodeImpl implements NamedElement
+{
+	private java.lang.String _name = "";
+	public java.lang.String getName()
+	{
+		return _name;
+	}
+	public void setName(java.lang.String value){
+		
+		java.lang.String oldValue = _name;
+		_name = value;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.NAMEDELEMENT_NAME, oldValue, value));
+		
+	}
+	
+	private boolean _proxy = false;
+	public boolean isProxy()
+	{
+		return _proxy;
+	}
+	public void setProxy(boolean value){
+		
+		boolean oldValue = _proxy;
+		_proxy = value;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.NAMEDELEMENT_PROXY, oldValue, value));
+		
+	}
+	
+	/*
+	@Override
+	public boolean isProxy() {
+		//return this.eGet();
+		
+		return false;
+	}
+	*/
+	private Ocllib.Set<ImportDeclaration> _usagesInImports;
+	
+	public Ocllib.Set<ImportDeclaration> getUsagesInImports()
+	{
+		if(_usagesInImports==null){
+			_usagesInImports = new Ocllib.Set<ImportDeclaration>(ImportDeclaration.class, this, Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS, Java_PackageImpl.IMPORTDECLARATION_IMPORTEDELEMENT);
+		}
+		return _usagesInImports;
+	
+	}
+
+	
+	@Override
+	protected EClass eStaticClass() {
+		return Java_PackageImpl.Literals.NAMEDELEMENT;
+	}
+	
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS:
+				return getUsagesInImports().basicAdd((ImportDeclaration)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+	
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS:
+				return getUsagesInImports().basicRemove((ImportDeclaration)otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+	
+	
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case Java_PackageImpl.NAMEDELEMENT_NAME:
+				return getName();
+			case Java_PackageImpl.NAMEDELEMENT_PROXY:
+				return isProxy();
+			case Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS:
+				return getUsagesInImports();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+	
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case Java_PackageImpl.NAMEDELEMENT_NAME:
+				setName((java.lang.String) newValue);
+				return;
+			case Java_PackageImpl.NAMEDELEMENT_PROXY:
+				setProxy((boolean) newValue);
+				return;
+			case Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS:
+				getUsagesInImports().clear();
+				getUsagesInImports().addAll((java.util.Collection<? extends ImportDeclaration>) newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+	
+	
+}
