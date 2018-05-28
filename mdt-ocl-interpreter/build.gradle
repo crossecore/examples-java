@@ -1,0 +1,61 @@
+
+apply plugin: 'java-library'
+apply plugin: 'eclipse'
+
+repositories {
+
+    jcenter()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+    
+    test {
+        java {
+            srcDir 'test'
+        }
+    }
+
+}
+
+dependencies {
+    compile group: 'lpg.runtime', name: 'java', version: '2.0.17-v201004271640'    
+
+	compile group: 'com.google.guava', name: 'guava', version: '23.0'
+	compile group: 'com.google.inject', name: 'guice', version: '4.2.0'
+
+	compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.0'
+	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.0'
+	//compile group: 'org.apache.logging.log4j', name: 'log4j-1.2-api', version: '2.11.0'
+	//compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.11.0'
+	//compile group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: '2.11.0'
+	//compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+
+    compile group: 'org.eclipse.emf', name: 'org.eclipse.emf.ecore', version: '2.12.0'
+    compile group: 'org.eclipse.emf', name: 'org.eclipse.emf.ecore.xmi', version: '2.12.0'
+    compile group: 'org.eclipse.emf', name: 'org.eclipse.emf.common', version: '2.12.0'
+    compile group: 'org.eclipse.emf', name: 'org.eclipse.emf.edit', version: '2.12.0'
+    
+    compile group: 'org.eclipse.xtext', name: 'org.eclipse.xtext.xbase.lib', version: '2.13.0'
+    compile group: 'org.eclipse.xtext', name: 'org.eclipse.xtext', version: '2.13.0'
+    compile group: 'org.eclipse.xtext', name: 'org.eclipse.xtext.common.types', version: '2.13.0'
+    compile group: 'org.eclipse.xtext', name: 'org.eclipse.xtext.util', version: '2.13.0'
+    
+    //https://hudson.eclipse.org/ocl/view/OCL/job/ocl-oxygen-master/lastBuild/artifact/MDT-OCL.p2.repository/plugins/
+    compile files('lib/org.eclipse.ocl_3.6.200.v20170522-1736.jar')
+    compile files('lib/org.eclipse.ocl.common_1.4.200.v20160613-1518.jar')
+    compile files('lib/org.eclipse.ocl.ecore_3.6.200.v20170522-1736.jar')
+    compile files('lib/org.eclipse.ocl.pivot_1.3.0.v20170522-1753.jar')
+    compile files('lib/org.eclipse.ocl.xtext.base_1.3.0.v20170522-1753.jar')
+    compile files('lib/org.eclipse.ocl.xtext.completeocl_1.3.0.v20170522-1753.jar')
+    compile files('lib/org.eclipse.ocl.xtext.essentialocl_1.3.0.v20170522-1753.jar')
+    compile files('lib/org.eclipse.ocl.xtext.oclinecore_1.3.0.v20170522-1753.jar')
+    compile files('lib/org.eclipse.ocl.xtext.oclstdlib_1.3.0.v20170522-1753.jar')
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
