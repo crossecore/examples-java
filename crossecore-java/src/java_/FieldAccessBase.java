@@ -121,5 +121,17 @@ extends ExpressionImpl implements FieldAccess
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.FIELDACCESS_FIELD:
+				return _field != null; //single != null;
+			case Java_PackageImpl.FIELDACCESS_EXPRESSION:
+				return _expression != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

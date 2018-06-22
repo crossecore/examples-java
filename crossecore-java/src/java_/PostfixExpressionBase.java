@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class PostfixExpressionBase 
 extends ExpressionImpl implements PostfixExpression
 {
-	private PostfixExpressionKind _operator = PostfixExpressionKind.INCREMENT;
+	protected static final PostfixExpressionKind OPERATOR_EDEFAULT = PostfixExpressionKind.INCREMENT;
+	private PostfixExpressionKind _operator = OPERATOR_EDEFAULT;
 	public PostfixExpressionKind getOperator()
 	{
 		return _operator;
@@ -21,6 +22,8 @@ extends ExpressionImpl implements PostfixExpression
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.POSTFIXEXPRESSION_OPERATOR, oldValue, value));
 		
 	}
+	
+	
 	
 	private Expression _operand;
 	public Expression getOperand()
@@ -94,6 +97,18 @@ extends ExpressionImpl implements PostfixExpression
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.POSTFIXEXPRESSION_OPERATOR:
+				return OPERATOR_EDEFAULT == null ? _operator != null : !OPERATOR_EDEFAULT.equals(_operator);
+			case Java_PackageImpl.POSTFIXEXPRESSION_OPERAND:
+				return _operand != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

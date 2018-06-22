@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class AssignmentBase 
 extends ExpressionImpl implements Assignment
 {
-	private AssignmentKind _operator = AssignmentKind.ASSIGN;
+	protected static final AssignmentKind OPERATOR_EDEFAULT = AssignmentKind.ASSIGN;
+	private AssignmentKind _operator = OPERATOR_EDEFAULT;
 	public AssignmentKind getOperator()
 	{
 		return _operator;
@@ -21,6 +22,8 @@ extends ExpressionImpl implements Assignment
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.ASSIGNMENT_OPERATOR, oldValue, value));
 		
 	}
+	
+	
 	
 	private Expression _leftHandSide;
 	public Expression getLeftHandSide()
@@ -114,10 +117,10 @@ extends ExpressionImpl implements Assignment
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
-				return getLeftHandSide();
 			case Java_PackageImpl.ASSIGNMENT_OPERATOR:
 				return getOperator();
+			case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
+				return getLeftHandSide();
 			case Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE:
 				return getRightHandSide();
 		}
@@ -127,11 +130,11 @@ extends ExpressionImpl implements Assignment
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
-				setLeftHandSide((Expression) newValue);
-				return;
 			case Java_PackageImpl.ASSIGNMENT_OPERATOR:
 				setOperator((AssignmentKind) newValue);
+				return;
+			case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
+				setLeftHandSide((Expression) newValue);
 				return;
 			case Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE:
 				setRightHandSide((Expression) newValue);
@@ -139,6 +142,20 @@ extends ExpressionImpl implements Assignment
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ASSIGNMENT_OPERATOR:
+				return OPERATOR_EDEFAULT == null ? _operator != null : !OPERATOR_EDEFAULT.equals(_operator);
+			case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
+				return _leftHandSide != null; //single != null;
+			case Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE:
+				return _rightHandSide != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

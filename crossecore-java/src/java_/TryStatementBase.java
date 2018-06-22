@@ -137,5 +137,19 @@ extends StatementImpl implements TryStatement
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.TRYSTATEMENT_BODY:
+				return _body != null; //single != null;
+			case Java_PackageImpl.TRYSTATEMENT_FINALLY:
+				return _finally != null; //single != null;
+			case Java_PackageImpl.TRYSTATEMENT_CATCHCLAUSES:
+				return _catchClauses != null && !_catchClauses.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

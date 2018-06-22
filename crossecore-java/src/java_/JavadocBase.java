@@ -47,5 +47,15 @@ extends CommentImpl implements Javadoc
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.JAVADOC_TAGS:
+				return _tags != null && !_tags.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

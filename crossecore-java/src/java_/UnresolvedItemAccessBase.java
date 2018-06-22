@@ -110,5 +110,37 @@ extends ExpressionImpl implements UnresolvedItemAccess
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.UNRESOLVEDITEMACCESS_ELEMENT:
+				return getElement() != null; //single, volatile
+			case Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER:
+				return _qualifier != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == NamespaceAccess.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+	
+				
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == NamespaceAccess.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+	
 	
 }

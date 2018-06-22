@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ManifestEntryBase 
 extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements ManifestEntry
 {
-	private java.lang.String _name = "";
+	protected static final java.lang.String NAME_EDEFAULT = "";
+	private java.lang.String _name = NAME_EDEFAULT;
 	public java.lang.String getName()
 	{
 		return _name;
@@ -21,6 +22,8 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.MANIFESTENTRY_NAME, oldValue, value));
 		
 	}
+	
+	
 	
 	private Ocllib.Set<ManifestAttribute> _attributes;
 	
@@ -65,6 +68,18 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.MANIFESTENTRY_NAME:
+				return NAME_EDEFAULT == null ? _name != null : !NAME_EDEFAULT.equals(_name);
+			case Java_PackageImpl.MANIFESTENTRY_ATTRIBUTES:
+				return _attributes != null && !_attributes.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

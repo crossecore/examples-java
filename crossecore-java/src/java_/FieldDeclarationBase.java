@@ -87,6 +87,10 @@ extends BodyDeclarationImpl implements FieldDeclaration
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Java_PackageImpl.FIELDDECLARATION_TYPE:
+				return getType();
+			case Java_PackageImpl.FIELDDECLARATION_FRAGMENTS:
+				return getFragments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -94,8 +98,51 @@ extends BodyDeclarationImpl implements FieldDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Java_PackageImpl.FIELDDECLARATION_TYPE:
+				setType((TypeAccess) newValue);
+				return;
+			case Java_PackageImpl.FIELDDECLARATION_FRAGMENTS:
+				getFragments().clear();
+				getFragments().addAll((java.util.Collection<? extends VariableDeclarationFragment>) newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
+	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.FIELDDECLARATION_TYPE:
+				return _type != null; //single != null;
+			case Java_PackageImpl.FIELDDECLARATION_FRAGMENTS:
+				return _fragments != null && !_fragments.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == AbstractVariablesContainer.class) {
+			switch (derivedFeatureID) {
+				case Java_PackageImpl.FIELDDECLARATION_TYPE: return Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE;
+				case Java_PackageImpl.FIELDDECLARATION_FRAGMENTS: return Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+	
+				
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == AbstractVariablesContainer.class) {
+			switch (baseFeatureID) {
+				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE: return Java_PackageImpl.FIELDDECLARATION_TYPE;
+				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS: return Java_PackageImpl.FIELDDECLARATION_FRAGMENTS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 	
 	

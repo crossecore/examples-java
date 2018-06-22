@@ -31,5 +31,33 @@ extends VariableDeclarationFragmentImpl implements UnresolvedVariableDeclaration
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == UnresolvedItem.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+	
+				
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == UnresolvedItem.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+	
 	
 }

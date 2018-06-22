@@ -154,5 +154,19 @@ extends BodyDeclarationImpl implements AnnotationTypeMemberDeclaration
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_DEFAULT:
+				return _default != null; //single != null;
+			case Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_TYPE:
+				return _type != null; //single != null;
+			case Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_USAGES:
+				return getUsages().isEmpty(); //many, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

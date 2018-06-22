@@ -64,5 +64,15 @@ extends NamedElementImpl implements Type
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.TYPE_USAGESINTYPEACCESS:
+				return getUsagesInTypeAccess().isEmpty(); //many, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

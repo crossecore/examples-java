@@ -92,5 +92,17 @@ extends ExpressionImpl implements Annotation
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ANNOTATION_TYPE:
+				return _type != null; //single != null;
+			case Java_PackageImpl.ANNOTATION_VALUES:
+				return _values != null && !_values.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

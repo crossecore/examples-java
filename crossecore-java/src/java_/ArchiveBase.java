@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ArchiveBase 
 extends NamedElementImpl implements Archive
 {
-	private java.lang.String _originalFilePath = "";
+	protected static final java.lang.String ORIGINALFILEPATH_EDEFAULT = "";
+	private java.lang.String _originalFilePath = ORIGINALFILEPATH_EDEFAULT;
 	public java.lang.String getOriginalFilePath()
 	{
 		return _originalFilePath;
@@ -21,6 +22,8 @@ extends NamedElementImpl implements Archive
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.ARCHIVE_ORIGINALFILEPATH, oldValue, value));
 		
 	}
+	
+	
 	
 	private Ocllib.Set<ClassFile> _classFiles;
 	
@@ -110,6 +113,20 @@ extends NamedElementImpl implements Archive
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ARCHIVE_ORIGINALFILEPATH:
+				return ORIGINALFILEPATH_EDEFAULT == null ? _originalFilePath != null : !ORIGINALFILEPATH_EDEFAULT.equals(_originalFilePath);
+			case Java_PackageImpl.ARCHIVE_CLASSFILES:
+				return _classFiles != null && !_classFiles.isEmpty();
+			case Java_PackageImpl.ARCHIVE_MANIFEST:
+				return _manifest != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

@@ -100,6 +100,12 @@ extends StatementImpl implements ConstructorInvocation
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Java_PackageImpl.CONSTRUCTORINVOCATION_METHOD:
+				return getMethod();
+			case Java_PackageImpl.CONSTRUCTORINVOCATION_ARGUMENTS:
+				return getArguments();
+			case Java_PackageImpl.CONSTRUCTORINVOCATION_TYPEARGUMENTS:
+				return getTypeArguments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +113,59 @@ extends StatementImpl implements ConstructorInvocation
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Java_PackageImpl.CONSTRUCTORINVOCATION_METHOD:
+				setMethod((AbstractMethodDeclaration) newValue);
+				return;
+			case Java_PackageImpl.CONSTRUCTORINVOCATION_ARGUMENTS:
+				getArguments().clear();
+				getArguments().addAll((java.util.Collection<? extends Expression>) newValue);
+				return;
+			case Java_PackageImpl.CONSTRUCTORINVOCATION_TYPEARGUMENTS:
+				getTypeArguments().clear();
+				getTypeArguments().addAll((java.util.Collection<? extends TypeAccess>) newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
+	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.CONSTRUCTORINVOCATION_METHOD:
+				return getMethod() != null; //single, volatile
+			case Java_PackageImpl.CONSTRUCTORINVOCATION_ARGUMENTS:
+				return _arguments != null && !_arguments.isEmpty();
+			case Java_PackageImpl.CONSTRUCTORINVOCATION_TYPEARGUMENTS:
+				return _typeArguments != null && !_typeArguments.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == AbstractMethodInvocation.class) {
+			switch (derivedFeatureID) {
+				case Java_PackageImpl.CONSTRUCTORINVOCATION_METHOD: return Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD;
+				case Java_PackageImpl.CONSTRUCTORINVOCATION_ARGUMENTS: return Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS;
+				case Java_PackageImpl.CONSTRUCTORINVOCATION_TYPEARGUMENTS: return Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+	
+				
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == AbstractMethodInvocation.class) {
+			switch (baseFeatureID) {
+				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD: return Java_PackageImpl.CONSTRUCTORINVOCATION_METHOD;
+				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS: return Java_PackageImpl.CONSTRUCTORINVOCATION_ARGUMENTS;
+				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS: return Java_PackageImpl.CONSTRUCTORINVOCATION_TYPEARGUMENTS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 	
 	

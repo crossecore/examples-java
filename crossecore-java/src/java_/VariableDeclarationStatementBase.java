@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class VariableDeclarationStatementBase 
 extends StatementImpl implements VariableDeclarationStatement
 {
-	private int _extraArrayDimensions = 0;
+	protected static final int EXTRAARRAYDIMENSIONS_EDEFAULT = 0;
+	private int _extraArrayDimensions = EXTRAARRAYDIMENSIONS_EDEFAULT;
 	public int getExtraArrayDimensions()
 	{
 		return _extraArrayDimensions;
@@ -21,6 +22,8 @@ extends StatementImpl implements VariableDeclarationStatement
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS, oldValue, value));
 		
 	}
+	
+	
 	
 	private TypeAccess _type;
 	public TypeAccess getType()
@@ -160,6 +163,10 @@ extends StatementImpl implements VariableDeclarationStatement
 		switch (featureID) {
 			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS:
 				return getExtraArrayDimensions();
+			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_TYPE:
+				return getType();
+			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
+				return getFragments();
 			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER:
 				return getModifier();
 			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_ANNOTATIONS:
@@ -174,6 +181,13 @@ extends StatementImpl implements VariableDeclarationStatement
 			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS:
 				setExtraArrayDimensions((int) newValue);
 				return;
+			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_TYPE:
+				setType((TypeAccess) newValue);
+				return;
+			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
+				getFragments().clear();
+				getFragments().addAll((java.util.Collection<? extends VariableDeclarationFragment>) newValue);
+				return;
 			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER:
 				setModifier((Modifier) newValue);
 				return;
@@ -183,6 +197,48 @@ extends StatementImpl implements VariableDeclarationStatement
 				return;
 		}
 		super.eSet(featureID, newValue);
+	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS:
+				return _extraArrayDimensions != EXTRAARRAYDIMENSIONS_EDEFAULT;
+			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_TYPE:
+				return _type != null; //single != null;
+			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
+				return _fragments != null && !_fragments.isEmpty();
+			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER:
+				return _modifier != null; //single != null;
+			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_ANNOTATIONS:
+				return _annotations != null && !_annotations.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == AbstractVariablesContainer.class) {
+			switch (derivedFeatureID) {
+				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_TYPE: return Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE;
+				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS: return Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+	
+				
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == AbstractVariablesContainer.class) {
+			switch (baseFeatureID) {
+				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE: return Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_TYPE;
+				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS: return Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 	
 	

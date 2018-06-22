@@ -76,5 +76,15 @@ extends TypeDeclarationImpl implements ClassDeclaration
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.CLASSDECLARATION_SUPERCLASS:
+				return _superClass != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

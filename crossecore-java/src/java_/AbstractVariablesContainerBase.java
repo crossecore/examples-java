@@ -109,5 +109,17 @@ extends ASTNodeImpl implements AbstractVariablesContainer
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE:
+				return _type != null; //single != null;
+			case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS:
+				return _fragments != null && !_fragments.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

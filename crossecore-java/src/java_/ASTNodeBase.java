@@ -115,5 +115,19 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements ASTNo
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ASTNODE_COMMENTS:
+				return _comments != null && !_comments.isEmpty();
+			case Java_PackageImpl.ASTNODE_ORIGINALCOMPILATIONUNIT:
+				return getOriginalCompilationUnit() != null; //single, volatile
+			case Java_PackageImpl.ASTNODE_ORIGINALCLASSFILE:
+				return getOriginalClassFile() != null; //single, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

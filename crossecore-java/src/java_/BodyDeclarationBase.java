@@ -196,5 +196,21 @@ extends NamedElementImpl implements BodyDeclaration
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
+				return getAbstractTypeDeclaration() != null; //single, volatile
+			case Java_PackageImpl.BODYDECLARATION_ANNOTATIONS:
+				return _annotations != null && !_annotations.isEmpty();
+			case Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
+				return getAnonymousClassDeclarationOwner() != null; //single, volatile
+			case Java_PackageImpl.BODYDECLARATION_MODIFIER:
+				return _modifier != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

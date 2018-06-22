@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class MethodDeclarationBase 
 extends AbstractMethodDeclarationImpl implements MethodDeclaration
 {
-	private int _extraArrayDimensions = 0;
+	protected static final int EXTRAARRAYDIMENSIONS_EDEFAULT = 0;
+	private int _extraArrayDimensions = EXTRAARRAYDIMENSIONS_EDEFAULT;
 	public int getExtraArrayDimensions()
 	{
 		return _extraArrayDimensions;
@@ -21,6 +22,8 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.METHODDECLARATION_EXTRAARRAYDIMENSIONS, oldValue, value));
 		
 	}
+	
+	
 	
 	private TypeAccess _returnType;
 	public TypeAccess getReturnType()
@@ -179,6 +182,22 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.METHODDECLARATION_EXTRAARRAYDIMENSIONS:
+				return _extraArrayDimensions != EXTRAARRAYDIMENSIONS_EDEFAULT;
+			case Java_PackageImpl.METHODDECLARATION_RETURNTYPE:
+				return _returnType != null; //single != null;
+			case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
+				return getRedefinedMethodDeclaration() != null; //single, volatile
+			case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
+				return getRedefinitions().isEmpty(); //many, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

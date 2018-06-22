@@ -153,5 +153,21 @@ extends StatementImpl implements ForStatement
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.FORSTATEMENT_EXPRESSION:
+				return _expression != null; //single != null;
+			case Java_PackageImpl.FORSTATEMENT_UPDATERS:
+				return _updaters != null && !_updaters.isEmpty();
+			case Java_PackageImpl.FORSTATEMENT_INITIALIZERS:
+				return _initializers != null && !_initializers.isEmpty();
+			case Java_PackageImpl.FORSTATEMENT_BODY:
+				return _body != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

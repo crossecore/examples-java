@@ -47,5 +47,15 @@ extends StatementImpl implements Block
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.BLOCK_STATEMENTS:
+				return _statements != null && !_statements.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

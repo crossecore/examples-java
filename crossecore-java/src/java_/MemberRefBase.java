@@ -110,5 +110,17 @@ extends ASTNodeImpl implements MemberRef
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.MEMBERREF_MEMBER:
+				return getMember() != null; //single, volatile
+			case Java_PackageImpl.MEMBERREF_QUALIFIER:
+				return _qualifier != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

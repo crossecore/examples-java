@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ImportDeclarationBase 
 extends ASTNodeImpl implements ImportDeclaration
 {
-	private boolean _static = false;
+	protected static final boolean STATIC_EDEFAULT = false;
+	private boolean _static = STATIC_EDEFAULT;
 	public boolean isStatic()
 	{
 		return _static;
@@ -22,14 +23,8 @@ extends ASTNodeImpl implements ImportDeclaration
 		
 	}
 	
-	/*
-	@Override
-	public boolean isStatic() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
+	
+	
 	private NamedElement _importedElement;
 	public NamedElement getImportedElement()
 	{
@@ -122,6 +117,18 @@ extends ASTNodeImpl implements ImportDeclaration
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.IMPORTDECLARATION_STATIC:
+				return _static != STATIC_EDEFAULT;
+			case Java_PackageImpl.IMPORTDECLARATION_IMPORTEDELEMENT:
+				return getImportedElement() != null; //single, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

@@ -63,5 +63,17 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.MANIFEST_MAINATTRIBUTES:
+				return _mainAttributes != null && !_mainAttributes.isEmpty();
+			case Java_PackageImpl.MANIFEST_ENTRYATTRIBUTES:
+				return _entryAttributes != null && !_entryAttributes.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

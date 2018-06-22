@@ -96,5 +96,15 @@ extends StatementImpl implements BreakStatement
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.BREAKSTATEMENT_LABEL:
+				return getLabel() != null; //single, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

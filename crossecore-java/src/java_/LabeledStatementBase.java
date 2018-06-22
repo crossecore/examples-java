@@ -129,5 +129,39 @@ extends NamedElementImpl implements LabeledStatement
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.LABELEDSTATEMENT_BODY:
+				return _body != null; //single != null;
+			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
+				return getUsagesInBreakStatements().isEmpty(); //many, volatile
+			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
+				return getUsagesInContinueStatements().isEmpty(); //many, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Statement.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+	
+				
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Statement.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+	
 	
 }

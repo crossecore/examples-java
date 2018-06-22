@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class BooleanLiteralBase 
 extends ExpressionImpl implements BooleanLiteral
 {
-	private boolean _value = false;
+	protected static final boolean VALUE_EDEFAULT = false;
+	private boolean _value = VALUE_EDEFAULT;
 	public boolean isValue()
 	{
 		return _value;
@@ -22,14 +23,8 @@ extends ExpressionImpl implements BooleanLiteral
 		
 	}
 	
-	/*
-	@Override
-	public boolean isValue() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
+	
+	
 
 	
 	@Override
@@ -57,6 +52,16 @@ extends ExpressionImpl implements BooleanLiteral
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.BOOLEANLITERAL_VALUE:
+				return _value != VALUE_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

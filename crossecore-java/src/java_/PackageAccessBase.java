@@ -141,5 +141,17 @@ extends NamespaceAccessImpl implements PackageAccess
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.PACKAGEACCESS_PACKAGE:
+				return getPackage() != null; //single, volatile
+			case Java_PackageImpl.PACKAGEACCESS_QUALIFIER:
+				return _qualifier != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

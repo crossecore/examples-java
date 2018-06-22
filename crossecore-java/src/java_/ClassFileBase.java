@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ClassFileBase 
 extends NamedElementImpl implements ClassFile
 {
-	private java.lang.String _originalFilePath = "";
+	protected static final java.lang.String ORIGINALFILEPATH_EDEFAULT = "";
+	private java.lang.String _originalFilePath = ORIGINALFILEPATH_EDEFAULT;
 	public java.lang.String getOriginalFilePath()
 	{
 		return _originalFilePath;
@@ -21,6 +22,8 @@ extends NamedElementImpl implements ClassFile
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.CLASSFILE_ORIGINALFILEPATH, oldValue, value));
 		
 	}
+	
+	
 	
 	private AbstractTypeDeclaration _type;
 	public AbstractTypeDeclaration getType()
@@ -151,6 +154,22 @@ extends NamedElementImpl implements ClassFile
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.CLASSFILE_ORIGINALFILEPATH:
+				return ORIGINALFILEPATH_EDEFAULT == null ? _originalFilePath != null : !ORIGINALFILEPATH_EDEFAULT.equals(_originalFilePath);
+			case Java_PackageImpl.CLASSFILE_TYPE:
+				return getType() != null; //single, volatile
+			case Java_PackageImpl.CLASSFILE_ATTACHEDSOURCE:
+				return getAttachedSource() != null; //single, volatile
+			case Java_PackageImpl.CLASSFILE_PACKAGE:
+				return getPackage() != null; //single, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

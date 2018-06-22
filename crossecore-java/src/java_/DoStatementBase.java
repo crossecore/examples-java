@@ -121,5 +121,17 @@ extends StatementImpl implements DoStatement
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.DOSTATEMENT_EXPRESSION:
+				return _expression != null; //single != null;
+			case Java_PackageImpl.DOSTATEMENT_BODY:
+				return _body != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

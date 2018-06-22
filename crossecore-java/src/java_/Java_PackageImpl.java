@@ -941,6 +941,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(AbstractMethodInvocationEClass, AbstractMethodInvocation.class, "AbstractMethodInvocation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -998,6 +1000,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				IS_ORDERED);
+			
+			
 			
 			initEClass(AbstractTypeDeclarationEClass, AbstractTypeDeclaration.class, "AbstractTypeDeclaration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -1060,7 +1064,7 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				getAbstractTypeDeclaration_Package(), 
 				this.getPackage(), 
 				getPackage_OwnedElements(), 
-				"package_", 
+				"package", 
 				null, 
 				0, 
 				1, 
@@ -1093,6 +1097,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(AbstractTypeQualifiedExpressionEClass, AbstractTypeQualifiedExpression.class, "AbstractTypeQualifiedExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -1114,6 +1120,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(AbstractVariablesContainerEClass, AbstractVariablesContainer.class, "AbstractVariablesContainer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -1155,6 +1163,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(AnnotationEClass, Annotation.class, "Annotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -1194,6 +1204,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				IS_ORDERED);
+			
+			
 			
 			initEClass(ArchiveEClass, Archive.class, "Archive", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -1250,6 +1262,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(AssertStatementEClass, AssertStatement.class, "AssertStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -1289,6 +1303,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(ASTNodeEClass, ASTNode.class, "ASTNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -1348,6 +1364,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(AnnotationMemberValuePairEClass, AnnotationMemberValuePair.class, "AnnotationMemberValuePair", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -1388,7 +1406,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(AnnotationTypeDeclarationEClass, AnnotationTypeDeclaration.class, "AnnotationTypeDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -1450,6 +1472,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(AnonymousClassDeclarationEClass, AnonymousClassDeclaration.class, "AnonymousClassDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -1490,6 +1514,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(ArrayAccessEClass, ArrayAccess.class, "ArrayAccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -1529,6 +1555,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(ArrayCreationEClass, ArrayCreation.class, "ArrayCreation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -1588,6 +1616,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(ArrayInitializerEClass, ArrayInitializer.class, "ArrayInitializer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -1610,6 +1640,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(ArrayLengthAccessEClass, ArrayLengthAccess.class, "ArrayLengthAccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -1631,6 +1663,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(ArrayTypeEClass, ArrayType.class, "ArrayType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -1668,6 +1702,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(AssignmentEClass, Assignment.class, "Assignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -1723,6 +1759,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(BodyDeclarationEClass, BodyDeclaration.class, "BodyDeclaration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -1800,6 +1838,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(BooleanLiteralEClass, BooleanLiteral.class, "BooleanLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			initEAttribute(getBooleanLiteral_Value(), 
@@ -1819,7 +1859,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_ORDERED);
 			
 			
+			
+			
 			initEClass(BlockCommentEClass, BlockComment.class, "BlockComment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -1845,6 +1889,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(BreakStatementEClass, BreakStatement.class, "BreakStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -1866,6 +1912,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(CastExpressionEClass, CastExpression.class, "CastExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -1907,6 +1955,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(CatchClauseEClass, CatchClause.class, "CatchClause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -1947,6 +1997,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(CharacterLiteralEClass, CharacterLiteral.class, "CharacterLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			initEAttribute(getCharacterLiteral_EscapedValue(), 
@@ -1964,6 +2016,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			
 			initEClass(ClassFileEClass, ClassFile.class, "ClassFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
@@ -2024,7 +2078,7 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				getClassFile_Package(), 
 				this.getPackage(), 
 				null, 
-				"package_", 
+				"package", 
 				null, 
 				0, 
 				1, 
@@ -2038,6 +2092,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(ClassInstanceCreationEClass, ClassInstanceCreation.class, "ClassInstanceCreation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -2097,7 +2153,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(ConstructorDeclarationEClass, ConstructorDeclaration.class, "ConstructorDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -2159,7 +2219,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(ConstructorInvocationEClass, ConstructorInvocation.class, "ConstructorInvocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -2184,6 +2248,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(CommentEClass, Comment.class, "Comment", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -2232,6 +2298,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			
 			initEClass(CompilationUnitEClass, CompilationUnit.class, "CompilationUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
@@ -2292,7 +2360,7 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				getCompilationUnit_Package(), 
 				this.getPackage(), 
 				null, 
-				"package_", 
+				"package", 
 				null, 
 				0, 
 				1, 
@@ -2325,6 +2393,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(ContinueStatementEClass, ContinueStatement.class, "ContinueStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -2346,6 +2416,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(DoStatementEClass, DoStatement.class, "DoStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -2387,7 +2459,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(EmptyStatementEClass, EmptyStatement.class, "EmptyStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -2449,6 +2525,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(EnumConstantDeclarationEClass, EnumConstantDeclaration.class, "EnumConstantDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -2489,6 +2567,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(EnumDeclarationEClass, EnumDeclaration.class, "EnumDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -2511,7 +2591,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(ExpressionEClass, Expression.class, "Expression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -2536,6 +2620,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(FieldAccessEClass, FieldAccess.class, "FieldAccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -2577,7 +2663,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(FieldDeclarationEClass, FieldDeclaration.class, "FieldDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -2657,6 +2747,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(IfStatementEClass, IfStatement.class, "IfStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -2715,6 +2807,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(ImportDeclarationEClass, ImportDeclaration.class, "ImportDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			initEAttribute(getImportDeclaration_Static(), 
@@ -2751,6 +2845,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(InfixExpressionEClass, InfixExpression.class, "InfixExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -2825,6 +2921,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(InitializerEClass, Initializer.class, "Initializer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -2846,6 +2944,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(InstanceofExpressionEClass, InstanceofExpression.class, "InstanceofExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -2887,7 +2987,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(InterfaceDeclarationEClass, InterfaceDeclaration.class, "InterfaceDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -2912,6 +3016,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				IS_ORDERED);
+			
+			
 			
 			initEClass(LabeledStatementEClass, LabeledStatement.class, "LabeledStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -2971,7 +3077,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(LineCommentEClass, LineComment.class, "LineComment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -3015,6 +3125,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(ManifestAttributeEClass, ManifestAttribute.class, "ManifestAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			initEAttribute(getManifestAttribute_Key(), 
@@ -3047,6 +3159,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			
 			initEClass(ManifestEntryEClass, ManifestEntry.class, "ManifestEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
@@ -3085,6 +3199,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(MemberRefEClass, MemberRef.class, "MemberRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -3125,6 +3241,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(MethodDeclarationEClass, MethodDeclaration.class, "MethodDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -3199,6 +3317,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(MethodInvocationEClass, MethodInvocation.class, "MethodInvocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -3220,6 +3340,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(MethodRefEClass, MethodRef.class, "MethodRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -3279,6 +3401,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(MethodRefParameterEClass, MethodRefParameter.class, "MethodRefParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			initEAttribute(getMethodRefParameter_Name(), 
@@ -3330,6 +3454,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(ModelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -3458,6 +3584,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(ModifierEClass, Modifier.class, "Modifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			initEAttribute(getModifier_Visibility(), 
@@ -3522,7 +3650,7 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_ORDERED);
 			initEAttribute(getModifier_Volatile(), 
 				ecorePackage.getEBoolean(), 
-				"volatile_", 
+				"volatile", 
 				"false", 
 				1, 
 				1, 
@@ -3654,6 +3782,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(NamedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			initEAttribute(getNamedElement_Name(), 
@@ -3706,7 +3836,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(NamespaceAccessEClass, NamespaceAccess.class, "NamespaceAccess", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -3729,7 +3863,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_ORDERED);
 			
 			
+			
+			
 			initEClass(NullLiteralEClass, NullLiteral.class, "NullLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -3794,7 +3932,7 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				getPackage_Package(), 
 				this.getPackage(), 
 				getPackage_OwnedPackages(), 
-				"package_", 
+				"package", 
 				null, 
 				0, 
 				1, 
@@ -3827,6 +3965,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(PackageAccessEClass, PackageAccess.class, "PackageAccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -3834,7 +3974,7 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				getPackageAccess_Package(), 
 				this.getPackage(), 
 				getPackage_UsagesInPackageAccess(), 
-				"package_", 
+				"package", 
 				null, 
 				1, 
 				1, 
@@ -3866,6 +4006,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(ParameterizedTypeEClass, ParameterizedType.class, "ParameterizedType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -3907,6 +4049,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(ParenthesizedExpressionEClass, ParenthesizedExpression.class, "ParenthesizedExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -3928,6 +4072,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(PostfixExpressionEClass, PostfixExpression.class, "PostfixExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -3966,6 +4112,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(PrefixExpressionEClass, PrefixExpression.class, "PrefixExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			initEAttribute(getPrefixExpression_Operator(), 
@@ -4003,7 +4151,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(PrimitiveTypeEClass, PrimitiveType.class, "PrimitiveType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4011,7 +4163,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
 			
 			
+			
+			
 			initEClass(PrimitiveTypeByteEClass, PrimitiveTypeByte.class, "PrimitiveTypeByte", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4019,7 +4175,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
 			
 			
+			
+			
 			initEClass(PrimitiveTypeDoubleEClass, PrimitiveTypeDouble.class, "PrimitiveTypeDouble", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4027,7 +4187,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
 			
 			
+			
+			
 			initEClass(PrimitiveTypeFloatEClass, PrimitiveTypeFloat.class, "PrimitiveTypeFloat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4035,11 +4199,17 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
 			
 			
+			
+			
 			initEClass(PrimitiveTypeLongEClass, PrimitiveTypeLong.class, "PrimitiveTypeLong", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
 			
+			
+			
 			initEClass(PrimitiveTypeVoidEClass, PrimitiveTypeVoid.class, "PrimitiveTypeVoid", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4064,6 +4234,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(SingleVariableAccessEClass, SingleVariableAccess.class, "SingleVariableAccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -4104,6 +4276,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(SingleVariableDeclarationEClass, SingleVariableDeclaration.class, "SingleVariableDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -4232,7 +4406,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(StatementEClass, Statement.class, "Statement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4253,6 +4431,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			
 			initEClass(SuperConstructorInvocationEClass, SuperConstructorInvocation.class, "SuperConstructorInvocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
@@ -4277,6 +4457,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(SuperFieldAccessEClass, SuperFieldAccess.class, "SuperFieldAccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -4299,7 +4481,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(SuperMethodInvocationEClass, SuperMethodInvocation.class, "SuperMethodInvocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4339,6 +4525,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(SwitchStatementEClass, SwitchStatement.class, "SwitchStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -4380,6 +4568,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(SynchronizedStatementEClass, SynchronizedStatement.class, "SynchronizedStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -4420,6 +4610,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(TagElementEClass, TagElement.class, "TagElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			initEAttribute(getTagElement_TagName(), 
@@ -4457,6 +4649,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(TextElementEClass, TextElement.class, "TextElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			initEAttribute(getTextElement_Text(), 
@@ -4476,7 +4670,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_ORDERED);
 			
 			
+			
+			
 			initEClass(ThisExpressionEClass, ThisExpression.class, "ThisExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4501,6 +4699,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(TryStatementEClass, TryStatement.class, "TryStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -4560,6 +4760,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(TypeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -4581,6 +4783,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(TypeAccessEClass, TypeAccess.class, "TypeAccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -4622,6 +4826,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(TypeDeclarationEClass, TypeDeclaration.class, "TypeDeclaration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -4643,6 +4849,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				IS_ORDERED);
+			
+			
 			
 			initEClass(TypeDeclarationStatementEClass, TypeDeclarationStatement.class, "TypeDeclarationStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -4666,6 +4874,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(TypeLiteralEClass, TypeLiteral.class, "TypeLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -4687,6 +4897,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(TypeParameterEClass, TypeParameter.class, "TypeParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -4710,7 +4922,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(UnresolvedItemEClass, UnresolvedItem.class, "UnresolvedItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4754,7 +4970,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(UnresolvedAnnotationDeclarationEClass, UnresolvedAnnotationDeclaration.class, "UnresolvedAnnotationDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4762,7 +4982,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
 			
 			
+			
+			
 			initEClass(UnresolvedClassDeclarationEClass, UnresolvedClassDeclaration.class, "UnresolvedClassDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4770,7 +4994,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
 			
 			
+			
+			
 			initEClass(UnresolvedInterfaceDeclarationEClass, UnresolvedInterfaceDeclaration.class, "UnresolvedInterfaceDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4778,7 +5006,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
 			
 			
+			
+			
 			initEClass(UnresolvedMethodDeclarationEClass, UnresolvedMethodDeclaration.class, "UnresolvedMethodDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4786,7 +5018,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
 			
 			
+			
+			
 			initEClass(UnresolvedTypeEClass, UnresolvedType.class, "UnresolvedType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4794,7 +5030,11 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
 			
 			
+			
+			
 			initEClass(UnresolvedVariableDeclarationFragmentEClass, UnresolvedVariableDeclarationFragment.class, "UnresolvedVariableDeclarationFragment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
+			
+			
 			
 			
 			
@@ -4853,6 +5093,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				!IS_ORDERED);
 			
+			
+			
 			initEClass(VariableDeclarationExpressionEClass, VariableDeclarationExpression.class, "VariableDeclarationExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -4893,6 +5135,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(VariableDeclarationFragmentEClass, VariableDeclarationFragment.class, "VariableDeclarationFragment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			
@@ -4914,6 +5158,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(VariableDeclarationStatementEClass, VariableDeclarationStatement.class, "VariableDeclarationStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -4970,6 +5216,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				!IS_DERIVED, 
 				IS_ORDERED);
 			
+			
+			
 			initEClass(WildCardTypeEClass, WildCardType.class, "WildCardType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
 			initEAttribute(getWildCardType_UpperBound(), 
@@ -5006,6 +5254,8 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
 			
 			initEClass(WhileStatementEClass, WhileStatement.class, "WhileStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);						
 			
@@ -5046,6 +5296,62 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 				IS_UNIQUE, 
 				!IS_DERIVED, 
 				!IS_ORDERED);
+			
+			
+			
+			
+			initEEnum(AssignmentKindEEnum, AssignmentKind.class, "AssignmentKind");
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.ASSIGN);
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.PLUS_ASSIGN);
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.MINUS_ASSIGN);
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.TIMES_ASSIGN);
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.DIVIDE_ASSIGN);
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.BIT_AND_ASSIGN);
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.BIT_OR_ASSIGN);
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.BIT_XOR_ASSIGN);
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.REMAINDER_ASSIGN);
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.LEFT_SHIFT_ASSIGN);
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.RIGHT_SHIFT_SIGNED_ASSIGN);
+			addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.RIGHT_SHIFT_UNSIGNED_ASSIGN);
+			initEEnum(InfixExpressionKindEEnum, InfixExpressionKind.class, "InfixExpressionKind");
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.TIMES);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.DIVIDE);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.REMAINDER);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.PLUS);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.MINUS);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.LEFT_SHIFT);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.RIGHT_SHIFT_SIGNED);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.RIGHT_SHIFT_UNSIGNED);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.LESS);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.GREATER);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.LESS_EQUALS);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.GREATER_EQUALS);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.EQUALS);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.NOT_EQUALS);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.XOR);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.AND);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.OR);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.CONDITIONAL_AND);
+			addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.CONDITIONAL_OR);
+			initEEnum(InheritanceKindEEnum, InheritanceKind.class, "InheritanceKind");
+			addEEnumLiteral(InheritanceKindEEnum, InheritanceKind.NONE);
+			addEEnumLiteral(InheritanceKindEEnum, InheritanceKind.ABSTRACT);
+			addEEnumLiteral(InheritanceKindEEnum, InheritanceKind.FINAL);
+			initEEnum(PostfixExpressionKindEEnum, PostfixExpressionKind.class, "PostfixExpressionKind");
+			addEEnumLiteral(PostfixExpressionKindEEnum, PostfixExpressionKind.INCREMENT);
+			addEEnumLiteral(PostfixExpressionKindEEnum, PostfixExpressionKind.DECREMENT);
+			initEEnum(PrefixExpressionKindEEnum, PrefixExpressionKind.class, "PrefixExpressionKind");
+			addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.INCREMENT);
+			addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.DECREMENT);
+			addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.PLUS);
+			addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.MINUS);
+			addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.COMPLEMENT);
+			addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.NOT);
+			initEEnum(VisibilityKindEEnum, VisibilityKind.class, "VisibilityKind");
+			addEEnumLiteral(VisibilityKindEEnum, VisibilityKind.NONE);
+			addEEnumLiteral(VisibilityKindEEnum, VisibilityKind.PUBLIC);
+			addEEnumLiteral(VisibilityKindEEnum, VisibilityKind.PRIVATE);
+			addEEnumLiteral(VisibilityKindEEnum, VisibilityKind.PROTECTED);
 			
 			// Create resource
 			createResource(eNS_URI);

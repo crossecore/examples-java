@@ -141,5 +141,17 @@ extends StatementImpl implements CatchClause
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.CATCHCLAUSE_EXCEPTION:
+				return _exception != null; //single != null;
+			case Java_PackageImpl.CATCHCLAUSE_BODY:
+				return _body != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

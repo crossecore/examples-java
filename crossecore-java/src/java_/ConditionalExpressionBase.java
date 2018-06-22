@@ -166,5 +166,19 @@ extends ExpressionImpl implements ConditionalExpression
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION:
+				return _elseExpression != null; //single != null;
+			case Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION:
+				return _expression != null; //single != null;
+			case Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION:
+				return _thenExpression != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

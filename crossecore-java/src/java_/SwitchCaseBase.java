@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class SwitchCaseBase 
 extends StatementImpl implements SwitchCase
 {
-	private boolean _default = false;
+	protected static final boolean DEFAULT_EDEFAULT = false;
+	private boolean _default = DEFAULT_EDEFAULT;
 	public boolean isDefault()
 	{
 		return _default;
@@ -22,14 +23,8 @@ extends StatementImpl implements SwitchCase
 		
 	}
 	
-	/*
-	@Override
-	public boolean isDefault() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
+	
+	
 	private Expression _expression;
 	public Expression getExpression()
 	{
@@ -102,6 +97,18 @@ extends StatementImpl implements SwitchCase
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.SWITCHCASE_DEFAULT:
+				return _default != DEFAULT_EDEFAULT;
+			case Java_PackageImpl.SWITCHCASE_EXPRESSION:
+				return _expression != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

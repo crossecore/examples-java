@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class MethodRefParameterBase 
 extends ASTNodeImpl implements MethodRefParameter
 {
-	private java.lang.String _name = "";
+	protected static final java.lang.String NAME_EDEFAULT = "";
+	private java.lang.String _name = NAME_EDEFAULT;
 	public java.lang.String getName()
 	{
 		return _name;
@@ -22,7 +23,10 @@ extends ASTNodeImpl implements MethodRefParameter
 		
 	}
 	
-	private boolean _varargs = false;
+	
+	
+	protected static final boolean VARARGS_EDEFAULT = false;
+	private boolean _varargs = VARARGS_EDEFAULT;
 	public boolean isVarargs()
 	{
 		return _varargs;
@@ -36,14 +40,8 @@ extends ASTNodeImpl implements MethodRefParameter
 		
 	}
 	
-	/*
-	@Override
-	public boolean isVarargs() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
+	
+	
 	private TypeAccess _type;
 	public TypeAccess getType()
 	{
@@ -121,6 +119,20 @@ extends ASTNodeImpl implements MethodRefParameter
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.METHODREFPARAMETER_NAME:
+				return NAME_EDEFAULT == null ? _name != null : !NAME_EDEFAULT.equals(_name);
+			case Java_PackageImpl.METHODREFPARAMETER_VARARGS:
+				return _varargs != VARARGS_EDEFAULT;
+			case Java_PackageImpl.METHODREFPARAMETER_TYPE:
+				return _type != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

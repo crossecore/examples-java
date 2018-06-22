@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ModifierBase 
 extends ASTNodeImpl implements Modifier
 {
-	private VisibilityKind _visibility = VisibilityKind.NONE;
+	protected static final VisibilityKind VISIBILITY_EDEFAULT = VisibilityKind.NONE;
+	private VisibilityKind _visibility = VISIBILITY_EDEFAULT;
 	public VisibilityKind getVisibility()
 	{
 		return _visibility;
@@ -22,7 +23,10 @@ extends ASTNodeImpl implements Modifier
 		
 	}
 	
-	private InheritanceKind _inheritance = InheritanceKind.NONE;
+	
+	
+	protected static final InheritanceKind INHERITANCE_EDEFAULT = InheritanceKind.NONE;
+	private InheritanceKind _inheritance = INHERITANCE_EDEFAULT;
 	public InheritanceKind getInheritance()
 	{
 		return _inheritance;
@@ -36,7 +40,10 @@ extends ASTNodeImpl implements Modifier
 		
 	}
 	
-	private boolean _static = false;
+	
+	
+	protected static final boolean STATIC_EDEFAULT = false;
+	private boolean _static = STATIC_EDEFAULT;
 	public boolean isStatic()
 	{
 		return _static;
@@ -50,15 +57,10 @@ extends ASTNodeImpl implements Modifier
 		
 	}
 	
-	/*
-	@Override
-	public boolean isStatic() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
-	private boolean _transient = false;
+	
+	
+	protected static final boolean TRANSIENT_EDEFAULT = false;
+	private boolean _transient = TRANSIENT_EDEFAULT;
 	public boolean isTransient()
 	{
 		return _transient;
@@ -72,15 +74,10 @@ extends ASTNodeImpl implements Modifier
 		
 	}
 	
-	/*
-	@Override
-	public boolean isTransient() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
-	private boolean _volatile = false;
+	
+	
+	protected static final boolean VOLATILE_EDEFAULT = false;
+	private boolean _volatile = VOLATILE_EDEFAULT;
 	public boolean isVolatile()
 	{
 		return _volatile;
@@ -94,15 +91,10 @@ extends ASTNodeImpl implements Modifier
 		
 	}
 	
-	/*
-	@Override
-	public boolean isVolatile() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
-	private boolean _native = false;
+	
+	
+	protected static final boolean NATIVE_EDEFAULT = false;
+	private boolean _native = NATIVE_EDEFAULT;
 	public boolean isNative()
 	{
 		return _native;
@@ -116,15 +108,10 @@ extends ASTNodeImpl implements Modifier
 		
 	}
 	
-	/*
-	@Override
-	public boolean isNative() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
-	private boolean _strictfp = false;
+	
+	
+	protected static final boolean STRICTFP_EDEFAULT = false;
+	private boolean _strictfp = STRICTFP_EDEFAULT;
 	public boolean isStrictfp()
 	{
 		return _strictfp;
@@ -138,15 +125,10 @@ extends ASTNodeImpl implements Modifier
 		
 	}
 	
-	/*
-	@Override
-	public boolean isStrictfp() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
-	private boolean _synchronized = false;
+	
+	
+	protected static final boolean SYNCHRONIZED_EDEFAULT = false;
+	private boolean _synchronized = SYNCHRONIZED_EDEFAULT;
 	public boolean isSynchronized()
 	{
 		return _synchronized;
@@ -160,14 +142,8 @@ extends ASTNodeImpl implements Modifier
 		
 	}
 	
-	/*
-	@Override
-	public boolean isSynchronized() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
+	
+	
 	public BodyDeclaration getBodyDeclaration()
 	{
 		
@@ -411,6 +387,38 @@ extends ASTNodeImpl implements Modifier
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.MODIFIER_VISIBILITY:
+				return VISIBILITY_EDEFAULT == null ? _visibility != null : !VISIBILITY_EDEFAULT.equals(_visibility);
+			case Java_PackageImpl.MODIFIER_INHERITANCE:
+				return INHERITANCE_EDEFAULT == null ? _inheritance != null : !INHERITANCE_EDEFAULT.equals(_inheritance);
+			case Java_PackageImpl.MODIFIER_STATIC:
+				return _static != STATIC_EDEFAULT;
+			case Java_PackageImpl.MODIFIER_TRANSIENT:
+				return _transient != TRANSIENT_EDEFAULT;
+			case Java_PackageImpl.MODIFIER_VOLATILE:
+				return _volatile != VOLATILE_EDEFAULT;
+			case Java_PackageImpl.MODIFIER_NATIVE:
+				return _native != NATIVE_EDEFAULT;
+			case Java_PackageImpl.MODIFIER_STRICTFP:
+				return _strictfp != STRICTFP_EDEFAULT;
+			case Java_PackageImpl.MODIFIER_SYNCHRONIZED:
+				return _synchronized != SYNCHRONIZED_EDEFAULT;
+			case Java_PackageImpl.MODIFIER_BODYDECLARATION:
+				return getBodyDeclaration() != null; //single, volatile
+			case Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION:
+				return getSingleVariableDeclaration() != null; //single, volatile
+			case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT:
+				return getVariableDeclarationStatement() != null; //single, volatile
+			case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONEXPRESSION:
+				return getVariableDeclarationExpression() != null; //single, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

@@ -121,5 +121,17 @@ extends StatementImpl implements AssertStatement
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ASSERTSTATEMENT_MESSAGE:
+				return _message != null; //single != null;
+			case Java_PackageImpl.ASSERTSTATEMENT_EXPRESSION:
+				return _expression != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

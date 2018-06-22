@@ -76,5 +76,15 @@ extends ExpressionImpl implements ArrayLengthAccess
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ARRAYLENGTHACCESS_ARRAY:
+				return _array != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

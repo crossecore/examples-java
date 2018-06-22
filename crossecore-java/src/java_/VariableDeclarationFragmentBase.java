@@ -86,5 +86,15 @@ extends VariableDeclarationImpl implements VariableDeclarationFragment
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER:
+				return getVariablesContainer() != null; //single, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

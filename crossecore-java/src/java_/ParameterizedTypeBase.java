@@ -92,5 +92,17 @@ extends TypeImpl implements ParameterizedType
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.PARAMETERIZEDTYPE_TYPE:
+				return _type != null; //single != null;
+			case Java_PackageImpl.PARAMETERIZEDTYPE_TYPEARGUMENTS:
+				return _typeArguments != null && !_typeArguments.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

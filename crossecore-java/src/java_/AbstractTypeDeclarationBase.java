@@ -128,6 +128,8 @@ extends BodyDeclarationImpl implements AbstractTypeDeclaration
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS:
+				return getUsagesInTypeAccess();
 			case Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS:
 				return getBodyDeclarations();
 			case Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSBEFOREBODY:
@@ -145,6 +147,10 @@ extends BodyDeclarationImpl implements AbstractTypeDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS:
+				getUsagesInTypeAccess().clear();
+				getUsagesInTypeAccess().addAll((java.util.Collection<? extends TypeAccess>) newValue);
+				return;
 			case Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS:
 				getBodyDeclarations().clear();
 				getBodyDeclarations().addAll((java.util.Collection<? extends BodyDeclaration>) newValue);
@@ -166,6 +172,48 @@ extends BodyDeclarationImpl implements AbstractTypeDeclaration
 				return;
 		}
 		super.eSet(featureID, newValue);
+	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS:
+				return getUsagesInTypeAccess().isEmpty(); //many, volatile
+			case Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS:
+				return _bodyDeclarations != null && !_bodyDeclarations.isEmpty();
+			case Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSBEFOREBODY:
+				return _commentsBeforeBody != null && !_commentsBeforeBody.isEmpty();
+			case Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSAFTERBODY:
+				return _commentsAfterBody != null && !_commentsAfterBody.isEmpty();
+			case Java_PackageImpl.ABSTRACTTYPEDECLARATION_PACKAGE:
+				return getPackage() != null; //single, volatile
+			case Java_PackageImpl.ABSTRACTTYPEDECLARATION_SUPERINTERFACES:
+				return _superInterfaces != null && !_superInterfaces.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Type.class) {
+			switch (derivedFeatureID) {
+				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS: return Java_PackageImpl.TYPE_USAGESINTYPEACCESS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+	
+				
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Type.class) {
+			switch (baseFeatureID) {
+				case Java_PackageImpl.TYPE_USAGESINTYPEACCESS: return Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 	
 	

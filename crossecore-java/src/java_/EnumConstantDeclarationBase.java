@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class EnumConstantDeclarationBase 
 extends BodyDeclarationImpl implements EnumConstantDeclaration
 {
-	private int _extraArrayDimensions = 0;
+	protected static final int EXTRAARRAYDIMENSIONS_EDEFAULT = 0;
+	private int _extraArrayDimensions = EXTRAARRAYDIMENSIONS_EDEFAULT;
 	public int getExtraArrayDimensions()
 	{
 		return _extraArrayDimensions;
@@ -21,6 +22,8 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS, oldValue, value));
 		
 	}
+	
+	
 	
 	private Expression _initializer;
 	public Expression getInitializer()
@@ -151,6 +154,12 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Java_PackageImpl.ENUMCONSTANTDECLARATION_EXTRAARRAYDIMENSIONS:
+				return getExtraArrayDimensions();
+			case Java_PackageImpl.ENUMCONSTANTDECLARATION_INITIALIZER:
+				return getInitializer();
+			case Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS:
+				return getUsageInVariableAccess();
 			case Java_PackageImpl.ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION:
 				return getAnonymousClassDeclaration();
 			case Java_PackageImpl.ENUMCONSTANTDECLARATION_ARGUMENTS:
@@ -162,6 +171,16 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Java_PackageImpl.ENUMCONSTANTDECLARATION_EXTRAARRAYDIMENSIONS:
+				setExtraArrayDimensions((int) newValue);
+				return;
+			case Java_PackageImpl.ENUMCONSTANTDECLARATION_INITIALIZER:
+				setInitializer((Expression) newValue);
+				return;
+			case Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS:
+				getUsageInVariableAccess().clear();
+				getUsageInVariableAccess().addAll((java.util.Collection<? extends SingleVariableAccess>) newValue);
+				return;
 			case Java_PackageImpl.ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION:
 				setAnonymousClassDeclaration((AnonymousClassDeclaration) newValue);
 				return;
@@ -171,6 +190,50 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 				return;
 		}
 		super.eSet(featureID, newValue);
+	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ENUMCONSTANTDECLARATION_EXTRAARRAYDIMENSIONS:
+				return _extraArrayDimensions != EXTRAARRAYDIMENSIONS_EDEFAULT;
+			case Java_PackageImpl.ENUMCONSTANTDECLARATION_INITIALIZER:
+				return _initializer != null; //single != null;
+			case Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS:
+				return getUsageInVariableAccess().isEmpty(); //many, volatile
+			case Java_PackageImpl.ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION:
+				return _anonymousClassDeclaration != null; //single != null;
+			case Java_PackageImpl.ENUMCONSTANTDECLARATION_ARGUMENTS:
+				return _arguments != null && !_arguments.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == VariableDeclaration.class) {
+			switch (derivedFeatureID) {
+				case Java_PackageImpl.ENUMCONSTANTDECLARATION_EXTRAARRAYDIMENSIONS: return Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS;
+				case Java_PackageImpl.ENUMCONSTANTDECLARATION_INITIALIZER: return Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER;
+				case Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS: return Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+	
+				
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == VariableDeclaration.class) {
+			switch (baseFeatureID) {
+				case Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS: return Java_PackageImpl.ENUMCONSTANTDECLARATION_EXTRAARRAYDIMENSIONS;
+				case Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER: return Java_PackageImpl.ENUMCONSTANTDECLARATION_INITIALIZER;
+				case Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS: return Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 	
 	

@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CharacterLiteralBase 
 extends ExpressionImpl implements CharacterLiteral
 {
-	private java.lang.String _escapedValue = "";
+	protected static final java.lang.String ESCAPEDVALUE_EDEFAULT = "";
+	private java.lang.String _escapedValue = ESCAPEDVALUE_EDEFAULT;
 	public java.lang.String getEscapedValue()
 	{
 		return _escapedValue;
@@ -21,6 +22,8 @@ extends ExpressionImpl implements CharacterLiteral
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.CHARACTERLITERAL_ESCAPEDVALUE, oldValue, value));
 		
 	}
+	
+	
 	
 
 	
@@ -49,6 +52,16 @@ extends ExpressionImpl implements CharacterLiteral
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.CHARACTERLITERAL_ESCAPEDVALUE:
+				return ESCAPEDVALUE_EDEFAULT == null ? _escapedValue != null : !ESCAPEDVALUE_EDEFAULT.equals(_escapedValue);
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

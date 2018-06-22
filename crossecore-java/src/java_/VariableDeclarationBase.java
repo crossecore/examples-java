@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class VariableDeclarationBase 
 extends NamedElementImpl implements VariableDeclaration
 {
-	private int _extraArrayDimensions = 0;
+	protected static final int EXTRAARRAYDIMENSIONS_EDEFAULT = 0;
+	private int _extraArrayDimensions = EXTRAARRAYDIMENSIONS_EDEFAULT;
 	public int getExtraArrayDimensions()
 	{
 		return _extraArrayDimensions;
@@ -21,6 +22,8 @@ extends NamedElementImpl implements VariableDeclaration
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS, oldValue, value));
 		
 	}
+	
+	
 	
 	private Expression _initializer;
 	public Expression getInitializer()
@@ -127,6 +130,20 @@ extends NamedElementImpl implements VariableDeclaration
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS:
+				return _extraArrayDimensions != EXTRAARRAYDIMENSIONS_EDEFAULT;
+			case Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER:
+				return _initializer != null; //single != null;
+			case Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS:
+				return getUsageInVariableAccess().isEmpty(); //many, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

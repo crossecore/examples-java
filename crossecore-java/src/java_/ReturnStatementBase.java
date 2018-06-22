@@ -76,5 +76,15 @@ extends StatementImpl implements ReturnStatement
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.RETURNSTATEMENT_EXPRESSION:
+				return _expression != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

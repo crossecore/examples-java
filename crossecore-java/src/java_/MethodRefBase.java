@@ -157,5 +157,19 @@ extends ASTNodeImpl implements MethodRef
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.METHODREF_METHOD:
+				return getMethod() != null; //single, volatile
+			case Java_PackageImpl.METHODREF_QUALIFIER:
+				return _qualifier != null; //single != null;
+			case Java_PackageImpl.METHODREF_PARAMETERS:
+				return _parameters != null && !_parameters.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

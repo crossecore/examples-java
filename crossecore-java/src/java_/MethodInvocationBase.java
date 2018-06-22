@@ -140,6 +140,12 @@ extends ExpressionImpl implements MethodInvocation
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Java_PackageImpl.METHODINVOCATION_METHOD:
+				return getMethod();
+			case Java_PackageImpl.METHODINVOCATION_ARGUMENTS:
+				return getArguments();
+			case Java_PackageImpl.METHODINVOCATION_TYPEARGUMENTS:
+				return getTypeArguments();
 			case Java_PackageImpl.METHODINVOCATION_EXPRESSION:
 				return getExpression();
 		}
@@ -149,11 +155,64 @@ extends ExpressionImpl implements MethodInvocation
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Java_PackageImpl.METHODINVOCATION_METHOD:
+				setMethod((AbstractMethodDeclaration) newValue);
+				return;
+			case Java_PackageImpl.METHODINVOCATION_ARGUMENTS:
+				getArguments().clear();
+				getArguments().addAll((java.util.Collection<? extends Expression>) newValue);
+				return;
+			case Java_PackageImpl.METHODINVOCATION_TYPEARGUMENTS:
+				getTypeArguments().clear();
+				getTypeArguments().addAll((java.util.Collection<? extends TypeAccess>) newValue);
+				return;
 			case Java_PackageImpl.METHODINVOCATION_EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
+	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.METHODINVOCATION_METHOD:
+				return getMethod() != null; //single, volatile
+			case Java_PackageImpl.METHODINVOCATION_ARGUMENTS:
+				return _arguments != null && !_arguments.isEmpty();
+			case Java_PackageImpl.METHODINVOCATION_TYPEARGUMENTS:
+				return _typeArguments != null && !_typeArguments.isEmpty();
+			case Java_PackageImpl.METHODINVOCATION_EXPRESSION:
+				return _expression != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == AbstractMethodInvocation.class) {
+			switch (derivedFeatureID) {
+				case Java_PackageImpl.METHODINVOCATION_METHOD: return Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD;
+				case Java_PackageImpl.METHODINVOCATION_ARGUMENTS: return Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS;
+				case Java_PackageImpl.METHODINVOCATION_TYPEARGUMENTS: return Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+	
+				
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == AbstractMethodInvocation.class) {
+			switch (baseFeatureID) {
+				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD: return Java_PackageImpl.METHODINVOCATION_METHOD;
+				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS: return Java_PackageImpl.METHODINVOCATION_ARGUMENTS;
+				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS: return Java_PackageImpl.METHODINVOCATION_TYPEARGUMENTS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 	
 	

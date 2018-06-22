@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CommentBase 
 extends ASTNodeImpl implements Comment
 {
-	private java.lang.String _content = "";
+	protected static final java.lang.String CONTENT_EDEFAULT = "";
+	private java.lang.String _content = CONTENT_EDEFAULT;
 	public java.lang.String getContent()
 	{
 		return _content;
@@ -22,7 +23,10 @@ extends ASTNodeImpl implements Comment
 		
 	}
 	
-	private boolean _enclosedByParent = false;
+	
+	
+	protected static final boolean ENCLOSEDBYPARENT_EDEFAULT = false;
+	private boolean _enclosedByParent = ENCLOSEDBYPARENT_EDEFAULT;
 	public boolean isEnclosedByParent()
 	{
 		return _enclosedByParent;
@@ -36,15 +40,10 @@ extends ASTNodeImpl implements Comment
 		
 	}
 	
-	/*
-	@Override
-	public boolean isEnclosedByParent() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
-	private boolean _prefixOfParent = false;
+	
+	
+	protected static final boolean PREFIXOFPARENT_EDEFAULT = false;
+	private boolean _prefixOfParent = PREFIXOFPARENT_EDEFAULT;
 	public boolean isPrefixOfParent()
 	{
 		return _prefixOfParent;
@@ -58,14 +57,8 @@ extends ASTNodeImpl implements Comment
 		
 	}
 	
-	/*
-	@Override
-	public boolean isPrefixOfParent() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
+	
+	
 
 	
 	@Override
@@ -103,6 +96,20 @@ extends ASTNodeImpl implements Comment
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.COMMENT_CONTENT:
+				return CONTENT_EDEFAULT == null ? _content != null : !CONTENT_EDEFAULT.equals(_content);
+			case Java_PackageImpl.COMMENT_ENCLOSEDBYPARENT:
+				return _enclosedByParent != ENCLOSEDBYPARENT_EDEFAULT;
+			case Java_PackageImpl.COMMENT_PREFIXOFPARENT:
+				return _prefixOfParent != PREFIXOFPARENT_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

@@ -47,5 +47,15 @@ extends AbstractTypeDeclarationImpl implements EnumDeclaration
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ENUMDECLARATION_ENUMCONSTANTS:
+				return _enumConstants != null && !_enumConstants.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

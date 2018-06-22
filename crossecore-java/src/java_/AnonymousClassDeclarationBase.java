@@ -106,5 +106,17 @@ extends ASTNodeImpl implements AnonymousClassDeclaration
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS:
+				return _bodyDeclarations != null && !_bodyDeclarations.isEmpty();
+			case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_CLASSINSTANCECREATION:
+				return getClassInstanceCreation() != null; //single, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

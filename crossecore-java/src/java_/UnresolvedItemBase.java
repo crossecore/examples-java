@@ -31,5 +31,13 @@ extends NamedElementImpl implements UnresolvedItem
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

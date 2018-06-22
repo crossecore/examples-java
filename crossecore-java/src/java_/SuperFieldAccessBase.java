@@ -76,5 +76,15 @@ extends AbstractTypeQualifiedExpressionImpl implements SuperFieldAccess
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.SUPERFIELDACCESS_FIELD:
+				return _field != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

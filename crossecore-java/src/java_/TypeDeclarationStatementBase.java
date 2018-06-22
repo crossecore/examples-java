@@ -76,5 +76,15 @@ extends StatementImpl implements TypeDeclarationStatement
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.TYPEDECLARATIONSTATEMENT_DECLARATION:
+				return _declaration != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

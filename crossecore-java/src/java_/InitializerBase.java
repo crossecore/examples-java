@@ -76,5 +76,15 @@ extends BodyDeclarationImpl implements Initializer
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.INITIALIZER_BODY:
+				return _body != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

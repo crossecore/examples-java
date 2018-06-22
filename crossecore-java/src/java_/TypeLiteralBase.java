@@ -76,5 +76,15 @@ extends ExpressionImpl implements TypeLiteral
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.TYPELITERAL_TYPE:
+				return _type != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

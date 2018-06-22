@@ -121,5 +121,17 @@ extends ExpressionImpl implements ArrayAccess
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ARRAYACCESS_ARRAY:
+				return _array != null; //single != null;
+			case Java_PackageImpl.ARRAYACCESS_INDEX:
+				return _index != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class PrefixExpressionBase 
 extends ExpressionImpl implements PrefixExpression
 {
-	private PrefixExpressionKind _operator = PrefixExpressionKind.INCREMENT;
+	protected static final PrefixExpressionKind OPERATOR_EDEFAULT = PrefixExpressionKind.INCREMENT;
+	private PrefixExpressionKind _operator = OPERATOR_EDEFAULT;
 	public PrefixExpressionKind getOperator()
 	{
 		return _operator;
@@ -21,6 +22,8 @@ extends ExpressionImpl implements PrefixExpression
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.PREFIXEXPRESSION_OPERATOR, oldValue, value));
 		
 	}
+	
+	
 	
 	private Expression _operand;
 	public Expression getOperand()
@@ -94,6 +97,18 @@ extends ExpressionImpl implements PrefixExpression
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.PREFIXEXPRESSION_OPERATOR:
+				return OPERATOR_EDEFAULT == null ? _operator != null : !OPERATOR_EDEFAULT.equals(_operator);
+			case Java_PackageImpl.PREFIXEXPRESSION_OPERAND:
+				return _operand != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

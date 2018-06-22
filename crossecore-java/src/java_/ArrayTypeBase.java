@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ArrayTypeBase 
 extends TypeImpl implements ArrayType
 {
-	private int _dimensions = 0;
+	protected static final int DIMENSIONS_EDEFAULT = 0;
+	private int _dimensions = DIMENSIONS_EDEFAULT;
 	public int getDimensions()
 	{
 		return _dimensions;
@@ -21,6 +22,8 @@ extends TypeImpl implements ArrayType
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.ARRAYTYPE_DIMENSIONS, oldValue, value));
 		
 	}
+	
+	
 	
 	private TypeAccess _elementType;
 	public TypeAccess getElementType()
@@ -94,6 +97,18 @@ extends TypeImpl implements ArrayType
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ARRAYTYPE_DIMENSIONS:
+				return _dimensions != DIMENSIONS_EDEFAULT;
+			case Java_PackageImpl.ARRAYTYPE_ELEMENTTYPE:
+				return _elementType != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

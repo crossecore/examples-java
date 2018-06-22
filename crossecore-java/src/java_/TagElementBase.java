@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class TagElementBase 
 extends ASTNodeImpl implements TagElement
 {
-	private java.lang.String _tagName = "";
+	protected static final java.lang.String TAGNAME_EDEFAULT = "";
+	private java.lang.String _tagName = TAGNAME_EDEFAULT;
 	public java.lang.String getTagName()
 	{
 		return _tagName;
@@ -21,6 +22,8 @@ extends ASTNodeImpl implements TagElement
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.TAGELEMENT_TAGNAME, oldValue, value));
 		
 	}
+	
+	
 	
 	private Ocllib.OrderedSet<ASTNode> _fragments;
 	
@@ -65,6 +68,18 @@ extends ASTNodeImpl implements TagElement
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.TAGELEMENT_TAGNAME:
+				return TAGNAME_EDEFAULT == null ? _tagName != null : !TAGNAME_EDEFAULT.equals(_tagName);
+			case Java_PackageImpl.TAGELEMENT_FRAGMENTS:
+				return _fragments != null && !_fragments.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

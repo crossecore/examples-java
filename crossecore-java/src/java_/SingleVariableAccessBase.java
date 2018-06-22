@@ -141,5 +141,17 @@ extends ExpressionImpl implements SingleVariableAccess
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE:
+				return getVariable() != null; //single, volatile
+			case Java_PackageImpl.SINGLEVARIABLEACCESS_QUALIFIER:
+				return _qualifier != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

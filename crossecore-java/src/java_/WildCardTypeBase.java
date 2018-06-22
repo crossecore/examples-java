@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class WildCardTypeBase 
 extends TypeImpl implements WildCardType
 {
-	private boolean _upperBound = false;
+	protected static final boolean UPPERBOUND_EDEFAULT = false;
+	private boolean _upperBound = UPPERBOUND_EDEFAULT;
 	public boolean isUpperBound()
 	{
 		return _upperBound;
@@ -22,14 +23,8 @@ extends TypeImpl implements WildCardType
 		
 	}
 	
-	/*
-	@Override
-	public boolean isUpperBound() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
+	
+	
 	private TypeAccess _bound;
 	public TypeAccess getBound()
 	{
@@ -102,6 +97,18 @@ extends TypeImpl implements WildCardType
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.WILDCARDTYPE_UPPERBOUND:
+				return _upperBound != UPPERBOUND_EDEFAULT;
+			case Java_PackageImpl.WILDCARDTYPE_BOUND:
+				return _bound != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

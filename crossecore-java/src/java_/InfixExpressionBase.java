@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class InfixExpressionBase 
 extends ExpressionImpl implements InfixExpression
 {
-	private InfixExpressionKind _operator = InfixExpressionKind.TIMES;
+	protected static final InfixExpressionKind OPERATOR_EDEFAULT = InfixExpressionKind.TIMES;
+	private InfixExpressionKind _operator = OPERATOR_EDEFAULT;
 	public InfixExpressionKind getOperator()
 	{
 		return _operator;
@@ -21,6 +22,8 @@ extends ExpressionImpl implements InfixExpression
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.INFIXEXPRESSION_OPERATOR, oldValue, value));
 		
 	}
+	
+	
 	
 	private Expression _rightOperand;
 	public Expression getRightOperand()
@@ -155,6 +158,22 @@ extends ExpressionImpl implements InfixExpression
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.INFIXEXPRESSION_OPERATOR:
+				return OPERATOR_EDEFAULT == null ? _operator != null : !OPERATOR_EDEFAULT.equals(_operator);
+			case Java_PackageImpl.INFIXEXPRESSION_RIGHTOPERAND:
+				return _rightOperand != null; //single != null;
+			case Java_PackageImpl.INFIXEXPRESSION_LEFTOPERAND:
+				return _leftOperand != null; //single != null;
+			case Java_PackageImpl.INFIXEXPRESSION_EXTENDEDOPERANDS:
+				return _extendedOperands != null && !_extendedOperands.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

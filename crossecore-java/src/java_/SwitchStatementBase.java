@@ -92,5 +92,17 @@ extends StatementImpl implements SwitchStatement
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.SWITCHSTATEMENT_EXPRESSION:
+				return _expression != null; //single != null;
+			case Java_PackageImpl.SWITCHSTATEMENT_STATEMENTS:
+				return _statements != null && !_statements.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

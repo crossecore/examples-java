@@ -128,5 +128,19 @@ extends ASTNodeImpl implements AbstractMethodInvocation
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD:
+				return getMethod() != null; //single, volatile
+			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS:
+				return _arguments != null && !_arguments.isEmpty();
+			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS:
+				return _typeArguments != null && !_typeArguments.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

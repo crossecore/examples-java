@@ -47,5 +47,15 @@ extends AbstractTypeDeclarationImpl implements TypeDeclaration
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.TYPEDECLARATION_TYPEPARAMETERS:
+				return _typeParameters != null && !_typeParameters.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

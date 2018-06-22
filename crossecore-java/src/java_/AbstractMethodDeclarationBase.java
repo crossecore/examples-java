@@ -181,5 +181,25 @@ extends BodyDeclarationImpl implements AbstractMethodDeclaration
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_BODY:
+				return _body != null; //single != null;
+			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_PARAMETERS:
+				return _parameters != null && !_parameters.isEmpty();
+			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_THROWNEXCEPTIONS:
+				return _thrownExceptions != null && !_thrownExceptions.isEmpty();
+			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_TYPEPARAMETERS:
+				return _typeParameters != null && !_typeParameters.isEmpty();
+			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS:
+				return getUsagesInDocComments().isEmpty(); //many, volatile
+			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES:
+				return getUsages().isEmpty(); //many, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

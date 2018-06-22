@@ -188,5 +188,23 @@ extends NamedElementImpl implements Package
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.PACKAGE_OWNEDELEMENTS:
+				return _ownedElements != null && !_ownedElements.isEmpty();
+			case Java_PackageImpl.PACKAGE_MODEL:
+				return getModel() != null; //single, volatile
+			case Java_PackageImpl.PACKAGE_OWNEDPACKAGES:
+				return _ownedPackages != null && !_ownedPackages.isEmpty();
+			case Java_PackageImpl.PACKAGE_PACKAGE:
+				return getPackage() != null; //single, volatile
+			case Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS:
+				return getUsagesInPackageAccess().isEmpty(); //many, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

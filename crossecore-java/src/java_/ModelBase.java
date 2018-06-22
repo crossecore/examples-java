@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ModelBase 
 extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Model
 {
-	private java.lang.String _name = "";
+	protected static final java.lang.String NAME_EDEFAULT = "";
+	private java.lang.String _name = NAME_EDEFAULT;
 	public java.lang.String getName()
 	{
 		return _name;
@@ -21,6 +22,8 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Model
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.MODEL_NAME, oldValue, value));
 		
 	}
+	
+	
 	
 	private Ocllib.Set<Package> _ownedElements;
 	
@@ -162,6 +165,28 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Model
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.MODEL_NAME:
+				return NAME_EDEFAULT == null ? _name != null : !NAME_EDEFAULT.equals(_name);
+			case Java_PackageImpl.MODEL_OWNEDELEMENTS:
+				return _ownedElements != null && !_ownedElements.isEmpty();
+			case Java_PackageImpl.MODEL_ORPHANTYPES:
+				return _orphanTypes != null && !_orphanTypes.isEmpty();
+			case Java_PackageImpl.MODEL_UNRESOLVEDITEMS:
+				return _unresolvedItems != null && !_unresolvedItems.isEmpty();
+			case Java_PackageImpl.MODEL_COMPILATIONUNITS:
+				return _compilationUnits != null && !_compilationUnits.isEmpty();
+			case Java_PackageImpl.MODEL_CLASSFILES:
+				return _classFiles != null && !_classFiles.isEmpty();
+			case Java_PackageImpl.MODEL_ARCHIVES:
+				return _archives != null && !_archives.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

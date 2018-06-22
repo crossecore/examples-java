@@ -47,5 +47,15 @@ extends TypeImpl implements TypeParameter
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.TYPEPARAMETER_BOUNDS:
+				return _bounds != null && !_bounds.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

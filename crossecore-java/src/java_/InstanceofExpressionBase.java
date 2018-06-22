@@ -121,5 +121,17 @@ extends ExpressionImpl implements InstanceofExpression
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.INSTANCEOFEXPRESSION_RIGHTOPERAND:
+				return _rightOperand != null; //single != null;
+			case Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND:
+				return _leftOperand != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

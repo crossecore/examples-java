@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class NamedElementBase 
 extends ASTNodeImpl implements NamedElement
 {
-	private java.lang.String _name = "";
+	protected static final java.lang.String NAME_EDEFAULT = "";
+	private java.lang.String _name = NAME_EDEFAULT;
 	public java.lang.String getName()
 	{
 		return _name;
@@ -22,7 +23,10 @@ extends ASTNodeImpl implements NamedElement
 		
 	}
 	
-	private boolean _proxy = false;
+	
+	
+	protected static final boolean PROXY_EDEFAULT = false;
+	private boolean _proxy = PROXY_EDEFAULT;
 	public boolean isProxy()
 	{
 		return _proxy;
@@ -36,14 +40,8 @@ extends ASTNodeImpl implements NamedElement
 		
 	}
 	
-	/*
-	@Override
-	public boolean isProxy() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
+	
+	
 	private Ocllib.Set<ImportDeclaration> _usagesInImports;
 	
 	public Ocllib.Set<ImportDeclaration> getUsagesInImports()
@@ -109,6 +107,20 @@ extends ASTNodeImpl implements NamedElement
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.NAMEDELEMENT_NAME:
+				return NAME_EDEFAULT == null ? _name != null : !NAME_EDEFAULT.equals(_name);
+			case Java_PackageImpl.NAMEDELEMENT_PROXY:
+				return _proxy != PROXY_EDEFAULT;
+			case Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS:
+				return getUsagesInImports().isEmpty(); //many, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

@@ -47,5 +47,15 @@ extends ExpressionImpl implements ArrayInitializer
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ARRAYINITIALIZER_EXPRESSIONS:
+				return _expressions != null && !_expressions.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

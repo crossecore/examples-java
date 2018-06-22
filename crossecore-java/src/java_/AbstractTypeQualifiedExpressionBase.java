@@ -76,5 +76,15 @@ extends ExpressionImpl implements AbstractTypeQualifiedExpression
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ABSTRACTTYPEQUALIFIEDEXPRESSION_QUALIFIER:
+				return _qualifier != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

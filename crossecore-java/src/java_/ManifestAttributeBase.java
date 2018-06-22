@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ManifestAttributeBase 
 extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements ManifestAttribute
 {
-	private java.lang.String _key = "";
+	protected static final java.lang.String KEY_EDEFAULT = "";
+	private java.lang.String _key = KEY_EDEFAULT;
 	public java.lang.String getKey()
 	{
 		return _key;
@@ -22,7 +23,10 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 		
 	}
 	
-	private java.lang.String _value = "";
+	
+	
+	protected static final java.lang.String VALUE_EDEFAULT = "";
+	private java.lang.String _value = VALUE_EDEFAULT;
 	public java.lang.String getValue()
 	{
 		return _value;
@@ -35,6 +39,8 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.MANIFESTATTRIBUTE_VALUE, oldValue, value));
 		
 	}
+	
+	
 	
 
 	
@@ -68,6 +74,18 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.MANIFESTATTRIBUTE_KEY:
+				return KEY_EDEFAULT == null ? _key != null : !KEY_EDEFAULT.equals(_key);
+			case Java_PackageImpl.MANIFESTATTRIBUTE_VALUE:
+				return VALUE_EDEFAULT == null ? _value != null : !VALUE_EDEFAULT.equals(_value);
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

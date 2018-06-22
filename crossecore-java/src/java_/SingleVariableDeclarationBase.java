@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class SingleVariableDeclarationBase 
 extends VariableDeclarationImpl implements SingleVariableDeclaration
 {
-	private boolean _varargs = false;
+	protected static final boolean VARARGS_EDEFAULT = false;
+	private boolean _varargs = VARARGS_EDEFAULT;
 	public boolean isVarargs()
 	{
 		return _varargs;
@@ -22,14 +23,8 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		
 	}
 	
-	/*
-	@Override
-	public boolean isVarargs() {
-		//return this.eGet();
-		
-		return false;
-	}
-	*/
+	
+	
 	private Modifier _modifier;
 	public Modifier getModifier()
 	{
@@ -263,10 +258,10 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
-				return getModifier();
 			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_VARARGS:
 				return isVarargs();
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
+				return getModifier();
 			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_TYPE:
 				return getType();
 			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ANNOTATIONS:
@@ -284,11 +279,11 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
-				setModifier((Modifier) newValue);
-				return;
 			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_VARARGS:
 				setVarargs((boolean) newValue);
+				return;
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
+				setModifier((Modifier) newValue);
 				return;
 			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_TYPE:
 				setType((TypeAccess) newValue);
@@ -309,6 +304,28 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_VARARGS:
+				return _varargs != VARARGS_EDEFAULT;
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
+				return _modifier != null; //single != null;
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_TYPE:
+				return _type != null; //single != null;
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ANNOTATIONS:
+				return _annotations != null && !_annotations.isEmpty();
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION:
+				return getMethodDeclaration() != null; //single, volatile
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE:
+				return getCatchClause() != null; //single, volatile
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT:
+				return getEnhancedForStatement() != null; //single, volatile
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

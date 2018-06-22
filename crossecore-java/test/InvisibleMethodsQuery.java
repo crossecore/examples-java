@@ -1,6 +1,10 @@
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -8,11 +12,17 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.junit.Before;
 import org.junit.Test;
 
+import Ocllib.Set;
 import java_.ClassDeclaration;
+import java_.FieldDeclaration;
+import java_.Java_Factory;
+import java_.Java_FactoryImpl;
+import java_.Java_Package;
 import java_.Java_PackageImpl;
 import java_.Javadoc;
 import java_.MethodDeclaration;
 import java_.Model;
+import java_.SuperMethodInvocation;
 import java_.TextElement;
 import java_.TypeDeclaration;
 import java_.VisibilityKind;
@@ -35,6 +45,19 @@ public class InvisibleMethodsQuery {
         
         resSet.getPackageRegistry().put("java_", Java_PackageImpl.eINSTANCE);
         
+//		EClass x = Java_PackageImpl.Literals.FIELDDECLARATION;
+//		EStructuralFeature fragments = x.getEStructuralFeature("fragments");
+//		Object value = x.eGet(fragments, true);
+//		List<EStructuralFeature> features = x.getEStructuralFeatures();
+//		List<EStructuralFeature> allfeatures = x.getEAllStructuralFeatures();
+        
+        FieldDeclaration fielddeclaration = Java_FactoryImpl.eINSTANCE.createFieldDeclaration();
+        EStructuralFeature fragments = fielddeclaration.eClass().getEStructuralFeature("fragments");
+        Object value = fielddeclaration.eGet(fragments, true);
+        
+        SuperMethodInvocation superMethodInvocation = Java_FactoryImpl.eINSTANCE.createSuperMethodInvocation();
+        EStructuralFeature arguments = superMethodInvocation.eClass().getEStructuralFeature("arguments");
+        Object val = superMethodInvocation.eGet(arguments, true);
         
         Resource resource = resSet.getResource(URI.createURI("resources/org.eclipse.gmt.modisco.java.kyanos.xmi"), true);
         	
@@ -46,6 +69,12 @@ public class InvisibleMethodsQuery {
 	@Test
 	public void Grabats09Query() {
 		
+		EcorePackage x;
+		
+		
+		Set<TypeDeclaration> allInstances = TypeDeclaration.allInstances;
+		System.out.println(allInstances.size());
+		/*
 		TypeDeclaration.allInstances.select(
 				each -> each.getBodyDeclarations().exists(
 						bd -> bd.getClass().equals(MethodDeclaration.class) && 
@@ -54,6 +83,8 @@ public class InvisibleMethodsQuery {
 						(! (((MethodDeclaration)bd).getReturnType()==null)) && 
 						(! ((MethodDeclaration)bd).getReturnType().getType().equals(each))
 					)).asSequence();
+		
+		*/
 	}
 	
 	public void InvisibleMethods() {

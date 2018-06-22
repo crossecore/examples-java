@@ -137,5 +137,19 @@ extends ExpressionImpl implements ArrayCreation
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ARRAYCREATION_DIMENSIONS:
+				return _dimensions != null && !_dimensions.isEmpty();
+			case Java_PackageImpl.ARRAYCREATION_INITIALIZER:
+				return _initializer != null; //single != null;
+			case Java_PackageImpl.ARRAYCREATION_TYPE:
+				return _type != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

@@ -141,5 +141,17 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER:
+				return getMember() != null; //single, volatile
+			case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE:
+				return _value != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

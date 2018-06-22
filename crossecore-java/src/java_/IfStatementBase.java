@@ -166,5 +166,19 @@ extends StatementImpl implements IfStatement
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.IFSTATEMENT_EXPRESSION:
+				return _expression != null; //single != null;
+			case Java_PackageImpl.IFSTATEMENT_THENSTATEMENT:
+				return _thenStatement != null; //single != null;
+			case Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT:
+				return _elseStatement != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

@@ -144,6 +144,10 @@ extends ExpressionImpl implements VariableDeclarationExpression
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_TYPE:
+				return getType();
+			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS:
+				return getFragments();
 			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER:
 				return getModifier();
 			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_ANNOTATIONS:
@@ -155,6 +159,13 @@ extends ExpressionImpl implements VariableDeclarationExpression
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_TYPE:
+				setType((TypeAccess) newValue);
+				return;
+			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS:
+				getFragments().clear();
+				getFragments().addAll((java.util.Collection<? extends VariableDeclarationFragment>) newValue);
+				return;
 			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER:
 				setModifier((Modifier) newValue);
 				return;
@@ -164,6 +175,46 @@ extends ExpressionImpl implements VariableDeclarationExpression
 				return;
 		}
 		super.eSet(featureID, newValue);
+	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_TYPE:
+				return _type != null; //single != null;
+			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS:
+				return _fragments != null && !_fragments.isEmpty();
+			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER:
+				return _modifier != null; //single != null;
+			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_ANNOTATIONS:
+				return _annotations != null && !_annotations.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == AbstractVariablesContainer.class) {
+			switch (derivedFeatureID) {
+				case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_TYPE: return Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE;
+				case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS: return Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+	
+				
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == AbstractVariablesContainer.class) {
+			switch (baseFeatureID) {
+				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE: return Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_TYPE;
+				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS: return Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 	
 	

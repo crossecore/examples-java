@@ -121,5 +121,17 @@ extends StatementImpl implements SynchronizedStatement
 		super.eSet(featureID, newValue);
 	}
 	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.SYNCHRONIZEDSTATEMENT_BODY:
+				return _body != null; //single != null;
+			case Java_PackageImpl.SYNCHRONIZEDSTATEMENT_EXPRESSION:
+				return _expression != null; //single != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	
 	
 }

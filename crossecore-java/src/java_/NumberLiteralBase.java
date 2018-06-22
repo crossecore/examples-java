@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class NumberLiteralBase 
 extends ExpressionImpl implements NumberLiteral
 {
-	private java.lang.String _tokenValue = "";
+	protected static final java.lang.String TOKENVALUE_EDEFAULT = "";
+	private java.lang.String _tokenValue = TOKENVALUE_EDEFAULT;
 	public java.lang.String getTokenValue()
 	{
 		return _tokenValue;
@@ -21,6 +22,8 @@ extends ExpressionImpl implements NumberLiteral
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.NUMBERLITERAL_TOKENVALUE, oldValue, value));
 		
 	}
+	
+	
 	
 
 	
@@ -49,6 +52,16 @@ extends ExpressionImpl implements NumberLiteral
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.NUMBERLITERAL_TOKENVALUE:
+				return TOKENVALUE_EDEFAULT == null ? _tokenValue != null : !TOKENVALUE_EDEFAULT.equals(_tokenValue);
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }

@@ -8,7 +8,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class TextElementBase 
 extends ASTNodeImpl implements TextElement
 {
-	private java.lang.String _text = "";
+	protected static final java.lang.String TEXT_EDEFAULT = "";
+	private java.lang.String _text = TEXT_EDEFAULT;
 	public java.lang.String getText()
 	{
 		return _text;
@@ -21,6 +22,8 @@ extends ASTNodeImpl implements TextElement
 			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.TEXTELEMENT_TEXT, oldValue, value));
 		
 	}
+	
+	
 	
 
 	
@@ -49,6 +52,16 @@ extends ASTNodeImpl implements TextElement
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case Java_PackageImpl.TEXTELEMENT_TEXT:
+				return TEXT_EDEFAULT == null ? _text != null : !TEXT_EDEFAULT.equals(_text);
+		}
+		return super.eIsSet(featureID);
+	}
+	
 	
 	
 }
