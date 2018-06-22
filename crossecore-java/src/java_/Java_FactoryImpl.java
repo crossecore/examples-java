@@ -1226,4 +1226,115 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
+	
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+		case Java_PackageImpl.ASSIGNMENTKIND:
+			return createAssignmentKindFromString(eDataType, initialValue);
+		case Java_PackageImpl.INFIXEXPRESSIONKIND:
+			return createInfixExpressionKindFromString(eDataType, initialValue);
+		case Java_PackageImpl.INHERITANCEKIND:
+			return createInheritanceKindFromString(eDataType, initialValue);
+		case Java_PackageImpl.POSTFIXEXPRESSIONKIND:
+			return createPostfixExpressionKindFromString(eDataType, initialValue);
+		case Java_PackageImpl.PREFIXEXPRESSIONKIND:
+			return createPrefixExpressionKindFromString(eDataType, initialValue);
+		case Java_PackageImpl.VISIBILITYKIND:
+			return createVisibilityKindFromString(eDataType, initialValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+	
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+		case Java_PackageImpl.ASSIGNMENTKIND:
+			return convertAssignmentKindToString(eDataType, instanceValue);
+		case Java_PackageImpl.INFIXEXPRESSIONKIND:
+			return convertInfixExpressionKindToString(eDataType, instanceValue);
+		case Java_PackageImpl.INHERITANCEKIND:
+			return convertInheritanceKindToString(eDataType, instanceValue);
+		case Java_PackageImpl.POSTFIXEXPRESSIONKIND:
+			return convertPostfixExpressionKindToString(eDataType, instanceValue);
+		case Java_PackageImpl.PREFIXEXPRESSIONKIND:
+			return convertPrefixExpressionKindToString(eDataType, instanceValue);
+		case Java_PackageImpl.VISIBILITYKIND:
+			return convertVisibilityKindToString(eDataType, instanceValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+	
+	public AssignmentKind createAssignmentKindFromString(EDataType eDataType, String initialValue) {
+		AssignmentKind result = AssignmentKind.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+	
+	public String convertAssignmentKindToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+	public InfixExpressionKind createInfixExpressionKindFromString(EDataType eDataType, String initialValue) {
+		InfixExpressionKind result = InfixExpressionKind.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+	
+	public String convertInfixExpressionKindToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+	public InheritanceKind createInheritanceKindFromString(EDataType eDataType, String initialValue) {
+		InheritanceKind result = InheritanceKind.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+	
+	public String convertInheritanceKindToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+	public PostfixExpressionKind createPostfixExpressionKindFromString(EDataType eDataType, String initialValue) {
+		PostfixExpressionKind result = PostfixExpressionKind.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+	
+	public String convertPostfixExpressionKindToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+	public PrefixExpressionKind createPrefixExpressionKindFromString(EDataType eDataType, String initialValue) {
+		PrefixExpressionKind result = PrefixExpressionKind.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+	
+	public String convertPrefixExpressionKindToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+	public VisibilityKind createVisibilityKindFromString(EDataType eDataType, String initialValue) {
+		VisibilityKind result = VisibilityKind.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+	
+	public String convertVisibilityKindToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+	
+	public Java_Package getJava_() {
+		return (Java_Package) getEPackage();
+	}			
 }
