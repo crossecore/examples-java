@@ -20,10 +20,10 @@ extends VariableDeclarationImpl implements VariableDeclarationFragment
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS, VariableDeclarationFragment.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS, AbstractVariablesContainer.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS, VariableDeclarationFragment.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS, AbstractVariablesContainer.class, msgs);
 			}
 			msgs = basicSetVariablesContainer(value, msgs);
 			if (msgs != null) {

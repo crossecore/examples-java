@@ -37,10 +37,10 @@ extends ASTNodeImpl implements ImportDeclaration
 		if (value != _importedElement) {
 			NotificationChain msgs = null;
 			if (_importedElement != null){
-				msgs = ((InternalEObject)_importedElement).eInverseRemove(this, Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS, ImportDeclaration.class, msgs);
+				msgs = ((InternalEObject)_importedElement).eInverseRemove(this, Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS, NamedElement.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS, ImportDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS, NamedElement.class, msgs);
 			}
 			msgs = basicSetImportedElement(value, msgs);
 			if (msgs != null) {

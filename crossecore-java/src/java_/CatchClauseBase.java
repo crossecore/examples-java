@@ -20,10 +20,10 @@ extends StatementImpl implements CatchClause
 		if (value != _exception) {
 			NotificationChain msgs = null;
 			if (_exception != null){
-				msgs = ((InternalEObject)_exception).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE, CatchClause.class, msgs);
+				msgs = ((InternalEObject)_exception).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE, SingleVariableDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE, CatchClause.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE, SingleVariableDeclaration.class, msgs);
 			}
 			msgs = basicSetException(value, msgs);
 			if (msgs != null) {

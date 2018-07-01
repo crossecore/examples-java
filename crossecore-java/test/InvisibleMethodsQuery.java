@@ -12,9 +12,13 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.junit.Before;
 import org.junit.Test;
 
+import Ocllib.OrderedSet;
+import Ocllib.Sequence;
 import Ocllib.Set;
+import java_.BodyDeclaration;
 import java_.ClassDeclaration;
 import java_.FieldDeclaration;
+import java_.InterfaceDeclaration;
 import java_.Java_Factory;
 import java_.Java_FactoryImpl;
 import java_.Java_Package;
@@ -24,12 +28,16 @@ import java_.MethodDeclaration;
 import java_.Model;
 import java_.SuperMethodInvocation;
 import java_.TextElement;
+import java_.Type;
+import java_.TypeAccess;
 import java_.TypeDeclaration;
 import java_.VisibilityKind;
 
 
 public class InvisibleMethodsQuery {
 
+	private Model model;
+	
 	@Before
 	public void setUp() throws Exception {
 		
@@ -61,37 +69,129 @@ public class InvisibleMethodsQuery {
         
         Resource resource = resSet.getResource(URI.createURI("resources/org.eclipse.gmt.modisco.java.kyanos.xmi"), true);
         	
-        resource.getContents().get(0);
+        model = (Model) resource.getContents().get(0);
 	
 		
 	}
 
-	@Test
+	//@Test
 	public void Grabats09Query() {
 		
-		EcorePackage x;
-		
-		
-		Set<TypeDeclaration> allInstances = TypeDeclaration.allInstances;
-		System.out.println(allInstances.size());
 		/*
-		TypeDeclaration.allInstances.select(
-				each -> each.getBodyDeclarations().exists(
-						bd -> bd.getClass().equals(MethodDeclaration.class) && 
-						(!(bd.getModifier()==null)) && 
-						bd.getModifier().isStatic() && 
-						(! (((MethodDeclaration)bd).getReturnType()==null)) && 
-						(! ((MethodDeclaration)bd).getReturnType().getType().equals(each))
-					)).asSequence();
+		TypeDeclaration.allInstances()->size()
+		 */
+		Set<TypeDeclaration> result1 = TypeDeclaration.allInstances;
+		System.out.println(result1.size());
 		
+		/*
+		TypeDeclaration.allInstances()->
+		select(each | each.bodyDeclarations->
+		exists(bd | 
+		bd.oclIsTypeOf(MethodDeclaration)
+		))->size()
+		 */
+		
+		Set<TypeDeclaration> result2 = TypeDeclaration.allInstances.
+		select(each -> each.getBodyDeclarations().
+		exists(bd -> 
+		bd instanceof MethodDeclaration
+		));
+		System.out.println(result2.size());
+		
+		
+		/*
+		TypeDeclaration.allInstances()->
+		select(each | each.bodyDeclarations->
+		exists(bd | 
+		bd.oclIsTypeOf(MethodDeclaration)
+		and (not bd.modifier.oclIsUndefined()) 
+		))->size()
 		*/
+		
+		Set<TypeDeclaration> result3 = TypeDeclaration.allInstances.
+		select(each -> each.getBodyDeclarations().
+		exists(bd -> 
+		bd instanceof MethodDeclaration
+		&& (!(bd.getModifier()==null))
+		));
+		System.out.println(result3.size());
+		
+		
+		/*
+		TypeDeclaration.allInstances()->
+		select(each | each.bodyDeclarations->
+		exists(bd | 
+		bd.oclIsTypeOf(MethodDeclaration)
+		and (not bd.modifier.oclIsUndefined()) 
+		and bd.modifier._static 
+		))->size()
+		*/
+		
+		Set<TypeDeclaration> result4 = TypeDeclaration.allInstances.
+		select(each -> each.getBodyDeclarations().
+		exists(bd -> 
+		bd instanceof MethodDeclaration
+		&& (!(bd.getModifier()==null))
+		&& bd.getModifier().isStatic()
+		));
+		System.out.println(result4.size());
+		
+		/*
+		TypeDeclaration.allInstances()->
+		select(each | each.bodyDeclarations->
+		exists(bd | 
+		bd.oclIsTypeOf(MethodDeclaration)
+		and (not bd.modifier.oclIsUndefined()) 
+		and bd.modifier._static 
+		and (not bd.oclAsType(MethodDeclaration).returnType.oclIsUndefined()) 
+		))->size()
+		*/
+		
+		Set<TypeDeclaration> result5 = TypeDeclaration.allInstances.
+		select(each -> each.getBodyDeclarations().
+		exists(bd -> 
+		bd instanceof MethodDeclaration
+		&& (!(bd.getModifier()==null))
+		&& bd.getModifier().isStatic()
+		&& (!(((MethodDeclaration)bd).getReturnType()==null))
+		));
+		System.out.println(result5.size());
+		
+		
+		/*
+		TypeDeclaration.allInstances()->
+		select(each | each.bodyDeclarations->
+		exists(bd | 
+		bd.oclIsTypeOf(MethodDeclaration)
+		and (not bd.modifier.oclIsUndefined()) 
+		and bd.modifier._static 
+		and (not bd.oclAsType(MethodDeclaration).returnType.oclIsUndefined()) 
+		and bd.oclAsType(MethodDeclaration).returnType.type = each)
+		)
+		*/
+		
+		Set<TypeDeclaration> result6 = TypeDeclaration.allInstances.
+		select(each -> each.getBodyDeclarations().
+		exists(bd -> 
+		bd instanceof MethodDeclaration
+		&& (!(bd.getModifier()==null))
+		&& bd.getModifier().isStatic()
+		&& (!(((MethodDeclaration)bd).getReturnType()==null))
+		&& (!(((MethodDeclaration)bd).getReturnType().getType()==null))
+		&& ((MethodDeclaration)bd).getReturnType().getType().equals(each)
+		));
+		System.out.println(result6.size());
+		
+
+
 	}
 	
 	public void InvisibleMethods() {
 		
+		/*
 		ClassDeclaration.allInstances
 		.collect(cd -> cd.getBodyDeclarations())
-		.flatten()/* manually added*/
+		.flatten()/ * manually added* /
 		.select(each -> each.getClass().equals(MethodDeclaration.class))
 		.select(each -> 
 			! (each.getModifier()==null) 
@@ -100,28 +200,49 @@ public class InvisibleMethodsQuery {
 		.asSequence() 
 		;
 		
+		*/
+		
 	}
+	
 	
 	public void TextElementInJavadoc() {
 		
-		Model self=null;
-		
-		self.getCompilationUnits().collect(cu->cu.getCommentList()).
+		/*
+		model.getCompilationUnits().collect(cu->cu.getCommentList()).
 		select(each->each.getClass().equals(Javadoc.class))
 		.collect(o->((Javadoc)o).getTags().collect(t->t.getFragments()))
 		.select(each -> each.getClass().equals(TextElement.class))
 		.asSequence();
+		*/
 		
 	}
 	
+	@Test
 	public void ThrownExceptions() {
 		
-		ClassDeclaration.allInstances
-		.collect(cd->cd.getBodyDeclarations())
-		.select(each->each.getClass().equals(MethodDeclaration.class))
-		.collect(each->((MethodDeclaration)each).getThrownExceptions())
-		.asSequence();
+		Set<ClassDeclaration> result1 = ClassDeclaration.allInstances;
+		System.out.println(result1.size());
 		
+		Set<BodyDeclaration> result2 = ClassDeclaration.allInstances.collect2(BodyDeclaration.class, cd->cd.getBodyDeclarations());
+		System.out.println(result2.size());
+		
+		Set<BodyDeclaration> result3 = ClassDeclaration.allInstances.collect2(BodyDeclaration.class, cd->cd.getBodyDeclarations()).select(each->each instanceof MethodDeclaration);
+		System.out.println(result3.size());
+		
+		Set<TypeAccess> result4 = ClassDeclaration.allInstances.collect2(BodyDeclaration.class, cd->cd.getBodyDeclarations()).select(each->each instanceof MethodDeclaration).collect2(TypeAccess.class, each->((MethodDeclaration)each).getThrownExceptions());
+		System.out.println(result4.size());
+		
+		Sequence<TypeAccess> result5 = ClassDeclaration.allInstances.collect2(BodyDeclaration.class, cd->cd.getBodyDeclarations()).select(each->each instanceof MethodDeclaration).collect2(TypeAccess.class, each->((MethodDeclaration)each).getThrownExceptions()).asSequence();
+		System.out.println(result5.size());
+		
+		/*
+		System.out.println(ClassDeclaration.allInstances
+		.collect2(cd->cd.getBodyDeclarations())
+		.select(each->each instanceof MethodDeclaration)
+		.collect(each->((MethodDeclaration)each).getThrownExceptions())
+		.asSequence().size());
+		
+		*/
 	}
 	
 	

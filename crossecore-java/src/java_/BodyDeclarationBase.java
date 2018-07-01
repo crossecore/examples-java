@@ -20,10 +20,10 @@ extends NamedElementImpl implements BodyDeclaration
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS, BodyDeclaration.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS, AbstractTypeDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS, BodyDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS, AbstractTypeDeclaration.class, msgs);
 			}
 			msgs = basicSetAbstractTypeDeclaration(value, msgs);
 			if (msgs != null) {
@@ -56,10 +56,10 @@ extends NamedElementImpl implements BodyDeclaration
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS, BodyDeclaration.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS, AnonymousClassDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS, BodyDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS, AnonymousClassDeclaration.class, msgs);
 			}
 			msgs = basicSetAnonymousClassDeclarationOwner(value, msgs);
 			if (msgs != null) {
@@ -82,10 +82,10 @@ extends NamedElementImpl implements BodyDeclaration
 		if (value != _modifier) {
 			NotificationChain msgs = null;
 			if (_modifier != null){
-				msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER_BODYDECLARATION, BodyDeclaration.class, msgs);
+				msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER_BODYDECLARATION, Modifier.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER_BODYDECLARATION, BodyDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER_BODYDECLARATION, Modifier.class, msgs);
 			}
 			msgs = basicSetModifier(value, msgs);
 			if (msgs != null) {

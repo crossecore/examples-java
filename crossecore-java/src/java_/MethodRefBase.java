@@ -20,10 +20,10 @@ extends ASTNodeImpl implements MethodRef
 		if (value != _method) {
 			NotificationChain msgs = null;
 			if (_method != null){
-				msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS, MethodRef.class, msgs);
+				msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS, AbstractMethodDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS, MethodRef.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS, AbstractMethodDeclaration.class, msgs);
 			}
 			msgs = basicSetMethod(value, msgs);
 			if (msgs != null) {

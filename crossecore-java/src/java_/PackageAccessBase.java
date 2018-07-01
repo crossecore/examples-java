@@ -20,10 +20,10 @@ extends NamespaceAccessImpl implements PackageAccess
 		if (value != _package) {
 			NotificationChain msgs = null;
 			if (_package != null){
-				msgs = ((InternalEObject)_package).eInverseRemove(this, Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS, PackageAccess.class, msgs);
+				msgs = ((InternalEObject)_package).eInverseRemove(this, Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS, Package.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS, PackageAccess.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS, Package.class, msgs);
 			}
 			msgs = basicSetPackage(value, msgs);
 			if (msgs != null) {

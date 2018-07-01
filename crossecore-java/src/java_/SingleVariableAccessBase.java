@@ -20,10 +20,10 @@ extends ExpressionImpl implements SingleVariableAccess
 		if (value != _variable) {
 			NotificationChain msgs = null;
 			if (_variable != null){
-				msgs = ((InternalEObject)_variable).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS, SingleVariableAccess.class, msgs);
+				msgs = ((InternalEObject)_variable).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS, VariableDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS, SingleVariableAccess.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS, VariableDeclaration.class, msgs);
 			}
 			msgs = basicSetVariable(value, msgs);
 			if (msgs != null) {

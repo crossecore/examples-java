@@ -156,10 +156,10 @@ extends ASTNodeImpl implements Modifier
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.BODYDECLARATION_MODIFIER, Modifier.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.BODYDECLARATION_MODIFIER, BodyDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.BODYDECLARATION_MODIFIER, Modifier.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.BODYDECLARATION_MODIFIER, BodyDeclaration.class, msgs);
 			}
 			msgs = basicSetBodyDeclaration(value, msgs);
 			if (msgs != null) {
@@ -182,10 +182,10 @@ extends ASTNodeImpl implements Modifier
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER, Modifier.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER, SingleVariableDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER, Modifier.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER, SingleVariableDeclaration.class, msgs);
 			}
 			msgs = basicSetSingleVariableDeclaration(value, msgs);
 			if (msgs != null) {
@@ -208,10 +208,10 @@ extends ASTNodeImpl implements Modifier
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER, Modifier.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER, VariableDeclarationStatement.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER, Modifier.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER, VariableDeclarationStatement.class, msgs);
 			}
 			msgs = basicSetVariableDeclarationStatement(value, msgs);
 			if (msgs != null) {
@@ -234,10 +234,10 @@ extends ASTNodeImpl implements Modifier
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER, Modifier.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER, VariableDeclarationExpression.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER, Modifier.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER, VariableDeclarationExpression.class, msgs);
 			}
 			msgs = basicSetVariableDeclarationExpression(value, msgs);
 			if (msgs != null) {

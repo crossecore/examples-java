@@ -20,10 +20,10 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 		if (value != _member) {
 			NotificationChain msgs = null;
 			if (_member != null){
-				msgs = ((InternalEObject)_member).eInverseRemove(this, Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_USAGES, AnnotationMemberValuePair.class, msgs);
+				msgs = ((InternalEObject)_member).eInverseRemove(this, Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_USAGES, AnnotationTypeMemberDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_USAGES, AnnotationMemberValuePair.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_USAGES, AnnotationTypeMemberDeclaration.class, msgs);
 			}
 			msgs = basicSetMember(value, msgs);
 			if (msgs != null) {

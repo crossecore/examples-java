@@ -20,10 +20,10 @@ extends ExpressionImpl implements MethodInvocation
 		if (value != _method) {
 			NotificationChain msgs = null;
 			if (_method != null){
-				msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES, AbstractMethodInvocation.class, msgs);
+				msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES, AbstractMethodDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES, AbstractMethodInvocation.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES, AbstractMethodDeclaration.class, msgs);
 			}
 			msgs = basicSetMethod(value, msgs);
 			if (msgs != null) {

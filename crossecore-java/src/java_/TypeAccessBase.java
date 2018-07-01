@@ -20,10 +20,10 @@ extends ExpressionImpl implements TypeAccess
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, Java_PackageImpl.TYPE_USAGESINTYPEACCESS, TypeAccess.class, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, Java_PackageImpl.TYPE_USAGESINTYPEACCESS, Type.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.TYPE_USAGESINTYPEACCESS, TypeAccess.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.TYPE_USAGESINTYPEACCESS, Type.class, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {

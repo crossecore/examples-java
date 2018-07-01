@@ -13,8 +13,6 @@ import java.util.function.Predicate;
 
 import org.eclipse.emf.ecore.InternalEObject;
 
-import java_.TypeDeclaration;
-
 public class Set<T> extends AbstractCollection<T> {
 
 	private Class<?> dataClass = null;
@@ -37,12 +35,30 @@ public class Set<T> extends AbstractCollection<T> {
     }
     
     
-    public <T2> Set<T2> collect(Function<T, T2> lambda){
-    	Set<T2> result = new Set<T2>(dataClass);
+    public <T2> Set<T2> collect(Class<T2> c, Function<T, T2> lambda){
+    	Set<T2> result = new Set<T2>(c);
 
         for (T element : this)
         {
             result.add(lambda.apply(element));
+        }
+
+        return result;
+    }
+    
+    public <T2> Set<T2> collect2(Class<T2> c, Function<T, Collection<T2>> lambda){
+    	Set<T2> result = new Set<T2>(c);
+
+    	
+        for (T element : this)
+        {
+        	
+        	Collection<T2> e = lambda.apply(element);
+        	
+        	for(T2 ee : e) {
+        		result.add(ee);
+        	}
+            
         }
 
         return result;
@@ -62,11 +78,6 @@ public class Set<T> extends AbstractCollection<T> {
 
         return result;
     }
-
-	public Set<TypeDeclaration> flatten() {
-		// TODO Auto-generated method stub
-		return null;
-	}
     
     
     

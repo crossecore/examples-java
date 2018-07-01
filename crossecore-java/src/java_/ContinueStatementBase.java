@@ -20,10 +20,10 @@ extends StatementImpl implements ContinueStatement
 		if (value != _label) {
 			NotificationChain msgs = null;
 			if (_label != null){
-				msgs = ((InternalEObject)_label).eInverseRemove(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS, ContinueStatement.class, msgs);
+				msgs = ((InternalEObject)_label).eInverseRemove(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS, LabeledStatement.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS, ContinueStatement.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS, LabeledStatement.class, msgs);
 			}
 			msgs = basicSetLabel(value, msgs);
 			if (msgs != null) {

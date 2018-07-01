@@ -30,10 +30,10 @@ extends NamedElementImpl implements Package
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.MODEL_OWNEDELEMENTS, Package.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.MODEL_OWNEDELEMENTS, Model.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODEL_OWNEDELEMENTS, Package.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODEL_OWNEDELEMENTS, Model.class, msgs);
 			}
 			msgs = basicSetModel(value, msgs);
 			if (msgs != null) {

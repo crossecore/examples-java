@@ -37,10 +37,10 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		if (value != _modifier) {
 			NotificationChain msgs = null;
 			if (_modifier != null){
-				msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION, SingleVariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION, Modifier.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION, SingleVariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION, Modifier.class, msgs);
 			}
 			msgs = basicSetModifier(value, msgs);
 			if (msgs != null) {
@@ -99,10 +99,10 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_PARAMETERS, SingleVariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_PARAMETERS, AbstractMethodDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_PARAMETERS, SingleVariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_PARAMETERS, AbstractMethodDeclaration.class, msgs);
 			}
 			msgs = basicSetMethodDeclaration(value, msgs);
 			if (msgs != null) {
@@ -125,10 +125,10 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.CATCHCLAUSE_EXCEPTION, SingleVariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.CATCHCLAUSE_EXCEPTION, CatchClause.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.CATCHCLAUSE_EXCEPTION, SingleVariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.CATCHCLAUSE_EXCEPTION, CatchClause.class, msgs);
 			}
 			msgs = basicSetCatchClause(value, msgs);
 			if (msgs != null) {
@@ -151,10 +151,10 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, SingleVariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, EnhancedForStatement.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, SingleVariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, EnhancedForStatement.class, msgs);
 			}
 			msgs = basicSetEnhancedForStatement(value, msgs);
 			if (msgs != null) {

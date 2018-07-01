@@ -20,10 +20,10 @@ extends StatementImpl implements BreakStatement
 		if (value != _label) {
 			NotificationChain msgs = null;
 			if (_label != null){
-				msgs = ((InternalEObject)_label).eInverseRemove(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS, BreakStatement.class, msgs);
+				msgs = ((InternalEObject)_label).eInverseRemove(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS, LabeledStatement.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS, BreakStatement.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS, LabeledStatement.class, msgs);
 			}
 			msgs = basicSetLabel(value, msgs);
 			if (msgs != null) {

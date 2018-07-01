@@ -72,10 +72,10 @@ extends StatementImpl implements EnhancedForStatement
 		if (value != _parameter) {
 			NotificationChain msgs = null;
 			if (_parameter != null){
-				msgs = ((InternalEObject)_parameter).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, EnhancedForStatement.class, msgs);
+				msgs = ((InternalEObject)_parameter).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, SingleVariableDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, EnhancedForStatement.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, SingleVariableDeclaration.class, msgs);
 			}
 			msgs = basicSetParameter(value, msgs);
 			if (msgs != null) {
