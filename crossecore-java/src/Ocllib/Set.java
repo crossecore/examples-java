@@ -15,23 +15,19 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 public class Set<T> extends AbstractCollection<T> {
 
-	private Class<?> dataClass = null;
     public Set(Class<?> dataClass)
     {
         super(dataClass);
-        this.dataClass = dataClass;
     }
 
     public Set(Class<?> dataClass, InternalEObject owner, int featureId)
     {
     	super(dataClass, owner, featureId, NO_FEATURE);
-    	this.dataClass = dataClass;
     }
 
     public Set(Class<?> dataClass,InternalEObject owner, int featureId, int oppositeFeatureId)
     {
     	super(dataClass, owner, featureId, oppositeFeatureId);
-    	this.dataClass = dataClass;
     }
     
     
@@ -66,7 +62,7 @@ public class Set<T> extends AbstractCollection<T> {
     
     public Set<T> select(Predicate<T> lambda)
     {
-    	Set<T> result = new Set<T>(dataClass);
+    	Set<T> result = new Set<T>(getDataClass());
 
         for (T element : this)
         {

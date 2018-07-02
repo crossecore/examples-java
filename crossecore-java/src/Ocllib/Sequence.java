@@ -11,23 +11,19 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 public class Sequence<T> extends AbstractCollection<T> {
 
-	private Class<?> dataClass = null;
     public Sequence(Class<?> dataClass)
     {
         super(dataClass);
-        this.dataClass = dataClass;
     }
 
     public Sequence(Class<?> dataClass, InternalEObject owner, int featureId)
     {
     	super(dataClass, owner, featureId, NO_FEATURE);
-    	this.dataClass = dataClass;
     }
 
     public Sequence(Class<?> dataClass,InternalEObject owner, int featureId, int oppositeFeatureId)
     {
     	super(dataClass, owner, featureId, oppositeFeatureId);
-    	this.dataClass = dataClass;
     }
 
 }

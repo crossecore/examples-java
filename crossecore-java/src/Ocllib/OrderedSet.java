@@ -14,23 +14,19 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 public class OrderedSet<T> extends AbstractCollection<T> {
 
-	private Class<?> dataClass = null;
     public OrderedSet(Class<?> dataClass)
     {
         super(dataClass);
-        this.dataClass = dataClass;
     }
 
     public OrderedSet(Class<?> dataClass, InternalEObject owner, int featureId)
     {
     	super(dataClass, owner, featureId, NO_FEATURE);
-    	this.dataClass = dataClass;
     }
 
     public OrderedSet(Class<?> dataClass,InternalEObject owner, int featureId, int oppositeFeatureId)
     {
     	super(dataClass, owner, featureId, oppositeFeatureId);
-    	this.dataClass = dataClass;
     }
 	
 	
@@ -69,7 +65,7 @@ public class OrderedSet<T> extends AbstractCollection<T> {
     
     public OrderedSet<T> select(Predicate<T> lambda)
     {
-    	OrderedSet<T> result = new OrderedSet<T>(dataClass);
+    	OrderedSet<T> result = new OrderedSet<T>(getDataClass());
 
         for (T element : this)
         {

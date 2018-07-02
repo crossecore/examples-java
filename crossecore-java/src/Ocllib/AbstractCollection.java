@@ -26,20 +26,21 @@ public class AbstractCollection<T> extends EcoreEList<T> implements Collection<T
     public AbstractCollection(Class<?> dataClass)
     {
         this(dataClass, null, NO_FEATURE);
+        this.dataClass = dataClass;
     }
-    
-
 
     public AbstractCollection(Class<?> dataClass, InternalEObject owner, int featureId)
     {
 
     	this(dataClass,owner, featureId, NO_FEATURE);
+    	this.dataClass = dataClass;
 
     }
 
     public AbstractCollection(Class<?> dataClass, InternalEObject owner, int featureId, int oppositeFeatureId)
     {
     	super(dataClass, owner);
+    	this.dataClass = dataClass;
     	
     	this.owner = owner;
     	this.featureId = featureId;
@@ -55,7 +56,13 @@ public class AbstractCollection<T> extends EcoreEList<T> implements Collection<T
 	}
 
 
-
+	protected Class getDataClass() {
+		return dataClass;
+	}
+	
+	protected void setDataClass(Class<?> c) {
+		this.dataClass = c;
+	}
 	
 	
 	@Override
