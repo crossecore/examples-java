@@ -10,6 +10,7 @@ With CrossEcore you could also represent any Java program in C#, TypeScript, Jav
 ## Benchmarks
 
 ### Grabats09
+#### In OCL:
 ```javascript
 TypeDeclaration.allInstances()->
  select(each | each.bodyDeclarations->
@@ -19,7 +20,22 @@ TypeDeclaration.allInstances()->
  and bd.oclAsType(MethodDeclaration).returnType.type = each))->
  asSequence()
 ```
+#### CrossEcore API:
+```java
+TypeDeclaration.allInstances.
+ select(each -> each.getBodyDeclarations().
+ exists(bd -> 
+ bd instanceof MethodDeclaration
+ && (!(bd.getModifier()==null))
+ && bd.getModifier().isStatic()
+ && (!(((MethodDeclaration)bd).getReturnType()==null))
+ && (!(((MethodDeclaration)bd).getReturnType().getType()==null))
+ && ((MethodDeclaration)bd).getReturnType().getType().equals(each)
+)).asSequence();
+```
+
 ### InvisibleMethods
+#### In OCL:
 ```javascript
 ClassDeclaration.allInstances()->
  collect(bodyDeclarations)->
@@ -31,7 +47,9 @@ ClassDeclaration.allInstances()->
  asSequence()
 ```
 
+
 ### TextElementInJavadoc
+#### In OCL:
 ```javascript
 self.compilationUnits.commentList->
  select(each | each.oclIsTypeOf(Javadoc))->
@@ -39,8 +57,19 @@ self.compilationUnits.commentList->
  select(each | each.oclIsTypeOf(TextElement))->
  asSequence()
 ```
+#### CrossEcore API:
+```java
+self
+ .getCompilationUnits()
+ .collect2(Comment.class, cu->cu.getCommentList())
+ .select(each->each instanceof Javadoc)
+ .collect2(ASTNode.class, o->((Javadoc)o).getTags().collect2(ASTNode.class, t->t.getFragments()))
+ .select(each -> each instanceof TextElement)
+ .asSequence();
+```
 
 ### ThrownExceptions
+#### In OCL:
 ```javascript
 ClassDeclaration.allInstances()->
  collect(bodyDeclarations)->
@@ -49,6 +78,16 @@ ClassDeclaration.allInstances()->
  asSequence()
 ```
 
+#### CrossEcore API
+```java
+ClassDeclaration.allInstances
+ .collect2(BodyDeclaration.class, cd->cd.getBodyDeclarations())
+ .select(each->each instanceof MethodDeclaration)
+ .collect2(TypeAccess.class, each->((MethodDeclaration)each).getThrownExceptions())
+ .asSequence();
+```  
+
+  
 
 
 
