@@ -257,8 +257,11 @@ public class InvisibleMethodsQuery {
 		Set<TypeAccess> result4 = ClassDeclaration.allInstances.collect2(BodyDeclaration.class, cd->cd.getBodyDeclarations()).select(each->each instanceof MethodDeclaration).collect2(TypeAccess.class, each->((MethodDeclaration)each).getThrownExceptions());
 		System.out.println(result4.size());
 		
+		long time = System.nanoTime();
 		Sequence<TypeAccess> result5 = ClassDeclaration.allInstances.collect2(BodyDeclaration.class, cd->cd.getBodyDeclarations()).select(each->each instanceof MethodDeclaration).collect2(TypeAccess.class, each->((MethodDeclaration)each).getThrownExceptions()).asSequence();
+		time = System.nanoTime()-time;
 		System.out.println(result5.size());
+		System.out.println("crossecore: ThrownExceptions: "+time);
 		
 		/*
 		System.out.println(ClassDeclaration.allInstances

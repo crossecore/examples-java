@@ -72,9 +72,17 @@ public class InvisibleMethodsQuery {
         System.out.println(model);
         
         
+
+        
+		
+	}
+	
+	@Test
+	public void Grabats09Query(){
+		long time = System.nanoTime();
+		
         this.ocl = OCL.newInstance(EcoreEnvironmentFactory.INSTANCE);
         this.oclHelper = ocl.createOCLHelper();
-        
         
         oclHelper.setContext(Java_PackageImpl.eINSTANCE.getModel());
         try {
@@ -88,21 +96,37 @@ public class InvisibleMethodsQuery {
                     + "asSequence()");
         } catch (ParserException e) {
             e.printStackTrace();
-            throw e;
         }
         this.query = ocl.createQuery(expression);
-        
-		
+        Object res = query.evaluate(resource.getContents().get(0));
+        time = System.nanoTime()-time;
+        System.out.println("mdt-interpreter: grabats09: "+time);
+
+
 	}
+	
 	
 	@Test
-	public void test(){
+	public void ThrowsExceptions(){
+		long time = System.nanoTime();
 		
-		Object res = query.evaluate(resource.getContents().get(0));
-		
-		System.out.println(res);
+        this.ocl = OCL.newInstance(EcoreEnvironmentFactory.INSTANCE);
+        this.oclHelper = ocl.createOCLHelper();
+        
+        oclHelper.setContext(Java_PackageImpl.eINSTANCE.getModel());
+        try {
+            expression = oclHelper.createQuery("ClassDeclaration.allInstances()->collect(bodyDeclarations)->select(each | each.oclIsTypeOf(MethodDeclaration))->select(each | (not each.modifier.oclIsUndefined()) and (not each.modifier.visibility.oclIsUndefined()) and (each.modifier.visibility = VisibilityKind::private or each.modifier.visibility = VisibilityKind::protected))->asSequence()");
+        } catch (ParserException e) {
+            e.printStackTrace();
+        }
+        this.query = ocl.createQuery(expression);
+        Object res = query.evaluate(resource.getContents().get(0));
+        time = System.nanoTime()-time;
+        System.out.println("mdt-interpreter: ThrowsExceptions: "+time);
+
+
 	}
-	
+		
 	
 
 	
