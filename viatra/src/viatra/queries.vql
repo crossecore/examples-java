@@ -30,7 +30,7 @@ pattern grabats09(Tt) {
 	MethodDeclaration.returnType.type(Bod,Tt);
 }
 
-pattern commentText(Ff) {
+pattern textElementInJavadoc(Ff) {
 	Model(Mm);
 	Model.compilationUnits.commentList(Mm,Cl);
 	Javadoc(Cl);

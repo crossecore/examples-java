@@ -4,7 +4,7 @@
       <query-specification fqn="viatra.invisibleMethods"/>
       <query-specification fqn="viatra.thrownExceptions"/>
       <query-specification fqn="viatra.grabats09"/>
-      <query-specification fqn="viatra.commentText"/>
+      <query-specification fqn="viatra.textElementInJavadoc"/>
     </group>
   </extension>
   <extension point="org.eclipse.emf.ecore.generated_package">

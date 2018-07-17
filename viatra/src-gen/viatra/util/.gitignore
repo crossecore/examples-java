@@ -6,3 +6,5 @@
 /.InvisibleMethodsQuerySpecification.java._trace
 /.ThrownExceptionsProcessor.java._trace
 /.ThrownExceptionsQuerySpecification.java._trace
+/.TextElementInJavadocProcessor.java._trace
+/.TextElementInJavadocQuerySpecification.java._trace

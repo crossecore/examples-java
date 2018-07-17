@@ -6,13 +6,13 @@ package viatra;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedPatternGroup;
 import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
-import viatra.CommentTextMatcher;
 import viatra.Grabats09Matcher;
 import viatra.InvisibleMethodsMatcher;
+import viatra.TextElementInJavadocMatcher;
 import viatra.ThrownExceptionsMatcher;
-import viatra.util.CommentTextQuerySpecification;
 import viatra.util.Grabats09QuerySpecification;
 import viatra.util.InvisibleMethodsQuerySpecification;
+import viatra.util.TextElementInJavadocQuerySpecification;
 import viatra.util.ThrownExceptionsQuerySpecification;
 
 /**
@@ -26,7 +26,7 @@ import viatra.util.ThrownExceptionsQuerySpecification;
  * <li>invisibleMethods</li>
  * <li>thrownExceptions</li>
  * <li>grabats09</li>
- * <li>commentText</li>
+ * <li>textElementInJavadoc</li>
  * </ul>
  * 
  * @see IPatternGroup
@@ -54,7 +54,7 @@ public final class Queries extends BaseGeneratedPatternGroup {
     querySpecifications.add(InvisibleMethodsQuerySpecification.instance());
     querySpecifications.add(ThrownExceptionsQuerySpecification.instance());
     querySpecifications.add(Grabats09QuerySpecification.instance());
-    querySpecifications.add(CommentTextQuerySpecification.instance());
+    querySpecifications.add(TextElementInJavadocQuerySpecification.instance());
   }
   
   public InvisibleMethodsQuerySpecification getInvisibleMethods() throws ViatraQueryException {
@@ -81,11 +81,11 @@ public final class Queries extends BaseGeneratedPatternGroup {
     return Grabats09Matcher.on(engine);
   }
   
-  public CommentTextQuerySpecification getCommentText() throws ViatraQueryException {
-    return CommentTextQuerySpecification.instance();
+  public TextElementInJavadocQuerySpecification getTextElementInJavadoc() throws ViatraQueryException {
+    return TextElementInJavadocQuerySpecification.instance();
   }
   
-  public CommentTextMatcher getCommentText(final ViatraQueryEngine engine) throws ViatraQueryException {
-    return CommentTextMatcher.on(engine);
+  public TextElementInJavadocMatcher getTextElementInJavadoc(final ViatraQueryEngine engine) throws ViatraQueryException {
+    return TextElementInJavadocMatcher.on(engine);
   }
 }
