@@ -10,8 +10,7 @@
       <!-- @generated java -->
       <package
             uri="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_"
-            class="java_.Java_Package"
-            genModel="model/java.genmodel"/>
+            class="java_.Java_Package"/>
    </extension>
 
 </plugin>
