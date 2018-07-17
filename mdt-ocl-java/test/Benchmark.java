@@ -13,6 +13,7 @@ import org.junit.Test;
 
 import java_.Java_Factory;
 import java_.Model;
+import java_.QueryCollection;
 import java_.impl.Java_PackageImpl;
 
 
@@ -46,12 +47,12 @@ public class Benchmark {
 	@Test
 	public void thrownExceptions() {
 		
-		long time = System.nanoTime();
+		long time = System.currentTimeMillis();
 		
-		java_.Test test = Java_Factory.eINSTANCE.createTest();
-		test.thrownExceptions2();
+		QueryCollection queryCollection = Java_Factory.eINSTANCE.createQueryCollection();
+		queryCollection.thrownExceptions();
 		
-		time = System.nanoTime()-time;
+		time = System.currentTimeMillis()-time;
 		System.out.println("mdt ocl2java: ThrownExceptions: "+time);
 	}
 

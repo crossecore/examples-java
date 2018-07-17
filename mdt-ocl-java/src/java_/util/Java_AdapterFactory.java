@@ -2,134 +2,7 @@
  */
 package java_.util;
 
-import java_.ASTNode;
-import java_.AbstractMethodDeclaration;
-import java_.AbstractMethodInvocation;
-import java_.AbstractTypeDeclaration;
-import java_.AbstractTypeQualifiedExpression;
-import java_.AbstractVariablesContainer;
-import java_.Annotation;
-import java_.AnnotationMemberValuePair;
-import java_.AnnotationTypeDeclaration;
-import java_.AnnotationTypeMemberDeclaration;
-import java_.AnonymousClassDeclaration;
-import java_.Archive;
-import java_.ArrayAccess;
-import java_.ArrayCreation;
-import java_.ArrayInitializer;
-import java_.ArrayLengthAccess;
-import java_.ArrayType;
-import java_.AssertStatement;
-import java_.Assignment;
-import java_.Block;
-import java_.BlockComment;
-import java_.BodyDeclaration;
-import java_.BooleanLiteral;
-import java_.BreakStatement;
-import java_.CastExpression;
-import java_.CatchClause;
-import java_.CharacterLiteral;
-import java_.ClassDeclaration;
-import java_.ClassFile;
-import java_.ClassInstanceCreation;
-import java_.Comment;
-import java_.CompilationUnit;
-import java_.ConditionalExpression;
-import java_.ConstructorDeclaration;
-import java_.ConstructorInvocation;
-import java_.ContinueStatement;
-import java_.DoStatement;
-import java_.EmptyStatement;
-import java_.EnhancedForStatement;
-import java_.EnumConstantDeclaration;
-import java_.EnumDeclaration;
-import java_.Expression;
-import java_.ExpressionStatement;
-import java_.FieldAccess;
-import java_.FieldDeclaration;
-import java_.ForStatement;
-import java_.IfStatement;
-import java_.ImportDeclaration;
-import java_.InfixExpression;
-import java_.Initializer;
-import java_.InstanceofExpression;
-import java_.InterfaceDeclaration;
-import java_.Java_Package;
-import java_.Javadoc;
-import java_.LabeledStatement;
-import java_.LineComment;
-import java_.Manifest;
-import java_.ManifestAttribute;
-import java_.ManifestEntry;
-import java_.MemberRef;
-import java_.MethodDeclaration;
-import java_.MethodInvocation;
-import java_.MethodRef;
-import java_.MethodRefParameter;
-import java_.Model;
-import java_.Modifier;
-import java_.NamedElement;
-import java_.NamespaceAccess;
-import java_.NullLiteral;
-import java_.NumberLiteral;
-import java_.PackageAccess;
-import java_.ParameterizedType;
-import java_.ParenthesizedExpression;
-import java_.PostfixExpression;
-import java_.PrefixExpression;
-import java_.PrimitiveType;
-import java_.PrimitiveTypeBoolean;
-import java_.PrimitiveTypeByte;
-import java_.PrimitiveTypeChar;
-import java_.PrimitiveTypeDouble;
-import java_.PrimitiveTypeFloat;
-import java_.PrimitiveTypeInt;
-import java_.PrimitiveTypeLong;
-import java_.PrimitiveTypeShort;
-import java_.PrimitiveTypeVoid;
-import java_.ReturnStatement;
-import java_.SingleVariableAccess;
-import java_.SingleVariableDeclaration;
-import java_.Statement;
-import java_.StringLiteral;
-import java_.SuperConstructorInvocation;
-import java_.SuperFieldAccess;
-import java_.SuperMethodInvocation;
-import java_.SwitchCase;
-import java_.SwitchStatement;
-import java_.SynchronizedStatement;
-import java_.TagElement;
-import java_.Test;
-import java_.TextElement;
-import java_.ThisExpression;
-import java_.ThrowStatement;
-import java_.TryStatement;
-import java_.Type;
-import java_.TypeAccess;
-import java_.TypeDeclaration;
-import java_.TypeDeclarationStatement;
-import java_.TypeLiteral;
-import java_.TypeParameter;
-import java_.UnresolvedAnnotationDeclaration;
-import java_.UnresolvedAnnotationTypeMemberDeclaration;
-import java_.UnresolvedClassDeclaration;
-import java_.UnresolvedEnumDeclaration;
-import java_.UnresolvedInterfaceDeclaration;
-import java_.UnresolvedItem;
-import java_.UnresolvedItemAccess;
-import java_.UnresolvedLabeledStatement;
-import java_.UnresolvedMethodDeclaration;
-import java_.UnresolvedSingleVariableDeclaration;
-import java_.UnresolvedType;
-import java_.UnresolvedTypeDeclaration;
-import java_.UnresolvedVariableDeclarationFragment;
-import java_.VariableDeclaration;
-import java_.VariableDeclarationExpression;
-import java_.VariableDeclarationFragment;
-import java_.VariableDeclarationStatement;
-import java_.WhileStatement;
-import java_.WildCardType;
-
+import java_.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -698,8 +571,8 @@ public class Java_AdapterFactory extends AdapterFactoryImpl {
 				return createWhileStatementAdapter();
 			}
 			@Override
-			public Adapter caseTest(Test object) {
-				return createTestAdapter();
+			public Adapter caseQueryCollection(QueryCollection object) {
+				return createQueryCollectionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -2486,16 +2359,16 @@ public class Java_AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link java_.Test <em>Test</em>}'.
+	 * Creates a new adapter for an object of class '{@link java_.QueryCollection <em>Query Collection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see java_.Test
+	 * @see java_.QueryCollection
 	 * @generated
 	 */
-	public Adapter createTestAdapter() {
+	public Adapter createQueryCollectionAdapter() {
 		return null;
 	}
 

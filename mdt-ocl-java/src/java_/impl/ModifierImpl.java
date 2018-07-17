@@ -802,7 +802,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (visibility: ");
 		result.append(visibility);
 		result.append(", inheritance: ");

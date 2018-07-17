@@ -12336,50 +12336,77 @@ public interface Java_Package extends EPackage {
 	int WHILE_STATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link java_.impl.TestImpl <em>Test</em>}' class.
+	 * The meta object id for the '{@link java_.impl.QueryCollectionImpl <em>Query Collection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see java_.impl.TestImpl
-	 * @see java_.impl.Java_PackageImpl#getTest()
+	 * @see java_.impl.QueryCollectionImpl
+	 * @see java_.impl.Java_PackageImpl#getQueryCollection()
 	 * @generated
 	 */
-	int TEST = 126;
+	int QUERY_COLLECTION = 126;
 
 	/**
-	 * The feature id for the '<em><b>Thrown Exceptions</b></em>' reference list.
+	 * The number of structural features of the '<em>Query Collection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEST__THROWN_EXCEPTIONS = 0;
+	int QUERY_COLLECTION_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Test</em>' class.
+	 * The operation id for the '<em>Thrown Exceptions</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEST_FEATURE_COUNT = 1;
+	int QUERY_COLLECTION___THROWN_EXCEPTIONS = 0;
 
 	/**
-	 * The operation id for the '<em>Thrown Exceptions2</em>' operation.
+	 * The operation id for the '<em>Grabats09</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEST___THROWN_EXCEPTIONS2 = 0;
+	int QUERY_COLLECTION___GRABATS09 = 1;
 
 	/**
-	 * The number of operations of the '<em>Test</em>' class.
+	 * The operation id for the '<em>Invisible Methods</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEST_OPERATION_COUNT = 1;
+	int QUERY_COLLECTION___INVISIBLE_METHODS = 2;
+
+	/**
+	 * The operation id for the '<em>Text Element In Javadoc</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_COLLECTION___TEXT_ELEMENT_IN_JAVADOC__MODEL = 3;
+
+	/**
+	 * The operation id for the '<em>Empty Text Element In Javadoc</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_COLLECTION___EMPTY_TEXT_ELEMENT_IN_JAVADOC__MODEL = 4;
+
+	/**
+	 * The number of operations of the '<em>Query Collection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_COLLECTION_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link java_.AssignmentKind <em>Assignment Kind</em>}' enum.
@@ -16046,35 +16073,64 @@ public interface Java_Package extends EPackage {
 	EReference getWhileStatement_Body();
 
 	/**
-	 * Returns the meta object for class '{@link java_.Test <em>Test</em>}'.
+	 * Returns the meta object for class '{@link java_.QueryCollection <em>Query Collection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Test</em>'.
-	 * @see java_.Test
+	 * @return the meta object for class '<em>Query Collection</em>'.
+	 * @see java_.QueryCollection
 	 * @generated
 	 */
-	EClass getTest();
+	EClass getQueryCollection();
 
 	/**
-	 * Returns the meta object for the reference list '{@link java_.Test#getThrownExceptions <em>Thrown Exceptions</em>}'.
+	 * Returns the meta object for the '{@link java_.QueryCollection#thrownExceptions() <em>Thrown Exceptions</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Thrown Exceptions</em>'.
-	 * @see java_.Test#getThrownExceptions()
-	 * @see #getTest()
+	 * @return the meta object for the '<em>Thrown Exceptions</em>' operation.
+	 * @see java_.QueryCollection#thrownExceptions()
 	 * @generated
 	 */
-	EReference getTest_ThrownExceptions();
+	EOperation getQueryCollection__ThrownExceptions();
 
 	/**
-	 * Returns the meta object for the '{@link java_.Test#thrownExceptions2() <em>Thrown Exceptions2</em>}' operation.
+	 * Returns the meta object for the '{@link java_.QueryCollection#grabats09() <em>Grabats09</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Thrown Exceptions2</em>' operation.
-	 * @see java_.Test#thrownExceptions2()
+	 * @return the meta object for the '<em>Grabats09</em>' operation.
+	 * @see java_.QueryCollection#grabats09()
 	 * @generated
 	 */
-	EOperation getTest__ThrownExceptions2();
+	EOperation getQueryCollection__Grabats09();
+
+	/**
+	 * Returns the meta object for the '{@link java_.QueryCollection#invisibleMethods() <em>Invisible Methods</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Invisible Methods</em>' operation.
+	 * @see java_.QueryCollection#invisibleMethods()
+	 * @generated
+	 */
+	EOperation getQueryCollection__InvisibleMethods();
+
+	/**
+	 * Returns the meta object for the '{@link java_.QueryCollection#textElementInJavadoc(java_.Model) <em>Text Element In Javadoc</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Text Element In Javadoc</em>' operation.
+	 * @see java_.QueryCollection#textElementInJavadoc(java_.Model)
+	 * @generated
+	 */
+	EOperation getQueryCollection__TextElementInJavadoc__Model();
+
+	/**
+	 * Returns the meta object for the '{@link java_.QueryCollection#emptyTextElementInJavadoc(java_.Model) <em>Empty Text Element In Javadoc</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Empty Text Element In Javadoc</em>' operation.
+	 * @see java_.QueryCollection#emptyTextElementInJavadoc(java_.Model)
+	 * @generated
+	 */
+	EOperation getQueryCollection__EmptyTextElementInJavadoc__Model();
 
 	/**
 	 * Returns the meta object for enum '{@link java_.AssignmentKind <em>Assignment Kind</em>}'.
@@ -19124,30 +19180,54 @@ public interface Java_Package extends EPackage {
 		EReference WHILE_STATEMENT__BODY = eINSTANCE.getWhileStatement_Body();
 
 		/**
-		 * The meta object literal for the '{@link java_.impl.TestImpl <em>Test</em>}' class.
+		 * The meta object literal for the '{@link java_.impl.QueryCollectionImpl <em>Query Collection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see java_.impl.TestImpl
-		 * @see java_.impl.Java_PackageImpl#getTest()
+		 * @see java_.impl.QueryCollectionImpl
+		 * @see java_.impl.Java_PackageImpl#getQueryCollection()
 		 * @generated
 		 */
-		EClass TEST = eINSTANCE.getTest();
+		EClass QUERY_COLLECTION = eINSTANCE.getQueryCollection();
 
 		/**
-		 * The meta object literal for the '<em><b>Thrown Exceptions</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Thrown Exceptions</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TEST__THROWN_EXCEPTIONS = eINSTANCE.getTest_ThrownExceptions();
+		EOperation QUERY_COLLECTION___THROWN_EXCEPTIONS = eINSTANCE.getQueryCollection__ThrownExceptions();
 
 		/**
-		 * The meta object literal for the '<em><b>Thrown Exceptions2</b></em>' operation.
+		 * The meta object literal for the '<em><b>Grabats09</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TEST___THROWN_EXCEPTIONS2 = eINSTANCE.getTest__ThrownExceptions2();
+		EOperation QUERY_COLLECTION___GRABATS09 = eINSTANCE.getQueryCollection__Grabats09();
+
+		/**
+		 * The meta object literal for the '<em><b>Invisible Methods</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation QUERY_COLLECTION___INVISIBLE_METHODS = eINSTANCE.getQueryCollection__InvisibleMethods();
+
+		/**
+		 * The meta object literal for the '<em><b>Text Element In Javadoc</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation QUERY_COLLECTION___TEXT_ELEMENT_IN_JAVADOC__MODEL = eINSTANCE.getQueryCollection__TextElementInJavadoc__Model();
+
+		/**
+		 * The meta object literal for the '<em><b>Empty Text Element In Javadoc</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation QUERY_COLLECTION___EMPTY_TEXT_ELEMENT_IN_JAVADOC__MODEL = eINSTANCE.getQueryCollection__EmptyTextElementInJavadoc__Model();
 
 		/**
 		 * The meta object literal for the '{@link java_.AssignmentKind <em>Assignment Kind</em>}' enum.

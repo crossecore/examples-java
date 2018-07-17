@@ -1021,13 +1021,13 @@ public interface Java_Factory extends EFactory {
 	WhileStatement createWhileStatement();
 
 	/**
-	 * Returns a new object of class '<em>Test</em>'.
+	 * Returns a new object of class '<em>Query Collection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Test</em>'.
+	 * @return a new object of class '<em>Query Collection</em>'.
 	 * @generated
 	 */
-	Test createTest();
+	QueryCollection createQueryCollection();
 
 	/**
 	 * Returns the package supported by this factory.

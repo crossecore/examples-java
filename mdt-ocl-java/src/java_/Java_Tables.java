@@ -12,6 +12,7 @@
 package java_;
 
 import java_.Java_Tables;
+import org.eclipse.ocl.pivot.ParameterTypes;
 import org.eclipse.ocl.pivot.TemplateParameters;
 import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorEnumeration;
 import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorEnumerationLiteral;
@@ -34,7 +35,6 @@ import org.eclipse.ocl.pivot.utilities.TypeUtil;
  * In order to ensure correct static initialization, a top level class element must be accessed
  * before any nested class element. Therefore an access to PACKAGE.getClass() is recommended.
  */
-@SuppressWarnings("nls")
 public class Java_Tables
 {
 	static {
@@ -57,7 +57,6 @@ public class Java_Tables
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.RootPackageId PACKid_$metamodel$ = org.eclipse.ocl.pivot.ids.IdManager.getRootPackageId("$metamodel$");
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.NsURIPackageId PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_ = org.eclipse.ocl.pivot.ids.IdManager.getNsURIPackageId("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", null, java_.Java_Package.eINSTANCE);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.NsURIPackageId PACKid_http_c_s_s_www_eclipse_org_s_emf_s_2002_s_Ecore = org.eclipse.ocl.pivot.ids.IdManager.getNsURIPackageId("http://www.eclipse.org/emf/2002/Ecore", null, org.eclipse.emf.ecore.EcorePackage.eINSTANCE);
-	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SEQ_NULLid = org.eclipse.ocl.pivot.ids.TypeId.SEQUENCE.getSpecializedId(org.eclipse.ocl.pivot.ids.TypeId.OCL_VOID);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_ASTNode = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("ASTNode", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_AbstractMethodDeclaration = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("AbstractMethodDeclaration", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_AbstractMethodInvocation = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("AbstractMethodInvocation", 0);
@@ -122,6 +121,7 @@ public class Java_Tables
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_ParenthesizedExpression = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("ParenthesizedExpression", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_PostfixExpression = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("PostfixExpression", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_PrefixExpression = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("PrefixExpression", 0);
+	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_QueryCollection = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("QueryCollection", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_ReturnStatement = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("ReturnStatement", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_SingleVariableAccess = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("SingleVariableAccess", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_SingleVariableDeclaration = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("SingleVariableDeclaration", 0);
@@ -132,7 +132,7 @@ public class Java_Tables
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_SwitchStatement = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("SwitchStatement", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_SynchronizedStatement = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("SynchronizedStatement", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_TagElement = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("TagElement", 0);
-	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Test = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("Test", 0);
+	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_TextElement = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("TextElement", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_ThrowStatement = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("ThrowStatement", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_TryStatement = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("TryStatement", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Type = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getClassId("Type", 0);
@@ -156,13 +156,14 @@ public class Java_Tables
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationId ENUMid_PostfixExpressionKind = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getEnumerationId("PostfixExpressionKind");
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationId ENUMid_PrefixExpressionKind = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getEnumerationId("PrefixExpressionKind");
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationId ENUMid_VisibilityKind = java_.Java_Tables.PACKid_http_c_s_s_www_eclipse_org_s_MoDisco_s_Java_s_0_2_incubation_s_java_.getEnumerationId("VisibilityKind");
-	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.values.SequenceValue Sequence = org.eclipse.ocl.pivot.utilities.ValueUtil.createSequenceOfEach(java_.Java_Tables.SEQ_NULLid);
+	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.values.IntegerValue INT_0 = org.eclipse.ocl.pivot.utilities.ValueUtil.integerValueOf("0");
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_ASTNode = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(java_.Java_Tables.CLSSid_ASTNode);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_BodyDeclaration = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(java_.Java_Tables.CLSSid_BodyDeclaration);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_ClassFile = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(java_.Java_Tables.CLSSid_ClassFile);
+	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_Comment = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(java_.Java_Tables.CLSSid_Comment);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_CompilationUnit = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(java_.Java_Tables.CLSSid_CompilationUnit);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_MemberRef = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(java_.Java_Tables.CLSSid_MemberRef);
-	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_Test = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(java_.Java_Tables.CLSSid_Test);
+	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_TagElement = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(java_.Java_Tables.CLSSid_TagElement);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_UnresolvedItemAccess = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(java_.Java_Tables.CLSSid_UnresolvedItemAccess);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationLiteralId ELITid_private = java_.Java_Tables.ENUMid_VisibilityKind.getEnumerationLiteralId("private");
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationLiteralId ELITid_protected = java_.Java_Tables.ENUMid_VisibilityKind.getEnumerationLiteralId("protected");
@@ -183,8 +184,9 @@ public class Java_Tables
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId ORD_CLSSid_TypeAccess = org.eclipse.ocl.pivot.ids.TypeId.ORDERED_SET.getSpecializedId(java_.Java_Tables.CLSSid_TypeAccess);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId ORD_CLSSid_TypeParameter = org.eclipse.ocl.pivot.ids.TypeId.ORDERED_SET.getSpecializedId(java_.Java_Tables.CLSSid_TypeParameter);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId ORD_CLSSid_VariableDeclarationFragment = org.eclipse.ocl.pivot.ids.TypeId.ORDERED_SET.getSpecializedId(java_.Java_Tables.CLSSid_VariableDeclarationFragment);
+	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SEQ_CLSSid_ASTNode = org.eclipse.ocl.pivot.ids.TypeId.SEQUENCE.getSpecializedId(java_.Java_Tables.CLSSid_ASTNode);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SEQ_CLSSid_BodyDeclaration = org.eclipse.ocl.pivot.ids.TypeId.SEQUENCE.getSpecializedId(java_.Java_Tables.CLSSid_BodyDeclaration);
-	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SEQ_CLSSid_TypeAccess = org.eclipse.ocl.pivot.ids.TypeId.SEQUENCE.getSpecializedId(java_.Java_Tables.CLSSid_TypeAccess);
+	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SEQ_CLSSid_TypeDeclaration = org.eclipse.ocl.pivot.ids.TypeId.SEQUENCE.getSpecializedId(java_.Java_Tables.CLSSid_TypeDeclaration);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SET_CLSSid_AbstractMethodInvocation = org.eclipse.ocl.pivot.ids.TypeId.SET.getSpecializedId(java_.Java_Tables.CLSSid_AbstractMethodInvocation);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SET_CLSSid_AbstractTypeDeclaration = org.eclipse.ocl.pivot.ids.TypeId.SET.getSpecializedId(java_.Java_Tables.CLSSid_AbstractTypeDeclaration);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SET_CLSSid_AnnotationMemberValuePair = org.eclipse.ocl.pivot.ids.TypeId.SET.getSpecializedId(java_.Java_Tables.CLSSid_AnnotationMemberValuePair);
@@ -204,6 +206,7 @@ public class Java_Tables
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SET_CLSSid_SingleVariableAccess = org.eclipse.ocl.pivot.ids.TypeId.SET.getSpecializedId(java_.Java_Tables.CLSSid_SingleVariableAccess);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SET_CLSSid_Type = org.eclipse.ocl.pivot.ids.TypeId.SET.getSpecializedId(java_.Java_Tables.CLSSid_Type);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SET_CLSSid_TypeAccess = org.eclipse.ocl.pivot.ids.TypeId.SET.getSpecializedId(java_.Java_Tables.CLSSid_TypeAccess);
+	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SET_CLSSid_TypeDeclaration = org.eclipse.ocl.pivot.ids.TypeId.SET.getSpecializedId(java_.Java_Tables.CLSSid_TypeDeclaration);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SET_CLSSid_UnresolvedItem = org.eclipse.ocl.pivot.ids.TypeId.SET.getSpecializedId(java_.Java_Tables.CLSSid_UnresolvedItem);
 
 	/**
@@ -324,6 +327,7 @@ public class Java_Tables
 		public static final /*@NonNull*/ EcoreExecutorType _PrimitiveTypeLong = new EcoreExecutorType(Java_Package.Literals.PRIMITIVE_TYPE_LONG, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _PrimitiveTypeShort = new EcoreExecutorType(Java_Package.Literals.PRIMITIVE_TYPE_SHORT, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _PrimitiveTypeVoid = new EcoreExecutorType(Java_Package.Literals.PRIMITIVE_TYPE_VOID, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _QueryCollection = new EcoreExecutorType(Java_Package.Literals.QUERY_COLLECTION, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _ReturnStatement = new EcoreExecutorType(Java_Package.Literals.RETURN_STATEMENT, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _SingleVariableAccess = new EcoreExecutorType(Java_Package.Literals.SINGLE_VARIABLE_ACCESS, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _SingleVariableDeclaration = new EcoreExecutorType(Java_Package.Literals.SINGLE_VARIABLE_DECLARATION, PACKAGE, 0);
@@ -336,7 +340,6 @@ public class Java_Tables
 		public static final /*@NonNull*/ EcoreExecutorType _SwitchStatement = new EcoreExecutorType(Java_Package.Literals.SWITCH_STATEMENT, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _SynchronizedStatement = new EcoreExecutorType(Java_Package.Literals.SYNCHRONIZED_STATEMENT, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _TagElement = new EcoreExecutorType(Java_Package.Literals.TAG_ELEMENT, PACKAGE, 0);
-		public static final /*@NonNull*/ EcoreExecutorType _Test = new EcoreExecutorType(Java_Package.Literals.TEST, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _TextElement = new EcoreExecutorType(Java_Package.Literals.TEXT_ELEMENT, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _ThisExpression = new EcoreExecutorType(Java_Package.Literals.THIS_EXPRESSION, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _ThrowStatement = new EcoreExecutorType(Java_Package.Literals.THROW_STATEMENT, PACKAGE, 0);
@@ -459,6 +462,7 @@ public class Java_Tables
 			_PrimitiveTypeLong,
 			_PrimitiveTypeShort,
 			_PrimitiveTypeVoid,
+			_QueryCollection,
 			_ReturnStatement,
 			_SingleVariableAccess,
 			_SingleVariableDeclaration,
@@ -471,7 +475,6 @@ public class Java_Tables
 			_SwitchStatement,
 			_SynchronizedStatement,
 			_TagElement,
-			_Test,
 			_TextElement,
 			_ThisExpression,
 			_ThrowStatement,
@@ -1097,6 +1100,10 @@ public class Java_Tables
 		private static final /*@NonNull*/ ExecutorFragment _PrimitiveTypeVoid__PrimitiveTypeVoid = new ExecutorFragment(Types._PrimitiveTypeVoid, Java_Tables.Types._PrimitiveTypeVoid);
 		private static final /*@NonNull*/ ExecutorFragment _PrimitiveTypeVoid__Type = new ExecutorFragment(Types._PrimitiveTypeVoid, Java_Tables.Types._Type);
 
+		private static final /*@NonNull*/ ExecutorFragment _QueryCollection__OclAny = new ExecutorFragment(Types._QueryCollection, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _QueryCollection__OclElement = new ExecutorFragment(Types._QueryCollection, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _QueryCollection__QueryCollection = new ExecutorFragment(Types._QueryCollection, Java_Tables.Types._QueryCollection);
+
 		private static final /*@NonNull*/ ExecutorFragment _ReturnStatement__ASTNode = new ExecutorFragment(Types._ReturnStatement, Java_Tables.Types._ASTNode);
 		private static final /*@NonNull*/ ExecutorFragment _ReturnStatement__OclAny = new ExecutorFragment(Types._ReturnStatement, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _ReturnStatement__OclElement = new ExecutorFragment(Types._ReturnStatement, OCLstdlibTables.Types._OclElement);
@@ -1171,10 +1178,6 @@ public class Java_Tables
 		private static final /*@NonNull*/ ExecutorFragment _TagElement__OclAny = new ExecutorFragment(Types._TagElement, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _TagElement__OclElement = new ExecutorFragment(Types._TagElement, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _TagElement__TagElement = new ExecutorFragment(Types._TagElement, Java_Tables.Types._TagElement);
-
-		private static final /*@NonNull*/ ExecutorFragment _Test__OclAny = new ExecutorFragment(Types._Test, OCLstdlibTables.Types._OclAny);
-		private static final /*@NonNull*/ ExecutorFragment _Test__OclElement = new ExecutorFragment(Types._Test, OCLstdlibTables.Types._OclElement);
-		private static final /*@NonNull*/ ExecutorFragment _Test__Test = new ExecutorFragment(Types._Test, Java_Tables.Types._Test);
 
 		private static final /*@NonNull*/ ExecutorFragment _TextElement__ASTNode = new ExecutorFragment(Types._TextElement, Java_Tables.Types._ASTNode);
 		private static final /*@NonNull*/ ExecutorFragment _TextElement__OclAny = new ExecutorFragment(Types._TextElement, OCLstdlibTables.Types._OclAny);
@@ -1433,6 +1436,7 @@ public class Java_Tables
 			Fragments.init();
 		}
 
+		public static final /*@NonNull*/ ParameterTypes _Model = TypeUtil.createParameterTypes(Java_Tables.Types._Model);
 
 		static {
 			Init.initEnd();
@@ -1457,8 +1461,16 @@ public class Java_Tables
 			Parameters.init();
 		}
 
-		public static final /*@NonNull*/ ExecutorOperation _Test__thrownExceptions2 = new ExecutorOperation("thrownExceptions2", TypeUtil.EMPTY_PARAMETER_TYPES, Types._Test,
+		public static final /*@NonNull*/ ExecutorOperation _QueryCollection__emptyTextElementInJavadoc = new ExecutorOperation("emptyTextElementInJavadoc", Parameters._Model, Types._QueryCollection,
 			0, TemplateParameters.EMPTY_LIST, null);
+		public static final /*@NonNull*/ ExecutorOperation _QueryCollection__grabats09 = new ExecutorOperation("grabats09", TypeUtil.EMPTY_PARAMETER_TYPES, Types._QueryCollection,
+			1, TemplateParameters.EMPTY_LIST, null);
+		public static final /*@NonNull*/ ExecutorOperation _QueryCollection__invisibleMethods = new ExecutorOperation("invisibleMethods", TypeUtil.EMPTY_PARAMETER_TYPES, Types._QueryCollection,
+			2, TemplateParameters.EMPTY_LIST, null);
+		public static final /*@NonNull*/ ExecutorOperation _QueryCollection__textElementInJavadoc = new ExecutorOperation("textElementInJavadoc", Parameters._Model, Types._QueryCollection,
+			3, TemplateParameters.EMPTY_LIST, null);
+		public static final /*@NonNull*/ ExecutorOperation _QueryCollection__thrownExceptions = new ExecutorOperation("thrownExceptions", TypeUtil.EMPTY_PARAMETER_TYPES, Types._QueryCollection,
+			4, TemplateParameters.EMPTY_LIST, null);
 
 		static {
 			Init.initEnd();
@@ -1843,8 +1855,6 @@ public class Java_Tables
 		public static final /*@NonNull*/ ExecutorProperty _TagElement__tagName = new EcoreExecutorProperty(Java_Package.Literals.TAG_ELEMENT__TAG_NAME, Types._TagElement, 1);
 		public static final /*@NonNull*/ ExecutorProperty _TagElement__Javadoc__tags = new ExecutorPropertyWithImplementation("Javadoc", Types._TagElement, 2, new EcoreLibraryOppositeProperty(Java_Package.Literals.JAVADOC__TAGS));
 
-		public static final /*@NonNull*/ ExecutorProperty _Test__thrownExceptions = new EcoreExecutorProperty(Java_Package.Literals.TEST__THROWN_EXCEPTIONS, Types._Test, 0);
-
 		public static final /*@NonNull*/ ExecutorProperty _TextElement__text = new EcoreExecutorProperty(Java_Package.Literals.TEXT_ELEMENT__TEXT, Types._TextElement, 0);
 
 		public static final /*@NonNull*/ ExecutorProperty _ThrowStatement__expression = new EcoreExecutorProperty(Java_Package.Literals.THROW_STATEMENT__EXPRESSION, Types._ThrowStatement, 0);
@@ -1878,10 +1888,9 @@ public class Java_Tables
 		public static final /*@NonNull*/ ExecutorProperty _TypeAccess__ParameterizedType__type = new ExecutorPropertyWithImplementation("ParameterizedType", Types._TypeAccess, 19, new EcoreLibraryOppositeProperty(Java_Package.Literals.PARAMETERIZED_TYPE__TYPE));
 		public static final /*@NonNull*/ ExecutorProperty _TypeAccess__ParameterizedType__typeArguments = new ExecutorPropertyWithImplementation("ParameterizedType", Types._TypeAccess, 20, new EcoreLibraryOppositeProperty(Java_Package.Literals.PARAMETERIZED_TYPE__TYPE_ARGUMENTS));
 		public static final /*@NonNull*/ ExecutorProperty _TypeAccess__SingleVariableDeclaration__type = new ExecutorPropertyWithImplementation("SingleVariableDeclaration", Types._TypeAccess, 21, new EcoreLibraryOppositeProperty(Java_Package.Literals.SINGLE_VARIABLE_DECLARATION__TYPE));
-		public static final /*@NonNull*/ ExecutorProperty _TypeAccess__Test__thrownExceptions = new ExecutorPropertyWithImplementation("Test", Types._TypeAccess, 22, new EcoreLibraryOppositeProperty(Java_Package.Literals.TEST__THROWN_EXCEPTIONS));
-		public static final /*@NonNull*/ ExecutorProperty _TypeAccess__TypeLiteral__type = new ExecutorPropertyWithImplementation("TypeLiteral", Types._TypeAccess, 23, new EcoreLibraryOppositeProperty(Java_Package.Literals.TYPE_LITERAL__TYPE));
-		public static final /*@NonNull*/ ExecutorProperty _TypeAccess__TypeParameter__bounds = new ExecutorPropertyWithImplementation("TypeParameter", Types._TypeAccess, 24, new EcoreLibraryOppositeProperty(Java_Package.Literals.TYPE_PARAMETER__BOUNDS));
-		public static final /*@NonNull*/ ExecutorProperty _TypeAccess__WildCardType__bound = new ExecutorPropertyWithImplementation("WildCardType", Types._TypeAccess, 25, new EcoreLibraryOppositeProperty(Java_Package.Literals.WILD_CARD_TYPE__BOUND));
+		public static final /*@NonNull*/ ExecutorProperty _TypeAccess__TypeLiteral__type = new ExecutorPropertyWithImplementation("TypeLiteral", Types._TypeAccess, 22, new EcoreLibraryOppositeProperty(Java_Package.Literals.TYPE_LITERAL__TYPE));
+		public static final /*@NonNull*/ ExecutorProperty _TypeAccess__TypeParameter__bounds = new ExecutorPropertyWithImplementation("TypeParameter", Types._TypeAccess, 23, new EcoreLibraryOppositeProperty(Java_Package.Literals.TYPE_PARAMETER__BOUNDS));
+		public static final /*@NonNull*/ ExecutorProperty _TypeAccess__WildCardType__bound = new ExecutorPropertyWithImplementation("WildCardType", Types._TypeAccess, 24, new EcoreLibraryOppositeProperty(Java_Package.Literals.WILD_CARD_TYPE__BOUND));
 
 		public static final /*@NonNull*/ ExecutorProperty _TypeDeclaration__typeParameters = new EcoreExecutorProperty(Java_Package.Literals.TYPE_DECLARATION__TYPE_PARAMETERS, Types._TypeDeclaration, 0);
 
@@ -1937,1418 +1946,1418 @@ public class Java_Tables
 		}
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ASTNode =
-		{
-			Fragments._ASTNode__OclAny /* 0 */,
-			Fragments._ASTNode__OclElement /* 1 */,
-			Fragments._ASTNode__ASTNode /* 2 */
-		};
+			{
+				Fragments._ASTNode__OclAny /* 0 */,
+				Fragments._ASTNode__OclElement /* 1 */,
+				Fragments._ASTNode__ASTNode /* 2 */
+			};
 		private static final int /*@NonNull*/ [] __ASTNode = { 1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AbstractMethodDeclaration =
-		{
-			Fragments._AbstractMethodDeclaration__OclAny /* 0 */,
-			Fragments._AbstractMethodDeclaration__OclElement /* 1 */,
-			Fragments._AbstractMethodDeclaration__ASTNode /* 2 */,
-			Fragments._AbstractMethodDeclaration__NamedElement /* 3 */,
-			Fragments._AbstractMethodDeclaration__BodyDeclaration /* 4 */,
-			Fragments._AbstractMethodDeclaration__AbstractMethodDeclaration /* 5 */
-		};
+			{
+				Fragments._AbstractMethodDeclaration__OclAny /* 0 */,
+				Fragments._AbstractMethodDeclaration__OclElement /* 1 */,
+				Fragments._AbstractMethodDeclaration__ASTNode /* 2 */,
+				Fragments._AbstractMethodDeclaration__NamedElement /* 3 */,
+				Fragments._AbstractMethodDeclaration__BodyDeclaration /* 4 */,
+				Fragments._AbstractMethodDeclaration__AbstractMethodDeclaration /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __AbstractMethodDeclaration = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AbstractMethodInvocation =
-		{
-			Fragments._AbstractMethodInvocation__OclAny /* 0 */,
-			Fragments._AbstractMethodInvocation__OclElement /* 1 */,
-			Fragments._AbstractMethodInvocation__ASTNode /* 2 */,
-			Fragments._AbstractMethodInvocation__AbstractMethodInvocation /* 3 */
-		};
+			{
+				Fragments._AbstractMethodInvocation__OclAny /* 0 */,
+				Fragments._AbstractMethodInvocation__OclElement /* 1 */,
+				Fragments._AbstractMethodInvocation__ASTNode /* 2 */,
+				Fragments._AbstractMethodInvocation__AbstractMethodInvocation /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __AbstractMethodInvocation = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AbstractTypeDeclaration =
-		{
-			Fragments._AbstractTypeDeclaration__OclAny /* 0 */,
-			Fragments._AbstractTypeDeclaration__OclElement /* 1 */,
-			Fragments._AbstractTypeDeclaration__ASTNode /* 2 */,
-			Fragments._AbstractTypeDeclaration__NamedElement /* 3 */,
-			Fragments._AbstractTypeDeclaration__BodyDeclaration /* 4 */,
-			Fragments._AbstractTypeDeclaration__Type /* 4 */,
-			Fragments._AbstractTypeDeclaration__AbstractTypeDeclaration /* 5 */
-		};
+			{
+				Fragments._AbstractTypeDeclaration__OclAny /* 0 */,
+				Fragments._AbstractTypeDeclaration__OclElement /* 1 */,
+				Fragments._AbstractTypeDeclaration__ASTNode /* 2 */,
+				Fragments._AbstractTypeDeclaration__NamedElement /* 3 */,
+				Fragments._AbstractTypeDeclaration__BodyDeclaration /* 4 */,
+				Fragments._AbstractTypeDeclaration__Type /* 4 */,
+				Fragments._AbstractTypeDeclaration__AbstractTypeDeclaration /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __AbstractTypeDeclaration = { 1,1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AbstractTypeQualifiedExpression =
-		{
-			Fragments._AbstractTypeQualifiedExpression__OclAny /* 0 */,
-			Fragments._AbstractTypeQualifiedExpression__OclElement /* 1 */,
-			Fragments._AbstractTypeQualifiedExpression__ASTNode /* 2 */,
-			Fragments._AbstractTypeQualifiedExpression__Expression /* 3 */,
-			Fragments._AbstractTypeQualifiedExpression__AbstractTypeQualifiedExpression /* 4 */
-		};
+			{
+				Fragments._AbstractTypeQualifiedExpression__OclAny /* 0 */,
+				Fragments._AbstractTypeQualifiedExpression__OclElement /* 1 */,
+				Fragments._AbstractTypeQualifiedExpression__ASTNode /* 2 */,
+				Fragments._AbstractTypeQualifiedExpression__Expression /* 3 */,
+				Fragments._AbstractTypeQualifiedExpression__AbstractTypeQualifiedExpression /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __AbstractTypeQualifiedExpression = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AbstractVariablesContainer =
-		{
-			Fragments._AbstractVariablesContainer__OclAny /* 0 */,
-			Fragments._AbstractVariablesContainer__OclElement /* 1 */,
-			Fragments._AbstractVariablesContainer__ASTNode /* 2 */,
-			Fragments._AbstractVariablesContainer__AbstractVariablesContainer /* 3 */
-		};
+			{
+				Fragments._AbstractVariablesContainer__OclAny /* 0 */,
+				Fragments._AbstractVariablesContainer__OclElement /* 1 */,
+				Fragments._AbstractVariablesContainer__ASTNode /* 2 */,
+				Fragments._AbstractVariablesContainer__AbstractVariablesContainer /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __AbstractVariablesContainer = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Annotation =
-		{
-			Fragments._Annotation__OclAny /* 0 */,
-			Fragments._Annotation__OclElement /* 1 */,
-			Fragments._Annotation__ASTNode /* 2 */,
-			Fragments._Annotation__Expression /* 3 */,
-			Fragments._Annotation__Annotation /* 4 */
-		};
+			{
+				Fragments._Annotation__OclAny /* 0 */,
+				Fragments._Annotation__OclElement /* 1 */,
+				Fragments._Annotation__ASTNode /* 2 */,
+				Fragments._Annotation__Expression /* 3 */,
+				Fragments._Annotation__Annotation /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __Annotation = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AnnotationMemberValuePair =
-		{
-			Fragments._AnnotationMemberValuePair__OclAny /* 0 */,
-			Fragments._AnnotationMemberValuePair__OclElement /* 1 */,
-			Fragments._AnnotationMemberValuePair__ASTNode /* 2 */,
-			Fragments._AnnotationMemberValuePair__NamedElement /* 3 */,
-			Fragments._AnnotationMemberValuePair__AnnotationMemberValuePair /* 4 */
-		};
+			{
+				Fragments._AnnotationMemberValuePair__OclAny /* 0 */,
+				Fragments._AnnotationMemberValuePair__OclElement /* 1 */,
+				Fragments._AnnotationMemberValuePair__ASTNode /* 2 */,
+				Fragments._AnnotationMemberValuePair__NamedElement /* 3 */,
+				Fragments._AnnotationMemberValuePair__AnnotationMemberValuePair /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __AnnotationMemberValuePair = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AnnotationTypeDeclaration =
-		{
-			Fragments._AnnotationTypeDeclaration__OclAny /* 0 */,
-			Fragments._AnnotationTypeDeclaration__OclElement /* 1 */,
-			Fragments._AnnotationTypeDeclaration__ASTNode /* 2 */,
-			Fragments._AnnotationTypeDeclaration__NamedElement /* 3 */,
-			Fragments._AnnotationTypeDeclaration__BodyDeclaration /* 4 */,
-			Fragments._AnnotationTypeDeclaration__Type /* 4 */,
-			Fragments._AnnotationTypeDeclaration__AbstractTypeDeclaration /* 5 */,
-			Fragments._AnnotationTypeDeclaration__AnnotationTypeDeclaration /* 6 */
-		};
+			{
+				Fragments._AnnotationTypeDeclaration__OclAny /* 0 */,
+				Fragments._AnnotationTypeDeclaration__OclElement /* 1 */,
+				Fragments._AnnotationTypeDeclaration__ASTNode /* 2 */,
+				Fragments._AnnotationTypeDeclaration__NamedElement /* 3 */,
+				Fragments._AnnotationTypeDeclaration__BodyDeclaration /* 4 */,
+				Fragments._AnnotationTypeDeclaration__Type /* 4 */,
+				Fragments._AnnotationTypeDeclaration__AbstractTypeDeclaration /* 5 */,
+				Fragments._AnnotationTypeDeclaration__AnnotationTypeDeclaration /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __AnnotationTypeDeclaration = { 1,1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AnnotationTypeMemberDeclaration =
-		{
-			Fragments._AnnotationTypeMemberDeclaration__OclAny /* 0 */,
-			Fragments._AnnotationTypeMemberDeclaration__OclElement /* 1 */,
-			Fragments._AnnotationTypeMemberDeclaration__ASTNode /* 2 */,
-			Fragments._AnnotationTypeMemberDeclaration__NamedElement /* 3 */,
-			Fragments._AnnotationTypeMemberDeclaration__BodyDeclaration /* 4 */,
-			Fragments._AnnotationTypeMemberDeclaration__AnnotationTypeMemberDeclaration /* 5 */
-		};
+			{
+				Fragments._AnnotationTypeMemberDeclaration__OclAny /* 0 */,
+				Fragments._AnnotationTypeMemberDeclaration__OclElement /* 1 */,
+				Fragments._AnnotationTypeMemberDeclaration__ASTNode /* 2 */,
+				Fragments._AnnotationTypeMemberDeclaration__NamedElement /* 3 */,
+				Fragments._AnnotationTypeMemberDeclaration__BodyDeclaration /* 4 */,
+				Fragments._AnnotationTypeMemberDeclaration__AnnotationTypeMemberDeclaration /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __AnnotationTypeMemberDeclaration = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AnonymousClassDeclaration =
-		{
-			Fragments._AnonymousClassDeclaration__OclAny /* 0 */,
-			Fragments._AnonymousClassDeclaration__OclElement /* 1 */,
-			Fragments._AnonymousClassDeclaration__ASTNode /* 2 */,
-			Fragments._AnonymousClassDeclaration__AnonymousClassDeclaration /* 3 */
-		};
+			{
+				Fragments._AnonymousClassDeclaration__OclAny /* 0 */,
+				Fragments._AnonymousClassDeclaration__OclElement /* 1 */,
+				Fragments._AnonymousClassDeclaration__ASTNode /* 2 */,
+				Fragments._AnonymousClassDeclaration__AnonymousClassDeclaration /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __AnonymousClassDeclaration = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Archive =
-		{
-			Fragments._Archive__OclAny /* 0 */,
-			Fragments._Archive__OclElement /* 1 */,
-			Fragments._Archive__ASTNode /* 2 */,
-			Fragments._Archive__NamedElement /* 3 */,
-			Fragments._Archive__Archive /* 4 */
-		};
+			{
+				Fragments._Archive__OclAny /* 0 */,
+				Fragments._Archive__OclElement /* 1 */,
+				Fragments._Archive__ASTNode /* 2 */,
+				Fragments._Archive__NamedElement /* 3 */,
+				Fragments._Archive__Archive /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __Archive = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ArrayAccess =
-		{
-			Fragments._ArrayAccess__OclAny /* 0 */,
-			Fragments._ArrayAccess__OclElement /* 1 */,
-			Fragments._ArrayAccess__ASTNode /* 2 */,
-			Fragments._ArrayAccess__Expression /* 3 */,
-			Fragments._ArrayAccess__ArrayAccess /* 4 */
-		};
+			{
+				Fragments._ArrayAccess__OclAny /* 0 */,
+				Fragments._ArrayAccess__OclElement /* 1 */,
+				Fragments._ArrayAccess__ASTNode /* 2 */,
+				Fragments._ArrayAccess__Expression /* 3 */,
+				Fragments._ArrayAccess__ArrayAccess /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ArrayAccess = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ArrayCreation =
-		{
-			Fragments._ArrayCreation__OclAny /* 0 */,
-			Fragments._ArrayCreation__OclElement /* 1 */,
-			Fragments._ArrayCreation__ASTNode /* 2 */,
-			Fragments._ArrayCreation__Expression /* 3 */,
-			Fragments._ArrayCreation__ArrayCreation /* 4 */
-		};
+			{
+				Fragments._ArrayCreation__OclAny /* 0 */,
+				Fragments._ArrayCreation__OclElement /* 1 */,
+				Fragments._ArrayCreation__ASTNode /* 2 */,
+				Fragments._ArrayCreation__Expression /* 3 */,
+				Fragments._ArrayCreation__ArrayCreation /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ArrayCreation = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ArrayInitializer =
-		{
-			Fragments._ArrayInitializer__OclAny /* 0 */,
-			Fragments._ArrayInitializer__OclElement /* 1 */,
-			Fragments._ArrayInitializer__ASTNode /* 2 */,
-			Fragments._ArrayInitializer__Expression /* 3 */,
-			Fragments._ArrayInitializer__ArrayInitializer /* 4 */
-		};
+			{
+				Fragments._ArrayInitializer__OclAny /* 0 */,
+				Fragments._ArrayInitializer__OclElement /* 1 */,
+				Fragments._ArrayInitializer__ASTNode /* 2 */,
+				Fragments._ArrayInitializer__Expression /* 3 */,
+				Fragments._ArrayInitializer__ArrayInitializer /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ArrayInitializer = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ArrayLengthAccess =
-		{
-			Fragments._ArrayLengthAccess__OclAny /* 0 */,
-			Fragments._ArrayLengthAccess__OclElement /* 1 */,
-			Fragments._ArrayLengthAccess__ASTNode /* 2 */,
-			Fragments._ArrayLengthAccess__Expression /* 3 */,
-			Fragments._ArrayLengthAccess__ArrayLengthAccess /* 4 */
-		};
+			{
+				Fragments._ArrayLengthAccess__OclAny /* 0 */,
+				Fragments._ArrayLengthAccess__OclElement /* 1 */,
+				Fragments._ArrayLengthAccess__ASTNode /* 2 */,
+				Fragments._ArrayLengthAccess__Expression /* 3 */,
+				Fragments._ArrayLengthAccess__ArrayLengthAccess /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ArrayLengthAccess = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ArrayType =
-		{
-			Fragments._ArrayType__OclAny /* 0 */,
-			Fragments._ArrayType__OclElement /* 1 */,
-			Fragments._ArrayType__ASTNode /* 2 */,
-			Fragments._ArrayType__NamedElement /* 3 */,
-			Fragments._ArrayType__Type /* 4 */,
-			Fragments._ArrayType__ArrayType /* 5 */
-		};
+			{
+				Fragments._ArrayType__OclAny /* 0 */,
+				Fragments._ArrayType__OclElement /* 1 */,
+				Fragments._ArrayType__ASTNode /* 2 */,
+				Fragments._ArrayType__NamedElement /* 3 */,
+				Fragments._ArrayType__Type /* 4 */,
+				Fragments._ArrayType__ArrayType /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __ArrayType = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AssertStatement =
-		{
-			Fragments._AssertStatement__OclAny /* 0 */,
-			Fragments._AssertStatement__OclElement /* 1 */,
-			Fragments._AssertStatement__ASTNode /* 2 */,
-			Fragments._AssertStatement__Statement /* 3 */,
-			Fragments._AssertStatement__AssertStatement /* 4 */
-		};
+			{
+				Fragments._AssertStatement__OclAny /* 0 */,
+				Fragments._AssertStatement__OclElement /* 1 */,
+				Fragments._AssertStatement__ASTNode /* 2 */,
+				Fragments._AssertStatement__Statement /* 3 */,
+				Fragments._AssertStatement__AssertStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __AssertStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Assignment =
-		{
-			Fragments._Assignment__OclAny /* 0 */,
-			Fragments._Assignment__OclElement /* 1 */,
-			Fragments._Assignment__ASTNode /* 2 */,
-			Fragments._Assignment__Expression /* 3 */,
-			Fragments._Assignment__Assignment /* 4 */
-		};
+			{
+				Fragments._Assignment__OclAny /* 0 */,
+				Fragments._Assignment__OclElement /* 1 */,
+				Fragments._Assignment__ASTNode /* 2 */,
+				Fragments._Assignment__Expression /* 3 */,
+				Fragments._Assignment__Assignment /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __Assignment = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AssignmentKind =
-		{
-			Fragments._AssignmentKind__OclAny /* 0 */,
-			Fragments._AssignmentKind__OclElement /* 1 */,
-			Fragments._AssignmentKind__OclType /* 2 */,
-			Fragments._AssignmentKind__OclEnumeration /* 3 */,
-			Fragments._AssignmentKind__AssignmentKind /* 4 */
-		};
+			{
+				Fragments._AssignmentKind__OclAny /* 0 */,
+				Fragments._AssignmentKind__OclElement /* 1 */,
+				Fragments._AssignmentKind__OclType /* 2 */,
+				Fragments._AssignmentKind__OclEnumeration /* 3 */,
+				Fragments._AssignmentKind__AssignmentKind /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __AssignmentKind = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Block =
-		{
-			Fragments._Block__OclAny /* 0 */,
-			Fragments._Block__OclElement /* 1 */,
-			Fragments._Block__ASTNode /* 2 */,
-			Fragments._Block__Statement /* 3 */,
-			Fragments._Block__Block /* 4 */
-		};
+			{
+				Fragments._Block__OclAny /* 0 */,
+				Fragments._Block__OclElement /* 1 */,
+				Fragments._Block__ASTNode /* 2 */,
+				Fragments._Block__Statement /* 3 */,
+				Fragments._Block__Block /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __Block = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _BlockComment =
-		{
-			Fragments._BlockComment__OclAny /* 0 */,
-			Fragments._BlockComment__OclElement /* 1 */,
-			Fragments._BlockComment__ASTNode /* 2 */,
-			Fragments._BlockComment__Comment /* 3 */,
-			Fragments._BlockComment__BlockComment /* 4 */
-		};
+			{
+				Fragments._BlockComment__OclAny /* 0 */,
+				Fragments._BlockComment__OclElement /* 1 */,
+				Fragments._BlockComment__ASTNode /* 2 */,
+				Fragments._BlockComment__Comment /* 3 */,
+				Fragments._BlockComment__BlockComment /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __BlockComment = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _BodyDeclaration =
-		{
-			Fragments._BodyDeclaration__OclAny /* 0 */,
-			Fragments._BodyDeclaration__OclElement /* 1 */,
-			Fragments._BodyDeclaration__ASTNode /* 2 */,
-			Fragments._BodyDeclaration__NamedElement /* 3 */,
-			Fragments._BodyDeclaration__BodyDeclaration /* 4 */
-		};
+			{
+				Fragments._BodyDeclaration__OclAny /* 0 */,
+				Fragments._BodyDeclaration__OclElement /* 1 */,
+				Fragments._BodyDeclaration__ASTNode /* 2 */,
+				Fragments._BodyDeclaration__NamedElement /* 3 */,
+				Fragments._BodyDeclaration__BodyDeclaration /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __BodyDeclaration = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _BooleanLiteral =
-		{
-			Fragments._BooleanLiteral__OclAny /* 0 */,
-			Fragments._BooleanLiteral__OclElement /* 1 */,
-			Fragments._BooleanLiteral__ASTNode /* 2 */,
-			Fragments._BooleanLiteral__Expression /* 3 */,
-			Fragments._BooleanLiteral__BooleanLiteral /* 4 */
-		};
+			{
+				Fragments._BooleanLiteral__OclAny /* 0 */,
+				Fragments._BooleanLiteral__OclElement /* 1 */,
+				Fragments._BooleanLiteral__ASTNode /* 2 */,
+				Fragments._BooleanLiteral__Expression /* 3 */,
+				Fragments._BooleanLiteral__BooleanLiteral /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __BooleanLiteral = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _BreakStatement =
-		{
-			Fragments._BreakStatement__OclAny /* 0 */,
-			Fragments._BreakStatement__OclElement /* 1 */,
-			Fragments._BreakStatement__ASTNode /* 2 */,
-			Fragments._BreakStatement__Statement /* 3 */,
-			Fragments._BreakStatement__BreakStatement /* 4 */
-		};
+			{
+				Fragments._BreakStatement__OclAny /* 0 */,
+				Fragments._BreakStatement__OclElement /* 1 */,
+				Fragments._BreakStatement__ASTNode /* 2 */,
+				Fragments._BreakStatement__Statement /* 3 */,
+				Fragments._BreakStatement__BreakStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __BreakStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _CastExpression =
-		{
-			Fragments._CastExpression__OclAny /* 0 */,
-			Fragments._CastExpression__OclElement /* 1 */,
-			Fragments._CastExpression__ASTNode /* 2 */,
-			Fragments._CastExpression__Expression /* 3 */,
-			Fragments._CastExpression__CastExpression /* 4 */
-		};
+			{
+				Fragments._CastExpression__OclAny /* 0 */,
+				Fragments._CastExpression__OclElement /* 1 */,
+				Fragments._CastExpression__ASTNode /* 2 */,
+				Fragments._CastExpression__Expression /* 3 */,
+				Fragments._CastExpression__CastExpression /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __CastExpression = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _CatchClause =
-		{
-			Fragments._CatchClause__OclAny /* 0 */,
-			Fragments._CatchClause__OclElement /* 1 */,
-			Fragments._CatchClause__ASTNode /* 2 */,
-			Fragments._CatchClause__Statement /* 3 */,
-			Fragments._CatchClause__CatchClause /* 4 */
-		};
+			{
+				Fragments._CatchClause__OclAny /* 0 */,
+				Fragments._CatchClause__OclElement /* 1 */,
+				Fragments._CatchClause__ASTNode /* 2 */,
+				Fragments._CatchClause__Statement /* 3 */,
+				Fragments._CatchClause__CatchClause /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __CatchClause = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _CharacterLiteral =
-		{
-			Fragments._CharacterLiteral__OclAny /* 0 */,
-			Fragments._CharacterLiteral__OclElement /* 1 */,
-			Fragments._CharacterLiteral__ASTNode /* 2 */,
-			Fragments._CharacterLiteral__Expression /* 3 */,
-			Fragments._CharacterLiteral__CharacterLiteral /* 4 */
-		};
+			{
+				Fragments._CharacterLiteral__OclAny /* 0 */,
+				Fragments._CharacterLiteral__OclElement /* 1 */,
+				Fragments._CharacterLiteral__ASTNode /* 2 */,
+				Fragments._CharacterLiteral__Expression /* 3 */,
+				Fragments._CharacterLiteral__CharacterLiteral /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __CharacterLiteral = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ClassDeclaration =
-		{
-			Fragments._ClassDeclaration__OclAny /* 0 */,
-			Fragments._ClassDeclaration__OclElement /* 1 */,
-			Fragments._ClassDeclaration__ASTNode /* 2 */,
-			Fragments._ClassDeclaration__NamedElement /* 3 */,
-			Fragments._ClassDeclaration__BodyDeclaration /* 4 */,
-			Fragments._ClassDeclaration__Type /* 4 */,
-			Fragments._ClassDeclaration__AbstractTypeDeclaration /* 5 */,
-			Fragments._ClassDeclaration__TypeDeclaration /* 6 */,
-			Fragments._ClassDeclaration__ClassDeclaration /* 7 */
-		};
+			{
+				Fragments._ClassDeclaration__OclAny /* 0 */,
+				Fragments._ClassDeclaration__OclElement /* 1 */,
+				Fragments._ClassDeclaration__ASTNode /* 2 */,
+				Fragments._ClassDeclaration__NamedElement /* 3 */,
+				Fragments._ClassDeclaration__BodyDeclaration /* 4 */,
+				Fragments._ClassDeclaration__Type /* 4 */,
+				Fragments._ClassDeclaration__AbstractTypeDeclaration /* 5 */,
+				Fragments._ClassDeclaration__TypeDeclaration /* 6 */,
+				Fragments._ClassDeclaration__ClassDeclaration /* 7 */
+			};
 		private static final int /*@NonNull*/ [] __ClassDeclaration = { 1,1,1,1,2,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ClassFile =
-		{
-			Fragments._ClassFile__OclAny /* 0 */,
-			Fragments._ClassFile__OclElement /* 1 */,
-			Fragments._ClassFile__ASTNode /* 2 */,
-			Fragments._ClassFile__NamedElement /* 3 */,
-			Fragments._ClassFile__ClassFile /* 4 */
-		};
+			{
+				Fragments._ClassFile__OclAny /* 0 */,
+				Fragments._ClassFile__OclElement /* 1 */,
+				Fragments._ClassFile__ASTNode /* 2 */,
+				Fragments._ClassFile__NamedElement /* 3 */,
+				Fragments._ClassFile__ClassFile /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ClassFile = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ClassInstanceCreation =
-		{
-			Fragments._ClassInstanceCreation__OclAny /* 0 */,
-			Fragments._ClassInstanceCreation__OclElement /* 1 */,
-			Fragments._ClassInstanceCreation__ASTNode /* 2 */,
-			Fragments._ClassInstanceCreation__AbstractMethodInvocation /* 3 */,
-			Fragments._ClassInstanceCreation__Expression /* 3 */,
-			Fragments._ClassInstanceCreation__ClassInstanceCreation /* 4 */
-		};
+			{
+				Fragments._ClassInstanceCreation__OclAny /* 0 */,
+				Fragments._ClassInstanceCreation__OclElement /* 1 */,
+				Fragments._ClassInstanceCreation__ASTNode /* 2 */,
+				Fragments._ClassInstanceCreation__AbstractMethodInvocation /* 3 */,
+				Fragments._ClassInstanceCreation__Expression /* 3 */,
+				Fragments._ClassInstanceCreation__ClassInstanceCreation /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ClassInstanceCreation = { 1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Comment =
-		{
-			Fragments._Comment__OclAny /* 0 */,
-			Fragments._Comment__OclElement /* 1 */,
-			Fragments._Comment__ASTNode /* 2 */,
-			Fragments._Comment__Comment /* 3 */
-		};
+			{
+				Fragments._Comment__OclAny /* 0 */,
+				Fragments._Comment__OclElement /* 1 */,
+				Fragments._Comment__ASTNode /* 2 */,
+				Fragments._Comment__Comment /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __Comment = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _CompilationUnit =
-		{
-			Fragments._CompilationUnit__OclAny /* 0 */,
-			Fragments._CompilationUnit__OclElement /* 1 */,
-			Fragments._CompilationUnit__ASTNode /* 2 */,
-			Fragments._CompilationUnit__NamedElement /* 3 */,
-			Fragments._CompilationUnit__CompilationUnit /* 4 */
-		};
+			{
+				Fragments._CompilationUnit__OclAny /* 0 */,
+				Fragments._CompilationUnit__OclElement /* 1 */,
+				Fragments._CompilationUnit__ASTNode /* 2 */,
+				Fragments._CompilationUnit__NamedElement /* 3 */,
+				Fragments._CompilationUnit__CompilationUnit /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __CompilationUnit = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ConditionalExpression =
-		{
-			Fragments._ConditionalExpression__OclAny /* 0 */,
-			Fragments._ConditionalExpression__OclElement /* 1 */,
-			Fragments._ConditionalExpression__ASTNode /* 2 */,
-			Fragments._ConditionalExpression__Expression /* 3 */,
-			Fragments._ConditionalExpression__ConditionalExpression /* 4 */
-		};
+			{
+				Fragments._ConditionalExpression__OclAny /* 0 */,
+				Fragments._ConditionalExpression__OclElement /* 1 */,
+				Fragments._ConditionalExpression__ASTNode /* 2 */,
+				Fragments._ConditionalExpression__Expression /* 3 */,
+				Fragments._ConditionalExpression__ConditionalExpression /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ConditionalExpression = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ConstructorDeclaration =
-		{
-			Fragments._ConstructorDeclaration__OclAny /* 0 */,
-			Fragments._ConstructorDeclaration__OclElement /* 1 */,
-			Fragments._ConstructorDeclaration__ASTNode /* 2 */,
-			Fragments._ConstructorDeclaration__NamedElement /* 3 */,
-			Fragments._ConstructorDeclaration__BodyDeclaration /* 4 */,
-			Fragments._ConstructorDeclaration__AbstractMethodDeclaration /* 5 */,
-			Fragments._ConstructorDeclaration__ConstructorDeclaration /* 6 */
-		};
+			{
+				Fragments._ConstructorDeclaration__OclAny /* 0 */,
+				Fragments._ConstructorDeclaration__OclElement /* 1 */,
+				Fragments._ConstructorDeclaration__ASTNode /* 2 */,
+				Fragments._ConstructorDeclaration__NamedElement /* 3 */,
+				Fragments._ConstructorDeclaration__BodyDeclaration /* 4 */,
+				Fragments._ConstructorDeclaration__AbstractMethodDeclaration /* 5 */,
+				Fragments._ConstructorDeclaration__ConstructorDeclaration /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __ConstructorDeclaration = { 1,1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ConstructorInvocation =
-		{
-			Fragments._ConstructorInvocation__OclAny /* 0 */,
-			Fragments._ConstructorInvocation__OclElement /* 1 */,
-			Fragments._ConstructorInvocation__ASTNode /* 2 */,
-			Fragments._ConstructorInvocation__AbstractMethodInvocation /* 3 */,
-			Fragments._ConstructorInvocation__Statement /* 3 */,
-			Fragments._ConstructorInvocation__ConstructorInvocation /* 4 */
-		};
+			{
+				Fragments._ConstructorInvocation__OclAny /* 0 */,
+				Fragments._ConstructorInvocation__OclElement /* 1 */,
+				Fragments._ConstructorInvocation__ASTNode /* 2 */,
+				Fragments._ConstructorInvocation__AbstractMethodInvocation /* 3 */,
+				Fragments._ConstructorInvocation__Statement /* 3 */,
+				Fragments._ConstructorInvocation__ConstructorInvocation /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ConstructorInvocation = { 1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ContinueStatement =
-		{
-			Fragments._ContinueStatement__OclAny /* 0 */,
-			Fragments._ContinueStatement__OclElement /* 1 */,
-			Fragments._ContinueStatement__ASTNode /* 2 */,
-			Fragments._ContinueStatement__Statement /* 3 */,
-			Fragments._ContinueStatement__ContinueStatement /* 4 */
-		};
+			{
+				Fragments._ContinueStatement__OclAny /* 0 */,
+				Fragments._ContinueStatement__OclElement /* 1 */,
+				Fragments._ContinueStatement__ASTNode /* 2 */,
+				Fragments._ContinueStatement__Statement /* 3 */,
+				Fragments._ContinueStatement__ContinueStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ContinueStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _DoStatement =
-		{
-			Fragments._DoStatement__OclAny /* 0 */,
-			Fragments._DoStatement__OclElement /* 1 */,
-			Fragments._DoStatement__ASTNode /* 2 */,
-			Fragments._DoStatement__Statement /* 3 */,
-			Fragments._DoStatement__DoStatement /* 4 */
-		};
+			{
+				Fragments._DoStatement__OclAny /* 0 */,
+				Fragments._DoStatement__OclElement /* 1 */,
+				Fragments._DoStatement__ASTNode /* 2 */,
+				Fragments._DoStatement__Statement /* 3 */,
+				Fragments._DoStatement__DoStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __DoStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _EmptyStatement =
-		{
-			Fragments._EmptyStatement__OclAny /* 0 */,
-			Fragments._EmptyStatement__OclElement /* 1 */,
-			Fragments._EmptyStatement__ASTNode /* 2 */,
-			Fragments._EmptyStatement__Statement /* 3 */,
-			Fragments._EmptyStatement__EmptyStatement /* 4 */
-		};
+			{
+				Fragments._EmptyStatement__OclAny /* 0 */,
+				Fragments._EmptyStatement__OclElement /* 1 */,
+				Fragments._EmptyStatement__ASTNode /* 2 */,
+				Fragments._EmptyStatement__Statement /* 3 */,
+				Fragments._EmptyStatement__EmptyStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __EmptyStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _EnhancedForStatement =
-		{
-			Fragments._EnhancedForStatement__OclAny /* 0 */,
-			Fragments._EnhancedForStatement__OclElement /* 1 */,
-			Fragments._EnhancedForStatement__ASTNode /* 2 */,
-			Fragments._EnhancedForStatement__Statement /* 3 */,
-			Fragments._EnhancedForStatement__EnhancedForStatement /* 4 */
-		};
+			{
+				Fragments._EnhancedForStatement__OclAny /* 0 */,
+				Fragments._EnhancedForStatement__OclElement /* 1 */,
+				Fragments._EnhancedForStatement__ASTNode /* 2 */,
+				Fragments._EnhancedForStatement__Statement /* 3 */,
+				Fragments._EnhancedForStatement__EnhancedForStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __EnhancedForStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _EnumConstantDeclaration =
-		{
-			Fragments._EnumConstantDeclaration__OclAny /* 0 */,
-			Fragments._EnumConstantDeclaration__OclElement /* 1 */,
-			Fragments._EnumConstantDeclaration__ASTNode /* 2 */,
-			Fragments._EnumConstantDeclaration__NamedElement /* 3 */,
-			Fragments._EnumConstantDeclaration__BodyDeclaration /* 4 */,
-			Fragments._EnumConstantDeclaration__VariableDeclaration /* 4 */,
-			Fragments._EnumConstantDeclaration__EnumConstantDeclaration /* 5 */
-		};
+			{
+				Fragments._EnumConstantDeclaration__OclAny /* 0 */,
+				Fragments._EnumConstantDeclaration__OclElement /* 1 */,
+				Fragments._EnumConstantDeclaration__ASTNode /* 2 */,
+				Fragments._EnumConstantDeclaration__NamedElement /* 3 */,
+				Fragments._EnumConstantDeclaration__BodyDeclaration /* 4 */,
+				Fragments._EnumConstantDeclaration__VariableDeclaration /* 4 */,
+				Fragments._EnumConstantDeclaration__EnumConstantDeclaration /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __EnumConstantDeclaration = { 1,1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _EnumDeclaration =
-		{
-			Fragments._EnumDeclaration__OclAny /* 0 */,
-			Fragments._EnumDeclaration__OclElement /* 1 */,
-			Fragments._EnumDeclaration__ASTNode /* 2 */,
-			Fragments._EnumDeclaration__NamedElement /* 3 */,
-			Fragments._EnumDeclaration__BodyDeclaration /* 4 */,
-			Fragments._EnumDeclaration__Type /* 4 */,
-			Fragments._EnumDeclaration__AbstractTypeDeclaration /* 5 */,
-			Fragments._EnumDeclaration__EnumDeclaration /* 6 */
-		};
+			{
+				Fragments._EnumDeclaration__OclAny /* 0 */,
+				Fragments._EnumDeclaration__OclElement /* 1 */,
+				Fragments._EnumDeclaration__ASTNode /* 2 */,
+				Fragments._EnumDeclaration__NamedElement /* 3 */,
+				Fragments._EnumDeclaration__BodyDeclaration /* 4 */,
+				Fragments._EnumDeclaration__Type /* 4 */,
+				Fragments._EnumDeclaration__AbstractTypeDeclaration /* 5 */,
+				Fragments._EnumDeclaration__EnumDeclaration /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __EnumDeclaration = { 1,1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Expression =
-		{
-			Fragments._Expression__OclAny /* 0 */,
-			Fragments._Expression__OclElement /* 1 */,
-			Fragments._Expression__ASTNode /* 2 */,
-			Fragments._Expression__Expression /* 3 */
-		};
+			{
+				Fragments._Expression__OclAny /* 0 */,
+				Fragments._Expression__OclElement /* 1 */,
+				Fragments._Expression__ASTNode /* 2 */,
+				Fragments._Expression__Expression /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __Expression = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ExpressionStatement =
-		{
-			Fragments._ExpressionStatement__OclAny /* 0 */,
-			Fragments._ExpressionStatement__OclElement /* 1 */,
-			Fragments._ExpressionStatement__ASTNode /* 2 */,
-			Fragments._ExpressionStatement__Statement /* 3 */,
-			Fragments._ExpressionStatement__ExpressionStatement /* 4 */
-		};
+			{
+				Fragments._ExpressionStatement__OclAny /* 0 */,
+				Fragments._ExpressionStatement__OclElement /* 1 */,
+				Fragments._ExpressionStatement__ASTNode /* 2 */,
+				Fragments._ExpressionStatement__Statement /* 3 */,
+				Fragments._ExpressionStatement__ExpressionStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ExpressionStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _FieldAccess =
-		{
-			Fragments._FieldAccess__OclAny /* 0 */,
-			Fragments._FieldAccess__OclElement /* 1 */,
-			Fragments._FieldAccess__ASTNode /* 2 */,
-			Fragments._FieldAccess__Expression /* 3 */,
-			Fragments._FieldAccess__FieldAccess /* 4 */
-		};
+			{
+				Fragments._FieldAccess__OclAny /* 0 */,
+				Fragments._FieldAccess__OclElement /* 1 */,
+				Fragments._FieldAccess__ASTNode /* 2 */,
+				Fragments._FieldAccess__Expression /* 3 */,
+				Fragments._FieldAccess__FieldAccess /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __FieldAccess = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _FieldDeclaration =
-		{
-			Fragments._FieldDeclaration__OclAny /* 0 */,
-			Fragments._FieldDeclaration__OclElement /* 1 */,
-			Fragments._FieldDeclaration__ASTNode /* 2 */,
-			Fragments._FieldDeclaration__AbstractVariablesContainer /* 3 */,
-			Fragments._FieldDeclaration__NamedElement /* 3 */,
-			Fragments._FieldDeclaration__BodyDeclaration /* 4 */,
-			Fragments._FieldDeclaration__FieldDeclaration /* 5 */
-		};
+			{
+				Fragments._FieldDeclaration__OclAny /* 0 */,
+				Fragments._FieldDeclaration__OclElement /* 1 */,
+				Fragments._FieldDeclaration__ASTNode /* 2 */,
+				Fragments._FieldDeclaration__AbstractVariablesContainer /* 3 */,
+				Fragments._FieldDeclaration__NamedElement /* 3 */,
+				Fragments._FieldDeclaration__BodyDeclaration /* 4 */,
+				Fragments._FieldDeclaration__FieldDeclaration /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __FieldDeclaration = { 1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ForStatement =
-		{
-			Fragments._ForStatement__OclAny /* 0 */,
-			Fragments._ForStatement__OclElement /* 1 */,
-			Fragments._ForStatement__ASTNode /* 2 */,
-			Fragments._ForStatement__Statement /* 3 */,
-			Fragments._ForStatement__ForStatement /* 4 */
-		};
+			{
+				Fragments._ForStatement__OclAny /* 0 */,
+				Fragments._ForStatement__OclElement /* 1 */,
+				Fragments._ForStatement__ASTNode /* 2 */,
+				Fragments._ForStatement__Statement /* 3 */,
+				Fragments._ForStatement__ForStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ForStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _IfStatement =
-		{
-			Fragments._IfStatement__OclAny /* 0 */,
-			Fragments._IfStatement__OclElement /* 1 */,
-			Fragments._IfStatement__ASTNode /* 2 */,
-			Fragments._IfStatement__Statement /* 3 */,
-			Fragments._IfStatement__IfStatement /* 4 */
-		};
+			{
+				Fragments._IfStatement__OclAny /* 0 */,
+				Fragments._IfStatement__OclElement /* 1 */,
+				Fragments._IfStatement__ASTNode /* 2 */,
+				Fragments._IfStatement__Statement /* 3 */,
+				Fragments._IfStatement__IfStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __IfStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ImportDeclaration =
-		{
-			Fragments._ImportDeclaration__OclAny /* 0 */,
-			Fragments._ImportDeclaration__OclElement /* 1 */,
-			Fragments._ImportDeclaration__ASTNode /* 2 */,
-			Fragments._ImportDeclaration__ImportDeclaration /* 3 */
-		};
+			{
+				Fragments._ImportDeclaration__OclAny /* 0 */,
+				Fragments._ImportDeclaration__OclElement /* 1 */,
+				Fragments._ImportDeclaration__ASTNode /* 2 */,
+				Fragments._ImportDeclaration__ImportDeclaration /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __ImportDeclaration = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _InfixExpression =
-		{
-			Fragments._InfixExpression__OclAny /* 0 */,
-			Fragments._InfixExpression__OclElement /* 1 */,
-			Fragments._InfixExpression__ASTNode /* 2 */,
-			Fragments._InfixExpression__Expression /* 3 */,
-			Fragments._InfixExpression__InfixExpression /* 4 */
-		};
+			{
+				Fragments._InfixExpression__OclAny /* 0 */,
+				Fragments._InfixExpression__OclElement /* 1 */,
+				Fragments._InfixExpression__ASTNode /* 2 */,
+				Fragments._InfixExpression__Expression /* 3 */,
+				Fragments._InfixExpression__InfixExpression /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __InfixExpression = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _InfixExpressionKind =
-		{
-			Fragments._InfixExpressionKind__OclAny /* 0 */,
-			Fragments._InfixExpressionKind__OclElement /* 1 */,
-			Fragments._InfixExpressionKind__OclType /* 2 */,
-			Fragments._InfixExpressionKind__OclEnumeration /* 3 */,
-			Fragments._InfixExpressionKind__InfixExpressionKind /* 4 */
-		};
+			{
+				Fragments._InfixExpressionKind__OclAny /* 0 */,
+				Fragments._InfixExpressionKind__OclElement /* 1 */,
+				Fragments._InfixExpressionKind__OclType /* 2 */,
+				Fragments._InfixExpressionKind__OclEnumeration /* 3 */,
+				Fragments._InfixExpressionKind__InfixExpressionKind /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __InfixExpressionKind = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _InheritanceKind =
-		{
-			Fragments._InheritanceKind__OclAny /* 0 */,
-			Fragments._InheritanceKind__OclElement /* 1 */,
-			Fragments._InheritanceKind__OclType /* 2 */,
-			Fragments._InheritanceKind__OclEnumeration /* 3 */,
-			Fragments._InheritanceKind__InheritanceKind /* 4 */
-		};
+			{
+				Fragments._InheritanceKind__OclAny /* 0 */,
+				Fragments._InheritanceKind__OclElement /* 1 */,
+				Fragments._InheritanceKind__OclType /* 2 */,
+				Fragments._InheritanceKind__OclEnumeration /* 3 */,
+				Fragments._InheritanceKind__InheritanceKind /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __InheritanceKind = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Initializer =
-		{
-			Fragments._Initializer__OclAny /* 0 */,
-			Fragments._Initializer__OclElement /* 1 */,
-			Fragments._Initializer__ASTNode /* 2 */,
-			Fragments._Initializer__NamedElement /* 3 */,
-			Fragments._Initializer__BodyDeclaration /* 4 */,
-			Fragments._Initializer__Initializer /* 5 */
-		};
+			{
+				Fragments._Initializer__OclAny /* 0 */,
+				Fragments._Initializer__OclElement /* 1 */,
+				Fragments._Initializer__ASTNode /* 2 */,
+				Fragments._Initializer__NamedElement /* 3 */,
+				Fragments._Initializer__BodyDeclaration /* 4 */,
+				Fragments._Initializer__Initializer /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __Initializer = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _InstanceofExpression =
-		{
-			Fragments._InstanceofExpression__OclAny /* 0 */,
-			Fragments._InstanceofExpression__OclElement /* 1 */,
-			Fragments._InstanceofExpression__ASTNode /* 2 */,
-			Fragments._InstanceofExpression__Expression /* 3 */,
-			Fragments._InstanceofExpression__InstanceofExpression /* 4 */
-		};
+			{
+				Fragments._InstanceofExpression__OclAny /* 0 */,
+				Fragments._InstanceofExpression__OclElement /* 1 */,
+				Fragments._InstanceofExpression__ASTNode /* 2 */,
+				Fragments._InstanceofExpression__Expression /* 3 */,
+				Fragments._InstanceofExpression__InstanceofExpression /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __InstanceofExpression = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _InterfaceDeclaration =
-		{
-			Fragments._InterfaceDeclaration__OclAny /* 0 */,
-			Fragments._InterfaceDeclaration__OclElement /* 1 */,
-			Fragments._InterfaceDeclaration__ASTNode /* 2 */,
-			Fragments._InterfaceDeclaration__NamedElement /* 3 */,
-			Fragments._InterfaceDeclaration__BodyDeclaration /* 4 */,
-			Fragments._InterfaceDeclaration__Type /* 4 */,
-			Fragments._InterfaceDeclaration__AbstractTypeDeclaration /* 5 */,
-			Fragments._InterfaceDeclaration__TypeDeclaration /* 6 */,
-			Fragments._InterfaceDeclaration__InterfaceDeclaration /* 7 */
-		};
+			{
+				Fragments._InterfaceDeclaration__OclAny /* 0 */,
+				Fragments._InterfaceDeclaration__OclElement /* 1 */,
+				Fragments._InterfaceDeclaration__ASTNode /* 2 */,
+				Fragments._InterfaceDeclaration__NamedElement /* 3 */,
+				Fragments._InterfaceDeclaration__BodyDeclaration /* 4 */,
+				Fragments._InterfaceDeclaration__Type /* 4 */,
+				Fragments._InterfaceDeclaration__AbstractTypeDeclaration /* 5 */,
+				Fragments._InterfaceDeclaration__TypeDeclaration /* 6 */,
+				Fragments._InterfaceDeclaration__InterfaceDeclaration /* 7 */
+			};
 		private static final int /*@NonNull*/ [] __InterfaceDeclaration = { 1,1,1,1,2,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Javadoc =
-		{
-			Fragments._Javadoc__OclAny /* 0 */,
-			Fragments._Javadoc__OclElement /* 1 */,
-			Fragments._Javadoc__ASTNode /* 2 */,
-			Fragments._Javadoc__Comment /* 3 */,
-			Fragments._Javadoc__Javadoc /* 4 */
-		};
+			{
+				Fragments._Javadoc__OclAny /* 0 */,
+				Fragments._Javadoc__OclElement /* 1 */,
+				Fragments._Javadoc__ASTNode /* 2 */,
+				Fragments._Javadoc__Comment /* 3 */,
+				Fragments._Javadoc__Javadoc /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __Javadoc = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _LabeledStatement =
-		{
-			Fragments._LabeledStatement__OclAny /* 0 */,
-			Fragments._LabeledStatement__OclElement /* 1 */,
-			Fragments._LabeledStatement__ASTNode /* 2 */,
-			Fragments._LabeledStatement__NamedElement /* 3 */,
-			Fragments._LabeledStatement__Statement /* 3 */,
-			Fragments._LabeledStatement__LabeledStatement /* 4 */
-		};
+			{
+				Fragments._LabeledStatement__OclAny /* 0 */,
+				Fragments._LabeledStatement__OclElement /* 1 */,
+				Fragments._LabeledStatement__ASTNode /* 2 */,
+				Fragments._LabeledStatement__NamedElement /* 3 */,
+				Fragments._LabeledStatement__Statement /* 3 */,
+				Fragments._LabeledStatement__LabeledStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __LabeledStatement = { 1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _LineComment =
-		{
-			Fragments._LineComment__OclAny /* 0 */,
-			Fragments._LineComment__OclElement /* 1 */,
-			Fragments._LineComment__ASTNode /* 2 */,
-			Fragments._LineComment__Comment /* 3 */,
-			Fragments._LineComment__LineComment /* 4 */
-		};
+			{
+				Fragments._LineComment__OclAny /* 0 */,
+				Fragments._LineComment__OclElement /* 1 */,
+				Fragments._LineComment__ASTNode /* 2 */,
+				Fragments._LineComment__Comment /* 3 */,
+				Fragments._LineComment__LineComment /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __LineComment = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Manifest =
-		{
-			Fragments._Manifest__OclAny /* 0 */,
-			Fragments._Manifest__OclElement /* 1 */,
-			Fragments._Manifest__Manifest /* 2 */
-		};
+			{
+				Fragments._Manifest__OclAny /* 0 */,
+				Fragments._Manifest__OclElement /* 1 */,
+				Fragments._Manifest__Manifest /* 2 */
+			};
 		private static final int /*@NonNull*/ [] __Manifest = { 1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ManifestAttribute =
-		{
-			Fragments._ManifestAttribute__OclAny /* 0 */,
-			Fragments._ManifestAttribute__OclElement /* 1 */,
-			Fragments._ManifestAttribute__ManifestAttribute /* 2 */
-		};
+			{
+				Fragments._ManifestAttribute__OclAny /* 0 */,
+				Fragments._ManifestAttribute__OclElement /* 1 */,
+				Fragments._ManifestAttribute__ManifestAttribute /* 2 */
+			};
 		private static final int /*@NonNull*/ [] __ManifestAttribute = { 1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ManifestEntry =
-		{
-			Fragments._ManifestEntry__OclAny /* 0 */,
-			Fragments._ManifestEntry__OclElement /* 1 */,
-			Fragments._ManifestEntry__ManifestEntry /* 2 */
-		};
+			{
+				Fragments._ManifestEntry__OclAny /* 0 */,
+				Fragments._ManifestEntry__OclElement /* 1 */,
+				Fragments._ManifestEntry__ManifestEntry /* 2 */
+			};
 		private static final int /*@NonNull*/ [] __ManifestEntry = { 1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _MemberRef =
-		{
-			Fragments._MemberRef__OclAny /* 0 */,
-			Fragments._MemberRef__OclElement /* 1 */,
-			Fragments._MemberRef__ASTNode /* 2 */,
-			Fragments._MemberRef__MemberRef /* 3 */
-		};
+			{
+				Fragments._MemberRef__OclAny /* 0 */,
+				Fragments._MemberRef__OclElement /* 1 */,
+				Fragments._MemberRef__ASTNode /* 2 */,
+				Fragments._MemberRef__MemberRef /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __MemberRef = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _MethodDeclaration =
-		{
-			Fragments._MethodDeclaration__OclAny /* 0 */,
-			Fragments._MethodDeclaration__OclElement /* 1 */,
-			Fragments._MethodDeclaration__ASTNode /* 2 */,
-			Fragments._MethodDeclaration__NamedElement /* 3 */,
-			Fragments._MethodDeclaration__BodyDeclaration /* 4 */,
-			Fragments._MethodDeclaration__AbstractMethodDeclaration /* 5 */,
-			Fragments._MethodDeclaration__MethodDeclaration /* 6 */
-		};
+			{
+				Fragments._MethodDeclaration__OclAny /* 0 */,
+				Fragments._MethodDeclaration__OclElement /* 1 */,
+				Fragments._MethodDeclaration__ASTNode /* 2 */,
+				Fragments._MethodDeclaration__NamedElement /* 3 */,
+				Fragments._MethodDeclaration__BodyDeclaration /* 4 */,
+				Fragments._MethodDeclaration__AbstractMethodDeclaration /* 5 */,
+				Fragments._MethodDeclaration__MethodDeclaration /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __MethodDeclaration = { 1,1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _MethodInvocation =
-		{
-			Fragments._MethodInvocation__OclAny /* 0 */,
-			Fragments._MethodInvocation__OclElement /* 1 */,
-			Fragments._MethodInvocation__ASTNode /* 2 */,
-			Fragments._MethodInvocation__AbstractMethodInvocation /* 3 */,
-			Fragments._MethodInvocation__Expression /* 3 */,
-			Fragments._MethodInvocation__MethodInvocation /* 4 */
-		};
+			{
+				Fragments._MethodInvocation__OclAny /* 0 */,
+				Fragments._MethodInvocation__OclElement /* 1 */,
+				Fragments._MethodInvocation__ASTNode /* 2 */,
+				Fragments._MethodInvocation__AbstractMethodInvocation /* 3 */,
+				Fragments._MethodInvocation__Expression /* 3 */,
+				Fragments._MethodInvocation__MethodInvocation /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __MethodInvocation = { 1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _MethodRef =
-		{
-			Fragments._MethodRef__OclAny /* 0 */,
-			Fragments._MethodRef__OclElement /* 1 */,
-			Fragments._MethodRef__ASTNode /* 2 */,
-			Fragments._MethodRef__MethodRef /* 3 */
-		};
+			{
+				Fragments._MethodRef__OclAny /* 0 */,
+				Fragments._MethodRef__OclElement /* 1 */,
+				Fragments._MethodRef__ASTNode /* 2 */,
+				Fragments._MethodRef__MethodRef /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __MethodRef = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _MethodRefParameter =
-		{
-			Fragments._MethodRefParameter__OclAny /* 0 */,
-			Fragments._MethodRefParameter__OclElement /* 1 */,
-			Fragments._MethodRefParameter__ASTNode /* 2 */,
-			Fragments._MethodRefParameter__MethodRefParameter /* 3 */
-		};
+			{
+				Fragments._MethodRefParameter__OclAny /* 0 */,
+				Fragments._MethodRefParameter__OclElement /* 1 */,
+				Fragments._MethodRefParameter__ASTNode /* 2 */,
+				Fragments._MethodRefParameter__MethodRefParameter /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __MethodRefParameter = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Model =
-		{
-			Fragments._Model__OclAny /* 0 */,
-			Fragments._Model__OclElement /* 1 */,
-			Fragments._Model__Model /* 2 */
-		};
+			{
+				Fragments._Model__OclAny /* 0 */,
+				Fragments._Model__OclElement /* 1 */,
+				Fragments._Model__Model /* 2 */
+			};
 		private static final int /*@NonNull*/ [] __Model = { 1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Modifier =
-		{
-			Fragments._Modifier__OclAny /* 0 */,
-			Fragments._Modifier__OclElement /* 1 */,
-			Fragments._Modifier__ASTNode /* 2 */,
-			Fragments._Modifier__Modifier /* 3 */
-		};
+			{
+				Fragments._Modifier__OclAny /* 0 */,
+				Fragments._Modifier__OclElement /* 1 */,
+				Fragments._Modifier__ASTNode /* 2 */,
+				Fragments._Modifier__Modifier /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __Modifier = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _NamedElement =
-		{
-			Fragments._NamedElement__OclAny /* 0 */,
-			Fragments._NamedElement__OclElement /* 1 */,
-			Fragments._NamedElement__ASTNode /* 2 */,
-			Fragments._NamedElement__NamedElement /* 3 */
-		};
+			{
+				Fragments._NamedElement__OclAny /* 0 */,
+				Fragments._NamedElement__OclElement /* 1 */,
+				Fragments._NamedElement__ASTNode /* 2 */,
+				Fragments._NamedElement__NamedElement /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __NamedElement = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _NamespaceAccess =
-		{
-			Fragments._NamespaceAccess__OclAny /* 0 */,
-			Fragments._NamespaceAccess__OclElement /* 1 */,
-			Fragments._NamespaceAccess__ASTNode /* 2 */,
-			Fragments._NamespaceAccess__NamespaceAccess /* 3 */
-		};
+			{
+				Fragments._NamespaceAccess__OclAny /* 0 */,
+				Fragments._NamespaceAccess__OclElement /* 1 */,
+				Fragments._NamespaceAccess__ASTNode /* 2 */,
+				Fragments._NamespaceAccess__NamespaceAccess /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __NamespaceAccess = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _NullLiteral =
-		{
-			Fragments._NullLiteral__OclAny /* 0 */,
-			Fragments._NullLiteral__OclElement /* 1 */,
-			Fragments._NullLiteral__ASTNode /* 2 */,
-			Fragments._NullLiteral__Expression /* 3 */,
-			Fragments._NullLiteral__NullLiteral /* 4 */
-		};
+			{
+				Fragments._NullLiteral__OclAny /* 0 */,
+				Fragments._NullLiteral__OclElement /* 1 */,
+				Fragments._NullLiteral__ASTNode /* 2 */,
+				Fragments._NullLiteral__Expression /* 3 */,
+				Fragments._NullLiteral__NullLiteral /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __NullLiteral = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _NumberLiteral =
-		{
-			Fragments._NumberLiteral__OclAny /* 0 */,
-			Fragments._NumberLiteral__OclElement /* 1 */,
-			Fragments._NumberLiteral__ASTNode /* 2 */,
-			Fragments._NumberLiteral__Expression /* 3 */,
-			Fragments._NumberLiteral__NumberLiteral /* 4 */
-		};
+			{
+				Fragments._NumberLiteral__OclAny /* 0 */,
+				Fragments._NumberLiteral__OclElement /* 1 */,
+				Fragments._NumberLiteral__ASTNode /* 2 */,
+				Fragments._NumberLiteral__Expression /* 3 */,
+				Fragments._NumberLiteral__NumberLiteral /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __NumberLiteral = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Package =
-		{
-			Fragments._Package__OclAny /* 0 */,
-			Fragments._Package__OclElement /* 1 */,
-			Fragments._Package__ASTNode /* 2 */,
-			Fragments._Package__NamedElement /* 3 */,
-			Fragments._Package__Package /* 4 */
-		};
+			{
+				Fragments._Package__OclAny /* 0 */,
+				Fragments._Package__OclElement /* 1 */,
+				Fragments._Package__ASTNode /* 2 */,
+				Fragments._Package__NamedElement /* 3 */,
+				Fragments._Package__Package /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __Package = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PackageAccess =
-		{
-			Fragments._PackageAccess__OclAny /* 0 */,
-			Fragments._PackageAccess__OclElement /* 1 */,
-			Fragments._PackageAccess__ASTNode /* 2 */,
-			Fragments._PackageAccess__NamespaceAccess /* 3 */,
-			Fragments._PackageAccess__PackageAccess /* 4 */
-		};
+			{
+				Fragments._PackageAccess__OclAny /* 0 */,
+				Fragments._PackageAccess__OclElement /* 1 */,
+				Fragments._PackageAccess__ASTNode /* 2 */,
+				Fragments._PackageAccess__NamespaceAccess /* 3 */,
+				Fragments._PackageAccess__PackageAccess /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __PackageAccess = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ParameterizedType =
-		{
-			Fragments._ParameterizedType__OclAny /* 0 */,
-			Fragments._ParameterizedType__OclElement /* 1 */,
-			Fragments._ParameterizedType__ASTNode /* 2 */,
-			Fragments._ParameterizedType__NamedElement /* 3 */,
-			Fragments._ParameterizedType__Type /* 4 */,
-			Fragments._ParameterizedType__ParameterizedType /* 5 */
-		};
+			{
+				Fragments._ParameterizedType__OclAny /* 0 */,
+				Fragments._ParameterizedType__OclElement /* 1 */,
+				Fragments._ParameterizedType__ASTNode /* 2 */,
+				Fragments._ParameterizedType__NamedElement /* 3 */,
+				Fragments._ParameterizedType__Type /* 4 */,
+				Fragments._ParameterizedType__ParameterizedType /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __ParameterizedType = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ParenthesizedExpression =
-		{
-			Fragments._ParenthesizedExpression__OclAny /* 0 */,
-			Fragments._ParenthesizedExpression__OclElement /* 1 */,
-			Fragments._ParenthesizedExpression__ASTNode /* 2 */,
-			Fragments._ParenthesizedExpression__Expression /* 3 */,
-			Fragments._ParenthesizedExpression__ParenthesizedExpression /* 4 */
-		};
+			{
+				Fragments._ParenthesizedExpression__OclAny /* 0 */,
+				Fragments._ParenthesizedExpression__OclElement /* 1 */,
+				Fragments._ParenthesizedExpression__ASTNode /* 2 */,
+				Fragments._ParenthesizedExpression__Expression /* 3 */,
+				Fragments._ParenthesizedExpression__ParenthesizedExpression /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ParenthesizedExpression = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PostfixExpression =
-		{
-			Fragments._PostfixExpression__OclAny /* 0 */,
-			Fragments._PostfixExpression__OclElement /* 1 */,
-			Fragments._PostfixExpression__ASTNode /* 2 */,
-			Fragments._PostfixExpression__Expression /* 3 */,
-			Fragments._PostfixExpression__PostfixExpression /* 4 */
-		};
+			{
+				Fragments._PostfixExpression__OclAny /* 0 */,
+				Fragments._PostfixExpression__OclElement /* 1 */,
+				Fragments._PostfixExpression__ASTNode /* 2 */,
+				Fragments._PostfixExpression__Expression /* 3 */,
+				Fragments._PostfixExpression__PostfixExpression /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __PostfixExpression = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PostfixExpressionKind =
-		{
-			Fragments._PostfixExpressionKind__OclAny /* 0 */,
-			Fragments._PostfixExpressionKind__OclElement /* 1 */,
-			Fragments._PostfixExpressionKind__OclType /* 2 */,
-			Fragments._PostfixExpressionKind__OclEnumeration /* 3 */,
-			Fragments._PostfixExpressionKind__PostfixExpressionKind /* 4 */
-		};
+			{
+				Fragments._PostfixExpressionKind__OclAny /* 0 */,
+				Fragments._PostfixExpressionKind__OclElement /* 1 */,
+				Fragments._PostfixExpressionKind__OclType /* 2 */,
+				Fragments._PostfixExpressionKind__OclEnumeration /* 3 */,
+				Fragments._PostfixExpressionKind__PostfixExpressionKind /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __PostfixExpressionKind = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrefixExpression =
-		{
-			Fragments._PrefixExpression__OclAny /* 0 */,
-			Fragments._PrefixExpression__OclElement /* 1 */,
-			Fragments._PrefixExpression__ASTNode /* 2 */,
-			Fragments._PrefixExpression__Expression /* 3 */,
-			Fragments._PrefixExpression__PrefixExpression /* 4 */
-		};
+			{
+				Fragments._PrefixExpression__OclAny /* 0 */,
+				Fragments._PrefixExpression__OclElement /* 1 */,
+				Fragments._PrefixExpression__ASTNode /* 2 */,
+				Fragments._PrefixExpression__Expression /* 3 */,
+				Fragments._PrefixExpression__PrefixExpression /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __PrefixExpression = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrefixExpressionKind =
-		{
-			Fragments._PrefixExpressionKind__OclAny /* 0 */,
-			Fragments._PrefixExpressionKind__OclElement /* 1 */,
-			Fragments._PrefixExpressionKind__OclType /* 2 */,
-			Fragments._PrefixExpressionKind__OclEnumeration /* 3 */,
-			Fragments._PrefixExpressionKind__PrefixExpressionKind /* 4 */
-		};
+			{
+				Fragments._PrefixExpressionKind__OclAny /* 0 */,
+				Fragments._PrefixExpressionKind__OclElement /* 1 */,
+				Fragments._PrefixExpressionKind__OclType /* 2 */,
+				Fragments._PrefixExpressionKind__OclEnumeration /* 3 */,
+				Fragments._PrefixExpressionKind__PrefixExpressionKind /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __PrefixExpressionKind = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrimitiveType =
-		{
-			Fragments._PrimitiveType__OclAny /* 0 */,
-			Fragments._PrimitiveType__OclElement /* 1 */,
-			Fragments._PrimitiveType__ASTNode /* 2 */,
-			Fragments._PrimitiveType__NamedElement /* 3 */,
-			Fragments._PrimitiveType__Type /* 4 */,
-			Fragments._PrimitiveType__PrimitiveType /* 5 */
-		};
+			{
+				Fragments._PrimitiveType__OclAny /* 0 */,
+				Fragments._PrimitiveType__OclElement /* 1 */,
+				Fragments._PrimitiveType__ASTNode /* 2 */,
+				Fragments._PrimitiveType__NamedElement /* 3 */,
+				Fragments._PrimitiveType__Type /* 4 */,
+				Fragments._PrimitiveType__PrimitiveType /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __PrimitiveType = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrimitiveTypeBoolean =
-		{
-			Fragments._PrimitiveTypeBoolean__OclAny /* 0 */,
-			Fragments._PrimitiveTypeBoolean__OclElement /* 1 */,
-			Fragments._PrimitiveTypeBoolean__ASTNode /* 2 */,
-			Fragments._PrimitiveTypeBoolean__NamedElement /* 3 */,
-			Fragments._PrimitiveTypeBoolean__Type /* 4 */,
-			Fragments._PrimitiveTypeBoolean__PrimitiveType /* 5 */,
-			Fragments._PrimitiveTypeBoolean__PrimitiveTypeBoolean /* 6 */
-		};
+			{
+				Fragments._PrimitiveTypeBoolean__OclAny /* 0 */,
+				Fragments._PrimitiveTypeBoolean__OclElement /* 1 */,
+				Fragments._PrimitiveTypeBoolean__ASTNode /* 2 */,
+				Fragments._PrimitiveTypeBoolean__NamedElement /* 3 */,
+				Fragments._PrimitiveTypeBoolean__Type /* 4 */,
+				Fragments._PrimitiveTypeBoolean__PrimitiveType /* 5 */,
+				Fragments._PrimitiveTypeBoolean__PrimitiveTypeBoolean /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __PrimitiveTypeBoolean = { 1,1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrimitiveTypeByte =
-		{
-			Fragments._PrimitiveTypeByte__OclAny /* 0 */,
-			Fragments._PrimitiveTypeByte__OclElement /* 1 */,
-			Fragments._PrimitiveTypeByte__ASTNode /* 2 */,
-			Fragments._PrimitiveTypeByte__NamedElement /* 3 */,
-			Fragments._PrimitiveTypeByte__Type /* 4 */,
-			Fragments._PrimitiveTypeByte__PrimitiveType /* 5 */,
-			Fragments._PrimitiveTypeByte__PrimitiveTypeByte /* 6 */
-		};
+			{
+				Fragments._PrimitiveTypeByte__OclAny /* 0 */,
+				Fragments._PrimitiveTypeByte__OclElement /* 1 */,
+				Fragments._PrimitiveTypeByte__ASTNode /* 2 */,
+				Fragments._PrimitiveTypeByte__NamedElement /* 3 */,
+				Fragments._PrimitiveTypeByte__Type /* 4 */,
+				Fragments._PrimitiveTypeByte__PrimitiveType /* 5 */,
+				Fragments._PrimitiveTypeByte__PrimitiveTypeByte /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __PrimitiveTypeByte = { 1,1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrimitiveTypeChar =
-		{
-			Fragments._PrimitiveTypeChar__OclAny /* 0 */,
-			Fragments._PrimitiveTypeChar__OclElement /* 1 */,
-			Fragments._PrimitiveTypeChar__ASTNode /* 2 */,
-			Fragments._PrimitiveTypeChar__NamedElement /* 3 */,
-			Fragments._PrimitiveTypeChar__Type /* 4 */,
-			Fragments._PrimitiveTypeChar__PrimitiveType /* 5 */,
-			Fragments._PrimitiveTypeChar__PrimitiveTypeChar /* 6 */
-		};
+			{
+				Fragments._PrimitiveTypeChar__OclAny /* 0 */,
+				Fragments._PrimitiveTypeChar__OclElement /* 1 */,
+				Fragments._PrimitiveTypeChar__ASTNode /* 2 */,
+				Fragments._PrimitiveTypeChar__NamedElement /* 3 */,
+				Fragments._PrimitiveTypeChar__Type /* 4 */,
+				Fragments._PrimitiveTypeChar__PrimitiveType /* 5 */,
+				Fragments._PrimitiveTypeChar__PrimitiveTypeChar /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __PrimitiveTypeChar = { 1,1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrimitiveTypeDouble =
-		{
-			Fragments._PrimitiveTypeDouble__OclAny /* 0 */,
-			Fragments._PrimitiveTypeDouble__OclElement /* 1 */,
-			Fragments._PrimitiveTypeDouble__ASTNode /* 2 */,
-			Fragments._PrimitiveTypeDouble__NamedElement /* 3 */,
-			Fragments._PrimitiveTypeDouble__Type /* 4 */,
-			Fragments._PrimitiveTypeDouble__PrimitiveType /* 5 */,
-			Fragments._PrimitiveTypeDouble__PrimitiveTypeDouble /* 6 */
-		};
+			{
+				Fragments._PrimitiveTypeDouble__OclAny /* 0 */,
+				Fragments._PrimitiveTypeDouble__OclElement /* 1 */,
+				Fragments._PrimitiveTypeDouble__ASTNode /* 2 */,
+				Fragments._PrimitiveTypeDouble__NamedElement /* 3 */,
+				Fragments._PrimitiveTypeDouble__Type /* 4 */,
+				Fragments._PrimitiveTypeDouble__PrimitiveType /* 5 */,
+				Fragments._PrimitiveTypeDouble__PrimitiveTypeDouble /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __PrimitiveTypeDouble = { 1,1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrimitiveTypeFloat =
-		{
-			Fragments._PrimitiveTypeFloat__OclAny /* 0 */,
-			Fragments._PrimitiveTypeFloat__OclElement /* 1 */,
-			Fragments._PrimitiveTypeFloat__ASTNode /* 2 */,
-			Fragments._PrimitiveTypeFloat__NamedElement /* 3 */,
-			Fragments._PrimitiveTypeFloat__Type /* 4 */,
-			Fragments._PrimitiveTypeFloat__PrimitiveType /* 5 */,
-			Fragments._PrimitiveTypeFloat__PrimitiveTypeFloat /* 6 */
-		};
+			{
+				Fragments._PrimitiveTypeFloat__OclAny /* 0 */,
+				Fragments._PrimitiveTypeFloat__OclElement /* 1 */,
+				Fragments._PrimitiveTypeFloat__ASTNode /* 2 */,
+				Fragments._PrimitiveTypeFloat__NamedElement /* 3 */,
+				Fragments._PrimitiveTypeFloat__Type /* 4 */,
+				Fragments._PrimitiveTypeFloat__PrimitiveType /* 5 */,
+				Fragments._PrimitiveTypeFloat__PrimitiveTypeFloat /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __PrimitiveTypeFloat = { 1,1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrimitiveTypeInt =
-		{
-			Fragments._PrimitiveTypeInt__OclAny /* 0 */,
-			Fragments._PrimitiveTypeInt__OclElement /* 1 */,
-			Fragments._PrimitiveTypeInt__ASTNode /* 2 */,
-			Fragments._PrimitiveTypeInt__NamedElement /* 3 */,
-			Fragments._PrimitiveTypeInt__Type /* 4 */,
-			Fragments._PrimitiveTypeInt__PrimitiveType /* 5 */,
-			Fragments._PrimitiveTypeInt__PrimitiveTypeInt /* 6 */
-		};
+			{
+				Fragments._PrimitiveTypeInt__OclAny /* 0 */,
+				Fragments._PrimitiveTypeInt__OclElement /* 1 */,
+				Fragments._PrimitiveTypeInt__ASTNode /* 2 */,
+				Fragments._PrimitiveTypeInt__NamedElement /* 3 */,
+				Fragments._PrimitiveTypeInt__Type /* 4 */,
+				Fragments._PrimitiveTypeInt__PrimitiveType /* 5 */,
+				Fragments._PrimitiveTypeInt__PrimitiveTypeInt /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __PrimitiveTypeInt = { 1,1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrimitiveTypeLong =
-		{
-			Fragments._PrimitiveTypeLong__OclAny /* 0 */,
-			Fragments._PrimitiveTypeLong__OclElement /* 1 */,
-			Fragments._PrimitiveTypeLong__ASTNode /* 2 */,
-			Fragments._PrimitiveTypeLong__NamedElement /* 3 */,
-			Fragments._PrimitiveTypeLong__Type /* 4 */,
-			Fragments._PrimitiveTypeLong__PrimitiveType /* 5 */,
-			Fragments._PrimitiveTypeLong__PrimitiveTypeLong /* 6 */
-		};
+			{
+				Fragments._PrimitiveTypeLong__OclAny /* 0 */,
+				Fragments._PrimitiveTypeLong__OclElement /* 1 */,
+				Fragments._PrimitiveTypeLong__ASTNode /* 2 */,
+				Fragments._PrimitiveTypeLong__NamedElement /* 3 */,
+				Fragments._PrimitiveTypeLong__Type /* 4 */,
+				Fragments._PrimitiveTypeLong__PrimitiveType /* 5 */,
+				Fragments._PrimitiveTypeLong__PrimitiveTypeLong /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __PrimitiveTypeLong = { 1,1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrimitiveTypeShort =
-		{
-			Fragments._PrimitiveTypeShort__OclAny /* 0 */,
-			Fragments._PrimitiveTypeShort__OclElement /* 1 */,
-			Fragments._PrimitiveTypeShort__ASTNode /* 2 */,
-			Fragments._PrimitiveTypeShort__NamedElement /* 3 */,
-			Fragments._PrimitiveTypeShort__Type /* 4 */,
-			Fragments._PrimitiveTypeShort__PrimitiveType /* 5 */,
-			Fragments._PrimitiveTypeShort__PrimitiveTypeShort /* 6 */
-		};
+			{
+				Fragments._PrimitiveTypeShort__OclAny /* 0 */,
+				Fragments._PrimitiveTypeShort__OclElement /* 1 */,
+				Fragments._PrimitiveTypeShort__ASTNode /* 2 */,
+				Fragments._PrimitiveTypeShort__NamedElement /* 3 */,
+				Fragments._PrimitiveTypeShort__Type /* 4 */,
+				Fragments._PrimitiveTypeShort__PrimitiveType /* 5 */,
+				Fragments._PrimitiveTypeShort__PrimitiveTypeShort /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __PrimitiveTypeShort = { 1,1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PrimitiveTypeVoid =
-		{
-			Fragments._PrimitiveTypeVoid__OclAny /* 0 */,
-			Fragments._PrimitiveTypeVoid__OclElement /* 1 */,
-			Fragments._PrimitiveTypeVoid__ASTNode /* 2 */,
-			Fragments._PrimitiveTypeVoid__NamedElement /* 3 */,
-			Fragments._PrimitiveTypeVoid__Type /* 4 */,
-			Fragments._PrimitiveTypeVoid__PrimitiveType /* 5 */,
-			Fragments._PrimitiveTypeVoid__PrimitiveTypeVoid /* 6 */
-		};
+			{
+				Fragments._PrimitiveTypeVoid__OclAny /* 0 */,
+				Fragments._PrimitiveTypeVoid__OclElement /* 1 */,
+				Fragments._PrimitiveTypeVoid__ASTNode /* 2 */,
+				Fragments._PrimitiveTypeVoid__NamedElement /* 3 */,
+				Fragments._PrimitiveTypeVoid__Type /* 4 */,
+				Fragments._PrimitiveTypeVoid__PrimitiveType /* 5 */,
+				Fragments._PrimitiveTypeVoid__PrimitiveTypeVoid /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __PrimitiveTypeVoid = { 1,1,1,1,1,1,1 };
 
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _QueryCollection =
+			{
+				Fragments._QueryCollection__OclAny /* 0 */,
+				Fragments._QueryCollection__OclElement /* 1 */,
+				Fragments._QueryCollection__QueryCollection /* 2 */
+			};
+		private static final int /*@NonNull*/ [] __QueryCollection = { 1,1,1 };
+
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ReturnStatement =
-		{
-			Fragments._ReturnStatement__OclAny /* 0 */,
-			Fragments._ReturnStatement__OclElement /* 1 */,
-			Fragments._ReturnStatement__ASTNode /* 2 */,
-			Fragments._ReturnStatement__Statement /* 3 */,
-			Fragments._ReturnStatement__ReturnStatement /* 4 */
-		};
+			{
+				Fragments._ReturnStatement__OclAny /* 0 */,
+				Fragments._ReturnStatement__OclElement /* 1 */,
+				Fragments._ReturnStatement__ASTNode /* 2 */,
+				Fragments._ReturnStatement__Statement /* 3 */,
+				Fragments._ReturnStatement__ReturnStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ReturnStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _SingleVariableAccess =
-		{
-			Fragments._SingleVariableAccess__OclAny /* 0 */,
-			Fragments._SingleVariableAccess__OclElement /* 1 */,
-			Fragments._SingleVariableAccess__ASTNode /* 2 */,
-			Fragments._SingleVariableAccess__Expression /* 3 */,
-			Fragments._SingleVariableAccess__SingleVariableAccess /* 4 */
-		};
+			{
+				Fragments._SingleVariableAccess__OclAny /* 0 */,
+				Fragments._SingleVariableAccess__OclElement /* 1 */,
+				Fragments._SingleVariableAccess__ASTNode /* 2 */,
+				Fragments._SingleVariableAccess__Expression /* 3 */,
+				Fragments._SingleVariableAccess__SingleVariableAccess /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __SingleVariableAccess = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _SingleVariableDeclaration =
-		{
-			Fragments._SingleVariableDeclaration__OclAny /* 0 */,
-			Fragments._SingleVariableDeclaration__OclElement /* 1 */,
-			Fragments._SingleVariableDeclaration__ASTNode /* 2 */,
-			Fragments._SingleVariableDeclaration__NamedElement /* 3 */,
-			Fragments._SingleVariableDeclaration__VariableDeclaration /* 4 */,
-			Fragments._SingleVariableDeclaration__SingleVariableDeclaration /* 5 */
-		};
+			{
+				Fragments._SingleVariableDeclaration__OclAny /* 0 */,
+				Fragments._SingleVariableDeclaration__OclElement /* 1 */,
+				Fragments._SingleVariableDeclaration__ASTNode /* 2 */,
+				Fragments._SingleVariableDeclaration__NamedElement /* 3 */,
+				Fragments._SingleVariableDeclaration__VariableDeclaration /* 4 */,
+				Fragments._SingleVariableDeclaration__SingleVariableDeclaration /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __SingleVariableDeclaration = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Statement =
-		{
-			Fragments._Statement__OclAny /* 0 */,
-			Fragments._Statement__OclElement /* 1 */,
-			Fragments._Statement__ASTNode /* 2 */,
-			Fragments._Statement__Statement /* 3 */
-		};
+			{
+				Fragments._Statement__OclAny /* 0 */,
+				Fragments._Statement__OclElement /* 1 */,
+				Fragments._Statement__ASTNode /* 2 */,
+				Fragments._Statement__Statement /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __Statement = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _StringLiteral =
-		{
-			Fragments._StringLiteral__OclAny /* 0 */,
-			Fragments._StringLiteral__OclElement /* 1 */,
-			Fragments._StringLiteral__ASTNode /* 2 */,
-			Fragments._StringLiteral__Expression /* 3 */,
-			Fragments._StringLiteral__StringLiteral /* 4 */
-		};
+			{
+				Fragments._StringLiteral__OclAny /* 0 */,
+				Fragments._StringLiteral__OclElement /* 1 */,
+				Fragments._StringLiteral__ASTNode /* 2 */,
+				Fragments._StringLiteral__Expression /* 3 */,
+				Fragments._StringLiteral__StringLiteral /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __StringLiteral = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _SuperConstructorInvocation =
-		{
-			Fragments._SuperConstructorInvocation__OclAny /* 0 */,
-			Fragments._SuperConstructorInvocation__OclElement /* 1 */,
-			Fragments._SuperConstructorInvocation__ASTNode /* 2 */,
-			Fragments._SuperConstructorInvocation__AbstractMethodInvocation /* 3 */,
-			Fragments._SuperConstructorInvocation__Statement /* 3 */,
-			Fragments._SuperConstructorInvocation__SuperConstructorInvocation /* 4 */
-		};
+			{
+				Fragments._SuperConstructorInvocation__OclAny /* 0 */,
+				Fragments._SuperConstructorInvocation__OclElement /* 1 */,
+				Fragments._SuperConstructorInvocation__ASTNode /* 2 */,
+				Fragments._SuperConstructorInvocation__AbstractMethodInvocation /* 3 */,
+				Fragments._SuperConstructorInvocation__Statement /* 3 */,
+				Fragments._SuperConstructorInvocation__SuperConstructorInvocation /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __SuperConstructorInvocation = { 1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _SuperFieldAccess =
-		{
-			Fragments._SuperFieldAccess__OclAny /* 0 */,
-			Fragments._SuperFieldAccess__OclElement /* 1 */,
-			Fragments._SuperFieldAccess__ASTNode /* 2 */,
-			Fragments._SuperFieldAccess__Expression /* 3 */,
-			Fragments._SuperFieldAccess__AbstractTypeQualifiedExpression /* 4 */,
-			Fragments._SuperFieldAccess__SuperFieldAccess /* 5 */
-		};
+			{
+				Fragments._SuperFieldAccess__OclAny /* 0 */,
+				Fragments._SuperFieldAccess__OclElement /* 1 */,
+				Fragments._SuperFieldAccess__ASTNode /* 2 */,
+				Fragments._SuperFieldAccess__Expression /* 3 */,
+				Fragments._SuperFieldAccess__AbstractTypeQualifiedExpression /* 4 */,
+				Fragments._SuperFieldAccess__SuperFieldAccess /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __SuperFieldAccess = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _SuperMethodInvocation =
-		{
-			Fragments._SuperMethodInvocation__OclAny /* 0 */,
-			Fragments._SuperMethodInvocation__OclElement /* 1 */,
-			Fragments._SuperMethodInvocation__ASTNode /* 2 */,
-			Fragments._SuperMethodInvocation__AbstractMethodInvocation /* 3 */,
-			Fragments._SuperMethodInvocation__Expression /* 3 */,
-			Fragments._SuperMethodInvocation__AbstractTypeQualifiedExpression /* 4 */,
-			Fragments._SuperMethodInvocation__SuperMethodInvocation /* 5 */
-		};
+			{
+				Fragments._SuperMethodInvocation__OclAny /* 0 */,
+				Fragments._SuperMethodInvocation__OclElement /* 1 */,
+				Fragments._SuperMethodInvocation__ASTNode /* 2 */,
+				Fragments._SuperMethodInvocation__AbstractMethodInvocation /* 3 */,
+				Fragments._SuperMethodInvocation__Expression /* 3 */,
+				Fragments._SuperMethodInvocation__AbstractTypeQualifiedExpression /* 4 */,
+				Fragments._SuperMethodInvocation__SuperMethodInvocation /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __SuperMethodInvocation = { 1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _SwitchCase =
-		{
-			Fragments._SwitchCase__OclAny /* 0 */,
-			Fragments._SwitchCase__OclElement /* 1 */,
-			Fragments._SwitchCase__ASTNode /* 2 */,
-			Fragments._SwitchCase__Statement /* 3 */,
-			Fragments._SwitchCase__SwitchCase /* 4 */
-		};
+			{
+				Fragments._SwitchCase__OclAny /* 0 */,
+				Fragments._SwitchCase__OclElement /* 1 */,
+				Fragments._SwitchCase__ASTNode /* 2 */,
+				Fragments._SwitchCase__Statement /* 3 */,
+				Fragments._SwitchCase__SwitchCase /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __SwitchCase = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _SwitchStatement =
-		{
-			Fragments._SwitchStatement__OclAny /* 0 */,
-			Fragments._SwitchStatement__OclElement /* 1 */,
-			Fragments._SwitchStatement__ASTNode /* 2 */,
-			Fragments._SwitchStatement__Statement /* 3 */,
-			Fragments._SwitchStatement__SwitchStatement /* 4 */
-		};
+			{
+				Fragments._SwitchStatement__OclAny /* 0 */,
+				Fragments._SwitchStatement__OclElement /* 1 */,
+				Fragments._SwitchStatement__ASTNode /* 2 */,
+				Fragments._SwitchStatement__Statement /* 3 */,
+				Fragments._SwitchStatement__SwitchStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __SwitchStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _SynchronizedStatement =
-		{
-			Fragments._SynchronizedStatement__OclAny /* 0 */,
-			Fragments._SynchronizedStatement__OclElement /* 1 */,
-			Fragments._SynchronizedStatement__ASTNode /* 2 */,
-			Fragments._SynchronizedStatement__Statement /* 3 */,
-			Fragments._SynchronizedStatement__SynchronizedStatement /* 4 */
-		};
+			{
+				Fragments._SynchronizedStatement__OclAny /* 0 */,
+				Fragments._SynchronizedStatement__OclElement /* 1 */,
+				Fragments._SynchronizedStatement__ASTNode /* 2 */,
+				Fragments._SynchronizedStatement__Statement /* 3 */,
+				Fragments._SynchronizedStatement__SynchronizedStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __SynchronizedStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _TagElement =
-		{
-			Fragments._TagElement__OclAny /* 0 */,
-			Fragments._TagElement__OclElement /* 1 */,
-			Fragments._TagElement__ASTNode /* 2 */,
-			Fragments._TagElement__TagElement /* 3 */
-		};
+			{
+				Fragments._TagElement__OclAny /* 0 */,
+				Fragments._TagElement__OclElement /* 1 */,
+				Fragments._TagElement__ASTNode /* 2 */,
+				Fragments._TagElement__TagElement /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __TagElement = { 1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Test =
-		{
-			Fragments._Test__OclAny /* 0 */,
-			Fragments._Test__OclElement /* 1 */,
-			Fragments._Test__Test /* 2 */
-		};
-		private static final int /*@NonNull*/ [] __Test = { 1,1,1 };
-
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _TextElement =
-		{
-			Fragments._TextElement__OclAny /* 0 */,
-			Fragments._TextElement__OclElement /* 1 */,
-			Fragments._TextElement__ASTNode /* 2 */,
-			Fragments._TextElement__TextElement /* 3 */
-		};
+			{
+				Fragments._TextElement__OclAny /* 0 */,
+				Fragments._TextElement__OclElement /* 1 */,
+				Fragments._TextElement__ASTNode /* 2 */,
+				Fragments._TextElement__TextElement /* 3 */
+			};
 		private static final int /*@NonNull*/ [] __TextElement = { 1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ThisExpression =
-		{
-			Fragments._ThisExpression__OclAny /* 0 */,
-			Fragments._ThisExpression__OclElement /* 1 */,
-			Fragments._ThisExpression__ASTNode /* 2 */,
-			Fragments._ThisExpression__Expression /* 3 */,
-			Fragments._ThisExpression__AbstractTypeQualifiedExpression /* 4 */,
-			Fragments._ThisExpression__ThisExpression /* 5 */
-		};
+			{
+				Fragments._ThisExpression__OclAny /* 0 */,
+				Fragments._ThisExpression__OclElement /* 1 */,
+				Fragments._ThisExpression__ASTNode /* 2 */,
+				Fragments._ThisExpression__Expression /* 3 */,
+				Fragments._ThisExpression__AbstractTypeQualifiedExpression /* 4 */,
+				Fragments._ThisExpression__ThisExpression /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __ThisExpression = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ThrowStatement =
-		{
-			Fragments._ThrowStatement__OclAny /* 0 */,
-			Fragments._ThrowStatement__OclElement /* 1 */,
-			Fragments._ThrowStatement__ASTNode /* 2 */,
-			Fragments._ThrowStatement__Statement /* 3 */,
-			Fragments._ThrowStatement__ThrowStatement /* 4 */
-		};
+			{
+				Fragments._ThrowStatement__OclAny /* 0 */,
+				Fragments._ThrowStatement__OclElement /* 1 */,
+				Fragments._ThrowStatement__ASTNode /* 2 */,
+				Fragments._ThrowStatement__Statement /* 3 */,
+				Fragments._ThrowStatement__ThrowStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __ThrowStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _TryStatement =
-		{
-			Fragments._TryStatement__OclAny /* 0 */,
-			Fragments._TryStatement__OclElement /* 1 */,
-			Fragments._TryStatement__ASTNode /* 2 */,
-			Fragments._TryStatement__Statement /* 3 */,
-			Fragments._TryStatement__TryStatement /* 4 */
-		};
+			{
+				Fragments._TryStatement__OclAny /* 0 */,
+				Fragments._TryStatement__OclElement /* 1 */,
+				Fragments._TryStatement__ASTNode /* 2 */,
+				Fragments._TryStatement__Statement /* 3 */,
+				Fragments._TryStatement__TryStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __TryStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Type =
-		{
-			Fragments._Type__OclAny /* 0 */,
-			Fragments._Type__OclElement /* 1 */,
-			Fragments._Type__ASTNode /* 2 */,
-			Fragments._Type__NamedElement /* 3 */,
-			Fragments._Type__Type /* 4 */
-		};
+			{
+				Fragments._Type__OclAny /* 0 */,
+				Fragments._Type__OclElement /* 1 */,
+				Fragments._Type__ASTNode /* 2 */,
+				Fragments._Type__NamedElement /* 3 */,
+				Fragments._Type__Type /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __Type = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _TypeAccess =
-		{
-			Fragments._TypeAccess__OclAny /* 0 */,
-			Fragments._TypeAccess__OclElement /* 1 */,
-			Fragments._TypeAccess__ASTNode /* 2 */,
-			Fragments._TypeAccess__Expression /* 3 */,
-			Fragments._TypeAccess__NamespaceAccess /* 3 */,
-			Fragments._TypeAccess__TypeAccess /* 4 */
-		};
+			{
+				Fragments._TypeAccess__OclAny /* 0 */,
+				Fragments._TypeAccess__OclElement /* 1 */,
+				Fragments._TypeAccess__ASTNode /* 2 */,
+				Fragments._TypeAccess__Expression /* 3 */,
+				Fragments._TypeAccess__NamespaceAccess /* 3 */,
+				Fragments._TypeAccess__TypeAccess /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __TypeAccess = { 1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _TypeDeclaration =
-		{
-			Fragments._TypeDeclaration__OclAny /* 0 */,
-			Fragments._TypeDeclaration__OclElement /* 1 */,
-			Fragments._TypeDeclaration__ASTNode /* 2 */,
-			Fragments._TypeDeclaration__NamedElement /* 3 */,
-			Fragments._TypeDeclaration__BodyDeclaration /* 4 */,
-			Fragments._TypeDeclaration__Type /* 4 */,
-			Fragments._TypeDeclaration__AbstractTypeDeclaration /* 5 */,
-			Fragments._TypeDeclaration__TypeDeclaration /* 6 */
-		};
+			{
+				Fragments._TypeDeclaration__OclAny /* 0 */,
+				Fragments._TypeDeclaration__OclElement /* 1 */,
+				Fragments._TypeDeclaration__ASTNode /* 2 */,
+				Fragments._TypeDeclaration__NamedElement /* 3 */,
+				Fragments._TypeDeclaration__BodyDeclaration /* 4 */,
+				Fragments._TypeDeclaration__Type /* 4 */,
+				Fragments._TypeDeclaration__AbstractTypeDeclaration /* 5 */,
+				Fragments._TypeDeclaration__TypeDeclaration /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __TypeDeclaration = { 1,1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _TypeDeclarationStatement =
-		{
-			Fragments._TypeDeclarationStatement__OclAny /* 0 */,
-			Fragments._TypeDeclarationStatement__OclElement /* 1 */,
-			Fragments._TypeDeclarationStatement__ASTNode /* 2 */,
-			Fragments._TypeDeclarationStatement__Statement /* 3 */,
-			Fragments._TypeDeclarationStatement__TypeDeclarationStatement /* 4 */
-		};
+			{
+				Fragments._TypeDeclarationStatement__OclAny /* 0 */,
+				Fragments._TypeDeclarationStatement__OclElement /* 1 */,
+				Fragments._TypeDeclarationStatement__ASTNode /* 2 */,
+				Fragments._TypeDeclarationStatement__Statement /* 3 */,
+				Fragments._TypeDeclarationStatement__TypeDeclarationStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __TypeDeclarationStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _TypeLiteral =
-		{
-			Fragments._TypeLiteral__OclAny /* 0 */,
-			Fragments._TypeLiteral__OclElement /* 1 */,
-			Fragments._TypeLiteral__ASTNode /* 2 */,
-			Fragments._TypeLiteral__Expression /* 3 */,
-			Fragments._TypeLiteral__TypeLiteral /* 4 */
-		};
+			{
+				Fragments._TypeLiteral__OclAny /* 0 */,
+				Fragments._TypeLiteral__OclElement /* 1 */,
+				Fragments._TypeLiteral__ASTNode /* 2 */,
+				Fragments._TypeLiteral__Expression /* 3 */,
+				Fragments._TypeLiteral__TypeLiteral /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __TypeLiteral = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _TypeParameter =
-		{
-			Fragments._TypeParameter__OclAny /* 0 */,
-			Fragments._TypeParameter__OclElement /* 1 */,
-			Fragments._TypeParameter__ASTNode /* 2 */,
-			Fragments._TypeParameter__NamedElement /* 3 */,
-			Fragments._TypeParameter__Type /* 4 */,
-			Fragments._TypeParameter__TypeParameter /* 5 */
-		};
+			{
+				Fragments._TypeParameter__OclAny /* 0 */,
+				Fragments._TypeParameter__OclElement /* 1 */,
+				Fragments._TypeParameter__ASTNode /* 2 */,
+				Fragments._TypeParameter__NamedElement /* 3 */,
+				Fragments._TypeParameter__Type /* 4 */,
+				Fragments._TypeParameter__TypeParameter /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __TypeParameter = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedAnnotationDeclaration =
-		{
-			Fragments._UnresolvedAnnotationDeclaration__OclAny /* 0 */,
-			Fragments._UnresolvedAnnotationDeclaration__OclElement /* 1 */,
-			Fragments._UnresolvedAnnotationDeclaration__ASTNode /* 2 */,
-			Fragments._UnresolvedAnnotationDeclaration__NamedElement /* 3 */,
-			Fragments._UnresolvedAnnotationDeclaration__BodyDeclaration /* 4 */,
-			Fragments._UnresolvedAnnotationDeclaration__Type /* 4 */,
-			Fragments._UnresolvedAnnotationDeclaration__UnresolvedItem /* 4 */,
-			Fragments._UnresolvedAnnotationDeclaration__AbstractTypeDeclaration /* 5 */,
-			Fragments._UnresolvedAnnotationDeclaration__AnnotationTypeDeclaration /* 6 */,
-			Fragments._UnresolvedAnnotationDeclaration__UnresolvedAnnotationDeclaration /* 7 */
-		};
+			{
+				Fragments._UnresolvedAnnotationDeclaration__OclAny /* 0 */,
+				Fragments._UnresolvedAnnotationDeclaration__OclElement /* 1 */,
+				Fragments._UnresolvedAnnotationDeclaration__ASTNode /* 2 */,
+				Fragments._UnresolvedAnnotationDeclaration__NamedElement /* 3 */,
+				Fragments._UnresolvedAnnotationDeclaration__BodyDeclaration /* 4 */,
+				Fragments._UnresolvedAnnotationDeclaration__Type /* 4 */,
+				Fragments._UnresolvedAnnotationDeclaration__UnresolvedItem /* 4 */,
+				Fragments._UnresolvedAnnotationDeclaration__AbstractTypeDeclaration /* 5 */,
+				Fragments._UnresolvedAnnotationDeclaration__AnnotationTypeDeclaration /* 6 */,
+				Fragments._UnresolvedAnnotationDeclaration__UnresolvedAnnotationDeclaration /* 7 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedAnnotationDeclaration = { 1,1,1,1,3,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedAnnotationTypeMemberDeclaration =
-		{
-			Fragments._UnresolvedAnnotationTypeMemberDeclaration__OclAny /* 0 */,
-			Fragments._UnresolvedAnnotationTypeMemberDeclaration__OclElement /* 1 */,
-			Fragments._UnresolvedAnnotationTypeMemberDeclaration__ASTNode /* 2 */,
-			Fragments._UnresolvedAnnotationTypeMemberDeclaration__NamedElement /* 3 */,
-			Fragments._UnresolvedAnnotationTypeMemberDeclaration__BodyDeclaration /* 4 */,
-			Fragments._UnresolvedAnnotationTypeMemberDeclaration__UnresolvedItem /* 4 */,
-			Fragments._UnresolvedAnnotationTypeMemberDeclaration__AnnotationTypeMemberDeclaration /* 5 */,
-			Fragments._UnresolvedAnnotationTypeMemberDeclaration__UnresolvedAnnotationTypeMemberDeclaration /* 6 */
-		};
+			{
+				Fragments._UnresolvedAnnotationTypeMemberDeclaration__OclAny /* 0 */,
+				Fragments._UnresolvedAnnotationTypeMemberDeclaration__OclElement /* 1 */,
+				Fragments._UnresolvedAnnotationTypeMemberDeclaration__ASTNode /* 2 */,
+				Fragments._UnresolvedAnnotationTypeMemberDeclaration__NamedElement /* 3 */,
+				Fragments._UnresolvedAnnotationTypeMemberDeclaration__BodyDeclaration /* 4 */,
+				Fragments._UnresolvedAnnotationTypeMemberDeclaration__UnresolvedItem /* 4 */,
+				Fragments._UnresolvedAnnotationTypeMemberDeclaration__AnnotationTypeMemberDeclaration /* 5 */,
+				Fragments._UnresolvedAnnotationTypeMemberDeclaration__UnresolvedAnnotationTypeMemberDeclaration /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedAnnotationTypeMemberDeclaration = { 1,1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedClassDeclaration =
-		{
-			Fragments._UnresolvedClassDeclaration__OclAny /* 0 */,
-			Fragments._UnresolvedClassDeclaration__OclElement /* 1 */,
-			Fragments._UnresolvedClassDeclaration__ASTNode /* 2 */,
-			Fragments._UnresolvedClassDeclaration__NamedElement /* 3 */,
-			Fragments._UnresolvedClassDeclaration__BodyDeclaration /* 4 */,
-			Fragments._UnresolvedClassDeclaration__Type /* 4 */,
-			Fragments._UnresolvedClassDeclaration__UnresolvedItem /* 4 */,
-			Fragments._UnresolvedClassDeclaration__AbstractTypeDeclaration /* 5 */,
-			Fragments._UnresolvedClassDeclaration__TypeDeclaration /* 6 */,
-			Fragments._UnresolvedClassDeclaration__ClassDeclaration /* 7 */,
-			Fragments._UnresolvedClassDeclaration__UnresolvedClassDeclaration /* 8 */
-		};
+			{
+				Fragments._UnresolvedClassDeclaration__OclAny /* 0 */,
+				Fragments._UnresolvedClassDeclaration__OclElement /* 1 */,
+				Fragments._UnresolvedClassDeclaration__ASTNode /* 2 */,
+				Fragments._UnresolvedClassDeclaration__NamedElement /* 3 */,
+				Fragments._UnresolvedClassDeclaration__BodyDeclaration /* 4 */,
+				Fragments._UnresolvedClassDeclaration__Type /* 4 */,
+				Fragments._UnresolvedClassDeclaration__UnresolvedItem /* 4 */,
+				Fragments._UnresolvedClassDeclaration__AbstractTypeDeclaration /* 5 */,
+				Fragments._UnresolvedClassDeclaration__TypeDeclaration /* 6 */,
+				Fragments._UnresolvedClassDeclaration__ClassDeclaration /* 7 */,
+				Fragments._UnresolvedClassDeclaration__UnresolvedClassDeclaration /* 8 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedClassDeclaration = { 1,1,1,1,3,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedEnumDeclaration =
-		{
-			Fragments._UnresolvedEnumDeclaration__OclAny /* 0 */,
-			Fragments._UnresolvedEnumDeclaration__OclElement /* 1 */,
-			Fragments._UnresolvedEnumDeclaration__ASTNode /* 2 */,
-			Fragments._UnresolvedEnumDeclaration__NamedElement /* 3 */,
-			Fragments._UnresolvedEnumDeclaration__BodyDeclaration /* 4 */,
-			Fragments._UnresolvedEnumDeclaration__Type /* 4 */,
-			Fragments._UnresolvedEnumDeclaration__UnresolvedItem /* 4 */,
-			Fragments._UnresolvedEnumDeclaration__AbstractTypeDeclaration /* 5 */,
-			Fragments._UnresolvedEnumDeclaration__EnumDeclaration /* 6 */,
-			Fragments._UnresolvedEnumDeclaration__UnresolvedEnumDeclaration /* 7 */
-		};
+			{
+				Fragments._UnresolvedEnumDeclaration__OclAny /* 0 */,
+				Fragments._UnresolvedEnumDeclaration__OclElement /* 1 */,
+				Fragments._UnresolvedEnumDeclaration__ASTNode /* 2 */,
+				Fragments._UnresolvedEnumDeclaration__NamedElement /* 3 */,
+				Fragments._UnresolvedEnumDeclaration__BodyDeclaration /* 4 */,
+				Fragments._UnresolvedEnumDeclaration__Type /* 4 */,
+				Fragments._UnresolvedEnumDeclaration__UnresolvedItem /* 4 */,
+				Fragments._UnresolvedEnumDeclaration__AbstractTypeDeclaration /* 5 */,
+				Fragments._UnresolvedEnumDeclaration__EnumDeclaration /* 6 */,
+				Fragments._UnresolvedEnumDeclaration__UnresolvedEnumDeclaration /* 7 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedEnumDeclaration = { 1,1,1,1,3,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedInterfaceDeclaration =
-		{
-			Fragments._UnresolvedInterfaceDeclaration__OclAny /* 0 */,
-			Fragments._UnresolvedInterfaceDeclaration__OclElement /* 1 */,
-			Fragments._UnresolvedInterfaceDeclaration__ASTNode /* 2 */,
-			Fragments._UnresolvedInterfaceDeclaration__NamedElement /* 3 */,
-			Fragments._UnresolvedInterfaceDeclaration__BodyDeclaration /* 4 */,
-			Fragments._UnresolvedInterfaceDeclaration__Type /* 4 */,
-			Fragments._UnresolvedInterfaceDeclaration__UnresolvedItem /* 4 */,
-			Fragments._UnresolvedInterfaceDeclaration__AbstractTypeDeclaration /* 5 */,
-			Fragments._UnresolvedInterfaceDeclaration__TypeDeclaration /* 6 */,
-			Fragments._UnresolvedInterfaceDeclaration__InterfaceDeclaration /* 7 */,
-			Fragments._UnresolvedInterfaceDeclaration__UnresolvedInterfaceDeclaration /* 8 */
-		};
+			{
+				Fragments._UnresolvedInterfaceDeclaration__OclAny /* 0 */,
+				Fragments._UnresolvedInterfaceDeclaration__OclElement /* 1 */,
+				Fragments._UnresolvedInterfaceDeclaration__ASTNode /* 2 */,
+				Fragments._UnresolvedInterfaceDeclaration__NamedElement /* 3 */,
+				Fragments._UnresolvedInterfaceDeclaration__BodyDeclaration /* 4 */,
+				Fragments._UnresolvedInterfaceDeclaration__Type /* 4 */,
+				Fragments._UnresolvedInterfaceDeclaration__UnresolvedItem /* 4 */,
+				Fragments._UnresolvedInterfaceDeclaration__AbstractTypeDeclaration /* 5 */,
+				Fragments._UnresolvedInterfaceDeclaration__TypeDeclaration /* 6 */,
+				Fragments._UnresolvedInterfaceDeclaration__InterfaceDeclaration /* 7 */,
+				Fragments._UnresolvedInterfaceDeclaration__UnresolvedInterfaceDeclaration /* 8 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedInterfaceDeclaration = { 1,1,1,1,3,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedItem =
-		{
-			Fragments._UnresolvedItem__OclAny /* 0 */,
-			Fragments._UnresolvedItem__OclElement /* 1 */,
-			Fragments._UnresolvedItem__ASTNode /* 2 */,
-			Fragments._UnresolvedItem__NamedElement /* 3 */,
-			Fragments._UnresolvedItem__UnresolvedItem /* 4 */
-		};
+			{
+				Fragments._UnresolvedItem__OclAny /* 0 */,
+				Fragments._UnresolvedItem__OclElement /* 1 */,
+				Fragments._UnresolvedItem__ASTNode /* 2 */,
+				Fragments._UnresolvedItem__NamedElement /* 3 */,
+				Fragments._UnresolvedItem__UnresolvedItem /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedItem = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedItemAccess =
-		{
-			Fragments._UnresolvedItemAccess__OclAny /* 0 */,
-			Fragments._UnresolvedItemAccess__OclElement /* 1 */,
-			Fragments._UnresolvedItemAccess__ASTNode /* 2 */,
-			Fragments._UnresolvedItemAccess__Expression /* 3 */,
-			Fragments._UnresolvedItemAccess__NamespaceAccess /* 3 */,
-			Fragments._UnresolvedItemAccess__UnresolvedItemAccess /* 4 */
-		};
+			{
+				Fragments._UnresolvedItemAccess__OclAny /* 0 */,
+				Fragments._UnresolvedItemAccess__OclElement /* 1 */,
+				Fragments._UnresolvedItemAccess__ASTNode /* 2 */,
+				Fragments._UnresolvedItemAccess__Expression /* 3 */,
+				Fragments._UnresolvedItemAccess__NamespaceAccess /* 3 */,
+				Fragments._UnresolvedItemAccess__UnresolvedItemAccess /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedItemAccess = { 1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedLabeledStatement =
-		{
-			Fragments._UnresolvedLabeledStatement__OclAny /* 0 */,
-			Fragments._UnresolvedLabeledStatement__OclElement /* 1 */,
-			Fragments._UnresolvedLabeledStatement__ASTNode /* 2 */,
-			Fragments._UnresolvedLabeledStatement__NamedElement /* 3 */,
-			Fragments._UnresolvedLabeledStatement__Statement /* 3 */,
-			Fragments._UnresolvedLabeledStatement__LabeledStatement /* 4 */,
-			Fragments._UnresolvedLabeledStatement__UnresolvedItem /* 4 */,
-			Fragments._UnresolvedLabeledStatement__UnresolvedLabeledStatement /* 5 */
-		};
+			{
+				Fragments._UnresolvedLabeledStatement__OclAny /* 0 */,
+				Fragments._UnresolvedLabeledStatement__OclElement /* 1 */,
+				Fragments._UnresolvedLabeledStatement__ASTNode /* 2 */,
+				Fragments._UnresolvedLabeledStatement__NamedElement /* 3 */,
+				Fragments._UnresolvedLabeledStatement__Statement /* 3 */,
+				Fragments._UnresolvedLabeledStatement__LabeledStatement /* 4 */,
+				Fragments._UnresolvedLabeledStatement__UnresolvedItem /* 4 */,
+				Fragments._UnresolvedLabeledStatement__UnresolvedLabeledStatement /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedLabeledStatement = { 1,1,1,2,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedMethodDeclaration =
-		{
-			Fragments._UnresolvedMethodDeclaration__OclAny /* 0 */,
-			Fragments._UnresolvedMethodDeclaration__OclElement /* 1 */,
-			Fragments._UnresolvedMethodDeclaration__ASTNode /* 2 */,
-			Fragments._UnresolvedMethodDeclaration__NamedElement /* 3 */,
-			Fragments._UnresolvedMethodDeclaration__BodyDeclaration /* 4 */,
-			Fragments._UnresolvedMethodDeclaration__UnresolvedItem /* 4 */,
-			Fragments._UnresolvedMethodDeclaration__AbstractMethodDeclaration /* 5 */,
-			Fragments._UnresolvedMethodDeclaration__MethodDeclaration /* 6 */,
-			Fragments._UnresolvedMethodDeclaration__UnresolvedMethodDeclaration /* 7 */
-		};
+			{
+				Fragments._UnresolvedMethodDeclaration__OclAny /* 0 */,
+				Fragments._UnresolvedMethodDeclaration__OclElement /* 1 */,
+				Fragments._UnresolvedMethodDeclaration__ASTNode /* 2 */,
+				Fragments._UnresolvedMethodDeclaration__NamedElement /* 3 */,
+				Fragments._UnresolvedMethodDeclaration__BodyDeclaration /* 4 */,
+				Fragments._UnresolvedMethodDeclaration__UnresolvedItem /* 4 */,
+				Fragments._UnresolvedMethodDeclaration__AbstractMethodDeclaration /* 5 */,
+				Fragments._UnresolvedMethodDeclaration__MethodDeclaration /* 6 */,
+				Fragments._UnresolvedMethodDeclaration__UnresolvedMethodDeclaration /* 7 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedMethodDeclaration = { 1,1,1,1,2,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedSingleVariableDeclaration =
-		{
-			Fragments._UnresolvedSingleVariableDeclaration__OclAny /* 0 */,
-			Fragments._UnresolvedSingleVariableDeclaration__OclElement /* 1 */,
-			Fragments._UnresolvedSingleVariableDeclaration__ASTNode /* 2 */,
-			Fragments._UnresolvedSingleVariableDeclaration__NamedElement /* 3 */,
-			Fragments._UnresolvedSingleVariableDeclaration__UnresolvedItem /* 4 */,
-			Fragments._UnresolvedSingleVariableDeclaration__VariableDeclaration /* 4 */,
-			Fragments._UnresolvedSingleVariableDeclaration__SingleVariableDeclaration /* 5 */,
-			Fragments._UnresolvedSingleVariableDeclaration__UnresolvedSingleVariableDeclaration /* 6 */
-		};
+			{
+				Fragments._UnresolvedSingleVariableDeclaration__OclAny /* 0 */,
+				Fragments._UnresolvedSingleVariableDeclaration__OclElement /* 1 */,
+				Fragments._UnresolvedSingleVariableDeclaration__ASTNode /* 2 */,
+				Fragments._UnresolvedSingleVariableDeclaration__NamedElement /* 3 */,
+				Fragments._UnresolvedSingleVariableDeclaration__UnresolvedItem /* 4 */,
+				Fragments._UnresolvedSingleVariableDeclaration__VariableDeclaration /* 4 */,
+				Fragments._UnresolvedSingleVariableDeclaration__SingleVariableDeclaration /* 5 */,
+				Fragments._UnresolvedSingleVariableDeclaration__UnresolvedSingleVariableDeclaration /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedSingleVariableDeclaration = { 1,1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedType =
-		{
-			Fragments._UnresolvedType__OclAny /* 0 */,
-			Fragments._UnresolvedType__OclElement /* 1 */,
-			Fragments._UnresolvedType__ASTNode /* 2 */,
-			Fragments._UnresolvedType__NamedElement /* 3 */,
-			Fragments._UnresolvedType__Type /* 4 */,
-			Fragments._UnresolvedType__UnresolvedItem /* 4 */,
-			Fragments._UnresolvedType__UnresolvedType /* 5 */
-		};
+			{
+				Fragments._UnresolvedType__OclAny /* 0 */,
+				Fragments._UnresolvedType__OclElement /* 1 */,
+				Fragments._UnresolvedType__ASTNode /* 2 */,
+				Fragments._UnresolvedType__NamedElement /* 3 */,
+				Fragments._UnresolvedType__Type /* 4 */,
+				Fragments._UnresolvedType__UnresolvedItem /* 4 */,
+				Fragments._UnresolvedType__UnresolvedType /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedType = { 1,1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedTypeDeclaration =
-		{
-			Fragments._UnresolvedTypeDeclaration__OclAny /* 0 */,
-			Fragments._UnresolvedTypeDeclaration__OclElement /* 1 */,
-			Fragments._UnresolvedTypeDeclaration__ASTNode /* 2 */,
-			Fragments._UnresolvedTypeDeclaration__NamedElement /* 3 */,
-			Fragments._UnresolvedTypeDeclaration__BodyDeclaration /* 4 */,
-			Fragments._UnresolvedTypeDeclaration__Type /* 4 */,
-			Fragments._UnresolvedTypeDeclaration__UnresolvedItem /* 4 */,
-			Fragments._UnresolvedTypeDeclaration__AbstractTypeDeclaration /* 5 */,
-			Fragments._UnresolvedTypeDeclaration__UnresolvedTypeDeclaration /* 6 */
-		};
+			{
+				Fragments._UnresolvedTypeDeclaration__OclAny /* 0 */,
+				Fragments._UnresolvedTypeDeclaration__OclElement /* 1 */,
+				Fragments._UnresolvedTypeDeclaration__ASTNode /* 2 */,
+				Fragments._UnresolvedTypeDeclaration__NamedElement /* 3 */,
+				Fragments._UnresolvedTypeDeclaration__BodyDeclaration /* 4 */,
+				Fragments._UnresolvedTypeDeclaration__Type /* 4 */,
+				Fragments._UnresolvedTypeDeclaration__UnresolvedItem /* 4 */,
+				Fragments._UnresolvedTypeDeclaration__AbstractTypeDeclaration /* 5 */,
+				Fragments._UnresolvedTypeDeclaration__UnresolvedTypeDeclaration /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedTypeDeclaration = { 1,1,1,1,3,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _UnresolvedVariableDeclarationFragment =
-		{
-			Fragments._UnresolvedVariableDeclarationFragment__OclAny /* 0 */,
-			Fragments._UnresolvedVariableDeclarationFragment__OclElement /* 1 */,
-			Fragments._UnresolvedVariableDeclarationFragment__ASTNode /* 2 */,
-			Fragments._UnresolvedVariableDeclarationFragment__NamedElement /* 3 */,
-			Fragments._UnresolvedVariableDeclarationFragment__UnresolvedItem /* 4 */,
-			Fragments._UnresolvedVariableDeclarationFragment__VariableDeclaration /* 4 */,
-			Fragments._UnresolvedVariableDeclarationFragment__VariableDeclarationFragment /* 5 */,
-			Fragments._UnresolvedVariableDeclarationFragment__UnresolvedVariableDeclarationFragment /* 6 */
-		};
+			{
+				Fragments._UnresolvedVariableDeclarationFragment__OclAny /* 0 */,
+				Fragments._UnresolvedVariableDeclarationFragment__OclElement /* 1 */,
+				Fragments._UnresolvedVariableDeclarationFragment__ASTNode /* 2 */,
+				Fragments._UnresolvedVariableDeclarationFragment__NamedElement /* 3 */,
+				Fragments._UnresolvedVariableDeclarationFragment__UnresolvedItem /* 4 */,
+				Fragments._UnresolvedVariableDeclarationFragment__VariableDeclaration /* 4 */,
+				Fragments._UnresolvedVariableDeclarationFragment__VariableDeclarationFragment /* 5 */,
+				Fragments._UnresolvedVariableDeclarationFragment__UnresolvedVariableDeclarationFragment /* 6 */
+			};
 		private static final int /*@NonNull*/ [] __UnresolvedVariableDeclarationFragment = { 1,1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _VariableDeclaration =
-		{
-			Fragments._VariableDeclaration__OclAny /* 0 */,
-			Fragments._VariableDeclaration__OclElement /* 1 */,
-			Fragments._VariableDeclaration__ASTNode /* 2 */,
-			Fragments._VariableDeclaration__NamedElement /* 3 */,
-			Fragments._VariableDeclaration__VariableDeclaration /* 4 */
-		};
+			{
+				Fragments._VariableDeclaration__OclAny /* 0 */,
+				Fragments._VariableDeclaration__OclElement /* 1 */,
+				Fragments._VariableDeclaration__ASTNode /* 2 */,
+				Fragments._VariableDeclaration__NamedElement /* 3 */,
+				Fragments._VariableDeclaration__VariableDeclaration /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __VariableDeclaration = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _VariableDeclarationExpression =
-		{
-			Fragments._VariableDeclarationExpression__OclAny /* 0 */,
-			Fragments._VariableDeclarationExpression__OclElement /* 1 */,
-			Fragments._VariableDeclarationExpression__ASTNode /* 2 */,
-			Fragments._VariableDeclarationExpression__AbstractVariablesContainer /* 3 */,
-			Fragments._VariableDeclarationExpression__Expression /* 3 */,
-			Fragments._VariableDeclarationExpression__VariableDeclarationExpression /* 4 */
-		};
+			{
+				Fragments._VariableDeclarationExpression__OclAny /* 0 */,
+				Fragments._VariableDeclarationExpression__OclElement /* 1 */,
+				Fragments._VariableDeclarationExpression__ASTNode /* 2 */,
+				Fragments._VariableDeclarationExpression__AbstractVariablesContainer /* 3 */,
+				Fragments._VariableDeclarationExpression__Expression /* 3 */,
+				Fragments._VariableDeclarationExpression__VariableDeclarationExpression /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __VariableDeclarationExpression = { 1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _VariableDeclarationFragment =
-		{
-			Fragments._VariableDeclarationFragment__OclAny /* 0 */,
-			Fragments._VariableDeclarationFragment__OclElement /* 1 */,
-			Fragments._VariableDeclarationFragment__ASTNode /* 2 */,
-			Fragments._VariableDeclarationFragment__NamedElement /* 3 */,
-			Fragments._VariableDeclarationFragment__VariableDeclaration /* 4 */,
-			Fragments._VariableDeclarationFragment__VariableDeclarationFragment /* 5 */
-		};
+			{
+				Fragments._VariableDeclarationFragment__OclAny /* 0 */,
+				Fragments._VariableDeclarationFragment__OclElement /* 1 */,
+				Fragments._VariableDeclarationFragment__ASTNode /* 2 */,
+				Fragments._VariableDeclarationFragment__NamedElement /* 3 */,
+				Fragments._VariableDeclarationFragment__VariableDeclaration /* 4 */,
+				Fragments._VariableDeclarationFragment__VariableDeclarationFragment /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __VariableDeclarationFragment = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _VariableDeclarationStatement =
-		{
-			Fragments._VariableDeclarationStatement__OclAny /* 0 */,
-			Fragments._VariableDeclarationStatement__OclElement /* 1 */,
-			Fragments._VariableDeclarationStatement__ASTNode /* 2 */,
-			Fragments._VariableDeclarationStatement__AbstractVariablesContainer /* 3 */,
-			Fragments._VariableDeclarationStatement__Statement /* 3 */,
-			Fragments._VariableDeclarationStatement__VariableDeclarationStatement /* 4 */
-		};
+			{
+				Fragments._VariableDeclarationStatement__OclAny /* 0 */,
+				Fragments._VariableDeclarationStatement__OclElement /* 1 */,
+				Fragments._VariableDeclarationStatement__ASTNode /* 2 */,
+				Fragments._VariableDeclarationStatement__AbstractVariablesContainer /* 3 */,
+				Fragments._VariableDeclarationStatement__Statement /* 3 */,
+				Fragments._VariableDeclarationStatement__VariableDeclarationStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __VariableDeclarationStatement = { 1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _VisibilityKind =
-		{
-			Fragments._VisibilityKind__OclAny /* 0 */,
-			Fragments._VisibilityKind__OclElement /* 1 */,
-			Fragments._VisibilityKind__OclType /* 2 */,
-			Fragments._VisibilityKind__OclEnumeration /* 3 */,
-			Fragments._VisibilityKind__VisibilityKind /* 4 */
-		};
+			{
+				Fragments._VisibilityKind__OclAny /* 0 */,
+				Fragments._VisibilityKind__OclElement /* 1 */,
+				Fragments._VisibilityKind__OclType /* 2 */,
+				Fragments._VisibilityKind__OclEnumeration /* 3 */,
+				Fragments._VisibilityKind__VisibilityKind /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __VisibilityKind = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _WhileStatement =
-		{
-			Fragments._WhileStatement__OclAny /* 0 */,
-			Fragments._WhileStatement__OclElement /* 1 */,
-			Fragments._WhileStatement__ASTNode /* 2 */,
-			Fragments._WhileStatement__Statement /* 3 */,
-			Fragments._WhileStatement__WhileStatement /* 4 */
-		};
+			{
+				Fragments._WhileStatement__OclAny /* 0 */,
+				Fragments._WhileStatement__OclElement /* 1 */,
+				Fragments._WhileStatement__ASTNode /* 2 */,
+				Fragments._WhileStatement__Statement /* 3 */,
+				Fragments._WhileStatement__WhileStatement /* 4 */
+			};
 		private static final int /*@NonNull*/ [] __WhileStatement = { 1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _WildCardType =
-		{
-			Fragments._WildCardType__OclAny /* 0 */,
-			Fragments._WildCardType__OclElement /* 1 */,
-			Fragments._WildCardType__ASTNode /* 2 */,
-			Fragments._WildCardType__NamedElement /* 3 */,
-			Fragments._WildCardType__Type /* 4 */,
-			Fragments._WildCardType__WildCardType /* 5 */
-		};
+			{
+				Fragments._WildCardType__OclAny /* 0 */,
+				Fragments._WildCardType__OclElement /* 1 */,
+				Fragments._WildCardType__ASTNode /* 2 */,
+				Fragments._WildCardType__NamedElement /* 3 */,
+				Fragments._WildCardType__Type /* 4 */,
+				Fragments._WildCardType__WildCardType /* 5 */
+			};
 		private static final int /*@NonNull*/ [] __WildCardType = { 1,1,1,1,1,1 };
 
 		/**
@@ -3445,6 +3454,7 @@ public class Java_Tables
 			Types._PrimitiveTypeLong.initFragments(_PrimitiveTypeLong, __PrimitiveTypeLong);
 			Types._PrimitiveTypeShort.initFragments(_PrimitiveTypeShort, __PrimitiveTypeShort);
 			Types._PrimitiveTypeVoid.initFragments(_PrimitiveTypeVoid, __PrimitiveTypeVoid);
+			Types._QueryCollection.initFragments(_QueryCollection, __QueryCollection);
 			Types._ReturnStatement.initFragments(_ReturnStatement, __ReturnStatement);
 			Types._SingleVariableAccess.initFragments(_SingleVariableAccess, __SingleVariableAccess);
 			Types._SingleVariableDeclaration.initFragments(_SingleVariableDeclaration, __SingleVariableDeclaration);
@@ -3457,7 +3467,6 @@ public class Java_Tables
 			Types._SwitchStatement.initFragments(_SwitchStatement, __SwitchStatement);
 			Types._SynchronizedStatement.initFragments(_SynchronizedStatement, __SynchronizedStatement);
 			Types._TagElement.initFragments(_TagElement, __TagElement);
-			Types._Test.initFragments(_Test, __Test);
 			Types._TextElement.initFragments(_TextElement, __TextElement);
 			Types._ThisExpression.initFragments(_ThisExpression, __ThisExpression);
 			Types._ThrowStatement.initFragments(_ThrowStatement, __ThrowStatement);
@@ -6257,6 +6266,40 @@ public class Java_Tables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PrimitiveTypeVoid__PrimitiveType = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PrimitiveTypeVoid__Type = {};
 
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _QueryCollection__QueryCollection = {
+			Java_Tables.Operations._QueryCollection__emptyTextElementInJavadoc /* emptyTextElementInJavadoc(Model[?]) */,
+			Java_Tables.Operations._QueryCollection__grabats09 /* grabats09() */,
+			Java_Tables.Operations._QueryCollection__invisibleMethods /* invisibleMethods() */,
+			Java_Tables.Operations._QueryCollection__textElementInJavadoc /* textElementInJavadoc(Model[?]) */,
+			Java_Tables.Operations._QueryCollection__thrownExceptions /* thrownExceptions() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _QueryCollection__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _QueryCollection__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ReturnStatement__ReturnStatement = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ReturnStatement__ASTNode = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ReturnStatement__OclAny = {
@@ -6611,36 +6654,6 @@ public class Java_Tables
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TagElement__OclElement = {
-			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
-			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
-			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
-			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
-			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
-			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
-		};
-
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Test__Test = {
-			Java_Tables.Operations._Test__thrownExceptions2 /* thrownExceptions2() */
-		};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Test__OclAny = {
-			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
-			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
-			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
-			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
-			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
-			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
-			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
-			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
-			OCLstdlibTables.Operations._OclAny__toString /* toString() */
-		};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Test__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
 			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
@@ -8182,6 +8195,10 @@ public class Java_Tables
 			Fragments._PrimitiveTypeVoid__PrimitiveTypeVoid.initOperations(_PrimitiveTypeVoid__PrimitiveTypeVoid);
 			Fragments._PrimitiveTypeVoid__Type.initOperations(_PrimitiveTypeVoid__Type);
 
+			Fragments._QueryCollection__OclAny.initOperations(_QueryCollection__OclAny);
+			Fragments._QueryCollection__OclElement.initOperations(_QueryCollection__OclElement);
+			Fragments._QueryCollection__QueryCollection.initOperations(_QueryCollection__QueryCollection);
+
 			Fragments._ReturnStatement__ASTNode.initOperations(_ReturnStatement__ASTNode);
 			Fragments._ReturnStatement__OclAny.initOperations(_ReturnStatement__OclAny);
 			Fragments._ReturnStatement__OclElement.initOperations(_ReturnStatement__OclElement);
@@ -8256,10 +8273,6 @@ public class Java_Tables
 			Fragments._TagElement__OclAny.initOperations(_TagElement__OclAny);
 			Fragments._TagElement__OclElement.initOperations(_TagElement__OclElement);
 			Fragments._TagElement__TagElement.initOperations(_TagElement__TagElement);
-
-			Fragments._Test__OclAny.initOperations(_Test__OclAny);
-			Fragments._Test__OclElement.initOperations(_Test__OclElement);
-			Fragments._Test__Test.initOperations(_Test__Test);
 
 			Fragments._TextElement__ASTNode.initOperations(_TextElement__ASTNode);
 			Fragments._TextElement__OclAny.initOperations(_TextElement__OclAny);
@@ -9398,6 +9411,8 @@ public class Java_Tables
 			Java_Tables.Properties._Type__usagesInTypeAccess
 		};
 
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _QueryCollection = {};
+
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _ReturnStatement = {
 			Java_Tables.Properties._ASTNode__comments,
 			Java_Tables.Properties._ReturnStatement__expression,
@@ -9503,10 +9518,6 @@ public class Java_Tables
 			Java_Tables.Properties._ASTNode__originalClassFile,
 			Java_Tables.Properties._ASTNode__originalCompilationUnit,
 			Java_Tables.Properties._TagElement__tagName
-		};
-
-		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Test = {
-			Java_Tables.Properties._Test__thrownExceptions
 		};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _TextElement = {
@@ -9973,6 +9984,7 @@ public class Java_Tables
 			Fragments._PrimitiveTypeLong__PrimitiveTypeLong.initProperties(_PrimitiveTypeLong);
 			Fragments._PrimitiveTypeShort__PrimitiveTypeShort.initProperties(_PrimitiveTypeShort);
 			Fragments._PrimitiveTypeVoid__PrimitiveTypeVoid.initProperties(_PrimitiveTypeVoid);
+			Fragments._QueryCollection__QueryCollection.initProperties(_QueryCollection);
 			Fragments._ReturnStatement__ReturnStatement.initProperties(_ReturnStatement);
 			Fragments._SingleVariableAccess__SingleVariableAccess.initProperties(_SingleVariableAccess);
 			Fragments._SingleVariableDeclaration__SingleVariableDeclaration.initProperties(_SingleVariableDeclaration);
@@ -9985,7 +9997,6 @@ public class Java_Tables
 			Fragments._SwitchStatement__SwitchStatement.initProperties(_SwitchStatement);
 			Fragments._SynchronizedStatement__SynchronizedStatement.initProperties(_SynchronizedStatement);
 			Fragments._TagElement__TagElement.initProperties(_TagElement);
-			Fragments._Test__Test.initProperties(_Test);
 			Fragments._TextElement__TextElement.initProperties(_TextElement);
 			Fragments._ThisExpression__ThisExpression.initProperties(_ThisExpression);
 			Fragments._ThrowStatement__ThrowStatement.initProperties(_ThrowStatement);

@@ -152,7 +152,7 @@ public class NumberLiteralImpl extends ExpressionImpl implements NumberLiteral {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (tokenValue: ");
 		result.append(tokenValue);
 		result.append(')');

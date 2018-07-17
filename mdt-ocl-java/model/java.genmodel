@@ -493,9 +493,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//WhileStatement/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//WhileStatement/body"/>
     </genClasses>
-    <genClasses ecoreClass="java.ecore#//Test">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//Test/thrownExceptions"/>
-      <genOperations ecoreOperation="java.ecore#//Test/thrownExceptions2"/>
+    <genClasses ecoreClass="java.ecore#//QueryCollection">
+      <genOperations ecoreOperation="java.ecore#//QueryCollection/thrownExceptions"/>
+      <genOperations ecoreOperation="java.ecore#//QueryCollection/grabats09"/>
+      <genOperations ecoreOperation="java.ecore#//QueryCollection/invisibleMethods"/>
+      <genOperations ecoreOperation="java.ecore#//QueryCollection/textElementInJavadoc">
+        <genParameters ecoreParameter="java.ecore#//QueryCollection/textElementInJavadoc/self_"/>
+      </genOperations>
+      <genOperations ecoreOperation="java.ecore#//QueryCollection/emptyTextElementInJavadoc">
+        <genParameters ecoreParameter="java.ecore#//QueryCollection/emptyTextElementInJavadoc/self_"/>
+      </genOperations>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

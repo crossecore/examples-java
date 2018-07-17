@@ -342,7 +342,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements Compilation
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (originalFilePath: ");
 		result.append(originalFilePath);
 		result.append(')');

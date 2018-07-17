@@ -2,141 +2,7 @@
  */
 package java_.impl;
 
-import java_.ASTNode;
-import java_.AbstractMethodDeclaration;
-import java_.AbstractMethodInvocation;
-import java_.AbstractTypeDeclaration;
-import java_.AbstractTypeQualifiedExpression;
-import java_.AbstractVariablesContainer;
-import java_.Annotation;
-import java_.AnnotationMemberValuePair;
-import java_.AnnotationTypeDeclaration;
-import java_.AnnotationTypeMemberDeclaration;
-import java_.AnonymousClassDeclaration;
-import java_.Archive;
-import java_.ArrayAccess;
-import java_.ArrayCreation;
-import java_.ArrayInitializer;
-import java_.ArrayLengthAccess;
-import java_.ArrayType;
-import java_.AssertStatement;
-import java_.Assignment;
-import java_.AssignmentKind;
-import java_.Block;
-import java_.BlockComment;
-import java_.BodyDeclaration;
-import java_.BooleanLiteral;
-import java_.BreakStatement;
-import java_.CastExpression;
-import java_.CatchClause;
-import java_.CharacterLiteral;
-import java_.ClassDeclaration;
-import java_.ClassFile;
-import java_.ClassInstanceCreation;
-import java_.Comment;
-import java_.CompilationUnit;
-import java_.ConditionalExpression;
-import java_.ConstructorDeclaration;
-import java_.ConstructorInvocation;
-import java_.ContinueStatement;
-import java_.DoStatement;
-import java_.EmptyStatement;
-import java_.EnhancedForStatement;
-import java_.EnumConstantDeclaration;
-import java_.EnumDeclaration;
-import java_.Expression;
-import java_.ExpressionStatement;
-import java_.FieldAccess;
-import java_.FieldDeclaration;
-import java_.ForStatement;
-import java_.IfStatement;
-import java_.ImportDeclaration;
-import java_.InfixExpression;
-import java_.InfixExpressionKind;
-import java_.InheritanceKind;
-import java_.Initializer;
-import java_.InstanceofExpression;
-import java_.InterfaceDeclaration;
-import java_.Java_Factory;
-import java_.Java_Package;
-
-import java_.Javadoc;
-import java_.LabeledStatement;
-import java_.LineComment;
-import java_.Manifest;
-import java_.ManifestAttribute;
-import java_.ManifestEntry;
-import java_.MemberRef;
-import java_.MethodDeclaration;
-import java_.MethodInvocation;
-import java_.MethodRef;
-import java_.MethodRefParameter;
-import java_.Model;
-import java_.Modifier;
-import java_.NamedElement;
-import java_.NamespaceAccess;
-import java_.NullLiteral;
-import java_.NumberLiteral;
-import java_.PackageAccess;
-import java_.ParameterizedType;
-import java_.ParenthesizedExpression;
-import java_.PostfixExpression;
-import java_.PostfixExpressionKind;
-import java_.PrefixExpression;
-import java_.PrefixExpressionKind;
-import java_.PrimitiveType;
-import java_.PrimitiveTypeBoolean;
-import java_.PrimitiveTypeByte;
-import java_.PrimitiveTypeChar;
-import java_.PrimitiveTypeDouble;
-import java_.PrimitiveTypeFloat;
-import java_.PrimitiveTypeInt;
-import java_.PrimitiveTypeLong;
-import java_.PrimitiveTypeShort;
-import java_.PrimitiveTypeVoid;
-import java_.ReturnStatement;
-import java_.SingleVariableAccess;
-import java_.SingleVariableDeclaration;
-import java_.Statement;
-import java_.StringLiteral;
-import java_.SuperConstructorInvocation;
-import java_.SuperFieldAccess;
-import java_.SuperMethodInvocation;
-import java_.SwitchCase;
-import java_.SwitchStatement;
-import java_.SynchronizedStatement;
-import java_.TagElement;
-import java_.Test;
-import java_.TextElement;
-import java_.ThisExpression;
-import java_.ThrowStatement;
-import java_.TryStatement;
-import java_.Type;
-import java_.TypeAccess;
-import java_.TypeDeclaration;
-import java_.TypeDeclarationStatement;
-import java_.TypeLiteral;
-import java_.TypeParameter;
-import java_.UnresolvedAnnotationDeclaration;
-import java_.UnresolvedAnnotationTypeMemberDeclaration;
-import java_.UnresolvedClassDeclaration;
-import java_.UnresolvedEnumDeclaration;
-import java_.UnresolvedInterfaceDeclaration;
-import java_.UnresolvedItem;
-import java_.UnresolvedItemAccess;
-import java_.UnresolvedLabeledStatement;
-import java_.UnresolvedMethodDeclaration;
-import java_.UnresolvedSingleVariableDeclaration;
-import java_.UnresolvedType;
-import java_.UnresolvedTypeDeclaration;
-import java_.UnresolvedVariableDeclarationFragment;
-import java_.VariableDeclaration;
-import java_.VariableDeclarationExpression;
-import java_.VariableDeclarationFragment;
-import java_.VariableDeclarationStatement;
-import java_.VisibilityKind;
-import java_.WhileStatement;
-import java_.WildCardType;
+import java_.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -1040,7 +906,7 @@ public class Java_PackageImpl extends EPackageImpl implements Java_Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass testEClass = null;
+	private EClass queryCollectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1112,7 +978,7 @@ public class Java_PackageImpl extends EPackageImpl implements Java_Package {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link Java_Package#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -1126,7 +992,8 @@ public class Java_PackageImpl extends EPackageImpl implements Java_Package {
 		if (isInited) return (Java_Package)EPackage.Registry.INSTANCE.getEPackage(Java_Package.eNS_URI);
 
 		// Obtain or create and register package
-		Java_PackageImpl theJava_Package = (Java_PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Java_PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Java_PackageImpl());
+		Object registeredJava_Package = EPackage.Registry.INSTANCE.get(eNS_URI);
+		Java_PackageImpl theJava_Package = registeredJava_Package instanceof Java_PackageImpl ? (Java_PackageImpl)registeredJava_Package : new Java_PackageImpl();
 
 		isInited = true;
 
@@ -1139,7 +1006,6 @@ public class Java_PackageImpl extends EPackageImpl implements Java_Package {
 		// Mark meta-data to indicate it can't be changed
 		theJava_Package.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(Java_Package.eNS_URI, theJava_Package);
 		return theJava_Package;
@@ -4201,8 +4067,8 @@ public class Java_PackageImpl extends EPackageImpl implements Java_Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTest() {
-		return testEClass;
+	public EClass getQueryCollection() {
+		return queryCollectionEClass;
 	}
 
 	/**
@@ -4210,8 +4076,8 @@ public class Java_PackageImpl extends EPackageImpl implements Java_Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTest_ThrownExceptions() {
-		return (EReference)testEClass.getEStructuralFeatures().get(0);
+	public EOperation getQueryCollection__ThrownExceptions() {
+		return queryCollectionEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -4219,8 +4085,35 @@ public class Java_PackageImpl extends EPackageImpl implements Java_Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTest__ThrownExceptions2() {
-		return testEClass.getEOperations().get(0);
+	public EOperation getQueryCollection__Grabats09() {
+		return queryCollectionEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getQueryCollection__InvisibleMethods() {
+		return queryCollectionEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getQueryCollection__TextElementInJavadoc__Model() {
+		return queryCollectionEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getQueryCollection__EmptyTextElementInJavadoc__Model() {
+		return queryCollectionEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -4770,9 +4663,12 @@ public class Java_PackageImpl extends EPackageImpl implements Java_Package {
 		createEReference(whileStatementEClass, WHILE_STATEMENT__EXPRESSION);
 		createEReference(whileStatementEClass, WHILE_STATEMENT__BODY);
 
-		testEClass = createEClass(TEST);
-		createEReference(testEClass, TEST__THROWN_EXCEPTIONS);
-		createEOperation(testEClass, TEST___THROWN_EXCEPTIONS2);
+		queryCollectionEClass = createEClass(QUERY_COLLECTION);
+		createEOperation(queryCollectionEClass, QUERY_COLLECTION___THROWN_EXCEPTIONS);
+		createEOperation(queryCollectionEClass, QUERY_COLLECTION___GRABATS09);
+		createEOperation(queryCollectionEClass, QUERY_COLLECTION___INVISIBLE_METHODS);
+		createEOperation(queryCollectionEClass, QUERY_COLLECTION___TEXT_ELEMENT_IN_JAVADOC__MODEL);
+		createEOperation(queryCollectionEClass, QUERY_COLLECTION___EMPTY_TEXT_ELEMENT_IN_JAVADOC__MODEL);
 
 		// Create enums
 		assignmentKindEEnum = createEEnum(ASSIGNMENT_KIND);
@@ -5423,10 +5319,19 @@ public class Java_PackageImpl extends EPackageImpl implements Java_Package {
 		initEReference(getWhileStatement_Expression(), this.getExpression(), null, "expression", null, 1, 1, WhileStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getWhileStatement_Body(), this.getStatement(), null, "body", null, 1, 1, WhileStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(testEClass, Test.class, "Test", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTest_ThrownExceptions(), this.getTypeAccess(), null, "thrownExceptions", null, 0, -1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEClass(queryCollectionEClass, QueryCollection.class, "QueryCollection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getTest__ThrownExceptions2(), this.getBodyDeclaration(), "thrownExceptions2", 0, -1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getQueryCollection__ThrownExceptions(), this.getBodyDeclaration(), "thrownExceptions", 0, -1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getQueryCollection__Grabats09(), this.getTypeDeclaration(), "grabats09", 0, -1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getQueryCollection__InvisibleMethods(), this.getBodyDeclaration(), "invisibleMethods", 0, -1, !IS_UNIQUE, IS_ORDERED);
+
+		EOperation op = initEOperation(getQueryCollection__TextElementInJavadoc__Model(), this.getASTNode(), "textElementInJavadoc", 0, -1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getModel(), "self_", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getQueryCollection__EmptyTextElementInJavadoc__Model(), this.getASTNode(), "emptyTextElementInJavadoc", 0, -1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getModel(), "self_", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(assignmentKindEEnum, AssignmentKind.class, "AssignmentKind");
@@ -5504,12 +5409,12 @@ public class Java_PackageImpl extends EPackageImpl implements Java_Package {
 	 * @generated
 	 */
 	protected void createImportAnnotations() {
-		String source = "Import";	
+		String source = "Import";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "ecore", "http://www.eclipse.org/emf/2002/Ecore"
+			   "ecore", "http://www.eclipse.org/emf/2002/Ecore"
 		   });
 	}
 
@@ -5520,10 +5425,10 @@ public class Java_PackageImpl extends EPackageImpl implements Java_Package {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
 		   });
 	}
