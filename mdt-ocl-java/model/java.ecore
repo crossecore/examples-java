@@ -718,17 +718,33 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" ordered="false" lowerBound="1"
         eType="#//Statement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Test">
-    <eOperations name="thrownExceptions2" unique="false" upperBound="-1" eType="#//BodyDeclaration">
+  <eClassifiers xsi:type="ecore:EClass" name="QueryCollection">
+    <eOperations name="thrownExceptions" unique="false" upperBound="-1" eType="#//BodyDeclaration">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="body" value="ClassDeclaration.allInstances()->collect(bodyDeclarations)->select(each | each.oclIsTypeOf(MethodDeclaration))->select(each | (not each.modifier.oclIsUndefined()) and (not each.modifier.visibility.oclIsUndefined()) and (each.modifier.visibility = VisibilityKind::private or each.modifier.visibility = VisibilityKind::protected))->asSequence()"/>
       </eAnnotations>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="thrownExceptions" unique="false"
-        upperBound="-1" eType="#//TypeAccess" derived="true">
+    <eOperations name="grabats09" unique="false" upperBound="-1" eType="#//TypeDeclaration">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="derivation" value="Sequence{}"/>
+        <details key="body" value="TypeDeclaration.allInstances()->&#xD;&#xA; select(each | each.bodyDeclarations->&#xD;&#xA; exists(bd | bd.oclIsTypeOf(MethodDeclaration)&#xD;&#xA; and (not bd.modifier.oclIsUndefined()) and bd.modifier._static&#xD;&#xA; and (not bd.oclAsType(MethodDeclaration).returnType.oclIsUndefined())&#xD;&#xA; and bd.oclAsType(MethodDeclaration).returnType.type = each))->&#xD;&#xA; asSequence()"/>
       </eAnnotations>
-    </eStructuralFeatures>
+    </eOperations>
+    <eOperations name="invisibleMethods" unique="false" upperBound="-1" eType="#//MethodDeclaration">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="ClassDeclaration.allInstances()->&#xD;&#xA; collect(bodyDeclarations)->&#xD;&#xA; select(each | each.oclIsTypeOf(MethodDeclaration))->&#xD;&#xA; select(each | (not each.modifier.oclIsUndefined())&#xD;&#xA; and (not each.modifier.visibility.oclIsUndefined())&#xD;&#xA; and (each.modifier.visibility = VisibilityKind::private&#xD;&#xA; or each.modifier.visibility = VisibilityKind::protected))->&#xD;&#xA; asSequence()"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="textElementInJavadoc" unique="false" eType="#//TextElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="self.compilationUnits.commentList->&#xD;&#xA; select(each | each.oclIsTypeOf(Javadoc))->&#xD;&#xA; collect(o | o.oclAsType(Javadoc).tags).fragments->&#xD;&#xA; select(each | each.oclIsTypeOf(TextElement))->&#xD;&#xA; asSequence()"/>
+      </eAnnotations>
+      <eParameters name="self" eType="#//Model"/>
+    </eOperations>
+    <eOperations name="emptyTextElementInJavadoc" unique="false" upperBound="-1" eType="#//ASTNode">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="self.compilationUnits.commentList->select(each | each.oclIsTypeOf(Javadoc))->collect(o | o.oclAsType(Javadoc).tags).fragments->select(each | each.oclIsTypeOf(TextElement))->select(each | each.oclAsType(TextElement).text.size()= 0)->asSequence()"/>
+      </eAnnotations>
+      <eParameters name="self" eType="#//Model"/>
+    </eOperations>
   </eClassifiers>
 </ecore:EPackage>
