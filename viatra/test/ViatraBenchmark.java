@@ -13,6 +13,7 @@ import org.eclipse.viatra.query.runtime.base.api.BaseIndexOptions;
 import org.eclipse.viatra.query.runtime.emf.EMFScope;
 import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java_.Model;
@@ -30,12 +31,12 @@ import viatra.ThrownExceptionsMatcher;
 
 public class ViatraBenchmark {
 
-	private Model model;
+	private static Model model;
 	
-	protected ViatraQueryEngine engine = null;
+	protected static ViatraQueryEngine engine = null;
 	
-	@Before
-	public void setUp() throws Exception {
+	@BeforeClass
+	public static void setUp() throws Exception {
 		
 		Java_PackageImpl.init();
 		
@@ -53,7 +54,8 @@ public class ViatraBenchmark {
         
         resSet.getPackageRegistry().put("java_", Java_PackageImpl.eINSTANCE);
         
-        Resource resource = resSet.getResource(URI.createURI("model/org.eclipse.gmt.modisco.java.kyanos.xmi"), true);
+        //Resource resource = resSet.getResource(URI.createURI("model/org.eclipse.gmt.modisco.java.kyanos.xmi"), true);
+        Resource resource = resSet.getResource(URI.createURI("model/org.eclipse.jdt.core.xmi"), true);
         	
         BaseIndexOptions options = new BaseIndexOptions().withDanglingFreeAssumption(false);
         EMFScope scope = new EMFScope(resSet, options);

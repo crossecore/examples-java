@@ -14,8 +14,7 @@ pattern invisibleMethods(Met) {
 }
  
 pattern thrownExceptions(Ex) {
-	Package(Pack); 
-	Package.ownedElements(Pack,Owned);
+
 	ClassDeclaration(Owned);
 	ClassDeclaration.bodyDeclarations(Owned,Body);
 	MethodDeclaration(Body);

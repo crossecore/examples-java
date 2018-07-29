@@ -131,36 +131,27 @@ public final class ThrownExceptionsQuerySpecification extends BaseGeneratedEMFQu
           {
               PBody body = new PBody(this);
               PVariable var_Ex = body.getOrCreateVariableByName("Ex");
-              PVariable var_Pack = body.getOrCreateVariableByName("Pack");
               PVariable var_Owned = body.getOrCreateVariableByName("Owned");
               PVariable var_Body = body.getOrCreateVariableByName("Body");
               body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
                  new ExportedParameter(body, var_Ex, parameter_pEx)
               ));
-              // 	Package(Pack)
-              new TypeConstraint(body, new FlatTuple(var_Pack), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "Package")));
-              //  	Package.ownedElements(Pack,Owned)
-              new TypeConstraint(body, new FlatTuple(var_Pack), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "Package")));
-              PVariable var__virtual_0_ = body.getOrCreateVariableByName(".virtual{0}");
-              new TypeConstraint(body, new FlatTuple(var_Pack, var__virtual_0_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "Package", "ownedElements")));
-              new TypeConstraint(body, new FlatTuple(var__virtual_0_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "AbstractTypeDeclaration")));
-              new Equality(body, var__virtual_0_, var_Owned);
               // 	ClassDeclaration(Owned)
               new TypeConstraint(body, new FlatTuple(var_Owned), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "ClassDeclaration")));
               // 	ClassDeclaration.bodyDeclarations(Owned,Body)
               new TypeConstraint(body, new FlatTuple(var_Owned), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "ClassDeclaration")));
-              PVariable var__virtual_1_ = body.getOrCreateVariableByName(".virtual{1}");
-              new TypeConstraint(body, new FlatTuple(var_Owned, var__virtual_1_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "AbstractTypeDeclaration", "bodyDeclarations")));
-              new TypeConstraint(body, new FlatTuple(var__virtual_1_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "BodyDeclaration")));
-              new Equality(body, var__virtual_1_, var_Body);
+              PVariable var__virtual_0_ = body.getOrCreateVariableByName(".virtual{0}");
+              new TypeConstraint(body, new FlatTuple(var_Owned, var__virtual_0_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "AbstractTypeDeclaration", "bodyDeclarations")));
+              new TypeConstraint(body, new FlatTuple(var__virtual_0_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "BodyDeclaration")));
+              new Equality(body, var__virtual_0_, var_Body);
               // 	MethodDeclaration(Body)
               new TypeConstraint(body, new FlatTuple(var_Body), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "MethodDeclaration")));
               // 	MethodDeclaration.thrownExceptions(Body,Ex)
               new TypeConstraint(body, new FlatTuple(var_Body), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "MethodDeclaration")));
-              PVariable var__virtual_2_ = body.getOrCreateVariableByName(".virtual{2}");
-              new TypeConstraint(body, new FlatTuple(var_Body, var__virtual_2_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "AbstractMethodDeclaration", "thrownExceptions")));
-              new TypeConstraint(body, new FlatTuple(var__virtual_2_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "TypeAccess")));
-              new Equality(body, var__virtual_2_, var_Ex);
+              PVariable var__virtual_1_ = body.getOrCreateVariableByName(".virtual{1}");
+              new TypeConstraint(body, new FlatTuple(var_Body, var__virtual_1_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "AbstractMethodDeclaration", "thrownExceptions")));
+              new TypeConstraint(body, new FlatTuple(var__virtual_1_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_", "TypeAccess")));
+              new Equality(body, var__virtual_1_, var_Ex);
               bodies.add(body);
           }
           // to silence compiler error

@@ -30,8 +30,7 @@ import viatra.util.ThrownExceptionsQuerySpecification;
  * <p>Original source:
  * <code><pre>
  * pattern thrownExceptions(Ex) {
- * 	Package(Pack); 
- * 	Package.ownedElements(Pack,Owned);
+ * 
  * 	ClassDeclaration(Owned);
  * 	ClassDeclaration.bodyDeclarations(Owned,Body);
  * 	MethodDeclaration(Body);
