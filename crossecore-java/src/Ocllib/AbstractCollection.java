@@ -11,17 +11,22 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.function.Function;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEList;
 
-public class AbstractCollection<T> extends EcoreEList<T> implements Collection<T>{
+public class AbstractCollection<T> extends EObjectEList<T> implements Collection<T>{
 
     protected static int NO_FEATURE = Integer.MIN_VALUE;
 
+    
     private InternalEObject owner;
     private int featureId = NO_FEATURE;
     private int oppositeFeatureId = NO_FEATURE;
     private Class<?> dataClass = null;
+    private boolean _hasInverse = false;
 
     public AbstractCollection(Class<?> dataClass)
     {
@@ -39,12 +44,13 @@ public class AbstractCollection<T> extends EcoreEList<T> implements Collection<T
 
     public AbstractCollection(Class<?> dataClass, InternalEObject owner, int featureId, int oppositeFeatureId)
     {
-    	super(dataClass, owner);
+    	super(dataClass, owner, featureId);
     	this.dataClass = dataClass;
     	
     	this.owner = owner;
     	this.featureId = featureId;
     	this.oppositeFeatureId = oppositeFeatureId;
+    	this._hasInverse=true;
     }
     
     @Override
@@ -254,6 +260,62 @@ public class AbstractCollection<T> extends EcoreEList<T> implements Collection<T
 
 		return !this.containsAll(c2);
 	}
+	
+	@Override
+	protected boolean hasInverse() {
+
+		return isContainment() || oppositeFeatureId>=0;
+	}
+	
+	@Override
+	protected boolean hasNavigableInverse() {
+		//return false;
+		return oppositeFeatureId>=0;
+	}
+	
+	protected int getInverseFeatureID()
+	{
+		
+	    return oppositeFeatureId;
+	}
+	
+	@Override
+	public Class<?> getInverseFeatureClass()
+	{
+		/*
+		if(owner!=null && owner.eClass().getEStructuralFeature(featureId) instanceof EReference) {
+			
+			EReference ref = (EReference) owner.eClass().getEStructuralFeature(featureId);
+			
+			if(ref.getEOpposite()!=null) {
+				
+				return ref.getEOpposite().getEType().getInstanceClass();
+			}
+		}
+		return null;
+		*/
+		
+		return this.dataClass;
+	}
+	
+	@Override
+	protected boolean isContainment()
+	{
+		
+		boolean containment = false;
+		
+		if(owner!=null && owner.eClass().getEStructuralFeature(featureId) instanceof EReference) {
+			
+			EReference ref = (EReference) owner.eClass().getEStructuralFeature(featureId);
+			containment = ref.isContainment();
+		}
+		
+		
+		return containment;
+  	}
+	
+
+
 
 
 
