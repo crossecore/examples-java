@@ -3,7 +3,26 @@ public interface AssertStatement
  extends Statement
 {
 	
-	public static Ocllib.Set<AssertStatement> allInstances = new Ocllib.Set<AssertStatement>(AssertStatement.class);
+	public static Ocllib.QuickSet<AssertStatement> allInstances = new Ocllib.QuickSet<AssertStatement>(AssertStatement.class);
+	
+	/*
+	public static Ocllib.QuickSet<AssertStatement> allInstances_ = new Ocllib.QuickSet<AssertStatement>(AssertStatement.class);
+	
+	public static Ocllib.QuickSet<AssertStatement> allInstancesClosure = new Ocllib.QuickSet<AssertStatement>(AssertStatement.class);
+		
+	public static Ocllib.QuickSet<AssertStatement> allInstances(){
+		
+		if(allInstancesClosure.isEmpty()) {
+			
+			allInstancesClosure.addAll(ASTNode.allInstances_);
+			allInstancesClosure.addAll(Statement.allInstances_);
+			allInstancesClosure.addAll(AssertStatement.allInstances_);
+		}
+		
+		return allInstancesClosure;
+	}
+	*/
+	
 	
 	
 	Expression getMessage();

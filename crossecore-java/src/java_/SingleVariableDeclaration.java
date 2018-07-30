@@ -3,7 +3,27 @@ public interface SingleVariableDeclaration
  extends VariableDeclaration
 {
 	
-	public static Ocllib.Set<SingleVariableDeclaration> allInstances = new Ocllib.Set<SingleVariableDeclaration>(SingleVariableDeclaration.class);
+	public static Ocllib.QuickSet<SingleVariableDeclaration> allInstances = new Ocllib.QuickSet<SingleVariableDeclaration>(SingleVariableDeclaration.class);
+	
+	/*
+	public static Ocllib.QuickSet<SingleVariableDeclaration> allInstances_ = new Ocllib.QuickSet<SingleVariableDeclaration>(SingleVariableDeclaration.class);
+	
+	public static Ocllib.QuickSet<SingleVariableDeclaration> allInstancesClosure = new Ocllib.QuickSet<SingleVariableDeclaration>(SingleVariableDeclaration.class);
+		
+	public static Ocllib.QuickSet<SingleVariableDeclaration> allInstances(){
+		
+		if(allInstancesClosure.isEmpty()) {
+			
+			allInstancesClosure.addAll(ASTNode.allInstances_);
+			allInstancesClosure.addAll(NamedElement.allInstances_);
+			allInstancesClosure.addAll(VariableDeclaration.allInstances_);
+			allInstancesClosure.addAll(SingleVariableDeclaration.allInstances_);
+		}
+		
+		return allInstancesClosure;
+	}
+	*/
+	
 	
 	
 	Modifier getModifier();

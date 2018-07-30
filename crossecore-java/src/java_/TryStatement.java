@@ -3,7 +3,26 @@ public interface TryStatement
  extends Statement
 {
 	
-	public static Ocllib.Set<TryStatement> allInstances = new Ocllib.Set<TryStatement>(TryStatement.class);
+	public static Ocllib.QuickSet<TryStatement> allInstances = new Ocllib.QuickSet<TryStatement>(TryStatement.class);
+	
+	/*
+	public static Ocllib.QuickSet<TryStatement> allInstances_ = new Ocllib.QuickSet<TryStatement>(TryStatement.class);
+	
+	public static Ocllib.QuickSet<TryStatement> allInstancesClosure = new Ocllib.QuickSet<TryStatement>(TryStatement.class);
+		
+	public static Ocllib.QuickSet<TryStatement> allInstances(){
+		
+		if(allInstancesClosure.isEmpty()) {
+			
+			allInstancesClosure.addAll(ASTNode.allInstances_);
+			allInstancesClosure.addAll(Statement.allInstances_);
+			allInstancesClosure.addAll(TryStatement.allInstances_);
+		}
+		
+		return allInstancesClosure;
+	}
+	*/
+	
 	
 	
 	Block getBody();

@@ -21,6 +21,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public Annotation createAnnotation(){
 		AnnotationImpl theAnnotation = new AnnotationImpl();
 		
+		//Annotation.allInstances_.add(theAnnotation);
+		
 		ASTNode.allInstances.add(theAnnotation);
 		Expression.allInstances.add(theAnnotation);
 		Annotation.allInstances.add(theAnnotation);
@@ -29,6 +31,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public Archive createArchive(){
 		ArchiveImpl theArchive = new ArchiveImpl();
+		
+		//Archive.allInstances_.add(theArchive);
 		
 		ASTNode.allInstances.add(theArchive);
 		NamedElement.allInstances.add(theArchive);
@@ -39,6 +43,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public AssertStatement createAssertStatement(){
 		AssertStatementImpl theAssertStatement = new AssertStatementImpl();
 		
+		//AssertStatement.allInstances_.add(theAssertStatement);
+		
 		ASTNode.allInstances.add(theAssertStatement);
 		Statement.allInstances.add(theAssertStatement);
 		AssertStatement.allInstances.add(theAssertStatement);
@@ -48,6 +54,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public AnnotationMemberValuePair createAnnotationMemberValuePair(){
 		AnnotationMemberValuePairImpl theAnnotationMemberValuePair = new AnnotationMemberValuePairImpl();
 		
+		//AnnotationMemberValuePair.allInstances_.add(theAnnotationMemberValuePair);
+		
 		ASTNode.allInstances.add(theAnnotationMemberValuePair);
 		NamedElement.allInstances.add(theAnnotationMemberValuePair);
 		AnnotationMemberValuePair.allInstances.add(theAnnotationMemberValuePair);
@@ -56,6 +64,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public AnnotationTypeDeclaration createAnnotationTypeDeclaration(){
 		AnnotationTypeDeclarationImpl theAnnotationTypeDeclaration = new AnnotationTypeDeclarationImpl();
+		
+		//AnnotationTypeDeclaration.allInstances_.add(theAnnotationTypeDeclaration);
 		
 		ASTNode.allInstances.add(theAnnotationTypeDeclaration);
 		NamedElement.allInstances.add(theAnnotationTypeDeclaration);
@@ -69,6 +79,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public AnnotationTypeMemberDeclaration createAnnotationTypeMemberDeclaration(){
 		AnnotationTypeMemberDeclarationImpl theAnnotationTypeMemberDeclaration = new AnnotationTypeMemberDeclarationImpl();
 		
+		//AnnotationTypeMemberDeclaration.allInstances_.add(theAnnotationTypeMemberDeclaration);
+		
 		ASTNode.allInstances.add(theAnnotationTypeMemberDeclaration);
 		NamedElement.allInstances.add(theAnnotationTypeMemberDeclaration);
 		BodyDeclaration.allInstances.add(theAnnotationTypeMemberDeclaration);
@@ -79,6 +91,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public AnonymousClassDeclaration createAnonymousClassDeclaration(){
 		AnonymousClassDeclarationImpl theAnonymousClassDeclaration = new AnonymousClassDeclarationImpl();
 		
+		//AnonymousClassDeclaration.allInstances_.add(theAnonymousClassDeclaration);
+		
 		ASTNode.allInstances.add(theAnonymousClassDeclaration);
 		AnonymousClassDeclaration.allInstances.add(theAnonymousClassDeclaration);
 		
@@ -86,6 +100,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public ArrayAccess createArrayAccess(){
 		ArrayAccessImpl theArrayAccess = new ArrayAccessImpl();
+		
+		//ArrayAccess.allInstances_.add(theArrayAccess);
 		
 		ASTNode.allInstances.add(theArrayAccess);
 		Expression.allInstances.add(theArrayAccess);
@@ -96,6 +112,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public ArrayCreation createArrayCreation(){
 		ArrayCreationImpl theArrayCreation = new ArrayCreationImpl();
 		
+		//ArrayCreation.allInstances_.add(theArrayCreation);
+		
 		ASTNode.allInstances.add(theArrayCreation);
 		Expression.allInstances.add(theArrayCreation);
 		ArrayCreation.allInstances.add(theArrayCreation);
@@ -104,6 +122,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public ArrayInitializer createArrayInitializer(){
 		ArrayInitializerImpl theArrayInitializer = new ArrayInitializerImpl();
+		
+		//ArrayInitializer.allInstances_.add(theArrayInitializer);
 		
 		ASTNode.allInstances.add(theArrayInitializer);
 		Expression.allInstances.add(theArrayInitializer);
@@ -114,6 +134,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public ArrayLengthAccess createArrayLengthAccess(){
 		ArrayLengthAccessImpl theArrayLengthAccess = new ArrayLengthAccessImpl();
 		
+		//ArrayLengthAccess.allInstances_.add(theArrayLengthAccess);
+		
 		ASTNode.allInstances.add(theArrayLengthAccess);
 		Expression.allInstances.add(theArrayLengthAccess);
 		ArrayLengthAccess.allInstances.add(theArrayLengthAccess);
@@ -122,6 +144,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public ArrayType createArrayType(){
 		ArrayTypeImpl theArrayType = new ArrayTypeImpl();
+		
+		//ArrayType.allInstances_.add(theArrayType);
 		
 		ASTNode.allInstances.add(theArrayType);
 		NamedElement.allInstances.add(theArrayType);
@@ -133,6 +157,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public Assignment createAssignment(){
 		AssignmentImpl theAssignment = new AssignmentImpl();
 		
+		//Assignment.allInstances_.add(theAssignment);
+		
 		ASTNode.allInstances.add(theAssignment);
 		Expression.allInstances.add(theAssignment);
 		Assignment.allInstances.add(theAssignment);
@@ -141,6 +167,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public BooleanLiteral createBooleanLiteral(){
 		BooleanLiteralImpl theBooleanLiteral = new BooleanLiteralImpl();
+		
+		//BooleanLiteral.allInstances_.add(theBooleanLiteral);
 		
 		ASTNode.allInstances.add(theBooleanLiteral);
 		Expression.allInstances.add(theBooleanLiteral);
@@ -151,6 +179,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public BlockComment createBlockComment(){
 		BlockCommentImpl theBlockComment = new BlockCommentImpl();
 		
+		//BlockComment.allInstances_.add(theBlockComment);
+		
 		ASTNode.allInstances.add(theBlockComment);
 		Comment.allInstances.add(theBlockComment);
 		BlockComment.allInstances.add(theBlockComment);
@@ -159,6 +189,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public Block createBlock(){
 		BlockImpl theBlock = new BlockImpl();
+		
+		//Block.allInstances_.add(theBlock);
 		
 		ASTNode.allInstances.add(theBlock);
 		Statement.allInstances.add(theBlock);
@@ -169,6 +201,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public BreakStatement createBreakStatement(){
 		BreakStatementImpl theBreakStatement = new BreakStatementImpl();
 		
+		//BreakStatement.allInstances_.add(theBreakStatement);
+		
 		ASTNode.allInstances.add(theBreakStatement);
 		Statement.allInstances.add(theBreakStatement);
 		BreakStatement.allInstances.add(theBreakStatement);
@@ -177,6 +211,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public CastExpression createCastExpression(){
 		CastExpressionImpl theCastExpression = new CastExpressionImpl();
+		
+		//CastExpression.allInstances_.add(theCastExpression);
 		
 		ASTNode.allInstances.add(theCastExpression);
 		Expression.allInstances.add(theCastExpression);
@@ -187,6 +223,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public CatchClause createCatchClause(){
 		CatchClauseImpl theCatchClause = new CatchClauseImpl();
 		
+		//CatchClause.allInstances_.add(theCatchClause);
+		
 		ASTNode.allInstances.add(theCatchClause);
 		Statement.allInstances.add(theCatchClause);
 		CatchClause.allInstances.add(theCatchClause);
@@ -195,6 +233,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public CharacterLiteral createCharacterLiteral(){
 		CharacterLiteralImpl theCharacterLiteral = new CharacterLiteralImpl();
+		
+		//CharacterLiteral.allInstances_.add(theCharacterLiteral);
 		
 		ASTNode.allInstances.add(theCharacterLiteral);
 		Expression.allInstances.add(theCharacterLiteral);
@@ -205,6 +245,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public ClassFile createClassFile(){
 		ClassFileImpl theClassFile = new ClassFileImpl();
 		
+		//ClassFile.allInstances_.add(theClassFile);
+		
 		ASTNode.allInstances.add(theClassFile);
 		NamedElement.allInstances.add(theClassFile);
 		ClassFile.allInstances.add(theClassFile);
@@ -213,6 +255,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public ClassInstanceCreation createClassInstanceCreation(){
 		ClassInstanceCreationImpl theClassInstanceCreation = new ClassInstanceCreationImpl();
+		
+		//ClassInstanceCreation.allInstances_.add(theClassInstanceCreation);
 		
 		ASTNode.allInstances.add(theClassInstanceCreation);
 		Expression.allInstances.add(theClassInstanceCreation);
@@ -223,6 +267,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public ConstructorDeclaration createConstructorDeclaration(){
 		ConstructorDeclarationImpl theConstructorDeclaration = new ConstructorDeclarationImpl();
+		
+		//ConstructorDeclaration.allInstances_.add(theConstructorDeclaration);
 		
 		ASTNode.allInstances.add(theConstructorDeclaration);
 		NamedElement.allInstances.add(theConstructorDeclaration);
@@ -235,6 +281,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public ConditionalExpression createConditionalExpression(){
 		ConditionalExpressionImpl theConditionalExpression = new ConditionalExpressionImpl();
 		
+		//ConditionalExpression.allInstances_.add(theConditionalExpression);
+		
 		ASTNode.allInstances.add(theConditionalExpression);
 		Expression.allInstances.add(theConditionalExpression);
 		ConditionalExpression.allInstances.add(theConditionalExpression);
@@ -243,6 +291,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public ConstructorInvocation createConstructorInvocation(){
 		ConstructorInvocationImpl theConstructorInvocation = new ConstructorInvocationImpl();
+		
+		//ConstructorInvocation.allInstances_.add(theConstructorInvocation);
 		
 		ASTNode.allInstances.add(theConstructorInvocation);
 		Statement.allInstances.add(theConstructorInvocation);
@@ -253,6 +303,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public ClassDeclaration createClassDeclaration(){
 		ClassDeclarationImpl theClassDeclaration = new ClassDeclarationImpl();
+		
+		//ClassDeclaration.allInstances_.add(theClassDeclaration);
 		
 		ASTNode.allInstances.add(theClassDeclaration);
 		NamedElement.allInstances.add(theClassDeclaration);
@@ -267,6 +319,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public CompilationUnit createCompilationUnit(){
 		CompilationUnitImpl theCompilationUnit = new CompilationUnitImpl();
 		
+		//CompilationUnit.allInstances_.add(theCompilationUnit);
+		
 		ASTNode.allInstances.add(theCompilationUnit);
 		NamedElement.allInstances.add(theCompilationUnit);
 		CompilationUnit.allInstances.add(theCompilationUnit);
@@ -275,6 +329,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public ContinueStatement createContinueStatement(){
 		ContinueStatementImpl theContinueStatement = new ContinueStatementImpl();
+		
+		//ContinueStatement.allInstances_.add(theContinueStatement);
 		
 		ASTNode.allInstances.add(theContinueStatement);
 		Statement.allInstances.add(theContinueStatement);
@@ -285,6 +341,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public DoStatement createDoStatement(){
 		DoStatementImpl theDoStatement = new DoStatementImpl();
 		
+		//DoStatement.allInstances_.add(theDoStatement);
+		
 		ASTNode.allInstances.add(theDoStatement);
 		Statement.allInstances.add(theDoStatement);
 		DoStatement.allInstances.add(theDoStatement);
@@ -293,6 +351,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public EmptyStatement createEmptyStatement(){
 		EmptyStatementImpl theEmptyStatement = new EmptyStatementImpl();
+		
+		//EmptyStatement.allInstances_.add(theEmptyStatement);
 		
 		ASTNode.allInstances.add(theEmptyStatement);
 		Statement.allInstances.add(theEmptyStatement);
@@ -303,6 +363,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public EnhancedForStatement createEnhancedForStatement(){
 		EnhancedForStatementImpl theEnhancedForStatement = new EnhancedForStatementImpl();
 		
+		//EnhancedForStatement.allInstances_.add(theEnhancedForStatement);
+		
 		ASTNode.allInstances.add(theEnhancedForStatement);
 		Statement.allInstances.add(theEnhancedForStatement);
 		EnhancedForStatement.allInstances.add(theEnhancedForStatement);
@@ -311,6 +373,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public EnumConstantDeclaration createEnumConstantDeclaration(){
 		EnumConstantDeclarationImpl theEnumConstantDeclaration = new EnumConstantDeclarationImpl();
+		
+		//EnumConstantDeclaration.allInstances_.add(theEnumConstantDeclaration);
 		
 		ASTNode.allInstances.add(theEnumConstantDeclaration);
 		NamedElement.allInstances.add(theEnumConstantDeclaration);
@@ -322,6 +386,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public EnumDeclaration createEnumDeclaration(){
 		EnumDeclarationImpl theEnumDeclaration = new EnumDeclarationImpl();
+		
+		//EnumDeclaration.allInstances_.add(theEnumDeclaration);
 		
 		ASTNode.allInstances.add(theEnumDeclaration);
 		NamedElement.allInstances.add(theEnumDeclaration);
@@ -335,6 +401,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public ExpressionStatement createExpressionStatement(){
 		ExpressionStatementImpl theExpressionStatement = new ExpressionStatementImpl();
 		
+		//ExpressionStatement.allInstances_.add(theExpressionStatement);
+		
 		ASTNode.allInstances.add(theExpressionStatement);
 		Statement.allInstances.add(theExpressionStatement);
 		ExpressionStatement.allInstances.add(theExpressionStatement);
@@ -344,6 +412,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public FieldAccess createFieldAccess(){
 		FieldAccessImpl theFieldAccess = new FieldAccessImpl();
 		
+		//FieldAccess.allInstances_.add(theFieldAccess);
+		
 		ASTNode.allInstances.add(theFieldAccess);
 		Expression.allInstances.add(theFieldAccess);
 		FieldAccess.allInstances.add(theFieldAccess);
@@ -352,6 +422,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public FieldDeclaration createFieldDeclaration(){
 		FieldDeclarationImpl theFieldDeclaration = new FieldDeclarationImpl();
+		
+		//FieldDeclaration.allInstances_.add(theFieldDeclaration);
 		
 		ASTNode.allInstances.add(theFieldDeclaration);
 		NamedElement.allInstances.add(theFieldDeclaration);
@@ -364,6 +436,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public ForStatement createForStatement(){
 		ForStatementImpl theForStatement = new ForStatementImpl();
 		
+		//ForStatement.allInstances_.add(theForStatement);
+		
 		ASTNode.allInstances.add(theForStatement);
 		Statement.allInstances.add(theForStatement);
 		ForStatement.allInstances.add(theForStatement);
@@ -372,6 +446,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public IfStatement createIfStatement(){
 		IfStatementImpl theIfStatement = new IfStatementImpl();
+		
+		//IfStatement.allInstances_.add(theIfStatement);
 		
 		ASTNode.allInstances.add(theIfStatement);
 		Statement.allInstances.add(theIfStatement);
@@ -382,6 +458,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public ImportDeclaration createImportDeclaration(){
 		ImportDeclarationImpl theImportDeclaration = new ImportDeclarationImpl();
 		
+		//ImportDeclaration.allInstances_.add(theImportDeclaration);
+		
 		ASTNode.allInstances.add(theImportDeclaration);
 		ImportDeclaration.allInstances.add(theImportDeclaration);
 		
@@ -389,6 +467,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public InfixExpression createInfixExpression(){
 		InfixExpressionImpl theInfixExpression = new InfixExpressionImpl();
+		
+		//InfixExpression.allInstances_.add(theInfixExpression);
 		
 		ASTNode.allInstances.add(theInfixExpression);
 		Expression.allInstances.add(theInfixExpression);
@@ -398,6 +478,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public Initializer createInitializer(){
 		InitializerImpl theInitializer = new InitializerImpl();
+		
+		//Initializer.allInstances_.add(theInitializer);
 		
 		ASTNode.allInstances.add(theInitializer);
 		NamedElement.allInstances.add(theInitializer);
@@ -409,6 +491,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public InstanceofExpression createInstanceofExpression(){
 		InstanceofExpressionImpl theInstanceofExpression = new InstanceofExpressionImpl();
 		
+		//InstanceofExpression.allInstances_.add(theInstanceofExpression);
+		
 		ASTNode.allInstances.add(theInstanceofExpression);
 		Expression.allInstances.add(theInstanceofExpression);
 		InstanceofExpression.allInstances.add(theInstanceofExpression);
@@ -417,6 +501,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public InterfaceDeclaration createInterfaceDeclaration(){
 		InterfaceDeclarationImpl theInterfaceDeclaration = new InterfaceDeclarationImpl();
+		
+		//InterfaceDeclaration.allInstances_.add(theInterfaceDeclaration);
 		
 		ASTNode.allInstances.add(theInterfaceDeclaration);
 		NamedElement.allInstances.add(theInterfaceDeclaration);
@@ -431,6 +517,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public Javadoc createJavadoc(){
 		JavadocImpl theJavadoc = new JavadocImpl();
 		
+		//Javadoc.allInstances_.add(theJavadoc);
+		
 		ASTNode.allInstances.add(theJavadoc);
 		Comment.allInstances.add(theJavadoc);
 		Javadoc.allInstances.add(theJavadoc);
@@ -439,6 +527,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public LabeledStatement createLabeledStatement(){
 		LabeledStatementImpl theLabeledStatement = new LabeledStatementImpl();
+		
+		//LabeledStatement.allInstances_.add(theLabeledStatement);
 		
 		ASTNode.allInstances.add(theLabeledStatement);
 		NamedElement.allInstances.add(theLabeledStatement);
@@ -450,6 +540,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public LineComment createLineComment(){
 		LineCommentImpl theLineComment = new LineCommentImpl();
 		
+		//LineComment.allInstances_.add(theLineComment);
+		
 		ASTNode.allInstances.add(theLineComment);
 		Comment.allInstances.add(theLineComment);
 		LineComment.allInstances.add(theLineComment);
@@ -459,12 +551,16 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public Manifest createManifest(){
 		ManifestImpl theManifest = new ManifestImpl();
 		
+		//Manifest.allInstances_.add(theManifest);
+		
 		Manifest.allInstances.add(theManifest);
 		
 		return theManifest;
 	}
 	public ManifestAttribute createManifestAttribute(){
 		ManifestAttributeImpl theManifestAttribute = new ManifestAttributeImpl();
+		
+		//ManifestAttribute.allInstances_.add(theManifestAttribute);
 		
 		ManifestAttribute.allInstances.add(theManifestAttribute);
 		
@@ -473,12 +569,16 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public ManifestEntry createManifestEntry(){
 		ManifestEntryImpl theManifestEntry = new ManifestEntryImpl();
 		
+		//ManifestEntry.allInstances_.add(theManifestEntry);
+		
 		ManifestEntry.allInstances.add(theManifestEntry);
 		
 		return theManifestEntry;
 	}
 	public MemberRef createMemberRef(){
 		MemberRefImpl theMemberRef = new MemberRefImpl();
+		
+		//MemberRef.allInstances_.add(theMemberRef);
 		
 		ASTNode.allInstances.add(theMemberRef);
 		MemberRef.allInstances.add(theMemberRef);
@@ -487,6 +587,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public MethodDeclaration createMethodDeclaration(){
 		MethodDeclarationImpl theMethodDeclaration = new MethodDeclarationImpl();
+		
+		//MethodDeclaration.allInstances_.add(theMethodDeclaration);
 		
 		ASTNode.allInstances.add(theMethodDeclaration);
 		NamedElement.allInstances.add(theMethodDeclaration);
@@ -499,6 +601,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public MethodInvocation createMethodInvocation(){
 		MethodInvocationImpl theMethodInvocation = new MethodInvocationImpl();
 		
+		//MethodInvocation.allInstances_.add(theMethodInvocation);
+		
 		ASTNode.allInstances.add(theMethodInvocation);
 		Expression.allInstances.add(theMethodInvocation);
 		AbstractMethodInvocation.allInstances.add(theMethodInvocation);
@@ -509,6 +613,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public MethodRef createMethodRef(){
 		MethodRefImpl theMethodRef = new MethodRefImpl();
 		
+		//MethodRef.allInstances_.add(theMethodRef);
+		
 		ASTNode.allInstances.add(theMethodRef);
 		MethodRef.allInstances.add(theMethodRef);
 		
@@ -516,6 +622,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public MethodRefParameter createMethodRefParameter(){
 		MethodRefParameterImpl theMethodRefParameter = new MethodRefParameterImpl();
+		
+		//MethodRefParameter.allInstances_.add(theMethodRefParameter);
 		
 		ASTNode.allInstances.add(theMethodRefParameter);
 		MethodRefParameter.allInstances.add(theMethodRefParameter);
@@ -525,12 +633,16 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public Model createModel(){
 		ModelImpl theModel = new ModelImpl();
 		
+		//Model.allInstances_.add(theModel);
+		
 		Model.allInstances.add(theModel);
 		
 		return theModel;
 	}
 	public Modifier createModifier(){
 		ModifierImpl theModifier = new ModifierImpl();
+		
+		//Modifier.allInstances_.add(theModifier);
 		
 		ASTNode.allInstances.add(theModifier);
 		Modifier.allInstances.add(theModifier);
@@ -539,6 +651,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public NumberLiteral createNumberLiteral(){
 		NumberLiteralImpl theNumberLiteral = new NumberLiteralImpl();
+		
+		//NumberLiteral.allInstances_.add(theNumberLiteral);
 		
 		ASTNode.allInstances.add(theNumberLiteral);
 		Expression.allInstances.add(theNumberLiteral);
@@ -549,6 +663,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public NullLiteral createNullLiteral(){
 		NullLiteralImpl theNullLiteral = new NullLiteralImpl();
 		
+		//NullLiteral.allInstances_.add(theNullLiteral);
+		
 		ASTNode.allInstances.add(theNullLiteral);
 		Expression.allInstances.add(theNullLiteral);
 		NullLiteral.allInstances.add(theNullLiteral);
@@ -557,6 +673,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public Package createPackage(){
 		PackageImpl thePackage = new PackageImpl();
+		
+		//Package.allInstances_.add(thePackage);
 		
 		ASTNode.allInstances.add(thePackage);
 		NamedElement.allInstances.add(thePackage);
@@ -567,6 +685,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public PackageAccess createPackageAccess(){
 		PackageAccessImpl thePackageAccess = new PackageAccessImpl();
 		
+		//PackageAccess.allInstances_.add(thePackageAccess);
+		
 		ASTNode.allInstances.add(thePackageAccess);
 		NamespaceAccess.allInstances.add(thePackageAccess);
 		PackageAccess.allInstances.add(thePackageAccess);
@@ -575,6 +695,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public ParameterizedType createParameterizedType(){
 		ParameterizedTypeImpl theParameterizedType = new ParameterizedTypeImpl();
+		
+		//ParameterizedType.allInstances_.add(theParameterizedType);
 		
 		ASTNode.allInstances.add(theParameterizedType);
 		NamedElement.allInstances.add(theParameterizedType);
@@ -586,6 +708,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public ParenthesizedExpression createParenthesizedExpression(){
 		ParenthesizedExpressionImpl theParenthesizedExpression = new ParenthesizedExpressionImpl();
 		
+		//ParenthesizedExpression.allInstances_.add(theParenthesizedExpression);
+		
 		ASTNode.allInstances.add(theParenthesizedExpression);
 		Expression.allInstances.add(theParenthesizedExpression);
 		ParenthesizedExpression.allInstances.add(theParenthesizedExpression);
@@ -594,6 +718,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public PostfixExpression createPostfixExpression(){
 		PostfixExpressionImpl thePostfixExpression = new PostfixExpressionImpl();
+		
+		//PostfixExpression.allInstances_.add(thePostfixExpression);
 		
 		ASTNode.allInstances.add(thePostfixExpression);
 		Expression.allInstances.add(thePostfixExpression);
@@ -604,6 +730,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public PrefixExpression createPrefixExpression(){
 		PrefixExpressionImpl thePrefixExpression = new PrefixExpressionImpl();
 		
+		//PrefixExpression.allInstances_.add(thePrefixExpression);
+		
 		ASTNode.allInstances.add(thePrefixExpression);
 		Expression.allInstances.add(thePrefixExpression);
 		PrefixExpression.allInstances.add(thePrefixExpression);
@@ -612,6 +740,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public PrimitiveType createPrimitiveType(){
 		PrimitiveTypeImpl thePrimitiveType = new PrimitiveTypeImpl();
+		
+		//PrimitiveType.allInstances_.add(thePrimitiveType);
 		
 		ASTNode.allInstances.add(thePrimitiveType);
 		NamedElement.allInstances.add(thePrimitiveType);
@@ -622,6 +752,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public PrimitiveTypeBoolean createPrimitiveTypeBoolean(){
 		PrimitiveTypeBooleanImpl thePrimitiveTypeBoolean = new PrimitiveTypeBooleanImpl();
+		
+		//PrimitiveTypeBoolean.allInstances_.add(thePrimitiveTypeBoolean);
 		
 		ASTNode.allInstances.add(thePrimitiveTypeBoolean);
 		NamedElement.allInstances.add(thePrimitiveTypeBoolean);
@@ -634,6 +766,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public PrimitiveTypeByte createPrimitiveTypeByte(){
 		PrimitiveTypeByteImpl thePrimitiveTypeByte = new PrimitiveTypeByteImpl();
 		
+		//PrimitiveTypeByte.allInstances_.add(thePrimitiveTypeByte);
+		
 		ASTNode.allInstances.add(thePrimitiveTypeByte);
 		NamedElement.allInstances.add(thePrimitiveTypeByte);
 		Type.allInstances.add(thePrimitiveTypeByte);
@@ -644,6 +778,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public PrimitiveTypeChar createPrimitiveTypeChar(){
 		PrimitiveTypeCharImpl thePrimitiveTypeChar = new PrimitiveTypeCharImpl();
+		
+		//PrimitiveTypeChar.allInstances_.add(thePrimitiveTypeChar);
 		
 		ASTNode.allInstances.add(thePrimitiveTypeChar);
 		NamedElement.allInstances.add(thePrimitiveTypeChar);
@@ -656,6 +792,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public PrimitiveTypeDouble createPrimitiveTypeDouble(){
 		PrimitiveTypeDoubleImpl thePrimitiveTypeDouble = new PrimitiveTypeDoubleImpl();
 		
+		//PrimitiveTypeDouble.allInstances_.add(thePrimitiveTypeDouble);
+		
 		ASTNode.allInstances.add(thePrimitiveTypeDouble);
 		NamedElement.allInstances.add(thePrimitiveTypeDouble);
 		Type.allInstances.add(thePrimitiveTypeDouble);
@@ -666,6 +804,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public PrimitiveTypeShort createPrimitiveTypeShort(){
 		PrimitiveTypeShortImpl thePrimitiveTypeShort = new PrimitiveTypeShortImpl();
+		
+		//PrimitiveTypeShort.allInstances_.add(thePrimitiveTypeShort);
 		
 		ASTNode.allInstances.add(thePrimitiveTypeShort);
 		NamedElement.allInstances.add(thePrimitiveTypeShort);
@@ -678,6 +818,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public PrimitiveTypeFloat createPrimitiveTypeFloat(){
 		PrimitiveTypeFloatImpl thePrimitiveTypeFloat = new PrimitiveTypeFloatImpl();
 		
+		//PrimitiveTypeFloat.allInstances_.add(thePrimitiveTypeFloat);
+		
 		ASTNode.allInstances.add(thePrimitiveTypeFloat);
 		NamedElement.allInstances.add(thePrimitiveTypeFloat);
 		Type.allInstances.add(thePrimitiveTypeFloat);
@@ -688,6 +830,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public PrimitiveTypeInt createPrimitiveTypeInt(){
 		PrimitiveTypeIntImpl thePrimitiveTypeInt = new PrimitiveTypeIntImpl();
+		
+		//PrimitiveTypeInt.allInstances_.add(thePrimitiveTypeInt);
 		
 		ASTNode.allInstances.add(thePrimitiveTypeInt);
 		NamedElement.allInstances.add(thePrimitiveTypeInt);
@@ -700,6 +844,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public PrimitiveTypeLong createPrimitiveTypeLong(){
 		PrimitiveTypeLongImpl thePrimitiveTypeLong = new PrimitiveTypeLongImpl();
 		
+		//PrimitiveTypeLong.allInstances_.add(thePrimitiveTypeLong);
+		
 		ASTNode.allInstances.add(thePrimitiveTypeLong);
 		NamedElement.allInstances.add(thePrimitiveTypeLong);
 		Type.allInstances.add(thePrimitiveTypeLong);
@@ -710,6 +856,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public PrimitiveTypeVoid createPrimitiveTypeVoid(){
 		PrimitiveTypeVoidImpl thePrimitiveTypeVoid = new PrimitiveTypeVoidImpl();
+		
+		//PrimitiveTypeVoid.allInstances_.add(thePrimitiveTypeVoid);
 		
 		ASTNode.allInstances.add(thePrimitiveTypeVoid);
 		NamedElement.allInstances.add(thePrimitiveTypeVoid);
@@ -722,6 +870,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public ReturnStatement createReturnStatement(){
 		ReturnStatementImpl theReturnStatement = new ReturnStatementImpl();
 		
+		//ReturnStatement.allInstances_.add(theReturnStatement);
+		
 		ASTNode.allInstances.add(theReturnStatement);
 		Statement.allInstances.add(theReturnStatement);
 		ReturnStatement.allInstances.add(theReturnStatement);
@@ -731,6 +881,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public SingleVariableAccess createSingleVariableAccess(){
 		SingleVariableAccessImpl theSingleVariableAccess = new SingleVariableAccessImpl();
 		
+		//SingleVariableAccess.allInstances_.add(theSingleVariableAccess);
+		
 		ASTNode.allInstances.add(theSingleVariableAccess);
 		Expression.allInstances.add(theSingleVariableAccess);
 		SingleVariableAccess.allInstances.add(theSingleVariableAccess);
@@ -739,6 +891,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public SingleVariableDeclaration createSingleVariableDeclaration(){
 		SingleVariableDeclarationImpl theSingleVariableDeclaration = new SingleVariableDeclarationImpl();
+		
+		//SingleVariableDeclaration.allInstances_.add(theSingleVariableDeclaration);
 		
 		ASTNode.allInstances.add(theSingleVariableDeclaration);
 		NamedElement.allInstances.add(theSingleVariableDeclaration);
@@ -750,6 +904,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public StringLiteral createStringLiteral(){
 		StringLiteralImpl theStringLiteral = new StringLiteralImpl();
 		
+		//StringLiteral.allInstances_.add(theStringLiteral);
+		
 		ASTNode.allInstances.add(theStringLiteral);
 		Expression.allInstances.add(theStringLiteral);
 		StringLiteral.allInstances.add(theStringLiteral);
@@ -758,6 +914,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public SuperConstructorInvocation createSuperConstructorInvocation(){
 		SuperConstructorInvocationImpl theSuperConstructorInvocation = new SuperConstructorInvocationImpl();
+		
+		//SuperConstructorInvocation.allInstances_.add(theSuperConstructorInvocation);
 		
 		ASTNode.allInstances.add(theSuperConstructorInvocation);
 		Statement.allInstances.add(theSuperConstructorInvocation);
@@ -769,6 +927,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public SuperFieldAccess createSuperFieldAccess(){
 		SuperFieldAccessImpl theSuperFieldAccess = new SuperFieldAccessImpl();
 		
+		//SuperFieldAccess.allInstances_.add(theSuperFieldAccess);
+		
 		ASTNode.allInstances.add(theSuperFieldAccess);
 		Expression.allInstances.add(theSuperFieldAccess);
 		AbstractTypeQualifiedExpression.allInstances.add(theSuperFieldAccess);
@@ -778,6 +938,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public SuperMethodInvocation createSuperMethodInvocation(){
 		SuperMethodInvocationImpl theSuperMethodInvocation = new SuperMethodInvocationImpl();
+		
+		//SuperMethodInvocation.allInstances_.add(theSuperMethodInvocation);
 		
 		ASTNode.allInstances.add(theSuperMethodInvocation);
 		Expression.allInstances.add(theSuperMethodInvocation);
@@ -790,6 +952,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public SwitchCase createSwitchCase(){
 		SwitchCaseImpl theSwitchCase = new SwitchCaseImpl();
 		
+		//SwitchCase.allInstances_.add(theSwitchCase);
+		
 		ASTNode.allInstances.add(theSwitchCase);
 		Statement.allInstances.add(theSwitchCase);
 		SwitchCase.allInstances.add(theSwitchCase);
@@ -798,6 +962,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public SwitchStatement createSwitchStatement(){
 		SwitchStatementImpl theSwitchStatement = new SwitchStatementImpl();
+		
+		//SwitchStatement.allInstances_.add(theSwitchStatement);
 		
 		ASTNode.allInstances.add(theSwitchStatement);
 		Statement.allInstances.add(theSwitchStatement);
@@ -808,6 +974,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public SynchronizedStatement createSynchronizedStatement(){
 		SynchronizedStatementImpl theSynchronizedStatement = new SynchronizedStatementImpl();
 		
+		//SynchronizedStatement.allInstances_.add(theSynchronizedStatement);
+		
 		ASTNode.allInstances.add(theSynchronizedStatement);
 		Statement.allInstances.add(theSynchronizedStatement);
 		SynchronizedStatement.allInstances.add(theSynchronizedStatement);
@@ -817,6 +985,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public TagElement createTagElement(){
 		TagElementImpl theTagElement = new TagElementImpl();
 		
+		//TagElement.allInstances_.add(theTagElement);
+		
 		ASTNode.allInstances.add(theTagElement);
 		TagElement.allInstances.add(theTagElement);
 		
@@ -825,6 +995,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public TextElement createTextElement(){
 		TextElementImpl theTextElement = new TextElementImpl();
 		
+		//TextElement.allInstances_.add(theTextElement);
+		
 		ASTNode.allInstances.add(theTextElement);
 		TextElement.allInstances.add(theTextElement);
 		
@@ -832,6 +1004,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public ThisExpression createThisExpression(){
 		ThisExpressionImpl theThisExpression = new ThisExpressionImpl();
+		
+		//ThisExpression.allInstances_.add(theThisExpression);
 		
 		ASTNode.allInstances.add(theThisExpression);
 		Expression.allInstances.add(theThisExpression);
@@ -843,6 +1017,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public ThrowStatement createThrowStatement(){
 		ThrowStatementImpl theThrowStatement = new ThrowStatementImpl();
 		
+		//ThrowStatement.allInstances_.add(theThrowStatement);
+		
 		ASTNode.allInstances.add(theThrowStatement);
 		Statement.allInstances.add(theThrowStatement);
 		ThrowStatement.allInstances.add(theThrowStatement);
@@ -852,6 +1028,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public TryStatement createTryStatement(){
 		TryStatementImpl theTryStatement = new TryStatementImpl();
 		
+		//TryStatement.allInstances_.add(theTryStatement);
+		
 		ASTNode.allInstances.add(theTryStatement);
 		Statement.allInstances.add(theTryStatement);
 		TryStatement.allInstances.add(theTryStatement);
@@ -860,6 +1038,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public TypeAccess createTypeAccess(){
 		TypeAccessImpl theTypeAccess = new TypeAccessImpl();
+		
+		//TypeAccess.allInstances_.add(theTypeAccess);
 		
 		ASTNode.allInstances.add(theTypeAccess);
 		Expression.allInstances.add(theTypeAccess);
@@ -871,6 +1051,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public TypeDeclarationStatement createTypeDeclarationStatement(){
 		TypeDeclarationStatementImpl theTypeDeclarationStatement = new TypeDeclarationStatementImpl();
 		
+		//TypeDeclarationStatement.allInstances_.add(theTypeDeclarationStatement);
+		
 		ASTNode.allInstances.add(theTypeDeclarationStatement);
 		Statement.allInstances.add(theTypeDeclarationStatement);
 		TypeDeclarationStatement.allInstances.add(theTypeDeclarationStatement);
@@ -880,6 +1062,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public TypeLiteral createTypeLiteral(){
 		TypeLiteralImpl theTypeLiteral = new TypeLiteralImpl();
 		
+		//TypeLiteral.allInstances_.add(theTypeLiteral);
+		
 		ASTNode.allInstances.add(theTypeLiteral);
 		Expression.allInstances.add(theTypeLiteral);
 		TypeLiteral.allInstances.add(theTypeLiteral);
@@ -888,6 +1072,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public TypeParameter createTypeParameter(){
 		TypeParameterImpl theTypeParameter = new TypeParameterImpl();
+		
+		//TypeParameter.allInstances_.add(theTypeParameter);
 		
 		ASTNode.allInstances.add(theTypeParameter);
 		NamedElement.allInstances.add(theTypeParameter);
@@ -899,6 +1085,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public UnresolvedItem createUnresolvedItem(){
 		UnresolvedItemImpl theUnresolvedItem = new UnresolvedItemImpl();
 		
+		//UnresolvedItem.allInstances_.add(theUnresolvedItem);
+		
 		ASTNode.allInstances.add(theUnresolvedItem);
 		NamedElement.allInstances.add(theUnresolvedItem);
 		UnresolvedItem.allInstances.add(theUnresolvedItem);
@@ -907,6 +1095,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public UnresolvedItemAccess createUnresolvedItemAccess(){
 		UnresolvedItemAccessImpl theUnresolvedItemAccess = new UnresolvedItemAccessImpl();
+		
+		//UnresolvedItemAccess.allInstances_.add(theUnresolvedItemAccess);
 		
 		ASTNode.allInstances.add(theUnresolvedItemAccess);
 		Expression.allInstances.add(theUnresolvedItemAccess);
@@ -917,6 +1107,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public UnresolvedAnnotationDeclaration createUnresolvedAnnotationDeclaration(){
 		UnresolvedAnnotationDeclarationImpl theUnresolvedAnnotationDeclaration = new UnresolvedAnnotationDeclarationImpl();
+		
+		//UnresolvedAnnotationDeclaration.allInstances_.add(theUnresolvedAnnotationDeclaration);
 		
 		ASTNode.allInstances.add(theUnresolvedAnnotationDeclaration);
 		NamedElement.allInstances.add(theUnresolvedAnnotationDeclaration);
@@ -932,6 +1124,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public UnresolvedAnnotationTypeMemberDeclaration createUnresolvedAnnotationTypeMemberDeclaration(){
 		UnresolvedAnnotationTypeMemberDeclarationImpl theUnresolvedAnnotationTypeMemberDeclaration = new UnresolvedAnnotationTypeMemberDeclarationImpl();
 		
+		//UnresolvedAnnotationTypeMemberDeclaration.allInstances_.add(theUnresolvedAnnotationTypeMemberDeclaration);
+		
 		ASTNode.allInstances.add(theUnresolvedAnnotationTypeMemberDeclaration);
 		NamedElement.allInstances.add(theUnresolvedAnnotationTypeMemberDeclaration);
 		BodyDeclaration.allInstances.add(theUnresolvedAnnotationTypeMemberDeclaration);
@@ -943,6 +1137,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public UnresolvedClassDeclaration createUnresolvedClassDeclaration(){
 		UnresolvedClassDeclarationImpl theUnresolvedClassDeclaration = new UnresolvedClassDeclarationImpl();
+		
+		//UnresolvedClassDeclaration.allInstances_.add(theUnresolvedClassDeclaration);
 		
 		ASTNode.allInstances.add(theUnresolvedClassDeclaration);
 		NamedElement.allInstances.add(theUnresolvedClassDeclaration);
@@ -959,6 +1155,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public UnresolvedEnumDeclaration createUnresolvedEnumDeclaration(){
 		UnresolvedEnumDeclarationImpl theUnresolvedEnumDeclaration = new UnresolvedEnumDeclarationImpl();
 		
+		//UnresolvedEnumDeclaration.allInstances_.add(theUnresolvedEnumDeclaration);
+		
 		ASTNode.allInstances.add(theUnresolvedEnumDeclaration);
 		NamedElement.allInstances.add(theUnresolvedEnumDeclaration);
 		BodyDeclaration.allInstances.add(theUnresolvedEnumDeclaration);
@@ -972,6 +1170,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public UnresolvedInterfaceDeclaration createUnresolvedInterfaceDeclaration(){
 		UnresolvedInterfaceDeclarationImpl theUnresolvedInterfaceDeclaration = new UnresolvedInterfaceDeclarationImpl();
+		
+		//UnresolvedInterfaceDeclaration.allInstances_.add(theUnresolvedInterfaceDeclaration);
 		
 		ASTNode.allInstances.add(theUnresolvedInterfaceDeclaration);
 		NamedElement.allInstances.add(theUnresolvedInterfaceDeclaration);
@@ -988,6 +1188,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public UnresolvedLabeledStatement createUnresolvedLabeledStatement(){
 		UnresolvedLabeledStatementImpl theUnresolvedLabeledStatement = new UnresolvedLabeledStatementImpl();
 		
+		//UnresolvedLabeledStatement.allInstances_.add(theUnresolvedLabeledStatement);
+		
 		ASTNode.allInstances.add(theUnresolvedLabeledStatement);
 		NamedElement.allInstances.add(theUnresolvedLabeledStatement);
 		Statement.allInstances.add(theUnresolvedLabeledStatement);
@@ -999,6 +1201,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public UnresolvedMethodDeclaration createUnresolvedMethodDeclaration(){
 		UnresolvedMethodDeclarationImpl theUnresolvedMethodDeclaration = new UnresolvedMethodDeclarationImpl();
+		
+		//UnresolvedMethodDeclaration.allInstances_.add(theUnresolvedMethodDeclaration);
 		
 		ASTNode.allInstances.add(theUnresolvedMethodDeclaration);
 		NamedElement.allInstances.add(theUnresolvedMethodDeclaration);
@@ -1013,6 +1217,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public UnresolvedSingleVariableDeclaration createUnresolvedSingleVariableDeclaration(){
 		UnresolvedSingleVariableDeclarationImpl theUnresolvedSingleVariableDeclaration = new UnresolvedSingleVariableDeclarationImpl();
 		
+		//UnresolvedSingleVariableDeclaration.allInstances_.add(theUnresolvedSingleVariableDeclaration);
+		
 		ASTNode.allInstances.add(theUnresolvedSingleVariableDeclaration);
 		NamedElement.allInstances.add(theUnresolvedSingleVariableDeclaration);
 		VariableDeclaration.allInstances.add(theUnresolvedSingleVariableDeclaration);
@@ -1025,6 +1231,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public UnresolvedType createUnresolvedType(){
 		UnresolvedTypeImpl theUnresolvedType = new UnresolvedTypeImpl();
 		
+		//UnresolvedType.allInstances_.add(theUnresolvedType);
+		
 		ASTNode.allInstances.add(theUnresolvedType);
 		NamedElement.allInstances.add(theUnresolvedType);
 		Type.allInstances.add(theUnresolvedType);
@@ -1035,6 +1243,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public UnresolvedTypeDeclaration createUnresolvedTypeDeclaration(){
 		UnresolvedTypeDeclarationImpl theUnresolvedTypeDeclaration = new UnresolvedTypeDeclarationImpl();
+		
+		//UnresolvedTypeDeclaration.allInstances_.add(theUnresolvedTypeDeclaration);
 		
 		ASTNode.allInstances.add(theUnresolvedTypeDeclaration);
 		NamedElement.allInstances.add(theUnresolvedTypeDeclaration);
@@ -1049,6 +1259,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public UnresolvedVariableDeclarationFragment createUnresolvedVariableDeclarationFragment(){
 		UnresolvedVariableDeclarationFragmentImpl theUnresolvedVariableDeclarationFragment = new UnresolvedVariableDeclarationFragmentImpl();
 		
+		//UnresolvedVariableDeclarationFragment.allInstances_.add(theUnresolvedVariableDeclarationFragment);
+		
 		ASTNode.allInstances.add(theUnresolvedVariableDeclarationFragment);
 		NamedElement.allInstances.add(theUnresolvedVariableDeclarationFragment);
 		VariableDeclaration.allInstances.add(theUnresolvedVariableDeclarationFragment);
@@ -1061,6 +1273,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public VariableDeclarationExpression createVariableDeclarationExpression(){
 		VariableDeclarationExpressionImpl theVariableDeclarationExpression = new VariableDeclarationExpressionImpl();
 		
+		//VariableDeclarationExpression.allInstances_.add(theVariableDeclarationExpression);
+		
 		ASTNode.allInstances.add(theVariableDeclarationExpression);
 		Expression.allInstances.add(theVariableDeclarationExpression);
 		AbstractVariablesContainer.allInstances.add(theVariableDeclarationExpression);
@@ -1070,6 +1284,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public VariableDeclarationFragment createVariableDeclarationFragment(){
 		VariableDeclarationFragmentImpl theVariableDeclarationFragment = new VariableDeclarationFragmentImpl();
+		
+		//VariableDeclarationFragment.allInstances_.add(theVariableDeclarationFragment);
 		
 		ASTNode.allInstances.add(theVariableDeclarationFragment);
 		NamedElement.allInstances.add(theVariableDeclarationFragment);
@@ -1081,6 +1297,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public VariableDeclarationStatement createVariableDeclarationStatement(){
 		VariableDeclarationStatementImpl theVariableDeclarationStatement = new VariableDeclarationStatementImpl();
 		
+		//VariableDeclarationStatement.allInstances_.add(theVariableDeclarationStatement);
+		
 		ASTNode.allInstances.add(theVariableDeclarationStatement);
 		Statement.allInstances.add(theVariableDeclarationStatement);
 		AbstractVariablesContainer.allInstances.add(theVariableDeclarationStatement);
@@ -1091,6 +1309,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public WildCardType createWildCardType(){
 		WildCardTypeImpl theWildCardType = new WildCardTypeImpl();
 		
+		//WildCardType.allInstances_.add(theWildCardType);
+		
 		ASTNode.allInstances.add(theWildCardType);
 		NamedElement.allInstances.add(theWildCardType);
 		Type.allInstances.add(theWildCardType);
@@ -1100,6 +1320,8 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	}
 	public WhileStatement createWhileStatement(){
 		WhileStatementImpl theWhileStatement = new WhileStatementImpl();
+		
+		//WhileStatement.allInstances_.add(theWhileStatement);
 		
 		ASTNode.allInstances.add(theWhileStatement);
 		Statement.allInstances.add(theWhileStatement);

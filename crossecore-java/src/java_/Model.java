@@ -3,7 +3,24 @@ public interface Model
 extends org.eclipse.emf.ecore.EObject
 {
 	
-	public static Ocllib.Set<Model> allInstances = new Ocllib.Set<Model>(Model.class);
+	public static Ocllib.QuickSet<Model> allInstances = new Ocllib.QuickSet<Model>(Model.class);
+	
+	/*
+	public static Ocllib.QuickSet<Model> allInstances_ = new Ocllib.QuickSet<Model>(Model.class);
+	
+	public static Ocllib.QuickSet<Model> allInstancesClosure = new Ocllib.QuickSet<Model>(Model.class);
+		
+	public static Ocllib.QuickSet<Model> allInstances(){
+		
+		if(allInstancesClosure.isEmpty()) {
+			
+			allInstancesClosure.addAll(Model.allInstances_);
+		}
+		
+		return allInstancesClosure;
+	}
+	*/
+	
 	
 	java.lang.String getName();
 	void setName(java.lang.String value);

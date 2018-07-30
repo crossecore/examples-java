@@ -3,7 +3,26 @@ public interface FieldAccess
  extends Expression
 {
 	
-	public static Ocllib.Set<FieldAccess> allInstances = new Ocllib.Set<FieldAccess>(FieldAccess.class);
+	public static Ocllib.QuickSet<FieldAccess> allInstances = new Ocllib.QuickSet<FieldAccess>(FieldAccess.class);
+	
+	/*
+	public static Ocllib.QuickSet<FieldAccess> allInstances_ = new Ocllib.QuickSet<FieldAccess>(FieldAccess.class);
+	
+	public static Ocllib.QuickSet<FieldAccess> allInstancesClosure = new Ocllib.QuickSet<FieldAccess>(FieldAccess.class);
+		
+	public static Ocllib.QuickSet<FieldAccess> allInstances(){
+		
+		if(allInstancesClosure.isEmpty()) {
+			
+			allInstancesClosure.addAll(ASTNode.allInstances_);
+			allInstancesClosure.addAll(Expression.allInstances_);
+			allInstancesClosure.addAll(FieldAccess.allInstances_);
+		}
+		
+		return allInstancesClosure;
+	}
+	*/
+	
 	
 	
 	SingleVariableAccess getField();

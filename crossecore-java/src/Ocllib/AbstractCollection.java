@@ -26,7 +26,6 @@ public class AbstractCollection<T> extends EObjectEList<T> implements Collection
     private int featureId = NO_FEATURE;
     private int oppositeFeatureId = NO_FEATURE;
     private Class<?> dataClass = null;
-    private boolean _hasInverse = false;
 
     public AbstractCollection(Class<?> dataClass)
     {
@@ -50,7 +49,6 @@ public class AbstractCollection<T> extends EObjectEList<T> implements Collection
     	this.owner = owner;
     	this.featureId = featureId;
     	this.oppositeFeatureId = oppositeFeatureId;
-    	this._hasInverse=true;
     }
     
     @Override
@@ -293,8 +291,8 @@ public class AbstractCollection<T> extends EObjectEList<T> implements Collection
 			}
 		}
 		return null;
-		*/
 		
+		*/
 		return this.dataClass;
 	}
 	

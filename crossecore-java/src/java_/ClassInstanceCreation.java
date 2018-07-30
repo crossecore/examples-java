@@ -3,7 +3,27 @@ public interface ClassInstanceCreation
  extends Expression,AbstractMethodInvocation
 {
 	
-	public static Ocllib.Set<ClassInstanceCreation> allInstances = new Ocllib.Set<ClassInstanceCreation>(ClassInstanceCreation.class);
+	public static Ocllib.QuickSet<ClassInstanceCreation> allInstances = new Ocllib.QuickSet<ClassInstanceCreation>(ClassInstanceCreation.class);
+	
+	/*
+	public static Ocllib.QuickSet<ClassInstanceCreation> allInstances_ = new Ocllib.QuickSet<ClassInstanceCreation>(ClassInstanceCreation.class);
+	
+	public static Ocllib.QuickSet<ClassInstanceCreation> allInstancesClosure = new Ocllib.QuickSet<ClassInstanceCreation>(ClassInstanceCreation.class);
+		
+	public static Ocllib.QuickSet<ClassInstanceCreation> allInstances(){
+		
+		if(allInstancesClosure.isEmpty()) {
+			
+			allInstancesClosure.addAll(ASTNode.allInstances_);
+			allInstancesClosure.addAll(Expression.allInstances_);
+			allInstancesClosure.addAll(AbstractMethodInvocation.allInstances_);
+			allInstancesClosure.addAll(ClassInstanceCreation.allInstances_);
+		}
+		
+		return allInstancesClosure;
+	}
+	*/
+	
 	
 	
 	AnonymousClassDeclaration getAnonymousClassDeclaration();
