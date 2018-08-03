@@ -25,6 +25,7 @@ import java_.Javadoc;
 import java_.MethodDeclaration;
 import java_.MethodDeclarationImpl;
 import java_.Model;
+import java_.TagElement;
 import java_.TextElement;
 import java_.TypeAccess;
 import java_.TypeDeclaration;
@@ -87,7 +88,7 @@ public class CrossEcoreJavaBenchmark {
 		&& (!(bd.getModifier()==null))
 		&& bd.getModifier().isStatic()
 		&& (!(((MethodDeclaration)bd).getReturnType()==null))
-		&& (!(((MethodDeclaration)bd).getReturnType().getType()==null))
+		//&& (!(((MethodDeclaration)bd).getReturnType().getType()==null))
 		&& ((MethodDeclaration)bd).getReturnType().getType().equals(each)
 		)).asSequence();
 		time = System.currentTimeMillis()-time;
@@ -272,15 +273,35 @@ public class CrossEcoreJavaBenchmark {
 	@Test
 	public void textElementInJavadoc() {
 		
+//		long time = System.currentTimeMillis();
 //		Set<CompilationUnit> result1 = model.getCompilationUnits();
+//		time = System.currentTimeMillis()-time;
+//		System.out.println("crossecore: TextElementInJavadoc1: "+time);
 //		
+//		time = System.currentTimeMillis();
 //		Set<Comment> result2 = model.getCompilationUnits().collect2(Comment.class, cu->cu.getCommentList());
+//		time = System.currentTimeMillis()-time;
+//		System.out.println("crossecore: TextElementInJavadoc2: "+time);
 //		
+//		time = System.currentTimeMillis();
 //		Set<Comment> result3 = model.getCompilationUnits().collect2(Comment.class, cu->cu.getCommentList()).select(each->each instanceof Javadoc);
+//		time = System.currentTimeMillis()-time;
+//		System.out.println("crossecore: TextElementInJavadoc3: "+time);
+//
+//		time = System.currentTimeMillis();
+//		Set<TagElement> result35 = model.getCompilationUnits().collect2(Comment.class, cu->cu.getCommentList()).select(each->each instanceof Javadoc).collect2(ASTNode.class, o->((Javadoc)o).getTags());
+//		time = System.currentTimeMillis()-time;
+//		System.out.println("crossecore: TextElementInJavadoc3.5: "+time);
 //		
+//		time = System.currentTimeMillis();
 //		Set<ASTNode> result4 = model.getCompilationUnits().collect2(Comment.class, cu->cu.getCommentList()).select(each->each instanceof Javadoc).collect2(ASTNode.class, o->((Javadoc)o).getTags().collect2(ASTNode.class, t->t.getFragments()));
+//		time = System.currentTimeMillis()-time;
+//		System.out.println("crossecore: TextElementInJavadoc4: "+time);
 //		
+//		time = System.currentTimeMillis();
 //		Set<ASTNode> result5 = model.getCompilationUnits().collect2(Comment.class, cu->cu.getCommentList()).select(each->each instanceof Javadoc).collect2(ASTNode.class, o->((Javadoc)o).getTags().collect2(ASTNode.class, t->t.getFragments())).select(each -> each instanceof TextElement);
+//		time = System.currentTimeMillis()-time;
+//		System.out.println("crossecore: TextElementInJavadoc5: "+time);
 		
 		long time = System.currentTimeMillis();
 		Sequence<ASTNode> result = model
@@ -295,7 +316,30 @@ public class CrossEcoreJavaBenchmark {
 		System.out.println("crossecore: TextElementInJavadoc: "+time);
 		System.out.println("crossecore: TextElementInJavadoc size: "+result.size());
 		
+		
+		
 	}
+	
+	@Test
+	public void emptyTextElementInJavadoc() {
+		
+		
+		long time = System.currentTimeMillis();
+		Sequence<ASTNode> result = model
+		.getCompilationUnits()
+		.collect2(Comment.class, cu->cu.getCommentList())
+		.select(each->each instanceof Javadoc)
+		.collect2(ASTNode.class, o->((Javadoc)o).getTags().collect2(ASTNode.class, t->t.getFragments()))
+		.select(each -> each instanceof TextElement)
+		.select(each -> ((TextElement)each).getText().length()==0)
+		.asSequence();
+		
+		time = System.currentTimeMillis()-time;
+		System.out.println("crossecore: emptyTextElementInJavadoc: "+time);
+		System.out.println("crossecore: emptyTextElementInJavadoc size: "+result.size());
+		
+	}	
+	
 	
 	@Test
 	public void thrownExceptions() {

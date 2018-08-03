@@ -40,7 +40,8 @@ public class OrderedSet<T> extends AbstractCollection<T> {
 
         for (T element : this)
         {
-            result.add(lambda.apply(element));
+        	//skip notifications and reverse adding
+            result.doAddUnique(lambda.apply(element));
         }
 
         return result;
@@ -55,7 +56,7 @@ public class OrderedSet<T> extends AbstractCollection<T> {
         	Collection<T2> e = lambda.apply(element);
         	
         	for(T2 ee : e) {
-        		result.add(ee);
+        		result.doAddUnique(ee);
         	}
             
         }
@@ -71,7 +72,7 @@ public class OrderedSet<T> extends AbstractCollection<T> {
         {
         	if(lambda.test(element)) {
         		
-        		result.add(element);
+        		result.doAddUnique(element);
         	}
         }
 

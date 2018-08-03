@@ -78,9 +78,13 @@ public class AbstractCollection<T> extends EObjectEList<T> implements Collection
 	public int size() {
 		return super.size();
 	}
+	
+	
 
 	@Override
 	public boolean includes(T element) {
+		
+		
 		return this.contains(element);
 	}
 
@@ -133,7 +137,7 @@ public class AbstractCollection<T> extends EObjectEList<T> implements Collection
 			
 			T next = iter.next();
 			
-			result.add(next);
+			result.doAddUnique(next);
 		}
 		
 		return result;
@@ -148,7 +152,7 @@ public class AbstractCollection<T> extends EObjectEList<T> implements Collection
 			
 			T next = iter.next();
 			
-			result.add(next);
+			result.doAddUnique(next);
 		}
 		
 		return result;
@@ -162,7 +166,8 @@ public class AbstractCollection<T> extends EObjectEList<T> implements Collection
 			
 			T next = iter.next();
 			
-			result.add(next);
+			//TODO is that ok?
+			result.doAddUnique(next);
 		}
 		
 		return result;
@@ -173,13 +178,11 @@ public class AbstractCollection<T> extends EObjectEList<T> implements Collection
 
 		Bag<T> result = new Bag<T>(dataClass);
 		
-		result.addAll(this);
-		
 		for(Iterator<T> iter = this.iterator();iter.hasNext();) {
 			
 			T next = iter.next();
-			
-			result.add(next);
+			//TODO is that ok?
+			result.doAddUnique(next);
 		}
 		
 		return result;

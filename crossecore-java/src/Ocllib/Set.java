@@ -36,7 +36,7 @@ public class Set<T> extends AbstractCollection<T> {
 
         for (T element : this)
         {
-            result.add(lambda.apply(element));
+            result.doAddUnique(lambda.apply(element));
         }
 
         return result;
@@ -52,7 +52,7 @@ public class Set<T> extends AbstractCollection<T> {
         	Collection<T2> e = lambda.apply(element);
         	
         	for(T2 ee : e) {
-        		result.add(ee);
+        		result.doAddUnique(ee);
         	}
             
         }
@@ -68,7 +68,7 @@ public class Set<T> extends AbstractCollection<T> {
         {
         	if(lambda.test(element)) {
         		
-        		result.add(element);
+        		result.doAddUnique(element);
         	}
         }
 
