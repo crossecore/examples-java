@@ -36,3 +36,13 @@ pattern textElementInJavadoc(Ff) {
 	Javadoc.tags.fragments(Cl,Ff);
 	TextElement(Ff);
 }
+
+pattern emptyTextElementInJavadoc(Ff) {
+	Model(Mm);
+	Model.compilationUnits.commentList(Mm,Cl);
+	Javadoc(Cl);
+	Javadoc.tags.fragments(Cl,Ff);
+	TextElement(Ff);
+	TextElement.text(Ff, x);
+	check(x.length()==0);
+}

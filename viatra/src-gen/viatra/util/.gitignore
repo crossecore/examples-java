@@ -8,3 +8,5 @@
 /.ThrownExceptionsQuerySpecification.java._trace
 /.TextElementInJavadocProcessor.java._trace
 /.TextElementInJavadocQuerySpecification.java._trace
+/.EmptyTextElementInJavadocProcessor.java._trace
+/.EmptyTextElementInJavadocQuerySpecification.java._trace

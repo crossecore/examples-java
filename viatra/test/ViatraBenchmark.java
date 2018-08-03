@@ -19,6 +19,8 @@ import org.junit.Test;
 import java_.Model;
 import java_.TypeAccess;
 import java_.impl.Java_PackageImpl;
+import viatra.EmptyTextElementInJavadocMatch;
+import viatra.EmptyTextElementInJavadocMatcher;
 import viatra.Grabats09Match;
 import viatra.Grabats09Matcher;
 import viatra.InvisibleMethodsMatch;
@@ -140,6 +142,25 @@ public class ViatraBenchmark {
 			
 			time = System.currentTimeMillis()-time;
 			System.out.println("viatra: textElementInJavadoc: "+time);
+		} catch (ViatraQueryException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	@Test
+	public void emptyTextElementInJavadoc() {
+		
+		EmptyTextElementInJavadocMatcher  matcher;
+		try {
+			long time = System.currentTimeMillis();
+			matcher = EmptyTextElementInJavadocMatcher.on(engine);
+			Collection<EmptyTextElementInJavadocMatch> matches = matcher.getAllMatches();
+			System.out.println("Result set size : " + matches.size());
+			
+			time = System.currentTimeMillis()-time;
+			System.out.println("viatra: emptyTextElementInJavadoc: "+time);
 		} catch (ViatraQueryException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

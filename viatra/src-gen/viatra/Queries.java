@@ -6,10 +6,12 @@ package viatra;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedPatternGroup;
 import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
+import viatra.EmptyTextElementInJavadocMatcher;
 import viatra.Grabats09Matcher;
 import viatra.InvisibleMethodsMatcher;
 import viatra.TextElementInJavadocMatcher;
 import viatra.ThrownExceptionsMatcher;
+import viatra.util.EmptyTextElementInJavadocQuerySpecification;
 import viatra.util.Grabats09QuerySpecification;
 import viatra.util.InvisibleMethodsQuerySpecification;
 import viatra.util.TextElementInJavadocQuerySpecification;
@@ -27,6 +29,7 @@ import viatra.util.ThrownExceptionsQuerySpecification;
  * <li>thrownExceptions</li>
  * <li>grabats09</li>
  * <li>textElementInJavadoc</li>
+ * <li>emptyTextElementInJavadoc</li>
  * </ul>
  * 
  * @see IPatternGroup
@@ -55,6 +58,7 @@ public final class Queries extends BaseGeneratedPatternGroup {
     querySpecifications.add(ThrownExceptionsQuerySpecification.instance());
     querySpecifications.add(Grabats09QuerySpecification.instance());
     querySpecifications.add(TextElementInJavadocQuerySpecification.instance());
+    querySpecifications.add(EmptyTextElementInJavadocQuerySpecification.instance());
   }
   
   public InvisibleMethodsQuerySpecification getInvisibleMethods() throws ViatraQueryException {
@@ -87,5 +91,13 @@ public final class Queries extends BaseGeneratedPatternGroup {
   
   public TextElementInJavadocMatcher getTextElementInJavadoc(final ViatraQueryEngine engine) throws ViatraQueryException {
     return TextElementInJavadocMatcher.on(engine);
+  }
+  
+  public EmptyTextElementInJavadocQuerySpecification getEmptyTextElementInJavadoc() throws ViatraQueryException {
+    return EmptyTextElementInJavadocQuerySpecification.instance();
+  }
+  
+  public EmptyTextElementInJavadocMatcher getEmptyTextElementInJavadoc(final ViatraQueryEngine engine) throws ViatraQueryException {
+    return EmptyTextElementInJavadocMatcher.on(engine);
   }
 }

@@ -9,3 +9,5 @@
 /.Queries.java._trace
 /.TextElementInJavadocMatch.java._trace
 /.TextElementInJavadocMatcher.java._trace
+/.EmptyTextElementInJavadocMatch.java._trace
+/.EmptyTextElementInJavadocMatcher.java._trace
