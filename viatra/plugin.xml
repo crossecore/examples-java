@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><plugin>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated java -->
+    <package class="java_.Java_Package" genModel="model/java.genmodel" uri="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_"/>
+  </extension>
   <extension id="viatra.Queries" point="org.eclipse.viatra.query.runtime.queryspecification">
     <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:viatra.Queries" id="viatra.Queries">
       <query-specification fqn="viatra.invisibleMethods"/>
@@ -7,9 +11,5 @@
       <query-specification fqn="viatra.textElementInJavadoc"/>
       <query-specification fqn="viatra.emptyTextElementInJavadoc"/>
     </group>
-  </extension>
-  <extension point="org.eclipse.emf.ecore.generated_package">
-    <!-- @generated java -->
-    <package class="java_.Java_Package" genModel="model/java.genmodel" uri="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java_"/>
   </extension>
 </plugin>

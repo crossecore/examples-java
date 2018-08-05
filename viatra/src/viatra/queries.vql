@@ -19,7 +19,9 @@ pattern thrownExceptions(Ex) {
 	ClassDeclaration.bodyDeclarations(Owned,Body);
 	MethodDeclaration(Body);
 	MethodDeclaration.thrownExceptions(Body,Ex);
+	
 }
+
 
 pattern grabats09(Tt) {
 	TypeDeclaration(Tt);
@@ -36,6 +38,7 @@ pattern textElementInJavadoc(Ff) {
 	Javadoc.tags.fragments(Cl,Ff);
 	TextElement(Ff);
 }
+
 
 pattern emptyTextElementInJavadoc(Ff) {
 	Model(Mm);

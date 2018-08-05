@@ -9,8 +9,7 @@ Bundle-Localization: plugin
 Export-Package: java_,
   java_.impl,
   java_.util,
-  viatra,
-  viatra.util
+  viatra
 Require-Bundle: viatra,
   org.eclipse.core.runtime,
   org.eclipse.emf.ecore;visibility:=reexport,

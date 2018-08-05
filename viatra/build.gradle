@@ -38,7 +38,8 @@ dependencies {
     compile group: 'org.eclipse.xtext', name: 'org.eclipse.xtext.common.types', version: '2.13.0'
     compile group: 'org.eclipse.xtext', name: 'org.eclipse.xtext.util', version: '2.13.0'
 
-	compile group: 'org.eclipse.viatra', name: 'viatra-query-runtime', version: '2.0.0'
+	compile group: 'org.eclipse.viatra', name: 'viatra-query-runtime', version: '2.0.1'
+	compile group: 'org.eclipse.viatra', name: 'org.eclipse.viatra.query.runtime.base.itc', version: '2.0.1'
 
   	testImplementation 'junit:junit:4.12'
 }
