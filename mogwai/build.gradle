@@ -1,0 +1,29 @@
+
+apply plugin: 'java-library'
+apply plugin: 'eclipse'
+
+repositories {
+
+    jcenter()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+    
+    test {
+        java {
+            srcDir 'test'
+        }
+    }
+
+}
+
+dependencies {
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
