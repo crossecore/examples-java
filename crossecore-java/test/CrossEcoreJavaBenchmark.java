@@ -97,26 +97,23 @@ public class CrossEcoreJavaBenchmark {
         resourceSet.getPackageRegistry().put("java_", Java_PackageImpl.eINSTANCE);
         resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
         
-        //resource = resourceSet.getResource(URI.createURI("resources/org.eclipse.gmt.modisco.java.kyanos.xmi"), true);
+        resource = resourceSet.getResource(URI.createURI("resources/org.eclipse.gmt.modisco.java.kyanos.xmi"), true);
         
-        resource = resourceSet.getResource(URI.createURI("resources/org.eclipse.jdt.core.xmi"), true);
+        //resource = resourceSet.getResource(URI.createURI("resources/org.eclipse.jdt.core.xmi"), true);
 	
 	}
     
 	@After
     public void tearDown() throws Exception {
         
-		this.resource.unload();
 		this.resource = null;
 		
 		this.resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().clear();
 		this.resourceSet.getPackageRegistry().clear();
 		this.resourceSet = null;
 		
-		
     }
 	
-
 
 
 	protected void startWatch() {
