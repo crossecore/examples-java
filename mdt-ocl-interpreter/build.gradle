@@ -46,6 +46,7 @@ dependencies {
     compile group: 'org.eclipse.xtext', name: 'org.eclipse.xtext.util', version: '2.13.0'
     
     //https://hudson.eclipse.org/ocl/view/OCL/job/ocl-oxygen-master/lastBuild/artifact/MDT-OCL.p2.repository/plugins/
+    /*
     compile files('lib/org.eclipse.ocl_3.6.200.v20170522-1736.jar')
     compile files('lib/org.eclipse.ocl.common_1.4.200.v20160613-1518.jar')
     compile files('lib/org.eclipse.ocl.ecore_3.6.200.v20170522-1736.jar')
@@ -55,6 +56,18 @@ dependencies {
     compile files('lib/org.eclipse.ocl.xtext.essentialocl_1.3.0.v20170522-1753.jar')
     compile files('lib/org.eclipse.ocl.xtext.oclinecore_1.3.0.v20170522-1753.jar')
     compile files('lib/org.eclipse.ocl.xtext.oclstdlib_1.3.0.v20170522-1753.jar')
+    */
+
+	compile files('lib/org.eclipse.ocl_3.10.0.v20180805-0841.jar')
+    compile files('lib/org.eclipse.ocl.common_1.8.0.v20180805-0841.jar')
+    compile files('lib/org.eclipse.ocl.ecore_3.10.0.v20180805-0841.jar')
+    compile files('lib/org.eclipse.ocl.pivot_1.5.0.v20180805-0841.jar')
+    compile files('lib/org.eclipse.ocl.xtext.base_1.5.0.v20180805-0841.jar')
+    compile files('lib/org.eclipse.ocl.xtext.completeocl_1.5.0.v20180805-0841.jar')
+    compile files('lib/org.eclipse.ocl.xtext.essentialocl_1.5.0.v20180805-0841.jar')
+    compile files('lib/org.eclipse.ocl.xtext.oclinecore_1.5.0.v20180805-0841.jar')
+    compile files('lib/org.eclipse.ocl.xtext.oclstdlib_1.5.0.v20180805-0841.jar')
+
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
