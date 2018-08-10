@@ -68,11 +68,11 @@ extends StatementImpl implements SynchronizedStatement
 	}
 	
 	
-	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _expression;
-		_expression = newobj;
+	public NotificationChain basicSetBody(Block newobj, NotificationChain msgs) {
+		Block oldobj = _body;
+		_body = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SYNCHRONIZEDSTATEMENT_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SYNCHRONIZEDSTATEMENT_BODY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -82,11 +82,11 @@ extends StatementImpl implements SynchronizedStatement
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetBody(Block newobj, NotificationChain msgs) {
-		Block oldobj = _body;
-		_body = newobj;
+	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _expression;
+		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SYNCHRONIZEDSTATEMENT_BODY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SYNCHRONIZEDSTATEMENT_EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

@@ -57,11 +57,11 @@ extends ASTNodeImpl implements MemberRef
 	}
 	
 	
-	public NotificationChain basicSetQualifier(TypeAccess newobj, NotificationChain msgs) {
-		TypeAccess oldobj = _qualifier;
-		_qualifier = newobj;
+	public NotificationChain basicSetMember(NamedElement newobj, NotificationChain msgs) {
+		NamedElement oldobj = _member;
+		_member = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.MEMBERREF_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.MEMBERREF_MEMBER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -71,11 +71,11 @@ extends ASTNodeImpl implements MemberRef
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetMember(NamedElement newobj, NotificationChain msgs) {
-		NamedElement oldobj = _member;
-		_member = newobj;
+	public NotificationChain basicSetQualifier(TypeAccess newobj, NotificationChain msgs) {
+		TypeAccess oldobj = _qualifier;
+		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.MEMBERREF_MEMBER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.MEMBERREF_QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

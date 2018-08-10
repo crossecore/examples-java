@@ -3,27 +3,20 @@ public interface AnnotationTypeMemberDeclaration
  extends BodyDeclaration
 {
 	
-	public static Ocllib.QuickSet<AnnotationTypeMemberDeclaration> allInstances = new Ocllib.QuickSet<AnnotationTypeMemberDeclaration>(AnnotationTypeMemberDeclaration.class);
-	
-	/*
 	public static Ocllib.QuickSet<AnnotationTypeMemberDeclaration> allInstances_ = new Ocllib.QuickSet<AnnotationTypeMemberDeclaration>(AnnotationTypeMemberDeclaration.class);
 	
-	public static Ocllib.QuickSet<AnnotationTypeMemberDeclaration> allInstancesClosure = new Ocllib.QuickSet<AnnotationTypeMemberDeclaration>(AnnotationTypeMemberDeclaration.class);
 		
 	public static Ocllib.QuickSet<AnnotationTypeMemberDeclaration> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(NamedElement.allInstances_);
-			allInstancesClosure.addAll(BodyDeclaration.allInstances_);
-			allInstancesClosure.addAll(AnnotationTypeMemberDeclaration.allInstances_);
-		}
+		Ocllib.QuickSet<AnnotationTypeMemberDeclaration> result = new Ocllib.QuickSet<AnnotationTypeMemberDeclaration>(AnnotationTypeMemberDeclaration.class);
+		result.addAll(AnnotationTypeMemberDeclaration.allInstances_);
 		
-		return allInstancesClosure;
+		result.addAll(UnresolvedAnnotationTypeMemberDeclaration.allInstances_);
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<AnnotationTypeMemberDeclaration> allInstances = new Ocllib.QuickSet<AnnotationTypeMemberDeclaration>(AnnotationTypeMemberDeclaration.class);
 	
 	
 	Expression getDefault();

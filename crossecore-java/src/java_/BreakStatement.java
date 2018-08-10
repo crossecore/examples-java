@@ -3,26 +3,19 @@ public interface BreakStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<BreakStatement> allInstances = new Ocllib.QuickSet<BreakStatement>(BreakStatement.class);
-	
-	/*
 	public static Ocllib.QuickSet<BreakStatement> allInstances_ = new Ocllib.QuickSet<BreakStatement>(BreakStatement.class);
 	
-	public static Ocllib.QuickSet<BreakStatement> allInstancesClosure = new Ocllib.QuickSet<BreakStatement>(BreakStatement.class);
 		
 	public static Ocllib.QuickSet<BreakStatement> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Statement.allInstances_);
-			allInstancesClosure.addAll(BreakStatement.allInstances_);
-		}
+		Ocllib.QuickSet<BreakStatement> result = new Ocllib.QuickSet<BreakStatement>(BreakStatement.class);
+		result.addAll(BreakStatement.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<BreakStatement> allInstances = new Ocllib.QuickSet<BreakStatement>(BreakStatement.class);
 	
 	
 	LabeledStatement getLabel();

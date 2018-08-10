@@ -3,25 +3,19 @@ public interface Modifier
  extends ASTNode
 {
 	
-	public static Ocllib.QuickSet<Modifier> allInstances = new Ocllib.QuickSet<Modifier>(Modifier.class);
-	
-	/*
 	public static Ocllib.QuickSet<Modifier> allInstances_ = new Ocllib.QuickSet<Modifier>(Modifier.class);
 	
-	public static Ocllib.QuickSet<Modifier> allInstancesClosure = new Ocllib.QuickSet<Modifier>(Modifier.class);
 		
 	public static Ocllib.QuickSet<Modifier> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Modifier.allInstances_);
-		}
+		Ocllib.QuickSet<Modifier> result = new Ocllib.QuickSet<Modifier>(Modifier.class);
+		result.addAll(Modifier.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<Modifier> allInstances = new Ocllib.QuickSet<Modifier>(Modifier.class);
 	
 	VisibilityKind getVisibility();
 	void setVisibility(VisibilityKind value);

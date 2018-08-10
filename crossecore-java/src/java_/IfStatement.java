@@ -3,26 +3,19 @@ public interface IfStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<IfStatement> allInstances = new Ocllib.QuickSet<IfStatement>(IfStatement.class);
-	
-	/*
 	public static Ocllib.QuickSet<IfStatement> allInstances_ = new Ocllib.QuickSet<IfStatement>(IfStatement.class);
 	
-	public static Ocllib.QuickSet<IfStatement> allInstancesClosure = new Ocllib.QuickSet<IfStatement>(IfStatement.class);
 		
 	public static Ocllib.QuickSet<IfStatement> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Statement.allInstances_);
-			allInstancesClosure.addAll(IfStatement.allInstances_);
-		}
+		Ocllib.QuickSet<IfStatement> result = new Ocllib.QuickSet<IfStatement>(IfStatement.class);
+		result.addAll(IfStatement.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<IfStatement> allInstances = new Ocllib.QuickSet<IfStatement>(IfStatement.class);
 	
 	
 	Expression getExpression();

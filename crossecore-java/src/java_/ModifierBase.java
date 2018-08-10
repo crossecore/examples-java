@@ -263,11 +263,6 @@ extends ASTNodeImpl implements Modifier
 					msgs = eBasicRemoveFromContainer(msgs);
 				}
 				return basicSetBodyDeclaration((BodyDeclaration)otherEnd, msgs);
-			case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT:
-				if (eInternalContainer() != null) {
-					msgs = eBasicRemoveFromContainer(msgs);
-				}
-				return basicSetVariableDeclarationStatement((VariableDeclarationStatement)otherEnd, msgs);
 			case Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION:
 				if (eInternalContainer() != null) {
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -278,6 +273,11 @@ extends ASTNodeImpl implements Modifier
 					msgs = eBasicRemoveFromContainer(msgs);
 				}
 				return basicSetVariableDeclarationExpression((VariableDeclarationExpression)otherEnd, msgs);
+			case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT:
+				if (eInternalContainer() != null) {
+					msgs = eBasicRemoveFromContainer(msgs);
+				}
+				return basicSetVariableDeclarationStatement((VariableDeclarationStatement)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -287,12 +287,12 @@ extends ASTNodeImpl implements Modifier
 		switch (featureID) {
 			case Java_PackageImpl.MODIFIER_BODYDECLARATION:
 				return basicSetBodyDeclaration(null, msgs);
-			case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT:
-				return basicSetVariableDeclarationStatement(null, msgs);
 			case Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION:
 				return basicSetSingleVariableDeclaration(null, msgs);
 			case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONEXPRESSION:
 				return basicSetVariableDeclarationExpression(null, msgs);
+			case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT:
+				return basicSetVariableDeclarationStatement(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -301,16 +301,16 @@ extends ASTNodeImpl implements Modifier
 			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.MODIFIER_BODYDECLARATION, msgs);
 			return msgs;
 	}
-	public NotificationChain basicSetVariableDeclarationStatement(VariableDeclarationStatement newobj, NotificationChain msgs) {
-			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT, msgs);
-			return msgs;
-	}
 	public NotificationChain basicSetSingleVariableDeclaration(SingleVariableDeclaration newobj, NotificationChain msgs) {
 			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION, msgs);
 			return msgs;
 	}
 	public NotificationChain basicSetVariableDeclarationExpression(VariableDeclarationExpression newobj, NotificationChain msgs) {
 			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONEXPRESSION, msgs);
+			return msgs;
+	}
+	public NotificationChain basicSetVariableDeclarationStatement(VariableDeclarationStatement newobj, NotificationChain msgs) {
+			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT, msgs);
 			return msgs;
 	}
 	

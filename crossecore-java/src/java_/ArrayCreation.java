@@ -3,26 +3,19 @@ public interface ArrayCreation
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<ArrayCreation> allInstances = new Ocllib.QuickSet<ArrayCreation>(ArrayCreation.class);
-	
-	/*
 	public static Ocllib.QuickSet<ArrayCreation> allInstances_ = new Ocllib.QuickSet<ArrayCreation>(ArrayCreation.class);
 	
-	public static Ocllib.QuickSet<ArrayCreation> allInstancesClosure = new Ocllib.QuickSet<ArrayCreation>(ArrayCreation.class);
 		
 	public static Ocllib.QuickSet<ArrayCreation> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Expression.allInstances_);
-			allInstancesClosure.addAll(ArrayCreation.allInstances_);
-		}
+		Ocllib.QuickSet<ArrayCreation> result = new Ocllib.QuickSet<ArrayCreation>(ArrayCreation.class);
+		result.addAll(ArrayCreation.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<ArrayCreation> allInstances = new Ocllib.QuickSet<ArrayCreation>(ArrayCreation.class);
 	
 	Ocllib.OrderedSet<Expression> getDimensions();
 	

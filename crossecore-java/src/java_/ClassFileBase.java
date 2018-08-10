@@ -78,11 +78,11 @@ extends NamedElementImpl implements ClassFile
 	}
 	
 	
-	public NotificationChain basicSetType(AbstractTypeDeclaration newobj, NotificationChain msgs) {
-		AbstractTypeDeclaration oldobj = _type;
-		_type = newobj;
+	public NotificationChain basicSetPackage(Package newobj, NotificationChain msgs) {
+		Package oldobj = _package;
+		_package = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSFILE_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSFILE_PACKAGE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -92,11 +92,11 @@ extends NamedElementImpl implements ClassFile
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetPackage(Package newobj, NotificationChain msgs) {
-		Package oldobj = _package;
-		_package = newobj;
+	public NotificationChain basicSetType(AbstractTypeDeclaration newobj, NotificationChain msgs) {
+		AbstractTypeDeclaration oldobj = _type;
+		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSFILE_PACKAGE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSFILE_TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

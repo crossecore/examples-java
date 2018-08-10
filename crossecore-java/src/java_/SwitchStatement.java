@@ -3,26 +3,19 @@ public interface SwitchStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<SwitchStatement> allInstances = new Ocllib.QuickSet<SwitchStatement>(SwitchStatement.class);
-	
-	/*
 	public static Ocllib.QuickSet<SwitchStatement> allInstances_ = new Ocllib.QuickSet<SwitchStatement>(SwitchStatement.class);
 	
-	public static Ocllib.QuickSet<SwitchStatement> allInstancesClosure = new Ocllib.QuickSet<SwitchStatement>(SwitchStatement.class);
 		
 	public static Ocllib.QuickSet<SwitchStatement> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Statement.allInstances_);
-			allInstancesClosure.addAll(SwitchStatement.allInstances_);
-		}
+		Ocllib.QuickSet<SwitchStatement> result = new Ocllib.QuickSet<SwitchStatement>(SwitchStatement.class);
+		result.addAll(SwitchStatement.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<SwitchStatement> allInstances = new Ocllib.QuickSet<SwitchStatement>(SwitchStatement.class);
 	
 	
 	Expression getExpression();

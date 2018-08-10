@@ -3,26 +3,19 @@ public interface PackageAccess
  extends NamespaceAccess
 {
 	
-	public static Ocllib.QuickSet<PackageAccess> allInstances = new Ocllib.QuickSet<PackageAccess>(PackageAccess.class);
-	
-	/*
 	public static Ocllib.QuickSet<PackageAccess> allInstances_ = new Ocllib.QuickSet<PackageAccess>(PackageAccess.class);
 	
-	public static Ocllib.QuickSet<PackageAccess> allInstancesClosure = new Ocllib.QuickSet<PackageAccess>(PackageAccess.class);
 		
 	public static Ocllib.QuickSet<PackageAccess> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(NamespaceAccess.allInstances_);
-			allInstancesClosure.addAll(PackageAccess.allInstances_);
-		}
+		Ocllib.QuickSet<PackageAccess> result = new Ocllib.QuickSet<PackageAccess>(PackageAccess.class);
+		result.addAll(PackageAccess.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<PackageAccess> allInstances = new Ocllib.QuickSet<PackageAccess>(PackageAccess.class);
 	
 	
 	Package getPackage();

@@ -17,8 +17,144 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 		}
 		
 		private static boolean isInited = false;
+		
+		
+		public static void unload(){
+		
+			AbstractMethodDeclaration.allInstances_.clear();
+			AbstractMethodInvocation.allInstances_.clear();
+			AbstractTypeDeclaration.allInstances_.clear();
+			AbstractTypeQualifiedExpression.allInstances_.clear();
+			AbstractVariablesContainer.allInstances_.clear();
+			Annotation.allInstances_.clear();
+			Archive.allInstances_.clear();
+			AssertStatement.allInstances_.clear();
+			ASTNode.allInstances_.clear();
+			AnnotationMemberValuePair.allInstances_.clear();
+			AnnotationTypeDeclaration.allInstances_.clear();
+			AnnotationTypeMemberDeclaration.allInstances_.clear();
+			AnonymousClassDeclaration.allInstances_.clear();
+			ArrayAccess.allInstances_.clear();
+			ArrayCreation.allInstances_.clear();
+			ArrayInitializer.allInstances_.clear();
+			ArrayLengthAccess.allInstances_.clear();
+			ArrayType.allInstances_.clear();
+			Assignment.allInstances_.clear();
+			BodyDeclaration.allInstances_.clear();
+			BooleanLiteral.allInstances_.clear();
+			BlockComment.allInstances_.clear();
+			Block.allInstances_.clear();
+			BreakStatement.allInstances_.clear();
+			CastExpression.allInstances_.clear();
+			CatchClause.allInstances_.clear();
+			CharacterLiteral.allInstances_.clear();
+			ClassFile.allInstances_.clear();
+			ClassInstanceCreation.allInstances_.clear();
+			ConstructorDeclaration.allInstances_.clear();
+			ConditionalExpression.allInstances_.clear();
+			ConstructorInvocation.allInstances_.clear();
+			ClassDeclaration.allInstances_.clear();
+			Comment.allInstances_.clear();
+			CompilationUnit.allInstances_.clear();
+			ContinueStatement.allInstances_.clear();
+			DoStatement.allInstances_.clear();
+			EmptyStatement.allInstances_.clear();
+			EnhancedForStatement.allInstances_.clear();
+			EnumConstantDeclaration.allInstances_.clear();
+			EnumDeclaration.allInstances_.clear();
+			Expression.allInstances_.clear();
+			ExpressionStatement.allInstances_.clear();
+			FieldAccess.allInstances_.clear();
+			FieldDeclaration.allInstances_.clear();
+			ForStatement.allInstances_.clear();
+			IfStatement.allInstances_.clear();
+			ImportDeclaration.allInstances_.clear();
+			InfixExpression.allInstances_.clear();
+			Initializer.allInstances_.clear();
+			InstanceofExpression.allInstances_.clear();
+			InterfaceDeclaration.allInstances_.clear();
+			Javadoc.allInstances_.clear();
+			LabeledStatement.allInstances_.clear();
+			LineComment.allInstances_.clear();
+			Manifest.allInstances_.clear();
+			ManifestAttribute.allInstances_.clear();
+			ManifestEntry.allInstances_.clear();
+			MemberRef.allInstances_.clear();
+			MethodDeclaration.allInstances_.clear();
+			MethodInvocation.allInstances_.clear();
+			MethodRef.allInstances_.clear();
+			MethodRefParameter.allInstances_.clear();
+			Model.allInstances_.clear();
+			Modifier.allInstances_.clear();
+			NamedElement.allInstances_.clear();
+			NamespaceAccess.allInstances_.clear();
+			NumberLiteral.allInstances_.clear();
+			NullLiteral.allInstances_.clear();
+			Package.allInstances_.clear();
+			PackageAccess.allInstances_.clear();
+			ParameterizedType.allInstances_.clear();
+			ParenthesizedExpression.allInstances_.clear();
+			PostfixExpression.allInstances_.clear();
+			PrefixExpression.allInstances_.clear();
+			PrimitiveType.allInstances_.clear();
+			PrimitiveTypeBoolean.allInstances_.clear();
+			PrimitiveTypeByte.allInstances_.clear();
+			PrimitiveTypeChar.allInstances_.clear();
+			PrimitiveTypeDouble.allInstances_.clear();
+			PrimitiveTypeShort.allInstances_.clear();
+			PrimitiveTypeFloat.allInstances_.clear();
+			PrimitiveTypeInt.allInstances_.clear();
+			PrimitiveTypeLong.allInstances_.clear();
+			PrimitiveTypeVoid.allInstances_.clear();
+			ReturnStatement.allInstances_.clear();
+			SingleVariableAccess.allInstances_.clear();
+			SingleVariableDeclaration.allInstances_.clear();
+			Statement.allInstances_.clear();
+			StringLiteral.allInstances_.clear();
+			SuperConstructorInvocation.allInstances_.clear();
+			SuperFieldAccess.allInstances_.clear();
+			SuperMethodInvocation.allInstances_.clear();
+			SwitchCase.allInstances_.clear();
+			SwitchStatement.allInstances_.clear();
+			SynchronizedStatement.allInstances_.clear();
+			TagElement.allInstances_.clear();
+			TextElement.allInstances_.clear();
+			ThisExpression.allInstances_.clear();
+			ThrowStatement.allInstances_.clear();
+			TryStatement.allInstances_.clear();
+			Type.allInstances_.clear();
+			TypeAccess.allInstances_.clear();
+			TypeDeclaration.allInstances_.clear();
+			TypeDeclarationStatement.allInstances_.clear();
+			TypeLiteral.allInstances_.clear();
+			TypeParameter.allInstances_.clear();
+			UnresolvedItem.allInstances_.clear();
+			UnresolvedItemAccess.allInstances_.clear();
+			UnresolvedAnnotationDeclaration.allInstances_.clear();
+			UnresolvedAnnotationTypeMemberDeclaration.allInstances_.clear();
+			UnresolvedClassDeclaration.allInstances_.clear();
+			UnresolvedEnumDeclaration.allInstances_.clear();
+			UnresolvedInterfaceDeclaration.allInstances_.clear();
+			UnresolvedLabeledStatement.allInstances_.clear();
+			UnresolvedMethodDeclaration.allInstances_.clear();
+			UnresolvedSingleVariableDeclaration.allInstances_.clear();
+			UnresolvedType.allInstances_.clear();
+			UnresolvedTypeDeclaration.allInstances_.clear();
+			UnresolvedVariableDeclarationFragment.allInstances_.clear();
+			VariableDeclaration.allInstances_.clear();
+			VariableDeclarationExpression.allInstances_.clear();
+			VariableDeclarationFragment.allInstances_.clear();
+			VariableDeclarationStatement.allInstances_.clear();
+			WildCardType.allInstances_.clear();
+			WhileStatement.allInstances_.clear();
+			
+		}
+		
 		public static Java_Package init()
 		{
+			
+			unload();
+			
 			if (isInited) return (Java_Package)EPackage.Registry.INSTANCE.getEPackage(Java_PackageImpl.eNS_URI);
 
 			// Obtain or create and register package

@@ -3,26 +3,19 @@ public interface WhileStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<WhileStatement> allInstances = new Ocllib.QuickSet<WhileStatement>(WhileStatement.class);
-	
-	/*
 	public static Ocllib.QuickSet<WhileStatement> allInstances_ = new Ocllib.QuickSet<WhileStatement>(WhileStatement.class);
 	
-	public static Ocllib.QuickSet<WhileStatement> allInstancesClosure = new Ocllib.QuickSet<WhileStatement>(WhileStatement.class);
 		
 	public static Ocllib.QuickSet<WhileStatement> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Statement.allInstances_);
-			allInstancesClosure.addAll(WhileStatement.allInstances_);
-		}
+		Ocllib.QuickSet<WhileStatement> result = new Ocllib.QuickSet<WhileStatement>(WhileStatement.class);
+		result.addAll(WhileStatement.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<WhileStatement> allInstances = new Ocllib.QuickSet<WhileStatement>(WhileStatement.class);
 	
 	
 	Expression getExpression();

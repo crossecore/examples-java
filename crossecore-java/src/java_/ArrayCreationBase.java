@@ -78,11 +78,11 @@ extends ExpressionImpl implements ArrayCreation
 	}
 	
 	
-	public NotificationChain basicSetInitializer(ArrayInitializer newobj, NotificationChain msgs) {
-		ArrayInitializer oldobj = _initializer;
-		_initializer = newobj;
+	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
+		TypeAccess oldobj = _type;
+		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYCREATION_INITIALIZER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYCREATION_TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -92,11 +92,11 @@ extends ExpressionImpl implements ArrayCreation
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
-		TypeAccess oldobj = _type;
-		_type = newobj;
+	public NotificationChain basicSetInitializer(ArrayInitializer newobj, NotificationChain msgs) {
+		ArrayInitializer oldobj = _initializer;
+		_initializer = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYCREATION_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYCREATION_INITIALIZER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

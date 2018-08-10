@@ -3,26 +3,19 @@ public interface BooleanLiteral
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<BooleanLiteral> allInstances = new Ocllib.QuickSet<BooleanLiteral>(BooleanLiteral.class);
-	
-	/*
 	public static Ocllib.QuickSet<BooleanLiteral> allInstances_ = new Ocllib.QuickSet<BooleanLiteral>(BooleanLiteral.class);
 	
-	public static Ocllib.QuickSet<BooleanLiteral> allInstancesClosure = new Ocllib.QuickSet<BooleanLiteral>(BooleanLiteral.class);
 		
 	public static Ocllib.QuickSet<BooleanLiteral> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Expression.allInstances_);
-			allInstancesClosure.addAll(BooleanLiteral.allInstances_);
-		}
+		Ocllib.QuickSet<BooleanLiteral> result = new Ocllib.QuickSet<BooleanLiteral>(BooleanLiteral.class);
+		result.addAll(BooleanLiteral.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<BooleanLiteral> allInstances = new Ocllib.QuickSet<BooleanLiteral>(BooleanLiteral.class);
 	
 	boolean isValue();
 	void setValue(boolean value);

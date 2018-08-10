@@ -100,22 +100,22 @@ extends NamedElementImpl implements Package
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.PACKAGE_PACKAGE:
-				if (eInternalContainer() != null) {
-					msgs = eBasicRemoveFromContainer(msgs);
-				}
-				return basicSetPackage((Package)otherEnd, msgs);
-			case Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS:
-				return getUsagesInPackageAccess().basicAdd((PackageAccess)otherEnd, msgs);
 			case Java_PackageImpl.PACKAGE_MODEL:
 				if (eInternalContainer() != null) {
 					msgs = eBasicRemoveFromContainer(msgs);
 				}
 				return basicSetModel((Model)otherEnd, msgs);
-			case Java_PackageImpl.PACKAGE_OWNEDELEMENTS:
-				return getOwnedElements().basicAdd((AbstractTypeDeclaration)otherEnd, msgs);
 			case Java_PackageImpl.PACKAGE_OWNEDPACKAGES:
 				return getOwnedPackages().basicAdd((Package)otherEnd, msgs);
+			case Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS:
+				return getUsagesInPackageAccess().basicAdd((PackageAccess)otherEnd, msgs);
+			case Java_PackageImpl.PACKAGE_OWNEDELEMENTS:
+				return getOwnedElements().basicAdd((AbstractTypeDeclaration)otherEnd, msgs);
+			case Java_PackageImpl.PACKAGE_PACKAGE:
+				if (eInternalContainer() != null) {
+					msgs = eBasicRemoveFromContainer(msgs);
+				}
+				return basicSetPackage((Package)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -123,26 +123,26 @@ extends NamedElementImpl implements Package
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.PACKAGE_PACKAGE:
-				return basicSetPackage(null, msgs);
-			case Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS:
-				return getUsagesInPackageAccess().basicRemove((PackageAccess)otherEnd, msgs);
 			case Java_PackageImpl.PACKAGE_MODEL:
 				return basicSetModel(null, msgs);
-			case Java_PackageImpl.PACKAGE_OWNEDELEMENTS:
-				return getOwnedElements().basicRemove((AbstractTypeDeclaration)otherEnd, msgs);
 			case Java_PackageImpl.PACKAGE_OWNEDPACKAGES:
 				return getOwnedPackages().basicRemove((Package)otherEnd, msgs);
+			case Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS:
+				return getUsagesInPackageAccess().basicRemove((PackageAccess)otherEnd, msgs);
+			case Java_PackageImpl.PACKAGE_OWNEDELEMENTS:
+				return getOwnedElements().basicRemove((AbstractTypeDeclaration)otherEnd, msgs);
+			case Java_PackageImpl.PACKAGE_PACKAGE:
+				return basicSetPackage(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetPackage(Package newobj, NotificationChain msgs) {
-			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.PACKAGE_PACKAGE, msgs);
-			return msgs;
-	}
 	public NotificationChain basicSetModel(Model newobj, NotificationChain msgs) {
 			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.PACKAGE_MODEL, msgs);
+			return msgs;
+	}
+	public NotificationChain basicSetPackage(Package newobj, NotificationChain msgs) {
+			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.PACKAGE_PACKAGE, msgs);
 			return msgs;
 	}
 	

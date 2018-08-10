@@ -3,25 +3,22 @@ public interface NamespaceAccess
  extends ASTNode
 {
 	
-	public static Ocllib.QuickSet<NamespaceAccess> allInstances = new Ocllib.QuickSet<NamespaceAccess>(NamespaceAccess.class);
-	
-	/*
 	public static Ocllib.QuickSet<NamespaceAccess> allInstances_ = new Ocllib.QuickSet<NamespaceAccess>(NamespaceAccess.class);
 	
-	public static Ocllib.QuickSet<NamespaceAccess> allInstancesClosure = new Ocllib.QuickSet<NamespaceAccess>(NamespaceAccess.class);
 		
 	public static Ocllib.QuickSet<NamespaceAccess> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(NamespaceAccess.allInstances_);
-		}
+		Ocllib.QuickSet<NamespaceAccess> result = new Ocllib.QuickSet<NamespaceAccess>(NamespaceAccess.class);
+		result.addAll(NamespaceAccess.allInstances_);
 		
-		return allInstancesClosure;
+		result.addAll(UnresolvedItemAccess.allInstances_);
+		result.addAll(TypeAccess.allInstances_);
+		result.addAll(PackageAccess.allInstances_);
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<NamespaceAccess> allInstances = new Ocllib.QuickSet<NamespaceAccess>(NamespaceAccess.class);
 	
 	
 }

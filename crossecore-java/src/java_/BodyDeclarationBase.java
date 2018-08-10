@@ -106,11 +106,6 @@ extends NamedElementImpl implements BodyDeclaration
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
-				if (eInternalContainer() != null) {
-					msgs = eBasicRemoveFromContainer(msgs);
-				}
-				return basicSetAbstractTypeDeclaration((AbstractTypeDeclaration)otherEnd, msgs);
 			case Java_PackageImpl.BODYDECLARATION_MODIFIER:
 				if (_modifier != null){
 					msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.BODYDECLARATION_MODIFIER, Modifier.class, msgs);
@@ -121,6 +116,11 @@ extends NamedElementImpl implements BodyDeclaration
 					msgs = eBasicRemoveFromContainer(msgs);
 				}
 				return basicSetAnonymousClassDeclarationOwner((AnonymousClassDeclaration)otherEnd, msgs);
+			case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
+				if (eInternalContainer() != null) {
+					msgs = eBasicRemoveFromContainer(msgs);
+				}
+				return basicSetAbstractTypeDeclaration((AbstractTypeDeclaration)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -128,20 +128,16 @@ extends NamedElementImpl implements BodyDeclaration
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
-				return basicSetAbstractTypeDeclaration(null, msgs);
 			case Java_PackageImpl.BODYDECLARATION_MODIFIER:
 				return basicSetModifier(null, msgs);
 			case Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
 				return basicSetAnonymousClassDeclarationOwner(null, msgs);
+			case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
+				return basicSetAbstractTypeDeclaration(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetAbstractTypeDeclaration(AbstractTypeDeclaration newobj, NotificationChain msgs) {
-			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION, msgs);
-			return msgs;
-	}
 	public NotificationChain basicSetModifier(Modifier newobj, NotificationChain msgs) {
 		Modifier oldobj = _modifier;
 		_modifier = newobj;
@@ -158,6 +154,10 @@ extends NamedElementImpl implements BodyDeclaration
 	}
 	public NotificationChain basicSetAnonymousClassDeclarationOwner(AnonymousClassDeclaration newobj, NotificationChain msgs) {
 			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER, msgs);
+			return msgs;
+	}
+	public NotificationChain basicSetAbstractTypeDeclaration(AbstractTypeDeclaration newobj, NotificationChain msgs) {
+			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION, msgs);
 			return msgs;
 	}
 	

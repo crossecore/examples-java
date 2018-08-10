@@ -95,11 +95,11 @@ extends BodyDeclarationImpl implements AnnotationTypeMemberDeclaration
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
-		TypeAccess oldobj = _type;
-		_type = newobj;
+	public NotificationChain basicSetDefault(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _default;
+		_default = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_DEFAULT, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -109,11 +109,11 @@ extends BodyDeclarationImpl implements AnnotationTypeMemberDeclaration
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetDefault(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _default;
-		_default = newobj;
+	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
+		TypeAccess oldobj = _type;
+		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_DEFAULT, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

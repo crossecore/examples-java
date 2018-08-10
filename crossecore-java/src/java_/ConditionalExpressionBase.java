@@ -94,11 +94,11 @@ extends ExpressionImpl implements ConditionalExpression
 	}
 	
 	
-	public NotificationChain basicSetElseExpression(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _elseExpression;
-		_elseExpression = newobj;
+	public NotificationChain basicSetThenExpression(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _thenExpression;
+		_thenExpression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -122,11 +122,11 @@ extends ExpressionImpl implements ConditionalExpression
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetThenExpression(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _thenExpression;
-		_thenExpression = newobj;
+	public NotificationChain basicSetElseExpression(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _elseExpression;
+		_elseExpression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

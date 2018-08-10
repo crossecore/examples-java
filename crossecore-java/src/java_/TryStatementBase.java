@@ -78,11 +78,11 @@ extends StatementImpl implements TryStatement
 	}
 	
 	
-	public NotificationChain basicSetFinally(Block newobj, NotificationChain msgs) {
-		Block oldobj = _finally;
-		_finally = newobj;
+	public NotificationChain basicSetBody(Block newobj, NotificationChain msgs) {
+		Block oldobj = _body;
+		_body = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TRYSTATEMENT_FINALLY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TRYSTATEMENT_BODY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -92,11 +92,11 @@ extends StatementImpl implements TryStatement
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetBody(Block newobj, NotificationChain msgs) {
-		Block oldobj = _body;
-		_body = newobj;
+	public NotificationChain basicSetFinally(Block newobj, NotificationChain msgs) {
+		Block oldobj = _finally;
+		_finally = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TRYSTATEMENT_BODY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TRYSTATEMENT_FINALLY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

@@ -107,13 +107,13 @@ extends StatementImpl implements VariableDeclarationStatement
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
-				return getFragments().basicAdd((VariableDeclarationFragment)otherEnd, msgs);
 			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER:
 				if (_modifier != null){
 					msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER, Modifier.class, msgs);
 				}
 				return basicSetModifier((Modifier)otherEnd, msgs);
+			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
+				return getFragments().basicAdd((VariableDeclarationFragment)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -121,10 +121,10 @@ extends StatementImpl implements VariableDeclarationStatement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
-				return getFragments().basicRemove((VariableDeclarationFragment)otherEnd, msgs);
 			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER:
 				return basicSetModifier(null, msgs);
+			case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
+				return getFragments().basicRemove((VariableDeclarationFragment)otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

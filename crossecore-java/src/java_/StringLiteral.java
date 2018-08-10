@@ -3,26 +3,19 @@ public interface StringLiteral
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<StringLiteral> allInstances = new Ocllib.QuickSet<StringLiteral>(StringLiteral.class);
-	
-	/*
 	public static Ocllib.QuickSet<StringLiteral> allInstances_ = new Ocllib.QuickSet<StringLiteral>(StringLiteral.class);
 	
-	public static Ocllib.QuickSet<StringLiteral> allInstancesClosure = new Ocllib.QuickSet<StringLiteral>(StringLiteral.class);
 		
 	public static Ocllib.QuickSet<StringLiteral> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Expression.allInstances_);
-			allInstancesClosure.addAll(StringLiteral.allInstances_);
-		}
+		Ocllib.QuickSet<StringLiteral> result = new Ocllib.QuickSet<StringLiteral>(StringLiteral.class);
+		result.addAll(StringLiteral.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<StringLiteral> allInstances = new Ocllib.QuickSet<StringLiteral>(StringLiteral.class);
 	
 	java.lang.String getEscapedValue();
 	void setEscapedValue(java.lang.String value);

@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertTrue;
+
 import java.util.Map;
 import java.util.function.Function;
 
@@ -6,8 +8,11 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import Ocllib.QuickSet;
@@ -34,67 +39,132 @@ import java_.VisibilityKind;
 
 public class CrossEcoreJavaBenchmark {
 
-	private static Model model;
+    private long initialUsedMemory = 0;
+    private long finalUsedMemory = 0;
+    private long beginTime = 0;
+    private long endTime = 0;
+    private ResourceSet resourceSet;
+    protected Resource resource = null;
 	
 	@BeforeClass
-	public static void setUp() throws Exception {
+	public static void beforeClass(){
+		
+		Function<TypeAccess, Boolean> kk = x->true;
+		kk.apply(null);
+		
+		CrossEcoreJavaBenchmark vb = new CrossEcoreJavaBenchmark();
+		try {
+			vb.setUp();
+			vb.emptyTextElementInJavadoc();
+			vb.tearDown();
+			
+			vb.setUp();
+			vb.grabats09();
+			vb.tearDown();
+			
+			vb.setUp();
+			vb.invisibleMethods();
+			vb.tearDown();
+			
+			vb.setUp();
+			vb.thrownExceptions();
+			vb.tearDown();
+			
+			vb.setUp();
+			vb.textElementInJavadoc();
+			vb.tearDown();
+			vb = null;
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+    
+    
+    @Before
+	public void setUp() throws Exception {
+		
 		
 		Java_PackageImpl.init();
 		
-		Function<TypeAccess, Boolean> kk = x->true;
+
 		
-		kk.apply(null);
-		
-		
-        Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
-        Map<String, Object> m = reg.getExtensionToFactoryMap();
-        m.put("xmi", new XMIResourceFactoryImpl());
 		
         // Obtain a new resource set
-        ResourceSet resSet = new ResourceSetImpl();
+        resourceSet = new ResourceSetImpl();
         
-        resSet.getPackageRegistry().put("java_", Java_PackageImpl.eINSTANCE);
+        resourceSet.getPackageRegistry().put("java_", Java_PackageImpl.eINSTANCE);
+        resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
         
-//		EClass x = Java_PackageImpl.Literals.FIELDDECLARATION;
-//		EStructuralFeature fragments = x.getEStructuralFeature("fragments");
-//		Object value = x.eGet(fragments, true);
-//		List<EStructuralFeature> features = x.getEStructuralFeatures();
-//		List<EStructuralFeature> allfeatures = x.getEAllStructuralFeatures();
+        //resource = resourceSet.getResource(URI.createURI("resources/org.eclipse.gmt.modisco.java.kyanos.xmi"), true);
         
-//        FieldDeclaration fielddeclaration = Java_FactoryImpl.eINSTANCE.createFieldDeclaration();
-//        EStructuralFeature fragments = fielddeclaration.eClass().getEStructuralFeature("fragments");
-//        Object value = fielddeclaration.eGet(fragments, true);
-//        
-//        SuperMethodInvocation superMethodInvocation = Java_FactoryImpl.eINSTANCE.createSuperMethodInvocation();
-//        EStructuralFeature arguments = superMethodInvocation.eClass().getEStructuralFeature("arguments");
-//        Object val = superMethodInvocation.eGet(arguments, true);
-        
-        //Resource resource = resSet.getResource(URI.createURI("resources/org.eclipse.gmt.modisco.java.kyanos.xmi"), true);
-        Resource resource = resSet.getResource(URI.createURI("resources/org.eclipse.jdt.core.xmi"), true);	
-        model = (Model) resource.getContents().get(0);
+        resource = resourceSet.getResource(URI.createURI("resources/org.eclipse.jdt.core.xmi"), true);
 	
 	}
+    
+	@After
+    public void tearDown() throws Exception {
+        
+		this.resource.unload();
+		this.resource = null;
+		
+		this.resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().clear();
+		this.resourceSet.getPackageRegistry().clear();
+		this.resourceSet = null;
+		
+		
+    }
 	
+
+
+
+	protected void startWatch() {
+		beginTime = System.currentTimeMillis();
+		
+	}
+	
+	protected void stopWatch() {
+		endTime = System.currentTimeMillis();
+		System.out.println(endTime - beginTime);
+		
+		Runtime.getRuntime().gc();
+		Runtime.getRuntime().gc();
+		Runtime.getRuntime().gc();
+		Runtime.getRuntime().gc();
+		Runtime.getRuntime().gc();
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		finalUsedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+		System.out.println("used memory: "+(finalUsedMemory/(1024*1024)));
+		
+	}
+		
 	@Test
-	public void grabats09Query() {
+	public void grabats09() {
+		System.out.println("grabats09");
 		
+		startWatch();
 		
-		
-		long time = System.currentTimeMillis();
-		Sequence<TypeDeclaration> result6 = TypeDeclaration.allInstances.
+		Sequence<TypeDeclaration> result = TypeDeclaration.allInstances().
 		select(each -> each.getBodyDeclarations().
 		exists(bd -> 
 		bd instanceof MethodDeclaration
 		&& (!(bd.getModifier()==null))
 		&& bd.getModifier().isStatic()
 		&& (!(((MethodDeclaration)bd).getReturnType()==null))
-		//&& (!(((MethodDeclaration)bd).getReturnType().getType()==null))
 		&& ((MethodDeclaration)bd).getReturnType().getType().equals(each)
 		)).asSequence();
-		time = System.currentTimeMillis()-time;
-		System.out.println("crossecore: grabats09: "+time);
-		System.out.println("crossecore: grabats09 size: "+result6.size());
-
+		
+		stopWatch();
+		System.out.println("items: "+result.size());
+				
 	}
 	
 
@@ -104,7 +174,7 @@ public class CrossEcoreJavaBenchmark {
 		TypeDeclaration.allInstances()->size()
 		339 OK
 		 */
-		QuickSet<TypeDeclaration> result1 = TypeDeclaration.allInstances;
+		QuickSet<TypeDeclaration> result1 = TypeDeclaration.allInstances();
 		System.out.println(result1.size());
 		
 		/*
@@ -116,7 +186,7 @@ public class CrossEcoreJavaBenchmark {
 		241 OK
 		 */
 		
-		Set<TypeDeclaration> result2 = TypeDeclaration.allInstances.
+		Set<TypeDeclaration> result2 = TypeDeclaration.allInstances().
 		select(each -> each.getBodyDeclarations().
 		exists(bd -> 
 		bd instanceof MethodDeclaration
@@ -134,7 +204,7 @@ public class CrossEcoreJavaBenchmark {
 		132 OK
 		*/
 		
-		Set<TypeDeclaration> result3 = TypeDeclaration.allInstances.
+		Set<TypeDeclaration> result3 = TypeDeclaration.allInstances().
 		select(each -> each.getBodyDeclarations().
 		exists(bd -> 
 		bd instanceof MethodDeclaration
@@ -154,7 +224,7 @@ public class CrossEcoreJavaBenchmark {
 		2 OK
 		*/
 		
-		Set<TypeDeclaration> result4 = TypeDeclaration.allInstances.
+		Set<TypeDeclaration> result4 = TypeDeclaration.allInstances().
 		select(each -> each.getBodyDeclarations().
 		exists(bd -> 
 		bd instanceof MethodDeclaration
@@ -175,7 +245,7 @@ public class CrossEcoreJavaBenchmark {
 		2 OK
 		*/
 		
-		Set<TypeDeclaration> result5 = TypeDeclaration.allInstances.
+		Set<TypeDeclaration> result5 = TypeDeclaration.allInstances().
 		select(each -> each.getBodyDeclarations().
 		exists(bd -> 
 		bd instanceof MethodDeclaration
@@ -186,7 +256,7 @@ public class CrossEcoreJavaBenchmark {
 		System.out.println(result5.size());
 		
 		
-		Set<TypeDeclaration> result5x = TypeDeclaration.allInstances.
+		Set<TypeDeclaration> result5x = TypeDeclaration.allInstances().
 		select(each -> each.getBodyDeclarations().
 		exists(bd -> 
 		bd instanceof MethodDeclaration
@@ -209,7 +279,7 @@ public class CrossEcoreJavaBenchmark {
 		)
 		*/
 		long time = System.currentTimeMillis();
-		Sequence<TypeDeclaration> result6 = TypeDeclaration.allInstances.
+		Sequence<TypeDeclaration> result6 = TypeDeclaration.allInstances().
 		select(each -> each.getBodyDeclarations().
 		exists(bd -> 
 		bd instanceof MethodDeclaration
@@ -224,8 +294,10 @@ public class CrossEcoreJavaBenchmark {
 		System.out.println("crossecore: grabats09 size: "+result6.size());
 
 	}
+	
 	@Test
 	public void invisibleMethods() {
+		System.out.println("invisibleMethods");
 		
 		
 //		Set<ClassDeclaration> result1 = ClassDeclaration.allInstances;
@@ -254,8 +326,9 @@ public class CrossEcoreJavaBenchmark {
 //		&& (each.getModifier().getVisibility().equals(VisibilityKind.PRIVATE) || each.getModifier().getVisibility().equals(VisibilityKind.PROTECTED)));
 //		System.out.println(result6.size());
 		
-		long time = System.currentTimeMillis();
-		Sequence<BodyDeclaration> result7 = ClassDeclaration.allInstances
+		startWatch();
+		
+		Sequence<BodyDeclaration> result = ClassDeclaration.allInstances()
 		.collect2(BodyDeclaration.class, cd -> cd.getBodyDeclarations())
 		.select(each -> each.getClass().equals(MethodDeclarationImpl.class))
 		.select(each -> 
@@ -264,14 +337,17 @@ public class CrossEcoreJavaBenchmark {
 			&& (each.getModifier().getVisibility().equals(VisibilityKind.PRIVATE) || each.getModifier().getVisibility().equals(VisibilityKind.PROTECTED)))
 		.asSequence() 
 		;
-		time = System.currentTimeMillis()-time;
 		
-		System.out.println("crossecore: invisibleMethods: "+time);
-		System.out.println("crossecore: invisibleMethods size: "+result7.size());
+		stopWatch();
+		System.out.println("items: "+result.size());
+		
+		
+		
 	}
 	
 	@Test
 	public void textElementInJavadoc() {
+		System.out.println("textElementInJavadoc");
 		
 //		long time = System.currentTimeMillis();
 //		Set<CompilationUnit> result1 = model.getCompilationUnits();
@@ -303,8 +379,8 @@ public class CrossEcoreJavaBenchmark {
 //		time = System.currentTimeMillis()-time;
 //		System.out.println("crossecore: TextElementInJavadoc5: "+time);
 		
-		long time = System.currentTimeMillis();
-		Sequence<ASTNode> result = model
+		startWatch();
+		Sequence<ASTNode> result = ((Model)resource.getContents().get(0))
 		.getCompilationUnits()
 		.collect2(Comment.class, cu->cu.getCommentList())
 		.select(each->each instanceof Javadoc)
@@ -312,20 +388,17 @@ public class CrossEcoreJavaBenchmark {
 		.select(each -> each instanceof TextElement)
 		.asSequence();
 		
-		time = System.currentTimeMillis()-time;
-		System.out.println("crossecore: TextElementInJavadoc: "+time);
-		System.out.println("crossecore: TextElementInJavadoc size: "+result.size());
-		
-		
+		stopWatch();
+		System.out.println("items: "+result.size());
 		
 	}
 	
 	@Test
 	public void emptyTextElementInJavadoc() {
+		System.out.println("emptyTextElementInJavadoc");
 		
-		
-		long time = System.currentTimeMillis();
-		Sequence<ASTNode> result = model
+		startWatch();
+		Sequence<ASTNode> result = ((Model)resource.getContents().get(0))
 		.getCompilationUnits()
 		.collect2(Comment.class, cu->cu.getCommentList())
 		.select(each->each instanceof Javadoc)
@@ -334,15 +407,15 @@ public class CrossEcoreJavaBenchmark {
 		.select(each -> ((TextElement)each).getText().length()==0)
 		.asSequence();
 		
-		time = System.currentTimeMillis()-time;
-		System.out.println("crossecore: emptyTextElementInJavadoc: "+time);
-		System.out.println("crossecore: emptyTextElementInJavadoc size: "+result.size());
+		stopWatch();
+		System.out.println("items: "+result.size());
 		
 	}	
 	
 	
 	@Test
 	public void thrownExceptions() {
+		System.out.println("thrownExceptions");
 		
 //		Set<ClassDeclaration> result1 = ClassDeclaration.allInstances;
 //		System.out.println(result1.size());
@@ -353,11 +426,12 @@ public class CrossEcoreJavaBenchmark {
 //		Set<TypeAccess> result4 = ClassDeclaration.allInstances.collect2(BodyDeclaration.class, cd->cd.getBodyDeclarations()).select(each->each instanceof MethodDeclaration).collect2(TypeAccess.class, each->((MethodDeclaration)each).getThrownExceptions());
 //		System.out.println(result4.size());
 		
-		long time = System.currentTimeMillis();
-		Sequence<TypeAccess> result5 = ClassDeclaration.allInstances.collect2(BodyDeclaration.class, cd->cd.getBodyDeclarations()).select(each->each instanceof MethodDeclaration).collect2(TypeAccess.class, each->((MethodDeclaration)each).getThrownExceptions()).asSequence();
-		time = System.currentTimeMillis()-time;
-		System.out.println("crossecore: thrownExceptions: "+time);
-		System.out.println("crossecore: thrownExceptions size: "+result5.size());
+		startWatch();
+		Sequence<TypeAccess> result = ClassDeclaration.allInstances().collect2(BodyDeclaration.class, cd->cd.getBodyDeclarations()).select(each->each instanceof MethodDeclaration).collect2(TypeAccess.class, each->((MethodDeclaration)each).getThrownExceptions()).asSequence();
+		stopWatch();
+		//System.out.println("crossecore: thrownExceptions size: "+result5.size());
+		
+		
 		
 		/*
 		System.out.println(ClassDeclaration.allInstances
@@ -367,6 +441,7 @@ public class CrossEcoreJavaBenchmark {
 		.asSequence().size());
 		
 		*/
+		System.out.println("items: "+result.size());
 	}
 	
 	

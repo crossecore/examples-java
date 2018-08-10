@@ -97,13 +97,13 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
+				return getRedefinitions().basicAdd((MethodDeclaration)otherEnd, msgs);
 			case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
 				if (_redefinedMethodDeclaration != null){
 					msgs = ((InternalEObject)_redefinedMethodDeclaration).eInverseRemove(this, Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION, MethodDeclaration.class, msgs);
 				}
 				return basicSetRedefinedMethodDeclaration((MethodDeclaration)otherEnd, msgs);
-			case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
-				return getRedefinitions().basicAdd((MethodDeclaration)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -111,10 +111,10 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
-				return basicSetRedefinedMethodDeclaration(null, msgs);
 			case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
 				return getRedefinitions().basicRemove((MethodDeclaration)otherEnd, msgs);
+			case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
+				return basicSetRedefinedMethodDeclaration(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

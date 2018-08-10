@@ -108,11 +108,11 @@ extends StatementImpl implements IfStatement
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetThenStatement(Statement newobj, NotificationChain msgs) {
-		Statement oldobj = _thenStatement;
-		_thenStatement = newobj;
+	public NotificationChain basicSetElseStatement(Statement newobj, NotificationChain msgs) {
+		Statement oldobj = _elseStatement;
+		_elseStatement = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.IFSTATEMENT_THENSTATEMENT, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -122,11 +122,11 @@ extends StatementImpl implements IfStatement
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetElseStatement(Statement newobj, NotificationChain msgs) {
-		Statement oldobj = _elseStatement;
-		_elseStatement = newobj;
+	public NotificationChain basicSetThenStatement(Statement newobj, NotificationChain msgs) {
+		Statement oldobj = _thenStatement;
+		_thenStatement = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.IFSTATEMENT_THENSTATEMENT, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

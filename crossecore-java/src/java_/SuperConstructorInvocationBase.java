@@ -108,11 +108,11 @@ extends StatementImpl implements SuperConstructorInvocation
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _expression;
-		_expression = newobj;
+	public NotificationChain basicSetMethod(AbstractMethodDeclaration newobj, NotificationChain msgs) {
+		AbstractMethodDeclaration oldobj = _method;
+		_method = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SUPERCONSTRUCTORINVOCATION_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -122,11 +122,11 @@ extends StatementImpl implements SuperConstructorInvocation
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetMethod(AbstractMethodDeclaration newobj, NotificationChain msgs) {
-		AbstractMethodDeclaration oldobj = _method;
-		_method = newobj;
+	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _expression;
+		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SUPERCONSTRUCTORINVOCATION_EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

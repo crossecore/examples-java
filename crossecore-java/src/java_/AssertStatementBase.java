@@ -68,11 +68,11 @@ extends StatementImpl implements AssertStatement
 	}
 	
 	
-	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _expression;
-		_expression = newobj;
+	public NotificationChain basicSetMessage(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _message;
+		_message = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSERTSTATEMENT_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSERTSTATEMENT_MESSAGE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -82,11 +82,11 @@ extends StatementImpl implements AssertStatement
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetMessage(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _message;
-		_message = newobj;
+	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _expression;
+		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSERTSTATEMENT_MESSAGE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSERTSTATEMENT_EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

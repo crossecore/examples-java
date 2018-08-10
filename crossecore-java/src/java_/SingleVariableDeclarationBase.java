@@ -175,26 +175,26 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT:
-				if (eInternalContainer() != null) {
-					msgs = eBasicRemoveFromContainer(msgs);
-				}
-				return basicSetEnhancedForStatement((EnhancedForStatement)otherEnd, msgs);
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
-				if (_modifier != null){
-					msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER, Modifier.class, msgs);
-				}
-				return basicSetModifier((Modifier)otherEnd, msgs);
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE:
-				if (eInternalContainer() != null) {
-					msgs = eBasicRemoveFromContainer(msgs);
-				}
-				return basicSetCatchClause((CatchClause)otherEnd, msgs);
 			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION:
 				if (eInternalContainer() != null) {
 					msgs = eBasicRemoveFromContainer(msgs);
 				}
 				return basicSetMethodDeclaration((AbstractMethodDeclaration)otherEnd, msgs);
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT:
+				if (eInternalContainer() != null) {
+					msgs = eBasicRemoveFromContainer(msgs);
+				}
+				return basicSetEnhancedForStatement((EnhancedForStatement)otherEnd, msgs);
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE:
+				if (eInternalContainer() != null) {
+					msgs = eBasicRemoveFromContainer(msgs);
+				}
+				return basicSetCatchClause((CatchClause)otherEnd, msgs);
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
+				if (_modifier != null){
+					msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER, Modifier.class, msgs);
+				}
+				return basicSetModifier((Modifier)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -202,35 +202,25 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT:
-				return basicSetEnhancedForStatement(null, msgs);
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
-				return basicSetModifier(null, msgs);
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE:
-				return basicSetCatchClause(null, msgs);
 			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION:
 				return basicSetMethodDeclaration(null, msgs);
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT:
+				return basicSetEnhancedForStatement(null, msgs);
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE:
+				return basicSetCatchClause(null, msgs);
+			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
+				return basicSetModifier(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
+	public NotificationChain basicSetMethodDeclaration(AbstractMethodDeclaration newobj, NotificationChain msgs) {
+			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION, msgs);
+			return msgs;
+	}
 	public NotificationChain basicSetEnhancedForStatement(EnhancedForStatement newobj, NotificationChain msgs) {
 			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, msgs);
 			return msgs;
-	}
-	public NotificationChain basicSetModifier(Modifier newobj, NotificationChain msgs) {
-		Modifier oldobj = _modifier;
-		_modifier = newobj;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER, oldobj, newobj);
-			if (msgs == null){
-				msgs = notification;
-			}
-			else{
-				msgs.add(notification);
-			}
-		}
-		return msgs;
 	}
 	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
 		TypeAccess oldobj = _type;
@@ -250,9 +240,19 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE, msgs);
 			return msgs;
 	}
-	public NotificationChain basicSetMethodDeclaration(AbstractMethodDeclaration newobj, NotificationChain msgs) {
-			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION, msgs);
-			return msgs;
+	public NotificationChain basicSetModifier(Modifier newobj, NotificationChain msgs) {
+		Modifier oldobj = _modifier;
+		_modifier = newobj;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER, oldobj, newobj);
+			if (msgs == null){
+				msgs = notification;
+			}
+			else{
+				msgs.add(notification);
+			}
+		}
+		return msgs;
 	}
 	
 	@Override

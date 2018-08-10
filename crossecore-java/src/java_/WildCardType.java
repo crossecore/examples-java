@@ -3,27 +3,19 @@ public interface WildCardType
  extends Type
 {
 	
-	public static Ocllib.QuickSet<WildCardType> allInstances = new Ocllib.QuickSet<WildCardType>(WildCardType.class);
-	
-	/*
 	public static Ocllib.QuickSet<WildCardType> allInstances_ = new Ocllib.QuickSet<WildCardType>(WildCardType.class);
 	
-	public static Ocllib.QuickSet<WildCardType> allInstancesClosure = new Ocllib.QuickSet<WildCardType>(WildCardType.class);
 		
 	public static Ocllib.QuickSet<WildCardType> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(NamedElement.allInstances_);
-			allInstancesClosure.addAll(Type.allInstances_);
-			allInstancesClosure.addAll(WildCardType.allInstances_);
-		}
+		Ocllib.QuickSet<WildCardType> result = new Ocllib.QuickSet<WildCardType>(WildCardType.class);
+		result.addAll(WildCardType.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<WildCardType> allInstances = new Ocllib.QuickSet<WildCardType>(WildCardType.class);
 	
 	boolean isUpperBound();
 	void setUpperBound(boolean value);

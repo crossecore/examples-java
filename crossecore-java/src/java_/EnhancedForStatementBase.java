@@ -128,11 +128,11 @@ extends StatementImpl implements EnhancedForStatement
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetBody(Statement newobj, NotificationChain msgs) {
-		Statement oldobj = _body;
-		_body = newobj;
+	public NotificationChain basicSetParameter(SingleVariableDeclaration newobj, NotificationChain msgs) {
+		SingleVariableDeclaration oldobj = _parameter;
+		_parameter = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -142,11 +142,11 @@ extends StatementImpl implements EnhancedForStatement
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetParameter(SingleVariableDeclaration newobj, NotificationChain msgs) {
-		SingleVariableDeclaration oldobj = _parameter;
-		_parameter = newobj;
+	public NotificationChain basicSetBody(Statement newobj, NotificationChain msgs) {
+		Statement oldobj = _body;
+		_body = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

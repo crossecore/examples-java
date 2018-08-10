@@ -3,27 +3,19 @@ public interface ThisExpression
  extends AbstractTypeQualifiedExpression
 {
 	
-	public static Ocllib.QuickSet<ThisExpression> allInstances = new Ocllib.QuickSet<ThisExpression>(ThisExpression.class);
-	
-	/*
 	public static Ocllib.QuickSet<ThisExpression> allInstances_ = new Ocllib.QuickSet<ThisExpression>(ThisExpression.class);
 	
-	public static Ocllib.QuickSet<ThisExpression> allInstancesClosure = new Ocllib.QuickSet<ThisExpression>(ThisExpression.class);
 		
 	public static Ocllib.QuickSet<ThisExpression> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Expression.allInstances_);
-			allInstancesClosure.addAll(AbstractTypeQualifiedExpression.allInstances_);
-			allInstancesClosure.addAll(ThisExpression.allInstances_);
-		}
+		Ocllib.QuickSet<ThisExpression> result = new Ocllib.QuickSet<ThisExpression>(ThisExpression.class);
+		result.addAll(ThisExpression.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<ThisExpression> allInstances = new Ocllib.QuickSet<ThisExpression>(ThisExpression.class);
 	
 	
 }

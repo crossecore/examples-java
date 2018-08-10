@@ -88,11 +88,11 @@ extends ExpressionImpl implements TypeAccess
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetType(Type newobj, NotificationChain msgs) {
-		Type oldobj = _type;
-		_type = newobj;
+	public NotificationChain basicSetQualifier(NamespaceAccess newobj, NotificationChain msgs) {
+		NamespaceAccess oldobj = _qualifier;
+		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPEACCESS_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPEACCESS_QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -102,11 +102,11 @@ extends ExpressionImpl implements TypeAccess
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetQualifier(NamespaceAccess newobj, NotificationChain msgs) {
-		NamespaceAccess oldobj = _qualifier;
-		_qualifier = newobj;
+	public NotificationChain basicSetType(Type newobj, NotificationChain msgs) {
+		Type oldobj = _type;
+		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPEACCESS_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPEACCESS_TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

@@ -54,13 +54,13 @@ extends ASTNodeImpl implements AnonymousClassDeclaration
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS:
-				return getBodyDeclarations().basicAdd((BodyDeclaration)otherEnd, msgs);
 			case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_CLASSINSTANCECREATION:
 				if (eInternalContainer() != null) {
 					msgs = eBasicRemoveFromContainer(msgs);
 				}
 				return basicSetClassInstanceCreation((ClassInstanceCreation)otherEnd, msgs);
+			case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS:
+				return getBodyDeclarations().basicAdd((BodyDeclaration)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -68,10 +68,10 @@ extends ASTNodeImpl implements AnonymousClassDeclaration
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS:
-				return getBodyDeclarations().basicRemove((BodyDeclaration)otherEnd, msgs);
 			case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_CLASSINSTANCECREATION:
 				return basicSetClassInstanceCreation(null, msgs);
+			case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS:
+				return getBodyDeclarations().basicRemove((BodyDeclaration)otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

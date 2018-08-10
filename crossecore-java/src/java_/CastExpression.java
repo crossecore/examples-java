@@ -3,26 +3,19 @@ public interface CastExpression
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<CastExpression> allInstances = new Ocllib.QuickSet<CastExpression>(CastExpression.class);
-	
-	/*
 	public static Ocllib.QuickSet<CastExpression> allInstances_ = new Ocllib.QuickSet<CastExpression>(CastExpression.class);
 	
-	public static Ocllib.QuickSet<CastExpression> allInstancesClosure = new Ocllib.QuickSet<CastExpression>(CastExpression.class);
 		
 	public static Ocllib.QuickSet<CastExpression> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Expression.allInstances_);
-			allInstancesClosure.addAll(CastExpression.allInstances_);
-		}
+		Ocllib.QuickSet<CastExpression> result = new Ocllib.QuickSet<CastExpression>(CastExpression.class);
+		result.addAll(CastExpression.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<CastExpression> allInstances = new Ocllib.QuickSet<CastExpression>(CastExpression.class);
 	
 	
 	Expression getExpression();

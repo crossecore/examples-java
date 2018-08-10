@@ -3,26 +3,19 @@ public interface ReturnStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<ReturnStatement> allInstances = new Ocllib.QuickSet<ReturnStatement>(ReturnStatement.class);
-	
-	/*
 	public static Ocllib.QuickSet<ReturnStatement> allInstances_ = new Ocllib.QuickSet<ReturnStatement>(ReturnStatement.class);
 	
-	public static Ocllib.QuickSet<ReturnStatement> allInstancesClosure = new Ocllib.QuickSet<ReturnStatement>(ReturnStatement.class);
 		
 	public static Ocllib.QuickSet<ReturnStatement> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Statement.allInstances_);
-			allInstancesClosure.addAll(ReturnStatement.allInstances_);
-		}
+		Ocllib.QuickSet<ReturnStatement> result = new Ocllib.QuickSet<ReturnStatement>(ReturnStatement.class);
+		result.addAll(ReturnStatement.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<ReturnStatement> allInstances = new Ocllib.QuickSet<ReturnStatement>(ReturnStatement.class);
 	
 	
 	Expression getExpression();

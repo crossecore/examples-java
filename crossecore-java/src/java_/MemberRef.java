@@ -3,25 +3,19 @@ public interface MemberRef
  extends ASTNode
 {
 	
-	public static Ocllib.QuickSet<MemberRef> allInstances = new Ocllib.QuickSet<MemberRef>(MemberRef.class);
-	
-	/*
 	public static Ocllib.QuickSet<MemberRef> allInstances_ = new Ocllib.QuickSet<MemberRef>(MemberRef.class);
 	
-	public static Ocllib.QuickSet<MemberRef> allInstancesClosure = new Ocllib.QuickSet<MemberRef>(MemberRef.class);
 		
 	public static Ocllib.QuickSet<MemberRef> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(MemberRef.allInstances_);
-		}
+		Ocllib.QuickSet<MemberRef> result = new Ocllib.QuickSet<MemberRef>(MemberRef.class);
+		result.addAll(MemberRef.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<MemberRef> allInstances = new Ocllib.QuickSet<MemberRef>(MemberRef.class);
 	
 	
 	NamedElement getMember();

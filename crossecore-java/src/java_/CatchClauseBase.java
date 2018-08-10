@@ -88,11 +88,11 @@ extends StatementImpl implements CatchClause
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetException(SingleVariableDeclaration newobj, NotificationChain msgs) {
-		SingleVariableDeclaration oldobj = _exception;
-		_exception = newobj;
+	public NotificationChain basicSetBody(Block newobj, NotificationChain msgs) {
+		Block oldobj = _body;
+		_body = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CATCHCLAUSE_EXCEPTION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CATCHCLAUSE_BODY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -102,11 +102,11 @@ extends StatementImpl implements CatchClause
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetBody(Block newobj, NotificationChain msgs) {
-		Block oldobj = _body;
-		_body = newobj;
+	public NotificationChain basicSetException(SingleVariableDeclaration newobj, NotificationChain msgs) {
+		SingleVariableDeclaration oldobj = _exception;
+		_exception = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CATCHCLAUSE_BODY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CATCHCLAUSE_EXCEPTION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

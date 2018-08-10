@@ -21,291 +21,316 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 	public Annotation createAnnotation(){
 		AnnotationImpl theAnnotation = new AnnotationImpl();
 		
-		//Annotation.allInstances_.add(theAnnotation);
-		
+		Annotation.allInstances_.add(theAnnotation);
+		/*
 		ASTNode.allInstances.add(theAnnotation);
 		Expression.allInstances.add(theAnnotation);
 		Annotation.allInstances.add(theAnnotation);
+		*/
 		
 		return theAnnotation;
 	}
 	public Archive createArchive(){
 		ArchiveImpl theArchive = new ArchiveImpl();
 		
-		//Archive.allInstances_.add(theArchive);
-		
+		Archive.allInstances_.add(theArchive);
+		/*
 		ASTNode.allInstances.add(theArchive);
 		NamedElement.allInstances.add(theArchive);
 		Archive.allInstances.add(theArchive);
+		*/
 		
 		return theArchive;
 	}
 	public AssertStatement createAssertStatement(){
 		AssertStatementImpl theAssertStatement = new AssertStatementImpl();
 		
-		//AssertStatement.allInstances_.add(theAssertStatement);
-		
+		AssertStatement.allInstances_.add(theAssertStatement);
+		/*
 		ASTNode.allInstances.add(theAssertStatement);
 		Statement.allInstances.add(theAssertStatement);
 		AssertStatement.allInstances.add(theAssertStatement);
+		*/
 		
 		return theAssertStatement;
 	}
 	public AnnotationMemberValuePair createAnnotationMemberValuePair(){
 		AnnotationMemberValuePairImpl theAnnotationMemberValuePair = new AnnotationMemberValuePairImpl();
 		
-		//AnnotationMemberValuePair.allInstances_.add(theAnnotationMemberValuePair);
-		
+		AnnotationMemberValuePair.allInstances_.add(theAnnotationMemberValuePair);
+		/*
 		ASTNode.allInstances.add(theAnnotationMemberValuePair);
 		NamedElement.allInstances.add(theAnnotationMemberValuePair);
 		AnnotationMemberValuePair.allInstances.add(theAnnotationMemberValuePair);
+		*/
 		
 		return theAnnotationMemberValuePair;
 	}
 	public AnnotationTypeDeclaration createAnnotationTypeDeclaration(){
 		AnnotationTypeDeclarationImpl theAnnotationTypeDeclaration = new AnnotationTypeDeclarationImpl();
 		
-		//AnnotationTypeDeclaration.allInstances_.add(theAnnotationTypeDeclaration);
-		
+		AnnotationTypeDeclaration.allInstances_.add(theAnnotationTypeDeclaration);
+		/*
 		ASTNode.allInstances.add(theAnnotationTypeDeclaration);
 		NamedElement.allInstances.add(theAnnotationTypeDeclaration);
 		BodyDeclaration.allInstances.add(theAnnotationTypeDeclaration);
 		Type.allInstances.add(theAnnotationTypeDeclaration);
 		AbstractTypeDeclaration.allInstances.add(theAnnotationTypeDeclaration);
 		AnnotationTypeDeclaration.allInstances.add(theAnnotationTypeDeclaration);
+		*/
 		
 		return theAnnotationTypeDeclaration;
 	}
 	public AnnotationTypeMemberDeclaration createAnnotationTypeMemberDeclaration(){
 		AnnotationTypeMemberDeclarationImpl theAnnotationTypeMemberDeclaration = new AnnotationTypeMemberDeclarationImpl();
 		
-		//AnnotationTypeMemberDeclaration.allInstances_.add(theAnnotationTypeMemberDeclaration);
-		
+		AnnotationTypeMemberDeclaration.allInstances_.add(theAnnotationTypeMemberDeclaration);
+		/*
 		ASTNode.allInstances.add(theAnnotationTypeMemberDeclaration);
 		NamedElement.allInstances.add(theAnnotationTypeMemberDeclaration);
 		BodyDeclaration.allInstances.add(theAnnotationTypeMemberDeclaration);
 		AnnotationTypeMemberDeclaration.allInstances.add(theAnnotationTypeMemberDeclaration);
+		*/
 		
 		return theAnnotationTypeMemberDeclaration;
 	}
 	public AnonymousClassDeclaration createAnonymousClassDeclaration(){
 		AnonymousClassDeclarationImpl theAnonymousClassDeclaration = new AnonymousClassDeclarationImpl();
 		
-		//AnonymousClassDeclaration.allInstances_.add(theAnonymousClassDeclaration);
-		
+		AnonymousClassDeclaration.allInstances_.add(theAnonymousClassDeclaration);
+		/*
 		ASTNode.allInstances.add(theAnonymousClassDeclaration);
 		AnonymousClassDeclaration.allInstances.add(theAnonymousClassDeclaration);
+		*/
 		
 		return theAnonymousClassDeclaration;
 	}
 	public ArrayAccess createArrayAccess(){
 		ArrayAccessImpl theArrayAccess = new ArrayAccessImpl();
 		
-		//ArrayAccess.allInstances_.add(theArrayAccess);
-		
+		ArrayAccess.allInstances_.add(theArrayAccess);
+		/*
 		ASTNode.allInstances.add(theArrayAccess);
 		Expression.allInstances.add(theArrayAccess);
 		ArrayAccess.allInstances.add(theArrayAccess);
+		*/
 		
 		return theArrayAccess;
 	}
 	public ArrayCreation createArrayCreation(){
 		ArrayCreationImpl theArrayCreation = new ArrayCreationImpl();
 		
-		//ArrayCreation.allInstances_.add(theArrayCreation);
-		
+		ArrayCreation.allInstances_.add(theArrayCreation);
+		/*
 		ASTNode.allInstances.add(theArrayCreation);
 		Expression.allInstances.add(theArrayCreation);
 		ArrayCreation.allInstances.add(theArrayCreation);
+		*/
 		
 		return theArrayCreation;
 	}
 	public ArrayInitializer createArrayInitializer(){
 		ArrayInitializerImpl theArrayInitializer = new ArrayInitializerImpl();
 		
-		//ArrayInitializer.allInstances_.add(theArrayInitializer);
-		
+		ArrayInitializer.allInstances_.add(theArrayInitializer);
+		/*
 		ASTNode.allInstances.add(theArrayInitializer);
 		Expression.allInstances.add(theArrayInitializer);
 		ArrayInitializer.allInstances.add(theArrayInitializer);
+		*/
 		
 		return theArrayInitializer;
 	}
 	public ArrayLengthAccess createArrayLengthAccess(){
 		ArrayLengthAccessImpl theArrayLengthAccess = new ArrayLengthAccessImpl();
 		
-		//ArrayLengthAccess.allInstances_.add(theArrayLengthAccess);
-		
+		ArrayLengthAccess.allInstances_.add(theArrayLengthAccess);
+		/*
 		ASTNode.allInstances.add(theArrayLengthAccess);
 		Expression.allInstances.add(theArrayLengthAccess);
 		ArrayLengthAccess.allInstances.add(theArrayLengthAccess);
+		*/
 		
 		return theArrayLengthAccess;
 	}
 	public ArrayType createArrayType(){
 		ArrayTypeImpl theArrayType = new ArrayTypeImpl();
 		
-		//ArrayType.allInstances_.add(theArrayType);
-		
+		ArrayType.allInstances_.add(theArrayType);
+		/*
 		ASTNode.allInstances.add(theArrayType);
 		NamedElement.allInstances.add(theArrayType);
 		Type.allInstances.add(theArrayType);
 		ArrayType.allInstances.add(theArrayType);
+		*/
 		
 		return theArrayType;
 	}
 	public Assignment createAssignment(){
 		AssignmentImpl theAssignment = new AssignmentImpl();
 		
-		//Assignment.allInstances_.add(theAssignment);
-		
+		Assignment.allInstances_.add(theAssignment);
+		/*
 		ASTNode.allInstances.add(theAssignment);
 		Expression.allInstances.add(theAssignment);
 		Assignment.allInstances.add(theAssignment);
+		*/
 		
 		return theAssignment;
 	}
 	public BooleanLiteral createBooleanLiteral(){
 		BooleanLiteralImpl theBooleanLiteral = new BooleanLiteralImpl();
 		
-		//BooleanLiteral.allInstances_.add(theBooleanLiteral);
-		
+		BooleanLiteral.allInstances_.add(theBooleanLiteral);
+		/*
 		ASTNode.allInstances.add(theBooleanLiteral);
 		Expression.allInstances.add(theBooleanLiteral);
 		BooleanLiteral.allInstances.add(theBooleanLiteral);
+		*/
 		
 		return theBooleanLiteral;
 	}
 	public BlockComment createBlockComment(){
 		BlockCommentImpl theBlockComment = new BlockCommentImpl();
 		
-		//BlockComment.allInstances_.add(theBlockComment);
-		
+		BlockComment.allInstances_.add(theBlockComment);
+		/*
 		ASTNode.allInstances.add(theBlockComment);
 		Comment.allInstances.add(theBlockComment);
 		BlockComment.allInstances.add(theBlockComment);
+		*/
 		
 		return theBlockComment;
 	}
 	public Block createBlock(){
 		BlockImpl theBlock = new BlockImpl();
 		
-		//Block.allInstances_.add(theBlock);
-		
+		Block.allInstances_.add(theBlock);
+		/*
 		ASTNode.allInstances.add(theBlock);
 		Statement.allInstances.add(theBlock);
 		Block.allInstances.add(theBlock);
+		*/
 		
 		return theBlock;
 	}
 	public BreakStatement createBreakStatement(){
 		BreakStatementImpl theBreakStatement = new BreakStatementImpl();
 		
-		//BreakStatement.allInstances_.add(theBreakStatement);
-		
+		BreakStatement.allInstances_.add(theBreakStatement);
+		/*
 		ASTNode.allInstances.add(theBreakStatement);
 		Statement.allInstances.add(theBreakStatement);
 		BreakStatement.allInstances.add(theBreakStatement);
+		*/
 		
 		return theBreakStatement;
 	}
 	public CastExpression createCastExpression(){
 		CastExpressionImpl theCastExpression = new CastExpressionImpl();
 		
-		//CastExpression.allInstances_.add(theCastExpression);
-		
+		CastExpression.allInstances_.add(theCastExpression);
+		/*
 		ASTNode.allInstances.add(theCastExpression);
 		Expression.allInstances.add(theCastExpression);
 		CastExpression.allInstances.add(theCastExpression);
+		*/
 		
 		return theCastExpression;
 	}
 	public CatchClause createCatchClause(){
 		CatchClauseImpl theCatchClause = new CatchClauseImpl();
 		
-		//CatchClause.allInstances_.add(theCatchClause);
-		
+		CatchClause.allInstances_.add(theCatchClause);
+		/*
 		ASTNode.allInstances.add(theCatchClause);
 		Statement.allInstances.add(theCatchClause);
 		CatchClause.allInstances.add(theCatchClause);
+		*/
 		
 		return theCatchClause;
 	}
 	public CharacterLiteral createCharacterLiteral(){
 		CharacterLiteralImpl theCharacterLiteral = new CharacterLiteralImpl();
 		
-		//CharacterLiteral.allInstances_.add(theCharacterLiteral);
-		
+		CharacterLiteral.allInstances_.add(theCharacterLiteral);
+		/*
 		ASTNode.allInstances.add(theCharacterLiteral);
 		Expression.allInstances.add(theCharacterLiteral);
 		CharacterLiteral.allInstances.add(theCharacterLiteral);
+		*/
 		
 		return theCharacterLiteral;
 	}
 	public ClassFile createClassFile(){
 		ClassFileImpl theClassFile = new ClassFileImpl();
 		
-		//ClassFile.allInstances_.add(theClassFile);
-		
+		ClassFile.allInstances_.add(theClassFile);
+		/*
 		ASTNode.allInstances.add(theClassFile);
 		NamedElement.allInstances.add(theClassFile);
 		ClassFile.allInstances.add(theClassFile);
+		*/
 		
 		return theClassFile;
 	}
 	public ClassInstanceCreation createClassInstanceCreation(){
 		ClassInstanceCreationImpl theClassInstanceCreation = new ClassInstanceCreationImpl();
 		
-		//ClassInstanceCreation.allInstances_.add(theClassInstanceCreation);
-		
+		ClassInstanceCreation.allInstances_.add(theClassInstanceCreation);
+		/*
 		ASTNode.allInstances.add(theClassInstanceCreation);
 		Expression.allInstances.add(theClassInstanceCreation);
 		AbstractMethodInvocation.allInstances.add(theClassInstanceCreation);
 		ClassInstanceCreation.allInstances.add(theClassInstanceCreation);
+		*/
 		
 		return theClassInstanceCreation;
 	}
 	public ConstructorDeclaration createConstructorDeclaration(){
 		ConstructorDeclarationImpl theConstructorDeclaration = new ConstructorDeclarationImpl();
 		
-		//ConstructorDeclaration.allInstances_.add(theConstructorDeclaration);
-		
+		ConstructorDeclaration.allInstances_.add(theConstructorDeclaration);
+		/*
 		ASTNode.allInstances.add(theConstructorDeclaration);
 		NamedElement.allInstances.add(theConstructorDeclaration);
 		BodyDeclaration.allInstances.add(theConstructorDeclaration);
 		AbstractMethodDeclaration.allInstances.add(theConstructorDeclaration);
 		ConstructorDeclaration.allInstances.add(theConstructorDeclaration);
+		*/
 		
 		return theConstructorDeclaration;
 	}
 	public ConditionalExpression createConditionalExpression(){
 		ConditionalExpressionImpl theConditionalExpression = new ConditionalExpressionImpl();
 		
-		//ConditionalExpression.allInstances_.add(theConditionalExpression);
-		
+		ConditionalExpression.allInstances_.add(theConditionalExpression);
+		/*
 		ASTNode.allInstances.add(theConditionalExpression);
 		Expression.allInstances.add(theConditionalExpression);
 		ConditionalExpression.allInstances.add(theConditionalExpression);
+		*/
 		
 		return theConditionalExpression;
 	}
 	public ConstructorInvocation createConstructorInvocation(){
 		ConstructorInvocationImpl theConstructorInvocation = new ConstructorInvocationImpl();
 		
-		//ConstructorInvocation.allInstances_.add(theConstructorInvocation);
-		
+		ConstructorInvocation.allInstances_.add(theConstructorInvocation);
+		/*
 		ASTNode.allInstances.add(theConstructorInvocation);
 		Statement.allInstances.add(theConstructorInvocation);
 		AbstractMethodInvocation.allInstances.add(theConstructorInvocation);
 		ConstructorInvocation.allInstances.add(theConstructorInvocation);
+		*/
 		
 		return theConstructorInvocation;
 	}
 	public ClassDeclaration createClassDeclaration(){
 		ClassDeclarationImpl theClassDeclaration = new ClassDeclarationImpl();
 		
-		//ClassDeclaration.allInstances_.add(theClassDeclaration);
-		
+		ClassDeclaration.allInstances_.add(theClassDeclaration);
+		/*
 		ASTNode.allInstances.add(theClassDeclaration);
 		NamedElement.allInstances.add(theClassDeclaration);
 		BodyDeclaration.allInstances.add(theClassDeclaration);
@@ -313,197 +338,214 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 		AbstractTypeDeclaration.allInstances.add(theClassDeclaration);
 		TypeDeclaration.allInstances.add(theClassDeclaration);
 		ClassDeclaration.allInstances.add(theClassDeclaration);
+		*/
 		
 		return theClassDeclaration;
 	}
 	public CompilationUnit createCompilationUnit(){
 		CompilationUnitImpl theCompilationUnit = new CompilationUnitImpl();
 		
-		//CompilationUnit.allInstances_.add(theCompilationUnit);
-		
+		CompilationUnit.allInstances_.add(theCompilationUnit);
+		/*
 		ASTNode.allInstances.add(theCompilationUnit);
 		NamedElement.allInstances.add(theCompilationUnit);
 		CompilationUnit.allInstances.add(theCompilationUnit);
+		*/
 		
 		return theCompilationUnit;
 	}
 	public ContinueStatement createContinueStatement(){
 		ContinueStatementImpl theContinueStatement = new ContinueStatementImpl();
 		
-		//ContinueStatement.allInstances_.add(theContinueStatement);
-		
+		ContinueStatement.allInstances_.add(theContinueStatement);
+		/*
 		ASTNode.allInstances.add(theContinueStatement);
 		Statement.allInstances.add(theContinueStatement);
 		ContinueStatement.allInstances.add(theContinueStatement);
+		*/
 		
 		return theContinueStatement;
 	}
 	public DoStatement createDoStatement(){
 		DoStatementImpl theDoStatement = new DoStatementImpl();
 		
-		//DoStatement.allInstances_.add(theDoStatement);
-		
+		DoStatement.allInstances_.add(theDoStatement);
+		/*
 		ASTNode.allInstances.add(theDoStatement);
 		Statement.allInstances.add(theDoStatement);
 		DoStatement.allInstances.add(theDoStatement);
+		*/
 		
 		return theDoStatement;
 	}
 	public EmptyStatement createEmptyStatement(){
 		EmptyStatementImpl theEmptyStatement = new EmptyStatementImpl();
 		
-		//EmptyStatement.allInstances_.add(theEmptyStatement);
-		
+		EmptyStatement.allInstances_.add(theEmptyStatement);
+		/*
 		ASTNode.allInstances.add(theEmptyStatement);
 		Statement.allInstances.add(theEmptyStatement);
 		EmptyStatement.allInstances.add(theEmptyStatement);
+		*/
 		
 		return theEmptyStatement;
 	}
 	public EnhancedForStatement createEnhancedForStatement(){
 		EnhancedForStatementImpl theEnhancedForStatement = new EnhancedForStatementImpl();
 		
-		//EnhancedForStatement.allInstances_.add(theEnhancedForStatement);
-		
+		EnhancedForStatement.allInstances_.add(theEnhancedForStatement);
+		/*
 		ASTNode.allInstances.add(theEnhancedForStatement);
 		Statement.allInstances.add(theEnhancedForStatement);
 		EnhancedForStatement.allInstances.add(theEnhancedForStatement);
+		*/
 		
 		return theEnhancedForStatement;
 	}
 	public EnumConstantDeclaration createEnumConstantDeclaration(){
 		EnumConstantDeclarationImpl theEnumConstantDeclaration = new EnumConstantDeclarationImpl();
 		
-		//EnumConstantDeclaration.allInstances_.add(theEnumConstantDeclaration);
-		
+		EnumConstantDeclaration.allInstances_.add(theEnumConstantDeclaration);
+		/*
 		ASTNode.allInstances.add(theEnumConstantDeclaration);
 		NamedElement.allInstances.add(theEnumConstantDeclaration);
 		BodyDeclaration.allInstances.add(theEnumConstantDeclaration);
 		VariableDeclaration.allInstances.add(theEnumConstantDeclaration);
 		EnumConstantDeclaration.allInstances.add(theEnumConstantDeclaration);
+		*/
 		
 		return theEnumConstantDeclaration;
 	}
 	public EnumDeclaration createEnumDeclaration(){
 		EnumDeclarationImpl theEnumDeclaration = new EnumDeclarationImpl();
 		
-		//EnumDeclaration.allInstances_.add(theEnumDeclaration);
-		
+		EnumDeclaration.allInstances_.add(theEnumDeclaration);
+		/*
 		ASTNode.allInstances.add(theEnumDeclaration);
 		NamedElement.allInstances.add(theEnumDeclaration);
 		BodyDeclaration.allInstances.add(theEnumDeclaration);
 		Type.allInstances.add(theEnumDeclaration);
 		AbstractTypeDeclaration.allInstances.add(theEnumDeclaration);
 		EnumDeclaration.allInstances.add(theEnumDeclaration);
+		*/
 		
 		return theEnumDeclaration;
 	}
 	public ExpressionStatement createExpressionStatement(){
 		ExpressionStatementImpl theExpressionStatement = new ExpressionStatementImpl();
 		
-		//ExpressionStatement.allInstances_.add(theExpressionStatement);
-		
+		ExpressionStatement.allInstances_.add(theExpressionStatement);
+		/*
 		ASTNode.allInstances.add(theExpressionStatement);
 		Statement.allInstances.add(theExpressionStatement);
 		ExpressionStatement.allInstances.add(theExpressionStatement);
+		*/
 		
 		return theExpressionStatement;
 	}
 	public FieldAccess createFieldAccess(){
 		FieldAccessImpl theFieldAccess = new FieldAccessImpl();
 		
-		//FieldAccess.allInstances_.add(theFieldAccess);
-		
+		FieldAccess.allInstances_.add(theFieldAccess);
+		/*
 		ASTNode.allInstances.add(theFieldAccess);
 		Expression.allInstances.add(theFieldAccess);
 		FieldAccess.allInstances.add(theFieldAccess);
+		*/
 		
 		return theFieldAccess;
 	}
 	public FieldDeclaration createFieldDeclaration(){
 		FieldDeclarationImpl theFieldDeclaration = new FieldDeclarationImpl();
 		
-		//FieldDeclaration.allInstances_.add(theFieldDeclaration);
-		
+		FieldDeclaration.allInstances_.add(theFieldDeclaration);
+		/*
 		ASTNode.allInstances.add(theFieldDeclaration);
 		NamedElement.allInstances.add(theFieldDeclaration);
 		BodyDeclaration.allInstances.add(theFieldDeclaration);
 		AbstractVariablesContainer.allInstances.add(theFieldDeclaration);
 		FieldDeclaration.allInstances.add(theFieldDeclaration);
+		*/
 		
 		return theFieldDeclaration;
 	}
 	public ForStatement createForStatement(){
 		ForStatementImpl theForStatement = new ForStatementImpl();
 		
-		//ForStatement.allInstances_.add(theForStatement);
-		
+		ForStatement.allInstances_.add(theForStatement);
+		/*
 		ASTNode.allInstances.add(theForStatement);
 		Statement.allInstances.add(theForStatement);
 		ForStatement.allInstances.add(theForStatement);
+		*/
 		
 		return theForStatement;
 	}
 	public IfStatement createIfStatement(){
 		IfStatementImpl theIfStatement = new IfStatementImpl();
 		
-		//IfStatement.allInstances_.add(theIfStatement);
-		
+		IfStatement.allInstances_.add(theIfStatement);
+		/*
 		ASTNode.allInstances.add(theIfStatement);
 		Statement.allInstances.add(theIfStatement);
 		IfStatement.allInstances.add(theIfStatement);
+		*/
 		
 		return theIfStatement;
 	}
 	public ImportDeclaration createImportDeclaration(){
 		ImportDeclarationImpl theImportDeclaration = new ImportDeclarationImpl();
 		
-		//ImportDeclaration.allInstances_.add(theImportDeclaration);
-		
+		ImportDeclaration.allInstances_.add(theImportDeclaration);
+		/*
 		ASTNode.allInstances.add(theImportDeclaration);
 		ImportDeclaration.allInstances.add(theImportDeclaration);
+		*/
 		
 		return theImportDeclaration;
 	}
 	public InfixExpression createInfixExpression(){
 		InfixExpressionImpl theInfixExpression = new InfixExpressionImpl();
 		
-		//InfixExpression.allInstances_.add(theInfixExpression);
-		
+		InfixExpression.allInstances_.add(theInfixExpression);
+		/*
 		ASTNode.allInstances.add(theInfixExpression);
 		Expression.allInstances.add(theInfixExpression);
 		InfixExpression.allInstances.add(theInfixExpression);
+		*/
 		
 		return theInfixExpression;
 	}
 	public Initializer createInitializer(){
 		InitializerImpl theInitializer = new InitializerImpl();
 		
-		//Initializer.allInstances_.add(theInitializer);
-		
+		Initializer.allInstances_.add(theInitializer);
+		/*
 		ASTNode.allInstances.add(theInitializer);
 		NamedElement.allInstances.add(theInitializer);
 		BodyDeclaration.allInstances.add(theInitializer);
 		Initializer.allInstances.add(theInitializer);
+		*/
 		
 		return theInitializer;
 	}
 	public InstanceofExpression createInstanceofExpression(){
 		InstanceofExpressionImpl theInstanceofExpression = new InstanceofExpressionImpl();
 		
-		//InstanceofExpression.allInstances_.add(theInstanceofExpression);
-		
+		InstanceofExpression.allInstances_.add(theInstanceofExpression);
+		/*
 		ASTNode.allInstances.add(theInstanceofExpression);
 		Expression.allInstances.add(theInstanceofExpression);
 		InstanceofExpression.allInstances.add(theInstanceofExpression);
+		*/
 		
 		return theInstanceofExpression;
 	}
 	public InterfaceDeclaration createInterfaceDeclaration(){
 		InterfaceDeclarationImpl theInterfaceDeclaration = new InterfaceDeclarationImpl();
 		
-		//InterfaceDeclaration.allInstances_.add(theInterfaceDeclaration);
-		
+		InterfaceDeclaration.allInstances_.add(theInterfaceDeclaration);
+		/*
 		ASTNode.allInstances.add(theInterfaceDeclaration);
 		NamedElement.allInstances.add(theInterfaceDeclaration);
 		BodyDeclaration.allInstances.add(theInterfaceDeclaration);
@@ -511,605 +553,658 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 		AbstractTypeDeclaration.allInstances.add(theInterfaceDeclaration);
 		TypeDeclaration.allInstances.add(theInterfaceDeclaration);
 		InterfaceDeclaration.allInstances.add(theInterfaceDeclaration);
+		*/
 		
 		return theInterfaceDeclaration;
 	}
 	public Javadoc createJavadoc(){
 		JavadocImpl theJavadoc = new JavadocImpl();
 		
-		//Javadoc.allInstances_.add(theJavadoc);
-		
+		Javadoc.allInstances_.add(theJavadoc);
+		/*
 		ASTNode.allInstances.add(theJavadoc);
 		Comment.allInstances.add(theJavadoc);
 		Javadoc.allInstances.add(theJavadoc);
+		*/
 		
 		return theJavadoc;
 	}
 	public LabeledStatement createLabeledStatement(){
 		LabeledStatementImpl theLabeledStatement = new LabeledStatementImpl();
 		
-		//LabeledStatement.allInstances_.add(theLabeledStatement);
-		
+		LabeledStatement.allInstances_.add(theLabeledStatement);
+		/*
 		ASTNode.allInstances.add(theLabeledStatement);
 		NamedElement.allInstances.add(theLabeledStatement);
 		Statement.allInstances.add(theLabeledStatement);
 		LabeledStatement.allInstances.add(theLabeledStatement);
+		*/
 		
 		return theLabeledStatement;
 	}
 	public LineComment createLineComment(){
 		LineCommentImpl theLineComment = new LineCommentImpl();
 		
-		//LineComment.allInstances_.add(theLineComment);
-		
+		LineComment.allInstances_.add(theLineComment);
+		/*
 		ASTNode.allInstances.add(theLineComment);
 		Comment.allInstances.add(theLineComment);
 		LineComment.allInstances.add(theLineComment);
+		*/
 		
 		return theLineComment;
 	}
 	public Manifest createManifest(){
 		ManifestImpl theManifest = new ManifestImpl();
 		
-		//Manifest.allInstances_.add(theManifest);
-		
+		Manifest.allInstances_.add(theManifest);
+		/*
 		Manifest.allInstances.add(theManifest);
+		*/
 		
 		return theManifest;
 	}
 	public ManifestAttribute createManifestAttribute(){
 		ManifestAttributeImpl theManifestAttribute = new ManifestAttributeImpl();
 		
-		//ManifestAttribute.allInstances_.add(theManifestAttribute);
-		
+		ManifestAttribute.allInstances_.add(theManifestAttribute);
+		/*
 		ManifestAttribute.allInstances.add(theManifestAttribute);
+		*/
 		
 		return theManifestAttribute;
 	}
 	public ManifestEntry createManifestEntry(){
 		ManifestEntryImpl theManifestEntry = new ManifestEntryImpl();
 		
-		//ManifestEntry.allInstances_.add(theManifestEntry);
-		
+		ManifestEntry.allInstances_.add(theManifestEntry);
+		/*
 		ManifestEntry.allInstances.add(theManifestEntry);
+		*/
 		
 		return theManifestEntry;
 	}
 	public MemberRef createMemberRef(){
 		MemberRefImpl theMemberRef = new MemberRefImpl();
 		
-		//MemberRef.allInstances_.add(theMemberRef);
-		
+		MemberRef.allInstances_.add(theMemberRef);
+		/*
 		ASTNode.allInstances.add(theMemberRef);
 		MemberRef.allInstances.add(theMemberRef);
+		*/
 		
 		return theMemberRef;
 	}
 	public MethodDeclaration createMethodDeclaration(){
 		MethodDeclarationImpl theMethodDeclaration = new MethodDeclarationImpl();
 		
-		//MethodDeclaration.allInstances_.add(theMethodDeclaration);
-		
+		MethodDeclaration.allInstances_.add(theMethodDeclaration);
+		/*
 		ASTNode.allInstances.add(theMethodDeclaration);
 		NamedElement.allInstances.add(theMethodDeclaration);
 		BodyDeclaration.allInstances.add(theMethodDeclaration);
 		AbstractMethodDeclaration.allInstances.add(theMethodDeclaration);
 		MethodDeclaration.allInstances.add(theMethodDeclaration);
+		*/
 		
 		return theMethodDeclaration;
 	}
 	public MethodInvocation createMethodInvocation(){
 		MethodInvocationImpl theMethodInvocation = new MethodInvocationImpl();
 		
-		//MethodInvocation.allInstances_.add(theMethodInvocation);
-		
+		MethodInvocation.allInstances_.add(theMethodInvocation);
+		/*
 		ASTNode.allInstances.add(theMethodInvocation);
 		Expression.allInstances.add(theMethodInvocation);
 		AbstractMethodInvocation.allInstances.add(theMethodInvocation);
 		MethodInvocation.allInstances.add(theMethodInvocation);
+		*/
 		
 		return theMethodInvocation;
 	}
 	public MethodRef createMethodRef(){
 		MethodRefImpl theMethodRef = new MethodRefImpl();
 		
-		//MethodRef.allInstances_.add(theMethodRef);
-		
+		MethodRef.allInstances_.add(theMethodRef);
+		/*
 		ASTNode.allInstances.add(theMethodRef);
 		MethodRef.allInstances.add(theMethodRef);
+		*/
 		
 		return theMethodRef;
 	}
 	public MethodRefParameter createMethodRefParameter(){
 		MethodRefParameterImpl theMethodRefParameter = new MethodRefParameterImpl();
 		
-		//MethodRefParameter.allInstances_.add(theMethodRefParameter);
-		
+		MethodRefParameter.allInstances_.add(theMethodRefParameter);
+		/*
 		ASTNode.allInstances.add(theMethodRefParameter);
 		MethodRefParameter.allInstances.add(theMethodRefParameter);
+		*/
 		
 		return theMethodRefParameter;
 	}
 	public Model createModel(){
 		ModelImpl theModel = new ModelImpl();
 		
-		//Model.allInstances_.add(theModel);
-		
+		Model.allInstances_.add(theModel);
+		/*
 		Model.allInstances.add(theModel);
+		*/
 		
 		return theModel;
 	}
 	public Modifier createModifier(){
 		ModifierImpl theModifier = new ModifierImpl();
 		
-		//Modifier.allInstances_.add(theModifier);
-		
+		Modifier.allInstances_.add(theModifier);
+		/*
 		ASTNode.allInstances.add(theModifier);
 		Modifier.allInstances.add(theModifier);
+		*/
 		
 		return theModifier;
 	}
 	public NumberLiteral createNumberLiteral(){
 		NumberLiteralImpl theNumberLiteral = new NumberLiteralImpl();
 		
-		//NumberLiteral.allInstances_.add(theNumberLiteral);
-		
+		NumberLiteral.allInstances_.add(theNumberLiteral);
+		/*
 		ASTNode.allInstances.add(theNumberLiteral);
 		Expression.allInstances.add(theNumberLiteral);
 		NumberLiteral.allInstances.add(theNumberLiteral);
+		*/
 		
 		return theNumberLiteral;
 	}
 	public NullLiteral createNullLiteral(){
 		NullLiteralImpl theNullLiteral = new NullLiteralImpl();
 		
-		//NullLiteral.allInstances_.add(theNullLiteral);
-		
+		NullLiteral.allInstances_.add(theNullLiteral);
+		/*
 		ASTNode.allInstances.add(theNullLiteral);
 		Expression.allInstances.add(theNullLiteral);
 		NullLiteral.allInstances.add(theNullLiteral);
+		*/
 		
 		return theNullLiteral;
 	}
 	public Package createPackage(){
 		PackageImpl thePackage = new PackageImpl();
 		
-		//Package.allInstances_.add(thePackage);
-		
+		Package.allInstances_.add(thePackage);
+		/*
 		ASTNode.allInstances.add(thePackage);
 		NamedElement.allInstances.add(thePackage);
 		Package.allInstances.add(thePackage);
+		*/
 		
 		return thePackage;
 	}
 	public PackageAccess createPackageAccess(){
 		PackageAccessImpl thePackageAccess = new PackageAccessImpl();
 		
-		//PackageAccess.allInstances_.add(thePackageAccess);
-		
+		PackageAccess.allInstances_.add(thePackageAccess);
+		/*
 		ASTNode.allInstances.add(thePackageAccess);
 		NamespaceAccess.allInstances.add(thePackageAccess);
 		PackageAccess.allInstances.add(thePackageAccess);
+		*/
 		
 		return thePackageAccess;
 	}
 	public ParameterizedType createParameterizedType(){
 		ParameterizedTypeImpl theParameterizedType = new ParameterizedTypeImpl();
 		
-		//ParameterizedType.allInstances_.add(theParameterizedType);
-		
+		ParameterizedType.allInstances_.add(theParameterizedType);
+		/*
 		ASTNode.allInstances.add(theParameterizedType);
 		NamedElement.allInstances.add(theParameterizedType);
 		Type.allInstances.add(theParameterizedType);
 		ParameterizedType.allInstances.add(theParameterizedType);
+		*/
 		
 		return theParameterizedType;
 	}
 	public ParenthesizedExpression createParenthesizedExpression(){
 		ParenthesizedExpressionImpl theParenthesizedExpression = new ParenthesizedExpressionImpl();
 		
-		//ParenthesizedExpression.allInstances_.add(theParenthesizedExpression);
-		
+		ParenthesizedExpression.allInstances_.add(theParenthesizedExpression);
+		/*
 		ASTNode.allInstances.add(theParenthesizedExpression);
 		Expression.allInstances.add(theParenthesizedExpression);
 		ParenthesizedExpression.allInstances.add(theParenthesizedExpression);
+		*/
 		
 		return theParenthesizedExpression;
 	}
 	public PostfixExpression createPostfixExpression(){
 		PostfixExpressionImpl thePostfixExpression = new PostfixExpressionImpl();
 		
-		//PostfixExpression.allInstances_.add(thePostfixExpression);
-		
+		PostfixExpression.allInstances_.add(thePostfixExpression);
+		/*
 		ASTNode.allInstances.add(thePostfixExpression);
 		Expression.allInstances.add(thePostfixExpression);
 		PostfixExpression.allInstances.add(thePostfixExpression);
+		*/
 		
 		return thePostfixExpression;
 	}
 	public PrefixExpression createPrefixExpression(){
 		PrefixExpressionImpl thePrefixExpression = new PrefixExpressionImpl();
 		
-		//PrefixExpression.allInstances_.add(thePrefixExpression);
-		
+		PrefixExpression.allInstances_.add(thePrefixExpression);
+		/*
 		ASTNode.allInstances.add(thePrefixExpression);
 		Expression.allInstances.add(thePrefixExpression);
 		PrefixExpression.allInstances.add(thePrefixExpression);
+		*/
 		
 		return thePrefixExpression;
 	}
 	public PrimitiveType createPrimitiveType(){
 		PrimitiveTypeImpl thePrimitiveType = new PrimitiveTypeImpl();
 		
-		//PrimitiveType.allInstances_.add(thePrimitiveType);
-		
+		PrimitiveType.allInstances_.add(thePrimitiveType);
+		/*
 		ASTNode.allInstances.add(thePrimitiveType);
 		NamedElement.allInstances.add(thePrimitiveType);
 		Type.allInstances.add(thePrimitiveType);
 		PrimitiveType.allInstances.add(thePrimitiveType);
+		*/
 		
 		return thePrimitiveType;
 	}
 	public PrimitiveTypeBoolean createPrimitiveTypeBoolean(){
 		PrimitiveTypeBooleanImpl thePrimitiveTypeBoolean = new PrimitiveTypeBooleanImpl();
 		
-		//PrimitiveTypeBoolean.allInstances_.add(thePrimitiveTypeBoolean);
-		
+		PrimitiveTypeBoolean.allInstances_.add(thePrimitiveTypeBoolean);
+		/*
 		ASTNode.allInstances.add(thePrimitiveTypeBoolean);
 		NamedElement.allInstances.add(thePrimitiveTypeBoolean);
 		Type.allInstances.add(thePrimitiveTypeBoolean);
 		PrimitiveType.allInstances.add(thePrimitiveTypeBoolean);
 		PrimitiveTypeBoolean.allInstances.add(thePrimitiveTypeBoolean);
+		*/
 		
 		return thePrimitiveTypeBoolean;
 	}
 	public PrimitiveTypeByte createPrimitiveTypeByte(){
 		PrimitiveTypeByteImpl thePrimitiveTypeByte = new PrimitiveTypeByteImpl();
 		
-		//PrimitiveTypeByte.allInstances_.add(thePrimitiveTypeByte);
-		
+		PrimitiveTypeByte.allInstances_.add(thePrimitiveTypeByte);
+		/*
 		ASTNode.allInstances.add(thePrimitiveTypeByte);
 		NamedElement.allInstances.add(thePrimitiveTypeByte);
 		Type.allInstances.add(thePrimitiveTypeByte);
 		PrimitiveType.allInstances.add(thePrimitiveTypeByte);
 		PrimitiveTypeByte.allInstances.add(thePrimitiveTypeByte);
+		*/
 		
 		return thePrimitiveTypeByte;
 	}
 	public PrimitiveTypeChar createPrimitiveTypeChar(){
 		PrimitiveTypeCharImpl thePrimitiveTypeChar = new PrimitiveTypeCharImpl();
 		
-		//PrimitiveTypeChar.allInstances_.add(thePrimitiveTypeChar);
-		
+		PrimitiveTypeChar.allInstances_.add(thePrimitiveTypeChar);
+		/*
 		ASTNode.allInstances.add(thePrimitiveTypeChar);
 		NamedElement.allInstances.add(thePrimitiveTypeChar);
 		Type.allInstances.add(thePrimitiveTypeChar);
 		PrimitiveType.allInstances.add(thePrimitiveTypeChar);
 		PrimitiveTypeChar.allInstances.add(thePrimitiveTypeChar);
+		*/
 		
 		return thePrimitiveTypeChar;
 	}
 	public PrimitiveTypeDouble createPrimitiveTypeDouble(){
 		PrimitiveTypeDoubleImpl thePrimitiveTypeDouble = new PrimitiveTypeDoubleImpl();
 		
-		//PrimitiveTypeDouble.allInstances_.add(thePrimitiveTypeDouble);
-		
+		PrimitiveTypeDouble.allInstances_.add(thePrimitiveTypeDouble);
+		/*
 		ASTNode.allInstances.add(thePrimitiveTypeDouble);
 		NamedElement.allInstances.add(thePrimitiveTypeDouble);
 		Type.allInstances.add(thePrimitiveTypeDouble);
 		PrimitiveType.allInstances.add(thePrimitiveTypeDouble);
 		PrimitiveTypeDouble.allInstances.add(thePrimitiveTypeDouble);
+		*/
 		
 		return thePrimitiveTypeDouble;
 	}
 	public PrimitiveTypeShort createPrimitiveTypeShort(){
 		PrimitiveTypeShortImpl thePrimitiveTypeShort = new PrimitiveTypeShortImpl();
 		
-		//PrimitiveTypeShort.allInstances_.add(thePrimitiveTypeShort);
-		
+		PrimitiveTypeShort.allInstances_.add(thePrimitiveTypeShort);
+		/*
 		ASTNode.allInstances.add(thePrimitiveTypeShort);
 		NamedElement.allInstances.add(thePrimitiveTypeShort);
 		Type.allInstances.add(thePrimitiveTypeShort);
 		PrimitiveType.allInstances.add(thePrimitiveTypeShort);
 		PrimitiveTypeShort.allInstances.add(thePrimitiveTypeShort);
+		*/
 		
 		return thePrimitiveTypeShort;
 	}
 	public PrimitiveTypeFloat createPrimitiveTypeFloat(){
 		PrimitiveTypeFloatImpl thePrimitiveTypeFloat = new PrimitiveTypeFloatImpl();
 		
-		//PrimitiveTypeFloat.allInstances_.add(thePrimitiveTypeFloat);
-		
+		PrimitiveTypeFloat.allInstances_.add(thePrimitiveTypeFloat);
+		/*
 		ASTNode.allInstances.add(thePrimitiveTypeFloat);
 		NamedElement.allInstances.add(thePrimitiveTypeFloat);
 		Type.allInstances.add(thePrimitiveTypeFloat);
 		PrimitiveType.allInstances.add(thePrimitiveTypeFloat);
 		PrimitiveTypeFloat.allInstances.add(thePrimitiveTypeFloat);
+		*/
 		
 		return thePrimitiveTypeFloat;
 	}
 	public PrimitiveTypeInt createPrimitiveTypeInt(){
 		PrimitiveTypeIntImpl thePrimitiveTypeInt = new PrimitiveTypeIntImpl();
 		
-		//PrimitiveTypeInt.allInstances_.add(thePrimitiveTypeInt);
-		
+		PrimitiveTypeInt.allInstances_.add(thePrimitiveTypeInt);
+		/*
 		ASTNode.allInstances.add(thePrimitiveTypeInt);
 		NamedElement.allInstances.add(thePrimitiveTypeInt);
 		Type.allInstances.add(thePrimitiveTypeInt);
 		PrimitiveType.allInstances.add(thePrimitiveTypeInt);
 		PrimitiveTypeInt.allInstances.add(thePrimitiveTypeInt);
+		*/
 		
 		return thePrimitiveTypeInt;
 	}
 	public PrimitiveTypeLong createPrimitiveTypeLong(){
 		PrimitiveTypeLongImpl thePrimitiveTypeLong = new PrimitiveTypeLongImpl();
 		
-		//PrimitiveTypeLong.allInstances_.add(thePrimitiveTypeLong);
-		
+		PrimitiveTypeLong.allInstances_.add(thePrimitiveTypeLong);
+		/*
 		ASTNode.allInstances.add(thePrimitiveTypeLong);
 		NamedElement.allInstances.add(thePrimitiveTypeLong);
 		Type.allInstances.add(thePrimitiveTypeLong);
 		PrimitiveType.allInstances.add(thePrimitiveTypeLong);
 		PrimitiveTypeLong.allInstances.add(thePrimitiveTypeLong);
+		*/
 		
 		return thePrimitiveTypeLong;
 	}
 	public PrimitiveTypeVoid createPrimitiveTypeVoid(){
 		PrimitiveTypeVoidImpl thePrimitiveTypeVoid = new PrimitiveTypeVoidImpl();
 		
-		//PrimitiveTypeVoid.allInstances_.add(thePrimitiveTypeVoid);
-		
+		PrimitiveTypeVoid.allInstances_.add(thePrimitiveTypeVoid);
+		/*
 		ASTNode.allInstances.add(thePrimitiveTypeVoid);
 		NamedElement.allInstances.add(thePrimitiveTypeVoid);
 		Type.allInstances.add(thePrimitiveTypeVoid);
 		PrimitiveType.allInstances.add(thePrimitiveTypeVoid);
 		PrimitiveTypeVoid.allInstances.add(thePrimitiveTypeVoid);
+		*/
 		
 		return thePrimitiveTypeVoid;
 	}
 	public ReturnStatement createReturnStatement(){
 		ReturnStatementImpl theReturnStatement = new ReturnStatementImpl();
 		
-		//ReturnStatement.allInstances_.add(theReturnStatement);
-		
+		ReturnStatement.allInstances_.add(theReturnStatement);
+		/*
 		ASTNode.allInstances.add(theReturnStatement);
 		Statement.allInstances.add(theReturnStatement);
 		ReturnStatement.allInstances.add(theReturnStatement);
+		*/
 		
 		return theReturnStatement;
 	}
 	public SingleVariableAccess createSingleVariableAccess(){
 		SingleVariableAccessImpl theSingleVariableAccess = new SingleVariableAccessImpl();
 		
-		//SingleVariableAccess.allInstances_.add(theSingleVariableAccess);
-		
+		SingleVariableAccess.allInstances_.add(theSingleVariableAccess);
+		/*
 		ASTNode.allInstances.add(theSingleVariableAccess);
 		Expression.allInstances.add(theSingleVariableAccess);
 		SingleVariableAccess.allInstances.add(theSingleVariableAccess);
+		*/
 		
 		return theSingleVariableAccess;
 	}
 	public SingleVariableDeclaration createSingleVariableDeclaration(){
 		SingleVariableDeclarationImpl theSingleVariableDeclaration = new SingleVariableDeclarationImpl();
 		
-		//SingleVariableDeclaration.allInstances_.add(theSingleVariableDeclaration);
-		
+		SingleVariableDeclaration.allInstances_.add(theSingleVariableDeclaration);
+		/*
 		ASTNode.allInstances.add(theSingleVariableDeclaration);
 		NamedElement.allInstances.add(theSingleVariableDeclaration);
 		VariableDeclaration.allInstances.add(theSingleVariableDeclaration);
 		SingleVariableDeclaration.allInstances.add(theSingleVariableDeclaration);
+		*/
 		
 		return theSingleVariableDeclaration;
 	}
 	public StringLiteral createStringLiteral(){
 		StringLiteralImpl theStringLiteral = new StringLiteralImpl();
 		
-		//StringLiteral.allInstances_.add(theStringLiteral);
-		
+		StringLiteral.allInstances_.add(theStringLiteral);
+		/*
 		ASTNode.allInstances.add(theStringLiteral);
 		Expression.allInstances.add(theStringLiteral);
 		StringLiteral.allInstances.add(theStringLiteral);
+		*/
 		
 		return theStringLiteral;
 	}
 	public SuperConstructorInvocation createSuperConstructorInvocation(){
 		SuperConstructorInvocationImpl theSuperConstructorInvocation = new SuperConstructorInvocationImpl();
 		
-		//SuperConstructorInvocation.allInstances_.add(theSuperConstructorInvocation);
-		
+		SuperConstructorInvocation.allInstances_.add(theSuperConstructorInvocation);
+		/*
 		ASTNode.allInstances.add(theSuperConstructorInvocation);
 		Statement.allInstances.add(theSuperConstructorInvocation);
 		AbstractMethodInvocation.allInstances.add(theSuperConstructorInvocation);
 		SuperConstructorInvocation.allInstances.add(theSuperConstructorInvocation);
+		*/
 		
 		return theSuperConstructorInvocation;
 	}
 	public SuperFieldAccess createSuperFieldAccess(){
 		SuperFieldAccessImpl theSuperFieldAccess = new SuperFieldAccessImpl();
 		
-		//SuperFieldAccess.allInstances_.add(theSuperFieldAccess);
-		
+		SuperFieldAccess.allInstances_.add(theSuperFieldAccess);
+		/*
 		ASTNode.allInstances.add(theSuperFieldAccess);
 		Expression.allInstances.add(theSuperFieldAccess);
 		AbstractTypeQualifiedExpression.allInstances.add(theSuperFieldAccess);
 		SuperFieldAccess.allInstances.add(theSuperFieldAccess);
+		*/
 		
 		return theSuperFieldAccess;
 	}
 	public SuperMethodInvocation createSuperMethodInvocation(){
 		SuperMethodInvocationImpl theSuperMethodInvocation = new SuperMethodInvocationImpl();
 		
-		//SuperMethodInvocation.allInstances_.add(theSuperMethodInvocation);
-		
+		SuperMethodInvocation.allInstances_.add(theSuperMethodInvocation);
+		/*
 		ASTNode.allInstances.add(theSuperMethodInvocation);
 		Expression.allInstances.add(theSuperMethodInvocation);
 		AbstractTypeQualifiedExpression.allInstances.add(theSuperMethodInvocation);
 		AbstractMethodInvocation.allInstances.add(theSuperMethodInvocation);
 		SuperMethodInvocation.allInstances.add(theSuperMethodInvocation);
+		*/
 		
 		return theSuperMethodInvocation;
 	}
 	public SwitchCase createSwitchCase(){
 		SwitchCaseImpl theSwitchCase = new SwitchCaseImpl();
 		
-		//SwitchCase.allInstances_.add(theSwitchCase);
-		
+		SwitchCase.allInstances_.add(theSwitchCase);
+		/*
 		ASTNode.allInstances.add(theSwitchCase);
 		Statement.allInstances.add(theSwitchCase);
 		SwitchCase.allInstances.add(theSwitchCase);
+		*/
 		
 		return theSwitchCase;
 	}
 	public SwitchStatement createSwitchStatement(){
 		SwitchStatementImpl theSwitchStatement = new SwitchStatementImpl();
 		
-		//SwitchStatement.allInstances_.add(theSwitchStatement);
-		
+		SwitchStatement.allInstances_.add(theSwitchStatement);
+		/*
 		ASTNode.allInstances.add(theSwitchStatement);
 		Statement.allInstances.add(theSwitchStatement);
 		SwitchStatement.allInstances.add(theSwitchStatement);
+		*/
 		
 		return theSwitchStatement;
 	}
 	public SynchronizedStatement createSynchronizedStatement(){
 		SynchronizedStatementImpl theSynchronizedStatement = new SynchronizedStatementImpl();
 		
-		//SynchronizedStatement.allInstances_.add(theSynchronizedStatement);
-		
+		SynchronizedStatement.allInstances_.add(theSynchronizedStatement);
+		/*
 		ASTNode.allInstances.add(theSynchronizedStatement);
 		Statement.allInstances.add(theSynchronizedStatement);
 		SynchronizedStatement.allInstances.add(theSynchronizedStatement);
+		*/
 		
 		return theSynchronizedStatement;
 	}
 	public TagElement createTagElement(){
 		TagElementImpl theTagElement = new TagElementImpl();
 		
-		//TagElement.allInstances_.add(theTagElement);
-		
+		TagElement.allInstances_.add(theTagElement);
+		/*
 		ASTNode.allInstances.add(theTagElement);
 		TagElement.allInstances.add(theTagElement);
+		*/
 		
 		return theTagElement;
 	}
 	public TextElement createTextElement(){
 		TextElementImpl theTextElement = new TextElementImpl();
 		
-		//TextElement.allInstances_.add(theTextElement);
-		
+		TextElement.allInstances_.add(theTextElement);
+		/*
 		ASTNode.allInstances.add(theTextElement);
 		TextElement.allInstances.add(theTextElement);
+		*/
 		
 		return theTextElement;
 	}
 	public ThisExpression createThisExpression(){
 		ThisExpressionImpl theThisExpression = new ThisExpressionImpl();
 		
-		//ThisExpression.allInstances_.add(theThisExpression);
-		
+		ThisExpression.allInstances_.add(theThisExpression);
+		/*
 		ASTNode.allInstances.add(theThisExpression);
 		Expression.allInstances.add(theThisExpression);
 		AbstractTypeQualifiedExpression.allInstances.add(theThisExpression);
 		ThisExpression.allInstances.add(theThisExpression);
+		*/
 		
 		return theThisExpression;
 	}
 	public ThrowStatement createThrowStatement(){
 		ThrowStatementImpl theThrowStatement = new ThrowStatementImpl();
 		
-		//ThrowStatement.allInstances_.add(theThrowStatement);
-		
+		ThrowStatement.allInstances_.add(theThrowStatement);
+		/*
 		ASTNode.allInstances.add(theThrowStatement);
 		Statement.allInstances.add(theThrowStatement);
 		ThrowStatement.allInstances.add(theThrowStatement);
+		*/
 		
 		return theThrowStatement;
 	}
 	public TryStatement createTryStatement(){
 		TryStatementImpl theTryStatement = new TryStatementImpl();
 		
-		//TryStatement.allInstances_.add(theTryStatement);
-		
+		TryStatement.allInstances_.add(theTryStatement);
+		/*
 		ASTNode.allInstances.add(theTryStatement);
 		Statement.allInstances.add(theTryStatement);
 		TryStatement.allInstances.add(theTryStatement);
+		*/
 		
 		return theTryStatement;
 	}
 	public TypeAccess createTypeAccess(){
 		TypeAccessImpl theTypeAccess = new TypeAccessImpl();
 		
-		//TypeAccess.allInstances_.add(theTypeAccess);
-		
+		TypeAccess.allInstances_.add(theTypeAccess);
+		/*
 		ASTNode.allInstances.add(theTypeAccess);
 		Expression.allInstances.add(theTypeAccess);
 		NamespaceAccess.allInstances.add(theTypeAccess);
 		TypeAccess.allInstances.add(theTypeAccess);
+		*/
 		
 		return theTypeAccess;
 	}
 	public TypeDeclarationStatement createTypeDeclarationStatement(){
 		TypeDeclarationStatementImpl theTypeDeclarationStatement = new TypeDeclarationStatementImpl();
 		
-		//TypeDeclarationStatement.allInstances_.add(theTypeDeclarationStatement);
-		
+		TypeDeclarationStatement.allInstances_.add(theTypeDeclarationStatement);
+		/*
 		ASTNode.allInstances.add(theTypeDeclarationStatement);
 		Statement.allInstances.add(theTypeDeclarationStatement);
 		TypeDeclarationStatement.allInstances.add(theTypeDeclarationStatement);
+		*/
 		
 		return theTypeDeclarationStatement;
 	}
 	public TypeLiteral createTypeLiteral(){
 		TypeLiteralImpl theTypeLiteral = new TypeLiteralImpl();
 		
-		//TypeLiteral.allInstances_.add(theTypeLiteral);
-		
+		TypeLiteral.allInstances_.add(theTypeLiteral);
+		/*
 		ASTNode.allInstances.add(theTypeLiteral);
 		Expression.allInstances.add(theTypeLiteral);
 		TypeLiteral.allInstances.add(theTypeLiteral);
+		*/
 		
 		return theTypeLiteral;
 	}
 	public TypeParameter createTypeParameter(){
 		TypeParameterImpl theTypeParameter = new TypeParameterImpl();
 		
-		//TypeParameter.allInstances_.add(theTypeParameter);
-		
+		TypeParameter.allInstances_.add(theTypeParameter);
+		/*
 		ASTNode.allInstances.add(theTypeParameter);
 		NamedElement.allInstances.add(theTypeParameter);
 		Type.allInstances.add(theTypeParameter);
 		TypeParameter.allInstances.add(theTypeParameter);
+		*/
 		
 		return theTypeParameter;
 	}
 	public UnresolvedItem createUnresolvedItem(){
 		UnresolvedItemImpl theUnresolvedItem = new UnresolvedItemImpl();
 		
-		//UnresolvedItem.allInstances_.add(theUnresolvedItem);
-		
+		UnresolvedItem.allInstances_.add(theUnresolvedItem);
+		/*
 		ASTNode.allInstances.add(theUnresolvedItem);
 		NamedElement.allInstances.add(theUnresolvedItem);
 		UnresolvedItem.allInstances.add(theUnresolvedItem);
+		*/
 		
 		return theUnresolvedItem;
 	}
 	public UnresolvedItemAccess createUnresolvedItemAccess(){
 		UnresolvedItemAccessImpl theUnresolvedItemAccess = new UnresolvedItemAccessImpl();
 		
-		//UnresolvedItemAccess.allInstances_.add(theUnresolvedItemAccess);
-		
+		UnresolvedItemAccess.allInstances_.add(theUnresolvedItemAccess);
+		/*
 		ASTNode.allInstances.add(theUnresolvedItemAccess);
 		Expression.allInstances.add(theUnresolvedItemAccess);
 		NamespaceAccess.allInstances.add(theUnresolvedItemAccess);
 		UnresolvedItemAccess.allInstances.add(theUnresolvedItemAccess);
+		*/
 		
 		return theUnresolvedItemAccess;
 	}
 	public UnresolvedAnnotationDeclaration createUnresolvedAnnotationDeclaration(){
 		UnresolvedAnnotationDeclarationImpl theUnresolvedAnnotationDeclaration = new UnresolvedAnnotationDeclarationImpl();
 		
-		//UnresolvedAnnotationDeclaration.allInstances_.add(theUnresolvedAnnotationDeclaration);
-		
+		UnresolvedAnnotationDeclaration.allInstances_.add(theUnresolvedAnnotationDeclaration);
+		/*
 		ASTNode.allInstances.add(theUnresolvedAnnotationDeclaration);
 		NamedElement.allInstances.add(theUnresolvedAnnotationDeclaration);
 		BodyDeclaration.allInstances.add(theUnresolvedAnnotationDeclaration);
@@ -1118,28 +1213,30 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 		AnnotationTypeDeclaration.allInstances.add(theUnresolvedAnnotationDeclaration);
 		UnresolvedItem.allInstances.add(theUnresolvedAnnotationDeclaration);
 		UnresolvedAnnotationDeclaration.allInstances.add(theUnresolvedAnnotationDeclaration);
+		*/
 		
 		return theUnresolvedAnnotationDeclaration;
 	}
 	public UnresolvedAnnotationTypeMemberDeclaration createUnresolvedAnnotationTypeMemberDeclaration(){
 		UnresolvedAnnotationTypeMemberDeclarationImpl theUnresolvedAnnotationTypeMemberDeclaration = new UnresolvedAnnotationTypeMemberDeclarationImpl();
 		
-		//UnresolvedAnnotationTypeMemberDeclaration.allInstances_.add(theUnresolvedAnnotationTypeMemberDeclaration);
-		
+		UnresolvedAnnotationTypeMemberDeclaration.allInstances_.add(theUnresolvedAnnotationTypeMemberDeclaration);
+		/*
 		ASTNode.allInstances.add(theUnresolvedAnnotationTypeMemberDeclaration);
 		NamedElement.allInstances.add(theUnresolvedAnnotationTypeMemberDeclaration);
 		BodyDeclaration.allInstances.add(theUnresolvedAnnotationTypeMemberDeclaration);
 		AnnotationTypeMemberDeclaration.allInstances.add(theUnresolvedAnnotationTypeMemberDeclaration);
 		UnresolvedItem.allInstances.add(theUnresolvedAnnotationTypeMemberDeclaration);
 		UnresolvedAnnotationTypeMemberDeclaration.allInstances.add(theUnresolvedAnnotationTypeMemberDeclaration);
+		*/
 		
 		return theUnresolvedAnnotationTypeMemberDeclaration;
 	}
 	public UnresolvedClassDeclaration createUnresolvedClassDeclaration(){
 		UnresolvedClassDeclarationImpl theUnresolvedClassDeclaration = new UnresolvedClassDeclarationImpl();
 		
-		//UnresolvedClassDeclaration.allInstances_.add(theUnresolvedClassDeclaration);
-		
+		UnresolvedClassDeclaration.allInstances_.add(theUnresolvedClassDeclaration);
+		/*
 		ASTNode.allInstances.add(theUnresolvedClassDeclaration);
 		NamedElement.allInstances.add(theUnresolvedClassDeclaration);
 		BodyDeclaration.allInstances.add(theUnresolvedClassDeclaration);
@@ -1149,14 +1246,15 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 		ClassDeclaration.allInstances.add(theUnresolvedClassDeclaration);
 		UnresolvedItem.allInstances.add(theUnresolvedClassDeclaration);
 		UnresolvedClassDeclaration.allInstances.add(theUnresolvedClassDeclaration);
+		*/
 		
 		return theUnresolvedClassDeclaration;
 	}
 	public UnresolvedEnumDeclaration createUnresolvedEnumDeclaration(){
 		UnresolvedEnumDeclarationImpl theUnresolvedEnumDeclaration = new UnresolvedEnumDeclarationImpl();
 		
-		//UnresolvedEnumDeclaration.allInstances_.add(theUnresolvedEnumDeclaration);
-		
+		UnresolvedEnumDeclaration.allInstances_.add(theUnresolvedEnumDeclaration);
+		/*
 		ASTNode.allInstances.add(theUnresolvedEnumDeclaration);
 		NamedElement.allInstances.add(theUnresolvedEnumDeclaration);
 		BodyDeclaration.allInstances.add(theUnresolvedEnumDeclaration);
@@ -1165,14 +1263,15 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 		EnumDeclaration.allInstances.add(theUnresolvedEnumDeclaration);
 		UnresolvedItem.allInstances.add(theUnresolvedEnumDeclaration);
 		UnresolvedEnumDeclaration.allInstances.add(theUnresolvedEnumDeclaration);
+		*/
 		
 		return theUnresolvedEnumDeclaration;
 	}
 	public UnresolvedInterfaceDeclaration createUnresolvedInterfaceDeclaration(){
 		UnresolvedInterfaceDeclarationImpl theUnresolvedInterfaceDeclaration = new UnresolvedInterfaceDeclarationImpl();
 		
-		//UnresolvedInterfaceDeclaration.allInstances_.add(theUnresolvedInterfaceDeclaration);
-		
+		UnresolvedInterfaceDeclaration.allInstances_.add(theUnresolvedInterfaceDeclaration);
+		/*
 		ASTNode.allInstances.add(theUnresolvedInterfaceDeclaration);
 		NamedElement.allInstances.add(theUnresolvedInterfaceDeclaration);
 		BodyDeclaration.allInstances.add(theUnresolvedInterfaceDeclaration);
@@ -1182,28 +1281,30 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 		InterfaceDeclaration.allInstances.add(theUnresolvedInterfaceDeclaration);
 		UnresolvedItem.allInstances.add(theUnresolvedInterfaceDeclaration);
 		UnresolvedInterfaceDeclaration.allInstances.add(theUnresolvedInterfaceDeclaration);
+		*/
 		
 		return theUnresolvedInterfaceDeclaration;
 	}
 	public UnresolvedLabeledStatement createUnresolvedLabeledStatement(){
 		UnresolvedLabeledStatementImpl theUnresolvedLabeledStatement = new UnresolvedLabeledStatementImpl();
 		
-		//UnresolvedLabeledStatement.allInstances_.add(theUnresolvedLabeledStatement);
-		
+		UnresolvedLabeledStatement.allInstances_.add(theUnresolvedLabeledStatement);
+		/*
 		ASTNode.allInstances.add(theUnresolvedLabeledStatement);
 		NamedElement.allInstances.add(theUnresolvedLabeledStatement);
 		Statement.allInstances.add(theUnresolvedLabeledStatement);
 		LabeledStatement.allInstances.add(theUnresolvedLabeledStatement);
 		UnresolvedItem.allInstances.add(theUnresolvedLabeledStatement);
 		UnresolvedLabeledStatement.allInstances.add(theUnresolvedLabeledStatement);
+		*/
 		
 		return theUnresolvedLabeledStatement;
 	}
 	public UnresolvedMethodDeclaration createUnresolvedMethodDeclaration(){
 		UnresolvedMethodDeclarationImpl theUnresolvedMethodDeclaration = new UnresolvedMethodDeclarationImpl();
 		
-		//UnresolvedMethodDeclaration.allInstances_.add(theUnresolvedMethodDeclaration);
-		
+		UnresolvedMethodDeclaration.allInstances_.add(theUnresolvedMethodDeclaration);
+		/*
 		ASTNode.allInstances.add(theUnresolvedMethodDeclaration);
 		NamedElement.allInstances.add(theUnresolvedMethodDeclaration);
 		BodyDeclaration.allInstances.add(theUnresolvedMethodDeclaration);
@@ -1211,41 +1312,44 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 		MethodDeclaration.allInstances.add(theUnresolvedMethodDeclaration);
 		UnresolvedItem.allInstances.add(theUnresolvedMethodDeclaration);
 		UnresolvedMethodDeclaration.allInstances.add(theUnresolvedMethodDeclaration);
+		*/
 		
 		return theUnresolvedMethodDeclaration;
 	}
 	public UnresolvedSingleVariableDeclaration createUnresolvedSingleVariableDeclaration(){
 		UnresolvedSingleVariableDeclarationImpl theUnresolvedSingleVariableDeclaration = new UnresolvedSingleVariableDeclarationImpl();
 		
-		//UnresolvedSingleVariableDeclaration.allInstances_.add(theUnresolvedSingleVariableDeclaration);
-		
+		UnresolvedSingleVariableDeclaration.allInstances_.add(theUnresolvedSingleVariableDeclaration);
+		/*
 		ASTNode.allInstances.add(theUnresolvedSingleVariableDeclaration);
 		NamedElement.allInstances.add(theUnresolvedSingleVariableDeclaration);
 		VariableDeclaration.allInstances.add(theUnresolvedSingleVariableDeclaration);
 		SingleVariableDeclaration.allInstances.add(theUnresolvedSingleVariableDeclaration);
 		UnresolvedItem.allInstances.add(theUnresolvedSingleVariableDeclaration);
 		UnresolvedSingleVariableDeclaration.allInstances.add(theUnresolvedSingleVariableDeclaration);
+		*/
 		
 		return theUnresolvedSingleVariableDeclaration;
 	}
 	public UnresolvedType createUnresolvedType(){
 		UnresolvedTypeImpl theUnresolvedType = new UnresolvedTypeImpl();
 		
-		//UnresolvedType.allInstances_.add(theUnresolvedType);
-		
+		UnresolvedType.allInstances_.add(theUnresolvedType);
+		/*
 		ASTNode.allInstances.add(theUnresolvedType);
 		NamedElement.allInstances.add(theUnresolvedType);
 		Type.allInstances.add(theUnresolvedType);
 		UnresolvedItem.allInstances.add(theUnresolvedType);
 		UnresolvedType.allInstances.add(theUnresolvedType);
+		*/
 		
 		return theUnresolvedType;
 	}
 	public UnresolvedTypeDeclaration createUnresolvedTypeDeclaration(){
 		UnresolvedTypeDeclarationImpl theUnresolvedTypeDeclaration = new UnresolvedTypeDeclarationImpl();
 		
-		//UnresolvedTypeDeclaration.allInstances_.add(theUnresolvedTypeDeclaration);
-		
+		UnresolvedTypeDeclaration.allInstances_.add(theUnresolvedTypeDeclaration);
+		/*
 		ASTNode.allInstances.add(theUnresolvedTypeDeclaration);
 		NamedElement.allInstances.add(theUnresolvedTypeDeclaration);
 		BodyDeclaration.allInstances.add(theUnresolvedTypeDeclaration);
@@ -1253,79 +1357,86 @@ public class Java_FactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 		AbstractTypeDeclaration.allInstances.add(theUnresolvedTypeDeclaration);
 		UnresolvedItem.allInstances.add(theUnresolvedTypeDeclaration);
 		UnresolvedTypeDeclaration.allInstances.add(theUnresolvedTypeDeclaration);
+		*/
 		
 		return theUnresolvedTypeDeclaration;
 	}
 	public UnresolvedVariableDeclarationFragment createUnresolvedVariableDeclarationFragment(){
 		UnresolvedVariableDeclarationFragmentImpl theUnresolvedVariableDeclarationFragment = new UnresolvedVariableDeclarationFragmentImpl();
 		
-		//UnresolvedVariableDeclarationFragment.allInstances_.add(theUnresolvedVariableDeclarationFragment);
-		
+		UnresolvedVariableDeclarationFragment.allInstances_.add(theUnresolvedVariableDeclarationFragment);
+		/*
 		ASTNode.allInstances.add(theUnresolvedVariableDeclarationFragment);
 		NamedElement.allInstances.add(theUnresolvedVariableDeclarationFragment);
 		VariableDeclaration.allInstances.add(theUnresolvedVariableDeclarationFragment);
 		VariableDeclarationFragment.allInstances.add(theUnresolvedVariableDeclarationFragment);
 		UnresolvedItem.allInstances.add(theUnresolvedVariableDeclarationFragment);
 		UnresolvedVariableDeclarationFragment.allInstances.add(theUnresolvedVariableDeclarationFragment);
+		*/
 		
 		return theUnresolvedVariableDeclarationFragment;
 	}
 	public VariableDeclarationExpression createVariableDeclarationExpression(){
 		VariableDeclarationExpressionImpl theVariableDeclarationExpression = new VariableDeclarationExpressionImpl();
 		
-		//VariableDeclarationExpression.allInstances_.add(theVariableDeclarationExpression);
-		
+		VariableDeclarationExpression.allInstances_.add(theVariableDeclarationExpression);
+		/*
 		ASTNode.allInstances.add(theVariableDeclarationExpression);
 		Expression.allInstances.add(theVariableDeclarationExpression);
 		AbstractVariablesContainer.allInstances.add(theVariableDeclarationExpression);
 		VariableDeclarationExpression.allInstances.add(theVariableDeclarationExpression);
+		*/
 		
 		return theVariableDeclarationExpression;
 	}
 	public VariableDeclarationFragment createVariableDeclarationFragment(){
 		VariableDeclarationFragmentImpl theVariableDeclarationFragment = new VariableDeclarationFragmentImpl();
 		
-		//VariableDeclarationFragment.allInstances_.add(theVariableDeclarationFragment);
-		
+		VariableDeclarationFragment.allInstances_.add(theVariableDeclarationFragment);
+		/*
 		ASTNode.allInstances.add(theVariableDeclarationFragment);
 		NamedElement.allInstances.add(theVariableDeclarationFragment);
 		VariableDeclaration.allInstances.add(theVariableDeclarationFragment);
 		VariableDeclarationFragment.allInstances.add(theVariableDeclarationFragment);
+		*/
 		
 		return theVariableDeclarationFragment;
 	}
 	public VariableDeclarationStatement createVariableDeclarationStatement(){
 		VariableDeclarationStatementImpl theVariableDeclarationStatement = new VariableDeclarationStatementImpl();
 		
-		//VariableDeclarationStatement.allInstances_.add(theVariableDeclarationStatement);
-		
+		VariableDeclarationStatement.allInstances_.add(theVariableDeclarationStatement);
+		/*
 		ASTNode.allInstances.add(theVariableDeclarationStatement);
 		Statement.allInstances.add(theVariableDeclarationStatement);
 		AbstractVariablesContainer.allInstances.add(theVariableDeclarationStatement);
 		VariableDeclarationStatement.allInstances.add(theVariableDeclarationStatement);
+		*/
 		
 		return theVariableDeclarationStatement;
 	}
 	public WildCardType createWildCardType(){
 		WildCardTypeImpl theWildCardType = new WildCardTypeImpl();
 		
-		//WildCardType.allInstances_.add(theWildCardType);
-		
+		WildCardType.allInstances_.add(theWildCardType);
+		/*
 		ASTNode.allInstances.add(theWildCardType);
 		NamedElement.allInstances.add(theWildCardType);
 		Type.allInstances.add(theWildCardType);
 		WildCardType.allInstances.add(theWildCardType);
+		*/
 		
 		return theWildCardType;
 	}
 	public WhileStatement createWhileStatement(){
 		WhileStatementImpl theWhileStatement = new WhileStatementImpl();
 		
-		//WhileStatement.allInstances_.add(theWhileStatement);
-		
+		WhileStatement.allInstances_.add(theWhileStatement);
+		/*
 		ASTNode.allInstances.add(theWhileStatement);
 		Statement.allInstances.add(theWhileStatement);
 		WhileStatement.allInstances.add(theWhileStatement);
+		*/
 		
 		return theWhileStatement;
 	}

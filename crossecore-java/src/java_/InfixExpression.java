@@ -3,26 +3,19 @@ public interface InfixExpression
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<InfixExpression> allInstances = new Ocllib.QuickSet<InfixExpression>(InfixExpression.class);
-	
-	/*
 	public static Ocllib.QuickSet<InfixExpression> allInstances_ = new Ocllib.QuickSet<InfixExpression>(InfixExpression.class);
 	
-	public static Ocllib.QuickSet<InfixExpression> allInstancesClosure = new Ocllib.QuickSet<InfixExpression>(InfixExpression.class);
 		
 	public static Ocllib.QuickSet<InfixExpression> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Expression.allInstances_);
-			allInstancesClosure.addAll(InfixExpression.allInstances_);
-		}
+		Ocllib.QuickSet<InfixExpression> result = new Ocllib.QuickSet<InfixExpression>(InfixExpression.class);
+		result.addAll(InfixExpression.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<InfixExpression> allInstances = new Ocllib.QuickSet<InfixExpression>(InfixExpression.class);
 	
 	InfixExpressionKind getOperator();
 	void setOperator(InfixExpressionKind value);

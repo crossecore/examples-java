@@ -94,12 +94,12 @@ extends BodyDeclarationImpl implements AbstractMethodDeclaration
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES:
-				return getUsages().basicAdd((AbstractMethodInvocation)otherEnd, msgs);
-			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_PARAMETERS:
-				return getParameters().basicAdd((SingleVariableDeclaration)otherEnd, msgs);
 			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS:
 				return getUsagesInDocComments().basicAdd((MethodRef)otherEnd, msgs);
+			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_PARAMETERS:
+				return getParameters().basicAdd((SingleVariableDeclaration)otherEnd, msgs);
+			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES:
+				return getUsages().basicAdd((AbstractMethodInvocation)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -107,12 +107,12 @@ extends BodyDeclarationImpl implements AbstractMethodDeclaration
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES:
-				return getUsages().basicRemove((AbstractMethodInvocation)otherEnd, msgs);
-			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_PARAMETERS:
-				return getParameters().basicRemove((SingleVariableDeclaration)otherEnd, msgs);
 			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS:
 				return getUsagesInDocComments().basicRemove((MethodRef)otherEnd, msgs);
+			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_PARAMETERS:
+				return getParameters().basicRemove((SingleVariableDeclaration)otherEnd, msgs);
+			case Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES:
+				return getUsages().basicRemove((AbstractMethodInvocation)otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

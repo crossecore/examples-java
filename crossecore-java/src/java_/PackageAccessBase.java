@@ -88,11 +88,11 @@ extends NamespaceAccessImpl implements PackageAccess
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetPackage(Package newobj, NotificationChain msgs) {
-		Package oldobj = _package;
-		_package = newobj;
+	public NotificationChain basicSetQualifier(PackageAccess newobj, NotificationChain msgs) {
+		PackageAccess oldobj = _qualifier;
+		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PACKAGEACCESS_PACKAGE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PACKAGEACCESS_QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -102,11 +102,11 @@ extends NamespaceAccessImpl implements PackageAccess
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetQualifier(PackageAccess newobj, NotificationChain msgs) {
-		PackageAccess oldobj = _qualifier;
-		_qualifier = newobj;
+	public NotificationChain basicSetPackage(Package newobj, NotificationChain msgs) {
+		Package oldobj = _package;
+		_package = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PACKAGEACCESS_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PACKAGEACCESS_PACKAGE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

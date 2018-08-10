@@ -64,10 +64,10 @@ extends NamedElementImpl implements LabeledStatement
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
-				return getUsagesInContinueStatements().basicAdd((ContinueStatement)otherEnd, msgs);
 			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
 				return getUsagesInBreakStatements().basicAdd((BreakStatement)otherEnd, msgs);
+			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
+				return getUsagesInContinueStatements().basicAdd((ContinueStatement)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -75,10 +75,10 @@ extends NamedElementImpl implements LabeledStatement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
-				return getUsagesInContinueStatements().basicRemove((ContinueStatement)otherEnd, msgs);
 			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
 				return getUsagesInBreakStatements().basicRemove((BreakStatement)otherEnd, msgs);
+			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
+				return getUsagesInContinueStatements().basicRemove((ContinueStatement)otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

@@ -3,26 +3,19 @@ public interface DoStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<DoStatement> allInstances = new Ocllib.QuickSet<DoStatement>(DoStatement.class);
-	
-	/*
 	public static Ocllib.QuickSet<DoStatement> allInstances_ = new Ocllib.QuickSet<DoStatement>(DoStatement.class);
 	
-	public static Ocllib.QuickSet<DoStatement> allInstancesClosure = new Ocllib.QuickSet<DoStatement>(DoStatement.class);
 		
 	public static Ocllib.QuickSet<DoStatement> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Statement.allInstances_);
-			allInstancesClosure.addAll(DoStatement.allInstances_);
-		}
+		Ocllib.QuickSet<DoStatement> result = new Ocllib.QuickSet<DoStatement>(DoStatement.class);
+		result.addAll(DoStatement.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<DoStatement> allInstances = new Ocllib.QuickSet<DoStatement>(DoStatement.class);
 	
 	
 	Expression getExpression();

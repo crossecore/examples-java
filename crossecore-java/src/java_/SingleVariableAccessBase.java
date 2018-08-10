@@ -88,11 +88,11 @@ extends ExpressionImpl implements SingleVariableAccess
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetQualifier(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _qualifier;
-		_qualifier = newobj;
+	public NotificationChain basicSetVariable(VariableDeclaration newobj, NotificationChain msgs) {
+		VariableDeclaration oldobj = _variable;
+		_variable = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLEVARIABLEACCESS_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -102,11 +102,11 @@ extends ExpressionImpl implements SingleVariableAccess
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetVariable(VariableDeclaration newobj, NotificationChain msgs) {
-		VariableDeclaration oldobj = _variable;
-		_variable = newobj;
+	public NotificationChain basicSetQualifier(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _qualifier;
+		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLEVARIABLEACCESS_QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

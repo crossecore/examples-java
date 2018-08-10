@@ -88,11 +88,11 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetMember(AnnotationTypeMemberDeclaration newobj, NotificationChain msgs) {
-		AnnotationTypeMemberDeclaration oldobj = _member;
-		_member = newobj;
+	public NotificationChain basicSetValue(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _value;
+		_value = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -102,11 +102,11 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetValue(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _value;
-		_value = newobj;
+	public NotificationChain basicSetMember(AnnotationTypeMemberDeclaration newobj, NotificationChain msgs) {
+		AnnotationTypeMemberDeclaration oldobj = _member;
+		_member = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

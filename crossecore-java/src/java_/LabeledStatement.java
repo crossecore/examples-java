@@ -3,27 +3,20 @@ public interface LabeledStatement
  extends NamedElement,Statement
 {
 	
-	public static Ocllib.QuickSet<LabeledStatement> allInstances = new Ocllib.QuickSet<LabeledStatement>(LabeledStatement.class);
-	
-	/*
 	public static Ocllib.QuickSet<LabeledStatement> allInstances_ = new Ocllib.QuickSet<LabeledStatement>(LabeledStatement.class);
 	
-	public static Ocllib.QuickSet<LabeledStatement> allInstancesClosure = new Ocllib.QuickSet<LabeledStatement>(LabeledStatement.class);
 		
 	public static Ocllib.QuickSet<LabeledStatement> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(NamedElement.allInstances_);
-			allInstancesClosure.addAll(Statement.allInstances_);
-			allInstancesClosure.addAll(LabeledStatement.allInstances_);
-		}
+		Ocllib.QuickSet<LabeledStatement> result = new Ocllib.QuickSet<LabeledStatement>(LabeledStatement.class);
+		result.addAll(LabeledStatement.allInstances_);
 		
-		return allInstancesClosure;
+		result.addAll(UnresolvedLabeledStatement.allInstances_);
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<LabeledStatement> allInstances = new Ocllib.QuickSet<LabeledStatement>(LabeledStatement.class);
 	
 	
 	Statement getBody();

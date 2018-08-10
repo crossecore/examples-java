@@ -3,25 +3,22 @@ public interface AbstractVariablesContainer
  extends ASTNode
 {
 	
-	public static Ocllib.QuickSet<AbstractVariablesContainer> allInstances = new Ocllib.QuickSet<AbstractVariablesContainer>(AbstractVariablesContainer.class);
-	
-	/*
 	public static Ocllib.QuickSet<AbstractVariablesContainer> allInstances_ = new Ocllib.QuickSet<AbstractVariablesContainer>(AbstractVariablesContainer.class);
 	
-	public static Ocllib.QuickSet<AbstractVariablesContainer> allInstancesClosure = new Ocllib.QuickSet<AbstractVariablesContainer>(AbstractVariablesContainer.class);
 		
 	public static Ocllib.QuickSet<AbstractVariablesContainer> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(AbstractVariablesContainer.allInstances_);
-		}
+		Ocllib.QuickSet<AbstractVariablesContainer> result = new Ocllib.QuickSet<AbstractVariablesContainer>(AbstractVariablesContainer.class);
+		result.addAll(AbstractVariablesContainer.allInstances_);
 		
-		return allInstancesClosure;
+		result.addAll(FieldDeclaration.allInstances_);
+		result.addAll(VariableDeclarationStatement.allInstances_);
+		result.addAll(VariableDeclarationExpression.allInstances_);
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<AbstractVariablesContainer> allInstances = new Ocllib.QuickSet<AbstractVariablesContainer>(AbstractVariablesContainer.class);
 	
 	
 	TypeAccess getType();

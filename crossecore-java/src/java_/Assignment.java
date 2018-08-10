@@ -3,26 +3,19 @@ public interface Assignment
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<Assignment> allInstances = new Ocllib.QuickSet<Assignment>(Assignment.class);
-	
-	/*
 	public static Ocllib.QuickSet<Assignment> allInstances_ = new Ocllib.QuickSet<Assignment>(Assignment.class);
 	
-	public static Ocllib.QuickSet<Assignment> allInstancesClosure = new Ocllib.QuickSet<Assignment>(Assignment.class);
 		
 	public static Ocllib.QuickSet<Assignment> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Expression.allInstances_);
-			allInstancesClosure.addAll(Assignment.allInstances_);
-		}
+		Ocllib.QuickSet<Assignment> result = new Ocllib.QuickSet<Assignment>(Assignment.class);
+		result.addAll(Assignment.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<Assignment> allInstances = new Ocllib.QuickSet<Assignment>(Assignment.class);
 	
 	
 	Expression getLeftHandSide();

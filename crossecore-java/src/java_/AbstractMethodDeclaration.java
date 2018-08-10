@@ -3,27 +3,22 @@ public interface AbstractMethodDeclaration
  extends BodyDeclaration
 {
 	
-	public static Ocllib.QuickSet<AbstractMethodDeclaration> allInstances = new Ocllib.QuickSet<AbstractMethodDeclaration>(AbstractMethodDeclaration.class);
-	
-	/*
 	public static Ocllib.QuickSet<AbstractMethodDeclaration> allInstances_ = new Ocllib.QuickSet<AbstractMethodDeclaration>(AbstractMethodDeclaration.class);
 	
-	public static Ocllib.QuickSet<AbstractMethodDeclaration> allInstancesClosure = new Ocllib.QuickSet<AbstractMethodDeclaration>(AbstractMethodDeclaration.class);
 		
 	public static Ocllib.QuickSet<AbstractMethodDeclaration> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(NamedElement.allInstances_);
-			allInstancesClosure.addAll(BodyDeclaration.allInstances_);
-			allInstancesClosure.addAll(AbstractMethodDeclaration.allInstances_);
-		}
+		Ocllib.QuickSet<AbstractMethodDeclaration> result = new Ocllib.QuickSet<AbstractMethodDeclaration>(AbstractMethodDeclaration.class);
+		result.addAll(AbstractMethodDeclaration.allInstances_);
 		
-		return allInstancesClosure;
+		result.addAll(MethodDeclaration.allInstances_);
+		result.addAll(UnresolvedMethodDeclaration.allInstances_);
+		result.addAll(ConstructorDeclaration.allInstances_);
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<AbstractMethodDeclaration> allInstances = new Ocllib.QuickSet<AbstractMethodDeclaration>(AbstractMethodDeclaration.class);
 	
 	
 	Block getBody();

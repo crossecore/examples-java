@@ -57,11 +57,11 @@ extends ExpressionImpl implements UnresolvedItemAccess
 	}
 	
 	
-	public NotificationChain basicSetQualifier(ASTNode newobj, NotificationChain msgs) {
-		ASTNode oldobj = _qualifier;
-		_qualifier = newobj;
+	public NotificationChain basicSetElement(UnresolvedItem newobj, NotificationChain msgs) {
+		UnresolvedItem oldobj = _element;
+		_element = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.UNRESOLVEDITEMACCESS_ELEMENT, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -71,11 +71,11 @@ extends ExpressionImpl implements UnresolvedItemAccess
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetElement(UnresolvedItem newobj, NotificationChain msgs) {
-		UnresolvedItem oldobj = _element;
-		_element = newobj;
+	public NotificationChain basicSetQualifier(ASTNode newobj, NotificationChain msgs) {
+		ASTNode oldobj = _qualifier;
+		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.UNRESOLVEDITEMACCESS_ELEMENT, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}

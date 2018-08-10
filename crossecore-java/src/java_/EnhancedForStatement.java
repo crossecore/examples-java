@@ -3,26 +3,19 @@ public interface EnhancedForStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<EnhancedForStatement> allInstances = new Ocllib.QuickSet<EnhancedForStatement>(EnhancedForStatement.class);
-	
-	/*
 	public static Ocllib.QuickSet<EnhancedForStatement> allInstances_ = new Ocllib.QuickSet<EnhancedForStatement>(EnhancedForStatement.class);
 	
-	public static Ocllib.QuickSet<EnhancedForStatement> allInstancesClosure = new Ocllib.QuickSet<EnhancedForStatement>(EnhancedForStatement.class);
 		
 	public static Ocllib.QuickSet<EnhancedForStatement> allInstances(){
 		
-		if(allInstancesClosure.isEmpty()) {
-			
-			allInstancesClosure.addAll(ASTNode.allInstances_);
-			allInstancesClosure.addAll(Statement.allInstances_);
-			allInstancesClosure.addAll(EnhancedForStatement.allInstances_);
-		}
+		Ocllib.QuickSet<EnhancedForStatement> result = new Ocllib.QuickSet<EnhancedForStatement>(EnhancedForStatement.class);
+		result.addAll(EnhancedForStatement.allInstances_);
 		
-		return allInstancesClosure;
+		
+		return result;
 	}
-	*/
 	
+	//public static Ocllib.QuickSet<EnhancedForStatement> allInstances = new Ocllib.QuickSet<EnhancedForStatement>(EnhancedForStatement.class);
 	
 	
 	Statement getBody();
