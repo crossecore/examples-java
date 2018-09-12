@@ -15,7 +15,18 @@ namespace Java_{
 	public class EnhancedForStatementImpl 
 	: EnhancedForStatementBase
 	{
-		public static oclstdlib.Set<EnhancedForStatementImpl> allInstances = new oclstdlib.Set<EnhancedForStatementImpl>();
+		
+		public static oclstdlib.Set<EnhancedForStatementImpl> allInstances_ = new oclstdlib.Set<EnhancedForStatementImpl>();
+		
+	    public static oclstdlib.Set<EnhancedForStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<EnhancedForStatement>();
+		    result.AddRange(EnhancedForStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

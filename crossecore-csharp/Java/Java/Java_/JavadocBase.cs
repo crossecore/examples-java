@@ -34,20 +34,8 @@ namespace Java_{
 		
 		
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.JAVADOC_COMMENTS:
-					return comments;
-				case Java_PackageImpl.JAVADOC_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.JAVADOC_ORIGINALCLASSFILE:
-					return originalClassFile;
-				case Java_PackageImpl.JAVADOC_CONTENT:
-					return content;
-				case Java_PackageImpl.JAVADOC_ENCLOSEDBYPARENT:
-					return enclosedByParent;
-				case Java_PackageImpl.JAVADOC_PREFIXOFPARENT:
-					return prefixOfParent;
 				case Java_PackageImpl.JAVADOC_TAGS:
 					return tags;
 			}
@@ -57,25 +45,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.JAVADOC_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.JAVADOC_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.JAVADOC_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
-				case Java_PackageImpl.JAVADOC_CONTENT:
-					content = (string) newValue;
-					return;
-				case Java_PackageImpl.JAVADOC_ENCLOSEDBYPARENT:
-					enclosedByParent = (bool) newValue;
-					return;
-				case Java_PackageImpl.JAVADOC_PREFIXOFPARENT:
-					prefixOfParent = (bool) newValue;
-					return;
 				case Java_PackageImpl.JAVADOC_TAGS:
 					tags.Clear();
 					tags.AddRange(((List<EObject>)newValue)?.Cast<TagElement>());
@@ -83,6 +52,17 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.JAVADOC_TAGS:
+					return _tags != null && !_tags.isEmpty();
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

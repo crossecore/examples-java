@@ -15,7 +15,18 @@ namespace Java_{
 	public class PrimitiveTypeFloatImpl 
 	: PrimitiveTypeFloatBase
 	{
-		public static oclstdlib.Set<PrimitiveTypeFloatImpl> allInstances = new oclstdlib.Set<PrimitiveTypeFloatImpl>();
+		
+		public static oclstdlib.Set<PrimitiveTypeFloatImpl> allInstances_ = new oclstdlib.Set<PrimitiveTypeFloatImpl>();
+		
+	    public static oclstdlib.Set<PrimitiveTypeFloat> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PrimitiveTypeFloat>();
+		    result.AddRange(PrimitiveTypeFloatImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

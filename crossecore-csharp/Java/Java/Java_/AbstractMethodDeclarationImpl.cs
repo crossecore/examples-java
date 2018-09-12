@@ -15,7 +15,21 @@ namespace Java_{
 	public class AbstractMethodDeclarationImpl 
 	: AbstractMethodDeclarationBase
 	{
-		public static oclstdlib.Set<AbstractMethodDeclarationImpl> allInstances = new oclstdlib.Set<AbstractMethodDeclarationImpl>();
+		
+		public static oclstdlib.Set<AbstractMethodDeclarationImpl> allInstances_ = new oclstdlib.Set<AbstractMethodDeclarationImpl>();
+		
+	    public static oclstdlib.Set<AbstractMethodDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<AbstractMethodDeclaration>();
+		    result.AddRange(AbstractMethodDeclarationImpl.allInstances_);
+			result.AddRange(ConstructorDeclarationImpl.allInstances_);
+			result.AddRange(MethodDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedMethodDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

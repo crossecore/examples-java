@@ -15,7 +15,18 @@ namespace Java_{
 	public class ArrayCreationImpl 
 	: ArrayCreationBase
 	{
-		public static oclstdlib.Set<ArrayCreationImpl> allInstances = new oclstdlib.Set<ArrayCreationImpl>();
+		
+		public static oclstdlib.Set<ArrayCreationImpl> allInstances_ = new oclstdlib.Set<ArrayCreationImpl>();
+		
+	    public static oclstdlib.Set<ArrayCreation> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ArrayCreation>();
+		    result.AddRange(ArrayCreationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

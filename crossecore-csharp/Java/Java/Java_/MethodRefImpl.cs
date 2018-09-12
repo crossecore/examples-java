@@ -15,7 +15,18 @@ namespace Java_{
 	public class MethodRefImpl 
 	: MethodRefBase
 	{
-		public static oclstdlib.Set<MethodRefImpl> allInstances = new oclstdlib.Set<MethodRefImpl>();
+		
+		public static oclstdlib.Set<MethodRefImpl> allInstances_ = new oclstdlib.Set<MethodRefImpl>();
+		
+	    public static oclstdlib.Set<MethodRef> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<MethodRef>();
+		    result.AddRange(MethodRefImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

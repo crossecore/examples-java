@@ -23,6 +23,21 @@ namespace Java_{
 		}
 		set { _originalFilePath = value; }
 		}
+		private AbstractTypeDeclaration _type;
+		public virtual AbstractTypeDeclaration type
+		{
+			get {
+			
+				return _type;
+			}
+			set {
+				var oldvalue = _type;
+				_type = value;
+				if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASSFILE_TYPE , oldvalue, value));
+				}
+				}
+		}
 		private CompilationUnit _attachedSource;
 		public virtual CompilationUnit attachedSource
 		{
@@ -53,41 +68,12 @@ namespace Java_{
 				}
 				}
 		}
-		private AbstractTypeDeclaration _type;
-		public virtual AbstractTypeDeclaration type
-		{
-			get {
-			
-				return _type;
-			}
-			set {
-				var oldvalue = _type;
-				_type = value;
-				if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASSFILE_TYPE , oldvalue, value));
-				}
-				}
-		}
 		
 		protected override EClass eStaticClass() {
 			return Java_PackageImpl.Literals.CLASSFILE;
 		}
 		
 		
-		public NotificationChain basicSetAttachedSource(CompilationUnit newobj, NotificationChain msgs) {
-			var oldobj = _attachedSource;
-			_attachedSource = newobj;
-			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSFILE_ATTACHEDSOURCE, oldobj, newobj);
-				if (msgs == null){
-					msgs = notification;
-				}
-				else{
-					msgs.add(notification);
-				}
-			}
-			return msgs;
-		}
 		public NotificationChain basicSetPackage(Package newobj, NotificationChain msgs) {
 			var oldobj = _package;
 			_package = newobj;
@@ -116,21 +102,23 @@ namespace Java_{
 			}
 			return msgs;
 		}
+		public NotificationChain basicSetAttachedSource(CompilationUnit newobj, NotificationChain msgs) {
+			var oldobj = _attachedSource;
+			_attachedSource = newobj;
+			if (eNotificationRequired()) {
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSFILE_ATTACHEDSOURCE, oldobj, newobj);
+				if (msgs == null){
+					msgs = notification;
+				}
+				else{
+					msgs.add(notification);
+				}
+			}
+			return msgs;
+		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.CLASSFILE_COMMENTS:
-					return comments;
-				case Java_PackageImpl.CLASSFILE_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.CLASSFILE_ORIGINALCLASSFILE:
-					return originalClassFile;
-				case Java_PackageImpl.CLASSFILE_NAME:
-					return name;
-				case Java_PackageImpl.CLASSFILE_PROXY:
-					return proxy;
-				case Java_PackageImpl.CLASSFILE_USAGESINIMPORTS:
-					return usagesInImports;
 				case Java_PackageImpl.CLASSFILE_ORIGINALFILEPATH:
 					return originalFilePath;
 				case Java_PackageImpl.CLASSFILE_TYPE:
@@ -146,26 +134,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.CLASSFILE_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.CLASSFILE_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.CLASSFILE_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
-				case Java_PackageImpl.CLASSFILE_NAME:
-					name = (string) newValue;
-					return;
-				case Java_PackageImpl.CLASSFILE_PROXY:
-					proxy = (bool) newValue;
-					return;
-				case Java_PackageImpl.CLASSFILE_USAGESINIMPORTS:
-					usagesInImports.Clear();
-					usagesInImports.AddRange(((List<EObject>)newValue)?.Cast<ImportDeclaration>());
-					return;
 				case Java_PackageImpl.CLASSFILE_ORIGINALFILEPATH:
 					originalFilePath = (string) newValue;
 					return;
@@ -181,6 +149,23 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.CLASSFILE_ORIGINALFILEPATH:
+					return ORIGINALFILEPATH_EDEFAULT == null ? _originalFilePath != null : !ORIGINALFILEPATH_EDEFAULT.equals(_originalFilePath);
+				case Java_PackageImpl.CLASSFILE_TYPE:
+					return getType() != null; //single, volatile
+				case Java_PackageImpl.CLASSFILE_ATTACHEDSOURCE:
+					return getAttachedSource() != null; //single, volatile
+				case Java_PackageImpl.CLASSFILE_PACKAGE:
+					return getPackage() != null; //single, volatile
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

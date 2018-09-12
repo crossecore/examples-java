@@ -46,7 +46,7 @@ namespace Java_{
 		
 		
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
 				case Java_PackageImpl.MANIFEST_MAINATTRIBUTES:
 					return mainAttributes;
@@ -70,6 +70,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.MANIFEST_MAINATTRIBUTES:
+					return _mainAttributes != null && !_mainAttributes.isEmpty();
+				case Java_PackageImpl.MANIFEST_ENTRYATTRIBUTES:
+					return _entryAttributes != null && !_entryAttributes.isEmpty();
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

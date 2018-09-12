@@ -15,32 +15,6 @@ namespace Java_{
 	public class WhileStatementBase 
 	:StatementImpl, WhileStatement
 	{
-		private Statement _body;
-		public virtual Statement body
-		{
-			get {
-			
-				return _body;
-			}
-			set {
-				if (value != _body) {
-					NotificationChain msgs = null;
-					if (_body != null){
-						msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.WHILESTATEMENT_BODY, null, msgs);
-					}
-					if (value != null){
-						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.WHILESTATEMENT_BODY, null, msgs);
-					}
-					msgs = basicSetBody(value, msgs);
-					if (msgs != null) {
-						msgs.dispatch();
-					}
-				}
-				else if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.WHILESTATEMENT_BODY , value, value));
-				}
-				}
-		}
 		private Expression _expression;
 		public virtual Expression expression
 		{
@@ -64,6 +38,32 @@ namespace Java_{
 				}
 				else if (eNotificationRequired()){
 					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.WHILESTATEMENT_EXPRESSION , value, value));
+				}
+				}
+		}
+		private Statement _body;
+		public virtual Statement body
+		{
+			get {
+			
+				return _body;
+			}
+			set {
+				if (value != _body) {
+					NotificationChain msgs = null;
+					if (_body != null){
+						msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.WHILESTATEMENT_BODY, null, msgs);
+					}
+					if (value != null){
+						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.WHILESTATEMENT_BODY, null, msgs);
+					}
+					msgs = basicSetBody(value, msgs);
+					if (msgs != null) {
+						msgs.dispatch();
+					}
+				}
+				else if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.WHILESTATEMENT_BODY , value, value));
 				}
 				}
 		}
@@ -102,14 +102,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.WHILESTATEMENT_COMMENTS:
-					return comments;
-				case Java_PackageImpl.WHILESTATEMENT_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.WHILESTATEMENT_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.WHILESTATEMENT_EXPRESSION:
 					return expression;
 				case Java_PackageImpl.WHILESTATEMENT_BODY:
@@ -121,16 +115,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.WHILESTATEMENT_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.WHILESTATEMENT_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.WHILESTATEMENT_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.WHILESTATEMENT_EXPRESSION:
 					expression = (Expression) newValue;
 					return;
@@ -140,6 +124,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.WHILESTATEMENT_EXPRESSION:
+					return _expression != null; //single != null;
+				case Java_PackageImpl.WHILESTATEMENT_BODY:
+					return _body != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

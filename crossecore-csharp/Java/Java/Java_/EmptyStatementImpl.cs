@@ -15,7 +15,18 @@ namespace Java_{
 	public class EmptyStatementImpl 
 	: EmptyStatementBase
 	{
-		public static oclstdlib.Set<EmptyStatementImpl> allInstances = new oclstdlib.Set<EmptyStatementImpl>();
+		
+		public static oclstdlib.Set<EmptyStatementImpl> allInstances_ = new oclstdlib.Set<EmptyStatementImpl>();
+		
+	    public static oclstdlib.Set<EmptyStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<EmptyStatement>();
+		    result.AddRange(EmptyStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

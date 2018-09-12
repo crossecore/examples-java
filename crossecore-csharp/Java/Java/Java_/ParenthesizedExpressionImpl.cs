@@ -15,7 +15,18 @@ namespace Java_{
 	public class ParenthesizedExpressionImpl 
 	: ParenthesizedExpressionBase
 	{
-		public static oclstdlib.Set<ParenthesizedExpressionImpl> allInstances = new oclstdlib.Set<ParenthesizedExpressionImpl>();
+		
+		public static oclstdlib.Set<ParenthesizedExpressionImpl> allInstances_ = new oclstdlib.Set<ParenthesizedExpressionImpl>();
+		
+	    public static oclstdlib.Set<ParenthesizedExpression> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ParenthesizedExpression>();
+		    result.AddRange(ParenthesizedExpressionImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

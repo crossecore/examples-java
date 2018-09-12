@@ -15,7 +15,18 @@ namespace Java_{
 	public class ManifestImpl 
 	: ManifestBase
 	{
-		public static oclstdlib.Set<ManifestImpl> allInstances = new oclstdlib.Set<ManifestImpl>();
+		
+		public static oclstdlib.Set<ManifestImpl> allInstances_ = new oclstdlib.Set<ManifestImpl>();
+		
+	    public static oclstdlib.Set<Manifest> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<Manifest>();
+		    result.AddRange(ManifestImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

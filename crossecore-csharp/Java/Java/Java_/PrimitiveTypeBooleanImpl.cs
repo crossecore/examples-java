@@ -15,7 +15,18 @@ namespace Java_{
 	public class PrimitiveTypeBooleanImpl 
 	: PrimitiveTypeBooleanBase
 	{
-		public static oclstdlib.Set<PrimitiveTypeBooleanImpl> allInstances = new oclstdlib.Set<PrimitiveTypeBooleanImpl>();
+		
+		public static oclstdlib.Set<PrimitiveTypeBooleanImpl> allInstances_ = new oclstdlib.Set<PrimitiveTypeBooleanImpl>();
+		
+	    public static oclstdlib.Set<PrimitiveTypeBoolean> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PrimitiveTypeBoolean>();
+		    result.AddRange(PrimitiveTypeBooleanImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

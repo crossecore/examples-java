@@ -15,7 +15,18 @@ namespace Java_{
 	public class MethodRefParameterImpl 
 	: MethodRefParameterBase
 	{
-		public static oclstdlib.Set<MethodRefParameterImpl> allInstances = new oclstdlib.Set<MethodRefParameterImpl>();
+		
+		public static oclstdlib.Set<MethodRefParameterImpl> allInstances_ = new oclstdlib.Set<MethodRefParameterImpl>();
+		
+	    public static oclstdlib.Set<MethodRefParameter> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<MethodRefParameter>();
+		    result.AddRange(MethodRefParameterImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

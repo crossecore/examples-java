@@ -15,7 +15,21 @@ namespace Java_{
 	public class AbstractTypeQualifiedExpressionImpl 
 	: AbstractTypeQualifiedExpressionBase
 	{
-		public static oclstdlib.Set<AbstractTypeQualifiedExpressionImpl> allInstances = new oclstdlib.Set<AbstractTypeQualifiedExpressionImpl>();
+		
+		public static oclstdlib.Set<AbstractTypeQualifiedExpressionImpl> allInstances_ = new oclstdlib.Set<AbstractTypeQualifiedExpressionImpl>();
+		
+	    public static oclstdlib.Set<AbstractTypeQualifiedExpression> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<AbstractTypeQualifiedExpression>();
+		    result.AddRange(AbstractTypeQualifiedExpressionImpl.allInstances_);
+			result.AddRange(SuperMethodInvocationImpl.allInstances_);
+			result.AddRange(SuperFieldAccessImpl.allInstances_);
+			result.AddRange(ThisExpressionImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

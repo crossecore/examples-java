@@ -15,7 +15,18 @@ namespace Java_{
 	public class SwitchCaseImpl 
 	: SwitchCaseBase
 	{
-		public static oclstdlib.Set<SwitchCaseImpl> allInstances = new oclstdlib.Set<SwitchCaseImpl>();
+		
+		public static oclstdlib.Set<SwitchCaseImpl> allInstances_ = new oclstdlib.Set<SwitchCaseImpl>();
+		
+	    public static oclstdlib.Set<SwitchCase> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<SwitchCase>();
+		    result.AddRange(SwitchCaseImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

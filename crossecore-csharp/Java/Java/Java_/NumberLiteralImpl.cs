@@ -15,7 +15,18 @@ namespace Java_{
 	public class NumberLiteralImpl 
 	: NumberLiteralBase
 	{
-		public static oclstdlib.Set<NumberLiteralImpl> allInstances = new oclstdlib.Set<NumberLiteralImpl>();
+		
+		public static oclstdlib.Set<NumberLiteralImpl> allInstances_ = new oclstdlib.Set<NumberLiteralImpl>();
+		
+	    public static oclstdlib.Set<NumberLiteral> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<NumberLiteral>();
+		    result.AddRange(NumberLiteralImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

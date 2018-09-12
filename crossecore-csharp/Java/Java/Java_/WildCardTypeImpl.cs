@@ -15,7 +15,18 @@ namespace Java_{
 	public class WildCardTypeImpl 
 	: WildCardTypeBase
 	{
-		public static oclstdlib.Set<WildCardTypeImpl> allInstances = new oclstdlib.Set<WildCardTypeImpl>();
+		
+		public static oclstdlib.Set<WildCardTypeImpl> allInstances_ = new oclstdlib.Set<WildCardTypeImpl>();
+		
+	    public static oclstdlib.Set<WildCardType> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<WildCardType>();
+		    result.AddRange(WildCardTypeImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

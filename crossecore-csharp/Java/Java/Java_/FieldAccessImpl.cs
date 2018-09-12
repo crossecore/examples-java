@@ -15,7 +15,18 @@ namespace Java_{
 	public class FieldAccessImpl 
 	: FieldAccessBase
 	{
-		public static oclstdlib.Set<FieldAccessImpl> allInstances = new oclstdlib.Set<FieldAccessImpl>();
+		
+		public static oclstdlib.Set<FieldAccessImpl> allInstances_ = new oclstdlib.Set<FieldAccessImpl>();
+		
+	    public static oclstdlib.Set<FieldAccess> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<FieldAccess>();
+		    result.AddRange(FieldAccessImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

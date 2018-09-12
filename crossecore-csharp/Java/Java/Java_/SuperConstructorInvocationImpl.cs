@@ -15,7 +15,18 @@ namespace Java_{
 	public class SuperConstructorInvocationImpl 
 	: SuperConstructorInvocationBase
 	{
-		public static oclstdlib.Set<SuperConstructorInvocationImpl> allInstances = new oclstdlib.Set<SuperConstructorInvocationImpl>();
+		
+		public static oclstdlib.Set<SuperConstructorInvocationImpl> allInstances_ = new oclstdlib.Set<SuperConstructorInvocationImpl>();
+		
+	    public static oclstdlib.Set<SuperConstructorInvocation> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<SuperConstructorInvocation>();
+		    result.AddRange(SuperConstructorInvocationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

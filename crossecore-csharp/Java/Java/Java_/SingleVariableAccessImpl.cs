@@ -15,7 +15,18 @@ namespace Java_{
 	public class SingleVariableAccessImpl 
 	: SingleVariableAccessBase
 	{
-		public static oclstdlib.Set<SingleVariableAccessImpl> allInstances = new oclstdlib.Set<SingleVariableAccessImpl>();
+		
+		public static oclstdlib.Set<SingleVariableAccessImpl> allInstances_ = new oclstdlib.Set<SingleVariableAccessImpl>();
+		
+	    public static oclstdlib.Set<SingleVariableAccess> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<SingleVariableAccess>();
+		    result.AddRange(SingleVariableAccessImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

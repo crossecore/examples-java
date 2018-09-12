@@ -53,6 +53,18 @@ namespace Java_{
 			}
 		
 		}
+		private OrderedSet<Expression> _initializers;
+		
+		public virtual OrderedSet<Expression> initializers
+		{
+			get {
+				if(_initializers==null){
+					_initializers = new OrderedSet<Expression>(this, Java_PackageImpl.FORSTATEMENT_INITIALIZERS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FORSTATEMENT_INITIALIZERS);
+				}
+				return _initializers;
+			}
+		
+		}
 		private Statement _body;
 		public virtual Statement body
 		{
@@ -78,18 +90,6 @@ namespace Java_{
 					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.FORSTATEMENT_BODY , value, value));
 				}
 				}
-		}
-		private OrderedSet<Expression> _initializers;
-		
-		public virtual OrderedSet<Expression> initializers
-		{
-			get {
-				if(_initializers==null){
-					_initializers = new OrderedSet<Expression>(this, Java_PackageImpl.FORSTATEMENT_INITIALIZERS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FORSTATEMENT_INITIALIZERS);
-				}
-				return _initializers;
-			}
-		
 		}
 		
 		protected override EClass eStaticClass() {
@@ -126,14 +126,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.FORSTATEMENT_COMMENTS:
-					return comments;
-				case Java_PackageImpl.FORSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.FORSTATEMENT_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.FORSTATEMENT_EXPRESSION:
 					return expression;
 				case Java_PackageImpl.FORSTATEMENT_UPDATERS:
@@ -149,16 +143,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.FORSTATEMENT_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.FORSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.FORSTATEMENT_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.FORSTATEMENT_EXPRESSION:
 					expression = (Expression) newValue;
 					return;
@@ -176,6 +160,23 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.FORSTATEMENT_EXPRESSION:
+					return _expression != null; //single != null;
+				case Java_PackageImpl.FORSTATEMENT_UPDATERS:
+					return _updaters != null && !_updaters.isEmpty();
+				case Java_PackageImpl.FORSTATEMENT_INITIALIZERS:
+					return _initializers != null && !_initializers.isEmpty();
+				case Java_PackageImpl.FORSTATEMENT_BODY:
+					return _body != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

@@ -15,7 +15,18 @@ namespace Java_{
 	public class BooleanLiteralImpl 
 	: BooleanLiteralBase
 	{
-		public static oclstdlib.Set<BooleanLiteralImpl> allInstances = new oclstdlib.Set<BooleanLiteralImpl>();
+		
+		public static oclstdlib.Set<BooleanLiteralImpl> allInstances_ = new oclstdlib.Set<BooleanLiteralImpl>();
+		
+	    public static oclstdlib.Set<BooleanLiteral> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<BooleanLiteral>();
+		    result.AddRange(BooleanLiteralImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

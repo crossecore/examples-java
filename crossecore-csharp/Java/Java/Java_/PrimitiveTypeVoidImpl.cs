@@ -15,7 +15,18 @@ namespace Java_{
 	public class PrimitiveTypeVoidImpl 
 	: PrimitiveTypeVoidBase
 	{
-		public static oclstdlib.Set<PrimitiveTypeVoidImpl> allInstances = new oclstdlib.Set<PrimitiveTypeVoidImpl>();
+		
+		public static oclstdlib.Set<PrimitiveTypeVoidImpl> allInstances_ = new oclstdlib.Set<PrimitiveTypeVoidImpl>();
+		
+	    public static oclstdlib.Set<PrimitiveTypeVoid> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PrimitiveTypeVoid>();
+		    result.AddRange(PrimitiveTypeVoidImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

@@ -15,7 +15,18 @@ namespace Java_{
 	public class InfixExpressionImpl 
 	: InfixExpressionBase
 	{
-		public static oclstdlib.Set<InfixExpressionImpl> allInstances = new oclstdlib.Set<InfixExpressionImpl>();
+		
+		public static oclstdlib.Set<InfixExpressionImpl> allInstances_ = new oclstdlib.Set<InfixExpressionImpl>();
+		
+	    public static oclstdlib.Set<InfixExpression> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<InfixExpression>();
+		    result.AddRange(InfixExpressionImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

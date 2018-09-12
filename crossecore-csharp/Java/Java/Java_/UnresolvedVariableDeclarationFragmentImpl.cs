@@ -15,7 +15,18 @@ namespace Java_{
 	public class UnresolvedVariableDeclarationFragmentImpl 
 	: UnresolvedVariableDeclarationFragmentBase
 	{
-		public static oclstdlib.Set<UnresolvedVariableDeclarationFragmentImpl> allInstances = new oclstdlib.Set<UnresolvedVariableDeclarationFragmentImpl>();
+		
+		public static oclstdlib.Set<UnresolvedVariableDeclarationFragmentImpl> allInstances_ = new oclstdlib.Set<UnresolvedVariableDeclarationFragmentImpl>();
+		
+	    public static oclstdlib.Set<UnresolvedVariableDeclarationFragment> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<UnresolvedVariableDeclarationFragment>();
+		    result.AddRange(UnresolvedVariableDeclarationFragmentImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

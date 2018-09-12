@@ -15,7 +15,18 @@ namespace Java_{
 	public class MemberRefImpl 
 	: MemberRefBase
 	{
-		public static oclstdlib.Set<MemberRefImpl> allInstances = new oclstdlib.Set<MemberRefImpl>();
+		
+		public static oclstdlib.Set<MemberRefImpl> allInstances_ = new oclstdlib.Set<MemberRefImpl>();
+		
+	    public static oclstdlib.Set<MemberRef> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<MemberRef>();
+		    result.AddRange(MemberRefImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

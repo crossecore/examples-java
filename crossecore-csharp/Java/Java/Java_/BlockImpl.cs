@@ -15,7 +15,18 @@ namespace Java_{
 	public class BlockImpl 
 	: BlockBase
 	{
-		public static oclstdlib.Set<BlockImpl> allInstances = new oclstdlib.Set<BlockImpl>();
+		
+		public static oclstdlib.Set<BlockImpl> allInstances_ = new oclstdlib.Set<BlockImpl>();
+		
+	    public static oclstdlib.Set<Block> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<Block>();
+		    result.AddRange(BlockImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

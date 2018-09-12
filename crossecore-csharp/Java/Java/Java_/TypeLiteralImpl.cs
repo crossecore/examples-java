@@ -15,7 +15,18 @@ namespace Java_{
 	public class TypeLiteralImpl 
 	: TypeLiteralBase
 	{
-		public static oclstdlib.Set<TypeLiteralImpl> allInstances = new oclstdlib.Set<TypeLiteralImpl>();
+		
+		public static oclstdlib.Set<TypeLiteralImpl> allInstances_ = new oclstdlib.Set<TypeLiteralImpl>();
+		
+	    public static oclstdlib.Set<TypeLiteral> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<TypeLiteral>();
+		    result.AddRange(TypeLiteralImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

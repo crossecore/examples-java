@@ -73,20 +73,6 @@ namespace Java_{
 		}
 		
 		
-		public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
-			var oldobj = _expression;
-			_expression = newobj;
-			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CASTEXPRESSION_EXPRESSION, oldobj, newobj);
-				if (msgs == null){
-					msgs = notification;
-				}
-				else{
-					msgs.add(notification);
-				}
-			}
-			return msgs;
-		}
 		public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
 			var oldobj = _type;
 			_type = newobj;
@@ -101,15 +87,23 @@ namespace Java_{
 			}
 			return msgs;
 		}
+		public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
+			var oldobj = _expression;
+			_expression = newobj;
+			if (eNotificationRequired()) {
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CASTEXPRESSION_EXPRESSION, oldobj, newobj);
+				if (msgs == null){
+					msgs = notification;
+				}
+				else{
+					msgs.add(notification);
+				}
+			}
+			return msgs;
+		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.CASTEXPRESSION_COMMENTS:
-					return comments;
-				case Java_PackageImpl.CASTEXPRESSION_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.CASTEXPRESSION_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.CASTEXPRESSION_EXPRESSION:
 					return expression;
 				case Java_PackageImpl.CASTEXPRESSION_TYPE:
@@ -121,16 +115,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.CASTEXPRESSION_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.CASTEXPRESSION_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.CASTEXPRESSION_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.CASTEXPRESSION_EXPRESSION:
 					expression = (Expression) newValue;
 					return;
@@ -140,6 +124,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.CASTEXPRESSION_EXPRESSION:
+					return _expression != null; //single != null;
+				case Java_PackageImpl.CASTEXPRESSION_TYPE:
+					return _type != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

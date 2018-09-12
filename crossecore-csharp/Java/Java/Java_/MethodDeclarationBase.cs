@@ -94,41 +94,27 @@ namespace Java_{
 		
 		public override NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 			switch (featureID) {
+				case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
+					return redefinitions.basicAdd((MethodDeclaration)otherEnd, msgs);
 				case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
 					if (_redefinedMethodDeclaration != null){
 						msgs = ((InternalEObject)_redefinedMethodDeclaration).eInverseRemove(this, Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION, typeof(MethodDeclaration), msgs);
 					}
 					return basicSetRedefinedMethodDeclaration((MethodDeclaration)otherEnd, msgs);
-				case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
-					return redefinitions.basicAdd((MethodDeclaration)otherEnd, msgs);
 			}
 			return base.eInverseAdd(otherEnd, featureID, msgs);
 		}
 		
 		public override NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 			switch (featureID) {
-				case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
-					return basicSetRedefinedMethodDeclaration(null, msgs);
 				case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
 					return redefinitions.basicRemove((MethodDeclaration)otherEnd, msgs);
+				case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
+					return basicSetRedefinedMethodDeclaration(null, msgs);
 			}
 			return base.eInverseRemove(otherEnd, featureID, msgs);
 		}
 		
-		public NotificationChain basicSetReturnType(TypeAccess newobj, NotificationChain msgs) {
-			var oldobj = _returnType;
-			_returnType = newobj;
-			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHODDECLARATION_RETURNTYPE, oldobj, newobj);
-				if (msgs == null){
-					msgs = notification;
-				}
-				else{
-					msgs.add(notification);
-				}
-			}
-			return msgs;
-		}
 		public NotificationChain basicSetRedefinedMethodDeclaration(MethodDeclaration newobj, NotificationChain msgs) {
 			var oldobj = _redefinedMethodDeclaration;
 			_redefinedMethodDeclaration = newobj;
@@ -143,41 +129,23 @@ namespace Java_{
 			}
 			return msgs;
 		}
+		public NotificationChain basicSetReturnType(TypeAccess newobj, NotificationChain msgs) {
+			var oldobj = _returnType;
+			_returnType = newobj;
+			if (eNotificationRequired()) {
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHODDECLARATION_RETURNTYPE, oldobj, newobj);
+				if (msgs == null){
+					msgs = notification;
+				}
+				else{
+					msgs.add(notification);
+				}
+			}
+			return msgs;
+		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.METHODDECLARATION_COMMENTS:
-					return comments;
-				case Java_PackageImpl.METHODDECLARATION_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.METHODDECLARATION_ORIGINALCLASSFILE:
-					return originalClassFile;
-				case Java_PackageImpl.METHODDECLARATION_NAME:
-					return name;
-				case Java_PackageImpl.METHODDECLARATION_PROXY:
-					return proxy;
-				case Java_PackageImpl.METHODDECLARATION_USAGESINIMPORTS:
-					return usagesInImports;
-				case Java_PackageImpl.METHODDECLARATION_ABSTRACTTYPEDECLARATION:
-					return abstractTypeDeclaration;
-				case Java_PackageImpl.METHODDECLARATION_ANNOTATIONS:
-					return annotations;
-				case Java_PackageImpl.METHODDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
-					return anonymousClassDeclarationOwner;
-				case Java_PackageImpl.METHODDECLARATION_MODIFIER:
-					return modifier;
-				case Java_PackageImpl.METHODDECLARATION_BODY:
-					return body;
-				case Java_PackageImpl.METHODDECLARATION_PARAMETERS:
-					return parameters;
-				case Java_PackageImpl.METHODDECLARATION_THROWNEXCEPTIONS:
-					return thrownExceptions;
-				case Java_PackageImpl.METHODDECLARATION_TYPEPARAMETERS:
-					return typeParameters;
-				case Java_PackageImpl.METHODDECLARATION_USAGESINDOCCOMMENTS:
-					return usagesInDocComments;
-				case Java_PackageImpl.METHODDECLARATION_USAGES:
-					return usages;
 				case Java_PackageImpl.METHODDECLARATION_EXTRAARRAYDIMENSIONS:
 					return extraArrayDimensions;
 				case Java_PackageImpl.METHODDECLARATION_RETURNTYPE:
@@ -193,62 +161,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.METHODDECLARATION_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.METHODDECLARATION_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.METHODDECLARATION_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
-				case Java_PackageImpl.METHODDECLARATION_NAME:
-					name = (string) newValue;
-					return;
-				case Java_PackageImpl.METHODDECLARATION_PROXY:
-					proxy = (bool) newValue;
-					return;
-				case Java_PackageImpl.METHODDECLARATION_USAGESINIMPORTS:
-					usagesInImports.Clear();
-					usagesInImports.AddRange(((List<EObject>)newValue)?.Cast<ImportDeclaration>());
-					return;
-				case Java_PackageImpl.METHODDECLARATION_ABSTRACTTYPEDECLARATION:
-					abstractTypeDeclaration = (AbstractTypeDeclaration) newValue;
-					return;
-				case Java_PackageImpl.METHODDECLARATION_ANNOTATIONS:
-					annotations.Clear();
-					annotations.AddRange(((List<EObject>)newValue)?.Cast<Annotation>());
-					return;
-				case Java_PackageImpl.METHODDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
-					anonymousClassDeclarationOwner = (AnonymousClassDeclaration) newValue;
-					return;
-				case Java_PackageImpl.METHODDECLARATION_MODIFIER:
-					modifier = (Modifier) newValue;
-					return;
-				case Java_PackageImpl.METHODDECLARATION_BODY:
-					body = (Block) newValue;
-					return;
-				case Java_PackageImpl.METHODDECLARATION_PARAMETERS:
-					parameters.Clear();
-					parameters.AddRange(((List<EObject>)newValue)?.Cast<SingleVariableDeclaration>());
-					return;
-				case Java_PackageImpl.METHODDECLARATION_THROWNEXCEPTIONS:
-					thrownExceptions.Clear();
-					thrownExceptions.AddRange(((List<EObject>)newValue)?.Cast<TypeAccess>());
-					return;
-				case Java_PackageImpl.METHODDECLARATION_TYPEPARAMETERS:
-					typeParameters.Clear();
-					typeParameters.AddRange(((List<EObject>)newValue)?.Cast<TypeParameter>());
-					return;
-				case Java_PackageImpl.METHODDECLARATION_USAGESINDOCCOMMENTS:
-					usagesInDocComments.Clear();
-					usagesInDocComments.AddRange(((List<EObject>)newValue)?.Cast<MethodRef>());
-					return;
-				case Java_PackageImpl.METHODDECLARATION_USAGES:
-					usages.Clear();
-					usages.AddRange(((List<EObject>)newValue)?.Cast<AbstractMethodInvocation>());
-					return;
 				case Java_PackageImpl.METHODDECLARATION_EXTRAARRAYDIMENSIONS:
 					extraArrayDimensions = (int) newValue;
 					return;
@@ -265,6 +177,23 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.METHODDECLARATION_EXTRAARRAYDIMENSIONS:
+					return _extraArrayDimensions != EXTRAARRAYDIMENSIONS_EDEFAULT;
+				case Java_PackageImpl.METHODDECLARATION_RETURNTYPE:
+					return _returnType != null; //single != null;
+				case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
+					return getRedefinedMethodDeclaration() != null; //single, volatile
+				case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
+					return getRedefinitions().isEmpty(); //many, volatile
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

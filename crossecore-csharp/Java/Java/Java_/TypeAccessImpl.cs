@@ -15,7 +15,18 @@ namespace Java_{
 	public class TypeAccessImpl 
 	: TypeAccessBase
 	{
-		public static oclstdlib.Set<TypeAccessImpl> allInstances = new oclstdlib.Set<TypeAccessImpl>();
+		
+		public static oclstdlib.Set<TypeAccessImpl> allInstances_ = new oclstdlib.Set<TypeAccessImpl>();
+		
+	    public static oclstdlib.Set<TypeAccess> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<TypeAccess>();
+		    result.AddRange(TypeAccessImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

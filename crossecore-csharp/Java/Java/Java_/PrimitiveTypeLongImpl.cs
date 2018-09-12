@@ -15,7 +15,18 @@ namespace Java_{
 	public class PrimitiveTypeLongImpl 
 	: PrimitiveTypeLongBase
 	{
-		public static oclstdlib.Set<PrimitiveTypeLongImpl> allInstances = new oclstdlib.Set<PrimitiveTypeLongImpl>();
+		
+		public static oclstdlib.Set<PrimitiveTypeLongImpl> allInstances_ = new oclstdlib.Set<PrimitiveTypeLongImpl>();
+		
+	    public static oclstdlib.Set<PrimitiveTypeLong> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PrimitiveTypeLong>();
+		    result.AddRange(PrimitiveTypeLongImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

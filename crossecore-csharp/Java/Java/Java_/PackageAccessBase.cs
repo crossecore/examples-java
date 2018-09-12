@@ -91,20 +91,6 @@ namespace Java_{
 			return base.eInverseRemove(otherEnd, featureID, msgs);
 		}
 		
-		public NotificationChain basicSetPackage(Package newobj, NotificationChain msgs) {
-			var oldobj = _package;
-			_package = newobj;
-			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PACKAGEACCESS_PACKAGE, oldobj, newobj);
-				if (msgs == null){
-					msgs = notification;
-				}
-				else{
-					msgs.add(notification);
-				}
-			}
-			return msgs;
-		}
 		public NotificationChain basicSetQualifier(PackageAccess newobj, NotificationChain msgs) {
 			var oldobj = _qualifier;
 			_qualifier = newobj;
@@ -119,15 +105,23 @@ namespace Java_{
 			}
 			return msgs;
 		}
+		public NotificationChain basicSetPackage(Package newobj, NotificationChain msgs) {
+			var oldobj = _package;
+			_package = newobj;
+			if (eNotificationRequired()) {
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PACKAGEACCESS_PACKAGE, oldobj, newobj);
+				if (msgs == null){
+					msgs = notification;
+				}
+				else{
+					msgs.add(notification);
+				}
+			}
+			return msgs;
+		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.PACKAGEACCESS_COMMENTS:
-					return comments;
-				case Java_PackageImpl.PACKAGEACCESS_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.PACKAGEACCESS_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.PACKAGEACCESS_PACKAGE:
 					return package;
 				case Java_PackageImpl.PACKAGEACCESS_QUALIFIER:
@@ -139,16 +133,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.PACKAGEACCESS_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.PACKAGEACCESS_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.PACKAGEACCESS_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.PACKAGEACCESS_PACKAGE:
 					package = (Package) newValue;
 					return;
@@ -158,6 +142,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.PACKAGEACCESS_PACKAGE:
+					return getPackage() != null; //single, volatile
+				case Java_PackageImpl.PACKAGEACCESS_QUALIFIER:
+					return _qualifier != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

@@ -15,7 +15,18 @@ namespace Java_{
 	public class ThrowStatementImpl 
 	: ThrowStatementBase
 	{
-		public static oclstdlib.Set<ThrowStatementImpl> allInstances = new oclstdlib.Set<ThrowStatementImpl>();
+		
+		public static oclstdlib.Set<ThrowStatementImpl> allInstances_ = new oclstdlib.Set<ThrowStatementImpl>();
+		
+	    public static oclstdlib.Set<ThrowStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ThrowStatement>();
+		    result.AddRange(ThrowStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

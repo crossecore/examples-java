@@ -15,7 +15,18 @@ namespace Java_{
 	public class UnresolvedInterfaceDeclarationImpl 
 	: UnresolvedInterfaceDeclarationBase
 	{
-		public static oclstdlib.Set<UnresolvedInterfaceDeclarationImpl> allInstances = new oclstdlib.Set<UnresolvedInterfaceDeclarationImpl>();
+		
+		public static oclstdlib.Set<UnresolvedInterfaceDeclarationImpl> allInstances_ = new oclstdlib.Set<UnresolvedInterfaceDeclarationImpl>();
+		
+	    public static oclstdlib.Set<UnresolvedInterfaceDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<UnresolvedInterfaceDeclaration>();
+		    result.AddRange(UnresolvedInterfaceDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

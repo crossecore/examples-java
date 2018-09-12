@@ -15,7 +15,18 @@ namespace Java_{
 	public class AnnotationMemberValuePairImpl 
 	: AnnotationMemberValuePairBase
 	{
-		public static oclstdlib.Set<AnnotationMemberValuePairImpl> allInstances = new oclstdlib.Set<AnnotationMemberValuePairImpl>();
+		
+		public static oclstdlib.Set<AnnotationMemberValuePairImpl> allInstances_ = new oclstdlib.Set<AnnotationMemberValuePairImpl>();
+		
+	    public static oclstdlib.Set<AnnotationMemberValuePair> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<AnnotationMemberValuePair>();
+		    result.AddRange(AnnotationMemberValuePairImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

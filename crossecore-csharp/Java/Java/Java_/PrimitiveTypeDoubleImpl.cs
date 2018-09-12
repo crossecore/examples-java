@@ -15,7 +15,18 @@ namespace Java_{
 	public class PrimitiveTypeDoubleImpl 
 	: PrimitiveTypeDoubleBase
 	{
-		public static oclstdlib.Set<PrimitiveTypeDoubleImpl> allInstances = new oclstdlib.Set<PrimitiveTypeDoubleImpl>();
+		
+		public static oclstdlib.Set<PrimitiveTypeDoubleImpl> allInstances_ = new oclstdlib.Set<PrimitiveTypeDoubleImpl>();
+		
+	    public static oclstdlib.Set<PrimitiveTypeDouble> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PrimitiveTypeDouble>();
+		    result.AddRange(PrimitiveTypeDoubleImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

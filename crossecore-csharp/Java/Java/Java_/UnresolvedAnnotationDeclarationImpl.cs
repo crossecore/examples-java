@@ -15,7 +15,18 @@ namespace Java_{
 	public class UnresolvedAnnotationDeclarationImpl 
 	: UnresolvedAnnotationDeclarationBase
 	{
-		public static oclstdlib.Set<UnresolvedAnnotationDeclarationImpl> allInstances = new oclstdlib.Set<UnresolvedAnnotationDeclarationImpl>();
+		
+		public static oclstdlib.Set<UnresolvedAnnotationDeclarationImpl> allInstances_ = new oclstdlib.Set<UnresolvedAnnotationDeclarationImpl>();
+		
+	    public static oclstdlib.Set<UnresolvedAnnotationDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<UnresolvedAnnotationDeclaration>();
+		    result.AddRange(UnresolvedAnnotationDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

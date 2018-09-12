@@ -15,7 +15,19 @@ namespace Java_{
 	public class LabeledStatementImpl 
 	: LabeledStatementBase
 	{
-		public static oclstdlib.Set<LabeledStatementImpl> allInstances = new oclstdlib.Set<LabeledStatementImpl>();
+		
+		public static oclstdlib.Set<LabeledStatementImpl> allInstances_ = new oclstdlib.Set<LabeledStatementImpl>();
+		
+	    public static oclstdlib.Set<LabeledStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<LabeledStatement>();
+		    result.AddRange(LabeledStatementImpl.allInstances_);
+			result.AddRange(UnresolvedLabeledStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

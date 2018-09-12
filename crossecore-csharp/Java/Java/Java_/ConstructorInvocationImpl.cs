@@ -15,7 +15,18 @@ namespace Java_{
 	public class ConstructorInvocationImpl 
 	: ConstructorInvocationBase
 	{
-		public static oclstdlib.Set<ConstructorInvocationImpl> allInstances = new oclstdlib.Set<ConstructorInvocationImpl>();
+		
+		public static oclstdlib.Set<ConstructorInvocationImpl> allInstances_ = new oclstdlib.Set<ConstructorInvocationImpl>();
+		
+	    public static oclstdlib.Set<ConstructorInvocation> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ConstructorInvocation>();
+		    result.AddRange(ConstructorInvocationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

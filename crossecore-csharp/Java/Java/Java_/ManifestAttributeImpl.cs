@@ -15,7 +15,18 @@ namespace Java_{
 	public class ManifestAttributeImpl 
 	: ManifestAttributeBase
 	{
-		public static oclstdlib.Set<ManifestAttributeImpl> allInstances = new oclstdlib.Set<ManifestAttributeImpl>();
+		
+		public static oclstdlib.Set<ManifestAttributeImpl> allInstances_ = new oclstdlib.Set<ManifestAttributeImpl>();
+		
+	    public static oclstdlib.Set<ManifestAttribute> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ManifestAttribute>();
+		    result.AddRange(ManifestAttributeImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

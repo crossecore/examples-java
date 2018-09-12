@@ -41,32 +41,6 @@ namespace Java_{
 				}
 				}
 		}
-		private Expression _thenExpression;
-		public virtual Expression thenExpression
-		{
-			get {
-			
-				return _thenExpression;
-			}
-			set {
-				if (value != _thenExpression) {
-					NotificationChain msgs = null;
-					if (_thenExpression != null){
-						msgs = ((InternalEObject)_thenExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION, null, msgs);
-					}
-					if (value != null){
-						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION, null, msgs);
-					}
-					msgs = basicSetThenExpression(value, msgs);
-					if (msgs != null) {
-						msgs.dispatch();
-					}
-				}
-				else if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION , value, value));
-				}
-				}
-		}
 		private Expression _expression;
 		public virtual Expression expression
 		{
@@ -93,12 +67,52 @@ namespace Java_{
 				}
 				}
 		}
+		private Expression _thenExpression;
+		public virtual Expression thenExpression
+		{
+			get {
+			
+				return _thenExpression;
+			}
+			set {
+				if (value != _thenExpression) {
+					NotificationChain msgs = null;
+					if (_thenExpression != null){
+						msgs = ((InternalEObject)_thenExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION, null, msgs);
+					}
+					if (value != null){
+						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION, null, msgs);
+					}
+					msgs = basicSetThenExpression(value, msgs);
+					if (msgs != null) {
+						msgs.dispatch();
+					}
+				}
+				else if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION , value, value));
+				}
+				}
+		}
 		
 		protected override EClass eStaticClass() {
 			return Java_PackageImpl.Literals.CONDITIONALEXPRESSION;
 		}
 		
 		
+		public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
+			var oldobj = _expression;
+			_expression = newobj;
+			if (eNotificationRequired()) {
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION, oldobj, newobj);
+				if (msgs == null){
+					msgs = notification;
+				}
+				else{
+					msgs.add(notification);
+				}
+			}
+			return msgs;
+		}
 		public NotificationChain basicSetElseExpression(Expression newobj, NotificationChain msgs) {
 			var oldobj = _elseExpression;
 			_elseExpression = newobj;
@@ -127,29 +141,9 @@ namespace Java_{
 			}
 			return msgs;
 		}
-		public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
-			var oldobj = _expression;
-			_expression = newobj;
-			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION, oldobj, newobj);
-				if (msgs == null){
-					msgs = notification;
-				}
-				else{
-					msgs.add(notification);
-				}
-			}
-			return msgs;
-		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.CONDITIONALEXPRESSION_COMMENTS:
-					return comments;
-				case Java_PackageImpl.CONDITIONALEXPRESSION_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.CONDITIONALEXPRESSION_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION:
 					return elseExpression;
 				case Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION:
@@ -163,16 +157,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.CONDITIONALEXPRESSION_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.CONDITIONALEXPRESSION_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.CONDITIONALEXPRESSION_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION:
 					elseExpression = (Expression) newValue;
 					return;
@@ -185,6 +169,21 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION:
+					return _elseExpression != null; //single != null;
+				case Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION:
+					return _expression != null; //single != null;
+				case Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION:
+					return _thenExpression != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

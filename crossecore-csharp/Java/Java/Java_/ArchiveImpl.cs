@@ -15,7 +15,18 @@ namespace Java_{
 	public class ArchiveImpl 
 	: ArchiveBase
 	{
-		public static oclstdlib.Set<ArchiveImpl> allInstances = new oclstdlib.Set<ArchiveImpl>();
+		
+		public static oclstdlib.Set<ArchiveImpl> allInstances_ = new oclstdlib.Set<ArchiveImpl>();
+		
+	    public static oclstdlib.Set<Archive> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<Archive>();
+		    result.AddRange(ArchiveImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

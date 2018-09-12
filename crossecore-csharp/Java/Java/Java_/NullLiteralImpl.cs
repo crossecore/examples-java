@@ -15,7 +15,18 @@ namespace Java_{
 	public class NullLiteralImpl 
 	: NullLiteralBase
 	{
-		public static oclstdlib.Set<NullLiteralImpl> allInstances = new oclstdlib.Set<NullLiteralImpl>();
+		
+		public static oclstdlib.Set<NullLiteralImpl> allInstances_ = new oclstdlib.Set<NullLiteralImpl>();
+		
+	    public static oclstdlib.Set<NullLiteral> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<NullLiteral>();
+		    result.AddRange(NullLiteralImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

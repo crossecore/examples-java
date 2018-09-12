@@ -15,7 +15,18 @@ namespace Java_{
 	public class UnresolvedMethodDeclarationImpl 
 	: UnresolvedMethodDeclarationBase
 	{
-		public static oclstdlib.Set<UnresolvedMethodDeclarationImpl> allInstances = new oclstdlib.Set<UnresolvedMethodDeclarationImpl>();
+		
+		public static oclstdlib.Set<UnresolvedMethodDeclarationImpl> allInstances_ = new oclstdlib.Set<UnresolvedMethodDeclarationImpl>();
+		
+	    public static oclstdlib.Set<UnresolvedMethodDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<UnresolvedMethodDeclaration>();
+		    result.AddRange(UnresolvedMethodDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

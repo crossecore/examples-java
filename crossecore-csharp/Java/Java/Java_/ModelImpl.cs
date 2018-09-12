@@ -15,7 +15,18 @@ namespace Java_{
 	public class ModelImpl 
 	: ModelBase
 	{
-		public static oclstdlib.Set<ModelImpl> allInstances = new oclstdlib.Set<ModelImpl>();
+		
+		public static oclstdlib.Set<ModelImpl> allInstances_ = new oclstdlib.Set<ModelImpl>();
+		
+	    public static oclstdlib.Set<Model> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<Model>();
+		    result.AddRange(ModelImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

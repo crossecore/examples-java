@@ -15,7 +15,18 @@ namespace Java_{
 	public class VariableDeclarationStatementImpl 
 	: VariableDeclarationStatementBase
 	{
-		public static oclstdlib.Set<VariableDeclarationStatementImpl> allInstances = new oclstdlib.Set<VariableDeclarationStatementImpl>();
+		
+		public static oclstdlib.Set<VariableDeclarationStatementImpl> allInstances_ = new oclstdlib.Set<VariableDeclarationStatementImpl>();
+		
+	    public static oclstdlib.Set<VariableDeclarationStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<VariableDeclarationStatement>();
+		    result.AddRange(VariableDeclarationStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

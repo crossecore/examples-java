@@ -15,7 +15,21 @@ namespace Java_{
 	public class CommentImpl 
 	: CommentBase
 	{
-		public static oclstdlib.Set<CommentImpl> allInstances = new oclstdlib.Set<CommentImpl>();
+		
+		public static oclstdlib.Set<CommentImpl> allInstances_ = new oclstdlib.Set<CommentImpl>();
+		
+	    public static oclstdlib.Set<Comment> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<Comment>();
+		    result.AddRange(CommentImpl.allInstances_);
+			result.AddRange(JavadocImpl.allInstances_);
+			result.AddRange(BlockCommentImpl.allInstances_);
+			result.AddRange(LineCommentImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

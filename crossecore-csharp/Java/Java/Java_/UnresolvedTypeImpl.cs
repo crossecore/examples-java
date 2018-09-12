@@ -15,7 +15,18 @@ namespace Java_{
 	public class UnresolvedTypeImpl 
 	: UnresolvedTypeBase
 	{
-		public static oclstdlib.Set<UnresolvedTypeImpl> allInstances = new oclstdlib.Set<UnresolvedTypeImpl>();
+		
+		public static oclstdlib.Set<UnresolvedTypeImpl> allInstances_ = new oclstdlib.Set<UnresolvedTypeImpl>();
+		
+	    public static oclstdlib.Set<UnresolvedType> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<UnresolvedType>();
+		    result.AddRange(UnresolvedTypeImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

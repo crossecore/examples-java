@@ -15,7 +15,18 @@ namespace Java_{
 	public class ConditionalExpressionImpl 
 	: ConditionalExpressionBase
 	{
-		public static oclstdlib.Set<ConditionalExpressionImpl> allInstances = new oclstdlib.Set<ConditionalExpressionImpl>();
+		
+		public static oclstdlib.Set<ConditionalExpressionImpl> allInstances_ = new oclstdlib.Set<ConditionalExpressionImpl>();
+		
+	    public static oclstdlib.Set<ConditionalExpression> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ConditionalExpression>();
+		    result.AddRange(ConditionalExpressionImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

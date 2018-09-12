@@ -15,7 +15,18 @@ namespace Java_{
 	public class UnresolvedItemAccessImpl 
 	: UnresolvedItemAccessBase
 	{
-		public static oclstdlib.Set<UnresolvedItemAccessImpl> allInstances = new oclstdlib.Set<UnresolvedItemAccessImpl>();
+		
+		public static oclstdlib.Set<UnresolvedItemAccessImpl> allInstances_ = new oclstdlib.Set<UnresolvedItemAccessImpl>();
+		
+	    public static oclstdlib.Set<UnresolvedItemAccess> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<UnresolvedItemAccess>();
+		    result.AddRange(UnresolvedItemAccessImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

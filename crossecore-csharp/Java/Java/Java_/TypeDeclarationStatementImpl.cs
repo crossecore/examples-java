@@ -15,7 +15,18 @@ namespace Java_{
 	public class TypeDeclarationStatementImpl 
 	: TypeDeclarationStatementBase
 	{
-		public static oclstdlib.Set<TypeDeclarationStatementImpl> allInstances = new oclstdlib.Set<TypeDeclarationStatementImpl>();
+		
+		public static oclstdlib.Set<TypeDeclarationStatementImpl> allInstances_ = new oclstdlib.Set<TypeDeclarationStatementImpl>();
+		
+	    public static oclstdlib.Set<TypeDeclarationStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<TypeDeclarationStatement>();
+		    result.AddRange(TypeDeclarationStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

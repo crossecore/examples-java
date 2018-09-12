@@ -15,7 +15,18 @@ namespace Java_{
 	public class BlockCommentImpl 
 	: BlockCommentBase
 	{
-		public static oclstdlib.Set<BlockCommentImpl> allInstances = new oclstdlib.Set<BlockCommentImpl>();
+		
+		public static oclstdlib.Set<BlockCommentImpl> allInstances_ = new oclstdlib.Set<BlockCommentImpl>();
+		
+	    public static oclstdlib.Set<BlockComment> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<BlockComment>();
+		    result.AddRange(BlockCommentImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

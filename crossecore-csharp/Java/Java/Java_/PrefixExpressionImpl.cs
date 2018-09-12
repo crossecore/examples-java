@@ -15,7 +15,18 @@ namespace Java_{
 	public class PrefixExpressionImpl 
 	: PrefixExpressionBase
 	{
-		public static oclstdlib.Set<PrefixExpressionImpl> allInstances = new oclstdlib.Set<PrefixExpressionImpl>();
+		
+		public static oclstdlib.Set<PrefixExpressionImpl> allInstances_ = new oclstdlib.Set<PrefixExpressionImpl>();
+		
+	    public static oclstdlib.Set<PrefixExpression> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PrefixExpression>();
+		    result.AddRange(PrefixExpressionImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

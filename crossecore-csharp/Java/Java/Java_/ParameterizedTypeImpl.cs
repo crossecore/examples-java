@@ -15,7 +15,18 @@ namespace Java_{
 	public class ParameterizedTypeImpl 
 	: ParameterizedTypeBase
 	{
-		public static oclstdlib.Set<ParameterizedTypeImpl> allInstances = new oclstdlib.Set<ParameterizedTypeImpl>();
+		
+		public static oclstdlib.Set<ParameterizedTypeImpl> allInstances_ = new oclstdlib.Set<ParameterizedTypeImpl>();
+		
+	    public static oclstdlib.Set<ParameterizedType> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ParameterizedType>();
+		    result.AddRange(ParameterizedTypeImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

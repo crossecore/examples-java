@@ -34,14 +34,8 @@ namespace Java_{
 		
 		
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.ARRAYINITIALIZER_COMMENTS:
-					return comments;
-				case Java_PackageImpl.ARRAYINITIALIZER_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.ARRAYINITIALIZER_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.ARRAYINITIALIZER_EXPRESSIONS:
 					return expressions;
 			}
@@ -51,16 +45,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.ARRAYINITIALIZER_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.ARRAYINITIALIZER_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.ARRAYINITIALIZER_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.ARRAYINITIALIZER_EXPRESSIONS:
 					expressions.Clear();
 					expressions.AddRange(((List<EObject>)newValue)?.Cast<Expression>());
@@ -68,6 +52,17 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.ARRAYINITIALIZER_EXPRESSIONS:
+					return _expressions != null && !_expressions.isEmpty();
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

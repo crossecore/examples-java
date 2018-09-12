@@ -78,14 +78,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.METHODREFPARAMETER_COMMENTS:
-					return comments;
-				case Java_PackageImpl.METHODREFPARAMETER_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.METHODREFPARAMETER_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.METHODREFPARAMETER_NAME:
 					return name;
 				case Java_PackageImpl.METHODREFPARAMETER_VARARGS:
@@ -99,16 +93,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.METHODREFPARAMETER_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.METHODREFPARAMETER_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.METHODREFPARAMETER_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.METHODREFPARAMETER_NAME:
 					name = (string) newValue;
 					return;
@@ -121,6 +105,21 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.METHODREFPARAMETER_NAME:
+					return NAME_EDEFAULT == null ? _name != null : !NAME_EDEFAULT.equals(_name);
+				case Java_PackageImpl.METHODREFPARAMETER_VARARGS:
+					return _varargs != VARARGS_EDEFAULT;
+				case Java_PackageImpl.METHODREFPARAMETER_TYPE:
+					return _type != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

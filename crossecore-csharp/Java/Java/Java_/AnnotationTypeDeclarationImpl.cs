@@ -15,7 +15,19 @@ namespace Java_{
 	public class AnnotationTypeDeclarationImpl 
 	: AnnotationTypeDeclarationBase
 	{
-		public static oclstdlib.Set<AnnotationTypeDeclarationImpl> allInstances = new oclstdlib.Set<AnnotationTypeDeclarationImpl>();
+		
+		public static oclstdlib.Set<AnnotationTypeDeclarationImpl> allInstances_ = new oclstdlib.Set<AnnotationTypeDeclarationImpl>();
+		
+	    public static oclstdlib.Set<AnnotationTypeDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<AnnotationTypeDeclaration>();
+		    result.AddRange(AnnotationTypeDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedAnnotationDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

@@ -15,7 +15,18 @@ namespace Java_{
 	public class ArrayInitializerImpl 
 	: ArrayInitializerBase
 	{
-		public static oclstdlib.Set<ArrayInitializerImpl> allInstances = new oclstdlib.Set<ArrayInitializerImpl>();
+		
+		public static oclstdlib.Set<ArrayInitializerImpl> allInstances_ = new oclstdlib.Set<ArrayInitializerImpl>();
+		
+	    public static oclstdlib.Set<ArrayInitializer> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ArrayInitializer>();
+		    result.AddRange(ArrayInitializerImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

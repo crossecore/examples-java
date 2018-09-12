@@ -15,7 +15,18 @@ namespace Java_{
 	public class IfStatementImpl 
 	: IfStatementBase
 	{
-		public static oclstdlib.Set<IfStatementImpl> allInstances = new oclstdlib.Set<IfStatementImpl>();
+		
+		public static oclstdlib.Set<IfStatementImpl> allInstances_ = new oclstdlib.Set<IfStatementImpl>();
+		
+	    public static oclstdlib.Set<IfStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<IfStatement>();
+		    result.AddRange(IfStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

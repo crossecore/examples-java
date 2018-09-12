@@ -41,32 +41,6 @@ namespace Java_{
 				}
 				}
 		}
-		private Statement _elseStatement;
-		public virtual Statement elseStatement
-		{
-			get {
-			
-				return _elseStatement;
-			}
-			set {
-				if (value != _elseStatement) {
-					NotificationChain msgs = null;
-					if (_elseStatement != null){
-						msgs = ((InternalEObject)_elseStatement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT, null, msgs);
-					}
-					if (value != null){
-						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT, null, msgs);
-					}
-					msgs = basicSetElseStatement(value, msgs);
-					if (msgs != null) {
-						msgs.dispatch();
-					}
-				}
-				else if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT , value, value));
-				}
-				}
-		}
 		private Statement _thenStatement;
 		public virtual Statement thenStatement
 		{
@@ -93,6 +67,32 @@ namespace Java_{
 				}
 				}
 		}
+		private Statement _elseStatement;
+		public virtual Statement elseStatement
+		{
+			get {
+			
+				return _elseStatement;
+			}
+			set {
+				if (value != _elseStatement) {
+					NotificationChain msgs = null;
+					if (_elseStatement != null){
+						msgs = ((InternalEObject)_elseStatement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT, null, msgs);
+					}
+					if (value != null){
+						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT, null, msgs);
+					}
+					msgs = basicSetElseStatement(value, msgs);
+					if (msgs != null) {
+						msgs.dispatch();
+					}
+				}
+				else if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT , value, value));
+				}
+				}
+		}
 		
 		protected override EClass eStaticClass() {
 			return Java_PackageImpl.Literals.IFSTATEMENT;
@@ -104,20 +104,6 @@ namespace Java_{
 			_expression = newobj;
 			if (eNotificationRequired()) {
 				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.IFSTATEMENT_EXPRESSION, oldobj, newobj);
-				if (msgs == null){
-					msgs = notification;
-				}
-				else{
-					msgs.add(notification);
-				}
-			}
-			return msgs;
-		}
-		public NotificationChain basicSetElseStatement(Statement newobj, NotificationChain msgs) {
-			var oldobj = _elseStatement;
-			_elseStatement = newobj;
-			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT, oldobj, newobj);
 				if (msgs == null){
 					msgs = notification;
 				}
@@ -141,15 +127,23 @@ namespace Java_{
 			}
 			return msgs;
 		}
+		public NotificationChain basicSetElseStatement(Statement newobj, NotificationChain msgs) {
+			var oldobj = _elseStatement;
+			_elseStatement = newobj;
+			if (eNotificationRequired()) {
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT, oldobj, newobj);
+				if (msgs == null){
+					msgs = notification;
+				}
+				else{
+					msgs.add(notification);
+				}
+			}
+			return msgs;
+		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.IFSTATEMENT_COMMENTS:
-					return comments;
-				case Java_PackageImpl.IFSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.IFSTATEMENT_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.IFSTATEMENT_EXPRESSION:
 					return expression;
 				case Java_PackageImpl.IFSTATEMENT_THENSTATEMENT:
@@ -163,16 +157,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.IFSTATEMENT_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.IFSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.IFSTATEMENT_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.IFSTATEMENT_EXPRESSION:
 					expression = (Expression) newValue;
 					return;
@@ -185,6 +169,21 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.IFSTATEMENT_EXPRESSION:
+					return _expression != null; //single != null;
+				case Java_PackageImpl.IFSTATEMENT_THENSTATEMENT:
+					return _thenStatement != null; //single != null;
+				case Java_PackageImpl.IFSTATEMENT_ELSESTATEMENT:
+					return _elseStatement != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

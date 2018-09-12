@@ -15,7 +15,18 @@ namespace Java_{
 	public class AnnotationImpl 
 	: AnnotationBase
 	{
-		public static oclstdlib.Set<AnnotationImpl> allInstances = new oclstdlib.Set<AnnotationImpl>();
+		
+		public static oclstdlib.Set<AnnotationImpl> allInstances_ = new oclstdlib.Set<AnnotationImpl>();
+		
+	    public static oclstdlib.Set<Annotation> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<Annotation>();
+		    result.AddRange(AnnotationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

@@ -15,7 +15,18 @@ namespace Java_{
 	public class PostfixExpressionImpl 
 	: PostfixExpressionBase
 	{
-		public static oclstdlib.Set<PostfixExpressionImpl> allInstances = new oclstdlib.Set<PostfixExpressionImpl>();
+		
+		public static oclstdlib.Set<PostfixExpressionImpl> allInstances_ = new oclstdlib.Set<PostfixExpressionImpl>();
+		
+	    public static oclstdlib.Set<PostfixExpression> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PostfixExpression>();
+		    result.AddRange(PostfixExpressionImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

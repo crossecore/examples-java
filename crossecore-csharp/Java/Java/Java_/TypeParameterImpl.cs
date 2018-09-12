@@ -15,7 +15,18 @@ namespace Java_{
 	public class TypeParameterImpl 
 	: TypeParameterBase
 	{
-		public static oclstdlib.Set<TypeParameterImpl> allInstances = new oclstdlib.Set<TypeParameterImpl>();
+		
+		public static oclstdlib.Set<TypeParameterImpl> allInstances_ = new oclstdlib.Set<TypeParameterImpl>();
+		
+	    public static oclstdlib.Set<TypeParameter> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<TypeParameter>();
+		    result.AddRange(TypeParameterImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

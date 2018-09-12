@@ -15,7 +15,18 @@ namespace Java_{
 	public class SynchronizedStatementImpl 
 	: SynchronizedStatementBase
 	{
-		public static oclstdlib.Set<SynchronizedStatementImpl> allInstances = new oclstdlib.Set<SynchronizedStatementImpl>();
+		
+		public static oclstdlib.Set<SynchronizedStatementImpl> allInstances_ = new oclstdlib.Set<SynchronizedStatementImpl>();
+		
+	    public static oclstdlib.Set<SynchronizedStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<SynchronizedStatement>();
+		    result.AddRange(SynchronizedStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

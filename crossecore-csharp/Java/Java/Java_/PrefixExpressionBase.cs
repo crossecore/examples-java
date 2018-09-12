@@ -70,14 +70,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.PREFIXEXPRESSION_COMMENTS:
-					return comments;
-				case Java_PackageImpl.PREFIXEXPRESSION_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.PREFIXEXPRESSION_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.PREFIXEXPRESSION_OPERATOR:
 					return operator_;
 				case Java_PackageImpl.PREFIXEXPRESSION_OPERAND:
@@ -89,16 +83,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.PREFIXEXPRESSION_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.PREFIXEXPRESSION_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.PREFIXEXPRESSION_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.PREFIXEXPRESSION_OPERATOR:
 					operator_ = (PrefixExpressionKind) newValue;
 					return;
@@ -108,6 +92,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.PREFIXEXPRESSION_OPERATOR:
+					return OPERATOR_EDEFAULT == null ? _operator != null : !OPERATOR_EDEFAULT.equals(_operator);
+				case Java_PackageImpl.PREFIXEXPRESSION_OPERAND:
+					return _operand != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

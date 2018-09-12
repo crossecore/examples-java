@@ -23,6 +23,44 @@ namespace Java_{
 		}
 		set { _extraArrayDimensions = value; }
 		}
+		private TypeAccess _type;
+		public virtual TypeAccess type
+		{
+			get {
+			
+				return _type;
+			}
+			set {
+				if (value != _type) {
+					NotificationChain msgs = null;
+					if (_type != null){
+						msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE, null, msgs);
+					}
+					if (value != null){
+						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE, null, msgs);
+					}
+					msgs = basicSetType(value, msgs);
+					if (msgs != null) {
+						msgs.dispatch();
+					}
+				}
+				else if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE , value, value));
+				}
+				}
+		}
+		private OrderedSet<VariableDeclarationFragment> _fragments;
+		
+		public virtual OrderedSet<VariableDeclarationFragment> fragments
+		{
+			get {
+				if(_fragments==null){
+					_fragments = new OrderedSet<VariableDeclarationFragment>(this, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS, Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER);
+				}
+				return _fragments;
+			}
+		
+		}
 		private Modifier _modifier;
 		public virtual Modifier modifier
 		{
@@ -73,6 +111,8 @@ namespace Java_{
 						msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER, typeof(Modifier), msgs);
 					}
 					return basicSetModifier((Modifier)otherEnd, msgs);
+				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
+					return fragments.basicAdd((VariableDeclarationFragment)otherEnd, msgs);
 			}
 			return base.eInverseAdd(otherEnd, featureID, msgs);
 		}
@@ -81,6 +121,8 @@ namespace Java_{
 			switch (featureID) {
 				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER:
 					return basicSetModifier(null, msgs);
+				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
+					return fragments.basicRemove((VariableDeclarationFragment)otherEnd, msgs);
 			}
 			return base.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -99,21 +141,29 @@ namespace Java_{
 			}
 			return msgs;
 		}
+		public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
+			var oldobj = _type;
+			_type = newobj;
+			if (eNotificationRequired()) {
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE, oldobj, newobj);
+				if (msgs == null){
+					msgs = notification;
+				}
+				else{
+					msgs.add(notification);
+				}
+			}
+			return msgs;
+		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_COMMENTS:
-					return comments;
-				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_ORIGINALCLASSFILE:
-					return originalClassFile;
+				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS:
+					return extraArrayDimensions;
 				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_TYPE:
 					return type;
 				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
 					return fragments;
-				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS:
-					return extraArrayDimensions;
 				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER:
 					return modifier;
 				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_ANNOTATIONS:
@@ -125,15 +175,8 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
+				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS:
+					extraArrayDimensions = (int) newValue;
 					return;
 				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_TYPE:
 					type = (TypeAccess) newValue;
@@ -141,9 +184,6 @@ namespace Java_{
 				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
 					fragments.Clear();
 					fragments.AddRange(((List<EObject>)newValue)?.Cast<VariableDeclarationFragment>());
-					return;
-				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS:
-					extraArrayDimensions = (int) newValue;
 					return;
 				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER:
 					modifier = (Modifier) newValue;
@@ -154,6 +194,47 @@ namespace Java_{
 					return;
 			}
 			base.eSet(featureID, newValue);
+		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS:
+					return _extraArrayDimensions != EXTRAARRAYDIMENSIONS_EDEFAULT;
+				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_TYPE:
+					return _type != null; //single != null;
+				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS:
+					return _fragments != null && !_fragments.isEmpty();
+				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER:
+					return _modifier != null; //single != null;
+				case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_ANNOTATIONS:
+					return _annotations != null && !_annotations.isEmpty();
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
+		public override int eBaseStructuralFeatureID(int derivedFeatureID, System.Type baseClass) {
+			if (baseClass == typeof(AbstractVariablesContainer)) {
+				switch (derivedFeatureID) {
+					case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_TYPE: return Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE;
+					case Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS: return Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS;
+					default: return -1;
+				}
+			}
+			return base.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+		}
+		
+					
+		public override int eDerivedStructuralFeatureID(int baseFeatureID, System.Type baseClass) {
+			if (baseClass == typeof(AbstractVariablesContainer)) {
+				switch (baseFeatureID) {
+					case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE: return Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_TYPE;
+					case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS: return Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_FRAGMENTS;
+					default: return -1;
+				}
+			}
+			return base.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 		}
 		
 		

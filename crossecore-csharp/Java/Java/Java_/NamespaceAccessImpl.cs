@@ -15,7 +15,21 @@ namespace Java_{
 	public class NamespaceAccessImpl 
 	: NamespaceAccessBase
 	{
-		public static oclstdlib.Set<NamespaceAccessImpl> allInstances = new oclstdlib.Set<NamespaceAccessImpl>();
+		
+		public static oclstdlib.Set<NamespaceAccessImpl> allInstances_ = new oclstdlib.Set<NamespaceAccessImpl>();
+		
+	    public static oclstdlib.Set<NamespaceAccess> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<NamespaceAccess>();
+		    result.AddRange(NamespaceAccessImpl.allInstances_);
+			result.AddRange(TypeAccessImpl.allInstances_);
+			result.AddRange(PackageAccessImpl.allInstances_);
+			result.AddRange(UnresolvedItemAccessImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

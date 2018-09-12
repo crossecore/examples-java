@@ -41,31 +41,17 @@ namespace Java_{
 				}
 				}
 		}
-		private Modifier _modifier;
-		public virtual Modifier modifier
+		private OrderedSet<Annotation> _annotations;
+		
+		public virtual OrderedSet<Annotation> annotations
 		{
 			get {
-			
-				return _modifier;
+				if(_annotations==null){
+					_annotations = new OrderedSet<Annotation>(this, Java_PackageImpl.BODYDECLARATION_ANNOTATIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.BODYDECLARATION_ANNOTATIONS);
+				}
+				return _annotations;
 			}
-			set {
-				if (value != _modifier) {
-					NotificationChain msgs = null;
-					if (_modifier != null){
-						msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER_BODYDECLARATION, typeof(BodyDeclaration), msgs);
-					}
-					if (value != null){
-						msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER_BODYDECLARATION, typeof(BodyDeclaration), msgs);
-					}
-					msgs = basicSetModifier(value, msgs);
-					if (msgs != null) {
-						msgs.dispatch();
-					}
-				}
-				else if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.BODYDECLARATION_MODIFIER , value, value));
-				}
-				}
+		
 		}
 		public virtual AnonymousClassDeclaration anonymousClassDeclarationOwner
 		{
@@ -93,17 +79,31 @@ namespace Java_{
 				}
 				}
 		}
-		private OrderedSet<Annotation> _annotations;
-		
-		public virtual OrderedSet<Annotation> annotations
+		private Modifier _modifier;
+		public virtual Modifier modifier
 		{
 			get {
-				if(_annotations==null){
-					_annotations = new OrderedSet<Annotation>(this, Java_PackageImpl.BODYDECLARATION_ANNOTATIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.BODYDECLARATION_ANNOTATIONS);
-				}
-				return _annotations;
+			
+				return _modifier;
 			}
-		
+			set {
+				if (value != _modifier) {
+					NotificationChain msgs = null;
+					if (_modifier != null){
+						msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER_BODYDECLARATION, typeof(BodyDeclaration), msgs);
+					}
+					if (value != null){
+						msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER_BODYDECLARATION, typeof(BodyDeclaration), msgs);
+					}
+					msgs = basicSetModifier(value, msgs);
+					if (msgs != null) {
+						msgs.dispatch();
+					}
+				}
+				else if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.BODYDECLARATION_MODIFIER , value, value));
+				}
+				}
 		}
 		
 		protected override EClass eStaticClass() {
@@ -166,20 +166,8 @@ namespace Java_{
 				return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.BODYDECLARATION_COMMENTS:
-					return comments;
-				case Java_PackageImpl.BODYDECLARATION_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.BODYDECLARATION_ORIGINALCLASSFILE:
-					return originalClassFile;
-				case Java_PackageImpl.BODYDECLARATION_NAME:
-					return name;
-				case Java_PackageImpl.BODYDECLARATION_PROXY:
-					return proxy;
-				case Java_PackageImpl.BODYDECLARATION_USAGESINIMPORTS:
-					return usagesInImports;
 				case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
 					return abstractTypeDeclaration;
 				case Java_PackageImpl.BODYDECLARATION_ANNOTATIONS:
@@ -195,26 +183,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.BODYDECLARATION_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.BODYDECLARATION_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.BODYDECLARATION_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
-				case Java_PackageImpl.BODYDECLARATION_NAME:
-					name = (string) newValue;
-					return;
-				case Java_PackageImpl.BODYDECLARATION_PROXY:
-					proxy = (bool) newValue;
-					return;
-				case Java_PackageImpl.BODYDECLARATION_USAGESINIMPORTS:
-					usagesInImports.Clear();
-					usagesInImports.AddRange(((List<EObject>)newValue)?.Cast<ImportDeclaration>());
-					return;
 				case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
 					abstractTypeDeclaration = (AbstractTypeDeclaration) newValue;
 					return;
@@ -231,6 +199,23 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
+					return getAbstractTypeDeclaration() != null; //single, volatile
+				case Java_PackageImpl.BODYDECLARATION_ANNOTATIONS:
+					return _annotations != null && !_annotations.isEmpty();
+				case Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
+					return getAnonymousClassDeclarationOwner() != null; //single, volatile
+				case Java_PackageImpl.BODYDECLARATION_MODIFIER:
+					return _modifier != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

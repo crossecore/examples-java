@@ -15,7 +15,18 @@ namespace Java_{
 	public class SuperFieldAccessImpl 
 	: SuperFieldAccessBase
 	{
-		public static oclstdlib.Set<SuperFieldAccessImpl> allInstances = new oclstdlib.Set<SuperFieldAccessImpl>();
+		
+		public static oclstdlib.Set<SuperFieldAccessImpl> allInstances_ = new oclstdlib.Set<SuperFieldAccessImpl>();
+		
+	    public static oclstdlib.Set<SuperFieldAccess> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<SuperFieldAccess>();
+		    result.AddRange(SuperFieldAccessImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

@@ -15,7 +15,18 @@ namespace Java_{
 	public class ArrayLengthAccessImpl 
 	: ArrayLengthAccessBase
 	{
-		public static oclstdlib.Set<ArrayLengthAccessImpl> allInstances = new oclstdlib.Set<ArrayLengthAccessImpl>();
+		
+		public static oclstdlib.Set<ArrayLengthAccessImpl> allInstances_ = new oclstdlib.Set<ArrayLengthAccessImpl>();
+		
+	    public static oclstdlib.Set<ArrayLengthAccess> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ArrayLengthAccess>();
+		    result.AddRange(ArrayLengthAccessImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

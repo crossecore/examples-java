@@ -387,14 +387,7 @@ namespace Java_{
 				PrefixExpressionKindEEnum = createEEnum(PREFIXEXPRESSIONKIND);
 				VisibilityKindEEnum = createEEnum(VISIBILITYKIND);
 				
-				AssignmentKindEDataType = createEDataType(ASSIGNMENTKIND);
-				InfixExpressionKindEDataType = createEDataType(INFIXEXPRESSIONKIND);
-				InheritanceKindEDataType = createEDataType(INHERITANCEKIND);
-				PostfixExpressionKindEDataType = createEDataType(POSTFIXEXPRESSIONKIND);
-				PrefixExpressionKindEDataType = createEDataType(PREFIXEXPRESSIONKIND);
-				VisibilityKindEDataType = createEDataType(VISIBILITYKIND);
 				
-				EStringEDataType = createEDataType(ESTRING);
 	        }
 	        
 	        private bool isInitialized = false;
@@ -4916,12 +4909,58 @@ namespace Java_{
 					IS_UNIQUE, 
 					!IS_DERIVED, 
 					!IS_ORDERED);
-				initEDataType(AssignmentKindEDataType, typeof(AssignmentKind), "AssignmentKind", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-				initEDataType(InfixExpressionKindEDataType, typeof(InfixExpressionKind), "InfixExpressionKind", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-				initEDataType(InheritanceKindEDataType, typeof(InheritanceKind), "InheritanceKind", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-				initEDataType(PostfixExpressionKindEDataType, typeof(PostfixExpressionKind), "PostfixExpressionKind", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-				initEDataType(PrefixExpressionKindEDataType, typeof(PrefixExpressionKind), "PrefixExpressionKind", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-				initEDataType(VisibilityKindEDataType, typeof(VisibilityKind), "VisibilityKind", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+			initEEnum(AssignmentKindEEnum, typeof(AssignmentKind), "AssignmentKind");
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.ASSIGN);
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.PLUS_ASSIGN);
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.MINUS_ASSIGN);
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.TIMES_ASSIGN);
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.DIVIDE_ASSIGN);
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.BIT_AND_ASSIGN);
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.BIT_OR_ASSIGN);
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.BIT_XOR_ASSIGN);
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.REMAINDER_ASSIGN);
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.LEFT_SHIFT_ASSIGN);
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.RIGHT_SHIFT_SIGNED_ASSIGN);
+			//addEEnumLiteral(AssignmentKindEEnum, AssignmentKind.RIGHT_SHIFT_UNSIGNED_ASSIGN);
+			initEEnum(InfixExpressionKindEEnum, typeof(InfixExpressionKind), "InfixExpressionKind");
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.TIMES);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.DIVIDE);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.REMAINDER);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.PLUS);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.MINUS);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.LEFT_SHIFT);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.RIGHT_SHIFT_SIGNED);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.RIGHT_SHIFT_UNSIGNED);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.LESS);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.GREATER);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.LESS_EQUALS);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.GREATER_EQUALS);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.EQUALS);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.NOT_EQUALS);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.XOR);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.AND);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.OR);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.CONDITIONAL_AND);
+			//addEEnumLiteral(InfixExpressionKindEEnum, InfixExpressionKind.CONDITIONAL_OR);
+			initEEnum(InheritanceKindEEnum, typeof(InheritanceKind), "InheritanceKind");
+			//addEEnumLiteral(InheritanceKindEEnum, InheritanceKind.NONE);
+			//addEEnumLiteral(InheritanceKindEEnum, InheritanceKind.ABSTRACT);
+			//addEEnumLiteral(InheritanceKindEEnum, InheritanceKind.FINAL);
+			initEEnum(PostfixExpressionKindEEnum, typeof(PostfixExpressionKind), "PostfixExpressionKind");
+			//addEEnumLiteral(PostfixExpressionKindEEnum, PostfixExpressionKind.INCREMENT);
+			//addEEnumLiteral(PostfixExpressionKindEEnum, PostfixExpressionKind.DECREMENT);
+			initEEnum(PrefixExpressionKindEEnum, typeof(PrefixExpressionKind), "PrefixExpressionKind");
+			//addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.INCREMENT);
+			//addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.DECREMENT);
+			//addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.PLUS);
+			//addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.MINUS);
+			//addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.COMPLEMENT);
+			//addEEnumLiteral(PrefixExpressionKindEEnum, PrefixExpressionKind.NOT);
+			initEEnum(VisibilityKindEEnum, typeof(VisibilityKind), "VisibilityKind");
+			//addEEnumLiteral(VisibilityKindEEnum, VisibilityKind.NONE);
+			//addEEnumLiteral(VisibilityKindEEnum, VisibilityKind.PUBLIC);
+			//addEEnumLiteral(VisibilityKindEEnum, VisibilityKind.PRIVATE);
+			//addEEnumLiteral(VisibilityKindEEnum, VisibilityKind.PROTECTED);
 	        }
 	        
 			

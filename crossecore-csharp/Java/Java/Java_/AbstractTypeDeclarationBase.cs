@@ -15,6 +15,54 @@ namespace Java_{
 	public class AbstractTypeDeclarationBase 
 	:BodyDeclarationImpl, AbstractTypeDeclaration
 	{
+		private Set<TypeAccess> _usagesInTypeAccess;
+		
+		public virtual Set<TypeAccess> usagesInTypeAccess
+		{
+			get {
+				if(_usagesInTypeAccess==null){
+					_usagesInTypeAccess = new Set<TypeAccess>(this, Java_PackageImpl.TYPE_USAGESINTYPEACCESS, Java_PackageImpl.TYPEACCESS_TYPE);
+				}
+				return _usagesInTypeAccess;
+			}
+		
+		}
+		private OrderedSet<BodyDeclaration> _bodyDeclarations;
+		
+		public virtual OrderedSet<BodyDeclaration> bodyDeclarations
+		{
+			get {
+				if(_bodyDeclarations==null){
+					_bodyDeclarations = new OrderedSet<BodyDeclaration>(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS, Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION);
+				}
+				return _bodyDeclarations;
+			}
+		
+		}
+		private OrderedSet<Comment> _commentsBeforeBody;
+		
+		public virtual OrderedSet<Comment> commentsBeforeBody
+		{
+			get {
+				if(_commentsBeforeBody==null){
+					_commentsBeforeBody = new OrderedSet<Comment>(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSBEFOREBODY, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSBEFOREBODY);
+				}
+				return _commentsBeforeBody;
+			}
+		
+		}
+		private OrderedSet<Comment> _commentsAfterBody;
+		
+		public virtual OrderedSet<Comment> commentsAfterBody
+		{
+			get {
+				if(_commentsAfterBody==null){
+					_commentsAfterBody = new OrderedSet<Comment>(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSAFTERBODY, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSAFTERBODY);
+				}
+				return _commentsAfterBody;
+			}
+		
+		}
 		public virtual Package package
 		{
 			get {
@@ -53,42 +101,6 @@ namespace Java_{
 			}
 		
 		}
-		private OrderedSet<BodyDeclaration> _bodyDeclarations;
-		
-		public virtual OrderedSet<BodyDeclaration> bodyDeclarations
-		{
-			get {
-				if(_bodyDeclarations==null){
-					_bodyDeclarations = new OrderedSet<BodyDeclaration>(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS, Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION);
-				}
-				return _bodyDeclarations;
-			}
-		
-		}
-		private OrderedSet<Comment> _commentsAfterBody;
-		
-		public virtual OrderedSet<Comment> commentsAfterBody
-		{
-			get {
-				if(_commentsAfterBody==null){
-					_commentsAfterBody = new OrderedSet<Comment>(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSAFTERBODY, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSAFTERBODY);
-				}
-				return _commentsAfterBody;
-			}
-		
-		}
-		private OrderedSet<Comment> _commentsBeforeBody;
-		
-		public virtual OrderedSet<Comment> commentsBeforeBody
-		{
-			get {
-				if(_commentsBeforeBody==null){
-					_commentsBeforeBody = new OrderedSet<Comment>(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSBEFOREBODY, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSBEFOREBODY);
-				}
-				return _commentsBeforeBody;
-			}
-		
-		}
 		
 		protected override EClass eStaticClass() {
 			return Java_PackageImpl.Literals.ABSTRACTTYPEDECLARATION;
@@ -101,6 +113,8 @@ namespace Java_{
 						msgs = eBasicRemoveFromContainer(msgs);
 					}
 					return basicSetPackage((Package)otherEnd, msgs);
+				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS:
+					return usagesInTypeAccess.basicAdd((TypeAccess)otherEnd, msgs);
 				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS:
 					return bodyDeclarations.basicAdd((BodyDeclaration)otherEnd, msgs);
 			}
@@ -111,6 +125,8 @@ namespace Java_{
 			switch (featureID) {
 				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_PACKAGE:
 					return basicSetPackage(null, msgs);
+				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS:
+					return usagesInTypeAccess.basicRemove((TypeAccess)otherEnd, msgs);
 				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS:
 					return bodyDeclarations.basicRemove((BodyDeclaration)otherEnd, msgs);
 			}
@@ -122,28 +138,8 @@ namespace Java_{
 				return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTS:
-					return comments;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_ORIGINALCLASSFILE:
-					return originalClassFile;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_NAME:
-					return name;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_PROXY:
-					return proxy;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINIMPORTS:
-					return usagesInImports;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_ABSTRACTTYPEDECLARATION:
-					return abstractTypeDeclaration;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_ANNOTATIONS:
-					return annotations;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
-					return anonymousClassDeclarationOwner;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_MODIFIER:
-					return modifier;
 				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS:
 					return usagesInTypeAccess;
 				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS:
@@ -163,39 +159,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_NAME:
-					name = (string) newValue;
-					return;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_PROXY:
-					proxy = (bool) newValue;
-					return;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINIMPORTS:
-					usagesInImports.Clear();
-					usagesInImports.AddRange(((List<EObject>)newValue)?.Cast<ImportDeclaration>());
-					return;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_ABSTRACTTYPEDECLARATION:
-					abstractTypeDeclaration = (AbstractTypeDeclaration) newValue;
-					return;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_ANNOTATIONS:
-					annotations.Clear();
-					annotations.AddRange(((List<EObject>)newValue)?.Cast<Annotation>());
-					return;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
-					anonymousClassDeclarationOwner = (AnonymousClassDeclaration) newValue;
-					return;
-				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_MODIFIER:
-					modifier = (Modifier) newValue;
-					return;
 				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS:
 					usagesInTypeAccess.Clear();
 					usagesInTypeAccess.AddRange(((List<EObject>)newValue)?.Cast<TypeAccess>());
@@ -221,6 +184,47 @@ namespace Java_{
 					return;
 			}
 			base.eSet(featureID, newValue);
+		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS:
+					return getUsagesInTypeAccess().isEmpty(); //many, volatile
+				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS:
+					return _bodyDeclarations != null && !_bodyDeclarations.isEmpty();
+				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSBEFOREBODY:
+					return _commentsBeforeBody != null && !_commentsBeforeBody.isEmpty();
+				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_COMMENTSAFTERBODY:
+					return _commentsAfterBody != null && !_commentsAfterBody.isEmpty();
+				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_PACKAGE:
+					return getPackage() != null; //single, volatile
+				case Java_PackageImpl.ABSTRACTTYPEDECLARATION_SUPERINTERFACES:
+					return _superInterfaces != null && !_superInterfaces.isEmpty();
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
+		public override int eBaseStructuralFeatureID(int derivedFeatureID, System.Type baseClass) {
+			if (baseClass == typeof(Type)) {
+				switch (derivedFeatureID) {
+					case Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS: return Java_PackageImpl.TYPE_USAGESINTYPEACCESS;
+					default: return -1;
+				}
+			}
+			return base.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+		}
+		
+					
+		public override int eDerivedStructuralFeatureID(int baseFeatureID, System.Type baseClass) {
+			if (baseClass == typeof(Type)) {
+				switch (baseFeatureID) {
+					case Java_PackageImpl.TYPE_USAGESINTYPEACCESS: return Java_PackageImpl.ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS;
+					default: return -1;
+				}
+			}
+			return base.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 		}
 		
 		

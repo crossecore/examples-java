@@ -15,7 +15,18 @@ namespace Java_{
 	public class MethodInvocationImpl 
 	: MethodInvocationBase
 	{
-		public static oclstdlib.Set<MethodInvocationImpl> allInstances = new oclstdlib.Set<MethodInvocationImpl>();
+		
+		public static oclstdlib.Set<MethodInvocationImpl> allInstances_ = new oclstdlib.Set<MethodInvocationImpl>();
+		
+	    public static oclstdlib.Set<MethodInvocation> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<MethodInvocation>();
+		    result.AddRange(MethodInvocationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

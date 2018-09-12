@@ -15,7 +15,18 @@ namespace Java_{
 	public class ThisExpressionImpl 
 	: ThisExpressionBase
 	{
-		public static oclstdlib.Set<ThisExpressionImpl> allInstances = new oclstdlib.Set<ThisExpressionImpl>();
+		
+		public static oclstdlib.Set<ThisExpressionImpl> allInstances_ = new oclstdlib.Set<ThisExpressionImpl>();
+		
+	    public static oclstdlib.Set<ThisExpression> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ThisExpression>();
+		    result.AddRange(ThisExpressionImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

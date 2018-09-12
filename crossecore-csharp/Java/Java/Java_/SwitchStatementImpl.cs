@@ -15,7 +15,18 @@ namespace Java_{
 	public class SwitchStatementImpl 
 	: SwitchStatementBase
 	{
-		public static oclstdlib.Set<SwitchStatementImpl> allInstances = new oclstdlib.Set<SwitchStatementImpl>();
+		
+		public static oclstdlib.Set<SwitchStatementImpl> allInstances_ = new oclstdlib.Set<SwitchStatementImpl>();
+		
+	    public static oclstdlib.Set<SwitchStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<SwitchStatement>();
+		    result.AddRange(SwitchStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

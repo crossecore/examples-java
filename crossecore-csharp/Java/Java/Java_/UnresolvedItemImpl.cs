@@ -15,7 +15,29 @@ namespace Java_{
 	public class UnresolvedItemImpl 
 	: UnresolvedItemBase
 	{
-		public static oclstdlib.Set<UnresolvedItemImpl> allInstances = new oclstdlib.Set<UnresolvedItemImpl>();
+		
+		public static oclstdlib.Set<UnresolvedItemImpl> allInstances_ = new oclstdlib.Set<UnresolvedItemImpl>();
+		
+	    public static oclstdlib.Set<UnresolvedItem> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<UnresolvedItem>();
+		    result.AddRange(UnresolvedItemImpl.allInstances_);
+			result.AddRange(UnresolvedAnnotationTypeMemberDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedMethodDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedLabeledStatementImpl.allInstances_);
+			result.AddRange(UnresolvedSingleVariableDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedAnnotationDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedClassDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedInterfaceDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedTypeImpl.allInstances_);
+			result.AddRange(UnresolvedTypeDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedEnumDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedVariableDeclarationFragmentImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

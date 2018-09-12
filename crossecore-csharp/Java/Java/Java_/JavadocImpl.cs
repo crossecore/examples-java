@@ -15,7 +15,18 @@ namespace Java_{
 	public class JavadocImpl 
 	: JavadocBase
 	{
-		public static oclstdlib.Set<JavadocImpl> allInstances = new oclstdlib.Set<JavadocImpl>();
+		
+		public static oclstdlib.Set<JavadocImpl> allInstances_ = new oclstdlib.Set<JavadocImpl>();
+		
+	    public static oclstdlib.Set<Javadoc> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<Javadoc>();
+		    result.AddRange(JavadocImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

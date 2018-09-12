@@ -15,7 +15,18 @@ namespace Java_{
 	public class UnresolvedEnumDeclarationImpl 
 	: UnresolvedEnumDeclarationBase
 	{
-		public static oclstdlib.Set<UnresolvedEnumDeclarationImpl> allInstances = new oclstdlib.Set<UnresolvedEnumDeclarationImpl>();
+		
+		public static oclstdlib.Set<UnresolvedEnumDeclarationImpl> allInstances_ = new oclstdlib.Set<UnresolvedEnumDeclarationImpl>();
+		
+	    public static oclstdlib.Set<UnresolvedEnumDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<UnresolvedEnumDeclaration>();
+		    result.AddRange(UnresolvedEnumDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

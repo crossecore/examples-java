@@ -15,7 +15,18 @@ namespace Java_{
 	public class FieldDeclarationImpl 
 	: FieldDeclarationBase
 	{
-		public static oclstdlib.Set<FieldDeclarationImpl> allInstances = new oclstdlib.Set<FieldDeclarationImpl>();
+		
+		public static oclstdlib.Set<FieldDeclarationImpl> allInstances_ = new oclstdlib.Set<FieldDeclarationImpl>();
+		
+	    public static oclstdlib.Set<FieldDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<FieldDeclaration>();
+		    result.AddRange(FieldDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

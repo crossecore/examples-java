@@ -15,7 +15,18 @@ namespace Java_{
 	public class AssertStatementImpl 
 	: AssertStatementBase
 	{
-		public static oclstdlib.Set<AssertStatementImpl> allInstances = new oclstdlib.Set<AssertStatementImpl>();
+		
+		public static oclstdlib.Set<AssertStatementImpl> allInstances_ = new oclstdlib.Set<AssertStatementImpl>();
+		
+	    public static oclstdlib.Set<AssertStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<AssertStatement>();
+		    result.AddRange(AssertStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

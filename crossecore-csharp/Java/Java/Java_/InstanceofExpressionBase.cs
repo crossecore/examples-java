@@ -15,32 +15,6 @@ namespace Java_{
 	public class InstanceofExpressionBase 
 	:ExpressionImpl, InstanceofExpression
 	{
-		private Expression _leftOperand;
-		public virtual Expression leftOperand
-		{
-			get {
-			
-				return _leftOperand;
-			}
-			set {
-				if (value != _leftOperand) {
-					NotificationChain msgs = null;
-					if (_leftOperand != null){
-						msgs = ((InternalEObject)_leftOperand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND, null, msgs);
-					}
-					if (value != null){
-						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND, null, msgs);
-					}
-					msgs = basicSetLeftOperand(value, msgs);
-					if (msgs != null) {
-						msgs.dispatch();
-					}
-				}
-				else if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND , value, value));
-				}
-				}
-		}
 		private TypeAccess _rightOperand;
 		public virtual TypeAccess rightOperand
 		{
@@ -67,26 +41,38 @@ namespace Java_{
 				}
 				}
 		}
+		private Expression _leftOperand;
+		public virtual Expression leftOperand
+		{
+			get {
+			
+				return _leftOperand;
+			}
+			set {
+				if (value != _leftOperand) {
+					NotificationChain msgs = null;
+					if (_leftOperand != null){
+						msgs = ((InternalEObject)_leftOperand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND, null, msgs);
+					}
+					if (value != null){
+						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND, null, msgs);
+					}
+					msgs = basicSetLeftOperand(value, msgs);
+					if (msgs != null) {
+						msgs.dispatch();
+					}
+				}
+				else if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND , value, value));
+				}
+				}
+		}
 		
 		protected override EClass eStaticClass() {
 			return Java_PackageImpl.Literals.INSTANCEOFEXPRESSION;
 		}
 		
 		
-		public NotificationChain basicSetLeftOperand(Expression newobj, NotificationChain msgs) {
-			var oldobj = _leftOperand;
-			_leftOperand = newobj;
-			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND, oldobj, newobj);
-				if (msgs == null){
-					msgs = notification;
-				}
-				else{
-					msgs.add(notification);
-				}
-			}
-			return msgs;
-		}
 		public NotificationChain basicSetRightOperand(TypeAccess newobj, NotificationChain msgs) {
 			var oldobj = _rightOperand;
 			_rightOperand = newobj;
@@ -101,15 +87,23 @@ namespace Java_{
 			}
 			return msgs;
 		}
+		public NotificationChain basicSetLeftOperand(Expression newobj, NotificationChain msgs) {
+			var oldobj = _leftOperand;
+			_leftOperand = newobj;
+			if (eNotificationRequired()) {
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND, oldobj, newobj);
+				if (msgs == null){
+					msgs = notification;
+				}
+				else{
+					msgs.add(notification);
+				}
+			}
+			return msgs;
+		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.INSTANCEOFEXPRESSION_COMMENTS:
-					return comments;
-				case Java_PackageImpl.INSTANCEOFEXPRESSION_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.INSTANCEOFEXPRESSION_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.INSTANCEOFEXPRESSION_RIGHTOPERAND:
 					return rightOperand;
 				case Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND:
@@ -121,16 +115,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.INSTANCEOFEXPRESSION_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.INSTANCEOFEXPRESSION_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.INSTANCEOFEXPRESSION_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.INSTANCEOFEXPRESSION_RIGHTOPERAND:
 					rightOperand = (TypeAccess) newValue;
 					return;
@@ -140,6 +124,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.INSTANCEOFEXPRESSION_RIGHTOPERAND:
+					return _rightOperand != null; //single != null;
+				case Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND:
+					return _leftOperand != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

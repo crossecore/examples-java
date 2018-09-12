@@ -15,7 +15,18 @@ namespace Java_{
 	public class ReturnStatementImpl 
 	: ReturnStatementBase
 	{
-		public static oclstdlib.Set<ReturnStatementImpl> allInstances = new oclstdlib.Set<ReturnStatementImpl>();
+		
+		public static oclstdlib.Set<ReturnStatementImpl> allInstances_ = new oclstdlib.Set<ReturnStatementImpl>();
+		
+	    public static oclstdlib.Set<ReturnStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ReturnStatement>();
+		    result.AddRange(ReturnStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

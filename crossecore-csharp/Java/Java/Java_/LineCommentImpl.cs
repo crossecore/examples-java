@@ -15,7 +15,18 @@ namespace Java_{
 	public class LineCommentImpl 
 	: LineCommentBase
 	{
-		public static oclstdlib.Set<LineCommentImpl> allInstances = new oclstdlib.Set<LineCommentImpl>();
+		
+		public static oclstdlib.Set<LineCommentImpl> allInstances_ = new oclstdlib.Set<LineCommentImpl>();
+		
+	    public static oclstdlib.Set<LineComment> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<LineComment>();
+		    result.AddRange(LineCommentImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

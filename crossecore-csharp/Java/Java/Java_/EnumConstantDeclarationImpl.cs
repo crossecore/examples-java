@@ -15,7 +15,18 @@ namespace Java_{
 	public class EnumConstantDeclarationImpl 
 	: EnumConstantDeclarationBase
 	{
-		public static oclstdlib.Set<EnumConstantDeclarationImpl> allInstances = new oclstdlib.Set<EnumConstantDeclarationImpl>();
+		
+		public static oclstdlib.Set<EnumConstantDeclarationImpl> allInstances_ = new oclstdlib.Set<EnumConstantDeclarationImpl>();
+		
+	    public static oclstdlib.Set<EnumConstantDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<EnumConstantDeclaration>();
+		    result.AddRange(EnumConstantDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

@@ -15,7 +15,18 @@ namespace Java_{
 	public class PrimitiveTypeCharImpl 
 	: PrimitiveTypeCharBase
 	{
-		public static oclstdlib.Set<PrimitiveTypeCharImpl> allInstances = new oclstdlib.Set<PrimitiveTypeCharImpl>();
+		
+		public static oclstdlib.Set<PrimitiveTypeCharImpl> allInstances_ = new oclstdlib.Set<PrimitiveTypeCharImpl>();
+		
+	    public static oclstdlib.Set<PrimitiveTypeChar> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PrimitiveTypeChar>();
+		    result.AddRange(PrimitiveTypeCharImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

@@ -41,18 +41,6 @@ namespace Java_{
 				}
 				}
 		}
-		private OrderedSet<CatchClause> _catchClauses;
-		
-		public virtual OrderedSet<CatchClause> catchClauses
-		{
-			get {
-				if(_catchClauses==null){
-					_catchClauses = new OrderedSet<CatchClause>(this, Java_PackageImpl.TRYSTATEMENT_CATCHCLAUSES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRYSTATEMENT_CATCHCLAUSES);
-				}
-				return _catchClauses;
-			}
-		
-		}
 		private Block _finally;
 		public virtual Block finally_
 		{
@@ -78,6 +66,18 @@ namespace Java_{
 					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TRYSTATEMENT_FINALLY , value, value));
 				}
 				}
+		}
+		private OrderedSet<CatchClause> _catchClauses;
+		
+		public virtual OrderedSet<CatchClause> catchClauses
+		{
+			get {
+				if(_catchClauses==null){
+					_catchClauses = new OrderedSet<CatchClause>(this, Java_PackageImpl.TRYSTATEMENT_CATCHCLAUSES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRYSTATEMENT_CATCHCLAUSES);
+				}
+				return _catchClauses;
+			}
+		
 		}
 		
 		protected override EClass eStaticClass() {
@@ -114,14 +114,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.TRYSTATEMENT_COMMENTS:
-					return comments;
-				case Java_PackageImpl.TRYSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.TRYSTATEMENT_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.TRYSTATEMENT_BODY:
 					return body;
 				case Java_PackageImpl.TRYSTATEMENT_FINALLY:
@@ -135,16 +129,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.TRYSTATEMENT_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.TRYSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.TRYSTATEMENT_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.TRYSTATEMENT_BODY:
 					body = (Block) newValue;
 					return;
@@ -158,6 +142,21 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.TRYSTATEMENT_BODY:
+					return _body != null; //single != null;
+				case Java_PackageImpl.TRYSTATEMENT_FINALLY:
+					return _finally != null; //single != null;
+				case Java_PackageImpl.TRYSTATEMENT_CATCHCLAUSES:
+					return _catchClauses != null && !_catchClauses.isEmpty();
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

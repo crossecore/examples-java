@@ -15,7 +15,18 @@ namespace Java_{
 	public class ConstructorDeclarationImpl 
 	: ConstructorDeclarationBase
 	{
-		public static oclstdlib.Set<ConstructorDeclarationImpl> allInstances = new oclstdlib.Set<ConstructorDeclarationImpl>();
+		
+		public static oclstdlib.Set<ConstructorDeclarationImpl> allInstances_ = new oclstdlib.Set<ConstructorDeclarationImpl>();
+		
+	    public static oclstdlib.Set<ConstructorDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ConstructorDeclaration>();
+		    result.AddRange(ConstructorDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

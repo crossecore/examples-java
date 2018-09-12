@@ -15,7 +15,18 @@ namespace Java_{
 	public class ArrayTypeImpl 
 	: ArrayTypeBase
 	{
-		public static oclstdlib.Set<ArrayTypeImpl> allInstances = new oclstdlib.Set<ArrayTypeImpl>();
+		
+		public static oclstdlib.Set<ArrayTypeImpl> allInstances_ = new oclstdlib.Set<ArrayTypeImpl>();
+		
+	    public static oclstdlib.Set<ArrayType> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ArrayType>();
+		    result.AddRange(ArrayTypeImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

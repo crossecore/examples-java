@@ -120,20 +120,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_COMMENTS:
-					return comments;
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_ORIGINALCLASSFILE:
-					return originalClassFile;
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_NAME:
-					return name;
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_PROXY:
-					return proxy;
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_USAGESINIMPORTS:
-					return usagesInImports;
 				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER:
 					return member;
 				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE:
@@ -145,26 +133,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_NAME:
-					name = (string) newValue;
-					return;
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_PROXY:
-					proxy = (bool) newValue;
-					return;
-				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_USAGESINIMPORTS:
-					usagesInImports.Clear();
-					usagesInImports.AddRange(((List<EObject>)newValue)?.Cast<ImportDeclaration>());
-					return;
 				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER:
 					member = (AnnotationTypeMemberDeclaration) newValue;
 					return;
@@ -174,6 +142,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER:
+					return getMember() != null; //single, volatile
+				case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE:
+					return _value != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

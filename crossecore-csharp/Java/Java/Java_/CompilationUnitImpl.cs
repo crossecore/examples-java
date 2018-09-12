@@ -15,7 +15,18 @@ namespace Java_{
 	public class CompilationUnitImpl 
 	: CompilationUnitBase
 	{
-		public static oclstdlib.Set<CompilationUnitImpl> allInstances = new oclstdlib.Set<CompilationUnitImpl>();
+		
+		public static oclstdlib.Set<CompilationUnitImpl> allInstances_ = new oclstdlib.Set<CompilationUnitImpl>();
+		
+	    public static oclstdlib.Set<CompilationUnit> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<CompilationUnit>();
+		    result.AddRange(CompilationUnitImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

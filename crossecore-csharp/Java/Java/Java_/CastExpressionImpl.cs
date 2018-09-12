@@ -15,7 +15,18 @@ namespace Java_{
 	public class CastExpressionImpl 
 	: CastExpressionBase
 	{
-		public static oclstdlib.Set<CastExpressionImpl> allInstances = new oclstdlib.Set<CastExpressionImpl>();
+		
+		public static oclstdlib.Set<CastExpressionImpl> allInstances_ = new oclstdlib.Set<CastExpressionImpl>();
+		
+	    public static oclstdlib.Set<CastExpression> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<CastExpression>();
+		    result.AddRange(CastExpressionImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

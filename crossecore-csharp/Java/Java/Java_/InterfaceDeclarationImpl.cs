@@ -15,7 +15,19 @@ namespace Java_{
 	public class InterfaceDeclarationImpl 
 	: InterfaceDeclarationBase
 	{
-		public static oclstdlib.Set<InterfaceDeclarationImpl> allInstances = new oclstdlib.Set<InterfaceDeclarationImpl>();
+		
+		public static oclstdlib.Set<InterfaceDeclarationImpl> allInstances_ = new oclstdlib.Set<InterfaceDeclarationImpl>();
+		
+	    public static oclstdlib.Set<InterfaceDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<InterfaceDeclaration>();
+		    result.AddRange(InterfaceDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedInterfaceDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

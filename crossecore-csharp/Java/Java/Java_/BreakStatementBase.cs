@@ -80,14 +80,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.BREAKSTATEMENT_COMMENTS:
-					return comments;
-				case Java_PackageImpl.BREAKSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.BREAKSTATEMENT_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.BREAKSTATEMENT_LABEL:
 					return label;
 			}
@@ -97,22 +91,23 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.BREAKSTATEMENT_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.BREAKSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.BREAKSTATEMENT_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.BREAKSTATEMENT_LABEL:
 					label = (LabeledStatement) newValue;
 					return;
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.BREAKSTATEMENT_LABEL:
+					return getLabel() != null; //single, volatile
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

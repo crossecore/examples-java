@@ -15,6 +15,18 @@ namespace Java_{
 	public class ASTNodeBase 
 	:BasicEObjectImpl, ASTNode
 	{
+		private OrderedSet<Comment> _comments;
+		
+		public virtual OrderedSet<Comment> comments
+		{
+			get {
+				if(_comments==null){
+					_comments = new OrderedSet<Comment>(this, Java_PackageImpl.ASTNODE_COMMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASTNODE_COMMENTS);
+				}
+				return _comments;
+			}
+		
+		}
 		private CompilationUnit _originalCompilationUnit;
 		public virtual CompilationUnit originalCompilationUnit
 		{
@@ -44,18 +56,6 @@ namespace Java_{
 					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASTNODE_ORIGINALCLASSFILE , oldvalue, value));
 				}
 				}
-		}
-		private OrderedSet<Comment> _comments;
-		
-		public virtual OrderedSet<Comment> comments
-		{
-			get {
-				if(_comments==null){
-					_comments = new OrderedSet<Comment>(this, Java_PackageImpl.ASTNODE_COMMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASTNODE_COMMENTS);
-				}
-				return _comments;
-			}
-		
 		}
 		
 		protected override EClass eStaticClass() {
@@ -92,7 +92,7 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
 				case Java_PackageImpl.ASTNODE_COMMENTS:
 					return comments;
@@ -120,6 +120,21 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.ASTNODE_COMMENTS:
+					return _comments != null && !_comments.isEmpty();
+				case Java_PackageImpl.ASTNODE_ORIGINALCOMPILATIONUNIT:
+					return getOriginalCompilationUnit() != null; //single, volatile
+				case Java_PackageImpl.ASTNODE_ORIGINALCLASSFILE:
+					return getOriginalClassFile() != null; //single, volatile
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

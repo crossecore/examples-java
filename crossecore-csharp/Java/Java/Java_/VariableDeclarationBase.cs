@@ -23,18 +23,6 @@ namespace Java_{
 		}
 		set { _extraArrayDimensions = value; }
 		}
-		private Set<SingleVariableAccess> _usageInVariableAccess;
-		
-		public virtual Set<SingleVariableAccess> usageInVariableAccess
-		{
-			get {
-				if(_usageInVariableAccess==null){
-					_usageInVariableAccess = new Set<SingleVariableAccess>(this, Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS, Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE);
-				}
-				return _usageInVariableAccess;
-			}
-		
-		}
 		private Expression _initializer;
 		public virtual Expression initializer
 		{
@@ -60,6 +48,18 @@ namespace Java_{
 					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER , value, value));
 				}
 				}
+		}
+		private Set<SingleVariableAccess> _usageInVariableAccess;
+		
+		public virtual Set<SingleVariableAccess> usageInVariableAccess
+		{
+			get {
+				if(_usageInVariableAccess==null){
+					_usageInVariableAccess = new Set<SingleVariableAccess>(this, Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS, Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE);
+				}
+				return _usageInVariableAccess;
+			}
+		
 		}
 		
 		protected override EClass eStaticClass() {
@@ -97,20 +97,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.VARIABLEDECLARATION_COMMENTS:
-					return comments;
-				case Java_PackageImpl.VARIABLEDECLARATION_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.VARIABLEDECLARATION_ORIGINALCLASSFILE:
-					return originalClassFile;
-				case Java_PackageImpl.VARIABLEDECLARATION_NAME:
-					return name;
-				case Java_PackageImpl.VARIABLEDECLARATION_PROXY:
-					return proxy;
-				case Java_PackageImpl.VARIABLEDECLARATION_USAGESINIMPORTS:
-					return usagesInImports;
 				case Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS:
 					return extraArrayDimensions;
 				case Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER:
@@ -124,26 +112,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.VARIABLEDECLARATION_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.VARIABLEDECLARATION_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.VARIABLEDECLARATION_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
-				case Java_PackageImpl.VARIABLEDECLARATION_NAME:
-					name = (string) newValue;
-					return;
-				case Java_PackageImpl.VARIABLEDECLARATION_PROXY:
-					proxy = (bool) newValue;
-					return;
-				case Java_PackageImpl.VARIABLEDECLARATION_USAGESINIMPORTS:
-					usagesInImports.Clear();
-					usagesInImports.AddRange(((List<EObject>)newValue)?.Cast<ImportDeclaration>());
-					return;
 				case Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS:
 					extraArrayDimensions = (int) newValue;
 					return;
@@ -157,6 +125,21 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS:
+					return _extraArrayDimensions != EXTRAARRAYDIMENSIONS_EDEFAULT;
+				case Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER:
+					return _initializer != null; //single != null;
+				case Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS:
+					return getUsageInVariableAccess().isEmpty(); //many, volatile
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

@@ -23,32 +23,6 @@ namespace Java_{
 		}
 		set { _operator = value; }
 		}
-		private Expression _rightHandSide;
-		public virtual Expression rightHandSide
-		{
-			get {
-			
-				return _rightHandSide;
-			}
-			set {
-				if (value != _rightHandSide) {
-					NotificationChain msgs = null;
-					if (_rightHandSide != null){
-						msgs = ((InternalEObject)_rightHandSide).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE, null, msgs);
-					}
-					if (value != null){
-						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE, null, msgs);
-					}
-					msgs = basicSetRightHandSide(value, msgs);
-					if (msgs != null) {
-						msgs.dispatch();
-					}
-				}
-				else if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE , value, value));
-				}
-				}
-		}
 		private Expression _leftHandSide;
 		public virtual Expression leftHandSide
 		{
@@ -72,6 +46,32 @@ namespace Java_{
 				}
 				else if (eNotificationRequired()){
 					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE , value, value));
+				}
+				}
+		}
+		private Expression _rightHandSide;
+		public virtual Expression rightHandSide
+		{
+			get {
+			
+				return _rightHandSide;
+			}
+			set {
+				if (value != _rightHandSide) {
+					NotificationChain msgs = null;
+					if (_rightHandSide != null){
+						msgs = ((InternalEObject)_rightHandSide).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE, null, msgs);
+					}
+					if (value != null){
+						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE, null, msgs);
+					}
+					msgs = basicSetRightHandSide(value, msgs);
+					if (msgs != null) {
+						msgs.dispatch();
+					}
+				}
+				else if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE , value, value));
 				}
 				}
 		}
@@ -110,18 +110,12 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.ASSIGNMENT_COMMENTS:
-					return comments;
-				case Java_PackageImpl.ASSIGNMENT_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.ASSIGNMENT_ORIGINALCLASSFILE:
-					return originalClassFile;
-				case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
-					return leftHandSide;
 				case Java_PackageImpl.ASSIGNMENT_OPERATOR:
 					return operator_;
+				case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
+					return leftHandSide;
 				case Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE:
 					return rightHandSide;
 			}
@@ -131,21 +125,11 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.ASSIGNMENT_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.ASSIGNMENT_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.ASSIGNMENT_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
+				case Java_PackageImpl.ASSIGNMENT_OPERATOR:
+					operator_ = (AssignmentKind) newValue;
 					return;
 				case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
 					leftHandSide = (Expression) newValue;
-					return;
-				case Java_PackageImpl.ASSIGNMENT_OPERATOR:
-					operator_ = (AssignmentKind) newValue;
 					return;
 				case Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE:
 					rightHandSide = (Expression) newValue;
@@ -153,6 +137,21 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.ASSIGNMENT_OPERATOR:
+					return OPERATOR_EDEFAULT == null ? _operator != null : !OPERATOR_EDEFAULT.equals(_operator);
+				case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
+					return _leftHandSide != null; //single != null;
+				case Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE:
+					return _rightHandSide != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

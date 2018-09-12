@@ -15,15 +15,15 @@ namespace Java_{
 	public class PackageBase 
 	:NamedElementImpl, Package
 	{
-		private Set<PackageAccess> _usagesInPackageAccess;
+		private Set<AbstractTypeDeclaration> _ownedElements;
 		
-		public virtual Set<PackageAccess> usagesInPackageAccess
+		public virtual Set<AbstractTypeDeclaration> ownedElements
 		{
 			get {
-				if(_usagesInPackageAccess==null){
-					_usagesInPackageAccess = new Set<PackageAccess>(this, Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS, Java_PackageImpl.PACKAGEACCESS_PACKAGE);
+				if(_ownedElements==null){
+					_ownedElements = new Set<AbstractTypeDeclaration>(this, Java_PackageImpl.PACKAGE_OWNEDELEMENTS, Java_PackageImpl.ABSTRACTTYPEDECLARATION_PACKAGE);
 				}
-				return _usagesInPackageAccess;
+				return _ownedElements;
 			}
 		
 		}
@@ -65,18 +65,6 @@ namespace Java_{
 			}
 		
 		}
-		private Set<AbstractTypeDeclaration> _ownedElements;
-		
-		public virtual Set<AbstractTypeDeclaration> ownedElements
-		{
-			get {
-				if(_ownedElements==null){
-					_ownedElements = new Set<AbstractTypeDeclaration>(this, Java_PackageImpl.PACKAGE_OWNEDELEMENTS, Java_PackageImpl.ABSTRACTTYPEDECLARATION_PACKAGE);
-				}
-				return _ownedElements;
-			}
-		
-		}
 		public virtual Package package
 		{
 			get {
@@ -103,6 +91,18 @@ namespace Java_{
 				}
 				}
 		}
+		private Set<PackageAccess> _usagesInPackageAccess;
+		
+		public virtual Set<PackageAccess> usagesInPackageAccess
+		{
+			get {
+				if(_usagesInPackageAccess==null){
+					_usagesInPackageAccess = new Set<PackageAccess>(this, Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS, Java_PackageImpl.PACKAGEACCESS_PACKAGE);
+				}
+				return _usagesInPackageAccess;
+			}
+		
+		}
 		
 		protected override EClass eStaticClass() {
 			return Java_PackageImpl.Literals.PACKAGE;
@@ -110,65 +110,53 @@ namespace Java_{
 		
 		public override NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 			switch (featureID) {
-				case Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS:
-					return usagesInPackageAccess.basicAdd((PackageAccess)otherEnd, msgs);
-				case Java_PackageImpl.PACKAGE_MODEL:
-					if (eInternalContainer() != null) {
-						msgs = eBasicRemoveFromContainer(msgs);
-					}
-					return basicSetModel((Model)otherEnd, msgs);
-				case Java_PackageImpl.PACKAGE_OWNEDPACKAGES:
-					return ownedPackages.basicAdd((Package)otherEnd, msgs);
 				case Java_PackageImpl.PACKAGE_OWNEDELEMENTS:
 					return ownedElements.basicAdd((AbstractTypeDeclaration)otherEnd, msgs);
+				case Java_PackageImpl.PACKAGE_OWNEDPACKAGES:
+					return ownedPackages.basicAdd((Package)otherEnd, msgs);
 				case Java_PackageImpl.PACKAGE_PACKAGE:
 					if (eInternalContainer() != null) {
 						msgs = eBasicRemoveFromContainer(msgs);
 					}
 					return basicSetPackage((Package)otherEnd, msgs);
+				case Java_PackageImpl.PACKAGE_MODEL:
+					if (eInternalContainer() != null) {
+						msgs = eBasicRemoveFromContainer(msgs);
+					}
+					return basicSetModel((Model)otherEnd, msgs);
+				case Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS:
+					return usagesInPackageAccess.basicAdd((PackageAccess)otherEnd, msgs);
 			}
 			return base.eInverseAdd(otherEnd, featureID, msgs);
 		}
 		
 		public override NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 			switch (featureID) {
-				case Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS:
-					return usagesInPackageAccess.basicRemove((PackageAccess)otherEnd, msgs);
-				case Java_PackageImpl.PACKAGE_MODEL:
-					return basicSetModel(null, msgs);
-				case Java_PackageImpl.PACKAGE_OWNEDPACKAGES:
-					return ownedPackages.basicRemove((Package)otherEnd, msgs);
 				case Java_PackageImpl.PACKAGE_OWNEDELEMENTS:
 					return ownedElements.basicRemove((AbstractTypeDeclaration)otherEnd, msgs);
+				case Java_PackageImpl.PACKAGE_OWNEDPACKAGES:
+					return ownedPackages.basicRemove((Package)otherEnd, msgs);
 				case Java_PackageImpl.PACKAGE_PACKAGE:
 					return basicSetPackage(null, msgs);
+				case Java_PackageImpl.PACKAGE_MODEL:
+					return basicSetModel(null, msgs);
+				case Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS:
+					return usagesInPackageAccess.basicRemove((PackageAccess)otherEnd, msgs);
 			}
 			return base.eInverseRemove(otherEnd, featureID, msgs);
 		}
 		
-		public NotificationChain basicSetModel(Model newobj, NotificationChain msgs) {
-				msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.PACKAGE_MODEL, msgs);
-				return msgs;
-		}
 		public NotificationChain basicSetPackage(Package newobj, NotificationChain msgs) {
 				msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.PACKAGE_PACKAGE, msgs);
 				return msgs;
 		}
+		public NotificationChain basicSetModel(Model newobj, NotificationChain msgs) {
+				msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.PACKAGE_MODEL, msgs);
+				return msgs;
+		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.PACKAGE_COMMENTS:
-					return comments;
-				case Java_PackageImpl.PACKAGE_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.PACKAGE_ORIGINALCLASSFILE:
-					return originalClassFile;
-				case Java_PackageImpl.PACKAGE_NAME:
-					return name;
-				case Java_PackageImpl.PACKAGE_PROXY:
-					return proxy;
-				case Java_PackageImpl.PACKAGE_USAGESINIMPORTS:
-					return usagesInImports;
 				case Java_PackageImpl.PACKAGE_OWNEDELEMENTS:
 					return ownedElements;
 				case Java_PackageImpl.PACKAGE_MODEL:
@@ -186,26 +174,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.PACKAGE_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.PACKAGE_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.PACKAGE_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
-				case Java_PackageImpl.PACKAGE_NAME:
-					name = (string) newValue;
-					return;
-				case Java_PackageImpl.PACKAGE_PROXY:
-					proxy = (bool) newValue;
-					return;
-				case Java_PackageImpl.PACKAGE_USAGESINIMPORTS:
-					usagesInImports.Clear();
-					usagesInImports.AddRange(((List<EObject>)newValue)?.Cast<ImportDeclaration>());
-					return;
 				case Java_PackageImpl.PACKAGE_OWNEDELEMENTS:
 					ownedElements.Clear();
 					ownedElements.AddRange(((List<EObject>)newValue)?.Cast<AbstractTypeDeclaration>());
@@ -227,6 +195,25 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.PACKAGE_OWNEDELEMENTS:
+					return _ownedElements != null && !_ownedElements.isEmpty();
+				case Java_PackageImpl.PACKAGE_MODEL:
+					return getModel() != null; //single, volatile
+				case Java_PackageImpl.PACKAGE_OWNEDPACKAGES:
+					return _ownedPackages != null && !_ownedPackages.isEmpty();
+				case Java_PackageImpl.PACKAGE_PACKAGE:
+					return getPackage() != null; //single, volatile
+				case Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS:
+					return getUsagesInPackageAccess().isEmpty(); //many, volatile
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

@@ -15,7 +15,18 @@ namespace Java_{
 	public class ForStatementImpl 
 	: ForStatementBase
 	{
-		public static oclstdlib.Set<ForStatementImpl> allInstances = new oclstdlib.Set<ForStatementImpl>();
+		
+		public static oclstdlib.Set<ForStatementImpl> allInstances_ = new oclstdlib.Set<ForStatementImpl>();
+		
+	    public static oclstdlib.Set<ForStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ForStatement>();
+		    result.AddRange(ForStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

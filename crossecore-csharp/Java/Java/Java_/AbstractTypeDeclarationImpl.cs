@@ -15,7 +15,28 @@ namespace Java_{
 	public class AbstractTypeDeclarationImpl 
 	: AbstractTypeDeclarationBase
 	{
-		public static oclstdlib.Set<AbstractTypeDeclarationImpl> allInstances = new oclstdlib.Set<AbstractTypeDeclarationImpl>();
+		
+		public static oclstdlib.Set<AbstractTypeDeclarationImpl> allInstances_ = new oclstdlib.Set<AbstractTypeDeclarationImpl>();
+		
+	    public static oclstdlib.Set<AbstractTypeDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<AbstractTypeDeclaration>();
+		    result.AddRange(AbstractTypeDeclarationImpl.allInstances_);
+			result.AddRange(TypeDeclarationImpl.allInstances_);
+			result.AddRange(AnnotationTypeDeclarationImpl.allInstances_);
+			result.AddRange(ClassDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedAnnotationDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedClassDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedInterfaceDeclarationImpl.allInstances_);
+			result.AddRange(EnumDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedTypeDeclarationImpl.allInstances_);
+			result.AddRange(InterfaceDeclarationImpl.allInstances_);
+			result.AddRange(UnresolvedEnumDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

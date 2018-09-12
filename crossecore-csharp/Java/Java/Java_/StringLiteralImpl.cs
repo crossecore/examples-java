@@ -15,7 +15,18 @@ namespace Java_{
 	public class StringLiteralImpl 
 	: StringLiteralBase
 	{
-		public static oclstdlib.Set<StringLiteralImpl> allInstances = new oclstdlib.Set<StringLiteralImpl>();
+		
+		public static oclstdlib.Set<StringLiteralImpl> allInstances_ = new oclstdlib.Set<StringLiteralImpl>();
+		
+	    public static oclstdlib.Set<StringLiteral> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<StringLiteral>();
+		    result.AddRange(StringLiteralImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

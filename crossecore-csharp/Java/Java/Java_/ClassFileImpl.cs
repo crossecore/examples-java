@@ -15,7 +15,18 @@ namespace Java_{
 	public class ClassFileImpl 
 	: ClassFileBase
 	{
-		public static oclstdlib.Set<ClassFileImpl> allInstances = new oclstdlib.Set<ClassFileImpl>();
+		
+		public static oclstdlib.Set<ClassFileImpl> allInstances_ = new oclstdlib.Set<ClassFileImpl>();
+		
+	    public static oclstdlib.Set<ClassFile> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ClassFile>();
+		    result.AddRange(ClassFileImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

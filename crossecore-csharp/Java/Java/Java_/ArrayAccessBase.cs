@@ -102,14 +102,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.ARRAYACCESS_COMMENTS:
-					return comments;
-				case Java_PackageImpl.ARRAYACCESS_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.ARRAYACCESS_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.ARRAYACCESS_ARRAY:
 					return array;
 				case Java_PackageImpl.ARRAYACCESS_INDEX:
@@ -121,16 +115,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.ARRAYACCESS_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.ARRAYACCESS_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.ARRAYACCESS_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.ARRAYACCESS_ARRAY:
 					array = (Expression) newValue;
 					return;
@@ -140,6 +124,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.ARRAYACCESS_ARRAY:
+					return _array != null; //single != null;
+				case Java_PackageImpl.ARRAYACCESS_INDEX:
+					return _index != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

@@ -15,7 +15,19 @@ namespace Java_{
 	public class VariableDeclarationFragmentImpl 
 	: VariableDeclarationFragmentBase
 	{
-		public static oclstdlib.Set<VariableDeclarationFragmentImpl> allInstances = new oclstdlib.Set<VariableDeclarationFragmentImpl>();
+		
+		public static oclstdlib.Set<VariableDeclarationFragmentImpl> allInstances_ = new oclstdlib.Set<VariableDeclarationFragmentImpl>();
+		
+	    public static oclstdlib.Set<VariableDeclarationFragment> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<VariableDeclarationFragment>();
+		    result.AddRange(VariableDeclarationFragmentImpl.allInstances_);
+			result.AddRange(UnresolvedVariableDeclarationFragmentImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

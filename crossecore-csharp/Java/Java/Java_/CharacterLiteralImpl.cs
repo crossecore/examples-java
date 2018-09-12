@@ -15,7 +15,18 @@ namespace Java_{
 	public class CharacterLiteralImpl 
 	: CharacterLiteralBase
 	{
-		public static oclstdlib.Set<CharacterLiteralImpl> allInstances = new oclstdlib.Set<CharacterLiteralImpl>();
+		
+		public static oclstdlib.Set<CharacterLiteralImpl> allInstances_ = new oclstdlib.Set<CharacterLiteralImpl>();
+		
+	    public static oclstdlib.Set<CharacterLiteral> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<CharacterLiteral>();
+		    result.AddRange(CharacterLiteralImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

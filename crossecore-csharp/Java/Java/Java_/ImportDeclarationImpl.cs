@@ -15,7 +15,18 @@ namespace Java_{
 	public class ImportDeclarationImpl 
 	: ImportDeclarationBase
 	{
-		public static oclstdlib.Set<ImportDeclarationImpl> allInstances = new oclstdlib.Set<ImportDeclarationImpl>();
+		
+		public static oclstdlib.Set<ImportDeclarationImpl> allInstances_ = new oclstdlib.Set<ImportDeclarationImpl>();
+		
+	    public static oclstdlib.Set<ImportDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ImportDeclaration>();
+		    result.AddRange(ImportDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

@@ -1,17 +1,34 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Java_;
+using Ecore.Xmi;
 
 namespace JavaTest
 {
+
+    
+
     [TestClass]
     public class OCLBenchmark
     {
+        [TestInitialize]
+        public void setup()
+        {
+            Java_PackageImpl.init();
+
+            var resource = new XmiResource(Java_PackageImpl.eINSTANCE, Java_FactoryImpl.eINSTANCE);
+
+            var model = resource.Load("C:/Users/Simon/Data/git2/examples-java/crossecore-java/resources/org.eclipse.gmt.modisco.java.kyanos.xmi") as Model;
+
+
+
+        }
+
         [TestMethod]
         public void thrownExceptions()
         {
 
-            ClassDeclarationImpl.allInstances
+            ClassDeclarationImpl.allInstances()
                 .collect<BodyDeclaration>(cd => cd.bodyDeclarations)
                 .select(each => each is MethodDeclaration)
                 .collect<TypeAccess>(each => (each as MethodDeclaration).thrownExceptions)
@@ -48,7 +65,24 @@ namespace JavaTest
         [TestMethod]
         public void invisibleMethods()
         {
-            ClassDeclarationImpl.allInstances
+            var result1 = ClassDeclarationImpl.allInstances();
+
+            var result2 = ClassDeclarationImpl.allInstances()
+                .collect<BodyDeclaration>(cd => cd.bodyDeclarations);
+
+            var result3 = ClassDeclarationImpl.allInstances()
+                .collect<BodyDeclaration>(cd => cd.bodyDeclarations)
+                .select(each => each is MethodDeclaration);
+
+            var result4 = ClassDeclarationImpl.allInstances()
+                .collect<BodyDeclaration>(cd => cd.bodyDeclarations)
+                .select(each => each is MethodDeclaration)
+                .select(each =>
+                !(each.modifier == null)
+                && !(each.modifier.visibility == null)
+                && (each.modifier.visibility == VisibilityKind.PRIVATE || each.modifier.visibility == VisibilityKind.PROTECTED));
+
+            var result = ClassDeclarationImpl.allInstances()
                 .collect<BodyDeclaration>(cd => cd.bodyDeclarations)
 		        .select(each => each is MethodDeclaration)
 		        .select(each => 
@@ -57,12 +91,14 @@ namespace JavaTest
 			    && (each.modifier.visibility == VisibilityKind.PRIVATE || each.modifier.visibility == VisibilityKind.PROTECTED))
 		        .asSequence();
 
+            
+
         }
 
         [TestMethod]
         public void grabats09()
         {
-            TypeDeclarationImpl.allInstances.
+            TypeDeclarationImpl.allInstances().
                 select(each => each.bodyDeclarations.
                 exists(bd=>
                 bd is MethodDeclaration

@@ -15,7 +15,18 @@ namespace Java_{
 	public class PackageImpl 
 	: PackageBase
 	{
-		public static oclstdlib.Set<PackageImpl> allInstances = new oclstdlib.Set<PackageImpl>();
+		
+		public static oclstdlib.Set<PackageImpl> allInstances_ = new oclstdlib.Set<PackageImpl>();
+		
+	    public static oclstdlib.Set<Package> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<Package>();
+		    result.AddRange(PackageImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

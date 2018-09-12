@@ -15,7 +15,18 @@ namespace Java_{
 	public class ExpressionStatementImpl 
 	: ExpressionStatementBase
 	{
-		public static oclstdlib.Set<ExpressionStatementImpl> allInstances = new oclstdlib.Set<ExpressionStatementImpl>();
+		
+		public static oclstdlib.Set<ExpressionStatementImpl> allInstances_ = new oclstdlib.Set<ExpressionStatementImpl>();
+		
+	    public static oclstdlib.Set<ExpressionStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ExpressionStatement>();
+		    result.AddRange(ExpressionStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

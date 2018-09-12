@@ -73,20 +73,6 @@ namespace Java_{
 		}
 		
 		
-		public NotificationChain basicSetField(SingleVariableAccess newobj, NotificationChain msgs) {
-			var oldobj = _field;
-			_field = newobj;
-			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.FIELDACCESS_FIELD, oldobj, newobj);
-				if (msgs == null){
-					msgs = notification;
-				}
-				else{
-					msgs.add(notification);
-				}
-			}
-			return msgs;
-		}
 		public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
 			var oldobj = _expression;
 			_expression = newobj;
@@ -101,15 +87,23 @@ namespace Java_{
 			}
 			return msgs;
 		}
+		public NotificationChain basicSetField(SingleVariableAccess newobj, NotificationChain msgs) {
+			var oldobj = _field;
+			_field = newobj;
+			if (eNotificationRequired()) {
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.FIELDACCESS_FIELD, oldobj, newobj);
+				if (msgs == null){
+					msgs = notification;
+				}
+				else{
+					msgs.add(notification);
+				}
+			}
+			return msgs;
+		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.FIELDACCESS_COMMENTS:
-					return comments;
-				case Java_PackageImpl.FIELDACCESS_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.FIELDACCESS_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.FIELDACCESS_FIELD:
 					return field;
 				case Java_PackageImpl.FIELDACCESS_EXPRESSION:
@@ -121,16 +115,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.FIELDACCESS_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.FIELDACCESS_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.FIELDACCESS_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.FIELDACCESS_FIELD:
 					field = (SingleVariableAccess) newValue;
 					return;
@@ -140,6 +124,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.FIELDACCESS_FIELD:
+					return _field != null; //single != null;
+				case Java_PackageImpl.FIELDACCESS_EXPRESSION:
+					return _expression != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

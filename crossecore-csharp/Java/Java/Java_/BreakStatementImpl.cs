@@ -15,7 +15,18 @@ namespace Java_{
 	public class BreakStatementImpl 
 	: BreakStatementBase
 	{
-		public static oclstdlib.Set<BreakStatementImpl> allInstances = new oclstdlib.Set<BreakStatementImpl>();
+		
+		public static oclstdlib.Set<BreakStatementImpl> allInstances_ = new oclstdlib.Set<BreakStatementImpl>();
+		
+	    public static oclstdlib.Set<BreakStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<BreakStatement>();
+		    result.AddRange(BreakStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

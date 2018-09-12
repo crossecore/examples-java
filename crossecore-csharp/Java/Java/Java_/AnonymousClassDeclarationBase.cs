@@ -15,6 +15,18 @@ namespace Java_{
 	public class AnonymousClassDeclarationBase 
 	:ASTNodeImpl, AnonymousClassDeclaration
 	{
+		private OrderedSet<BodyDeclaration> _bodyDeclarations;
+		
+		public virtual OrderedSet<BodyDeclaration> bodyDeclarations
+		{
+			get {
+				if(_bodyDeclarations==null){
+					_bodyDeclarations = new OrderedSet<BodyDeclaration>(this, Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS, Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER);
+				}
+				return _bodyDeclarations;
+			}
+		
+		}
 		public virtual ClassInstanceCreation classInstanceCreation
 		{
 			get {
@@ -40,18 +52,6 @@ namespace Java_{
 					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ANONYMOUSCLASSDECLARATION_CLASSINSTANCECREATION , value, value));
 				}
 				}
-		}
-		private OrderedSet<BodyDeclaration> _bodyDeclarations;
-		
-		public virtual OrderedSet<BodyDeclaration> bodyDeclarations
-		{
-			get {
-				if(_bodyDeclarations==null){
-					_bodyDeclarations = new OrderedSet<BodyDeclaration>(this, Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS, Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER);
-				}
-				return _bodyDeclarations;
-			}
-		
 		}
 		
 		protected override EClass eStaticClass() {
@@ -86,14 +86,8 @@ namespace Java_{
 				return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_COMMENTS:
-					return comments;
-				case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS:
 					return bodyDeclarations;
 				case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_CLASSINSTANCECREATION:
@@ -105,16 +99,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS:
 					bodyDeclarations.Clear();
 					bodyDeclarations.AddRange(((List<EObject>)newValue)?.Cast<BodyDeclaration>());
@@ -125,6 +109,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS:
+					return _bodyDeclarations != null && !_bodyDeclarations.isEmpty();
+				case Java_PackageImpl.ANONYMOUSCLASSDECLARATION_CLASSINSTANCECREATION:
+					return getClassInstanceCreation() != null; //single, volatile
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

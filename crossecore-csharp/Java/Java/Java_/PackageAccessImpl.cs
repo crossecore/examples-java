@@ -15,7 +15,18 @@ namespace Java_{
 	public class PackageAccessImpl 
 	: PackageAccessBase
 	{
-		public static oclstdlib.Set<PackageAccessImpl> allInstances = new oclstdlib.Set<PackageAccessImpl>();
+		
+		public static oclstdlib.Set<PackageAccessImpl> allInstances_ = new oclstdlib.Set<PackageAccessImpl>();
+		
+	    public static oclstdlib.Set<PackageAccess> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PackageAccess>();
+		    result.AddRange(PackageAccessImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

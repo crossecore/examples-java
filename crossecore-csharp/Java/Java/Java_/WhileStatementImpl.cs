@@ -15,7 +15,18 @@ namespace Java_{
 	public class WhileStatementImpl 
 	: WhileStatementBase
 	{
-		public static oclstdlib.Set<WhileStatementImpl> allInstances = new oclstdlib.Set<WhileStatementImpl>();
+		
+		public static oclstdlib.Set<WhileStatementImpl> allInstances_ = new oclstdlib.Set<WhileStatementImpl>();
+		
+	    public static oclstdlib.Set<WhileStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<WhileStatement>();
+		    result.AddRange(WhileStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

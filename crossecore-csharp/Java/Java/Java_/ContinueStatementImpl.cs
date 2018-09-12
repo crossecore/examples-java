@@ -15,7 +15,18 @@ namespace Java_{
 	public class ContinueStatementImpl 
 	: ContinueStatementBase
 	{
-		public static oclstdlib.Set<ContinueStatementImpl> allInstances = new oclstdlib.Set<ContinueStatementImpl>();
+		
+		public static oclstdlib.Set<ContinueStatementImpl> allInstances_ = new oclstdlib.Set<ContinueStatementImpl>();
+		
+	    public static oclstdlib.Set<ContinueStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ContinueStatement>();
+		    result.AddRange(ContinueStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

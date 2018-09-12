@@ -15,7 +15,18 @@ namespace Java_{
 	public class PrimitiveTypeByteImpl 
 	: PrimitiveTypeByteBase
 	{
-		public static oclstdlib.Set<PrimitiveTypeByteImpl> allInstances = new oclstdlib.Set<PrimitiveTypeByteImpl>();
+		
+		public static oclstdlib.Set<PrimitiveTypeByteImpl> allInstances_ = new oclstdlib.Set<PrimitiveTypeByteImpl>();
+		
+	    public static oclstdlib.Set<PrimitiveTypeByte> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PrimitiveTypeByte>();
+		    result.AddRange(PrimitiveTypeByteImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

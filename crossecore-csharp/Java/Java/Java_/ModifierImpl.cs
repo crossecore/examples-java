@@ -15,7 +15,18 @@ namespace Java_{
 	public class ModifierImpl 
 	: ModifierBase
 	{
-		public static oclstdlib.Set<ModifierImpl> allInstances = new oclstdlib.Set<ModifierImpl>();
+		
+		public static oclstdlib.Set<ModifierImpl> allInstances_ = new oclstdlib.Set<ModifierImpl>();
+		
+	    public static oclstdlib.Set<Modifier> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<Modifier>();
+		    result.AddRange(ModifierImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

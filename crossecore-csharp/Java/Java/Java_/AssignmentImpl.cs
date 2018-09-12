@@ -15,7 +15,18 @@ namespace Java_{
 	public class AssignmentImpl 
 	: AssignmentBase
 	{
-		public static oclstdlib.Set<AssignmentImpl> allInstances = new oclstdlib.Set<AssignmentImpl>();
+		
+		public static oclstdlib.Set<AssignmentImpl> allInstances_ = new oclstdlib.Set<AssignmentImpl>();
+		
+	    public static oclstdlib.Set<Assignment> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<Assignment>();
+		    result.AddRange(AssignmentImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

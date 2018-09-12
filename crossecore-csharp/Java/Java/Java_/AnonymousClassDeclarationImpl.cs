@@ -15,7 +15,18 @@ namespace Java_{
 	public class AnonymousClassDeclarationImpl 
 	: AnonymousClassDeclarationBase
 	{
-		public static oclstdlib.Set<AnonymousClassDeclarationImpl> allInstances = new oclstdlib.Set<AnonymousClassDeclarationImpl>();
+		
+		public static oclstdlib.Set<AnonymousClassDeclarationImpl> allInstances_ = new oclstdlib.Set<AnonymousClassDeclarationImpl>();
+		
+	    public static oclstdlib.Set<AnonymousClassDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<AnonymousClassDeclaration>();
+		    result.AddRange(AnonymousClassDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

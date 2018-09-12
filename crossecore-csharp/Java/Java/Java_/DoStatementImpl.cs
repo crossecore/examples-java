@@ -15,7 +15,18 @@ namespace Java_{
 	public class DoStatementImpl 
 	: DoStatementBase
 	{
-		public static oclstdlib.Set<DoStatementImpl> allInstances = new oclstdlib.Set<DoStatementImpl>();
+		
+		public static oclstdlib.Set<DoStatementImpl> allInstances_ = new oclstdlib.Set<DoStatementImpl>();
+		
+	    public static oclstdlib.Set<DoStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<DoStatement>();
+		    result.AddRange(DoStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

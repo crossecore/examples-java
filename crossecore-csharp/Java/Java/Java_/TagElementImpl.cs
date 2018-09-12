@@ -15,7 +15,18 @@ namespace Java_{
 	public class TagElementImpl 
 	: TagElementBase
 	{
-		public static oclstdlib.Set<TagElementImpl> allInstances = new oclstdlib.Set<TagElementImpl>();
+		
+		public static oclstdlib.Set<TagElementImpl> allInstances_ = new oclstdlib.Set<TagElementImpl>();
+		
+	    public static oclstdlib.Set<TagElement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<TagElement>();
+		    result.AddRange(TagElementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

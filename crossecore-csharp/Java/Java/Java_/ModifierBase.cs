@@ -15,37 +15,15 @@ namespace Java_{
 	public class ModifierBase 
 	:ASTNodeImpl, Modifier
 	{
-		private bool _native = false;
-		public virtual bool native
-		{
-		get { 
-			return _native;
-		}
-		set { _native = value; }
-		}
-		private bool _static = false;
-		public virtual bool static_
-		{
-		get { 
-			return _static;
-		}
-		set { _static = value; }
-		}
 		private VisibilityKind _visibility = VisibilityKind.NONE;
 		public virtual VisibilityKind visibility
 		{
 		get { 
 			return _visibility;
 		}
-		set { _visibility = value; }
-		}
-		private bool _volatile = false;
-		public virtual bool volatile_
-		{
-		get { 
-			return _volatile;
-		}
-		set { _volatile = value; }
+		set {
+                _visibility = value;
+            }
 		}
 		private InheritanceKind _inheritance = InheritanceKind.NONE;
 		public virtual InheritanceKind inheritance
@@ -55,13 +33,13 @@ namespace Java_{
 		}
 		set { _inheritance = value; }
 		}
-		private bool _strictfp = false;
-		public virtual bool strictfp
+		private bool _static = false;
+		public virtual bool static_
 		{
 		get { 
-			return _strictfp;
+			return _static;
 		}
-		set { _strictfp = value; }
+		set { _static = value; }
 		}
 		private bool _transient = false;
 		public virtual bool transient
@@ -71,6 +49,30 @@ namespace Java_{
 		}
 		set { _transient = value; }
 		}
+		private bool _volatile = false;
+		public virtual bool volatile_
+		{
+		get { 
+			return _volatile;
+		}
+		set { _volatile = value; }
+		}
+		private bool _native = false;
+		public virtual bool native
+		{
+		get { 
+			return _native;
+		}
+		set { _native = value; }
+		}
+		private bool _strictfp = false;
+		public virtual bool strictfp
+		{
+		get { 
+			return _strictfp;
+		}
+		set { _strictfp = value; }
+		}
 		private bool _synchronized = false;
 		public virtual bool synchronized
 		{
@@ -78,32 +80,6 @@ namespace Java_{
 			return _synchronized;
 		}
 		set { _synchronized = value; }
-		}
-		public virtual VariableDeclarationStatement variableDeclarationStatement
-		{
-			get {
-			
-				if (eContainerFeatureID() != Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT) return default(VariableDeclarationStatement);
-				return (VariableDeclarationStatement)eInternalContainer();
-			}
-			set {
-				if (value != eInternalContainer()) {
-					NotificationChain msgs = null;
-					if (eInternalContainer() != null){
-						msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER, typeof(Modifier), msgs);
-					}
-					if (value != null){
-						msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER, typeof(Modifier), msgs);
-					}
-					msgs = basicSetVariableDeclarationStatement(value, msgs);
-					if (msgs != null) {
-						msgs.dispatch();
-					}
-				}
-				else if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT , value, value));
-				}
-				}
 		}
 		public virtual BodyDeclaration bodyDeclaration
 		{
@@ -157,6 +133,32 @@ namespace Java_{
 				}
 				}
 		}
+		public virtual VariableDeclarationStatement variableDeclarationStatement
+		{
+			get {
+			
+				if (eContainerFeatureID() != Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT) return default(VariableDeclarationStatement);
+				return (VariableDeclarationStatement)eInternalContainer();
+			}
+			set {
+				if (value != eInternalContainer()) {
+					NotificationChain msgs = null;
+					if (eInternalContainer() != null){
+						msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER, typeof(Modifier), msgs);
+					}
+					if (value != null){
+						msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.VARIABLEDECLARATIONSTATEMENT_MODIFIER, typeof(Modifier), msgs);
+					}
+					msgs = basicSetVariableDeclarationStatement(value, msgs);
+					if (msgs != null) {
+						msgs.dispatch();
+					}
+				}
+				else if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT , value, value));
+				}
+				}
+		}
 		public virtual VariableDeclarationExpression variableDeclarationExpression
 		{
 			get {
@@ -190,16 +192,16 @@ namespace Java_{
 		
 		public override NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 			switch (featureID) {
-				case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT:
-					if (eInternalContainer() != null) {
-						msgs = eBasicRemoveFromContainer(msgs);
-					}
-					return basicSetVariableDeclarationStatement((VariableDeclarationStatement)otherEnd, msgs);
 				case Java_PackageImpl.MODIFIER_BODYDECLARATION:
 					if (eInternalContainer() != null) {
 						msgs = eBasicRemoveFromContainer(msgs);
 					}
 					return basicSetBodyDeclaration((BodyDeclaration)otherEnd, msgs);
+				case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT:
+					if (eInternalContainer() != null) {
+						msgs = eBasicRemoveFromContainer(msgs);
+					}
+					return basicSetVariableDeclarationStatement((VariableDeclarationStatement)otherEnd, msgs);
 				case Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION:
 					if (eInternalContainer() != null) {
 						msgs = eBasicRemoveFromContainer(msgs);
@@ -216,10 +218,10 @@ namespace Java_{
 		
 		public override NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 			switch (featureID) {
-				case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT:
-					return basicSetVariableDeclarationStatement(null, msgs);
 				case Java_PackageImpl.MODIFIER_BODYDECLARATION:
 					return basicSetBodyDeclaration(null, msgs);
+				case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT:
+					return basicSetVariableDeclarationStatement(null, msgs);
 				case Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION:
 					return basicSetSingleVariableDeclaration(null, msgs);
 				case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONEXPRESSION:
@@ -228,12 +230,12 @@ namespace Java_{
 			return base.eInverseRemove(otherEnd, featureID, msgs);
 		}
 		
-		public NotificationChain basicSetVariableDeclarationStatement(VariableDeclarationStatement newobj, NotificationChain msgs) {
-				msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT, msgs);
-				return msgs;
-		}
 		public NotificationChain basicSetBodyDeclaration(BodyDeclaration newobj, NotificationChain msgs) {
 				msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.MODIFIER_BODYDECLARATION, msgs);
+				return msgs;
+		}
+		public NotificationChain basicSetVariableDeclarationStatement(VariableDeclarationStatement newobj, NotificationChain msgs) {
+				msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT, msgs);
 				return msgs;
 		}
 		public NotificationChain basicSetSingleVariableDeclaration(SingleVariableDeclaration newobj, NotificationChain msgs) {
@@ -245,14 +247,8 @@ namespace Java_{
 				return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.MODIFIER_COMMENTS:
-					return comments;
-				case Java_PackageImpl.MODIFIER_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.MODIFIER_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.MODIFIER_VISIBILITY:
 					return visibility;
 				case Java_PackageImpl.MODIFIER_INHERITANCE:
@@ -284,16 +280,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.MODIFIER_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.MODIFIER_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.MODIFIER_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.MODIFIER_VISIBILITY:
 					visibility = (VisibilityKind) newValue;
 					return;
@@ -333,6 +319,39 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.MODIFIER_VISIBILITY:
+					return VISIBILITY_EDEFAULT == null ? _visibility != null : !VISIBILITY_EDEFAULT.equals(_visibility);
+				case Java_PackageImpl.MODIFIER_INHERITANCE:
+					return INHERITANCE_EDEFAULT == null ? _inheritance != null : !INHERITANCE_EDEFAULT.equals(_inheritance);
+				case Java_PackageImpl.MODIFIER_STATIC:
+					return _static != STATIC_EDEFAULT;
+				case Java_PackageImpl.MODIFIER_TRANSIENT:
+					return _transient != TRANSIENT_EDEFAULT;
+				case Java_PackageImpl.MODIFIER_VOLATILE:
+					return _volatile != VOLATILE_EDEFAULT;
+				case Java_PackageImpl.MODIFIER_NATIVE:
+					return _native != NATIVE_EDEFAULT;
+				case Java_PackageImpl.MODIFIER_STRICTFP:
+					return _strictfp != STRICTFP_EDEFAULT;
+				case Java_PackageImpl.MODIFIER_SYNCHRONIZED:
+					return _synchronized != SYNCHRONIZED_EDEFAULT;
+				case Java_PackageImpl.MODIFIER_BODYDECLARATION:
+					return getBodyDeclaration() != null; //single, volatile
+				case Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION:
+					return getSingleVariableDeclaration() != null; //single, volatile
+				case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONSTATEMENT:
+					return getVariableDeclarationStatement() != null; //single, volatile
+				case Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONEXPRESSION:
+					return getVariableDeclarationExpression() != null; //single, volatile
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

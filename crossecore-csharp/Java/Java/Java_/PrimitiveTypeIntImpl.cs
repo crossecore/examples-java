@@ -15,7 +15,18 @@ namespace Java_{
 	public class PrimitiveTypeIntImpl 
 	: PrimitiveTypeIntBase
 	{
-		public static oclstdlib.Set<PrimitiveTypeIntImpl> allInstances = new oclstdlib.Set<PrimitiveTypeIntImpl>();
+		
+		public static oclstdlib.Set<PrimitiveTypeIntImpl> allInstances_ = new oclstdlib.Set<PrimitiveTypeIntImpl>();
+		
+	    public static oclstdlib.Set<PrimitiveTypeInt> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PrimitiveTypeInt>();
+		    result.AddRange(PrimitiveTypeIntImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

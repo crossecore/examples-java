@@ -15,7 +15,18 @@ namespace Java_{
 	public class ManifestEntryImpl 
 	: ManifestEntryBase
 	{
-		public static oclstdlib.Set<ManifestEntryImpl> allInstances = new oclstdlib.Set<ManifestEntryImpl>();
+		
+		public static oclstdlib.Set<ManifestEntryImpl> allInstances_ = new oclstdlib.Set<ManifestEntryImpl>();
+		
+	    public static oclstdlib.Set<ManifestEntry> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ManifestEntry>();
+		    result.AddRange(ManifestEntryImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

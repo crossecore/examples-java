@@ -15,6 +15,21 @@ namespace Java_{
 	public class MemberRefBase 
 	:ASTNodeImpl, MemberRef
 	{
+		private NamedElement _member;
+		public virtual NamedElement member
+		{
+			get {
+			
+				return _member;
+			}
+			set {
+				var oldvalue = _member;
+				_member = value;
+				if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.MEMBERREF_MEMBER , oldvalue, value));
+				}
+				}
+		}
 		private TypeAccess _qualifier;
 		public virtual TypeAccess qualifier
 		{
@@ -38,21 +53,6 @@ namespace Java_{
 				}
 				else if (eNotificationRequired()){
 					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.MEMBERREF_QUALIFIER , value, value));
-				}
-				}
-		}
-		private NamedElement _member;
-		public virtual NamedElement member
-		{
-			get {
-			
-				return _member;
-			}
-			set {
-				var oldvalue = _member;
-				_member = value;
-				if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.MEMBERREF_MEMBER , oldvalue, value));
 				}
 				}
 		}
@@ -91,14 +91,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.MEMBERREF_COMMENTS:
-					return comments;
-				case Java_PackageImpl.MEMBERREF_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.MEMBERREF_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.MEMBERREF_MEMBER:
 					return member;
 				case Java_PackageImpl.MEMBERREF_QUALIFIER:
@@ -110,16 +104,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.MEMBERREF_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.MEMBERREF_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.MEMBERREF_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.MEMBERREF_MEMBER:
 					member = (NamedElement) newValue;
 					return;
@@ -129,6 +113,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.MEMBERREF_MEMBER:
+					return getMember() != null; //single, volatile
+				case Java_PackageImpl.MEMBERREF_QUALIFIER:
+					return _qualifier != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

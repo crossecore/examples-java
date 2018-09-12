@@ -15,29 +15,29 @@ namespace Java_{
 	public class EnhancedForStatementBase 
 	:StatementImpl, EnhancedForStatement
 	{
-		private SingleVariableDeclaration _parameter;
-		public virtual SingleVariableDeclaration parameter
+		private Statement _body;
+		public virtual Statement body
 		{
 			get {
 			
-				return _parameter;
+				return _body;
 			}
 			set {
-				if (value != _parameter) {
+				if (value != _body) {
 					NotificationChain msgs = null;
-					if (_parameter != null){
-						msgs = ((InternalEObject)_parameter).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, typeof(EnhancedForStatement), msgs);
+					if (_body != null){
+						msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY, null, msgs);
 					}
 					if (value != null){
-						msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, typeof(EnhancedForStatement), msgs);
+						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY, null, msgs);
 					}
-					msgs = basicSetParameter(value, msgs);
+					msgs = basicSetBody(value, msgs);
 					if (msgs != null) {
 						msgs.dispatch();
 					}
 				}
 				else if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER , value, value));
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY , value, value));
 				}
 				}
 		}
@@ -67,29 +67,29 @@ namespace Java_{
 				}
 				}
 		}
-		private Statement _body;
-		public virtual Statement body
+		private SingleVariableDeclaration _parameter;
+		public virtual SingleVariableDeclaration parameter
 		{
 			get {
 			
-				return _body;
+				return _parameter;
 			}
 			set {
-				if (value != _body) {
+				if (value != _parameter) {
 					NotificationChain msgs = null;
-					if (_body != null){
-						msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY, null, msgs);
+					if (_parameter != null){
+						msgs = ((InternalEObject)_parameter).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, typeof(EnhancedForStatement), msgs);
 					}
 					if (value != null){
-						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY, null, msgs);
+						msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, typeof(EnhancedForStatement), msgs);
 					}
-					msgs = basicSetBody(value, msgs);
+					msgs = basicSetParameter(value, msgs);
 					if (msgs != null) {
 						msgs.dispatch();
 					}
 				}
 				else if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY , value, value));
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER , value, value));
 				}
 				}
 		}
@@ -117,11 +117,11 @@ namespace Java_{
 			return base.eInverseRemove(otherEnd, featureID, msgs);
 		}
 		
-		public NotificationChain basicSetParameter(SingleVariableDeclaration newobj, NotificationChain msgs) {
-			var oldobj = _parameter;
-			_parameter = newobj;
+		public NotificationChain basicSetBody(Statement newobj, NotificationChain msgs) {
+			var oldobj = _body;
+			_body = newobj;
 			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, oldobj, newobj);
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY, oldobj, newobj);
 				if (msgs == null){
 					msgs = notification;
 				}
@@ -145,11 +145,11 @@ namespace Java_{
 			}
 			return msgs;
 		}
-		public NotificationChain basicSetBody(Statement newobj, NotificationChain msgs) {
-			var oldobj = _body;
-			_body = newobj;
+		public NotificationChain basicSetParameter(SingleVariableDeclaration newobj, NotificationChain msgs) {
+			var oldobj = _parameter;
+			_parameter = newobj;
 			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY, oldobj, newobj);
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, oldobj, newobj);
 				if (msgs == null){
 					msgs = notification;
 				}
@@ -160,14 +160,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.ENHANCEDFORSTATEMENT_COMMENTS:
-					return comments;
-				case Java_PackageImpl.ENHANCEDFORSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.ENHANCEDFORSTATEMENT_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY:
 					return body;
 				case Java_PackageImpl.ENHANCEDFORSTATEMENT_EXPRESSION:
@@ -181,16 +175,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.ENHANCEDFORSTATEMENT_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.ENHANCEDFORSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.ENHANCEDFORSTATEMENT_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY:
 					body = (Statement) newValue;
 					return;
@@ -203,6 +187,21 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY:
+					return _body != null; //single != null;
+				case Java_PackageImpl.ENHANCEDFORSTATEMENT_EXPRESSION:
+					return _expression != null; //single != null;
+				case Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER:
+					return _parameter != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

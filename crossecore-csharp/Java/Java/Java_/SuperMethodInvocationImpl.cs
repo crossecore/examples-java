@@ -15,7 +15,18 @@ namespace Java_{
 	public class SuperMethodInvocationImpl 
 	: SuperMethodInvocationBase
 	{
-		public static oclstdlib.Set<SuperMethodInvocationImpl> allInstances = new oclstdlib.Set<SuperMethodInvocationImpl>();
+		
+		public static oclstdlib.Set<SuperMethodInvocationImpl> allInstances_ = new oclstdlib.Set<SuperMethodInvocationImpl>();
+		
+	    public static oclstdlib.Set<SuperMethodInvocation> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<SuperMethodInvocation>();
+		    result.AddRange(SuperMethodInvocationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

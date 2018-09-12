@@ -15,7 +15,18 @@ namespace Java_{
 	public class CatchClauseImpl 
 	: CatchClauseBase
 	{
-		public static oclstdlib.Set<CatchClauseImpl> allInstances = new oclstdlib.Set<CatchClauseImpl>();
+		
+		public static oclstdlib.Set<CatchClauseImpl> allInstances_ = new oclstdlib.Set<CatchClauseImpl>();
+		
+	    public static oclstdlib.Set<CatchClause> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<CatchClause>();
+		    result.AddRange(CatchClauseImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

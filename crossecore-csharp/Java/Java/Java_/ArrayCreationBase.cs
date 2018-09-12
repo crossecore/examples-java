@@ -15,32 +15,6 @@ namespace Java_{
 	public class ArrayCreationBase 
 	:ExpressionImpl, ArrayCreation
 	{
-		private TypeAccess _type;
-		public virtual TypeAccess type
-		{
-			get {
-			
-				return _type;
-			}
-			set {
-				if (value != _type) {
-					NotificationChain msgs = null;
-					if (_type != null){
-						msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYCREATION_TYPE, null, msgs);
-					}
-					if (value != null){
-						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYCREATION_TYPE, null, msgs);
-					}
-					msgs = basicSetType(value, msgs);
-					if (msgs != null) {
-						msgs.dispatch();
-					}
-				}
-				else if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAYCREATION_TYPE , value, value));
-				}
-				}
-		}
 		private OrderedSet<Expression> _dimensions;
 		
 		public virtual OrderedSet<Expression> dimensions
@@ -79,26 +53,38 @@ namespace Java_{
 				}
 				}
 		}
+		private TypeAccess _type;
+		public virtual TypeAccess type
+		{
+			get {
+			
+				return _type;
+			}
+			set {
+				if (value != _type) {
+					NotificationChain msgs = null;
+					if (_type != null){
+						msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYCREATION_TYPE, null, msgs);
+					}
+					if (value != null){
+						msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYCREATION_TYPE, null, msgs);
+					}
+					msgs = basicSetType(value, msgs);
+					if (msgs != null) {
+						msgs.dispatch();
+					}
+				}
+				else if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAYCREATION_TYPE , value, value));
+				}
+				}
+		}
 		
 		protected override EClass eStaticClass() {
 			return Java_PackageImpl.Literals.ARRAYCREATION;
 		}
 		
 		
-		public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
-			var oldobj = _type;
-			_type = newobj;
-			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYCREATION_TYPE, oldobj, newobj);
-				if (msgs == null){
-					msgs = notification;
-				}
-				else{
-					msgs.add(notification);
-				}
-			}
-			return msgs;
-		}
 		public NotificationChain basicSetInitializer(ArrayInitializer newobj, NotificationChain msgs) {
 			var oldobj = _initializer;
 			_initializer = newobj;
@@ -113,15 +99,23 @@ namespace Java_{
 			}
 			return msgs;
 		}
+		public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
+			var oldobj = _type;
+			_type = newobj;
+			if (eNotificationRequired()) {
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYCREATION_TYPE, oldobj, newobj);
+				if (msgs == null){
+					msgs = notification;
+				}
+				else{
+					msgs.add(notification);
+				}
+			}
+			return msgs;
+		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.ARRAYCREATION_COMMENTS:
-					return comments;
-				case Java_PackageImpl.ARRAYCREATION_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.ARRAYCREATION_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.ARRAYCREATION_DIMENSIONS:
 					return dimensions;
 				case Java_PackageImpl.ARRAYCREATION_INITIALIZER:
@@ -135,16 +129,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.ARRAYCREATION_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.ARRAYCREATION_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.ARRAYCREATION_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.ARRAYCREATION_DIMENSIONS:
 					dimensions.Clear();
 					dimensions.AddRange(((List<EObject>)newValue)?.Cast<Expression>());
@@ -158,6 +142,21 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.ARRAYCREATION_DIMENSIONS:
+					return _dimensions != null && !_dimensions.isEmpty();
+				case Java_PackageImpl.ARRAYCREATION_INITIALIZER:
+					return _initializer != null; //single != null;
+				case Java_PackageImpl.ARRAYCREATION_TYPE:
+					return _type != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

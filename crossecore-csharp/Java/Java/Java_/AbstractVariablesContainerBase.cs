@@ -15,18 +15,6 @@ namespace Java_{
 	public class AbstractVariablesContainerBase 
 	:ASTNodeImpl, AbstractVariablesContainer
 	{
-		private OrderedSet<VariableDeclarationFragment> _fragments;
-		
-		public virtual OrderedSet<VariableDeclarationFragment> fragments
-		{
-			get {
-				if(_fragments==null){
-					_fragments = new OrderedSet<VariableDeclarationFragment>(this, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS, Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER);
-				}
-				return _fragments;
-			}
-		
-		}
 		private TypeAccess _type;
 		public virtual TypeAccess type
 		{
@@ -52,6 +40,18 @@ namespace Java_{
 					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE , value, value));
 				}
 				}
+		}
+		private OrderedSet<VariableDeclarationFragment> _fragments;
+		
+		public virtual OrderedSet<VariableDeclarationFragment> fragments
+		{
+			get {
+				if(_fragments==null){
+					_fragments = new OrderedSet<VariableDeclarationFragment>(this, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS, Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER);
+				}
+				return _fragments;
+			}
+		
 		}
 		
 		protected override EClass eStaticClass() {
@@ -89,14 +89,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_COMMENTS:
-					return comments;
-				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE:
 					return type;
 				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS:
@@ -108,16 +102,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE:
 					type = (TypeAccess) newValue;
 					return;
@@ -128,6 +112,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE:
+					return _type != null; //single != null;
+				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS:
+					return _fragments != null && !_fragments.isEmpty();
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

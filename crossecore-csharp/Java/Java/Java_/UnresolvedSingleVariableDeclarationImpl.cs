@@ -15,7 +15,18 @@ namespace Java_{
 	public class UnresolvedSingleVariableDeclarationImpl 
 	: UnresolvedSingleVariableDeclarationBase
 	{
-		public static oclstdlib.Set<UnresolvedSingleVariableDeclarationImpl> allInstances = new oclstdlib.Set<UnresolvedSingleVariableDeclarationImpl>();
+		
+		public static oclstdlib.Set<UnresolvedSingleVariableDeclarationImpl> allInstances_ = new oclstdlib.Set<UnresolvedSingleVariableDeclarationImpl>();
+		
+	    public static oclstdlib.Set<UnresolvedSingleVariableDeclaration> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<UnresolvedSingleVariableDeclaration>();
+		    result.AddRange(UnresolvedSingleVariableDeclarationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

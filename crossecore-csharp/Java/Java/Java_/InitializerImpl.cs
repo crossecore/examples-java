@@ -15,7 +15,18 @@ namespace Java_{
 	public class InitializerImpl 
 	: InitializerBase
 	{
-		public static oclstdlib.Set<InitializerImpl> allInstances = new oclstdlib.Set<InitializerImpl>();
+		
+		public static oclstdlib.Set<InitializerImpl> allInstances_ = new oclstdlib.Set<InitializerImpl>();
+		
+	    public static oclstdlib.Set<Initializer> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<Initializer>();
+		    result.AddRange(InitializerImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

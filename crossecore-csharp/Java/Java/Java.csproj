@@ -203,6 +203,7 @@
     <Compile Include="Java_\Assignment.cs" />
     <Compile Include="Java_\AssignmentBase.cs" />
     <Compile Include="Java_\AssignmentImpl.cs" />
+    <Compile Include="Java_\AssignmentKind.cs" />
     <Compile Include="Java_\ASTNode.cs" />
     <Compile Include="Java_\ASTNodeBase.cs" />
     <Compile Include="Java_\ASTNodeImpl.cs" />
@@ -296,6 +297,8 @@
     <Compile Include="Java_\InfixExpression.cs" />
     <Compile Include="Java_\InfixExpressionBase.cs" />
     <Compile Include="Java_\InfixExpressionImpl.cs" />
+    <Compile Include="Java_\InfixExpressionKind.cs" />
+    <Compile Include="Java_\InheritanceKind.cs" />
     <Compile Include="Java_\Initializer.cs" />
     <Compile Include="Java_\InitializerBase.cs" />
     <Compile Include="Java_\InitializerImpl.cs" />
@@ -377,9 +380,11 @@
     <Compile Include="Java_\PostfixExpression.cs" />
     <Compile Include="Java_\PostfixExpressionBase.cs" />
     <Compile Include="Java_\PostfixExpressionImpl.cs" />
+    <Compile Include="Java_\PostfixExpressionKind.cs" />
     <Compile Include="Java_\PrefixExpression.cs" />
     <Compile Include="Java_\PrefixExpressionBase.cs" />
     <Compile Include="Java_\PrefixExpressionImpl.cs" />
+    <Compile Include="Java_\PrefixExpressionKind.cs" />
     <Compile Include="Java_\PrimitiveType.cs" />
     <Compile Include="Java_\PrimitiveTypeBase.cs" />
     <Compile Include="Java_\PrimitiveTypeBoolean.cs" />
@@ -527,6 +532,7 @@
     <Compile Include="Java_\VariableDeclarationStatement.cs" />
     <Compile Include="Java_\VariableDeclarationStatementBase.cs" />
     <Compile Include="Java_\VariableDeclarationStatementImpl.cs" />
+    <Compile Include="Java_\VisibilityKind.cs" />
     <Compile Include="Java_\WhileStatement.cs" />
     <Compile Include="Java_\WhileStatementBase.cs" />
     <Compile Include="Java_\WhileStatementImpl.cs" />
@@ -536,6 +542,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Xmi\XmiResource.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

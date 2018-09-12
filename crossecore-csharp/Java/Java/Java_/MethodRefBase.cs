@@ -15,6 +15,32 @@ namespace Java_{
 	public class MethodRefBase 
 	:ASTNodeImpl, MethodRef
 	{
+		private AbstractMethodDeclaration _method;
+		public virtual AbstractMethodDeclaration method
+		{
+			get {
+			
+				return _method;
+			}
+			set {
+				if (value != _method) {
+					NotificationChain msgs = null;
+					if (_method != null){
+						msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS, typeof(MethodRef), msgs);
+					}
+					if (value != null){
+						msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS, typeof(MethodRef), msgs);
+					}
+					msgs = basicSetMethod(value, msgs);
+					if (msgs != null) {
+						msgs.dispatch();
+					}
+				}
+				else if (eNotificationRequired()){
+					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHODREF_METHOD , value, value));
+				}
+				}
+		}
 		private TypeAccess _qualifier;
 		public virtual TypeAccess qualifier
 		{
@@ -53,32 +79,6 @@ namespace Java_{
 			}
 		
 		}
-		private AbstractMethodDeclaration _method;
-		public virtual AbstractMethodDeclaration method
-		{
-			get {
-			
-				return _method;
-			}
-			set {
-				if (value != _method) {
-					NotificationChain msgs = null;
-					if (_method != null){
-						msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS, typeof(MethodRef), msgs);
-					}
-					if (value != null){
-						msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS, typeof(MethodRef), msgs);
-					}
-					msgs = basicSetMethod(value, msgs);
-					if (msgs != null) {
-						msgs.dispatch();
-					}
-				}
-				else if (eNotificationRequired()){
-					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHODREF_METHOD , value, value));
-				}
-				}
-		}
 		
 		protected override EClass eStaticClass() {
 			return Java_PackageImpl.Literals.METHODREF;
@@ -103,20 +103,6 @@ namespace Java_{
 			return base.eInverseRemove(otherEnd, featureID, msgs);
 		}
 		
-		public NotificationChain basicSetQualifier(TypeAccess newobj, NotificationChain msgs) {
-			var oldobj = _qualifier;
-			_qualifier = newobj;
-			if (eNotificationRequired()) {
-				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHODREF_QUALIFIER, oldobj, newobj);
-				if (msgs == null){
-					msgs = notification;
-				}
-				else{
-					msgs.add(notification);
-				}
-			}
-			return msgs;
-		}
 		public NotificationChain basicSetMethod(AbstractMethodDeclaration newobj, NotificationChain msgs) {
 			var oldobj = _method;
 			_method = newobj;
@@ -131,15 +117,23 @@ namespace Java_{
 			}
 			return msgs;
 		}
+		public NotificationChain basicSetQualifier(TypeAccess newobj, NotificationChain msgs) {
+			var oldobj = _qualifier;
+			_qualifier = newobj;
+			if (eNotificationRequired()) {
+				var notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHODREF_QUALIFIER, oldobj, newobj);
+				if (msgs == null){
+					msgs = notification;
+				}
+				else{
+					msgs.add(notification);
+				}
+			}
+			return msgs;
+		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.METHODREF_COMMENTS:
-					return comments;
-				case Java_PackageImpl.METHODREF_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.METHODREF_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.METHODREF_METHOD:
 					return method;
 				case Java_PackageImpl.METHODREF_QUALIFIER:
@@ -153,16 +147,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.METHODREF_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.METHODREF_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.METHODREF_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.METHODREF_METHOD:
 					method = (AbstractMethodDeclaration) newValue;
 					return;
@@ -176,6 +160,21 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.METHODREF_METHOD:
+					return getMethod() != null; //single, volatile
+				case Java_PackageImpl.METHODREF_QUALIFIER:
+					return _qualifier != null; //single != null;
+				case Java_PackageImpl.METHODREF_PARAMETERS:
+					return _parameters != null && !_parameters.isEmpty();
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

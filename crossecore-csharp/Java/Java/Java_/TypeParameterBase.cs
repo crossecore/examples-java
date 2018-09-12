@@ -34,22 +34,8 @@ namespace Java_{
 		
 		
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.TYPEPARAMETER_COMMENTS:
-					return comments;
-				case Java_PackageImpl.TYPEPARAMETER_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.TYPEPARAMETER_ORIGINALCLASSFILE:
-					return originalClassFile;
-				case Java_PackageImpl.TYPEPARAMETER_NAME:
-					return name;
-				case Java_PackageImpl.TYPEPARAMETER_PROXY:
-					return proxy;
-				case Java_PackageImpl.TYPEPARAMETER_USAGESINIMPORTS:
-					return usagesInImports;
-				case Java_PackageImpl.TYPEPARAMETER_USAGESINTYPEACCESS:
-					return usagesInTypeAccess;
 				case Java_PackageImpl.TYPEPARAMETER_BOUNDS:
 					return bounds;
 			}
@@ -59,30 +45,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.TYPEPARAMETER_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.TYPEPARAMETER_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.TYPEPARAMETER_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
-				case Java_PackageImpl.TYPEPARAMETER_NAME:
-					name = (string) newValue;
-					return;
-				case Java_PackageImpl.TYPEPARAMETER_PROXY:
-					proxy = (bool) newValue;
-					return;
-				case Java_PackageImpl.TYPEPARAMETER_USAGESINIMPORTS:
-					usagesInImports.Clear();
-					usagesInImports.AddRange(((List<EObject>)newValue)?.Cast<ImportDeclaration>());
-					return;
-				case Java_PackageImpl.TYPEPARAMETER_USAGESINTYPEACCESS:
-					usagesInTypeAccess.Clear();
-					usagesInTypeAccess.AddRange(((List<EObject>)newValue)?.Cast<TypeAccess>());
-					return;
 				case Java_PackageImpl.TYPEPARAMETER_BOUNDS:
 					bounds.Clear();
 					bounds.AddRange(((List<EObject>)newValue)?.Cast<TypeAccess>());
@@ -90,6 +52,17 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.TYPEPARAMETER_BOUNDS:
+					return _bounds != null && !_bounds.isEmpty();
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

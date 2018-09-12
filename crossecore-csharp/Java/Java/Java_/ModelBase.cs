@@ -35,15 +35,27 @@ namespace Java_{
 			}
 		
 		}
-		private Set<Archive> _archives;
+		private Set<Type> _orphanTypes;
 		
-		public virtual Set<Archive> archives
+		public virtual Set<Type> orphanTypes
 		{
 			get {
-				if(_archives==null){
-					_archives = new Set<Archive>(this, Java_PackageImpl.MODEL_ARCHIVES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MODEL_ARCHIVES);
+				if(_orphanTypes==null){
+					_orphanTypes = new Set<Type>(this, Java_PackageImpl.MODEL_ORPHANTYPES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MODEL_ORPHANTYPES);
 				}
-				return _archives;
+				return _orphanTypes;
+			}
+		
+		}
+		private Set<UnresolvedItem> _unresolvedItems;
+		
+		public virtual Set<UnresolvedItem> unresolvedItems
+		{
+			get {
+				if(_unresolvedItems==null){
+					_unresolvedItems = new Set<UnresolvedItem>(this, Java_PackageImpl.MODEL_UNRESOLVEDITEMS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MODEL_UNRESOLVEDITEMS);
+				}
+				return _unresolvedItems;
 			}
 		
 		}
@@ -59,18 +71,6 @@ namespace Java_{
 			}
 		
 		}
-		private Set<Type> _orphanTypes;
-		
-		public virtual Set<Type> orphanTypes
-		{
-			get {
-				if(_orphanTypes==null){
-					_orphanTypes = new Set<Type>(this, Java_PackageImpl.MODEL_ORPHANTYPES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MODEL_ORPHANTYPES);
-				}
-				return _orphanTypes;
-			}
-		
-		}
 		private Set<ClassFile> _classFiles;
 		
 		public virtual Set<ClassFile> classFiles
@@ -83,15 +83,15 @@ namespace Java_{
 			}
 		
 		}
-		private Set<UnresolvedItem> _unresolvedItems;
+		private Set<Archive> _archives;
 		
-		public virtual Set<UnresolvedItem> unresolvedItems
+		public virtual Set<Archive> archives
 		{
 			get {
-				if(_unresolvedItems==null){
-					_unresolvedItems = new Set<UnresolvedItem>(this, Java_PackageImpl.MODEL_UNRESOLVEDITEMS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MODEL_UNRESOLVEDITEMS);
+				if(_archives==null){
+					_archives = new Set<Archive>(this, Java_PackageImpl.MODEL_ARCHIVES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MODEL_ARCHIVES);
 				}
-				return _unresolvedItems;
+				return _archives;
 			}
 		
 		}
@@ -117,7 +117,7 @@ namespace Java_{
 		}
 		
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
 				case Java_PackageImpl.MODEL_NAME:
 					return name;
@@ -170,6 +170,29 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.MODEL_NAME:
+					return NAME_EDEFAULT == null ? _name != null : !NAME_EDEFAULT.equals(_name);
+				case Java_PackageImpl.MODEL_OWNEDELEMENTS:
+					return _ownedElements != null && !_ownedElements.isEmpty();
+				case Java_PackageImpl.MODEL_ORPHANTYPES:
+					return _orphanTypes != null && !_orphanTypes.isEmpty();
+				case Java_PackageImpl.MODEL_UNRESOLVEDITEMS:
+					return _unresolvedItems != null && !_unresolvedItems.isEmpty();
+				case Java_PackageImpl.MODEL_COMPILATIONUNITS:
+					return _compilationUnits != null && !_compilationUnits.isEmpty();
+				case Java_PackageImpl.MODEL_CLASSFILES:
+					return _classFiles != null && !_classFiles.isEmpty();
+				case Java_PackageImpl.MODEL_ARCHIVES:
+					return _archives != null && !_archives.isEmpty();
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

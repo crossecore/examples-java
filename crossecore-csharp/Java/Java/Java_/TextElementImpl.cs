@@ -15,7 +15,18 @@ namespace Java_{
 	public class TextElementImpl 
 	: TextElementBase
 	{
-		public static oclstdlib.Set<TextElementImpl> allInstances = new oclstdlib.Set<TextElementImpl>();
+		
+		public static oclstdlib.Set<TextElementImpl> allInstances_ = new oclstdlib.Set<TextElementImpl>();
+		
+	    public static oclstdlib.Set<TextElement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<TextElement>();
+		    result.AddRange(TextElementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

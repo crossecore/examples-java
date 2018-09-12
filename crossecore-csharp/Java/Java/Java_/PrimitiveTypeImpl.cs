@@ -15,7 +15,27 @@ namespace Java_{
 	public class PrimitiveTypeImpl 
 	: PrimitiveTypeBase
 	{
-		public static oclstdlib.Set<PrimitiveTypeImpl> allInstances = new oclstdlib.Set<PrimitiveTypeImpl>();
+		
+		public static oclstdlib.Set<PrimitiveTypeImpl> allInstances_ = new oclstdlib.Set<PrimitiveTypeImpl>();
+		
+	    public static oclstdlib.Set<PrimitiveType> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<PrimitiveType>();
+		    result.AddRange(PrimitiveTypeImpl.allInstances_);
+			result.AddRange(PrimitiveTypeBooleanImpl.allInstances_);
+			result.AddRange(PrimitiveTypeLongImpl.allInstances_);
+			result.AddRange(PrimitiveTypeByteImpl.allInstances_);
+			result.AddRange(PrimitiveTypeVoidImpl.allInstances_);
+			result.AddRange(PrimitiveTypeDoubleImpl.allInstances_);
+			result.AddRange(PrimitiveTypeFloatImpl.allInstances_);
+			result.AddRange(PrimitiveTypeIntImpl.allInstances_);
+			result.AddRange(PrimitiveTypeCharImpl.allInstances_);
+			result.AddRange(PrimitiveTypeShortImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

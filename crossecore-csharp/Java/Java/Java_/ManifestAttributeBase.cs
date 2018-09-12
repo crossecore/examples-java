@@ -38,7 +38,7 @@ namespace Java_{
 		
 		
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
 				case Java_PackageImpl.MANIFESTATTRIBUTE_KEY:
 					return key;
@@ -60,6 +60,19 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.MANIFESTATTRIBUTE_KEY:
+					return KEY_EDEFAULT == null ? _key != null : !KEY_EDEFAULT.equals(_key);
+				case Java_PackageImpl.MANIFESTATTRIBUTE_VALUE:
+					return VALUE_EDEFAULT == null ? _value != null : !VALUE_EDEFAULT.equals(_value);
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

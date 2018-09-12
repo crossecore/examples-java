@@ -15,7 +15,18 @@ namespace Java_{
 	public class ClassInstanceCreationImpl 
 	: ClassInstanceCreationBase
 	{
-		public static oclstdlib.Set<ClassInstanceCreationImpl> allInstances = new oclstdlib.Set<ClassInstanceCreationImpl>();
+		
+		public static oclstdlib.Set<ClassInstanceCreationImpl> allInstances_ = new oclstdlib.Set<ClassInstanceCreationImpl>();
+		
+	    public static oclstdlib.Set<ClassInstanceCreation> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<ClassInstanceCreation>();
+		    result.AddRange(ClassInstanceCreationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

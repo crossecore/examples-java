@@ -15,7 +15,18 @@ namespace Java_{
 	public class InstanceofExpressionImpl 
 	: InstanceofExpressionBase
 	{
-		public static oclstdlib.Set<InstanceofExpressionImpl> allInstances = new oclstdlib.Set<InstanceofExpressionImpl>();
+		
+		public static oclstdlib.Set<InstanceofExpressionImpl> allInstances_ = new oclstdlib.Set<InstanceofExpressionImpl>();
+		
+	    public static oclstdlib.Set<InstanceofExpression> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<InstanceofExpression>();
+		    result.AddRange(InstanceofExpressionImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

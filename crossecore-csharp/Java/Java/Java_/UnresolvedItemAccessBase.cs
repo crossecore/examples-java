@@ -91,14 +91,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.UNRESOLVEDITEMACCESS_COMMENTS:
-					return comments;
-				case Java_PackageImpl.UNRESOLVEDITEMACCESS_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.UNRESOLVEDITEMACCESS_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.UNRESOLVEDITEMACCESS_ELEMENT:
 					return element;
 				case Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER:
@@ -110,16 +104,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.UNRESOLVEDITEMACCESS_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.UNRESOLVEDITEMACCESS_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.UNRESOLVEDITEMACCESS_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.UNRESOLVEDITEMACCESS_ELEMENT:
 					element = (UnresolvedItem) newValue;
 					return;
@@ -128,6 +112,37 @@ namespace Java_{
 					return;
 			}
 			base.eSet(featureID, newValue);
+		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.UNRESOLVEDITEMACCESS_ELEMENT:
+					return getElement() != null; //single, volatile
+				case Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER:
+					return _qualifier != null; //single != null;
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
+		public override int eBaseStructuralFeatureID(int derivedFeatureID, System.Type baseClass) {
+			if (baseClass == typeof(NamespaceAccess)) {
+				switch (derivedFeatureID) {
+					default: return -1;
+				}
+			}
+			return base.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+		}
+		
+					
+		public override int eDerivedStructuralFeatureID(int baseFeatureID, System.Type baseClass) {
+			if (baseClass == typeof(NamespaceAccess)) {
+				switch (baseFeatureID) {
+					default: return -1;
+				}
+			}
+			return base.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 		}
 		
 		

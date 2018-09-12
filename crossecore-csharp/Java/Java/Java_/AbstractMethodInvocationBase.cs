@@ -15,18 +15,6 @@ namespace Java_{
 	public class AbstractMethodInvocationBase 
 	:ASTNodeImpl, AbstractMethodInvocation
 	{
-		private OrderedSet<Expression> _arguments;
-		
-		public virtual OrderedSet<Expression> arguments
-		{
-			get {
-				if(_arguments==null){
-					_arguments = new OrderedSet<Expression>(this, Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS);
-				}
-				return _arguments;
-			}
-		
-		}
 		private AbstractMethodDeclaration _method;
 		public virtual AbstractMethodDeclaration method
 		{
@@ -52,6 +40,18 @@ namespace Java_{
 					eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD , value, value));
 				}
 				}
+		}
+		private OrderedSet<Expression> _arguments;
+		
+		public virtual OrderedSet<Expression> arguments
+		{
+			get {
+				if(_arguments==null){
+					_arguments = new OrderedSet<Expression>(this, Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS);
+				}
+				return _arguments;
+			}
+		
 		}
 		private OrderedSet<TypeAccess> _typeArguments;
 		
@@ -104,14 +104,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_COMMENTS:
-					return comments;
-				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ORIGINALCLASSFILE:
-					return originalClassFile;
 				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD:
 					return method;
 				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS:
@@ -125,16 +119,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
 				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD:
 					method = (AbstractMethodDeclaration) newValue;
 					return;
@@ -149,6 +133,21 @@ namespace Java_{
 			}
 			base.eSet(featureID, newValue);
 		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD:
+					return getMethod() != null; //single, volatile
+				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS:
+					return _arguments != null && !_arguments.isEmpty();
+				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS:
+					return _typeArguments != null && !_typeArguments.isEmpty();
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
 		
 		
 	}

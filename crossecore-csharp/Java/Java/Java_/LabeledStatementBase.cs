@@ -15,18 +15,6 @@ namespace Java_{
 	public class LabeledStatementBase 
 	:NamedElementImpl, LabeledStatement
 	{
-		private Set<ContinueStatement> _usagesInContinueStatements;
-		
-		public virtual Set<ContinueStatement> usagesInContinueStatements
-		{
-			get {
-				if(_usagesInContinueStatements==null){
-					_usagesInContinueStatements = new Set<ContinueStatement>(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS, Java_PackageImpl.CONTINUESTATEMENT_LABEL);
-				}
-				return _usagesInContinueStatements;
-			}
-		
-		}
 		private Statement _body;
 		public virtual Statement body
 		{
@@ -65,6 +53,18 @@ namespace Java_{
 			}
 		
 		}
+		private Set<ContinueStatement> _usagesInContinueStatements;
+		
+		public virtual Set<ContinueStatement> usagesInContinueStatements
+		{
+			get {
+				if(_usagesInContinueStatements==null){
+					_usagesInContinueStatements = new Set<ContinueStatement>(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS, Java_PackageImpl.CONTINUESTATEMENT_LABEL);
+				}
+				return _usagesInContinueStatements;
+			}
+		
+		}
 		
 		protected override EClass eStaticClass() {
 			return Java_PackageImpl.Literals.LABELEDSTATEMENT;
@@ -72,20 +72,20 @@ namespace Java_{
 		
 		public override NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 			switch (featureID) {
-				case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
-					return usagesInContinueStatements.basicAdd((ContinueStatement)otherEnd, msgs);
 				case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
 					return usagesInBreakStatements.basicAdd((BreakStatement)otherEnd, msgs);
+				case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
+					return usagesInContinueStatements.basicAdd((ContinueStatement)otherEnd, msgs);
 			}
 			return base.eInverseAdd(otherEnd, featureID, msgs);
 		}
 		
 		public override NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 			switch (featureID) {
-				case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
-					return usagesInContinueStatements.basicRemove((ContinueStatement)otherEnd, msgs);
 				case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
 					return usagesInBreakStatements.basicRemove((BreakStatement)otherEnd, msgs);
+				case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
+					return usagesInContinueStatements.basicRemove((ContinueStatement)otherEnd, msgs);
 			}
 			return base.eInverseRemove(otherEnd, featureID, msgs);
 		}
@@ -105,20 +105,8 @@ namespace Java_{
 			return msgs;
 		}
 		
-		public override Object eGet(int featureID, bool resolve, bool coreType) {
+		public override object eGet(int featureID, bool resolve, bool coreType) {
 			switch (featureID) {
-				case Java_PackageImpl.LABELEDSTATEMENT_COMMENTS:
-					return comments;
-				case Java_PackageImpl.LABELEDSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					return originalCompilationUnit;
-				case Java_PackageImpl.LABELEDSTATEMENT_ORIGINALCLASSFILE:
-					return originalClassFile;
-				case Java_PackageImpl.LABELEDSTATEMENT_NAME:
-					return name;
-				case Java_PackageImpl.LABELEDSTATEMENT_PROXY:
-					return proxy;
-				case Java_PackageImpl.LABELEDSTATEMENT_USAGESINIMPORTS:
-					return usagesInImports;
 				case Java_PackageImpl.LABELEDSTATEMENT_BODY:
 					return body;
 				case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
@@ -132,26 +120,6 @@ namespace Java_{
 		
 		public override void eSet(int featureID, object newValue) {
 			switch (featureID) {
-				case Java_PackageImpl.LABELEDSTATEMENT_COMMENTS:
-					comments.Clear();
-					comments.AddRange(((List<EObject>)newValue)?.Cast<Comment>());
-					return;
-				case Java_PackageImpl.LABELEDSTATEMENT_ORIGINALCOMPILATIONUNIT:
-					originalCompilationUnit = (CompilationUnit) newValue;
-					return;
-				case Java_PackageImpl.LABELEDSTATEMENT_ORIGINALCLASSFILE:
-					originalClassFile = (ClassFile) newValue;
-					return;
-				case Java_PackageImpl.LABELEDSTATEMENT_NAME:
-					name = (string) newValue;
-					return;
-				case Java_PackageImpl.LABELEDSTATEMENT_PROXY:
-					proxy = (bool) newValue;
-					return;
-				case Java_PackageImpl.LABELEDSTATEMENT_USAGESINIMPORTS:
-					usagesInImports.Clear();
-					usagesInImports.AddRange(((List<EObject>)newValue)?.Cast<ImportDeclaration>());
-					return;
 				case Java_PackageImpl.LABELEDSTATEMENT_BODY:
 					body = (Statement) newValue;
 					return;
@@ -165,6 +133,39 @@ namespace Java_{
 					return;
 			}
 			base.eSet(featureID, newValue);
+		}
+		
+		/*
+		public override bool eIsSet(int featureID) {
+			switch (featureID) {
+				case Java_PackageImpl.LABELEDSTATEMENT_BODY:
+					return _body != null; //single != null;
+				case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
+					return getUsagesInBreakStatements().isEmpty(); //many, volatile
+				case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
+					return getUsagesInContinueStatements().isEmpty(); //many, volatile
+			}
+			return base.eIsSet(featureID);
+		}
+		*/
+		
+		public override int eBaseStructuralFeatureID(int derivedFeatureID, System.Type baseClass) {
+			if (baseClass == typeof(Statement)) {
+				switch (derivedFeatureID) {
+					default: return -1;
+				}
+			}
+			return base.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+		}
+		
+					
+		public override int eDerivedStructuralFeatureID(int baseFeatureID, System.Type baseClass) {
+			if (baseClass == typeof(Statement)) {
+				switch (baseFeatureID) {
+					default: return -1;
+				}
+			}
+			return base.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 		}
 		
 		

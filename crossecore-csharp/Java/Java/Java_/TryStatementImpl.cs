@@ -15,7 +15,18 @@ namespace Java_{
 	public class TryStatementImpl 
 	: TryStatementBase
 	{
-		public static oclstdlib.Set<TryStatementImpl> allInstances = new oclstdlib.Set<TryStatementImpl>();
+		
+		public static oclstdlib.Set<TryStatementImpl> allInstances_ = new oclstdlib.Set<TryStatementImpl>();
+		
+	    public static oclstdlib.Set<TryStatement> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<TryStatement>();
+		    result.AddRange(TryStatementImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }

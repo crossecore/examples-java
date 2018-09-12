@@ -15,7 +15,23 @@ namespace Java_{
 	public class AbstractMethodInvocationImpl 
 	: AbstractMethodInvocationBase
 	{
-		public static oclstdlib.Set<AbstractMethodInvocationImpl> allInstances = new oclstdlib.Set<AbstractMethodInvocationImpl>();
+		
+		public static oclstdlib.Set<AbstractMethodInvocationImpl> allInstances_ = new oclstdlib.Set<AbstractMethodInvocationImpl>();
+		
+	    public static oclstdlib.Set<AbstractMethodInvocation> allInstances()
+		{
+	
+			var result = new oclstdlib.Set<AbstractMethodInvocation>();
+		    result.AddRange(AbstractMethodInvocationImpl.allInstances_);
+			result.AddRange(ClassInstanceCreationImpl.allInstances_);
+			result.AddRange(SuperMethodInvocationImpl.allInstances_);
+			result.AddRange(SuperConstructorInvocationImpl.allInstances_);
+			result.AddRange(ConstructorInvocationImpl.allInstances_);
+			result.AddRange(MethodInvocationImpl.allInstances_);
+		
+		    return result;
+	    }
+		
 		//implement your generated class here	
 	}
 }
