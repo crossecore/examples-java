@@ -22,12 +22,12 @@ namespace Java_{
 			public const int COMPLEMENT_VALUE = 5;
 			public const int NOT_VALUE = 6;
 			
-			public static PrefixExpressionKind INCREMENT;
-			public static PrefixExpressionKind DECREMENT;
-			public static PrefixExpressionKind PLUS;
-			public static PrefixExpressionKind MINUS;
-			public static PrefixExpressionKind COMPLEMENT;
-			public static PrefixExpressionKind NOT;
+			public static PrefixExpressionKind INCREMENT = new PrefixExpressionKind(1, "INCREMENT", "++");
+			public static PrefixExpressionKind DECREMENT = new PrefixExpressionKind(2, "DECREMENT", "--");
+			public static PrefixExpressionKind PLUS = new PrefixExpressionKind(3, "PLUS", "+");
+			public static PrefixExpressionKind MINUS = new PrefixExpressionKind(4, "MINUS", "-");
+			public static PrefixExpressionKind COMPLEMENT = new PrefixExpressionKind(5, "COMPLEMENT", "~");
+			public static PrefixExpressionKind NOT = new PrefixExpressionKind(6, "NOT", "!");
 	
 			private static PrefixExpressionKind[] VALUES_ARRAY =
 				new PrefixExpressionKind[] {
@@ -104,5 +104,10 @@ namespace Java_{
 	        {
 	            return value;
 	        }
+	        
+			public override string ToString()
+			{
+				return literal;
+			}
 	    }
 }

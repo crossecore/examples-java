@@ -18,8 +18,8 @@ namespace Java_{
 			public const int INCREMENT_VALUE = 1;
 			public const int DECREMENT_VALUE = 2;
 			
-			public static PostfixExpressionKind INCREMENT;
-			public static PostfixExpressionKind DECREMENT;
+			public static PostfixExpressionKind INCREMENT = new PostfixExpressionKind(1, "INCREMENT", "++");
+			public static PostfixExpressionKind DECREMENT = new PostfixExpressionKind(2, "DECREMENT", "--");
 	
 			private static PostfixExpressionKind[] VALUES_ARRAY =
 				new PostfixExpressionKind[] {
@@ -88,5 +88,10 @@ namespace Java_{
 	        {
 	            return value;
 	        }
+	        
+			public override string ToString()
+			{
+				return literal;
+			}
 	    }
 }

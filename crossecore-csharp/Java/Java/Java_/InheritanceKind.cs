@@ -19,9 +19,9 @@ namespace Java_{
 			public const int ABSTRACT_VALUE = 2;
 			public const int FINAL_VALUE = 3;
 			
-			public static InheritanceKind NONE;
-			public static InheritanceKind ABSTRACT;
-			public static InheritanceKind FINAL;
+			public static InheritanceKind NONE = new InheritanceKind(1, "none", "none");
+			public static InheritanceKind ABSTRACT = new InheritanceKind(2, "abstract", "abstract");
+			public static InheritanceKind FINAL = new InheritanceKind(3, "final", "final");
 	
 			private static InheritanceKind[] VALUES_ARRAY =
 				new InheritanceKind[] {
@@ -92,5 +92,10 @@ namespace Java_{
 	        {
 	            return value;
 	        }
+	        
+			public override string ToString()
+			{
+				return literal;
+			}
 	    }
 }

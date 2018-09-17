@@ -35,25 +35,25 @@ namespace Java_{
 			public const int CONDITIONAL_AND_VALUE = 18;
 			public const int CONDITIONAL_OR_VALUE = 19;
 			
-			public static InfixExpressionKind TIMES;
-			public static InfixExpressionKind DIVIDE;
-			public static InfixExpressionKind REMAINDER;
-			public static InfixExpressionKind PLUS;
-			public static InfixExpressionKind MINUS;
-			public static InfixExpressionKind LEFT_SHIFT;
-			public static InfixExpressionKind RIGHT_SHIFT_SIGNED;
-			public static InfixExpressionKind RIGHT_SHIFT_UNSIGNED;
-			public static InfixExpressionKind LESS;
-			public static InfixExpressionKind GREATER;
-			public static InfixExpressionKind LESS_EQUALS;
-			public static InfixExpressionKind GREATER_EQUALS;
-			public static InfixExpressionKind EQUALS;
-			public static InfixExpressionKind NOT_EQUALS;
-			public static InfixExpressionKind XOR;
-			public static InfixExpressionKind AND;
-			public static InfixExpressionKind OR;
-			public static InfixExpressionKind CONDITIONAL_AND;
-			public static InfixExpressionKind CONDITIONAL_OR;
+			public static InfixExpressionKind TIMES = new InfixExpressionKind(1, "TIMES", "*");
+			public static InfixExpressionKind DIVIDE = new InfixExpressionKind(2, "DIVIDE", "/");
+			public static InfixExpressionKind REMAINDER = new InfixExpressionKind(3, "REMAINDER", "%");
+			public static InfixExpressionKind PLUS = new InfixExpressionKind(4, "PLUS", "+");
+			public static InfixExpressionKind MINUS = new InfixExpressionKind(5, "MINUS", "-");
+			public static InfixExpressionKind LEFT_SHIFT = new InfixExpressionKind(6, "LEFT_SHIFT", "<<");
+			public static InfixExpressionKind RIGHT_SHIFT_SIGNED = new InfixExpressionKind(7, "RIGHT_SHIFT_SIGNED", ">>");
+			public static InfixExpressionKind RIGHT_SHIFT_UNSIGNED = new InfixExpressionKind(8, "RIGHT_SHIFT_UNSIGNED", ">>>");
+			public static InfixExpressionKind LESS = new InfixExpressionKind(9, "LESS", "<");
+			public static InfixExpressionKind GREATER = new InfixExpressionKind(10, "GREATER", ">");
+			public static InfixExpressionKind LESS_EQUALS = new InfixExpressionKind(11, "LESS_EQUALS", "<=");
+			public static InfixExpressionKind GREATER_EQUALS = new InfixExpressionKind(12, "GREATER_EQUALS", ">=");
+			public static InfixExpressionKind EQUALS = new InfixExpressionKind(13, "EQUALS", "==");
+			public static InfixExpressionKind NOT_EQUALS = new InfixExpressionKind(14, "NOT_EQUALS", "!=");
+			public static InfixExpressionKind XOR = new InfixExpressionKind(15, "XOR", "^");
+			public static InfixExpressionKind AND = new InfixExpressionKind(16, "AND", "&");
+			public static InfixExpressionKind OR = new InfixExpressionKind(17, "OR", "|");
+			public static InfixExpressionKind CONDITIONAL_AND = new InfixExpressionKind(18, "CONDITIONAL_AND", "&&");
+			public static InfixExpressionKind CONDITIONAL_OR = new InfixExpressionKind(19, "CONDITIONAL_OR", "||");
 	
 			private static InfixExpressionKind[] VALUES_ARRAY =
 				new InfixExpressionKind[] {
@@ -156,5 +156,10 @@ namespace Java_{
 	        {
 	            return value;
 	        }
+	        
+			public override string ToString()
+			{
+				return literal;
+			}
 	    }
 }

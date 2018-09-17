@@ -892,7 +892,6 @@ namespace Java_{
 			}
 		}
 		
-		/*
 		public override object createFromString(EDataType eDataType, string initialValue) {
 			switch (eDataType.getClassifierID()) {
 			case Java_PackageImpl.ASSIGNMENTKIND:
@@ -911,7 +910,6 @@ namespace Java_{
 				throw new ArgumentException("The datatype '" + eDataType.name + "' is not a valid classifier");
 			}
 		}
-		*/
 		
 		public override String convertToString(EDataType eDataType, object instanceValue) {
 			switch (eDataType.getClassifierID()) {
@@ -933,80 +931,68 @@ namespace Java_{
 		}
 		
 		
-		/*
 		public AssignmentKind createAssignmentKindFromString(EDataType eDataType, String initialValue) {
 			AssignmentKind result = AssignmentKind.get(initialValue);
 			if (result == null)
-				throw new IllegalArgumentException(
-						"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+				throw new ArgumentException(
+		                        "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.name + "'");
 			return result;
 		}
-		*/
 		
 		public String convertAssignmentKindToString(EDataType eDataType, object instanceValue) {
 			return instanceValue == null ? null : instanceValue.ToString();
 		}
-		/*
 		public InfixExpressionKind createInfixExpressionKindFromString(EDataType eDataType, String initialValue) {
 			InfixExpressionKind result = InfixExpressionKind.get(initialValue);
 			if (result == null)
-				throw new IllegalArgumentException(
-						"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+				throw new ArgumentException(
+		                        "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.name + "'");
 			return result;
 		}
-		*/
 		
 		public String convertInfixExpressionKindToString(EDataType eDataType, object instanceValue) {
 			return instanceValue == null ? null : instanceValue.ToString();
 		}
-		/*
 		public InheritanceKind createInheritanceKindFromString(EDataType eDataType, String initialValue) {
 			InheritanceKind result = InheritanceKind.get(initialValue);
 			if (result == null)
-				throw new IllegalArgumentException(
-						"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+				throw new ArgumentException(
+		                        "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.name + "'");
 			return result;
 		}
-		*/
 		
 		public String convertInheritanceKindToString(EDataType eDataType, object instanceValue) {
 			return instanceValue == null ? null : instanceValue.ToString();
 		}
-		/*
 		public PostfixExpressionKind createPostfixExpressionKindFromString(EDataType eDataType, String initialValue) {
 			PostfixExpressionKind result = PostfixExpressionKind.get(initialValue);
 			if (result == null)
-				throw new IllegalArgumentException(
-						"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+				throw new ArgumentException(
+		                        "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.name + "'");
 			return result;
 		}
-		*/
 		
 		public String convertPostfixExpressionKindToString(EDataType eDataType, object instanceValue) {
 			return instanceValue == null ? null : instanceValue.ToString();
 		}
-		/*
 		public PrefixExpressionKind createPrefixExpressionKindFromString(EDataType eDataType, String initialValue) {
 			PrefixExpressionKind result = PrefixExpressionKind.get(initialValue);
 			if (result == null)
-				throw new IllegalArgumentException(
-						"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+				throw new ArgumentException(
+		                        "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.name + "'");
 			return result;
 		}
-		*/
 		
 		public String convertPrefixExpressionKindToString(EDataType eDataType, object instanceValue) {
 			return instanceValue == null ? null : instanceValue.ToString();
 		}
-		/*
 		public VisibilityKind createVisibilityKindFromString(EDataType eDataType, String initialValue) {
 			VisibilityKind result = VisibilityKind.get(initialValue);
 			if (result == null)
-				throw new IllegalArgumentException(
-						"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+				throw new ArgumentException(
+		                        "The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.name + "'");
 			return result;
 		}
-		*/
 		
 		public String convertVisibilityKindToString(EDataType eDataType, object instanceValue) {
 			return instanceValue == null ? null : instanceValue.ToString();

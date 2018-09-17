@@ -20,10 +20,10 @@ namespace Java_{
 			public const int PRIVATE_VALUE = 3;
 			public const int PROTECTED_VALUE = 4;
 			
-			public static VisibilityKind NONE;
-			public static VisibilityKind PUBLIC;
-			public static VisibilityKind PRIVATE;
-			public static VisibilityKind PROTECTED;
+			public static VisibilityKind NONE = new VisibilityKind(1, "none", "none");
+			public static VisibilityKind PUBLIC = new VisibilityKind(2, "public", "public");
+			public static VisibilityKind PRIVATE = new VisibilityKind(3, "private", "private");
+			public static VisibilityKind PROTECTED = new VisibilityKind(4, "protected", "protected");
 	
 			private static VisibilityKind[] VALUES_ARRAY =
 				new VisibilityKind[] {
@@ -96,5 +96,10 @@ namespace Java_{
 	        {
 	            return value;
 	        }
+	        
+			public override string ToString()
+			{
+				return literal;
+			}
 	    }
 }

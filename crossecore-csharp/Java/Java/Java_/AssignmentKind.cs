@@ -28,18 +28,18 @@ namespace Java_{
 			public const int RIGHT_SHIFT_SIGNED_ASSIGN_VALUE = 11;
 			public const int RIGHT_SHIFT_UNSIGNED_ASSIGN_VALUE = 12;
 			
-			public static AssignmentKind ASSIGN;
-			public static AssignmentKind PLUS_ASSIGN;
-			public static AssignmentKind MINUS_ASSIGN;
-			public static AssignmentKind TIMES_ASSIGN;
-			public static AssignmentKind DIVIDE_ASSIGN;
-			public static AssignmentKind BIT_AND_ASSIGN;
-			public static AssignmentKind BIT_OR_ASSIGN;
-			public static AssignmentKind BIT_XOR_ASSIGN;
-			public static AssignmentKind REMAINDER_ASSIGN;
-			public static AssignmentKind LEFT_SHIFT_ASSIGN;
-			public static AssignmentKind RIGHT_SHIFT_SIGNED_ASSIGN;
-			public static AssignmentKind RIGHT_SHIFT_UNSIGNED_ASSIGN;
+			public static AssignmentKind ASSIGN = new AssignmentKind(1, "ASSIGN", "=");
+			public static AssignmentKind PLUS_ASSIGN = new AssignmentKind(2, "PLUS_ASSIGN", "+=");
+			public static AssignmentKind MINUS_ASSIGN = new AssignmentKind(3, "MINUS_ASSIGN", "-=");
+			public static AssignmentKind TIMES_ASSIGN = new AssignmentKind(4, "TIMES_ASSIGN", "*=");
+			public static AssignmentKind DIVIDE_ASSIGN = new AssignmentKind(5, "DIVIDE_ASSIGN", "/=");
+			public static AssignmentKind BIT_AND_ASSIGN = new AssignmentKind(6, "BIT_AND_ASSIGN", "&=");
+			public static AssignmentKind BIT_OR_ASSIGN = new AssignmentKind(7, "BIT_OR_ASSIGN", "|=");
+			public static AssignmentKind BIT_XOR_ASSIGN = new AssignmentKind(8, "BIT_XOR_ASSIGN", "^=");
+			public static AssignmentKind REMAINDER_ASSIGN = new AssignmentKind(9, "REMAINDER_ASSIGN", "%=");
+			public static AssignmentKind LEFT_SHIFT_ASSIGN = new AssignmentKind(10, "LEFT_SHIFT_ASSIGN", "<<=");
+			public static AssignmentKind RIGHT_SHIFT_SIGNED_ASSIGN = new AssignmentKind(11, "RIGHT_SHIFT_SIGNED_ASSIGN", ">>=");
+			public static AssignmentKind RIGHT_SHIFT_UNSIGNED_ASSIGN = new AssignmentKind(12, "RIGHT_SHIFT_UNSIGNED_ASSIGN", ">>>=");
 	
 			private static AssignmentKind[] VALUES_ARRAY =
 				new AssignmentKind[] {
@@ -128,5 +128,10 @@ namespace Java_{
 	        {
 	            return value;
 	        }
+	        
+			public override string ToString()
+			{
+				return literal;
+			}
 	    }
 }

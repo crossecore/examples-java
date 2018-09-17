@@ -65,10 +65,10 @@ namespace JavaTest
         [TestMethod]
         public void invisibleMethods()
         {
-            var result1 = ClassDeclarationImpl.allInstances();
+            var result1 = ClassDeclarationImpl.allInstances(); //SOLL: 166, IST: 166
 
             var result2 = ClassDeclarationImpl.allInstances()
-                .collect<BodyDeclaration>(cd => cd.bodyDeclarations);
+                .collect<BodyDeclaration>(cd => cd.bodyDeclarations);//SOLL: 1591, IST: 149
 
             var result3 = ClassDeclarationImpl.allInstances()
                 .collect<BodyDeclaration>(cd => cd.bodyDeclarations)

@@ -21,9 +21,7 @@ namespace Java_{
 		get { 
 			return _visibility;
 		}
-		set {
-                _visibility = value;
-            }
+		set { _visibility = value; }
 		}
 		private InheritanceKind _inheritance = InheritanceKind.NONE;
 		public virtual InheritanceKind inheritance

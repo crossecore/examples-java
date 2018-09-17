@@ -316,13 +316,15 @@ namespace Ecore.Xmi
                         {
                             //custom package
 
-                            if (etype is EEnum)
+                            if (etype is EDataType)
                             {
+
+                                object obj = factory.createFromString(etype as EDataType, value);
                                 //TODO set literals
                                 //var literal = VisibilityKind.getByName(value);
 
-                                //eobject.eSet(estructuralfeature, literal);
-                                
+                                eobject.eSet(estructuralfeature, obj);
+
                             }
                         }
 
@@ -338,7 +340,11 @@ namespace Ecore.Xmi
                 }
                 else if (estructuralfeature is EReference)
                 {
+
+                    
                     resolveJobs.Add(new Tuple<EObject, EStructuralFeature, String>(eobject, estructuralfeature, attribute.InnerText));
+
+                    
 
                 }
 
@@ -516,9 +522,9 @@ namespace Ecore.Xmi
             {
                 return null;
             }
-            else if (specification.StartsWith("#//"))
+            else if (specification.StartsWith("//"))
             {
-                var name = specification.Replace("#//", "");
+                var name = specification.Replace("//", "");
 
                 var segments = name.Split('/');
 
