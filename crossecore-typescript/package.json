@@ -1,0 +1,22 @@
+{
+  "name": "java",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Simon Schwichtenberg",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.11",
+    "jasmine": "^3.3.0"
+  },
+  "dependencies": {
+    "@types/node": "^10.12.2",
+    "dom-parser": "^0.1.5",
+    "xmldom": "^0.1.27"
+  }
+}
