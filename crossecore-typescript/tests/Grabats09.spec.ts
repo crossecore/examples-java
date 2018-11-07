@@ -20,6 +20,7 @@ fs.readFile(path.join(__dirname, 'org.eclipse.gmt.modisco.java.kyanos.xmi'), 'ut
     console.log(root);
 })
 
+/*
 describe("Grabats09", () => {
     it("should work", () => {
 
@@ -37,9 +38,10 @@ describe("Grabats09", () => {
             && (!((<MethodDeclaration>bd).returnType.type===null))
             && (<MethodDeclaration>bd).returnType.type === each)
         ).asSequence();
-        */
+        * /
 
         expect(true).toBe(true);
     });
 });
+*/
 
