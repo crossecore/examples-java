@@ -4,11 +4,15 @@ import {XmiResource} from "ecore/XmiResource";
 
 import {Java_FactoryImpl} from 'java_/Java_FactoryImpl';
 import {Java_PackageImpl} from "java_/Java_PackageImpl";
+import {FieldDeclarationImpl} from "java_/FieldDeclarationImpl";
+import {FieldDeclarationBase} from "java_/FieldDeclarationBase";
 import {DOMParser} from 'xmldom';
 
 
 import * as fs from 'fs';
 import * as path from 'path';
+
+
 
 fs.readFile(path.join(__dirname, 'org.eclipse.gmt.modisco.java.kyanos.xmi'), 'utf8', (error, data) => {
 

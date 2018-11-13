@@ -12,7 +12,8 @@
   "author": "Simon Schwichtenberg",
   "devDependencies": {
     "@types/jasmine": "^2.8.11",
-    "jasmine": "^3.3.0"
+    "jasmine": "^3.3.0",
+    "madge": "^3.3.0"
   },
   "dependencies": {
     "@types/node": "^10.12.2",
