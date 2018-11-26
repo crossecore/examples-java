@@ -1,7 +1,4 @@
 *.js
 *.js.map
 node_modules/*
-ecore
-java_
 !node_modules/ecore/
-!node_modules/java_/
