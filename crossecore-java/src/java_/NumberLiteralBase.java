@@ -19,7 +19,7 @@ extends ExpressionImpl implements NumberLiteral
 		java.lang.String oldValue = _tokenValue;
 		_tokenValue = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.NUMBERLITERAL_TOKENVALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.NUMBER_LITERAL__TOKEN_VALUE, oldValue, value));
 		
 	}
 	
@@ -37,7 +37,7 @@ extends ExpressionImpl implements NumberLiteral
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.NUMBERLITERAL_TOKENVALUE:
+			case Java_PackageImpl.NUMBER_LITERAL__TOKEN_VALUE:
 				return getTokenValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -46,7 +46,7 @@ extends ExpressionImpl implements NumberLiteral
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.NUMBERLITERAL_TOKENVALUE:
+			case Java_PackageImpl.NUMBER_LITERAL__TOKEN_VALUE:
 				setTokenValue((java.lang.String) newValue);
 				return;
 		}
@@ -56,7 +56,7 @@ extends ExpressionImpl implements NumberLiteral
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.NUMBERLITERAL_TOKENVALUE:
+			case Java_PackageImpl.NUMBER_LITERAL__TOKEN_VALUE:
 				return TOKENVALUE_EDEFAULT == null ? _tokenValue != null : !TOKENVALUE_EDEFAULT.equals(_tokenValue);
 		}
 		return super.eIsSet(featureID);

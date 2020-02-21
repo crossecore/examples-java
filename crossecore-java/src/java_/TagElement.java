@@ -3,22 +3,22 @@ public interface TagElement
  extends ASTNode
 {
 	
-	public static Ocllib.QuickSet<TagElement> allInstances_ = new Ocllib.QuickSet<TagElement>(TagElement.class);
+	public static com.crossecore.ocl.QuickSet<TagElement> allInstances_ = new com.crossecore.ocl.QuickSet<TagElement>(TagElement.class);
 	
 		
-	public static Ocllib.QuickSet<TagElement> allInstances(){
+	public static com.crossecore.ocl.QuickSet<TagElement> allInstances(){
 		
-		Ocllib.QuickSet<TagElement> result = new Ocllib.QuickSet<TagElement>(TagElement.class);
+		com.crossecore.ocl.QuickSet<TagElement> result = new com.crossecore.ocl.QuickSet<TagElement>(TagElement.class);
 		result.addAll(TagElement.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<TagElement> allInstances = new Ocllib.QuickSet<TagElement>(TagElement.class);
+	//public static com.crossecore.ocl.QuickSet<TagElement> allInstances = new com.crossecore.ocl.QuickSet<TagElement>(TagElement.class);
 	
 	java.lang.String getTagName();
 	void setTagName(java.lang.String value);
-	Ocllib.OrderedSet<ASTNode> getFragments();
+	com.crossecore.ocl.OrderedSet<ASTNode> getFragments();
 	
 }

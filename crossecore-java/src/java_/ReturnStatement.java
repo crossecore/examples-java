@@ -3,19 +3,19 @@ public interface ReturnStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<ReturnStatement> allInstances_ = new Ocllib.QuickSet<ReturnStatement>(ReturnStatement.class);
+	public static com.crossecore.ocl.QuickSet<ReturnStatement> allInstances_ = new com.crossecore.ocl.QuickSet<ReturnStatement>(ReturnStatement.class);
 	
 		
-	public static Ocllib.QuickSet<ReturnStatement> allInstances(){
+	public static com.crossecore.ocl.QuickSet<ReturnStatement> allInstances(){
 		
-		Ocllib.QuickSet<ReturnStatement> result = new Ocllib.QuickSet<ReturnStatement>(ReturnStatement.class);
+		com.crossecore.ocl.QuickSet<ReturnStatement> result = new com.crossecore.ocl.QuickSet<ReturnStatement>(ReturnStatement.class);
 		result.addAll(ReturnStatement.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<ReturnStatement> allInstances = new Ocllib.QuickSet<ReturnStatement>(ReturnStatement.class);
+	//public static com.crossecore.ocl.QuickSet<ReturnStatement> allInstances = new com.crossecore.ocl.QuickSet<ReturnStatement>(ReturnStatement.class);
 	
 	
 	Expression getExpression();

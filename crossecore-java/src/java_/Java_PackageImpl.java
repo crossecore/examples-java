@@ -191,245 +191,245 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 	                if (isCreated) return;
 	                isCreated = true;
 			AbstractMethodDeclarationEClass = createEClass(ABSTRACTMETHODDECLARATION);
-			createEReference(AbstractMethodDeclarationEClass, ABSTRACTMETHODDECLARATION_BODY);
-			createEReference(AbstractMethodDeclarationEClass, ABSTRACTMETHODDECLARATION_PARAMETERS);
-			createEReference(AbstractMethodDeclarationEClass, ABSTRACTMETHODDECLARATION_THROWNEXCEPTIONS);
-			createEReference(AbstractMethodDeclarationEClass, ABSTRACTMETHODDECLARATION_TYPEPARAMETERS);
-			createEReference(AbstractMethodDeclarationEClass, ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS);
-			createEReference(AbstractMethodDeclarationEClass, ABSTRACTMETHODDECLARATION_USAGES);
+			createEReference(AbstractMethodDeclarationEClass, ABSTRACT_METHOD_DECLARATION__BODY);
+			createEReference(AbstractMethodDeclarationEClass, ABSTRACT_METHOD_DECLARATION__PARAMETERS);
+			createEReference(AbstractMethodDeclarationEClass, ABSTRACT_METHOD_DECLARATION__THROWN_EXCEPTIONS);
+			createEReference(AbstractMethodDeclarationEClass, ABSTRACT_METHOD_DECLARATION__TYPE_PARAMETERS);
+			createEReference(AbstractMethodDeclarationEClass, ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS);
+			createEReference(AbstractMethodDeclarationEClass, ABSTRACT_METHOD_DECLARATION__USAGES);
 			AbstractMethodInvocationEClass = createEClass(ABSTRACTMETHODINVOCATION);
-			createEReference(AbstractMethodInvocationEClass, ABSTRACTMETHODINVOCATION_METHOD);
-			createEReference(AbstractMethodInvocationEClass, ABSTRACTMETHODINVOCATION_ARGUMENTS);
-			createEReference(AbstractMethodInvocationEClass, ABSTRACTMETHODINVOCATION_TYPEARGUMENTS);
+			createEReference(AbstractMethodInvocationEClass, ABSTRACT_METHOD_INVOCATION__METHOD);
+			createEReference(AbstractMethodInvocationEClass, ABSTRACT_METHOD_INVOCATION__ARGUMENTS);
+			createEReference(AbstractMethodInvocationEClass, ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS);
 			AbstractTypeDeclarationEClass = createEClass(ABSTRACTTYPEDECLARATION);
-			createEReference(AbstractTypeDeclarationEClass, ABSTRACTTYPEDECLARATION_BODYDECLARATIONS);
-			createEReference(AbstractTypeDeclarationEClass, ABSTRACTTYPEDECLARATION_COMMENTSBEFOREBODY);
-			createEReference(AbstractTypeDeclarationEClass, ABSTRACTTYPEDECLARATION_COMMENTSAFTERBODY);
-			createEReference(AbstractTypeDeclarationEClass, ABSTRACTTYPEDECLARATION_PACKAGE);
-			createEReference(AbstractTypeDeclarationEClass, ABSTRACTTYPEDECLARATION_SUPERINTERFACES);
+			createEReference(AbstractTypeDeclarationEClass, ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS);
+			createEReference(AbstractTypeDeclarationEClass, ABSTRACT_TYPE_DECLARATION__COMMENTS_BEFORE_BODY);
+			createEReference(AbstractTypeDeclarationEClass, ABSTRACT_TYPE_DECLARATION__COMMENTS_AFTER_BODY);
+			createEReference(AbstractTypeDeclarationEClass, ABSTRACT_TYPE_DECLARATION__PACKAGE);
+			createEReference(AbstractTypeDeclarationEClass, ABSTRACT_TYPE_DECLARATION__SUPER_INTERFACES);
 			AbstractTypeQualifiedExpressionEClass = createEClass(ABSTRACTTYPEQUALIFIEDEXPRESSION);
-			createEReference(AbstractTypeQualifiedExpressionEClass, ABSTRACTTYPEQUALIFIEDEXPRESSION_QUALIFIER);
+			createEReference(AbstractTypeQualifiedExpressionEClass, ABSTRACT_TYPE_QUALIFIED_EXPRESSION__QUALIFIER);
 			AbstractVariablesContainerEClass = createEClass(ABSTRACTVARIABLESCONTAINER);
-			createEReference(AbstractVariablesContainerEClass, ABSTRACTVARIABLESCONTAINER_TYPE);
-			createEReference(AbstractVariablesContainerEClass, ABSTRACTVARIABLESCONTAINER_FRAGMENTS);
+			createEReference(AbstractVariablesContainerEClass, ABSTRACT_VARIABLES_CONTAINER__TYPE);
+			createEReference(AbstractVariablesContainerEClass, ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS);
 			AnnotationEClass = createEClass(ANNOTATION);
-			createEReference(AnnotationEClass, ANNOTATION_TYPE);
-			createEReference(AnnotationEClass, ANNOTATION_VALUES);
+			createEReference(AnnotationEClass, ANNOTATION__TYPE);
+			createEReference(AnnotationEClass, ANNOTATION__VALUES);
 			ArchiveEClass = createEClass(ARCHIVE);
-			createEAttribute(ArchiveEClass, ARCHIVE_ORIGINALFILEPATH);
-			createEReference(ArchiveEClass, ARCHIVE_CLASSFILES);
-			createEReference(ArchiveEClass, ARCHIVE_MANIFEST);
+			createEAttribute(ArchiveEClass, ARCHIVE__ORIGINAL_FILE_PATH);
+			createEReference(ArchiveEClass, ARCHIVE__CLASS_FILES);
+			createEReference(ArchiveEClass, ARCHIVE__MANIFEST);
 			AssertStatementEClass = createEClass(ASSERTSTATEMENT);
-			createEReference(AssertStatementEClass, ASSERTSTATEMENT_MESSAGE);
-			createEReference(AssertStatementEClass, ASSERTSTATEMENT_EXPRESSION);
+			createEReference(AssertStatementEClass, ASSERT_STATEMENT__MESSAGE);
+			createEReference(AssertStatementEClass, ASSERT_STATEMENT__EXPRESSION);
 			ASTNodeEClass = createEClass(ASTNODE);
-			createEReference(ASTNodeEClass, ASTNODE_COMMENTS);
-			createEReference(ASTNodeEClass, ASTNODE_ORIGINALCOMPILATIONUNIT);
-			createEReference(ASTNodeEClass, ASTNODE_ORIGINALCLASSFILE);
+			createEReference(ASTNodeEClass, ASTNODE__COMMENTS);
+			createEReference(ASTNodeEClass, ASTNODE__ORIGINAL_COMPILATION_UNIT);
+			createEReference(ASTNodeEClass, ASTNODE__ORIGINAL_CLASS_FILE);
 			AnnotationMemberValuePairEClass = createEClass(ANNOTATIONMEMBERVALUEPAIR);
-			createEReference(AnnotationMemberValuePairEClass, ANNOTATIONMEMBERVALUEPAIR_MEMBER);
-			createEReference(AnnotationMemberValuePairEClass, ANNOTATIONMEMBERVALUEPAIR_VALUE);
+			createEReference(AnnotationMemberValuePairEClass, ANNOTATION_MEMBER_VALUE_PAIR__MEMBER);
+			createEReference(AnnotationMemberValuePairEClass, ANNOTATION_MEMBER_VALUE_PAIR__VALUE);
 			AnnotationTypeDeclarationEClass = createEClass(ANNOTATIONTYPEDECLARATION);
 			AnnotationTypeMemberDeclarationEClass = createEClass(ANNOTATIONTYPEMEMBERDECLARATION);
-			createEReference(AnnotationTypeMemberDeclarationEClass, ANNOTATIONTYPEMEMBERDECLARATION_DEFAULT);
-			createEReference(AnnotationTypeMemberDeclarationEClass, ANNOTATIONTYPEMEMBERDECLARATION_TYPE);
-			createEReference(AnnotationTypeMemberDeclarationEClass, ANNOTATIONTYPEMEMBERDECLARATION_USAGES);
+			createEReference(AnnotationTypeMemberDeclarationEClass, ANNOTATION_TYPE_MEMBER_DECLARATION__DEFAULT);
+			createEReference(AnnotationTypeMemberDeclarationEClass, ANNOTATION_TYPE_MEMBER_DECLARATION__TYPE);
+			createEReference(AnnotationTypeMemberDeclarationEClass, ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES);
 			AnonymousClassDeclarationEClass = createEClass(ANONYMOUSCLASSDECLARATION);
-			createEReference(AnonymousClassDeclarationEClass, ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS);
-			createEReference(AnonymousClassDeclarationEClass, ANONYMOUSCLASSDECLARATION_CLASSINSTANCECREATION);
+			createEReference(AnonymousClassDeclarationEClass, ANONYMOUS_CLASS_DECLARATION__BODY_DECLARATIONS);
+			createEReference(AnonymousClassDeclarationEClass, ANONYMOUS_CLASS_DECLARATION__CLASS_INSTANCE_CREATION);
 			ArrayAccessEClass = createEClass(ARRAYACCESS);
-			createEReference(ArrayAccessEClass, ARRAYACCESS_ARRAY);
-			createEReference(ArrayAccessEClass, ARRAYACCESS_INDEX);
+			createEReference(ArrayAccessEClass, ARRAY_ACCESS__ARRAY);
+			createEReference(ArrayAccessEClass, ARRAY_ACCESS__INDEX);
 			ArrayCreationEClass = createEClass(ARRAYCREATION);
-			createEReference(ArrayCreationEClass, ARRAYCREATION_DIMENSIONS);
-			createEReference(ArrayCreationEClass, ARRAYCREATION_INITIALIZER);
-			createEReference(ArrayCreationEClass, ARRAYCREATION_TYPE);
+			createEReference(ArrayCreationEClass, ARRAY_CREATION__DIMENSIONS);
+			createEReference(ArrayCreationEClass, ARRAY_CREATION__INITIALIZER);
+			createEReference(ArrayCreationEClass, ARRAY_CREATION__TYPE);
 			ArrayInitializerEClass = createEClass(ARRAYINITIALIZER);
-			createEReference(ArrayInitializerEClass, ARRAYINITIALIZER_EXPRESSIONS);
+			createEReference(ArrayInitializerEClass, ARRAY_INITIALIZER__EXPRESSIONS);
 			ArrayLengthAccessEClass = createEClass(ARRAYLENGTHACCESS);
-			createEReference(ArrayLengthAccessEClass, ARRAYLENGTHACCESS_ARRAY);
+			createEReference(ArrayLengthAccessEClass, ARRAY_LENGTH_ACCESS__ARRAY);
 			ArrayTypeEClass = createEClass(ARRAYTYPE);
-			createEAttribute(ArrayTypeEClass, ARRAYTYPE_DIMENSIONS);
-			createEReference(ArrayTypeEClass, ARRAYTYPE_ELEMENTTYPE);
+			createEAttribute(ArrayTypeEClass, ARRAY_TYPE__DIMENSIONS);
+			createEReference(ArrayTypeEClass, ARRAY_TYPE__ELEMENT_TYPE);
 			AssignmentEClass = createEClass(ASSIGNMENT);
-			createEReference(AssignmentEClass, ASSIGNMENT_LEFTHANDSIDE);
-			createEAttribute(AssignmentEClass, ASSIGNMENT_OPERATOR);
-			createEReference(AssignmentEClass, ASSIGNMENT_RIGHTHANDSIDE);
+			createEReference(AssignmentEClass, ASSIGNMENT__LEFT_HAND_SIDE);
+			createEAttribute(AssignmentEClass, ASSIGNMENT__OPERATOR);
+			createEReference(AssignmentEClass, ASSIGNMENT__RIGHT_HAND_SIDE);
 			BodyDeclarationEClass = createEClass(BODYDECLARATION);
-			createEReference(BodyDeclarationEClass, BODYDECLARATION_ABSTRACTTYPEDECLARATION);
-			createEReference(BodyDeclarationEClass, BODYDECLARATION_ANNOTATIONS);
-			createEReference(BodyDeclarationEClass, BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER);
-			createEReference(BodyDeclarationEClass, BODYDECLARATION_MODIFIER);
+			createEReference(BodyDeclarationEClass, BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION);
+			createEReference(BodyDeclarationEClass, BODY_DECLARATION__ANNOTATIONS);
+			createEReference(BodyDeclarationEClass, BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER);
+			createEReference(BodyDeclarationEClass, BODY_DECLARATION__MODIFIER);
 			BooleanLiteralEClass = createEClass(BOOLEANLITERAL);
-			createEAttribute(BooleanLiteralEClass, BOOLEANLITERAL_VALUE);
+			createEAttribute(BooleanLiteralEClass, BOOLEAN_LITERAL__VALUE);
 			BlockCommentEClass = createEClass(BLOCKCOMMENT);
 			BlockEClass = createEClass(BLOCK);
-			createEReference(BlockEClass, BLOCK_STATEMENTS);
+			createEReference(BlockEClass, BLOCK__STATEMENTS);
 			BreakStatementEClass = createEClass(BREAKSTATEMENT);
-			createEReference(BreakStatementEClass, BREAKSTATEMENT_LABEL);
+			createEReference(BreakStatementEClass, BREAK_STATEMENT__LABEL);
 			CastExpressionEClass = createEClass(CASTEXPRESSION);
-			createEReference(CastExpressionEClass, CASTEXPRESSION_EXPRESSION);
-			createEReference(CastExpressionEClass, CASTEXPRESSION_TYPE);
+			createEReference(CastExpressionEClass, CAST_EXPRESSION__EXPRESSION);
+			createEReference(CastExpressionEClass, CAST_EXPRESSION__TYPE);
 			CatchClauseEClass = createEClass(CATCHCLAUSE);
-			createEReference(CatchClauseEClass, CATCHCLAUSE_EXCEPTION);
-			createEReference(CatchClauseEClass, CATCHCLAUSE_BODY);
+			createEReference(CatchClauseEClass, CATCH_CLAUSE__EXCEPTION);
+			createEReference(CatchClauseEClass, CATCH_CLAUSE__BODY);
 			CharacterLiteralEClass = createEClass(CHARACTERLITERAL);
-			createEAttribute(CharacterLiteralEClass, CHARACTERLITERAL_ESCAPEDVALUE);
+			createEAttribute(CharacterLiteralEClass, CHARACTER_LITERAL__ESCAPED_VALUE);
 			ClassFileEClass = createEClass(CLASSFILE);
-			createEAttribute(ClassFileEClass, CLASSFILE_ORIGINALFILEPATH);
-			createEReference(ClassFileEClass, CLASSFILE_TYPE);
-			createEReference(ClassFileEClass, CLASSFILE_ATTACHEDSOURCE);
-			createEReference(ClassFileEClass, CLASSFILE_PACKAGE);
+			createEAttribute(ClassFileEClass, CLASS_FILE__ORIGINAL_FILE_PATH);
+			createEReference(ClassFileEClass, CLASS_FILE__TYPE);
+			createEReference(ClassFileEClass, CLASS_FILE__ATTACHED_SOURCE);
+			createEReference(ClassFileEClass, CLASS_FILE__PACKAGE);
 			ClassInstanceCreationEClass = createEClass(CLASSINSTANCECREATION);
-			createEReference(ClassInstanceCreationEClass, CLASSINSTANCECREATION_ANONYMOUSCLASSDECLARATION);
-			createEReference(ClassInstanceCreationEClass, CLASSINSTANCECREATION_EXPRESSION);
-			createEReference(ClassInstanceCreationEClass, CLASSINSTANCECREATION_TYPE);
+			createEReference(ClassInstanceCreationEClass, CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION);
+			createEReference(ClassInstanceCreationEClass, CLASS_INSTANCE_CREATION__EXPRESSION);
+			createEReference(ClassInstanceCreationEClass, CLASS_INSTANCE_CREATION__TYPE);
 			ConstructorDeclarationEClass = createEClass(CONSTRUCTORDECLARATION);
 			ConditionalExpressionEClass = createEClass(CONDITIONALEXPRESSION);
-			createEReference(ConditionalExpressionEClass, CONDITIONALEXPRESSION_ELSEEXPRESSION);
-			createEReference(ConditionalExpressionEClass, CONDITIONALEXPRESSION_EXPRESSION);
-			createEReference(ConditionalExpressionEClass, CONDITIONALEXPRESSION_THENEXPRESSION);
+			createEReference(ConditionalExpressionEClass, CONDITIONAL_EXPRESSION__ELSE_EXPRESSION);
+			createEReference(ConditionalExpressionEClass, CONDITIONAL_EXPRESSION__EXPRESSION);
+			createEReference(ConditionalExpressionEClass, CONDITIONAL_EXPRESSION__THEN_EXPRESSION);
 			ConstructorInvocationEClass = createEClass(CONSTRUCTORINVOCATION);
 			ClassDeclarationEClass = createEClass(CLASSDECLARATION);
-			createEReference(ClassDeclarationEClass, CLASSDECLARATION_SUPERCLASS);
+			createEReference(ClassDeclarationEClass, CLASS_DECLARATION__SUPER_CLASS);
 			CommentEClass = createEClass(COMMENT);
-			createEAttribute(CommentEClass, COMMENT_CONTENT);
-			createEAttribute(CommentEClass, COMMENT_ENCLOSEDBYPARENT);
-			createEAttribute(CommentEClass, COMMENT_PREFIXOFPARENT);
+			createEAttribute(CommentEClass, COMMENT__CONTENT);
+			createEAttribute(CommentEClass, COMMENT__ENCLOSED_BY_PARENT);
+			createEAttribute(CommentEClass, COMMENT__PREFIX_OF_PARENT);
 			CompilationUnitEClass = createEClass(COMPILATIONUNIT);
-			createEAttribute(CompilationUnitEClass, COMPILATIONUNIT_ORIGINALFILEPATH);
-			createEReference(CompilationUnitEClass, COMPILATIONUNIT_COMMENTLIST);
-			createEReference(CompilationUnitEClass, COMPILATIONUNIT_IMPORTS);
-			createEReference(CompilationUnitEClass, COMPILATIONUNIT_PACKAGE);
-			createEReference(CompilationUnitEClass, COMPILATIONUNIT_TYPES);
+			createEAttribute(CompilationUnitEClass, COMPILATION_UNIT__ORIGINAL_FILE_PATH);
+			createEReference(CompilationUnitEClass, COMPILATION_UNIT__COMMENT_LIST);
+			createEReference(CompilationUnitEClass, COMPILATION_UNIT__IMPORTS);
+			createEReference(CompilationUnitEClass, COMPILATION_UNIT__PACKAGE);
+			createEReference(CompilationUnitEClass, COMPILATION_UNIT__TYPES);
 			ContinueStatementEClass = createEClass(CONTINUESTATEMENT);
-			createEReference(ContinueStatementEClass, CONTINUESTATEMENT_LABEL);
+			createEReference(ContinueStatementEClass, CONTINUE_STATEMENT__LABEL);
 			DoStatementEClass = createEClass(DOSTATEMENT);
-			createEReference(DoStatementEClass, DOSTATEMENT_EXPRESSION);
-			createEReference(DoStatementEClass, DOSTATEMENT_BODY);
+			createEReference(DoStatementEClass, DO_STATEMENT__EXPRESSION);
+			createEReference(DoStatementEClass, DO_STATEMENT__BODY);
 			EmptyStatementEClass = createEClass(EMPTYSTATEMENT);
 			EnhancedForStatementEClass = createEClass(ENHANCEDFORSTATEMENT);
-			createEReference(EnhancedForStatementEClass, ENHANCEDFORSTATEMENT_BODY);
-			createEReference(EnhancedForStatementEClass, ENHANCEDFORSTATEMENT_EXPRESSION);
-			createEReference(EnhancedForStatementEClass, ENHANCEDFORSTATEMENT_PARAMETER);
+			createEReference(EnhancedForStatementEClass, ENHANCED_FOR_STATEMENT__BODY);
+			createEReference(EnhancedForStatementEClass, ENHANCED_FOR_STATEMENT__EXPRESSION);
+			createEReference(EnhancedForStatementEClass, ENHANCED_FOR_STATEMENT__PARAMETER);
 			EnumConstantDeclarationEClass = createEClass(ENUMCONSTANTDECLARATION);
-			createEReference(EnumConstantDeclarationEClass, ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION);
-			createEReference(EnumConstantDeclarationEClass, ENUMCONSTANTDECLARATION_ARGUMENTS);
+			createEReference(EnumConstantDeclarationEClass, ENUM_CONSTANT_DECLARATION__ANONYMOUS_CLASS_DECLARATION);
+			createEReference(EnumConstantDeclarationEClass, ENUM_CONSTANT_DECLARATION__ARGUMENTS);
 			EnumDeclarationEClass = createEClass(ENUMDECLARATION);
-			createEReference(EnumDeclarationEClass, ENUMDECLARATION_ENUMCONSTANTS);
+			createEReference(EnumDeclarationEClass, ENUM_DECLARATION__ENUM_CONSTANTS);
 			ExpressionEClass = createEClass(EXPRESSION);
 			ExpressionStatementEClass = createEClass(EXPRESSIONSTATEMENT);
-			createEReference(ExpressionStatementEClass, EXPRESSIONSTATEMENT_EXPRESSION);
+			createEReference(ExpressionStatementEClass, EXPRESSION_STATEMENT__EXPRESSION);
 			FieldAccessEClass = createEClass(FIELDACCESS);
-			createEReference(FieldAccessEClass, FIELDACCESS_FIELD);
-			createEReference(FieldAccessEClass, FIELDACCESS_EXPRESSION);
+			createEReference(FieldAccessEClass, FIELD_ACCESS__FIELD);
+			createEReference(FieldAccessEClass, FIELD_ACCESS__EXPRESSION);
 			FieldDeclarationEClass = createEClass(FIELDDECLARATION);
 			ForStatementEClass = createEClass(FORSTATEMENT);
-			createEReference(ForStatementEClass, FORSTATEMENT_EXPRESSION);
-			createEReference(ForStatementEClass, FORSTATEMENT_UPDATERS);
-			createEReference(ForStatementEClass, FORSTATEMENT_INITIALIZERS);
-			createEReference(ForStatementEClass, FORSTATEMENT_BODY);
+			createEReference(ForStatementEClass, FOR_STATEMENT__EXPRESSION);
+			createEReference(ForStatementEClass, FOR_STATEMENT__UPDATERS);
+			createEReference(ForStatementEClass, FOR_STATEMENT__INITIALIZERS);
+			createEReference(ForStatementEClass, FOR_STATEMENT__BODY);
 			IfStatementEClass = createEClass(IFSTATEMENT);
-			createEReference(IfStatementEClass, IFSTATEMENT_EXPRESSION);
-			createEReference(IfStatementEClass, IFSTATEMENT_THENSTATEMENT);
-			createEReference(IfStatementEClass, IFSTATEMENT_ELSESTATEMENT);
+			createEReference(IfStatementEClass, IF_STATEMENT__EXPRESSION);
+			createEReference(IfStatementEClass, IF_STATEMENT__THEN_STATEMENT);
+			createEReference(IfStatementEClass, IF_STATEMENT__ELSE_STATEMENT);
 			ImportDeclarationEClass = createEClass(IMPORTDECLARATION);
-			createEAttribute(ImportDeclarationEClass, IMPORTDECLARATION_STATIC);
-			createEReference(ImportDeclarationEClass, IMPORTDECLARATION_IMPORTEDELEMENT);
+			createEAttribute(ImportDeclarationEClass, IMPORT_DECLARATION__STATIC);
+			createEReference(ImportDeclarationEClass, IMPORT_DECLARATION__IMPORTED_ELEMENT);
 			InfixExpressionEClass = createEClass(INFIXEXPRESSION);
-			createEAttribute(InfixExpressionEClass, INFIXEXPRESSION_OPERATOR);
-			createEReference(InfixExpressionEClass, INFIXEXPRESSION_RIGHTOPERAND);
-			createEReference(InfixExpressionEClass, INFIXEXPRESSION_LEFTOPERAND);
-			createEReference(InfixExpressionEClass, INFIXEXPRESSION_EXTENDEDOPERANDS);
+			createEAttribute(InfixExpressionEClass, INFIX_EXPRESSION__OPERATOR);
+			createEReference(InfixExpressionEClass, INFIX_EXPRESSION__RIGHT_OPERAND);
+			createEReference(InfixExpressionEClass, INFIX_EXPRESSION__LEFT_OPERAND);
+			createEReference(InfixExpressionEClass, INFIX_EXPRESSION__EXTENDED_OPERANDS);
 			InitializerEClass = createEClass(INITIALIZER);
-			createEReference(InitializerEClass, INITIALIZER_BODY);
+			createEReference(InitializerEClass, INITIALIZER__BODY);
 			InstanceofExpressionEClass = createEClass(INSTANCEOFEXPRESSION);
-			createEReference(InstanceofExpressionEClass, INSTANCEOFEXPRESSION_RIGHTOPERAND);
-			createEReference(InstanceofExpressionEClass, INSTANCEOFEXPRESSION_LEFTOPERAND);
+			createEReference(InstanceofExpressionEClass, INSTANCEOF_EXPRESSION__RIGHT_OPERAND);
+			createEReference(InstanceofExpressionEClass, INSTANCEOF_EXPRESSION__LEFT_OPERAND);
 			InterfaceDeclarationEClass = createEClass(INTERFACEDECLARATION);
 			JavadocEClass = createEClass(JAVADOC);
-			createEReference(JavadocEClass, JAVADOC_TAGS);
+			createEReference(JavadocEClass, JAVADOC__TAGS);
 			LabeledStatementEClass = createEClass(LABELEDSTATEMENT);
-			createEReference(LabeledStatementEClass, LABELEDSTATEMENT_BODY);
-			createEReference(LabeledStatementEClass, LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS);
-			createEReference(LabeledStatementEClass, LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS);
+			createEReference(LabeledStatementEClass, LABELED_STATEMENT__BODY);
+			createEReference(LabeledStatementEClass, LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS);
+			createEReference(LabeledStatementEClass, LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS);
 			LineCommentEClass = createEClass(LINECOMMENT);
 			ManifestEClass = createEClass(MANIFEST);
-			createEReference(ManifestEClass, MANIFEST_MAINATTRIBUTES);
-			createEReference(ManifestEClass, MANIFEST_ENTRYATTRIBUTES);
+			createEReference(ManifestEClass, MANIFEST__MAIN_ATTRIBUTES);
+			createEReference(ManifestEClass, MANIFEST__ENTRY_ATTRIBUTES);
 			ManifestAttributeEClass = createEClass(MANIFESTATTRIBUTE);
-			createEAttribute(ManifestAttributeEClass, MANIFESTATTRIBUTE_KEY);
-			createEAttribute(ManifestAttributeEClass, MANIFESTATTRIBUTE_VALUE);
+			createEAttribute(ManifestAttributeEClass, MANIFEST_ATTRIBUTE__KEY);
+			createEAttribute(ManifestAttributeEClass, MANIFEST_ATTRIBUTE__VALUE);
 			ManifestEntryEClass = createEClass(MANIFESTENTRY);
-			createEAttribute(ManifestEntryEClass, MANIFESTENTRY_NAME);
-			createEReference(ManifestEntryEClass, MANIFESTENTRY_ATTRIBUTES);
+			createEAttribute(ManifestEntryEClass, MANIFEST_ENTRY__NAME);
+			createEReference(ManifestEntryEClass, MANIFEST_ENTRY__ATTRIBUTES);
 			MemberRefEClass = createEClass(MEMBERREF);
-			createEReference(MemberRefEClass, MEMBERREF_MEMBER);
-			createEReference(MemberRefEClass, MEMBERREF_QUALIFIER);
+			createEReference(MemberRefEClass, MEMBER_REF__MEMBER);
+			createEReference(MemberRefEClass, MEMBER_REF__QUALIFIER);
 			MethodDeclarationEClass = createEClass(METHODDECLARATION);
-			createEAttribute(MethodDeclarationEClass, METHODDECLARATION_EXTRAARRAYDIMENSIONS);
-			createEReference(MethodDeclarationEClass, METHODDECLARATION_RETURNTYPE);
-			createEReference(MethodDeclarationEClass, METHODDECLARATION_REDEFINEDMETHODDECLARATION);
-			createEReference(MethodDeclarationEClass, METHODDECLARATION_REDEFINITIONS);
+			createEAttribute(MethodDeclarationEClass, METHOD_DECLARATION__EXTRA_ARRAY_DIMENSIONS);
+			createEReference(MethodDeclarationEClass, METHOD_DECLARATION__RETURN_TYPE);
+			createEReference(MethodDeclarationEClass, METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION);
+			createEReference(MethodDeclarationEClass, METHOD_DECLARATION__REDEFINITIONS);
 			MethodInvocationEClass = createEClass(METHODINVOCATION);
-			createEReference(MethodInvocationEClass, METHODINVOCATION_EXPRESSION);
+			createEReference(MethodInvocationEClass, METHOD_INVOCATION__EXPRESSION);
 			MethodRefEClass = createEClass(METHODREF);
-			createEReference(MethodRefEClass, METHODREF_METHOD);
-			createEReference(MethodRefEClass, METHODREF_QUALIFIER);
-			createEReference(MethodRefEClass, METHODREF_PARAMETERS);
+			createEReference(MethodRefEClass, METHOD_REF__METHOD);
+			createEReference(MethodRefEClass, METHOD_REF__QUALIFIER);
+			createEReference(MethodRefEClass, METHOD_REF__PARAMETERS);
 			MethodRefParameterEClass = createEClass(METHODREFPARAMETER);
-			createEAttribute(MethodRefParameterEClass, METHODREFPARAMETER_NAME);
-			createEAttribute(MethodRefParameterEClass, METHODREFPARAMETER_VARARGS);
-			createEReference(MethodRefParameterEClass, METHODREFPARAMETER_TYPE);
+			createEAttribute(MethodRefParameterEClass, METHOD_REF_PARAMETER__NAME);
+			createEAttribute(MethodRefParameterEClass, METHOD_REF_PARAMETER__VARARGS);
+			createEReference(MethodRefParameterEClass, METHOD_REF_PARAMETER__TYPE);
 			ModelEClass = createEClass(MODEL);
-			createEAttribute(ModelEClass, MODEL_NAME);
-			createEReference(ModelEClass, MODEL_OWNEDELEMENTS);
-			createEReference(ModelEClass, MODEL_ORPHANTYPES);
-			createEReference(ModelEClass, MODEL_UNRESOLVEDITEMS);
-			createEReference(ModelEClass, MODEL_COMPILATIONUNITS);
-			createEReference(ModelEClass, MODEL_CLASSFILES);
-			createEReference(ModelEClass, MODEL_ARCHIVES);
+			createEAttribute(ModelEClass, MODEL__NAME);
+			createEReference(ModelEClass, MODEL__OWNED_ELEMENTS);
+			createEReference(ModelEClass, MODEL__ORPHAN_TYPES);
+			createEReference(ModelEClass, MODEL__UNRESOLVED_ITEMS);
+			createEReference(ModelEClass, MODEL__COMPILATION_UNITS);
+			createEReference(ModelEClass, MODEL__CLASS_FILES);
+			createEReference(ModelEClass, MODEL__ARCHIVES);
 			ModifierEClass = createEClass(MODIFIER);
-			createEAttribute(ModifierEClass, MODIFIER_VISIBILITY);
-			createEAttribute(ModifierEClass, MODIFIER_INHERITANCE);
-			createEAttribute(ModifierEClass, MODIFIER_STATIC);
-			createEAttribute(ModifierEClass, MODIFIER_TRANSIENT);
-			createEAttribute(ModifierEClass, MODIFIER_VOLATILE);
-			createEAttribute(ModifierEClass, MODIFIER_NATIVE);
-			createEAttribute(ModifierEClass, MODIFIER_STRICTFP);
-			createEAttribute(ModifierEClass, MODIFIER_SYNCHRONIZED);
-			createEReference(ModifierEClass, MODIFIER_BODYDECLARATION);
-			createEReference(ModifierEClass, MODIFIER_SINGLEVARIABLEDECLARATION);
-			createEReference(ModifierEClass, MODIFIER_VARIABLEDECLARATIONSTATEMENT);
-			createEReference(ModifierEClass, MODIFIER_VARIABLEDECLARATIONEXPRESSION);
+			createEAttribute(ModifierEClass, MODIFIER__VISIBILITY);
+			createEAttribute(ModifierEClass, MODIFIER__INHERITANCE);
+			createEAttribute(ModifierEClass, MODIFIER__STATIC);
+			createEAttribute(ModifierEClass, MODIFIER__TRANSIENT);
+			createEAttribute(ModifierEClass, MODIFIER__VOLATILE);
+			createEAttribute(ModifierEClass, MODIFIER__NATIVE);
+			createEAttribute(ModifierEClass, MODIFIER__STRICTFP);
+			createEAttribute(ModifierEClass, MODIFIER__SYNCHRONIZED);
+			createEReference(ModifierEClass, MODIFIER__BODY_DECLARATION);
+			createEReference(ModifierEClass, MODIFIER__SINGLE_VARIABLE_DECLARATION);
+			createEReference(ModifierEClass, MODIFIER__VARIABLE_DECLARATION_STATEMENT);
+			createEReference(ModifierEClass, MODIFIER__VARIABLE_DECLARATION_EXPRESSION);
 			NamedElementEClass = createEClass(NAMEDELEMENT);
-			createEAttribute(NamedElementEClass, NAMEDELEMENT_NAME);
-			createEAttribute(NamedElementEClass, NAMEDELEMENT_PROXY);
-			createEReference(NamedElementEClass, NAMEDELEMENT_USAGESINIMPORTS);
+			createEAttribute(NamedElementEClass, NAMED_ELEMENT__NAME);
+			createEAttribute(NamedElementEClass, NAMED_ELEMENT__PROXY);
+			createEReference(NamedElementEClass, NAMED_ELEMENT__USAGES_IN_IMPORTS);
 			NamespaceAccessEClass = createEClass(NAMESPACEACCESS);
 			NumberLiteralEClass = createEClass(NUMBERLITERAL);
-			createEAttribute(NumberLiteralEClass, NUMBERLITERAL_TOKENVALUE);
+			createEAttribute(NumberLiteralEClass, NUMBER_LITERAL__TOKEN_VALUE);
 			NullLiteralEClass = createEClass(NULLLITERAL);
 			PackageEClass = createEClass(PACKAGE);
-			createEReference(PackageEClass, PACKAGE_OWNEDELEMENTS);
-			createEReference(PackageEClass, PACKAGE_MODEL);
-			createEReference(PackageEClass, PACKAGE_OWNEDPACKAGES);
-			createEReference(PackageEClass, PACKAGE_PACKAGE);
-			createEReference(PackageEClass, PACKAGE_USAGESINPACKAGEACCESS);
+			createEReference(PackageEClass, PACKAGE__OWNED_ELEMENTS);
+			createEReference(PackageEClass, PACKAGE__MODEL);
+			createEReference(PackageEClass, PACKAGE__OWNED_PACKAGES);
+			createEReference(PackageEClass, PACKAGE__PACKAGE);
+			createEReference(PackageEClass, PACKAGE__USAGES_IN_PACKAGE_ACCESS);
 			PackageAccessEClass = createEClass(PACKAGEACCESS);
-			createEReference(PackageAccessEClass, PACKAGEACCESS_PACKAGE);
-			createEReference(PackageAccessEClass, PACKAGEACCESS_QUALIFIER);
+			createEReference(PackageAccessEClass, PACKAGE_ACCESS__PACKAGE);
+			createEReference(PackageAccessEClass, PACKAGE_ACCESS__QUALIFIER);
 			ParameterizedTypeEClass = createEClass(PARAMETERIZEDTYPE);
-			createEReference(ParameterizedTypeEClass, PARAMETERIZEDTYPE_TYPE);
-			createEReference(ParameterizedTypeEClass, PARAMETERIZEDTYPE_TYPEARGUMENTS);
+			createEReference(ParameterizedTypeEClass, PARAMETERIZED_TYPE__TYPE);
+			createEReference(ParameterizedTypeEClass, PARAMETERIZED_TYPE__TYPE_ARGUMENTS);
 			ParenthesizedExpressionEClass = createEClass(PARENTHESIZEDEXPRESSION);
-			createEReference(ParenthesizedExpressionEClass, PARENTHESIZEDEXPRESSION_EXPRESSION);
+			createEReference(ParenthesizedExpressionEClass, PARENTHESIZED_EXPRESSION__EXPRESSION);
 			PostfixExpressionEClass = createEClass(POSTFIXEXPRESSION);
-			createEAttribute(PostfixExpressionEClass, POSTFIXEXPRESSION_OPERATOR);
-			createEReference(PostfixExpressionEClass, POSTFIXEXPRESSION_OPERAND);
+			createEAttribute(PostfixExpressionEClass, POSTFIX_EXPRESSION__OPERATOR);
+			createEReference(PostfixExpressionEClass, POSTFIX_EXPRESSION__OPERAND);
 			PrefixExpressionEClass = createEClass(PREFIXEXPRESSION);
-			createEAttribute(PrefixExpressionEClass, PREFIXEXPRESSION_OPERATOR);
-			createEReference(PrefixExpressionEClass, PREFIXEXPRESSION_OPERAND);
+			createEAttribute(PrefixExpressionEClass, PREFIX_EXPRESSION__OPERATOR);
+			createEReference(PrefixExpressionEClass, PREFIX_EXPRESSION__OPERAND);
 			PrimitiveTypeEClass = createEClass(PRIMITIVETYPE);
 			PrimitiveTypeBooleanEClass = createEClass(PRIMITIVETYPEBOOLEAN);
 			PrimitiveTypeByteEClass = createEClass(PRIMITIVETYPEBYTE);
@@ -441,64 +441,64 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			PrimitiveTypeLongEClass = createEClass(PRIMITIVETYPELONG);
 			PrimitiveTypeVoidEClass = createEClass(PRIMITIVETYPEVOID);
 			ReturnStatementEClass = createEClass(RETURNSTATEMENT);
-			createEReference(ReturnStatementEClass, RETURNSTATEMENT_EXPRESSION);
+			createEReference(ReturnStatementEClass, RETURN_STATEMENT__EXPRESSION);
 			SingleVariableAccessEClass = createEClass(SINGLEVARIABLEACCESS);
-			createEReference(SingleVariableAccessEClass, SINGLEVARIABLEACCESS_VARIABLE);
-			createEReference(SingleVariableAccessEClass, SINGLEVARIABLEACCESS_QUALIFIER);
+			createEReference(SingleVariableAccessEClass, SINGLE_VARIABLE_ACCESS__VARIABLE);
+			createEReference(SingleVariableAccessEClass, SINGLE_VARIABLE_ACCESS__QUALIFIER);
 			SingleVariableDeclarationEClass = createEClass(SINGLEVARIABLEDECLARATION);
-			createEReference(SingleVariableDeclarationEClass, SINGLEVARIABLEDECLARATION_MODIFIER);
-			createEAttribute(SingleVariableDeclarationEClass, SINGLEVARIABLEDECLARATION_VARARGS);
-			createEReference(SingleVariableDeclarationEClass, SINGLEVARIABLEDECLARATION_TYPE);
-			createEReference(SingleVariableDeclarationEClass, SINGLEVARIABLEDECLARATION_ANNOTATIONS);
-			createEReference(SingleVariableDeclarationEClass, SINGLEVARIABLEDECLARATION_METHODDECLARATION);
-			createEReference(SingleVariableDeclarationEClass, SINGLEVARIABLEDECLARATION_CATCHCLAUSE);
-			createEReference(SingleVariableDeclarationEClass, SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT);
+			createEReference(SingleVariableDeclarationEClass, SINGLE_VARIABLE_DECLARATION__MODIFIER);
+			createEAttribute(SingleVariableDeclarationEClass, SINGLE_VARIABLE_DECLARATION__VARARGS);
+			createEReference(SingleVariableDeclarationEClass, SINGLE_VARIABLE_DECLARATION__TYPE);
+			createEReference(SingleVariableDeclarationEClass, SINGLE_VARIABLE_DECLARATION__ANNOTATIONS);
+			createEReference(SingleVariableDeclarationEClass, SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION);
+			createEReference(SingleVariableDeclarationEClass, SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE);
+			createEReference(SingleVariableDeclarationEClass, SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT);
 			StatementEClass = createEClass(STATEMENT);
 			StringLiteralEClass = createEClass(STRINGLITERAL);
-			createEAttribute(StringLiteralEClass, STRINGLITERAL_ESCAPEDVALUE);
+			createEAttribute(StringLiteralEClass, STRING_LITERAL__ESCAPED_VALUE);
 			SuperConstructorInvocationEClass = createEClass(SUPERCONSTRUCTORINVOCATION);
-			createEReference(SuperConstructorInvocationEClass, SUPERCONSTRUCTORINVOCATION_EXPRESSION);
+			createEReference(SuperConstructorInvocationEClass, SUPER_CONSTRUCTOR_INVOCATION__EXPRESSION);
 			SuperFieldAccessEClass = createEClass(SUPERFIELDACCESS);
-			createEReference(SuperFieldAccessEClass, SUPERFIELDACCESS_FIELD);
+			createEReference(SuperFieldAccessEClass, SUPER_FIELD_ACCESS__FIELD);
 			SuperMethodInvocationEClass = createEClass(SUPERMETHODINVOCATION);
 			SwitchCaseEClass = createEClass(SWITCHCASE);
-			createEAttribute(SwitchCaseEClass, SWITCHCASE_DEFAULT);
-			createEReference(SwitchCaseEClass, SWITCHCASE_EXPRESSION);
+			createEAttribute(SwitchCaseEClass, SWITCH_CASE__DEFAULT);
+			createEReference(SwitchCaseEClass, SWITCH_CASE__EXPRESSION);
 			SwitchStatementEClass = createEClass(SWITCHSTATEMENT);
-			createEReference(SwitchStatementEClass, SWITCHSTATEMENT_EXPRESSION);
-			createEReference(SwitchStatementEClass, SWITCHSTATEMENT_STATEMENTS);
+			createEReference(SwitchStatementEClass, SWITCH_STATEMENT__EXPRESSION);
+			createEReference(SwitchStatementEClass, SWITCH_STATEMENT__STATEMENTS);
 			SynchronizedStatementEClass = createEClass(SYNCHRONIZEDSTATEMENT);
-			createEReference(SynchronizedStatementEClass, SYNCHRONIZEDSTATEMENT_BODY);
-			createEReference(SynchronizedStatementEClass, SYNCHRONIZEDSTATEMENT_EXPRESSION);
+			createEReference(SynchronizedStatementEClass, SYNCHRONIZED_STATEMENT__BODY);
+			createEReference(SynchronizedStatementEClass, SYNCHRONIZED_STATEMENT__EXPRESSION);
 			TagElementEClass = createEClass(TAGELEMENT);
-			createEAttribute(TagElementEClass, TAGELEMENT_TAGNAME);
-			createEReference(TagElementEClass, TAGELEMENT_FRAGMENTS);
+			createEAttribute(TagElementEClass, TAG_ELEMENT__TAG_NAME);
+			createEReference(TagElementEClass, TAG_ELEMENT__FRAGMENTS);
 			TextElementEClass = createEClass(TEXTELEMENT);
-			createEAttribute(TextElementEClass, TEXTELEMENT_TEXT);
+			createEAttribute(TextElementEClass, TEXT_ELEMENT__TEXT);
 			ThisExpressionEClass = createEClass(THISEXPRESSION);
 			ThrowStatementEClass = createEClass(THROWSTATEMENT);
-			createEReference(ThrowStatementEClass, THROWSTATEMENT_EXPRESSION);
+			createEReference(ThrowStatementEClass, THROW_STATEMENT__EXPRESSION);
 			TryStatementEClass = createEClass(TRYSTATEMENT);
-			createEReference(TryStatementEClass, TRYSTATEMENT_BODY);
-			createEReference(TryStatementEClass, TRYSTATEMENT_FINALLY);
-			createEReference(TryStatementEClass, TRYSTATEMENT_CATCHCLAUSES);
+			createEReference(TryStatementEClass, TRY_STATEMENT__BODY);
+			createEReference(TryStatementEClass, TRY_STATEMENT__FINALLY);
+			createEReference(TryStatementEClass, TRY_STATEMENT__CATCH_CLAUSES);
 			TypeEClass = createEClass(TYPE);
-			createEReference(TypeEClass, TYPE_USAGESINTYPEACCESS);
+			createEReference(TypeEClass, TYPE__USAGES_IN_TYPE_ACCESS);
 			TypeAccessEClass = createEClass(TYPEACCESS);
-			createEReference(TypeAccessEClass, TYPEACCESS_TYPE);
-			createEReference(TypeAccessEClass, TYPEACCESS_QUALIFIER);
+			createEReference(TypeAccessEClass, TYPE_ACCESS__TYPE);
+			createEReference(TypeAccessEClass, TYPE_ACCESS__QUALIFIER);
 			TypeDeclarationEClass = createEClass(TYPEDECLARATION);
-			createEReference(TypeDeclarationEClass, TYPEDECLARATION_TYPEPARAMETERS);
+			createEReference(TypeDeclarationEClass, TYPE_DECLARATION__TYPE_PARAMETERS);
 			TypeDeclarationStatementEClass = createEClass(TYPEDECLARATIONSTATEMENT);
-			createEReference(TypeDeclarationStatementEClass, TYPEDECLARATIONSTATEMENT_DECLARATION);
+			createEReference(TypeDeclarationStatementEClass, TYPE_DECLARATION_STATEMENT__DECLARATION);
 			TypeLiteralEClass = createEClass(TYPELITERAL);
-			createEReference(TypeLiteralEClass, TYPELITERAL_TYPE);
+			createEReference(TypeLiteralEClass, TYPE_LITERAL__TYPE);
 			TypeParameterEClass = createEClass(TYPEPARAMETER);
-			createEReference(TypeParameterEClass, TYPEPARAMETER_BOUNDS);
+			createEReference(TypeParameterEClass, TYPE_PARAMETER__BOUNDS);
 			UnresolvedItemEClass = createEClass(UNRESOLVEDITEM);
 			UnresolvedItemAccessEClass = createEClass(UNRESOLVEDITEMACCESS);
-			createEReference(UnresolvedItemAccessEClass, UNRESOLVEDITEMACCESS_ELEMENT);
-			createEReference(UnresolvedItemAccessEClass, UNRESOLVEDITEMACCESS_QUALIFIER);
+			createEReference(UnresolvedItemAccessEClass, UNRESOLVED_ITEM_ACCESS__ELEMENT);
+			createEReference(UnresolvedItemAccessEClass, UNRESOLVED_ITEM_ACCESS__QUALIFIER);
 			UnresolvedAnnotationDeclarationEClass = createEClass(UNRESOLVEDANNOTATIONDECLARATION);
 			UnresolvedAnnotationTypeMemberDeclarationEClass = createEClass(UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION);
 			UnresolvedClassDeclarationEClass = createEClass(UNRESOLVEDCLASSDECLARATION);
@@ -511,24 +511,24 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			UnresolvedTypeDeclarationEClass = createEClass(UNRESOLVEDTYPEDECLARATION);
 			UnresolvedVariableDeclarationFragmentEClass = createEClass(UNRESOLVEDVARIABLEDECLARATIONFRAGMENT);
 			VariableDeclarationEClass = createEClass(VARIABLEDECLARATION);
-			createEAttribute(VariableDeclarationEClass, VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS);
-			createEReference(VariableDeclarationEClass, VARIABLEDECLARATION_INITIALIZER);
-			createEReference(VariableDeclarationEClass, VARIABLEDECLARATION_USAGEINVARIABLEACCESS);
+			createEAttribute(VariableDeclarationEClass, VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS);
+			createEReference(VariableDeclarationEClass, VARIABLE_DECLARATION__INITIALIZER);
+			createEReference(VariableDeclarationEClass, VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS);
 			VariableDeclarationExpressionEClass = createEClass(VARIABLEDECLARATIONEXPRESSION);
-			createEReference(VariableDeclarationExpressionEClass, VARIABLEDECLARATIONEXPRESSION_MODIFIER);
-			createEReference(VariableDeclarationExpressionEClass, VARIABLEDECLARATIONEXPRESSION_ANNOTATIONS);
+			createEReference(VariableDeclarationExpressionEClass, VARIABLE_DECLARATION_EXPRESSION__MODIFIER);
+			createEReference(VariableDeclarationExpressionEClass, VARIABLE_DECLARATION_EXPRESSION__ANNOTATIONS);
 			VariableDeclarationFragmentEClass = createEClass(VARIABLEDECLARATIONFRAGMENT);
-			createEReference(VariableDeclarationFragmentEClass, VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER);
+			createEReference(VariableDeclarationFragmentEClass, VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER);
 			VariableDeclarationStatementEClass = createEClass(VARIABLEDECLARATIONSTATEMENT);
-			createEAttribute(VariableDeclarationStatementEClass, VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS);
-			createEReference(VariableDeclarationStatementEClass, VARIABLEDECLARATIONSTATEMENT_MODIFIER);
-			createEReference(VariableDeclarationStatementEClass, VARIABLEDECLARATIONSTATEMENT_ANNOTATIONS);
+			createEAttribute(VariableDeclarationStatementEClass, VARIABLE_DECLARATION_STATEMENT__EXTRA_ARRAY_DIMENSIONS);
+			createEReference(VariableDeclarationStatementEClass, VARIABLE_DECLARATION_STATEMENT__MODIFIER);
+			createEReference(VariableDeclarationStatementEClass, VARIABLE_DECLARATION_STATEMENT__ANNOTATIONS);
 			WildCardTypeEClass = createEClass(WILDCARDTYPE);
-			createEAttribute(WildCardTypeEClass, WILDCARDTYPE_UPPERBOUND);
-			createEReference(WildCardTypeEClass, WILDCARDTYPE_BOUND);
+			createEAttribute(WildCardTypeEClass, WILD_CARD_TYPE__UPPER_BOUND);
+			createEReference(WildCardTypeEClass, WILD_CARD_TYPE__BOUND);
 			WhileStatementEClass = createEClass(WHILESTATEMENT);
-			createEReference(WhileStatementEClass, WHILESTATEMENT_EXPRESSION);
-			createEReference(WhileStatementEClass, WHILESTATEMENT_BODY);
+			createEReference(WhileStatementEClass, WHILE_STATEMENT__EXPRESSION);
+			createEReference(WhileStatementEClass, WHILE_STATEMENT__BODY);
 			
 			AssignmentKindEEnum = createEEnum(ASSIGNMENTKIND);
 			InfixExpressionKindEEnum = createEEnum(INFIXEXPRESSIONKIND);
@@ -5641,1603 +5641,1603 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 		public final static int ASTNODE_FEATURE_COUNT = 3;
 		public final static int ASTNODE_OPERATION_COUNT = 0;
 		
-		public final static int ASTNODE_COMMENTS = 0;
-		public final static int ASTNODE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ASTNODE_ORIGINALCLASSFILE = 2;
+		public final static int ASTNODE__COMMENTS = 0;
+		public final static int ASTNODE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ASTNODE__ORIGINAL_CLASS_FILE = 2;
 		
 		public final static int NAMEDELEMENT = 68;
 		public final static int NAMEDELEMENT_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 3;
 		public final static int NAMEDELEMENT_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int NAMEDELEMENT_COMMENTS = 0;
-		public final static int NAMEDELEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int NAMEDELEMENT_ORIGINALCLASSFILE = 2;
-		public final static int NAMEDELEMENT_NAME = 3;
-		public final static int NAMEDELEMENT_PROXY = 4;
-		public final static int NAMEDELEMENT_USAGESINIMPORTS = 5;
+		public final static int NAMED_ELEMENT__COMMENTS = 0;
+		public final static int NAMED_ELEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int NAMED_ELEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int NAMED_ELEMENT__NAME = 3;
+		public final static int NAMED_ELEMENT__PROXY = 4;
+		public final static int NAMED_ELEMENT__USAGES_IN_IMPORTS = 5;
 		
 		public final static int BODYDECLARATION = 20;
 		public final static int BODYDECLARATION_FEATURE_COUNT = NAMEDELEMENT_FEATURE_COUNT + 4;
 		public final static int BODYDECLARATION_OPERATION_COUNT = NAMEDELEMENT_OPERATION_COUNT + 0;
 		
-		public final static int BODYDECLARATION_COMMENTS = 0;
-		public final static int BODYDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int BODYDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int BODYDECLARATION_NAME = 3;
-		public final static int BODYDECLARATION_PROXY = 4;
-		public final static int BODYDECLARATION_USAGESINIMPORTS = 5;
-		public final static int BODYDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int BODYDECLARATION_ANNOTATIONS = 7;
-		public final static int BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int BODYDECLARATION_MODIFIER = 9;
+		public final static int BODY_DECLARATION__COMMENTS = 0;
+		public final static int BODY_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int BODY_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int BODY_DECLARATION__NAME = 3;
+		public final static int BODY_DECLARATION__PROXY = 4;
+		public final static int BODY_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int BODY_DECLARATION__ANNOTATIONS = 7;
+		public final static int BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int BODY_DECLARATION__MODIFIER = 9;
 		
 		public final static int ABSTRACTMETHODDECLARATION = 0;
 		public final static int ABSTRACTMETHODDECLARATION_FEATURE_COUNT = BODYDECLARATION_FEATURE_COUNT + 6;
 		public final static int ABSTRACTMETHODDECLARATION_OPERATION_COUNT = BODYDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int ABSTRACTMETHODDECLARATION_COMMENTS = 0;
-		public final static int ABSTRACTMETHODDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ABSTRACTMETHODDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int ABSTRACTMETHODDECLARATION_NAME = 3;
-		public final static int ABSTRACTMETHODDECLARATION_PROXY = 4;
-		public final static int ABSTRACTMETHODDECLARATION_USAGESINIMPORTS = 5;
-		public final static int ABSTRACTMETHODDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int ABSTRACTMETHODDECLARATION_ANNOTATIONS = 7;
-		public final static int ABSTRACTMETHODDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int ABSTRACTMETHODDECLARATION_MODIFIER = 9;
-		public final static int ABSTRACTMETHODDECLARATION_BODY = 10;
-		public final static int ABSTRACTMETHODDECLARATION_PARAMETERS = 11;
-		public final static int ABSTRACTMETHODDECLARATION_THROWNEXCEPTIONS = 12;
-		public final static int ABSTRACTMETHODDECLARATION_TYPEPARAMETERS = 13;
-		public final static int ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS = 14;
-		public final static int ABSTRACTMETHODDECLARATION_USAGES = 15;
+		public final static int ABSTRACT_METHOD_DECLARATION__COMMENTS = 0;
+		public final static int ABSTRACT_METHOD_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ABSTRACT_METHOD_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int ABSTRACT_METHOD_DECLARATION__NAME = 3;
+		public final static int ABSTRACT_METHOD_DECLARATION__PROXY = 4;
+		public final static int ABSTRACT_METHOD_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int ABSTRACT_METHOD_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int ABSTRACT_METHOD_DECLARATION__ANNOTATIONS = 7;
+		public final static int ABSTRACT_METHOD_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int ABSTRACT_METHOD_DECLARATION__MODIFIER = 9;
+		public final static int ABSTRACT_METHOD_DECLARATION__BODY = 10;
+		public final static int ABSTRACT_METHOD_DECLARATION__PARAMETERS = 11;
+		public final static int ABSTRACT_METHOD_DECLARATION__THROWN_EXCEPTIONS = 12;
+		public final static int ABSTRACT_METHOD_DECLARATION__TYPE_PARAMETERS = 13;
+		public final static int ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS = 14;
+		public final static int ABSTRACT_METHOD_DECLARATION__USAGES = 15;
 		
 		public final static int ABSTRACTMETHODINVOCATION = 1;
 		public final static int ABSTRACTMETHODINVOCATION_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 3;
 		public final static int ABSTRACTMETHODINVOCATION_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int ABSTRACTMETHODINVOCATION_COMMENTS = 0;
-		public final static int ABSTRACTMETHODINVOCATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ABSTRACTMETHODINVOCATION_ORIGINALCLASSFILE = 2;
-		public final static int ABSTRACTMETHODINVOCATION_METHOD = 3;
-		public final static int ABSTRACTMETHODINVOCATION_ARGUMENTS = 4;
-		public final static int ABSTRACTMETHODINVOCATION_TYPEARGUMENTS = 5;
+		public final static int ABSTRACT_METHOD_INVOCATION__COMMENTS = 0;
+		public final static int ABSTRACT_METHOD_INVOCATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ABSTRACT_METHOD_INVOCATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int ABSTRACT_METHOD_INVOCATION__METHOD = 3;
+		public final static int ABSTRACT_METHOD_INVOCATION__ARGUMENTS = 4;
+		public final static int ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS = 5;
 		
 		public final static int TYPE = 106;
 		public final static int TYPE_FEATURE_COUNT = NAMEDELEMENT_FEATURE_COUNT + 1;
 		public final static int TYPE_OPERATION_COUNT = NAMEDELEMENT_OPERATION_COUNT + 0;
 		
-		public final static int TYPE_COMMENTS = 0;
-		public final static int TYPE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int TYPE_ORIGINALCLASSFILE = 2;
-		public final static int TYPE_NAME = 3;
-		public final static int TYPE_PROXY = 4;
-		public final static int TYPE_USAGESINIMPORTS = 5;
-		public final static int TYPE_USAGESINTYPEACCESS = 6;
+		public final static int TYPE__COMMENTS = 0;
+		public final static int TYPE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int TYPE__ORIGINAL_CLASS_FILE = 2;
+		public final static int TYPE__NAME = 3;
+		public final static int TYPE__PROXY = 4;
+		public final static int TYPE__USAGES_IN_IMPORTS = 5;
+		public final static int TYPE__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int ABSTRACTTYPEDECLARATION = 2;
 		public final static int ABSTRACTTYPEDECLARATION_FEATURE_COUNT = BODYDECLARATION_FEATURE_COUNT + TYPE_FEATURE_COUNT + 5;
 		public final static int ABSTRACTTYPEDECLARATION_OPERATION_COUNT = BODYDECLARATION_OPERATION_COUNT + TYPE_OPERATION_COUNT + 0;
 		
-		public final static int ABSTRACTTYPEDECLARATION_COMMENTS = 0;
-		public final static int ABSTRACTTYPEDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ABSTRACTTYPEDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int ABSTRACTTYPEDECLARATION_NAME = 3;
-		public final static int ABSTRACTTYPEDECLARATION_PROXY = 4;
-		public final static int ABSTRACTTYPEDECLARATION_USAGESINIMPORTS = 5;
-		public final static int ABSTRACTTYPEDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int ABSTRACTTYPEDECLARATION_ANNOTATIONS = 7;
-		public final static int ABSTRACTTYPEDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int ABSTRACTTYPEDECLARATION_MODIFIER = 9;
-		public final static int ABSTRACTTYPEDECLARATION_USAGESINTYPEACCESS = 10;
-		public final static int ABSTRACTTYPEDECLARATION_BODYDECLARATIONS = 11;
-		public final static int ABSTRACTTYPEDECLARATION_COMMENTSBEFOREBODY = 12;
-		public final static int ABSTRACTTYPEDECLARATION_COMMENTSAFTERBODY = 13;
-		public final static int ABSTRACTTYPEDECLARATION_PACKAGE = 14;
-		public final static int ABSTRACTTYPEDECLARATION_SUPERINTERFACES = 15;
+		public final static int ABSTRACT_TYPE_DECLARATION__COMMENTS = 0;
+		public final static int ABSTRACT_TYPE_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ABSTRACT_TYPE_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int ABSTRACT_TYPE_DECLARATION__NAME = 3;
+		public final static int ABSTRACT_TYPE_DECLARATION__PROXY = 4;
+		public final static int ABSTRACT_TYPE_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int ABSTRACT_TYPE_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int ABSTRACT_TYPE_DECLARATION__ANNOTATIONS = 7;
+		public final static int ABSTRACT_TYPE_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int ABSTRACT_TYPE_DECLARATION__MODIFIER = 9;
+		public final static int ABSTRACT_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS = 10;
+		public final static int ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS = 11;
+		public final static int ABSTRACT_TYPE_DECLARATION__COMMENTS_BEFORE_BODY = 12;
+		public final static int ABSTRACT_TYPE_DECLARATION__COMMENTS_AFTER_BODY = 13;
+		public final static int ABSTRACT_TYPE_DECLARATION__PACKAGE = 14;
+		public final static int ABSTRACT_TYPE_DECLARATION__SUPER_INTERFACES = 15;
 		
 		public final static int EXPRESSION = 42;
 		public final static int EXPRESSION_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 0;
 		public final static int EXPRESSION_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int EXPRESSION_COMMENTS = 0;
-		public final static int EXPRESSION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int EXPRESSION_ORIGINALCLASSFILE = 2;
+		public final static int EXPRESSION__COMMENTS = 0;
+		public final static int EXPRESSION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int EXPRESSION__ORIGINAL_CLASS_FILE = 2;
 		
 		public final static int ABSTRACTTYPEQUALIFIEDEXPRESSION = 3;
 		public final static int ABSTRACTTYPEQUALIFIEDEXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 		public final static int ABSTRACTTYPEQUALIFIEDEXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int ABSTRACTTYPEQUALIFIEDEXPRESSION_COMMENTS = 0;
-		public final static int ABSTRACTTYPEQUALIFIEDEXPRESSION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ABSTRACTTYPEQUALIFIEDEXPRESSION_ORIGINALCLASSFILE = 2;
-		public final static int ABSTRACTTYPEQUALIFIEDEXPRESSION_QUALIFIER = 3;
+		public final static int ABSTRACT_TYPE_QUALIFIED_EXPRESSION__COMMENTS = 0;
+		public final static int ABSTRACT_TYPE_QUALIFIED_EXPRESSION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ABSTRACT_TYPE_QUALIFIED_EXPRESSION__ORIGINAL_CLASS_FILE = 2;
+		public final static int ABSTRACT_TYPE_QUALIFIED_EXPRESSION__QUALIFIER = 3;
 		
 		public final static int ABSTRACTVARIABLESCONTAINER = 4;
 		public final static int ABSTRACTVARIABLESCONTAINER_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 2;
 		public final static int ABSTRACTVARIABLESCONTAINER_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int ABSTRACTVARIABLESCONTAINER_COMMENTS = 0;
-		public final static int ABSTRACTVARIABLESCONTAINER_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ABSTRACTVARIABLESCONTAINER_ORIGINALCLASSFILE = 2;
-		public final static int ABSTRACTVARIABLESCONTAINER_TYPE = 3;
-		public final static int ABSTRACTVARIABLESCONTAINER_FRAGMENTS = 4;
+		public final static int ABSTRACT_VARIABLES_CONTAINER__COMMENTS = 0;
+		public final static int ABSTRACT_VARIABLES_CONTAINER__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ABSTRACT_VARIABLES_CONTAINER__ORIGINAL_CLASS_FILE = 2;
+		public final static int ABSTRACT_VARIABLES_CONTAINER__TYPE = 3;
+		public final static int ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS = 4;
 		
 		public final static int ANNOTATION = 5;
 		public final static int ANNOTATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 		public final static int ANNOTATION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int ANNOTATION_COMMENTS = 0;
-		public final static int ANNOTATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ANNOTATION_ORIGINALCLASSFILE = 2;
-		public final static int ANNOTATION_TYPE = 3;
-		public final static int ANNOTATION_VALUES = 4;
+		public final static int ANNOTATION__COMMENTS = 0;
+		public final static int ANNOTATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ANNOTATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int ANNOTATION__TYPE = 3;
+		public final static int ANNOTATION__VALUES = 4;
 		
 		public final static int ARCHIVE = 6;
 		public final static int ARCHIVE_FEATURE_COUNT = NAMEDELEMENT_FEATURE_COUNT + 3;
 		public final static int ARCHIVE_OPERATION_COUNT = NAMEDELEMENT_OPERATION_COUNT + 0;
 		
-		public final static int ARCHIVE_COMMENTS = 0;
-		public final static int ARCHIVE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ARCHIVE_ORIGINALCLASSFILE = 2;
-		public final static int ARCHIVE_NAME = 3;
-		public final static int ARCHIVE_PROXY = 4;
-		public final static int ARCHIVE_USAGESINIMPORTS = 5;
-		public final static int ARCHIVE_ORIGINALFILEPATH = 6;
-		public final static int ARCHIVE_CLASSFILES = 7;
-		public final static int ARCHIVE_MANIFEST = 8;
+		public final static int ARCHIVE__COMMENTS = 0;
+		public final static int ARCHIVE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ARCHIVE__ORIGINAL_CLASS_FILE = 2;
+		public final static int ARCHIVE__NAME = 3;
+		public final static int ARCHIVE__PROXY = 4;
+		public final static int ARCHIVE__USAGES_IN_IMPORTS = 5;
+		public final static int ARCHIVE__ORIGINAL_FILE_PATH = 6;
+		public final static int ARCHIVE__CLASS_FILES = 7;
+		public final static int ARCHIVE__MANIFEST = 8;
 		
 		public final static int STATEMENT = 93;
 		public final static int STATEMENT_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 0;
 		public final static int STATEMENT_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int STATEMENT_COMMENTS = 0;
-		public final static int STATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int STATEMENT_ORIGINALCLASSFILE = 2;
+		public final static int STATEMENT__COMMENTS = 0;
+		public final static int STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int STATEMENT__ORIGINAL_CLASS_FILE = 2;
 		
 		public final static int ASSERTSTATEMENT = 7;
 		public final static int ASSERTSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 		public final static int ASSERTSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int ASSERTSTATEMENT_COMMENTS = 0;
-		public final static int ASSERTSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ASSERTSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int ASSERTSTATEMENT_MESSAGE = 3;
-		public final static int ASSERTSTATEMENT_EXPRESSION = 4;
+		public final static int ASSERT_STATEMENT__COMMENTS = 0;
+		public final static int ASSERT_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ASSERT_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int ASSERT_STATEMENT__MESSAGE = 3;
+		public final static int ASSERT_STATEMENT__EXPRESSION = 4;
 		
 		public final static int ANNOTATIONMEMBERVALUEPAIR = 9;
 		public final static int ANNOTATIONMEMBERVALUEPAIR_FEATURE_COUNT = NAMEDELEMENT_FEATURE_COUNT + 2;
 		public final static int ANNOTATIONMEMBERVALUEPAIR_OPERATION_COUNT = NAMEDELEMENT_OPERATION_COUNT + 0;
 		
-		public final static int ANNOTATIONMEMBERVALUEPAIR_COMMENTS = 0;
-		public final static int ANNOTATIONMEMBERVALUEPAIR_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ANNOTATIONMEMBERVALUEPAIR_ORIGINALCLASSFILE = 2;
-		public final static int ANNOTATIONMEMBERVALUEPAIR_NAME = 3;
-		public final static int ANNOTATIONMEMBERVALUEPAIR_PROXY = 4;
-		public final static int ANNOTATIONMEMBERVALUEPAIR_USAGESINIMPORTS = 5;
-		public final static int ANNOTATIONMEMBERVALUEPAIR_MEMBER = 6;
-		public final static int ANNOTATIONMEMBERVALUEPAIR_VALUE = 7;
+		public final static int ANNOTATION_MEMBER_VALUE_PAIR__COMMENTS = 0;
+		public final static int ANNOTATION_MEMBER_VALUE_PAIR__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ANNOTATION_MEMBER_VALUE_PAIR__ORIGINAL_CLASS_FILE = 2;
+		public final static int ANNOTATION_MEMBER_VALUE_PAIR__NAME = 3;
+		public final static int ANNOTATION_MEMBER_VALUE_PAIR__PROXY = 4;
+		public final static int ANNOTATION_MEMBER_VALUE_PAIR__USAGES_IN_IMPORTS = 5;
+		public final static int ANNOTATION_MEMBER_VALUE_PAIR__MEMBER = 6;
+		public final static int ANNOTATION_MEMBER_VALUE_PAIR__VALUE = 7;
 		
 		public final static int ANNOTATIONTYPEDECLARATION = 10;
 		public final static int ANNOTATIONTYPEDECLARATION_FEATURE_COUNT = ABSTRACTTYPEDECLARATION_FEATURE_COUNT + 0;
 		public final static int ANNOTATIONTYPEDECLARATION_OPERATION_COUNT = ABSTRACTTYPEDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int ANNOTATIONTYPEDECLARATION_COMMENTS = 0;
-		public final static int ANNOTATIONTYPEDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ANNOTATIONTYPEDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int ANNOTATIONTYPEDECLARATION_NAME = 3;
-		public final static int ANNOTATIONTYPEDECLARATION_PROXY = 4;
-		public final static int ANNOTATIONTYPEDECLARATION_USAGESINIMPORTS = 5;
-		public final static int ANNOTATIONTYPEDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int ANNOTATIONTYPEDECLARATION_ANNOTATIONS = 7;
-		public final static int ANNOTATIONTYPEDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int ANNOTATIONTYPEDECLARATION_MODIFIER = 9;
-		public final static int ANNOTATIONTYPEDECLARATION_USAGESINTYPEACCESS = 10;
-		public final static int ANNOTATIONTYPEDECLARATION_BODYDECLARATIONS = 11;
-		public final static int ANNOTATIONTYPEDECLARATION_COMMENTSBEFOREBODY = 12;
-		public final static int ANNOTATIONTYPEDECLARATION_COMMENTSAFTERBODY = 13;
-		public final static int ANNOTATIONTYPEDECLARATION_PACKAGE = 14;
-		public final static int ANNOTATIONTYPEDECLARATION_SUPERINTERFACES = 15;
+		public final static int ANNOTATION_TYPE_DECLARATION__COMMENTS = 0;
+		public final static int ANNOTATION_TYPE_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ANNOTATION_TYPE_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int ANNOTATION_TYPE_DECLARATION__NAME = 3;
+		public final static int ANNOTATION_TYPE_DECLARATION__PROXY = 4;
+		public final static int ANNOTATION_TYPE_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int ANNOTATION_TYPE_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int ANNOTATION_TYPE_DECLARATION__ANNOTATIONS = 7;
+		public final static int ANNOTATION_TYPE_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int ANNOTATION_TYPE_DECLARATION__MODIFIER = 9;
+		public final static int ANNOTATION_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS = 10;
+		public final static int ANNOTATION_TYPE_DECLARATION__BODY_DECLARATIONS = 11;
+		public final static int ANNOTATION_TYPE_DECLARATION__COMMENTS_BEFORE_BODY = 12;
+		public final static int ANNOTATION_TYPE_DECLARATION__COMMENTS_AFTER_BODY = 13;
+		public final static int ANNOTATION_TYPE_DECLARATION__PACKAGE = 14;
+		public final static int ANNOTATION_TYPE_DECLARATION__SUPER_INTERFACES = 15;
 		
 		public final static int ANNOTATIONTYPEMEMBERDECLARATION = 11;
 		public final static int ANNOTATIONTYPEMEMBERDECLARATION_FEATURE_COUNT = BODYDECLARATION_FEATURE_COUNT + 3;
 		public final static int ANNOTATIONTYPEMEMBERDECLARATION_OPERATION_COUNT = BODYDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_COMMENTS = 0;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_NAME = 3;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_PROXY = 4;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_USAGESINIMPORTS = 5;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_ANNOTATIONS = 7;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_MODIFIER = 9;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_DEFAULT = 10;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_TYPE = 11;
-		public final static int ANNOTATIONTYPEMEMBERDECLARATION_USAGES = 12;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__COMMENTS = 0;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__NAME = 3;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__PROXY = 4;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__ANNOTATIONS = 7;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__MODIFIER = 9;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__DEFAULT = 10;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__TYPE = 11;
+		public final static int ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES = 12;
 		
 		public final static int ANONYMOUSCLASSDECLARATION = 12;
 		public final static int ANONYMOUSCLASSDECLARATION_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 2;
 		public final static int ANONYMOUSCLASSDECLARATION_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int ANONYMOUSCLASSDECLARATION_COMMENTS = 0;
-		public final static int ANONYMOUSCLASSDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ANONYMOUSCLASSDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS = 3;
-		public final static int ANONYMOUSCLASSDECLARATION_CLASSINSTANCECREATION = 4;
+		public final static int ANONYMOUS_CLASS_DECLARATION__COMMENTS = 0;
+		public final static int ANONYMOUS_CLASS_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ANONYMOUS_CLASS_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int ANONYMOUS_CLASS_DECLARATION__BODY_DECLARATIONS = 3;
+		public final static int ANONYMOUS_CLASS_DECLARATION__CLASS_INSTANCE_CREATION = 4;
 		
 		public final static int ARRAYACCESS = 13;
 		public final static int ARRAYACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 		public final static int ARRAYACCESS_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int ARRAYACCESS_COMMENTS = 0;
-		public final static int ARRAYACCESS_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ARRAYACCESS_ORIGINALCLASSFILE = 2;
-		public final static int ARRAYACCESS_ARRAY = 3;
-		public final static int ARRAYACCESS_INDEX = 4;
+		public final static int ARRAY_ACCESS__COMMENTS = 0;
+		public final static int ARRAY_ACCESS__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ARRAY_ACCESS__ORIGINAL_CLASS_FILE = 2;
+		public final static int ARRAY_ACCESS__ARRAY = 3;
+		public final static int ARRAY_ACCESS__INDEX = 4;
 		
 		public final static int ARRAYCREATION = 14;
 		public final static int ARRAYCREATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 		public final static int ARRAYCREATION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int ARRAYCREATION_COMMENTS = 0;
-		public final static int ARRAYCREATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ARRAYCREATION_ORIGINALCLASSFILE = 2;
-		public final static int ARRAYCREATION_DIMENSIONS = 3;
-		public final static int ARRAYCREATION_INITIALIZER = 4;
-		public final static int ARRAYCREATION_TYPE = 5;
+		public final static int ARRAY_CREATION__COMMENTS = 0;
+		public final static int ARRAY_CREATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ARRAY_CREATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int ARRAY_CREATION__DIMENSIONS = 3;
+		public final static int ARRAY_CREATION__INITIALIZER = 4;
+		public final static int ARRAY_CREATION__TYPE = 5;
 		
 		public final static int ARRAYINITIALIZER = 15;
 		public final static int ARRAYINITIALIZER_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 		public final static int ARRAYINITIALIZER_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int ARRAYINITIALIZER_COMMENTS = 0;
-		public final static int ARRAYINITIALIZER_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ARRAYINITIALIZER_ORIGINALCLASSFILE = 2;
-		public final static int ARRAYINITIALIZER_EXPRESSIONS = 3;
+		public final static int ARRAY_INITIALIZER__COMMENTS = 0;
+		public final static int ARRAY_INITIALIZER__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ARRAY_INITIALIZER__ORIGINAL_CLASS_FILE = 2;
+		public final static int ARRAY_INITIALIZER__EXPRESSIONS = 3;
 		
 		public final static int ARRAYLENGTHACCESS = 16;
 		public final static int ARRAYLENGTHACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 		public final static int ARRAYLENGTHACCESS_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int ARRAYLENGTHACCESS_COMMENTS = 0;
-		public final static int ARRAYLENGTHACCESS_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ARRAYLENGTHACCESS_ORIGINALCLASSFILE = 2;
-		public final static int ARRAYLENGTHACCESS_ARRAY = 3;
+		public final static int ARRAY_LENGTH_ACCESS__COMMENTS = 0;
+		public final static int ARRAY_LENGTH_ACCESS__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ARRAY_LENGTH_ACCESS__ORIGINAL_CLASS_FILE = 2;
+		public final static int ARRAY_LENGTH_ACCESS__ARRAY = 3;
 		
 		public final static int ARRAYTYPE = 17;
 		public final static int ARRAYTYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 2;
 		public final static int ARRAYTYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 		
-		public final static int ARRAYTYPE_COMMENTS = 0;
-		public final static int ARRAYTYPE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ARRAYTYPE_ORIGINALCLASSFILE = 2;
-		public final static int ARRAYTYPE_NAME = 3;
-		public final static int ARRAYTYPE_PROXY = 4;
-		public final static int ARRAYTYPE_USAGESINIMPORTS = 5;
-		public final static int ARRAYTYPE_USAGESINTYPEACCESS = 6;
-		public final static int ARRAYTYPE_DIMENSIONS = 7;
-		public final static int ARRAYTYPE_ELEMENTTYPE = 8;
+		public final static int ARRAY_TYPE__COMMENTS = 0;
+		public final static int ARRAY_TYPE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ARRAY_TYPE__ORIGINAL_CLASS_FILE = 2;
+		public final static int ARRAY_TYPE__NAME = 3;
+		public final static int ARRAY_TYPE__PROXY = 4;
+		public final static int ARRAY_TYPE__USAGES_IN_IMPORTS = 5;
+		public final static int ARRAY_TYPE__USAGES_IN_TYPE_ACCESS = 6;
+		public final static int ARRAY_TYPE__DIMENSIONS = 7;
+		public final static int ARRAY_TYPE__ELEMENT_TYPE = 8;
 		
 		public final static int ASSIGNMENT = 18;
 		public final static int ASSIGNMENT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 		public final static int ASSIGNMENT_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int ASSIGNMENT_COMMENTS = 0;
-		public final static int ASSIGNMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ASSIGNMENT_ORIGINALCLASSFILE = 2;
-		public final static int ASSIGNMENT_LEFTHANDSIDE = 3;
-		public final static int ASSIGNMENT_OPERATOR = 4;
-		public final static int ASSIGNMENT_RIGHTHANDSIDE = 5;
+		public final static int ASSIGNMENT__COMMENTS = 0;
+		public final static int ASSIGNMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ASSIGNMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int ASSIGNMENT__LEFT_HAND_SIDE = 3;
+		public final static int ASSIGNMENT__OPERATOR = 4;
+		public final static int ASSIGNMENT__RIGHT_HAND_SIDE = 5;
 		
 		public final static int BOOLEANLITERAL = 21;
 		public final static int BOOLEANLITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 		public final static int BOOLEANLITERAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int BOOLEANLITERAL_COMMENTS = 0;
-		public final static int BOOLEANLITERAL_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int BOOLEANLITERAL_ORIGINALCLASSFILE = 2;
-		public final static int BOOLEANLITERAL_VALUE = 3;
+		public final static int BOOLEAN_LITERAL__COMMENTS = 0;
+		public final static int BOOLEAN_LITERAL__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int BOOLEAN_LITERAL__ORIGINAL_CLASS_FILE = 2;
+		public final static int BOOLEAN_LITERAL__VALUE = 3;
 		
 		public final static int COMMENT = 34;
 		public final static int COMMENT_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 3;
 		public final static int COMMENT_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int COMMENT_COMMENTS = 0;
-		public final static int COMMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int COMMENT_ORIGINALCLASSFILE = 2;
-		public final static int COMMENT_CONTENT = 3;
-		public final static int COMMENT_ENCLOSEDBYPARENT = 4;
-		public final static int COMMENT_PREFIXOFPARENT = 5;
+		public final static int COMMENT__COMMENTS = 0;
+		public final static int COMMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int COMMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int COMMENT__CONTENT = 3;
+		public final static int COMMENT__ENCLOSED_BY_PARENT = 4;
+		public final static int COMMENT__PREFIX_OF_PARENT = 5;
 		
 		public final static int BLOCKCOMMENT = 22;
 		public final static int BLOCKCOMMENT_FEATURE_COUNT = COMMENT_FEATURE_COUNT + 0;
 		public final static int BLOCKCOMMENT_OPERATION_COUNT = COMMENT_OPERATION_COUNT + 0;
 		
-		public final static int BLOCKCOMMENT_COMMENTS = 0;
-		public final static int BLOCKCOMMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int BLOCKCOMMENT_ORIGINALCLASSFILE = 2;
-		public final static int BLOCKCOMMENT_CONTENT = 3;
-		public final static int BLOCKCOMMENT_ENCLOSEDBYPARENT = 4;
-		public final static int BLOCKCOMMENT_PREFIXOFPARENT = 5;
+		public final static int BLOCK_COMMENT__COMMENTS = 0;
+		public final static int BLOCK_COMMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int BLOCK_COMMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int BLOCK_COMMENT__CONTENT = 3;
+		public final static int BLOCK_COMMENT__ENCLOSED_BY_PARENT = 4;
+		public final static int BLOCK_COMMENT__PREFIX_OF_PARENT = 5;
 		
 		public final static int BLOCK = 23;
 		public final static int BLOCK_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 		public final static int BLOCK_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int BLOCK_COMMENTS = 0;
-		public final static int BLOCK_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int BLOCK_ORIGINALCLASSFILE = 2;
-		public final static int BLOCK_STATEMENTS = 3;
+		public final static int BLOCK__COMMENTS = 0;
+		public final static int BLOCK__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int BLOCK__ORIGINAL_CLASS_FILE = 2;
+		public final static int BLOCK__STATEMENTS = 3;
 		
 		public final static int BREAKSTATEMENT = 24;
 		public final static int BREAKSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 		public final static int BREAKSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int BREAKSTATEMENT_COMMENTS = 0;
-		public final static int BREAKSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int BREAKSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int BREAKSTATEMENT_LABEL = 3;
+		public final static int BREAK_STATEMENT__COMMENTS = 0;
+		public final static int BREAK_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int BREAK_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int BREAK_STATEMENT__LABEL = 3;
 		
 		public final static int CASTEXPRESSION = 25;
 		public final static int CASTEXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 		public final static int CASTEXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int CASTEXPRESSION_COMMENTS = 0;
-		public final static int CASTEXPRESSION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int CASTEXPRESSION_ORIGINALCLASSFILE = 2;
-		public final static int CASTEXPRESSION_EXPRESSION = 3;
-		public final static int CASTEXPRESSION_TYPE = 4;
+		public final static int CAST_EXPRESSION__COMMENTS = 0;
+		public final static int CAST_EXPRESSION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int CAST_EXPRESSION__ORIGINAL_CLASS_FILE = 2;
+		public final static int CAST_EXPRESSION__EXPRESSION = 3;
+		public final static int CAST_EXPRESSION__TYPE = 4;
 		
 		public final static int CATCHCLAUSE = 26;
 		public final static int CATCHCLAUSE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 		public final static int CATCHCLAUSE_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int CATCHCLAUSE_COMMENTS = 0;
-		public final static int CATCHCLAUSE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int CATCHCLAUSE_ORIGINALCLASSFILE = 2;
-		public final static int CATCHCLAUSE_EXCEPTION = 3;
-		public final static int CATCHCLAUSE_BODY = 4;
+		public final static int CATCH_CLAUSE__COMMENTS = 0;
+		public final static int CATCH_CLAUSE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int CATCH_CLAUSE__ORIGINAL_CLASS_FILE = 2;
+		public final static int CATCH_CLAUSE__EXCEPTION = 3;
+		public final static int CATCH_CLAUSE__BODY = 4;
 		
 		public final static int CHARACTERLITERAL = 27;
 		public final static int CHARACTERLITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 		public final static int CHARACTERLITERAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int CHARACTERLITERAL_COMMENTS = 0;
-		public final static int CHARACTERLITERAL_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int CHARACTERLITERAL_ORIGINALCLASSFILE = 2;
-		public final static int CHARACTERLITERAL_ESCAPEDVALUE = 3;
+		public final static int CHARACTER_LITERAL__COMMENTS = 0;
+		public final static int CHARACTER_LITERAL__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int CHARACTER_LITERAL__ORIGINAL_CLASS_FILE = 2;
+		public final static int CHARACTER_LITERAL__ESCAPED_VALUE = 3;
 		
 		public final static int CLASSFILE = 28;
 		public final static int CLASSFILE_FEATURE_COUNT = NAMEDELEMENT_FEATURE_COUNT + 4;
 		public final static int CLASSFILE_OPERATION_COUNT = NAMEDELEMENT_OPERATION_COUNT + 0;
 		
-		public final static int CLASSFILE_COMMENTS = 0;
-		public final static int CLASSFILE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int CLASSFILE_ORIGINALCLASSFILE = 2;
-		public final static int CLASSFILE_NAME = 3;
-		public final static int CLASSFILE_PROXY = 4;
-		public final static int CLASSFILE_USAGESINIMPORTS = 5;
-		public final static int CLASSFILE_ORIGINALFILEPATH = 6;
-		public final static int CLASSFILE_TYPE = 7;
-		public final static int CLASSFILE_ATTACHEDSOURCE = 8;
-		public final static int CLASSFILE_PACKAGE = 9;
+		public final static int CLASS_FILE__COMMENTS = 0;
+		public final static int CLASS_FILE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int CLASS_FILE__ORIGINAL_CLASS_FILE = 2;
+		public final static int CLASS_FILE__NAME = 3;
+		public final static int CLASS_FILE__PROXY = 4;
+		public final static int CLASS_FILE__USAGES_IN_IMPORTS = 5;
+		public final static int CLASS_FILE__ORIGINAL_FILE_PATH = 6;
+		public final static int CLASS_FILE__TYPE = 7;
+		public final static int CLASS_FILE__ATTACHED_SOURCE = 8;
+		public final static int CLASS_FILE__PACKAGE = 9;
 		
 		public final static int CLASSINSTANCECREATION = 29;
 		public final static int CLASSINSTANCECREATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + ABSTRACTMETHODINVOCATION_FEATURE_COUNT + 3;
 		public final static int CLASSINSTANCECREATION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + ABSTRACTMETHODINVOCATION_OPERATION_COUNT + 0;
 		
-		public final static int CLASSINSTANCECREATION_COMMENTS = 0;
-		public final static int CLASSINSTANCECREATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int CLASSINSTANCECREATION_ORIGINALCLASSFILE = 2;
-		public final static int CLASSINSTANCECREATION_METHOD = 3;
-		public final static int CLASSINSTANCECREATION_ARGUMENTS = 4;
-		public final static int CLASSINSTANCECREATION_TYPEARGUMENTS = 5;
-		public final static int CLASSINSTANCECREATION_ANONYMOUSCLASSDECLARATION = 6;
-		public final static int CLASSINSTANCECREATION_EXPRESSION = 7;
-		public final static int CLASSINSTANCECREATION_TYPE = 8;
+		public final static int CLASS_INSTANCE_CREATION__COMMENTS = 0;
+		public final static int CLASS_INSTANCE_CREATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int CLASS_INSTANCE_CREATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int CLASS_INSTANCE_CREATION__METHOD = 3;
+		public final static int CLASS_INSTANCE_CREATION__ARGUMENTS = 4;
+		public final static int CLASS_INSTANCE_CREATION__TYPE_ARGUMENTS = 5;
+		public final static int CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION = 6;
+		public final static int CLASS_INSTANCE_CREATION__EXPRESSION = 7;
+		public final static int CLASS_INSTANCE_CREATION__TYPE = 8;
 		
 		public final static int CONSTRUCTORDECLARATION = 30;
 		public final static int CONSTRUCTORDECLARATION_FEATURE_COUNT = ABSTRACTMETHODDECLARATION_FEATURE_COUNT + 0;
 		public final static int CONSTRUCTORDECLARATION_OPERATION_COUNT = ABSTRACTMETHODDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int CONSTRUCTORDECLARATION_COMMENTS = 0;
-		public final static int CONSTRUCTORDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int CONSTRUCTORDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int CONSTRUCTORDECLARATION_NAME = 3;
-		public final static int CONSTRUCTORDECLARATION_PROXY = 4;
-		public final static int CONSTRUCTORDECLARATION_USAGESINIMPORTS = 5;
-		public final static int CONSTRUCTORDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int CONSTRUCTORDECLARATION_ANNOTATIONS = 7;
-		public final static int CONSTRUCTORDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int CONSTRUCTORDECLARATION_MODIFIER = 9;
-		public final static int CONSTRUCTORDECLARATION_BODY = 10;
-		public final static int CONSTRUCTORDECLARATION_PARAMETERS = 11;
-		public final static int CONSTRUCTORDECLARATION_THROWNEXCEPTIONS = 12;
-		public final static int CONSTRUCTORDECLARATION_TYPEPARAMETERS = 13;
-		public final static int CONSTRUCTORDECLARATION_USAGESINDOCCOMMENTS = 14;
-		public final static int CONSTRUCTORDECLARATION_USAGES = 15;
+		public final static int CONSTRUCTOR_DECLARATION__COMMENTS = 0;
+		public final static int CONSTRUCTOR_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int CONSTRUCTOR_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int CONSTRUCTOR_DECLARATION__NAME = 3;
+		public final static int CONSTRUCTOR_DECLARATION__PROXY = 4;
+		public final static int CONSTRUCTOR_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int CONSTRUCTOR_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int CONSTRUCTOR_DECLARATION__ANNOTATIONS = 7;
+		public final static int CONSTRUCTOR_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int CONSTRUCTOR_DECLARATION__MODIFIER = 9;
+		public final static int CONSTRUCTOR_DECLARATION__BODY = 10;
+		public final static int CONSTRUCTOR_DECLARATION__PARAMETERS = 11;
+		public final static int CONSTRUCTOR_DECLARATION__THROWN_EXCEPTIONS = 12;
+		public final static int CONSTRUCTOR_DECLARATION__TYPE_PARAMETERS = 13;
+		public final static int CONSTRUCTOR_DECLARATION__USAGES_IN_DOC_COMMENTS = 14;
+		public final static int CONSTRUCTOR_DECLARATION__USAGES = 15;
 		
 		public final static int CONDITIONALEXPRESSION = 31;
 		public final static int CONDITIONALEXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 		public final static int CONDITIONALEXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int CONDITIONALEXPRESSION_COMMENTS = 0;
-		public final static int CONDITIONALEXPRESSION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int CONDITIONALEXPRESSION_ORIGINALCLASSFILE = 2;
-		public final static int CONDITIONALEXPRESSION_ELSEEXPRESSION = 3;
-		public final static int CONDITIONALEXPRESSION_EXPRESSION = 4;
-		public final static int CONDITIONALEXPRESSION_THENEXPRESSION = 5;
+		public final static int CONDITIONAL_EXPRESSION__COMMENTS = 0;
+		public final static int CONDITIONAL_EXPRESSION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int CONDITIONAL_EXPRESSION__ORIGINAL_CLASS_FILE = 2;
+		public final static int CONDITIONAL_EXPRESSION__ELSE_EXPRESSION = 3;
+		public final static int CONDITIONAL_EXPRESSION__EXPRESSION = 4;
+		public final static int CONDITIONAL_EXPRESSION__THEN_EXPRESSION = 5;
 		
 		public final static int CONSTRUCTORINVOCATION = 32;
 		public final static int CONSTRUCTORINVOCATION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + ABSTRACTMETHODINVOCATION_FEATURE_COUNT + 0;
 		public final static int CONSTRUCTORINVOCATION_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + ABSTRACTMETHODINVOCATION_OPERATION_COUNT + 0;
 		
-		public final static int CONSTRUCTORINVOCATION_COMMENTS = 0;
-		public final static int CONSTRUCTORINVOCATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int CONSTRUCTORINVOCATION_ORIGINALCLASSFILE = 2;
-		public final static int CONSTRUCTORINVOCATION_METHOD = 3;
-		public final static int CONSTRUCTORINVOCATION_ARGUMENTS = 4;
-		public final static int CONSTRUCTORINVOCATION_TYPEARGUMENTS = 5;
+		public final static int CONSTRUCTOR_INVOCATION__COMMENTS = 0;
+		public final static int CONSTRUCTOR_INVOCATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int CONSTRUCTOR_INVOCATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int CONSTRUCTOR_INVOCATION__METHOD = 3;
+		public final static int CONSTRUCTOR_INVOCATION__ARGUMENTS = 4;
+		public final static int CONSTRUCTOR_INVOCATION__TYPE_ARGUMENTS = 5;
 		
 		public final static int TYPEDECLARATION = 108;
 		public final static int TYPEDECLARATION_FEATURE_COUNT = ABSTRACTTYPEDECLARATION_FEATURE_COUNT + 1;
 		public final static int TYPEDECLARATION_OPERATION_COUNT = ABSTRACTTYPEDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int TYPEDECLARATION_COMMENTS = 0;
-		public final static int TYPEDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int TYPEDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int TYPEDECLARATION_NAME = 3;
-		public final static int TYPEDECLARATION_PROXY = 4;
-		public final static int TYPEDECLARATION_USAGESINIMPORTS = 5;
-		public final static int TYPEDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int TYPEDECLARATION_ANNOTATIONS = 7;
-		public final static int TYPEDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int TYPEDECLARATION_MODIFIER = 9;
-		public final static int TYPEDECLARATION_USAGESINTYPEACCESS = 10;
-		public final static int TYPEDECLARATION_BODYDECLARATIONS = 11;
-		public final static int TYPEDECLARATION_COMMENTSBEFOREBODY = 12;
-		public final static int TYPEDECLARATION_COMMENTSAFTERBODY = 13;
-		public final static int TYPEDECLARATION_PACKAGE = 14;
-		public final static int TYPEDECLARATION_SUPERINTERFACES = 15;
-		public final static int TYPEDECLARATION_TYPEPARAMETERS = 16;
+		public final static int TYPE_DECLARATION__COMMENTS = 0;
+		public final static int TYPE_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int TYPE_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int TYPE_DECLARATION__NAME = 3;
+		public final static int TYPE_DECLARATION__PROXY = 4;
+		public final static int TYPE_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int TYPE_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int TYPE_DECLARATION__ANNOTATIONS = 7;
+		public final static int TYPE_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int TYPE_DECLARATION__MODIFIER = 9;
+		public final static int TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS = 10;
+		public final static int TYPE_DECLARATION__BODY_DECLARATIONS = 11;
+		public final static int TYPE_DECLARATION__COMMENTS_BEFORE_BODY = 12;
+		public final static int TYPE_DECLARATION__COMMENTS_AFTER_BODY = 13;
+		public final static int TYPE_DECLARATION__PACKAGE = 14;
+		public final static int TYPE_DECLARATION__SUPER_INTERFACES = 15;
+		public final static int TYPE_DECLARATION__TYPE_PARAMETERS = 16;
 		
 		public final static int CLASSDECLARATION = 33;
 		public final static int CLASSDECLARATION_FEATURE_COUNT = TYPEDECLARATION_FEATURE_COUNT + 1;
 		public final static int CLASSDECLARATION_OPERATION_COUNT = TYPEDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int CLASSDECLARATION_COMMENTS = 0;
-		public final static int CLASSDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int CLASSDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int CLASSDECLARATION_NAME = 3;
-		public final static int CLASSDECLARATION_PROXY = 4;
-		public final static int CLASSDECLARATION_USAGESINIMPORTS = 5;
-		public final static int CLASSDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int CLASSDECLARATION_ANNOTATIONS = 7;
-		public final static int CLASSDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int CLASSDECLARATION_MODIFIER = 9;
-		public final static int CLASSDECLARATION_USAGESINTYPEACCESS = 10;
-		public final static int CLASSDECLARATION_BODYDECLARATIONS = 11;
-		public final static int CLASSDECLARATION_COMMENTSBEFOREBODY = 12;
-		public final static int CLASSDECLARATION_COMMENTSAFTERBODY = 13;
-		public final static int CLASSDECLARATION_PACKAGE = 14;
-		public final static int CLASSDECLARATION_SUPERINTERFACES = 15;
-		public final static int CLASSDECLARATION_TYPEPARAMETERS = 16;
-		public final static int CLASSDECLARATION_SUPERCLASS = 17;
+		public final static int CLASS_DECLARATION__COMMENTS = 0;
+		public final static int CLASS_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int CLASS_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int CLASS_DECLARATION__NAME = 3;
+		public final static int CLASS_DECLARATION__PROXY = 4;
+		public final static int CLASS_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int CLASS_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int CLASS_DECLARATION__ANNOTATIONS = 7;
+		public final static int CLASS_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int CLASS_DECLARATION__MODIFIER = 9;
+		public final static int CLASS_DECLARATION__USAGES_IN_TYPE_ACCESS = 10;
+		public final static int CLASS_DECLARATION__BODY_DECLARATIONS = 11;
+		public final static int CLASS_DECLARATION__COMMENTS_BEFORE_BODY = 12;
+		public final static int CLASS_DECLARATION__COMMENTS_AFTER_BODY = 13;
+		public final static int CLASS_DECLARATION__PACKAGE = 14;
+		public final static int CLASS_DECLARATION__SUPER_INTERFACES = 15;
+		public final static int CLASS_DECLARATION__TYPE_PARAMETERS = 16;
+		public final static int CLASS_DECLARATION__SUPER_CLASS = 17;
 		
 		public final static int COMPILATIONUNIT = 35;
 		public final static int COMPILATIONUNIT_FEATURE_COUNT = NAMEDELEMENT_FEATURE_COUNT + 5;
 		public final static int COMPILATIONUNIT_OPERATION_COUNT = NAMEDELEMENT_OPERATION_COUNT + 0;
 		
-		public final static int COMPILATIONUNIT_COMMENTS = 0;
-		public final static int COMPILATIONUNIT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int COMPILATIONUNIT_ORIGINALCLASSFILE = 2;
-		public final static int COMPILATIONUNIT_NAME = 3;
-		public final static int COMPILATIONUNIT_PROXY = 4;
-		public final static int COMPILATIONUNIT_USAGESINIMPORTS = 5;
-		public final static int COMPILATIONUNIT_ORIGINALFILEPATH = 6;
-		public final static int COMPILATIONUNIT_COMMENTLIST = 7;
-		public final static int COMPILATIONUNIT_IMPORTS = 8;
-		public final static int COMPILATIONUNIT_PACKAGE = 9;
-		public final static int COMPILATIONUNIT_TYPES = 10;
+		public final static int COMPILATION_UNIT__COMMENTS = 0;
+		public final static int COMPILATION_UNIT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int COMPILATION_UNIT__ORIGINAL_CLASS_FILE = 2;
+		public final static int COMPILATION_UNIT__NAME = 3;
+		public final static int COMPILATION_UNIT__PROXY = 4;
+		public final static int COMPILATION_UNIT__USAGES_IN_IMPORTS = 5;
+		public final static int COMPILATION_UNIT__ORIGINAL_FILE_PATH = 6;
+		public final static int COMPILATION_UNIT__COMMENT_LIST = 7;
+		public final static int COMPILATION_UNIT__IMPORTS = 8;
+		public final static int COMPILATION_UNIT__PACKAGE = 9;
+		public final static int COMPILATION_UNIT__TYPES = 10;
 		
 		public final static int CONTINUESTATEMENT = 36;
 		public final static int CONTINUESTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 		public final static int CONTINUESTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int CONTINUESTATEMENT_COMMENTS = 0;
-		public final static int CONTINUESTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int CONTINUESTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int CONTINUESTATEMENT_LABEL = 3;
+		public final static int CONTINUE_STATEMENT__COMMENTS = 0;
+		public final static int CONTINUE_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int CONTINUE_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int CONTINUE_STATEMENT__LABEL = 3;
 		
 		public final static int DOSTATEMENT = 37;
 		public final static int DOSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 		public final static int DOSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int DOSTATEMENT_COMMENTS = 0;
-		public final static int DOSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int DOSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int DOSTATEMENT_EXPRESSION = 3;
-		public final static int DOSTATEMENT_BODY = 4;
+		public final static int DO_STATEMENT__COMMENTS = 0;
+		public final static int DO_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int DO_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int DO_STATEMENT__EXPRESSION = 3;
+		public final static int DO_STATEMENT__BODY = 4;
 		
 		public final static int EMPTYSTATEMENT = 38;
 		public final static int EMPTYSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 0;
 		public final static int EMPTYSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int EMPTYSTATEMENT_COMMENTS = 0;
-		public final static int EMPTYSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int EMPTYSTATEMENT_ORIGINALCLASSFILE = 2;
+		public final static int EMPTY_STATEMENT__COMMENTS = 0;
+		public final static int EMPTY_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int EMPTY_STATEMENT__ORIGINAL_CLASS_FILE = 2;
 		
 		public final static int ENHANCEDFORSTATEMENT = 39;
 		public final static int ENHANCEDFORSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
 		public final static int ENHANCEDFORSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int ENHANCEDFORSTATEMENT_COMMENTS = 0;
-		public final static int ENHANCEDFORSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ENHANCEDFORSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int ENHANCEDFORSTATEMENT_BODY = 3;
-		public final static int ENHANCEDFORSTATEMENT_EXPRESSION = 4;
-		public final static int ENHANCEDFORSTATEMENT_PARAMETER = 5;
+		public final static int ENHANCED_FOR_STATEMENT__COMMENTS = 0;
+		public final static int ENHANCED_FOR_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ENHANCED_FOR_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int ENHANCED_FOR_STATEMENT__BODY = 3;
+		public final static int ENHANCED_FOR_STATEMENT__EXPRESSION = 4;
+		public final static int ENHANCED_FOR_STATEMENT__PARAMETER = 5;
 		
 		public final static int VARIABLEDECLARATION = 125;
 		public final static int VARIABLEDECLARATION_FEATURE_COUNT = NAMEDELEMENT_FEATURE_COUNT + 3;
 		public final static int VARIABLEDECLARATION_OPERATION_COUNT = NAMEDELEMENT_OPERATION_COUNT + 0;
 		
-		public final static int VARIABLEDECLARATION_COMMENTS = 0;
-		public final static int VARIABLEDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int VARIABLEDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int VARIABLEDECLARATION_NAME = 3;
-		public final static int VARIABLEDECLARATION_PROXY = 4;
-		public final static int VARIABLEDECLARATION_USAGESINIMPORTS = 5;
-		public final static int VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS = 6;
-		public final static int VARIABLEDECLARATION_INITIALIZER = 7;
-		public final static int VARIABLEDECLARATION_USAGEINVARIABLEACCESS = 8;
+		public final static int VARIABLE_DECLARATION__COMMENTS = 0;
+		public final static int VARIABLE_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int VARIABLE_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int VARIABLE_DECLARATION__NAME = 3;
+		public final static int VARIABLE_DECLARATION__PROXY = 4;
+		public final static int VARIABLE_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS = 6;
+		public final static int VARIABLE_DECLARATION__INITIALIZER = 7;
+		public final static int VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS = 8;
 		
 		public final static int ENUMCONSTANTDECLARATION = 40;
 		public final static int ENUMCONSTANTDECLARATION_FEATURE_COUNT = BODYDECLARATION_FEATURE_COUNT + VARIABLEDECLARATION_FEATURE_COUNT + 2;
 		public final static int ENUMCONSTANTDECLARATION_OPERATION_COUNT = BODYDECLARATION_OPERATION_COUNT + VARIABLEDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int ENUMCONSTANTDECLARATION_COMMENTS = 0;
-		public final static int ENUMCONSTANTDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ENUMCONSTANTDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int ENUMCONSTANTDECLARATION_NAME = 3;
-		public final static int ENUMCONSTANTDECLARATION_PROXY = 4;
-		public final static int ENUMCONSTANTDECLARATION_USAGESINIMPORTS = 5;
-		public final static int ENUMCONSTANTDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int ENUMCONSTANTDECLARATION_ANNOTATIONS = 7;
-		public final static int ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int ENUMCONSTANTDECLARATION_MODIFIER = 9;
-		public final static int ENUMCONSTANTDECLARATION_EXTRAARRAYDIMENSIONS = 10;
-		public final static int ENUMCONSTANTDECLARATION_INITIALIZER = 11;
-		public final static int ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS = 12;
-		public final static int ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION = 13;
-		public final static int ENUMCONSTANTDECLARATION_ARGUMENTS = 14;
+		public final static int ENUM_CONSTANT_DECLARATION__COMMENTS = 0;
+		public final static int ENUM_CONSTANT_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ENUM_CONSTANT_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int ENUM_CONSTANT_DECLARATION__NAME = 3;
+		public final static int ENUM_CONSTANT_DECLARATION__PROXY = 4;
+		public final static int ENUM_CONSTANT_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int ENUM_CONSTANT_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int ENUM_CONSTANT_DECLARATION__ANNOTATIONS = 7;
+		public final static int ENUM_CONSTANT_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int ENUM_CONSTANT_DECLARATION__MODIFIER = 9;
+		public final static int ENUM_CONSTANT_DECLARATION__EXTRA_ARRAY_DIMENSIONS = 10;
+		public final static int ENUM_CONSTANT_DECLARATION__INITIALIZER = 11;
+		public final static int ENUM_CONSTANT_DECLARATION__USAGE_IN_VARIABLE_ACCESS = 12;
+		public final static int ENUM_CONSTANT_DECLARATION__ANONYMOUS_CLASS_DECLARATION = 13;
+		public final static int ENUM_CONSTANT_DECLARATION__ARGUMENTS = 14;
 		
 		public final static int ENUMDECLARATION = 41;
 		public final static int ENUMDECLARATION_FEATURE_COUNT = ABSTRACTTYPEDECLARATION_FEATURE_COUNT + 1;
 		public final static int ENUMDECLARATION_OPERATION_COUNT = ABSTRACTTYPEDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int ENUMDECLARATION_COMMENTS = 0;
-		public final static int ENUMDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int ENUMDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int ENUMDECLARATION_NAME = 3;
-		public final static int ENUMDECLARATION_PROXY = 4;
-		public final static int ENUMDECLARATION_USAGESINIMPORTS = 5;
-		public final static int ENUMDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int ENUMDECLARATION_ANNOTATIONS = 7;
-		public final static int ENUMDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int ENUMDECLARATION_MODIFIER = 9;
-		public final static int ENUMDECLARATION_USAGESINTYPEACCESS = 10;
-		public final static int ENUMDECLARATION_BODYDECLARATIONS = 11;
-		public final static int ENUMDECLARATION_COMMENTSBEFOREBODY = 12;
-		public final static int ENUMDECLARATION_COMMENTSAFTERBODY = 13;
-		public final static int ENUMDECLARATION_PACKAGE = 14;
-		public final static int ENUMDECLARATION_SUPERINTERFACES = 15;
-		public final static int ENUMDECLARATION_ENUMCONSTANTS = 16;
+		public final static int ENUM_DECLARATION__COMMENTS = 0;
+		public final static int ENUM_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int ENUM_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int ENUM_DECLARATION__NAME = 3;
+		public final static int ENUM_DECLARATION__PROXY = 4;
+		public final static int ENUM_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int ENUM_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int ENUM_DECLARATION__ANNOTATIONS = 7;
+		public final static int ENUM_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int ENUM_DECLARATION__MODIFIER = 9;
+		public final static int ENUM_DECLARATION__USAGES_IN_TYPE_ACCESS = 10;
+		public final static int ENUM_DECLARATION__BODY_DECLARATIONS = 11;
+		public final static int ENUM_DECLARATION__COMMENTS_BEFORE_BODY = 12;
+		public final static int ENUM_DECLARATION__COMMENTS_AFTER_BODY = 13;
+		public final static int ENUM_DECLARATION__PACKAGE = 14;
+		public final static int ENUM_DECLARATION__SUPER_INTERFACES = 15;
+		public final static int ENUM_DECLARATION__ENUM_CONSTANTS = 16;
 		
 		public final static int EXPRESSIONSTATEMENT = 43;
 		public final static int EXPRESSIONSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 		public final static int EXPRESSIONSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int EXPRESSIONSTATEMENT_COMMENTS = 0;
-		public final static int EXPRESSIONSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int EXPRESSIONSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int EXPRESSIONSTATEMENT_EXPRESSION = 3;
+		public final static int EXPRESSION_STATEMENT__COMMENTS = 0;
+		public final static int EXPRESSION_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int EXPRESSION_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int EXPRESSION_STATEMENT__EXPRESSION = 3;
 		
 		public final static int FIELDACCESS = 44;
 		public final static int FIELDACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 		public final static int FIELDACCESS_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int FIELDACCESS_COMMENTS = 0;
-		public final static int FIELDACCESS_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int FIELDACCESS_ORIGINALCLASSFILE = 2;
-		public final static int FIELDACCESS_FIELD = 3;
-		public final static int FIELDACCESS_EXPRESSION = 4;
+		public final static int FIELD_ACCESS__COMMENTS = 0;
+		public final static int FIELD_ACCESS__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int FIELD_ACCESS__ORIGINAL_CLASS_FILE = 2;
+		public final static int FIELD_ACCESS__FIELD = 3;
+		public final static int FIELD_ACCESS__EXPRESSION = 4;
 		
 		public final static int FIELDDECLARATION = 45;
 		public final static int FIELDDECLARATION_FEATURE_COUNT = BODYDECLARATION_FEATURE_COUNT + ABSTRACTVARIABLESCONTAINER_FEATURE_COUNT + 0;
 		public final static int FIELDDECLARATION_OPERATION_COUNT = BODYDECLARATION_OPERATION_COUNT + ABSTRACTVARIABLESCONTAINER_OPERATION_COUNT + 0;
 		
-		public final static int FIELDDECLARATION_COMMENTS = 0;
-		public final static int FIELDDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int FIELDDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int FIELDDECLARATION_NAME = 3;
-		public final static int FIELDDECLARATION_PROXY = 4;
-		public final static int FIELDDECLARATION_USAGESINIMPORTS = 5;
-		public final static int FIELDDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int FIELDDECLARATION_ANNOTATIONS = 7;
-		public final static int FIELDDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int FIELDDECLARATION_MODIFIER = 9;
-		public final static int FIELDDECLARATION_TYPE = 10;
-		public final static int FIELDDECLARATION_FRAGMENTS = 11;
+		public final static int FIELD_DECLARATION__COMMENTS = 0;
+		public final static int FIELD_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int FIELD_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int FIELD_DECLARATION__NAME = 3;
+		public final static int FIELD_DECLARATION__PROXY = 4;
+		public final static int FIELD_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int FIELD_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int FIELD_DECLARATION__ANNOTATIONS = 7;
+		public final static int FIELD_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int FIELD_DECLARATION__MODIFIER = 9;
+		public final static int FIELD_DECLARATION__TYPE = 10;
+		public final static int FIELD_DECLARATION__FRAGMENTS = 11;
 		
 		public final static int FORSTATEMENT = 46;
 		public final static int FORSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 4;
 		public final static int FORSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int FORSTATEMENT_COMMENTS = 0;
-		public final static int FORSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int FORSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int FORSTATEMENT_EXPRESSION = 3;
-		public final static int FORSTATEMENT_UPDATERS = 4;
-		public final static int FORSTATEMENT_INITIALIZERS = 5;
-		public final static int FORSTATEMENT_BODY = 6;
+		public final static int FOR_STATEMENT__COMMENTS = 0;
+		public final static int FOR_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int FOR_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int FOR_STATEMENT__EXPRESSION = 3;
+		public final static int FOR_STATEMENT__UPDATERS = 4;
+		public final static int FOR_STATEMENT__INITIALIZERS = 5;
+		public final static int FOR_STATEMENT__BODY = 6;
 		
 		public final static int IFSTATEMENT = 47;
 		public final static int IFSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
 		public final static int IFSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int IFSTATEMENT_COMMENTS = 0;
-		public final static int IFSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int IFSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int IFSTATEMENT_EXPRESSION = 3;
-		public final static int IFSTATEMENT_THENSTATEMENT = 4;
-		public final static int IFSTATEMENT_ELSESTATEMENT = 5;
+		public final static int IF_STATEMENT__COMMENTS = 0;
+		public final static int IF_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int IF_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int IF_STATEMENT__EXPRESSION = 3;
+		public final static int IF_STATEMENT__THEN_STATEMENT = 4;
+		public final static int IF_STATEMENT__ELSE_STATEMENT = 5;
 		
 		public final static int IMPORTDECLARATION = 48;
 		public final static int IMPORTDECLARATION_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 2;
 		public final static int IMPORTDECLARATION_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int IMPORTDECLARATION_COMMENTS = 0;
-		public final static int IMPORTDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int IMPORTDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int IMPORTDECLARATION_STATIC = 3;
-		public final static int IMPORTDECLARATION_IMPORTEDELEMENT = 4;
+		public final static int IMPORT_DECLARATION__COMMENTS = 0;
+		public final static int IMPORT_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int IMPORT_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int IMPORT_DECLARATION__STATIC = 3;
+		public final static int IMPORT_DECLARATION__IMPORTED_ELEMENT = 4;
 		
 		public final static int INFIXEXPRESSION = 49;
 		public final static int INFIXEXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 4;
 		public final static int INFIXEXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int INFIXEXPRESSION_COMMENTS = 0;
-		public final static int INFIXEXPRESSION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int INFIXEXPRESSION_ORIGINALCLASSFILE = 2;
-		public final static int INFIXEXPRESSION_OPERATOR = 3;
-		public final static int INFIXEXPRESSION_RIGHTOPERAND = 4;
-		public final static int INFIXEXPRESSION_LEFTOPERAND = 5;
-		public final static int INFIXEXPRESSION_EXTENDEDOPERANDS = 6;
+		public final static int INFIX_EXPRESSION__COMMENTS = 0;
+		public final static int INFIX_EXPRESSION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int INFIX_EXPRESSION__ORIGINAL_CLASS_FILE = 2;
+		public final static int INFIX_EXPRESSION__OPERATOR = 3;
+		public final static int INFIX_EXPRESSION__RIGHT_OPERAND = 4;
+		public final static int INFIX_EXPRESSION__LEFT_OPERAND = 5;
+		public final static int INFIX_EXPRESSION__EXTENDED_OPERANDS = 6;
 		
 		public final static int INITIALIZER = 52;
 		public final static int INITIALIZER_FEATURE_COUNT = BODYDECLARATION_FEATURE_COUNT + 1;
 		public final static int INITIALIZER_OPERATION_COUNT = BODYDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int INITIALIZER_COMMENTS = 0;
-		public final static int INITIALIZER_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int INITIALIZER_ORIGINALCLASSFILE = 2;
-		public final static int INITIALIZER_NAME = 3;
-		public final static int INITIALIZER_PROXY = 4;
-		public final static int INITIALIZER_USAGESINIMPORTS = 5;
-		public final static int INITIALIZER_ABSTRACTTYPEDECLARATION = 6;
-		public final static int INITIALIZER_ANNOTATIONS = 7;
-		public final static int INITIALIZER_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int INITIALIZER_MODIFIER = 9;
-		public final static int INITIALIZER_BODY = 10;
+		public final static int INITIALIZER__COMMENTS = 0;
+		public final static int INITIALIZER__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int INITIALIZER__ORIGINAL_CLASS_FILE = 2;
+		public final static int INITIALIZER__NAME = 3;
+		public final static int INITIALIZER__PROXY = 4;
+		public final static int INITIALIZER__USAGES_IN_IMPORTS = 5;
+		public final static int INITIALIZER__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int INITIALIZER__ANNOTATIONS = 7;
+		public final static int INITIALIZER__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int INITIALIZER__MODIFIER = 9;
+		public final static int INITIALIZER__BODY = 10;
 		
 		public final static int INSTANCEOFEXPRESSION = 53;
 		public final static int INSTANCEOFEXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 		public final static int INSTANCEOFEXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int INSTANCEOFEXPRESSION_COMMENTS = 0;
-		public final static int INSTANCEOFEXPRESSION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int INSTANCEOFEXPRESSION_ORIGINALCLASSFILE = 2;
-		public final static int INSTANCEOFEXPRESSION_RIGHTOPERAND = 3;
-		public final static int INSTANCEOFEXPRESSION_LEFTOPERAND = 4;
+		public final static int INSTANCEOF_EXPRESSION__COMMENTS = 0;
+		public final static int INSTANCEOF_EXPRESSION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int INSTANCEOF_EXPRESSION__ORIGINAL_CLASS_FILE = 2;
+		public final static int INSTANCEOF_EXPRESSION__RIGHT_OPERAND = 3;
+		public final static int INSTANCEOF_EXPRESSION__LEFT_OPERAND = 4;
 		
 		public final static int INTERFACEDECLARATION = 54;
 		public final static int INTERFACEDECLARATION_FEATURE_COUNT = TYPEDECLARATION_FEATURE_COUNT + 0;
 		public final static int INTERFACEDECLARATION_OPERATION_COUNT = TYPEDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int INTERFACEDECLARATION_COMMENTS = 0;
-		public final static int INTERFACEDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int INTERFACEDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int INTERFACEDECLARATION_NAME = 3;
-		public final static int INTERFACEDECLARATION_PROXY = 4;
-		public final static int INTERFACEDECLARATION_USAGESINIMPORTS = 5;
-		public final static int INTERFACEDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int INTERFACEDECLARATION_ANNOTATIONS = 7;
-		public final static int INTERFACEDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int INTERFACEDECLARATION_MODIFIER = 9;
-		public final static int INTERFACEDECLARATION_USAGESINTYPEACCESS = 10;
-		public final static int INTERFACEDECLARATION_BODYDECLARATIONS = 11;
-		public final static int INTERFACEDECLARATION_COMMENTSBEFOREBODY = 12;
-		public final static int INTERFACEDECLARATION_COMMENTSAFTERBODY = 13;
-		public final static int INTERFACEDECLARATION_PACKAGE = 14;
-		public final static int INTERFACEDECLARATION_SUPERINTERFACES = 15;
-		public final static int INTERFACEDECLARATION_TYPEPARAMETERS = 16;
+		public final static int INTERFACE_DECLARATION__COMMENTS = 0;
+		public final static int INTERFACE_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int INTERFACE_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int INTERFACE_DECLARATION__NAME = 3;
+		public final static int INTERFACE_DECLARATION__PROXY = 4;
+		public final static int INTERFACE_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int INTERFACE_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int INTERFACE_DECLARATION__ANNOTATIONS = 7;
+		public final static int INTERFACE_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int INTERFACE_DECLARATION__MODIFIER = 9;
+		public final static int INTERFACE_DECLARATION__USAGES_IN_TYPE_ACCESS = 10;
+		public final static int INTERFACE_DECLARATION__BODY_DECLARATIONS = 11;
+		public final static int INTERFACE_DECLARATION__COMMENTS_BEFORE_BODY = 12;
+		public final static int INTERFACE_DECLARATION__COMMENTS_AFTER_BODY = 13;
+		public final static int INTERFACE_DECLARATION__PACKAGE = 14;
+		public final static int INTERFACE_DECLARATION__SUPER_INTERFACES = 15;
+		public final static int INTERFACE_DECLARATION__TYPE_PARAMETERS = 16;
 		
 		public final static int JAVADOC = 55;
 		public final static int JAVADOC_FEATURE_COUNT = COMMENT_FEATURE_COUNT + 1;
 		public final static int JAVADOC_OPERATION_COUNT = COMMENT_OPERATION_COUNT + 0;
 		
-		public final static int JAVADOC_COMMENTS = 0;
-		public final static int JAVADOC_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int JAVADOC_ORIGINALCLASSFILE = 2;
-		public final static int JAVADOC_CONTENT = 3;
-		public final static int JAVADOC_ENCLOSEDBYPARENT = 4;
-		public final static int JAVADOC_PREFIXOFPARENT = 5;
-		public final static int JAVADOC_TAGS = 6;
+		public final static int JAVADOC__COMMENTS = 0;
+		public final static int JAVADOC__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int JAVADOC__ORIGINAL_CLASS_FILE = 2;
+		public final static int JAVADOC__CONTENT = 3;
+		public final static int JAVADOC__ENCLOSED_BY_PARENT = 4;
+		public final static int JAVADOC__PREFIX_OF_PARENT = 5;
+		public final static int JAVADOC__TAGS = 6;
 		
 		public final static int LABELEDSTATEMENT = 56;
 		public final static int LABELEDSTATEMENT_FEATURE_COUNT = NAMEDELEMENT_FEATURE_COUNT + STATEMENT_FEATURE_COUNT + 3;
 		public final static int LABELEDSTATEMENT_OPERATION_COUNT = NAMEDELEMENT_OPERATION_COUNT + STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int LABELEDSTATEMENT_COMMENTS = 0;
-		public final static int LABELEDSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int LABELEDSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int LABELEDSTATEMENT_NAME = 3;
-		public final static int LABELEDSTATEMENT_PROXY = 4;
-		public final static int LABELEDSTATEMENT_USAGESINIMPORTS = 5;
-		public final static int LABELEDSTATEMENT_BODY = 6;
-		public final static int LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS = 7;
-		public final static int LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS = 8;
+		public final static int LABELED_STATEMENT__COMMENTS = 0;
+		public final static int LABELED_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int LABELED_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int LABELED_STATEMENT__NAME = 3;
+		public final static int LABELED_STATEMENT__PROXY = 4;
+		public final static int LABELED_STATEMENT__USAGES_IN_IMPORTS = 5;
+		public final static int LABELED_STATEMENT__BODY = 6;
+		public final static int LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS = 7;
+		public final static int LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS = 8;
 		
 		public final static int LINECOMMENT = 57;
 		public final static int LINECOMMENT_FEATURE_COUNT = COMMENT_FEATURE_COUNT + 0;
 		public final static int LINECOMMENT_OPERATION_COUNT = COMMENT_OPERATION_COUNT + 0;
 		
-		public final static int LINECOMMENT_COMMENTS = 0;
-		public final static int LINECOMMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int LINECOMMENT_ORIGINALCLASSFILE = 2;
-		public final static int LINECOMMENT_CONTENT = 3;
-		public final static int LINECOMMENT_ENCLOSEDBYPARENT = 4;
-		public final static int LINECOMMENT_PREFIXOFPARENT = 5;
+		public final static int LINE_COMMENT__COMMENTS = 0;
+		public final static int LINE_COMMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int LINE_COMMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int LINE_COMMENT__CONTENT = 3;
+		public final static int LINE_COMMENT__ENCLOSED_BY_PARENT = 4;
+		public final static int LINE_COMMENT__PREFIX_OF_PARENT = 5;
 		
 		public final static int MANIFEST = 58;
 		public final static int MANIFEST_FEATURE_COUNT = 2;
 		public final static int MANIFEST_OPERATION_COUNT = 0;
 		
-		public final static int MANIFEST_MAINATTRIBUTES = 0;
-		public final static int MANIFEST_ENTRYATTRIBUTES = 1;
+		public final static int MANIFEST__MAIN_ATTRIBUTES = 0;
+		public final static int MANIFEST__ENTRY_ATTRIBUTES = 1;
 		
 		public final static int MANIFESTATTRIBUTE = 59;
 		public final static int MANIFESTATTRIBUTE_FEATURE_COUNT = 2;
 		public final static int MANIFESTATTRIBUTE_OPERATION_COUNT = 0;
 		
-		public final static int MANIFESTATTRIBUTE_KEY = 0;
-		public final static int MANIFESTATTRIBUTE_VALUE = 1;
+		public final static int MANIFEST_ATTRIBUTE__KEY = 0;
+		public final static int MANIFEST_ATTRIBUTE__VALUE = 1;
 		
 		public final static int MANIFESTENTRY = 60;
 		public final static int MANIFESTENTRY_FEATURE_COUNT = 2;
 		public final static int MANIFESTENTRY_OPERATION_COUNT = 0;
 		
-		public final static int MANIFESTENTRY_NAME = 0;
-		public final static int MANIFESTENTRY_ATTRIBUTES = 1;
+		public final static int MANIFEST_ENTRY__NAME = 0;
+		public final static int MANIFEST_ENTRY__ATTRIBUTES = 1;
 		
 		public final static int MEMBERREF = 61;
 		public final static int MEMBERREF_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 2;
 		public final static int MEMBERREF_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int MEMBERREF_COMMENTS = 0;
-		public final static int MEMBERREF_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int MEMBERREF_ORIGINALCLASSFILE = 2;
-		public final static int MEMBERREF_MEMBER = 3;
-		public final static int MEMBERREF_QUALIFIER = 4;
+		public final static int MEMBER_REF__COMMENTS = 0;
+		public final static int MEMBER_REF__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int MEMBER_REF__ORIGINAL_CLASS_FILE = 2;
+		public final static int MEMBER_REF__MEMBER = 3;
+		public final static int MEMBER_REF__QUALIFIER = 4;
 		
 		public final static int METHODDECLARATION = 62;
 		public final static int METHODDECLARATION_FEATURE_COUNT = ABSTRACTMETHODDECLARATION_FEATURE_COUNT + 4;
 		public final static int METHODDECLARATION_OPERATION_COUNT = ABSTRACTMETHODDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int METHODDECLARATION_COMMENTS = 0;
-		public final static int METHODDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int METHODDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int METHODDECLARATION_NAME = 3;
-		public final static int METHODDECLARATION_PROXY = 4;
-		public final static int METHODDECLARATION_USAGESINIMPORTS = 5;
-		public final static int METHODDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int METHODDECLARATION_ANNOTATIONS = 7;
-		public final static int METHODDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int METHODDECLARATION_MODIFIER = 9;
-		public final static int METHODDECLARATION_BODY = 10;
-		public final static int METHODDECLARATION_PARAMETERS = 11;
-		public final static int METHODDECLARATION_THROWNEXCEPTIONS = 12;
-		public final static int METHODDECLARATION_TYPEPARAMETERS = 13;
-		public final static int METHODDECLARATION_USAGESINDOCCOMMENTS = 14;
-		public final static int METHODDECLARATION_USAGES = 15;
-		public final static int METHODDECLARATION_EXTRAARRAYDIMENSIONS = 16;
-		public final static int METHODDECLARATION_RETURNTYPE = 17;
-		public final static int METHODDECLARATION_REDEFINEDMETHODDECLARATION = 18;
-		public final static int METHODDECLARATION_REDEFINITIONS = 19;
+		public final static int METHOD_DECLARATION__COMMENTS = 0;
+		public final static int METHOD_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int METHOD_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int METHOD_DECLARATION__NAME = 3;
+		public final static int METHOD_DECLARATION__PROXY = 4;
+		public final static int METHOD_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int METHOD_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int METHOD_DECLARATION__ANNOTATIONS = 7;
+		public final static int METHOD_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int METHOD_DECLARATION__MODIFIER = 9;
+		public final static int METHOD_DECLARATION__BODY = 10;
+		public final static int METHOD_DECLARATION__PARAMETERS = 11;
+		public final static int METHOD_DECLARATION__THROWN_EXCEPTIONS = 12;
+		public final static int METHOD_DECLARATION__TYPE_PARAMETERS = 13;
+		public final static int METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS = 14;
+		public final static int METHOD_DECLARATION__USAGES = 15;
+		public final static int METHOD_DECLARATION__EXTRA_ARRAY_DIMENSIONS = 16;
+		public final static int METHOD_DECLARATION__RETURN_TYPE = 17;
+		public final static int METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION = 18;
+		public final static int METHOD_DECLARATION__REDEFINITIONS = 19;
 		
 		public final static int METHODINVOCATION = 63;
 		public final static int METHODINVOCATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + ABSTRACTMETHODINVOCATION_FEATURE_COUNT + 1;
 		public final static int METHODINVOCATION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + ABSTRACTMETHODINVOCATION_OPERATION_COUNT + 0;
 		
-		public final static int METHODINVOCATION_COMMENTS = 0;
-		public final static int METHODINVOCATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int METHODINVOCATION_ORIGINALCLASSFILE = 2;
-		public final static int METHODINVOCATION_METHOD = 3;
-		public final static int METHODINVOCATION_ARGUMENTS = 4;
-		public final static int METHODINVOCATION_TYPEARGUMENTS = 5;
-		public final static int METHODINVOCATION_EXPRESSION = 6;
+		public final static int METHOD_INVOCATION__COMMENTS = 0;
+		public final static int METHOD_INVOCATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int METHOD_INVOCATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int METHOD_INVOCATION__METHOD = 3;
+		public final static int METHOD_INVOCATION__ARGUMENTS = 4;
+		public final static int METHOD_INVOCATION__TYPE_ARGUMENTS = 5;
+		public final static int METHOD_INVOCATION__EXPRESSION = 6;
 		
 		public final static int METHODREF = 64;
 		public final static int METHODREF_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 3;
 		public final static int METHODREF_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int METHODREF_COMMENTS = 0;
-		public final static int METHODREF_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int METHODREF_ORIGINALCLASSFILE = 2;
-		public final static int METHODREF_METHOD = 3;
-		public final static int METHODREF_QUALIFIER = 4;
-		public final static int METHODREF_PARAMETERS = 5;
+		public final static int METHOD_REF__COMMENTS = 0;
+		public final static int METHOD_REF__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int METHOD_REF__ORIGINAL_CLASS_FILE = 2;
+		public final static int METHOD_REF__METHOD = 3;
+		public final static int METHOD_REF__QUALIFIER = 4;
+		public final static int METHOD_REF__PARAMETERS = 5;
 		
 		public final static int METHODREFPARAMETER = 65;
 		public final static int METHODREFPARAMETER_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 3;
 		public final static int METHODREFPARAMETER_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int METHODREFPARAMETER_COMMENTS = 0;
-		public final static int METHODREFPARAMETER_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int METHODREFPARAMETER_ORIGINALCLASSFILE = 2;
-		public final static int METHODREFPARAMETER_NAME = 3;
-		public final static int METHODREFPARAMETER_VARARGS = 4;
-		public final static int METHODREFPARAMETER_TYPE = 5;
+		public final static int METHOD_REF_PARAMETER__COMMENTS = 0;
+		public final static int METHOD_REF_PARAMETER__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int METHOD_REF_PARAMETER__ORIGINAL_CLASS_FILE = 2;
+		public final static int METHOD_REF_PARAMETER__NAME = 3;
+		public final static int METHOD_REF_PARAMETER__VARARGS = 4;
+		public final static int METHOD_REF_PARAMETER__TYPE = 5;
 		
 		public final static int MODEL = 66;
 		public final static int MODEL_FEATURE_COUNT = 7;
 		public final static int MODEL_OPERATION_COUNT = 0;
 		
-		public final static int MODEL_NAME = 0;
-		public final static int MODEL_OWNEDELEMENTS = 1;
-		public final static int MODEL_ORPHANTYPES = 2;
-		public final static int MODEL_UNRESOLVEDITEMS = 3;
-		public final static int MODEL_COMPILATIONUNITS = 4;
-		public final static int MODEL_CLASSFILES = 5;
-		public final static int MODEL_ARCHIVES = 6;
+		public final static int MODEL__NAME = 0;
+		public final static int MODEL__OWNED_ELEMENTS = 1;
+		public final static int MODEL__ORPHAN_TYPES = 2;
+		public final static int MODEL__UNRESOLVED_ITEMS = 3;
+		public final static int MODEL__COMPILATION_UNITS = 4;
+		public final static int MODEL__CLASS_FILES = 5;
+		public final static int MODEL__ARCHIVES = 6;
 		
 		public final static int MODIFIER = 67;
 		public final static int MODIFIER_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 12;
 		public final static int MODIFIER_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int MODIFIER_COMMENTS = 0;
-		public final static int MODIFIER_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int MODIFIER_ORIGINALCLASSFILE = 2;
-		public final static int MODIFIER_VISIBILITY = 3;
-		public final static int MODIFIER_INHERITANCE = 4;
-		public final static int MODIFIER_STATIC = 5;
-		public final static int MODIFIER_TRANSIENT = 6;
-		public final static int MODIFIER_VOLATILE = 7;
-		public final static int MODIFIER_NATIVE = 8;
-		public final static int MODIFIER_STRICTFP = 9;
-		public final static int MODIFIER_SYNCHRONIZED = 10;
-		public final static int MODIFIER_BODYDECLARATION = 11;
-		public final static int MODIFIER_SINGLEVARIABLEDECLARATION = 12;
-		public final static int MODIFIER_VARIABLEDECLARATIONSTATEMENT = 13;
-		public final static int MODIFIER_VARIABLEDECLARATIONEXPRESSION = 14;
+		public final static int MODIFIER__COMMENTS = 0;
+		public final static int MODIFIER__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int MODIFIER__ORIGINAL_CLASS_FILE = 2;
+		public final static int MODIFIER__VISIBILITY = 3;
+		public final static int MODIFIER__INHERITANCE = 4;
+		public final static int MODIFIER__STATIC = 5;
+		public final static int MODIFIER__TRANSIENT = 6;
+		public final static int MODIFIER__VOLATILE = 7;
+		public final static int MODIFIER__NATIVE = 8;
+		public final static int MODIFIER__STRICTFP = 9;
+		public final static int MODIFIER__SYNCHRONIZED = 10;
+		public final static int MODIFIER__BODY_DECLARATION = 11;
+		public final static int MODIFIER__SINGLE_VARIABLE_DECLARATION = 12;
+		public final static int MODIFIER__VARIABLE_DECLARATION_STATEMENT = 13;
+		public final static int MODIFIER__VARIABLE_DECLARATION_EXPRESSION = 14;
 		
 		public final static int NAMESPACEACCESS = 69;
 		public final static int NAMESPACEACCESS_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 0;
 		public final static int NAMESPACEACCESS_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int NAMESPACEACCESS_COMMENTS = 0;
-		public final static int NAMESPACEACCESS_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int NAMESPACEACCESS_ORIGINALCLASSFILE = 2;
+		public final static int NAMESPACE_ACCESS__COMMENTS = 0;
+		public final static int NAMESPACE_ACCESS__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int NAMESPACE_ACCESS__ORIGINAL_CLASS_FILE = 2;
 		
 		public final static int NUMBERLITERAL = 70;
 		public final static int NUMBERLITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 		public final static int NUMBERLITERAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int NUMBERLITERAL_COMMENTS = 0;
-		public final static int NUMBERLITERAL_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int NUMBERLITERAL_ORIGINALCLASSFILE = 2;
-		public final static int NUMBERLITERAL_TOKENVALUE = 3;
+		public final static int NUMBER_LITERAL__COMMENTS = 0;
+		public final static int NUMBER_LITERAL__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int NUMBER_LITERAL__ORIGINAL_CLASS_FILE = 2;
+		public final static int NUMBER_LITERAL__TOKEN_VALUE = 3;
 		
 		public final static int NULLLITERAL = 71;
 		public final static int NULLLITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 		public final static int NULLLITERAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int NULLLITERAL_COMMENTS = 0;
-		public final static int NULLLITERAL_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int NULLLITERAL_ORIGINALCLASSFILE = 2;
+		public final static int NULL_LITERAL__COMMENTS = 0;
+		public final static int NULL_LITERAL__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int NULL_LITERAL__ORIGINAL_CLASS_FILE = 2;
 		
 		public final static int PACKAGE = 72;
 		public final static int PACKAGE_FEATURE_COUNT = NAMEDELEMENT_FEATURE_COUNT + 5;
 		public final static int PACKAGE_OPERATION_COUNT = NAMEDELEMENT_OPERATION_COUNT + 0;
 		
-		public final static int PACKAGE_COMMENTS = 0;
-		public final static int PACKAGE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PACKAGE_ORIGINALCLASSFILE = 2;
-		public final static int PACKAGE_NAME = 3;
-		public final static int PACKAGE_PROXY = 4;
-		public final static int PACKAGE_USAGESINIMPORTS = 5;
-		public final static int PACKAGE_OWNEDELEMENTS = 6;
-		public final static int PACKAGE_MODEL = 7;
-		public final static int PACKAGE_OWNEDPACKAGES = 8;
-		public final static int PACKAGE_PACKAGE = 9;
-		public final static int PACKAGE_USAGESINPACKAGEACCESS = 10;
+		public final static int PACKAGE__COMMENTS = 0;
+		public final static int PACKAGE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PACKAGE__ORIGINAL_CLASS_FILE = 2;
+		public final static int PACKAGE__NAME = 3;
+		public final static int PACKAGE__PROXY = 4;
+		public final static int PACKAGE__USAGES_IN_IMPORTS = 5;
+		public final static int PACKAGE__OWNED_ELEMENTS = 6;
+		public final static int PACKAGE__MODEL = 7;
+		public final static int PACKAGE__OWNED_PACKAGES = 8;
+		public final static int PACKAGE__PACKAGE = 9;
+		public final static int PACKAGE__USAGES_IN_PACKAGE_ACCESS = 10;
 		
 		public final static int PACKAGEACCESS = 73;
 		public final static int PACKAGEACCESS_FEATURE_COUNT = NAMESPACEACCESS_FEATURE_COUNT + 2;
 		public final static int PACKAGEACCESS_OPERATION_COUNT = NAMESPACEACCESS_OPERATION_COUNT + 0;
 		
-		public final static int PACKAGEACCESS_COMMENTS = 0;
-		public final static int PACKAGEACCESS_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PACKAGEACCESS_ORIGINALCLASSFILE = 2;
-		public final static int PACKAGEACCESS_PACKAGE = 3;
-		public final static int PACKAGEACCESS_QUALIFIER = 4;
+		public final static int PACKAGE_ACCESS__COMMENTS = 0;
+		public final static int PACKAGE_ACCESS__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PACKAGE_ACCESS__ORIGINAL_CLASS_FILE = 2;
+		public final static int PACKAGE_ACCESS__PACKAGE = 3;
+		public final static int PACKAGE_ACCESS__QUALIFIER = 4;
 		
 		public final static int PARAMETERIZEDTYPE = 74;
 		public final static int PARAMETERIZEDTYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 2;
 		public final static int PARAMETERIZEDTYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 		
-		public final static int PARAMETERIZEDTYPE_COMMENTS = 0;
-		public final static int PARAMETERIZEDTYPE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PARAMETERIZEDTYPE_ORIGINALCLASSFILE = 2;
-		public final static int PARAMETERIZEDTYPE_NAME = 3;
-		public final static int PARAMETERIZEDTYPE_PROXY = 4;
-		public final static int PARAMETERIZEDTYPE_USAGESINIMPORTS = 5;
-		public final static int PARAMETERIZEDTYPE_USAGESINTYPEACCESS = 6;
-		public final static int PARAMETERIZEDTYPE_TYPE = 7;
-		public final static int PARAMETERIZEDTYPE_TYPEARGUMENTS = 8;
+		public final static int PARAMETERIZED_TYPE__COMMENTS = 0;
+		public final static int PARAMETERIZED_TYPE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PARAMETERIZED_TYPE__ORIGINAL_CLASS_FILE = 2;
+		public final static int PARAMETERIZED_TYPE__NAME = 3;
+		public final static int PARAMETERIZED_TYPE__PROXY = 4;
+		public final static int PARAMETERIZED_TYPE__USAGES_IN_IMPORTS = 5;
+		public final static int PARAMETERIZED_TYPE__USAGES_IN_TYPE_ACCESS = 6;
+		public final static int PARAMETERIZED_TYPE__TYPE = 7;
+		public final static int PARAMETERIZED_TYPE__TYPE_ARGUMENTS = 8;
 		
 		public final static int PARENTHESIZEDEXPRESSION = 75;
 		public final static int PARENTHESIZEDEXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 		public final static int PARENTHESIZEDEXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int PARENTHESIZEDEXPRESSION_COMMENTS = 0;
-		public final static int PARENTHESIZEDEXPRESSION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PARENTHESIZEDEXPRESSION_ORIGINALCLASSFILE = 2;
-		public final static int PARENTHESIZEDEXPRESSION_EXPRESSION = 3;
+		public final static int PARENTHESIZED_EXPRESSION__COMMENTS = 0;
+		public final static int PARENTHESIZED_EXPRESSION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PARENTHESIZED_EXPRESSION__ORIGINAL_CLASS_FILE = 2;
+		public final static int PARENTHESIZED_EXPRESSION__EXPRESSION = 3;
 		
 		public final static int POSTFIXEXPRESSION = 76;
 		public final static int POSTFIXEXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 		public final static int POSTFIXEXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int POSTFIXEXPRESSION_COMMENTS = 0;
-		public final static int POSTFIXEXPRESSION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int POSTFIXEXPRESSION_ORIGINALCLASSFILE = 2;
-		public final static int POSTFIXEXPRESSION_OPERATOR = 3;
-		public final static int POSTFIXEXPRESSION_OPERAND = 4;
+		public final static int POSTFIX_EXPRESSION__COMMENTS = 0;
+		public final static int POSTFIX_EXPRESSION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int POSTFIX_EXPRESSION__ORIGINAL_CLASS_FILE = 2;
+		public final static int POSTFIX_EXPRESSION__OPERATOR = 3;
+		public final static int POSTFIX_EXPRESSION__OPERAND = 4;
 		
 		public final static int PREFIXEXPRESSION = 78;
 		public final static int PREFIXEXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 		public final static int PREFIXEXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int PREFIXEXPRESSION_COMMENTS = 0;
-		public final static int PREFIXEXPRESSION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PREFIXEXPRESSION_ORIGINALCLASSFILE = 2;
-		public final static int PREFIXEXPRESSION_OPERATOR = 3;
-		public final static int PREFIXEXPRESSION_OPERAND = 4;
+		public final static int PREFIX_EXPRESSION__COMMENTS = 0;
+		public final static int PREFIX_EXPRESSION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PREFIX_EXPRESSION__ORIGINAL_CLASS_FILE = 2;
+		public final static int PREFIX_EXPRESSION__OPERATOR = 3;
+		public final static int PREFIX_EXPRESSION__OPERAND = 4;
 		
 		public final static int PRIMITIVETYPE = 80;
 		public final static int PRIMITIVETYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
 		public final static int PRIMITIVETYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 		
-		public final static int PRIMITIVETYPE_COMMENTS = 0;
-		public final static int PRIMITIVETYPE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PRIMITIVETYPE_ORIGINALCLASSFILE = 2;
-		public final static int PRIMITIVETYPE_NAME = 3;
-		public final static int PRIMITIVETYPE_PROXY = 4;
-		public final static int PRIMITIVETYPE_USAGESINIMPORTS = 5;
-		public final static int PRIMITIVETYPE_USAGESINTYPEACCESS = 6;
+		public final static int PRIMITIVE_TYPE__COMMENTS = 0;
+		public final static int PRIMITIVE_TYPE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PRIMITIVE_TYPE__ORIGINAL_CLASS_FILE = 2;
+		public final static int PRIMITIVE_TYPE__NAME = 3;
+		public final static int PRIMITIVE_TYPE__PROXY = 4;
+		public final static int PRIMITIVE_TYPE__USAGES_IN_IMPORTS = 5;
+		public final static int PRIMITIVE_TYPE__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int PRIMITIVETYPEBOOLEAN = 81;
 		public final static int PRIMITIVETYPEBOOLEAN_FEATURE_COUNT = PRIMITIVETYPE_FEATURE_COUNT + 0;
 		public final static int PRIMITIVETYPEBOOLEAN_OPERATION_COUNT = PRIMITIVETYPE_OPERATION_COUNT + 0;
 		
-		public final static int PRIMITIVETYPEBOOLEAN_COMMENTS = 0;
-		public final static int PRIMITIVETYPEBOOLEAN_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PRIMITIVETYPEBOOLEAN_ORIGINALCLASSFILE = 2;
-		public final static int PRIMITIVETYPEBOOLEAN_NAME = 3;
-		public final static int PRIMITIVETYPEBOOLEAN_PROXY = 4;
-		public final static int PRIMITIVETYPEBOOLEAN_USAGESINIMPORTS = 5;
-		public final static int PRIMITIVETYPEBOOLEAN_USAGESINTYPEACCESS = 6;
+		public final static int PRIMITIVE_TYPE_BOOLEAN__COMMENTS = 0;
+		public final static int PRIMITIVE_TYPE_BOOLEAN__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PRIMITIVE_TYPE_BOOLEAN__ORIGINAL_CLASS_FILE = 2;
+		public final static int PRIMITIVE_TYPE_BOOLEAN__NAME = 3;
+		public final static int PRIMITIVE_TYPE_BOOLEAN__PROXY = 4;
+		public final static int PRIMITIVE_TYPE_BOOLEAN__USAGES_IN_IMPORTS = 5;
+		public final static int PRIMITIVE_TYPE_BOOLEAN__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int PRIMITIVETYPEBYTE = 82;
 		public final static int PRIMITIVETYPEBYTE_FEATURE_COUNT = PRIMITIVETYPE_FEATURE_COUNT + 0;
 		public final static int PRIMITIVETYPEBYTE_OPERATION_COUNT = PRIMITIVETYPE_OPERATION_COUNT + 0;
 		
-		public final static int PRIMITIVETYPEBYTE_COMMENTS = 0;
-		public final static int PRIMITIVETYPEBYTE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PRIMITIVETYPEBYTE_ORIGINALCLASSFILE = 2;
-		public final static int PRIMITIVETYPEBYTE_NAME = 3;
-		public final static int PRIMITIVETYPEBYTE_PROXY = 4;
-		public final static int PRIMITIVETYPEBYTE_USAGESINIMPORTS = 5;
-		public final static int PRIMITIVETYPEBYTE_USAGESINTYPEACCESS = 6;
+		public final static int PRIMITIVE_TYPE_BYTE__COMMENTS = 0;
+		public final static int PRIMITIVE_TYPE_BYTE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PRIMITIVE_TYPE_BYTE__ORIGINAL_CLASS_FILE = 2;
+		public final static int PRIMITIVE_TYPE_BYTE__NAME = 3;
+		public final static int PRIMITIVE_TYPE_BYTE__PROXY = 4;
+		public final static int PRIMITIVE_TYPE_BYTE__USAGES_IN_IMPORTS = 5;
+		public final static int PRIMITIVE_TYPE_BYTE__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int PRIMITIVETYPECHAR = 83;
 		public final static int PRIMITIVETYPECHAR_FEATURE_COUNT = PRIMITIVETYPE_FEATURE_COUNT + 0;
 		public final static int PRIMITIVETYPECHAR_OPERATION_COUNT = PRIMITIVETYPE_OPERATION_COUNT + 0;
 		
-		public final static int PRIMITIVETYPECHAR_COMMENTS = 0;
-		public final static int PRIMITIVETYPECHAR_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PRIMITIVETYPECHAR_ORIGINALCLASSFILE = 2;
-		public final static int PRIMITIVETYPECHAR_NAME = 3;
-		public final static int PRIMITIVETYPECHAR_PROXY = 4;
-		public final static int PRIMITIVETYPECHAR_USAGESINIMPORTS = 5;
-		public final static int PRIMITIVETYPECHAR_USAGESINTYPEACCESS = 6;
+		public final static int PRIMITIVE_TYPE_CHAR__COMMENTS = 0;
+		public final static int PRIMITIVE_TYPE_CHAR__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PRIMITIVE_TYPE_CHAR__ORIGINAL_CLASS_FILE = 2;
+		public final static int PRIMITIVE_TYPE_CHAR__NAME = 3;
+		public final static int PRIMITIVE_TYPE_CHAR__PROXY = 4;
+		public final static int PRIMITIVE_TYPE_CHAR__USAGES_IN_IMPORTS = 5;
+		public final static int PRIMITIVE_TYPE_CHAR__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int PRIMITIVETYPEDOUBLE = 84;
 		public final static int PRIMITIVETYPEDOUBLE_FEATURE_COUNT = PRIMITIVETYPE_FEATURE_COUNT + 0;
 		public final static int PRIMITIVETYPEDOUBLE_OPERATION_COUNT = PRIMITIVETYPE_OPERATION_COUNT + 0;
 		
-		public final static int PRIMITIVETYPEDOUBLE_COMMENTS = 0;
-		public final static int PRIMITIVETYPEDOUBLE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PRIMITIVETYPEDOUBLE_ORIGINALCLASSFILE = 2;
-		public final static int PRIMITIVETYPEDOUBLE_NAME = 3;
-		public final static int PRIMITIVETYPEDOUBLE_PROXY = 4;
-		public final static int PRIMITIVETYPEDOUBLE_USAGESINIMPORTS = 5;
-		public final static int PRIMITIVETYPEDOUBLE_USAGESINTYPEACCESS = 6;
+		public final static int PRIMITIVE_TYPE_DOUBLE__COMMENTS = 0;
+		public final static int PRIMITIVE_TYPE_DOUBLE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PRIMITIVE_TYPE_DOUBLE__ORIGINAL_CLASS_FILE = 2;
+		public final static int PRIMITIVE_TYPE_DOUBLE__NAME = 3;
+		public final static int PRIMITIVE_TYPE_DOUBLE__PROXY = 4;
+		public final static int PRIMITIVE_TYPE_DOUBLE__USAGES_IN_IMPORTS = 5;
+		public final static int PRIMITIVE_TYPE_DOUBLE__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int PRIMITIVETYPESHORT = 85;
 		public final static int PRIMITIVETYPESHORT_FEATURE_COUNT = PRIMITIVETYPE_FEATURE_COUNT + 0;
 		public final static int PRIMITIVETYPESHORT_OPERATION_COUNT = PRIMITIVETYPE_OPERATION_COUNT + 0;
 		
-		public final static int PRIMITIVETYPESHORT_COMMENTS = 0;
-		public final static int PRIMITIVETYPESHORT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PRIMITIVETYPESHORT_ORIGINALCLASSFILE = 2;
-		public final static int PRIMITIVETYPESHORT_NAME = 3;
-		public final static int PRIMITIVETYPESHORT_PROXY = 4;
-		public final static int PRIMITIVETYPESHORT_USAGESINIMPORTS = 5;
-		public final static int PRIMITIVETYPESHORT_USAGESINTYPEACCESS = 6;
+		public final static int PRIMITIVE_TYPE_SHORT__COMMENTS = 0;
+		public final static int PRIMITIVE_TYPE_SHORT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PRIMITIVE_TYPE_SHORT__ORIGINAL_CLASS_FILE = 2;
+		public final static int PRIMITIVE_TYPE_SHORT__NAME = 3;
+		public final static int PRIMITIVE_TYPE_SHORT__PROXY = 4;
+		public final static int PRIMITIVE_TYPE_SHORT__USAGES_IN_IMPORTS = 5;
+		public final static int PRIMITIVE_TYPE_SHORT__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int PRIMITIVETYPEFLOAT = 86;
 		public final static int PRIMITIVETYPEFLOAT_FEATURE_COUNT = PRIMITIVETYPE_FEATURE_COUNT + 0;
 		public final static int PRIMITIVETYPEFLOAT_OPERATION_COUNT = PRIMITIVETYPE_OPERATION_COUNT + 0;
 		
-		public final static int PRIMITIVETYPEFLOAT_COMMENTS = 0;
-		public final static int PRIMITIVETYPEFLOAT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PRIMITIVETYPEFLOAT_ORIGINALCLASSFILE = 2;
-		public final static int PRIMITIVETYPEFLOAT_NAME = 3;
-		public final static int PRIMITIVETYPEFLOAT_PROXY = 4;
-		public final static int PRIMITIVETYPEFLOAT_USAGESINIMPORTS = 5;
-		public final static int PRIMITIVETYPEFLOAT_USAGESINTYPEACCESS = 6;
+		public final static int PRIMITIVE_TYPE_FLOAT__COMMENTS = 0;
+		public final static int PRIMITIVE_TYPE_FLOAT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PRIMITIVE_TYPE_FLOAT__ORIGINAL_CLASS_FILE = 2;
+		public final static int PRIMITIVE_TYPE_FLOAT__NAME = 3;
+		public final static int PRIMITIVE_TYPE_FLOAT__PROXY = 4;
+		public final static int PRIMITIVE_TYPE_FLOAT__USAGES_IN_IMPORTS = 5;
+		public final static int PRIMITIVE_TYPE_FLOAT__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int PRIMITIVETYPEINT = 87;
 		public final static int PRIMITIVETYPEINT_FEATURE_COUNT = PRIMITIVETYPE_FEATURE_COUNT + 0;
 		public final static int PRIMITIVETYPEINT_OPERATION_COUNT = PRIMITIVETYPE_OPERATION_COUNT + 0;
 		
-		public final static int PRIMITIVETYPEINT_COMMENTS = 0;
-		public final static int PRIMITIVETYPEINT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PRIMITIVETYPEINT_ORIGINALCLASSFILE = 2;
-		public final static int PRIMITIVETYPEINT_NAME = 3;
-		public final static int PRIMITIVETYPEINT_PROXY = 4;
-		public final static int PRIMITIVETYPEINT_USAGESINIMPORTS = 5;
-		public final static int PRIMITIVETYPEINT_USAGESINTYPEACCESS = 6;
+		public final static int PRIMITIVE_TYPE_INT__COMMENTS = 0;
+		public final static int PRIMITIVE_TYPE_INT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PRIMITIVE_TYPE_INT__ORIGINAL_CLASS_FILE = 2;
+		public final static int PRIMITIVE_TYPE_INT__NAME = 3;
+		public final static int PRIMITIVE_TYPE_INT__PROXY = 4;
+		public final static int PRIMITIVE_TYPE_INT__USAGES_IN_IMPORTS = 5;
+		public final static int PRIMITIVE_TYPE_INT__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int PRIMITIVETYPELONG = 88;
 		public final static int PRIMITIVETYPELONG_FEATURE_COUNT = PRIMITIVETYPE_FEATURE_COUNT + 0;
 		public final static int PRIMITIVETYPELONG_OPERATION_COUNT = PRIMITIVETYPE_OPERATION_COUNT + 0;
 		
-		public final static int PRIMITIVETYPELONG_COMMENTS = 0;
-		public final static int PRIMITIVETYPELONG_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PRIMITIVETYPELONG_ORIGINALCLASSFILE = 2;
-		public final static int PRIMITIVETYPELONG_NAME = 3;
-		public final static int PRIMITIVETYPELONG_PROXY = 4;
-		public final static int PRIMITIVETYPELONG_USAGESINIMPORTS = 5;
-		public final static int PRIMITIVETYPELONG_USAGESINTYPEACCESS = 6;
+		public final static int PRIMITIVE_TYPE_LONG__COMMENTS = 0;
+		public final static int PRIMITIVE_TYPE_LONG__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PRIMITIVE_TYPE_LONG__ORIGINAL_CLASS_FILE = 2;
+		public final static int PRIMITIVE_TYPE_LONG__NAME = 3;
+		public final static int PRIMITIVE_TYPE_LONG__PROXY = 4;
+		public final static int PRIMITIVE_TYPE_LONG__USAGES_IN_IMPORTS = 5;
+		public final static int PRIMITIVE_TYPE_LONG__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int PRIMITIVETYPEVOID = 89;
 		public final static int PRIMITIVETYPEVOID_FEATURE_COUNT = PRIMITIVETYPE_FEATURE_COUNT + 0;
 		public final static int PRIMITIVETYPEVOID_OPERATION_COUNT = PRIMITIVETYPE_OPERATION_COUNT + 0;
 		
-		public final static int PRIMITIVETYPEVOID_COMMENTS = 0;
-		public final static int PRIMITIVETYPEVOID_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int PRIMITIVETYPEVOID_ORIGINALCLASSFILE = 2;
-		public final static int PRIMITIVETYPEVOID_NAME = 3;
-		public final static int PRIMITIVETYPEVOID_PROXY = 4;
-		public final static int PRIMITIVETYPEVOID_USAGESINIMPORTS = 5;
-		public final static int PRIMITIVETYPEVOID_USAGESINTYPEACCESS = 6;
+		public final static int PRIMITIVE_TYPE_VOID__COMMENTS = 0;
+		public final static int PRIMITIVE_TYPE_VOID__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int PRIMITIVE_TYPE_VOID__ORIGINAL_CLASS_FILE = 2;
+		public final static int PRIMITIVE_TYPE_VOID__NAME = 3;
+		public final static int PRIMITIVE_TYPE_VOID__PROXY = 4;
+		public final static int PRIMITIVE_TYPE_VOID__USAGES_IN_IMPORTS = 5;
+		public final static int PRIMITIVE_TYPE_VOID__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int RETURNSTATEMENT = 90;
 		public final static int RETURNSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 		public final static int RETURNSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int RETURNSTATEMENT_COMMENTS = 0;
-		public final static int RETURNSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int RETURNSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int RETURNSTATEMENT_EXPRESSION = 3;
+		public final static int RETURN_STATEMENT__COMMENTS = 0;
+		public final static int RETURN_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int RETURN_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int RETURN_STATEMENT__EXPRESSION = 3;
 		
 		public final static int SINGLEVARIABLEACCESS = 91;
 		public final static int SINGLEVARIABLEACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 		public final static int SINGLEVARIABLEACCESS_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int SINGLEVARIABLEACCESS_COMMENTS = 0;
-		public final static int SINGLEVARIABLEACCESS_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int SINGLEVARIABLEACCESS_ORIGINALCLASSFILE = 2;
-		public final static int SINGLEVARIABLEACCESS_VARIABLE = 3;
-		public final static int SINGLEVARIABLEACCESS_QUALIFIER = 4;
+		public final static int SINGLE_VARIABLE_ACCESS__COMMENTS = 0;
+		public final static int SINGLE_VARIABLE_ACCESS__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int SINGLE_VARIABLE_ACCESS__ORIGINAL_CLASS_FILE = 2;
+		public final static int SINGLE_VARIABLE_ACCESS__VARIABLE = 3;
+		public final static int SINGLE_VARIABLE_ACCESS__QUALIFIER = 4;
 		
 		public final static int SINGLEVARIABLEDECLARATION = 92;
 		public final static int SINGLEVARIABLEDECLARATION_FEATURE_COUNT = VARIABLEDECLARATION_FEATURE_COUNT + 7;
 		public final static int SINGLEVARIABLEDECLARATION_OPERATION_COUNT = VARIABLEDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int SINGLEVARIABLEDECLARATION_COMMENTS = 0;
-		public final static int SINGLEVARIABLEDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int SINGLEVARIABLEDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int SINGLEVARIABLEDECLARATION_NAME = 3;
-		public final static int SINGLEVARIABLEDECLARATION_PROXY = 4;
-		public final static int SINGLEVARIABLEDECLARATION_USAGESINIMPORTS = 5;
-		public final static int SINGLEVARIABLEDECLARATION_EXTRAARRAYDIMENSIONS = 6;
-		public final static int SINGLEVARIABLEDECLARATION_INITIALIZER = 7;
-		public final static int SINGLEVARIABLEDECLARATION_USAGEINVARIABLEACCESS = 8;
-		public final static int SINGLEVARIABLEDECLARATION_MODIFIER = 9;
-		public final static int SINGLEVARIABLEDECLARATION_VARARGS = 10;
-		public final static int SINGLEVARIABLEDECLARATION_TYPE = 11;
-		public final static int SINGLEVARIABLEDECLARATION_ANNOTATIONS = 12;
-		public final static int SINGLEVARIABLEDECLARATION_METHODDECLARATION = 13;
-		public final static int SINGLEVARIABLEDECLARATION_CATCHCLAUSE = 14;
-		public final static int SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT = 15;
+		public final static int SINGLE_VARIABLE_DECLARATION__COMMENTS = 0;
+		public final static int SINGLE_VARIABLE_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int SINGLE_VARIABLE_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int SINGLE_VARIABLE_DECLARATION__NAME = 3;
+		public final static int SINGLE_VARIABLE_DECLARATION__PROXY = 4;
+		public final static int SINGLE_VARIABLE_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int SINGLE_VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS = 6;
+		public final static int SINGLE_VARIABLE_DECLARATION__INITIALIZER = 7;
+		public final static int SINGLE_VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS = 8;
+		public final static int SINGLE_VARIABLE_DECLARATION__MODIFIER = 9;
+		public final static int SINGLE_VARIABLE_DECLARATION__VARARGS = 10;
+		public final static int SINGLE_VARIABLE_DECLARATION__TYPE = 11;
+		public final static int SINGLE_VARIABLE_DECLARATION__ANNOTATIONS = 12;
+		public final static int SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION = 13;
+		public final static int SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE = 14;
+		public final static int SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT = 15;
 		
 		public final static int STRINGLITERAL = 94;
 		public final static int STRINGLITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 		public final static int STRINGLITERAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int STRINGLITERAL_COMMENTS = 0;
-		public final static int STRINGLITERAL_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int STRINGLITERAL_ORIGINALCLASSFILE = 2;
-		public final static int STRINGLITERAL_ESCAPEDVALUE = 3;
+		public final static int STRING_LITERAL__COMMENTS = 0;
+		public final static int STRING_LITERAL__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int STRING_LITERAL__ORIGINAL_CLASS_FILE = 2;
+		public final static int STRING_LITERAL__ESCAPED_VALUE = 3;
 		
 		public final static int SUPERCONSTRUCTORINVOCATION = 95;
 		public final static int SUPERCONSTRUCTORINVOCATION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + ABSTRACTMETHODINVOCATION_FEATURE_COUNT + 1;
 		public final static int SUPERCONSTRUCTORINVOCATION_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + ABSTRACTMETHODINVOCATION_OPERATION_COUNT + 0;
 		
-		public final static int SUPERCONSTRUCTORINVOCATION_COMMENTS = 0;
-		public final static int SUPERCONSTRUCTORINVOCATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int SUPERCONSTRUCTORINVOCATION_ORIGINALCLASSFILE = 2;
-		public final static int SUPERCONSTRUCTORINVOCATION_METHOD = 3;
-		public final static int SUPERCONSTRUCTORINVOCATION_ARGUMENTS = 4;
-		public final static int SUPERCONSTRUCTORINVOCATION_TYPEARGUMENTS = 5;
-		public final static int SUPERCONSTRUCTORINVOCATION_EXPRESSION = 6;
+		public final static int SUPER_CONSTRUCTOR_INVOCATION__COMMENTS = 0;
+		public final static int SUPER_CONSTRUCTOR_INVOCATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int SUPER_CONSTRUCTOR_INVOCATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int SUPER_CONSTRUCTOR_INVOCATION__METHOD = 3;
+		public final static int SUPER_CONSTRUCTOR_INVOCATION__ARGUMENTS = 4;
+		public final static int SUPER_CONSTRUCTOR_INVOCATION__TYPE_ARGUMENTS = 5;
+		public final static int SUPER_CONSTRUCTOR_INVOCATION__EXPRESSION = 6;
 		
 		public final static int SUPERFIELDACCESS = 96;
 		public final static int SUPERFIELDACCESS_FEATURE_COUNT = ABSTRACTTYPEQUALIFIEDEXPRESSION_FEATURE_COUNT + 1;
 		public final static int SUPERFIELDACCESS_OPERATION_COUNT = ABSTRACTTYPEQUALIFIEDEXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int SUPERFIELDACCESS_COMMENTS = 0;
-		public final static int SUPERFIELDACCESS_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int SUPERFIELDACCESS_ORIGINALCLASSFILE = 2;
-		public final static int SUPERFIELDACCESS_QUALIFIER = 3;
-		public final static int SUPERFIELDACCESS_FIELD = 4;
+		public final static int SUPER_FIELD_ACCESS__COMMENTS = 0;
+		public final static int SUPER_FIELD_ACCESS__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int SUPER_FIELD_ACCESS__ORIGINAL_CLASS_FILE = 2;
+		public final static int SUPER_FIELD_ACCESS__QUALIFIER = 3;
+		public final static int SUPER_FIELD_ACCESS__FIELD = 4;
 		
 		public final static int SUPERMETHODINVOCATION = 97;
 		public final static int SUPERMETHODINVOCATION_FEATURE_COUNT = ABSTRACTTYPEQUALIFIEDEXPRESSION_FEATURE_COUNT + ABSTRACTMETHODINVOCATION_FEATURE_COUNT + 0;
 		public final static int SUPERMETHODINVOCATION_OPERATION_COUNT = ABSTRACTTYPEQUALIFIEDEXPRESSION_OPERATION_COUNT + ABSTRACTMETHODINVOCATION_OPERATION_COUNT + 0;
 		
-		public final static int SUPERMETHODINVOCATION_COMMENTS = 0;
-		public final static int SUPERMETHODINVOCATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int SUPERMETHODINVOCATION_ORIGINALCLASSFILE = 2;
-		public final static int SUPERMETHODINVOCATION_QUALIFIER = 3;
-		public final static int SUPERMETHODINVOCATION_METHOD = 4;
-		public final static int SUPERMETHODINVOCATION_ARGUMENTS = 5;
-		public final static int SUPERMETHODINVOCATION_TYPEARGUMENTS = 6;
+		public final static int SUPER_METHOD_INVOCATION__COMMENTS = 0;
+		public final static int SUPER_METHOD_INVOCATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int SUPER_METHOD_INVOCATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int SUPER_METHOD_INVOCATION__QUALIFIER = 3;
+		public final static int SUPER_METHOD_INVOCATION__METHOD = 4;
+		public final static int SUPER_METHOD_INVOCATION__ARGUMENTS = 5;
+		public final static int SUPER_METHOD_INVOCATION__TYPE_ARGUMENTS = 6;
 		
 		public final static int SWITCHCASE = 98;
 		public final static int SWITCHCASE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 		public final static int SWITCHCASE_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int SWITCHCASE_COMMENTS = 0;
-		public final static int SWITCHCASE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int SWITCHCASE_ORIGINALCLASSFILE = 2;
-		public final static int SWITCHCASE_DEFAULT = 3;
-		public final static int SWITCHCASE_EXPRESSION = 4;
+		public final static int SWITCH_CASE__COMMENTS = 0;
+		public final static int SWITCH_CASE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int SWITCH_CASE__ORIGINAL_CLASS_FILE = 2;
+		public final static int SWITCH_CASE__DEFAULT = 3;
+		public final static int SWITCH_CASE__EXPRESSION = 4;
 		
 		public final static int SWITCHSTATEMENT = 99;
 		public final static int SWITCHSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 		public final static int SWITCHSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int SWITCHSTATEMENT_COMMENTS = 0;
-		public final static int SWITCHSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int SWITCHSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int SWITCHSTATEMENT_EXPRESSION = 3;
-		public final static int SWITCHSTATEMENT_STATEMENTS = 4;
+		public final static int SWITCH_STATEMENT__COMMENTS = 0;
+		public final static int SWITCH_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int SWITCH_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int SWITCH_STATEMENT__EXPRESSION = 3;
+		public final static int SWITCH_STATEMENT__STATEMENTS = 4;
 		
 		public final static int SYNCHRONIZEDSTATEMENT = 100;
 		public final static int SYNCHRONIZEDSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 		public final static int SYNCHRONIZEDSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int SYNCHRONIZEDSTATEMENT_COMMENTS = 0;
-		public final static int SYNCHRONIZEDSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int SYNCHRONIZEDSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int SYNCHRONIZEDSTATEMENT_BODY = 3;
-		public final static int SYNCHRONIZEDSTATEMENT_EXPRESSION = 4;
+		public final static int SYNCHRONIZED_STATEMENT__COMMENTS = 0;
+		public final static int SYNCHRONIZED_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int SYNCHRONIZED_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int SYNCHRONIZED_STATEMENT__BODY = 3;
+		public final static int SYNCHRONIZED_STATEMENT__EXPRESSION = 4;
 		
 		public final static int TAGELEMENT = 101;
 		public final static int TAGELEMENT_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 2;
 		public final static int TAGELEMENT_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int TAGELEMENT_COMMENTS = 0;
-		public final static int TAGELEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int TAGELEMENT_ORIGINALCLASSFILE = 2;
-		public final static int TAGELEMENT_TAGNAME = 3;
-		public final static int TAGELEMENT_FRAGMENTS = 4;
+		public final static int TAG_ELEMENT__COMMENTS = 0;
+		public final static int TAG_ELEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int TAG_ELEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int TAG_ELEMENT__TAG_NAME = 3;
+		public final static int TAG_ELEMENT__FRAGMENTS = 4;
 		
 		public final static int TEXTELEMENT = 102;
 		public final static int TEXTELEMENT_FEATURE_COUNT = ASTNODE_FEATURE_COUNT + 1;
 		public final static int TEXTELEMENT_OPERATION_COUNT = ASTNODE_OPERATION_COUNT + 0;
 		
-		public final static int TEXTELEMENT_COMMENTS = 0;
-		public final static int TEXTELEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int TEXTELEMENT_ORIGINALCLASSFILE = 2;
-		public final static int TEXTELEMENT_TEXT = 3;
+		public final static int TEXT_ELEMENT__COMMENTS = 0;
+		public final static int TEXT_ELEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int TEXT_ELEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int TEXT_ELEMENT__TEXT = 3;
 		
 		public final static int THISEXPRESSION = 103;
 		public final static int THISEXPRESSION_FEATURE_COUNT = ABSTRACTTYPEQUALIFIEDEXPRESSION_FEATURE_COUNT + 0;
 		public final static int THISEXPRESSION_OPERATION_COUNT = ABSTRACTTYPEQUALIFIEDEXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int THISEXPRESSION_COMMENTS = 0;
-		public final static int THISEXPRESSION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int THISEXPRESSION_ORIGINALCLASSFILE = 2;
-		public final static int THISEXPRESSION_QUALIFIER = 3;
+		public final static int THIS_EXPRESSION__COMMENTS = 0;
+		public final static int THIS_EXPRESSION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int THIS_EXPRESSION__ORIGINAL_CLASS_FILE = 2;
+		public final static int THIS_EXPRESSION__QUALIFIER = 3;
 		
 		public final static int THROWSTATEMENT = 104;
 		public final static int THROWSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 		public final static int THROWSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int THROWSTATEMENT_COMMENTS = 0;
-		public final static int THROWSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int THROWSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int THROWSTATEMENT_EXPRESSION = 3;
+		public final static int THROW_STATEMENT__COMMENTS = 0;
+		public final static int THROW_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int THROW_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int THROW_STATEMENT__EXPRESSION = 3;
 		
 		public final static int TRYSTATEMENT = 105;
 		public final static int TRYSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
 		public final static int TRYSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int TRYSTATEMENT_COMMENTS = 0;
-		public final static int TRYSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int TRYSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int TRYSTATEMENT_BODY = 3;
-		public final static int TRYSTATEMENT_FINALLY = 4;
-		public final static int TRYSTATEMENT_CATCHCLAUSES = 5;
+		public final static int TRY_STATEMENT__COMMENTS = 0;
+		public final static int TRY_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int TRY_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int TRY_STATEMENT__BODY = 3;
+		public final static int TRY_STATEMENT__FINALLY = 4;
+		public final static int TRY_STATEMENT__CATCH_CLAUSES = 5;
 		
 		public final static int TYPEACCESS = 107;
 		public final static int TYPEACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + NAMESPACEACCESS_FEATURE_COUNT + 2;
 		public final static int TYPEACCESS_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + NAMESPACEACCESS_OPERATION_COUNT + 0;
 		
-		public final static int TYPEACCESS_COMMENTS = 0;
-		public final static int TYPEACCESS_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int TYPEACCESS_ORIGINALCLASSFILE = 2;
-		public final static int TYPEACCESS_TYPE = 3;
-		public final static int TYPEACCESS_QUALIFIER = 4;
+		public final static int TYPE_ACCESS__COMMENTS = 0;
+		public final static int TYPE_ACCESS__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int TYPE_ACCESS__ORIGINAL_CLASS_FILE = 2;
+		public final static int TYPE_ACCESS__TYPE = 3;
+		public final static int TYPE_ACCESS__QUALIFIER = 4;
 		
 		public final static int TYPEDECLARATIONSTATEMENT = 109;
 		public final static int TYPEDECLARATIONSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 		public final static int TYPEDECLARATIONSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int TYPEDECLARATIONSTATEMENT_COMMENTS = 0;
-		public final static int TYPEDECLARATIONSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int TYPEDECLARATIONSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int TYPEDECLARATIONSTATEMENT_DECLARATION = 3;
+		public final static int TYPE_DECLARATION_STATEMENT__COMMENTS = 0;
+		public final static int TYPE_DECLARATION_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int TYPE_DECLARATION_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int TYPE_DECLARATION_STATEMENT__DECLARATION = 3;
 		
 		public final static int TYPELITERAL = 110;
 		public final static int TYPELITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 		public final static int TYPELITERAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 		
-		public final static int TYPELITERAL_COMMENTS = 0;
-		public final static int TYPELITERAL_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int TYPELITERAL_ORIGINALCLASSFILE = 2;
-		public final static int TYPELITERAL_TYPE = 3;
+		public final static int TYPE_LITERAL__COMMENTS = 0;
+		public final static int TYPE_LITERAL__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int TYPE_LITERAL__ORIGINAL_CLASS_FILE = 2;
+		public final static int TYPE_LITERAL__TYPE = 3;
 		
 		public final static int TYPEPARAMETER = 111;
 		public final static int TYPEPARAMETER_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 		public final static int TYPEPARAMETER_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 		
-		public final static int TYPEPARAMETER_COMMENTS = 0;
-		public final static int TYPEPARAMETER_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int TYPEPARAMETER_ORIGINALCLASSFILE = 2;
-		public final static int TYPEPARAMETER_NAME = 3;
-		public final static int TYPEPARAMETER_PROXY = 4;
-		public final static int TYPEPARAMETER_USAGESINIMPORTS = 5;
-		public final static int TYPEPARAMETER_USAGESINTYPEACCESS = 6;
-		public final static int TYPEPARAMETER_BOUNDS = 7;
+		public final static int TYPE_PARAMETER__COMMENTS = 0;
+		public final static int TYPE_PARAMETER__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int TYPE_PARAMETER__ORIGINAL_CLASS_FILE = 2;
+		public final static int TYPE_PARAMETER__NAME = 3;
+		public final static int TYPE_PARAMETER__PROXY = 4;
+		public final static int TYPE_PARAMETER__USAGES_IN_IMPORTS = 5;
+		public final static int TYPE_PARAMETER__USAGES_IN_TYPE_ACCESS = 6;
+		public final static int TYPE_PARAMETER__BOUNDS = 7;
 		
 		public final static int UNRESOLVEDITEM = 112;
 		public final static int UNRESOLVEDITEM_FEATURE_COUNT = NAMEDELEMENT_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDITEM_OPERATION_COUNT = NAMEDELEMENT_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDITEM_COMMENTS = 0;
-		public final static int UNRESOLVEDITEM_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDITEM_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDITEM_NAME = 3;
-		public final static int UNRESOLVEDITEM_PROXY = 4;
-		public final static int UNRESOLVEDITEM_USAGESINIMPORTS = 5;
+		public final static int UNRESOLVED_ITEM__COMMENTS = 0;
+		public final static int UNRESOLVED_ITEM__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_ITEM__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_ITEM__NAME = 3;
+		public final static int UNRESOLVED_ITEM__PROXY = 4;
+		public final static int UNRESOLVED_ITEM__USAGES_IN_IMPORTS = 5;
 		
 		public final static int UNRESOLVEDITEMACCESS = 113;
 		public final static int UNRESOLVEDITEMACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + NAMESPACEACCESS_FEATURE_COUNT + 2;
 		public final static int UNRESOLVEDITEMACCESS_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + NAMESPACEACCESS_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDITEMACCESS_COMMENTS = 0;
-		public final static int UNRESOLVEDITEMACCESS_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDITEMACCESS_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDITEMACCESS_ELEMENT = 3;
-		public final static int UNRESOLVEDITEMACCESS_QUALIFIER = 4;
+		public final static int UNRESOLVED_ITEM_ACCESS__COMMENTS = 0;
+		public final static int UNRESOLVED_ITEM_ACCESS__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_ITEM_ACCESS__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_ITEM_ACCESS__ELEMENT = 3;
+		public final static int UNRESOLVED_ITEM_ACCESS__QUALIFIER = 4;
 		
 		public final static int UNRESOLVEDANNOTATIONDECLARATION = 114;
 		public final static int UNRESOLVEDANNOTATIONDECLARATION_FEATURE_COUNT = ANNOTATIONTYPEDECLARATION_FEATURE_COUNT + UNRESOLVEDITEM_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDANNOTATIONDECLARATION_OPERATION_COUNT = ANNOTATIONTYPEDECLARATION_OPERATION_COUNT + UNRESOLVEDITEM_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_COMMENTS = 0;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_NAME = 3;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_PROXY = 4;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_USAGESINIMPORTS = 5;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_ANNOTATIONS = 7;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_MODIFIER = 9;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_USAGESINTYPEACCESS = 10;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_BODYDECLARATIONS = 11;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_COMMENTSBEFOREBODY = 12;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_COMMENTSAFTERBODY = 13;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_PACKAGE = 14;
-		public final static int UNRESOLVEDANNOTATIONDECLARATION_SUPERINTERFACES = 15;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__COMMENTS = 0;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__NAME = 3;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__PROXY = 4;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__ANNOTATIONS = 7;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__MODIFIER = 9;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__USAGES_IN_TYPE_ACCESS = 10;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__BODY_DECLARATIONS = 11;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__COMMENTS_BEFORE_BODY = 12;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__COMMENTS_AFTER_BODY = 13;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__PACKAGE = 14;
+		public final static int UNRESOLVED_ANNOTATION_DECLARATION__SUPER_INTERFACES = 15;
 		
 		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION = 115;
 		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_FEATURE_COUNT = ANNOTATIONTYPEMEMBERDECLARATION_FEATURE_COUNT + UNRESOLVEDITEM_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_OPERATION_COUNT = ANNOTATIONTYPEMEMBERDECLARATION_OPERATION_COUNT + UNRESOLVEDITEM_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_COMMENTS = 0;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_NAME = 3;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_PROXY = 4;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_USAGESINIMPORTS = 5;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_ANNOTATIONS = 7;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_MODIFIER = 9;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_DEFAULT = 10;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_TYPE = 11;
-		public final static int UNRESOLVEDANNOTATIONTYPEMEMBERDECLARATION_USAGES = 12;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__COMMENTS = 0;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__NAME = 3;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__PROXY = 4;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__ANNOTATIONS = 7;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__MODIFIER = 9;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__DEFAULT = 10;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__TYPE = 11;
+		public final static int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES = 12;
 		
 		public final static int UNRESOLVEDCLASSDECLARATION = 116;
 		public final static int UNRESOLVEDCLASSDECLARATION_FEATURE_COUNT = CLASSDECLARATION_FEATURE_COUNT + UNRESOLVEDITEM_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDCLASSDECLARATION_OPERATION_COUNT = CLASSDECLARATION_OPERATION_COUNT + UNRESOLVEDITEM_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDCLASSDECLARATION_COMMENTS = 0;
-		public final static int UNRESOLVEDCLASSDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDCLASSDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDCLASSDECLARATION_NAME = 3;
-		public final static int UNRESOLVEDCLASSDECLARATION_PROXY = 4;
-		public final static int UNRESOLVEDCLASSDECLARATION_USAGESINIMPORTS = 5;
-		public final static int UNRESOLVEDCLASSDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int UNRESOLVEDCLASSDECLARATION_ANNOTATIONS = 7;
-		public final static int UNRESOLVEDCLASSDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int UNRESOLVEDCLASSDECLARATION_MODIFIER = 9;
-		public final static int UNRESOLVEDCLASSDECLARATION_USAGESINTYPEACCESS = 10;
-		public final static int UNRESOLVEDCLASSDECLARATION_BODYDECLARATIONS = 11;
-		public final static int UNRESOLVEDCLASSDECLARATION_COMMENTSBEFOREBODY = 12;
-		public final static int UNRESOLVEDCLASSDECLARATION_COMMENTSAFTERBODY = 13;
-		public final static int UNRESOLVEDCLASSDECLARATION_PACKAGE = 14;
-		public final static int UNRESOLVEDCLASSDECLARATION_SUPERINTERFACES = 15;
-		public final static int UNRESOLVEDCLASSDECLARATION_TYPEPARAMETERS = 16;
-		public final static int UNRESOLVEDCLASSDECLARATION_SUPERCLASS = 17;
+		public final static int UNRESOLVED_CLASS_DECLARATION__COMMENTS = 0;
+		public final static int UNRESOLVED_CLASS_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_CLASS_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_CLASS_DECLARATION__NAME = 3;
+		public final static int UNRESOLVED_CLASS_DECLARATION__PROXY = 4;
+		public final static int UNRESOLVED_CLASS_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int UNRESOLVED_CLASS_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int UNRESOLVED_CLASS_DECLARATION__ANNOTATIONS = 7;
+		public final static int UNRESOLVED_CLASS_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int UNRESOLVED_CLASS_DECLARATION__MODIFIER = 9;
+		public final static int UNRESOLVED_CLASS_DECLARATION__USAGES_IN_TYPE_ACCESS = 10;
+		public final static int UNRESOLVED_CLASS_DECLARATION__BODY_DECLARATIONS = 11;
+		public final static int UNRESOLVED_CLASS_DECLARATION__COMMENTS_BEFORE_BODY = 12;
+		public final static int UNRESOLVED_CLASS_DECLARATION__COMMENTS_AFTER_BODY = 13;
+		public final static int UNRESOLVED_CLASS_DECLARATION__PACKAGE = 14;
+		public final static int UNRESOLVED_CLASS_DECLARATION__SUPER_INTERFACES = 15;
+		public final static int UNRESOLVED_CLASS_DECLARATION__TYPE_PARAMETERS = 16;
+		public final static int UNRESOLVED_CLASS_DECLARATION__SUPER_CLASS = 17;
 		
 		public final static int UNRESOLVEDENUMDECLARATION = 117;
 		public final static int UNRESOLVEDENUMDECLARATION_FEATURE_COUNT = ENUMDECLARATION_FEATURE_COUNT + UNRESOLVEDITEM_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDENUMDECLARATION_OPERATION_COUNT = ENUMDECLARATION_OPERATION_COUNT + UNRESOLVEDITEM_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDENUMDECLARATION_COMMENTS = 0;
-		public final static int UNRESOLVEDENUMDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDENUMDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDENUMDECLARATION_NAME = 3;
-		public final static int UNRESOLVEDENUMDECLARATION_PROXY = 4;
-		public final static int UNRESOLVEDENUMDECLARATION_USAGESINIMPORTS = 5;
-		public final static int UNRESOLVEDENUMDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int UNRESOLVEDENUMDECLARATION_ANNOTATIONS = 7;
-		public final static int UNRESOLVEDENUMDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int UNRESOLVEDENUMDECLARATION_MODIFIER = 9;
-		public final static int UNRESOLVEDENUMDECLARATION_USAGESINTYPEACCESS = 10;
-		public final static int UNRESOLVEDENUMDECLARATION_BODYDECLARATIONS = 11;
-		public final static int UNRESOLVEDENUMDECLARATION_COMMENTSBEFOREBODY = 12;
-		public final static int UNRESOLVEDENUMDECLARATION_COMMENTSAFTERBODY = 13;
-		public final static int UNRESOLVEDENUMDECLARATION_PACKAGE = 14;
-		public final static int UNRESOLVEDENUMDECLARATION_SUPERINTERFACES = 15;
-		public final static int UNRESOLVEDENUMDECLARATION_ENUMCONSTANTS = 16;
+		public final static int UNRESOLVED_ENUM_DECLARATION__COMMENTS = 0;
+		public final static int UNRESOLVED_ENUM_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_ENUM_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_ENUM_DECLARATION__NAME = 3;
+		public final static int UNRESOLVED_ENUM_DECLARATION__PROXY = 4;
+		public final static int UNRESOLVED_ENUM_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int UNRESOLVED_ENUM_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int UNRESOLVED_ENUM_DECLARATION__ANNOTATIONS = 7;
+		public final static int UNRESOLVED_ENUM_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int UNRESOLVED_ENUM_DECLARATION__MODIFIER = 9;
+		public final static int UNRESOLVED_ENUM_DECLARATION__USAGES_IN_TYPE_ACCESS = 10;
+		public final static int UNRESOLVED_ENUM_DECLARATION__BODY_DECLARATIONS = 11;
+		public final static int UNRESOLVED_ENUM_DECLARATION__COMMENTS_BEFORE_BODY = 12;
+		public final static int UNRESOLVED_ENUM_DECLARATION__COMMENTS_AFTER_BODY = 13;
+		public final static int UNRESOLVED_ENUM_DECLARATION__PACKAGE = 14;
+		public final static int UNRESOLVED_ENUM_DECLARATION__SUPER_INTERFACES = 15;
+		public final static int UNRESOLVED_ENUM_DECLARATION__ENUM_CONSTANTS = 16;
 		
 		public final static int UNRESOLVEDINTERFACEDECLARATION = 118;
 		public final static int UNRESOLVEDINTERFACEDECLARATION_FEATURE_COUNT = INTERFACEDECLARATION_FEATURE_COUNT + UNRESOLVEDITEM_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDINTERFACEDECLARATION_OPERATION_COUNT = INTERFACEDECLARATION_OPERATION_COUNT + UNRESOLVEDITEM_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDINTERFACEDECLARATION_COMMENTS = 0;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_NAME = 3;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_PROXY = 4;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_USAGESINIMPORTS = 5;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_ANNOTATIONS = 7;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_MODIFIER = 9;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_USAGESINTYPEACCESS = 10;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_BODYDECLARATIONS = 11;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_COMMENTSBEFOREBODY = 12;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_COMMENTSAFTERBODY = 13;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_PACKAGE = 14;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_SUPERINTERFACES = 15;
-		public final static int UNRESOLVEDINTERFACEDECLARATION_TYPEPARAMETERS = 16;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__COMMENTS = 0;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__NAME = 3;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__PROXY = 4;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__ANNOTATIONS = 7;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__MODIFIER = 9;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__USAGES_IN_TYPE_ACCESS = 10;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__BODY_DECLARATIONS = 11;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__COMMENTS_BEFORE_BODY = 12;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__COMMENTS_AFTER_BODY = 13;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__PACKAGE = 14;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__SUPER_INTERFACES = 15;
+		public final static int UNRESOLVED_INTERFACE_DECLARATION__TYPE_PARAMETERS = 16;
 		
 		public final static int UNRESOLVEDLABELEDSTATEMENT = 119;
 		public final static int UNRESOLVEDLABELEDSTATEMENT_FEATURE_COUNT = LABELEDSTATEMENT_FEATURE_COUNT + UNRESOLVEDITEM_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDLABELEDSTATEMENT_OPERATION_COUNT = LABELEDSTATEMENT_OPERATION_COUNT + UNRESOLVEDITEM_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDLABELEDSTATEMENT_COMMENTS = 0;
-		public final static int UNRESOLVEDLABELEDSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDLABELEDSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDLABELEDSTATEMENT_NAME = 3;
-		public final static int UNRESOLVEDLABELEDSTATEMENT_PROXY = 4;
-		public final static int UNRESOLVEDLABELEDSTATEMENT_USAGESINIMPORTS = 5;
-		public final static int UNRESOLVEDLABELEDSTATEMENT_BODY = 6;
-		public final static int UNRESOLVEDLABELEDSTATEMENT_USAGESINBREAKSTATEMENTS = 7;
-		public final static int UNRESOLVEDLABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS = 8;
+		public final static int UNRESOLVED_LABELED_STATEMENT__COMMENTS = 0;
+		public final static int UNRESOLVED_LABELED_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_LABELED_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_LABELED_STATEMENT__NAME = 3;
+		public final static int UNRESOLVED_LABELED_STATEMENT__PROXY = 4;
+		public final static int UNRESOLVED_LABELED_STATEMENT__USAGES_IN_IMPORTS = 5;
+		public final static int UNRESOLVED_LABELED_STATEMENT__BODY = 6;
+		public final static int UNRESOLVED_LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS = 7;
+		public final static int UNRESOLVED_LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS = 8;
 		
 		public final static int UNRESOLVEDMETHODDECLARATION = 120;
 		public final static int UNRESOLVEDMETHODDECLARATION_FEATURE_COUNT = METHODDECLARATION_FEATURE_COUNT + UNRESOLVEDITEM_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDMETHODDECLARATION_OPERATION_COUNT = METHODDECLARATION_OPERATION_COUNT + UNRESOLVEDITEM_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDMETHODDECLARATION_COMMENTS = 0;
-		public final static int UNRESOLVEDMETHODDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDMETHODDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDMETHODDECLARATION_NAME = 3;
-		public final static int UNRESOLVEDMETHODDECLARATION_PROXY = 4;
-		public final static int UNRESOLVEDMETHODDECLARATION_USAGESINIMPORTS = 5;
-		public final static int UNRESOLVEDMETHODDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int UNRESOLVEDMETHODDECLARATION_ANNOTATIONS = 7;
-		public final static int UNRESOLVEDMETHODDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int UNRESOLVEDMETHODDECLARATION_MODIFIER = 9;
-		public final static int UNRESOLVEDMETHODDECLARATION_BODY = 10;
-		public final static int UNRESOLVEDMETHODDECLARATION_PARAMETERS = 11;
-		public final static int UNRESOLVEDMETHODDECLARATION_THROWNEXCEPTIONS = 12;
-		public final static int UNRESOLVEDMETHODDECLARATION_TYPEPARAMETERS = 13;
-		public final static int UNRESOLVEDMETHODDECLARATION_USAGESINDOCCOMMENTS = 14;
-		public final static int UNRESOLVEDMETHODDECLARATION_USAGES = 15;
-		public final static int UNRESOLVEDMETHODDECLARATION_EXTRAARRAYDIMENSIONS = 16;
-		public final static int UNRESOLVEDMETHODDECLARATION_RETURNTYPE = 17;
-		public final static int UNRESOLVEDMETHODDECLARATION_REDEFINEDMETHODDECLARATION = 18;
-		public final static int UNRESOLVEDMETHODDECLARATION_REDEFINITIONS = 19;
+		public final static int UNRESOLVED_METHOD_DECLARATION__COMMENTS = 0;
+		public final static int UNRESOLVED_METHOD_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_METHOD_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_METHOD_DECLARATION__NAME = 3;
+		public final static int UNRESOLVED_METHOD_DECLARATION__PROXY = 4;
+		public final static int UNRESOLVED_METHOD_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int UNRESOLVED_METHOD_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int UNRESOLVED_METHOD_DECLARATION__ANNOTATIONS = 7;
+		public final static int UNRESOLVED_METHOD_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int UNRESOLVED_METHOD_DECLARATION__MODIFIER = 9;
+		public final static int UNRESOLVED_METHOD_DECLARATION__BODY = 10;
+		public final static int UNRESOLVED_METHOD_DECLARATION__PARAMETERS = 11;
+		public final static int UNRESOLVED_METHOD_DECLARATION__THROWN_EXCEPTIONS = 12;
+		public final static int UNRESOLVED_METHOD_DECLARATION__TYPE_PARAMETERS = 13;
+		public final static int UNRESOLVED_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS = 14;
+		public final static int UNRESOLVED_METHOD_DECLARATION__USAGES = 15;
+		public final static int UNRESOLVED_METHOD_DECLARATION__EXTRA_ARRAY_DIMENSIONS = 16;
+		public final static int UNRESOLVED_METHOD_DECLARATION__RETURN_TYPE = 17;
+		public final static int UNRESOLVED_METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION = 18;
+		public final static int UNRESOLVED_METHOD_DECLARATION__REDEFINITIONS = 19;
 		
 		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION = 121;
 		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_FEATURE_COUNT = SINGLEVARIABLEDECLARATION_FEATURE_COUNT + UNRESOLVEDITEM_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_OPERATION_COUNT = SINGLEVARIABLEDECLARATION_OPERATION_COUNT + UNRESOLVEDITEM_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_COMMENTS = 0;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_NAME = 3;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_PROXY = 4;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_USAGESINIMPORTS = 5;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_EXTRAARRAYDIMENSIONS = 6;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_INITIALIZER = 7;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_USAGEINVARIABLEACCESS = 8;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_MODIFIER = 9;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_VARARGS = 10;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_TYPE = 11;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_ANNOTATIONS = 12;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_METHODDECLARATION = 13;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_CATCHCLAUSE = 14;
-		public final static int UNRESOLVEDSINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT = 15;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__COMMENTS = 0;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__NAME = 3;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__PROXY = 4;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS = 6;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__INITIALIZER = 7;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS = 8;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__MODIFIER = 9;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__VARARGS = 10;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__TYPE = 11;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__ANNOTATIONS = 12;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION = 13;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE = 14;
+		public final static int UNRESOLVED_SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT = 15;
 		
 		public final static int UNRESOLVEDTYPE = 122;
 		public final static int UNRESOLVEDTYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + UNRESOLVEDITEM_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDTYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + UNRESOLVEDITEM_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDTYPE_COMMENTS = 0;
-		public final static int UNRESOLVEDTYPE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDTYPE_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDTYPE_NAME = 3;
-		public final static int UNRESOLVEDTYPE_PROXY = 4;
-		public final static int UNRESOLVEDTYPE_USAGESINIMPORTS = 5;
-		public final static int UNRESOLVEDTYPE_USAGESINTYPEACCESS = 6;
+		public final static int UNRESOLVED_TYPE__COMMENTS = 0;
+		public final static int UNRESOLVED_TYPE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_TYPE__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_TYPE__NAME = 3;
+		public final static int UNRESOLVED_TYPE__PROXY = 4;
+		public final static int UNRESOLVED_TYPE__USAGES_IN_IMPORTS = 5;
+		public final static int UNRESOLVED_TYPE__USAGES_IN_TYPE_ACCESS = 6;
 		
 		public final static int UNRESOLVEDTYPEDECLARATION = 123;
 		public final static int UNRESOLVEDTYPEDECLARATION_FEATURE_COUNT = ABSTRACTTYPEDECLARATION_FEATURE_COUNT + UNRESOLVEDITEM_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDTYPEDECLARATION_OPERATION_COUNT = ABSTRACTTYPEDECLARATION_OPERATION_COUNT + UNRESOLVEDITEM_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDTYPEDECLARATION_COMMENTS = 0;
-		public final static int UNRESOLVEDTYPEDECLARATION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDTYPEDECLARATION_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDTYPEDECLARATION_NAME = 3;
-		public final static int UNRESOLVEDTYPEDECLARATION_PROXY = 4;
-		public final static int UNRESOLVEDTYPEDECLARATION_USAGESINIMPORTS = 5;
-		public final static int UNRESOLVEDTYPEDECLARATION_ABSTRACTTYPEDECLARATION = 6;
-		public final static int UNRESOLVEDTYPEDECLARATION_ANNOTATIONS = 7;
-		public final static int UNRESOLVEDTYPEDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = 8;
-		public final static int UNRESOLVEDTYPEDECLARATION_MODIFIER = 9;
-		public final static int UNRESOLVEDTYPEDECLARATION_USAGESINTYPEACCESS = 10;
-		public final static int UNRESOLVEDTYPEDECLARATION_BODYDECLARATIONS = 11;
-		public final static int UNRESOLVEDTYPEDECLARATION_COMMENTSBEFOREBODY = 12;
-		public final static int UNRESOLVEDTYPEDECLARATION_COMMENTSAFTERBODY = 13;
-		public final static int UNRESOLVEDTYPEDECLARATION_PACKAGE = 14;
-		public final static int UNRESOLVEDTYPEDECLARATION_SUPERINTERFACES = 15;
+		public final static int UNRESOLVED_TYPE_DECLARATION__COMMENTS = 0;
+		public final static int UNRESOLVED_TYPE_DECLARATION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_TYPE_DECLARATION__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_TYPE_DECLARATION__NAME = 3;
+		public final static int UNRESOLVED_TYPE_DECLARATION__PROXY = 4;
+		public final static int UNRESOLVED_TYPE_DECLARATION__USAGES_IN_IMPORTS = 5;
+		public final static int UNRESOLVED_TYPE_DECLARATION__ABSTRACT_TYPE_DECLARATION = 6;
+		public final static int UNRESOLVED_TYPE_DECLARATION__ANNOTATIONS = 7;
+		public final static int UNRESOLVED_TYPE_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = 8;
+		public final static int UNRESOLVED_TYPE_DECLARATION__MODIFIER = 9;
+		public final static int UNRESOLVED_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS = 10;
+		public final static int UNRESOLVED_TYPE_DECLARATION__BODY_DECLARATIONS = 11;
+		public final static int UNRESOLVED_TYPE_DECLARATION__COMMENTS_BEFORE_BODY = 12;
+		public final static int UNRESOLVED_TYPE_DECLARATION__COMMENTS_AFTER_BODY = 13;
+		public final static int UNRESOLVED_TYPE_DECLARATION__PACKAGE = 14;
+		public final static int UNRESOLVED_TYPE_DECLARATION__SUPER_INTERFACES = 15;
 		
 		public final static int VARIABLEDECLARATIONFRAGMENT = 127;
 		public final static int VARIABLEDECLARATIONFRAGMENT_FEATURE_COUNT = VARIABLEDECLARATION_FEATURE_COUNT + 1;
 		public final static int VARIABLEDECLARATIONFRAGMENT_OPERATION_COUNT = VARIABLEDECLARATION_OPERATION_COUNT + 0;
 		
-		public final static int VARIABLEDECLARATIONFRAGMENT_COMMENTS = 0;
-		public final static int VARIABLEDECLARATIONFRAGMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int VARIABLEDECLARATIONFRAGMENT_ORIGINALCLASSFILE = 2;
-		public final static int VARIABLEDECLARATIONFRAGMENT_NAME = 3;
-		public final static int VARIABLEDECLARATIONFRAGMENT_PROXY = 4;
-		public final static int VARIABLEDECLARATIONFRAGMENT_USAGESINIMPORTS = 5;
-		public final static int VARIABLEDECLARATIONFRAGMENT_EXTRAARRAYDIMENSIONS = 6;
-		public final static int VARIABLEDECLARATIONFRAGMENT_INITIALIZER = 7;
-		public final static int VARIABLEDECLARATIONFRAGMENT_USAGEINVARIABLEACCESS = 8;
-		public final static int VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER = 9;
+		public final static int VARIABLE_DECLARATION_FRAGMENT__COMMENTS = 0;
+		public final static int VARIABLE_DECLARATION_FRAGMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int VARIABLE_DECLARATION_FRAGMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int VARIABLE_DECLARATION_FRAGMENT__NAME = 3;
+		public final static int VARIABLE_DECLARATION_FRAGMENT__PROXY = 4;
+		public final static int VARIABLE_DECLARATION_FRAGMENT__USAGES_IN_IMPORTS = 5;
+		public final static int VARIABLE_DECLARATION_FRAGMENT__EXTRA_ARRAY_DIMENSIONS = 6;
+		public final static int VARIABLE_DECLARATION_FRAGMENT__INITIALIZER = 7;
+		public final static int VARIABLE_DECLARATION_FRAGMENT__USAGE_IN_VARIABLE_ACCESS = 8;
+		public final static int VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER = 9;
 		
 		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT = 124;
 		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_FEATURE_COUNT = VARIABLEDECLARATIONFRAGMENT_FEATURE_COUNT + UNRESOLVEDITEM_FEATURE_COUNT + 0;
 		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_OPERATION_COUNT = VARIABLEDECLARATIONFRAGMENT_OPERATION_COUNT + UNRESOLVEDITEM_OPERATION_COUNT + 0;
 		
-		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_COMMENTS = 0;
-		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_ORIGINALCLASSFILE = 2;
-		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_NAME = 3;
-		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_PROXY = 4;
-		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_USAGESINIMPORTS = 5;
-		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_EXTRAARRAYDIMENSIONS = 6;
-		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_INITIALIZER = 7;
-		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_USAGEINVARIABLEACCESS = 8;
-		public final static int UNRESOLVEDVARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER = 9;
+		public final static int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT__COMMENTS = 0;
+		public final static int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT__NAME = 3;
+		public final static int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT__PROXY = 4;
+		public final static int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT__USAGES_IN_IMPORTS = 5;
+		public final static int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT__EXTRA_ARRAY_DIMENSIONS = 6;
+		public final static int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT__INITIALIZER = 7;
+		public final static int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT__USAGE_IN_VARIABLE_ACCESS = 8;
+		public final static int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER = 9;
 		
 		public final static int VARIABLEDECLARATIONEXPRESSION = 126;
 		public final static int VARIABLEDECLARATIONEXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + ABSTRACTVARIABLESCONTAINER_FEATURE_COUNT + 2;
 		public final static int VARIABLEDECLARATIONEXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + ABSTRACTVARIABLESCONTAINER_OPERATION_COUNT + 0;
 		
-		public final static int VARIABLEDECLARATIONEXPRESSION_COMMENTS = 0;
-		public final static int VARIABLEDECLARATIONEXPRESSION_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int VARIABLEDECLARATIONEXPRESSION_ORIGINALCLASSFILE = 2;
-		public final static int VARIABLEDECLARATIONEXPRESSION_TYPE = 3;
-		public final static int VARIABLEDECLARATIONEXPRESSION_FRAGMENTS = 4;
-		public final static int VARIABLEDECLARATIONEXPRESSION_MODIFIER = 5;
-		public final static int VARIABLEDECLARATIONEXPRESSION_ANNOTATIONS = 6;
+		public final static int VARIABLE_DECLARATION_EXPRESSION__COMMENTS = 0;
+		public final static int VARIABLE_DECLARATION_EXPRESSION__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int VARIABLE_DECLARATION_EXPRESSION__ORIGINAL_CLASS_FILE = 2;
+		public final static int VARIABLE_DECLARATION_EXPRESSION__TYPE = 3;
+		public final static int VARIABLE_DECLARATION_EXPRESSION__FRAGMENTS = 4;
+		public final static int VARIABLE_DECLARATION_EXPRESSION__MODIFIER = 5;
+		public final static int VARIABLE_DECLARATION_EXPRESSION__ANNOTATIONS = 6;
 		
 		public final static int VARIABLEDECLARATIONSTATEMENT = 128;
 		public final static int VARIABLEDECLARATIONSTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + ABSTRACTVARIABLESCONTAINER_FEATURE_COUNT + 3;
 		public final static int VARIABLEDECLARATIONSTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + ABSTRACTVARIABLESCONTAINER_OPERATION_COUNT + 0;
 		
-		public final static int VARIABLEDECLARATIONSTATEMENT_COMMENTS = 0;
-		public final static int VARIABLEDECLARATIONSTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int VARIABLEDECLARATIONSTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int VARIABLEDECLARATIONSTATEMENT_TYPE = 3;
-		public final static int VARIABLEDECLARATIONSTATEMENT_FRAGMENTS = 4;
-		public final static int VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS = 5;
-		public final static int VARIABLEDECLARATIONSTATEMENT_MODIFIER = 6;
-		public final static int VARIABLEDECLARATIONSTATEMENT_ANNOTATIONS = 7;
+		public final static int VARIABLE_DECLARATION_STATEMENT__COMMENTS = 0;
+		public final static int VARIABLE_DECLARATION_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int VARIABLE_DECLARATION_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int VARIABLE_DECLARATION_STATEMENT__TYPE = 3;
+		public final static int VARIABLE_DECLARATION_STATEMENT__FRAGMENTS = 4;
+		public final static int VARIABLE_DECLARATION_STATEMENT__EXTRA_ARRAY_DIMENSIONS = 5;
+		public final static int VARIABLE_DECLARATION_STATEMENT__MODIFIER = 6;
+		public final static int VARIABLE_DECLARATION_STATEMENT__ANNOTATIONS = 7;
 		
 		public final static int WILDCARDTYPE = 130;
 		public final static int WILDCARDTYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 2;
 		public final static int WILDCARDTYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 		
-		public final static int WILDCARDTYPE_COMMENTS = 0;
-		public final static int WILDCARDTYPE_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int WILDCARDTYPE_ORIGINALCLASSFILE = 2;
-		public final static int WILDCARDTYPE_NAME = 3;
-		public final static int WILDCARDTYPE_PROXY = 4;
-		public final static int WILDCARDTYPE_USAGESINIMPORTS = 5;
-		public final static int WILDCARDTYPE_USAGESINTYPEACCESS = 6;
-		public final static int WILDCARDTYPE_UPPERBOUND = 7;
-		public final static int WILDCARDTYPE_BOUND = 8;
+		public final static int WILD_CARD_TYPE__COMMENTS = 0;
+		public final static int WILD_CARD_TYPE__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int WILD_CARD_TYPE__ORIGINAL_CLASS_FILE = 2;
+		public final static int WILD_CARD_TYPE__NAME = 3;
+		public final static int WILD_CARD_TYPE__PROXY = 4;
+		public final static int WILD_CARD_TYPE__USAGES_IN_IMPORTS = 5;
+		public final static int WILD_CARD_TYPE__USAGES_IN_TYPE_ACCESS = 6;
+		public final static int WILD_CARD_TYPE__UPPER_BOUND = 7;
+		public final static int WILD_CARD_TYPE__BOUND = 8;
 		
 		public final static int WHILESTATEMENT = 131;
 		public final static int WHILESTATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 		public final static int WHILESTATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 		
-		public final static int WHILESTATEMENT_COMMENTS = 0;
-		public final static int WHILESTATEMENT_ORIGINALCOMPILATIONUNIT = 1;
-		public final static int WHILESTATEMENT_ORIGINALCLASSFILE = 2;
-		public final static int WHILESTATEMENT_EXPRESSION = 3;
-		public final static int WHILESTATEMENT_BODY = 4;
+		public final static int WHILE_STATEMENT__COMMENTS = 0;
+		public final static int WHILE_STATEMENT__ORIGINAL_COMPILATION_UNIT = 1;
+		public final static int WHILE_STATEMENT__ORIGINAL_CLASS_FILE = 2;
+		public final static int WHILE_STATEMENT__EXPRESSION = 3;
+		public final static int WHILE_STATEMENT__BODY = 4;
 		
 		public final static int ASSIGNMENTKIND = 19;
 		public final static int INFIXEXPRESSIONKIND = 50;
@@ -7722,411 +7722,411 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 		public static class Literals{
 			public final static EClass ASTNODE = Java_PackageImpl.eINSTANCE.getASTNode();
 			
-			public final static EReference ASTNODE_COMMENTS = Java_PackageImpl.eINSTANCE.getASTNode_Comments();
-			public final static EReference ASTNODE_ORIGINALCOMPILATIONUNIT = Java_PackageImpl.eINSTANCE.getASTNode_OriginalCompilationUnit();
-			public final static EReference ASTNODE_ORIGINALCLASSFILE = Java_PackageImpl.eINSTANCE.getASTNode_OriginalClassFile();
+			public final static EReference ASTNODE__COMMENTS = Java_PackageImpl.eINSTANCE.getASTNode_Comments();
+			public final static EReference ASTNODE__ORIGINAL_COMPILATION_UNIT = Java_PackageImpl.eINSTANCE.getASTNode_OriginalCompilationUnit();
+			public final static EReference ASTNODE__ORIGINAL_CLASS_FILE = Java_PackageImpl.eINSTANCE.getASTNode_OriginalClassFile();
 			
 			public final static EClass NAMEDELEMENT = Java_PackageImpl.eINSTANCE.getNamedElement();
 			
-			public final static EReference NAMEDELEMENT_USAGESINIMPORTS = Java_PackageImpl.eINSTANCE.getNamedElement_UsagesInImports();
+			public final static EReference NAMED_ELEMENT__USAGES_IN_IMPORTS = Java_PackageImpl.eINSTANCE.getNamedElement_UsagesInImports();
 			
-			public final static EAttribute NAMEDELEMENT_NAME = Java_PackageImpl.eINSTANCE.getNamedElement_Name();
-			public final static EAttribute NAMEDELEMENT_PROXY = Java_PackageImpl.eINSTANCE.getNamedElement_Proxy();
+			public final static EAttribute NAMED_ELEMENT__NAME = Java_PackageImpl.eINSTANCE.getNamedElement_Name();
+			public final static EAttribute NAMED_ELEMENT__PROXY = Java_PackageImpl.eINSTANCE.getNamedElement_Proxy();
 			public final static EClass BODYDECLARATION = Java_PackageImpl.eINSTANCE.getBodyDeclaration();
 			
-			public final static EReference BODYDECLARATION_ABSTRACTTYPEDECLARATION = Java_PackageImpl.eINSTANCE.getBodyDeclaration_AbstractTypeDeclaration();
-			public final static EReference BODYDECLARATION_ANNOTATIONS = Java_PackageImpl.eINSTANCE.getBodyDeclaration_Annotations();
-			public final static EReference BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER = Java_PackageImpl.eINSTANCE.getBodyDeclaration_AnonymousClassDeclarationOwner();
-			public final static EReference BODYDECLARATION_MODIFIER = Java_PackageImpl.eINSTANCE.getBodyDeclaration_Modifier();
+			public final static EReference BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION = Java_PackageImpl.eINSTANCE.getBodyDeclaration_AbstractTypeDeclaration();
+			public final static EReference BODY_DECLARATION__ANNOTATIONS = Java_PackageImpl.eINSTANCE.getBodyDeclaration_Annotations();
+			public final static EReference BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = Java_PackageImpl.eINSTANCE.getBodyDeclaration_AnonymousClassDeclarationOwner();
+			public final static EReference BODY_DECLARATION__MODIFIER = Java_PackageImpl.eINSTANCE.getBodyDeclaration_Modifier();
 			
 			public final static EClass ABSTRACTMETHODDECLARATION = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration();
 			
-			public final static EReference ABSTRACTMETHODDECLARATION_BODY = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_Body();
-			public final static EReference ABSTRACTMETHODDECLARATION_PARAMETERS = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_Parameters();
-			public final static EReference ABSTRACTMETHODDECLARATION_THROWNEXCEPTIONS = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_ThrownExceptions();
-			public final static EReference ABSTRACTMETHODDECLARATION_TYPEPARAMETERS = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_TypeParameters();
-			public final static EReference ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_UsagesInDocComments();
-			public final static EReference ABSTRACTMETHODDECLARATION_USAGES = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_Usages();
+			public final static EReference ABSTRACT_METHOD_DECLARATION__BODY = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_Body();
+			public final static EReference ABSTRACT_METHOD_DECLARATION__PARAMETERS = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_Parameters();
+			public final static EReference ABSTRACT_METHOD_DECLARATION__THROWN_EXCEPTIONS = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_ThrownExceptions();
+			public final static EReference ABSTRACT_METHOD_DECLARATION__TYPE_PARAMETERS = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_TypeParameters();
+			public final static EReference ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_UsagesInDocComments();
+			public final static EReference ABSTRACT_METHOD_DECLARATION__USAGES = Java_PackageImpl.eINSTANCE.getAbstractMethodDeclaration_Usages();
 			
 			public final static EClass ABSTRACTMETHODINVOCATION = Java_PackageImpl.eINSTANCE.getAbstractMethodInvocation();
 			
-			public final static EReference ABSTRACTMETHODINVOCATION_METHOD = Java_PackageImpl.eINSTANCE.getAbstractMethodInvocation_Method();
-			public final static EReference ABSTRACTMETHODINVOCATION_ARGUMENTS = Java_PackageImpl.eINSTANCE.getAbstractMethodInvocation_Arguments();
-			public final static EReference ABSTRACTMETHODINVOCATION_TYPEARGUMENTS = Java_PackageImpl.eINSTANCE.getAbstractMethodInvocation_TypeArguments();
+			public final static EReference ABSTRACT_METHOD_INVOCATION__METHOD = Java_PackageImpl.eINSTANCE.getAbstractMethodInvocation_Method();
+			public final static EReference ABSTRACT_METHOD_INVOCATION__ARGUMENTS = Java_PackageImpl.eINSTANCE.getAbstractMethodInvocation_Arguments();
+			public final static EReference ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS = Java_PackageImpl.eINSTANCE.getAbstractMethodInvocation_TypeArguments();
 			
 			public final static EClass TYPE = Java_PackageImpl.eINSTANCE.getType();
 			
-			public final static EReference TYPE_USAGESINTYPEACCESS = Java_PackageImpl.eINSTANCE.getType_UsagesInTypeAccess();
+			public final static EReference TYPE__USAGES_IN_TYPE_ACCESS = Java_PackageImpl.eINSTANCE.getType_UsagesInTypeAccess();
 			
 			public final static EClass ABSTRACTTYPEDECLARATION = Java_PackageImpl.eINSTANCE.getAbstractTypeDeclaration();
 			
-			public final static EReference ABSTRACTTYPEDECLARATION_BODYDECLARATIONS = Java_PackageImpl.eINSTANCE.getAbstractTypeDeclaration_BodyDeclarations();
-			public final static EReference ABSTRACTTYPEDECLARATION_COMMENTSBEFOREBODY = Java_PackageImpl.eINSTANCE.getAbstractTypeDeclaration_CommentsBeforeBody();
-			public final static EReference ABSTRACTTYPEDECLARATION_COMMENTSAFTERBODY = Java_PackageImpl.eINSTANCE.getAbstractTypeDeclaration_CommentsAfterBody();
-			public final static EReference ABSTRACTTYPEDECLARATION_PACKAGE = Java_PackageImpl.eINSTANCE.getAbstractTypeDeclaration_Package();
-			public final static EReference ABSTRACTTYPEDECLARATION_SUPERINTERFACES = Java_PackageImpl.eINSTANCE.getAbstractTypeDeclaration_SuperInterfaces();
+			public final static EReference ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS = Java_PackageImpl.eINSTANCE.getAbstractTypeDeclaration_BodyDeclarations();
+			public final static EReference ABSTRACT_TYPE_DECLARATION__COMMENTS_BEFORE_BODY = Java_PackageImpl.eINSTANCE.getAbstractTypeDeclaration_CommentsBeforeBody();
+			public final static EReference ABSTRACT_TYPE_DECLARATION__COMMENTS_AFTER_BODY = Java_PackageImpl.eINSTANCE.getAbstractTypeDeclaration_CommentsAfterBody();
+			public final static EReference ABSTRACT_TYPE_DECLARATION__PACKAGE = Java_PackageImpl.eINSTANCE.getAbstractTypeDeclaration_Package();
+			public final static EReference ABSTRACT_TYPE_DECLARATION__SUPER_INTERFACES = Java_PackageImpl.eINSTANCE.getAbstractTypeDeclaration_SuperInterfaces();
 			
 			public final static EClass EXPRESSION = Java_PackageImpl.eINSTANCE.getExpression();
 			
 			
 			public final static EClass ABSTRACTTYPEQUALIFIEDEXPRESSION = Java_PackageImpl.eINSTANCE.getAbstractTypeQualifiedExpression();
 			
-			public final static EReference ABSTRACTTYPEQUALIFIEDEXPRESSION_QUALIFIER = Java_PackageImpl.eINSTANCE.getAbstractTypeQualifiedExpression_Qualifier();
+			public final static EReference ABSTRACT_TYPE_QUALIFIED_EXPRESSION__QUALIFIER = Java_PackageImpl.eINSTANCE.getAbstractTypeQualifiedExpression_Qualifier();
 			
 			public final static EClass ABSTRACTVARIABLESCONTAINER = Java_PackageImpl.eINSTANCE.getAbstractVariablesContainer();
 			
-			public final static EReference ABSTRACTVARIABLESCONTAINER_TYPE = Java_PackageImpl.eINSTANCE.getAbstractVariablesContainer_Type();
-			public final static EReference ABSTRACTVARIABLESCONTAINER_FRAGMENTS = Java_PackageImpl.eINSTANCE.getAbstractVariablesContainer_Fragments();
+			public final static EReference ABSTRACT_VARIABLES_CONTAINER__TYPE = Java_PackageImpl.eINSTANCE.getAbstractVariablesContainer_Type();
+			public final static EReference ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS = Java_PackageImpl.eINSTANCE.getAbstractVariablesContainer_Fragments();
 			
 			public final static EClass ANNOTATION = Java_PackageImpl.eINSTANCE.getAnnotation();
 			
-			public final static EReference ANNOTATION_TYPE = Java_PackageImpl.eINSTANCE.getAnnotation_Type();
-			public final static EReference ANNOTATION_VALUES = Java_PackageImpl.eINSTANCE.getAnnotation_Values();
+			public final static EReference ANNOTATION__TYPE = Java_PackageImpl.eINSTANCE.getAnnotation_Type();
+			public final static EReference ANNOTATION__VALUES = Java_PackageImpl.eINSTANCE.getAnnotation_Values();
 			
 			public final static EClass ARCHIVE = Java_PackageImpl.eINSTANCE.getArchive();
 			
-			public final static EReference ARCHIVE_CLASSFILES = Java_PackageImpl.eINSTANCE.getArchive_ClassFiles();
-			public final static EReference ARCHIVE_MANIFEST = Java_PackageImpl.eINSTANCE.getArchive_Manifest();
+			public final static EReference ARCHIVE__CLASS_FILES = Java_PackageImpl.eINSTANCE.getArchive_ClassFiles();
+			public final static EReference ARCHIVE__MANIFEST = Java_PackageImpl.eINSTANCE.getArchive_Manifest();
 			
-			public final static EAttribute ARCHIVE_ORIGINALFILEPATH = Java_PackageImpl.eINSTANCE.getArchive_OriginalFilePath();
+			public final static EAttribute ARCHIVE__ORIGINAL_FILE_PATH = Java_PackageImpl.eINSTANCE.getArchive_OriginalFilePath();
 			public final static EClass STATEMENT = Java_PackageImpl.eINSTANCE.getStatement();
 			
 			
 			public final static EClass ASSERTSTATEMENT = Java_PackageImpl.eINSTANCE.getAssertStatement();
 			
-			public final static EReference ASSERTSTATEMENT_MESSAGE = Java_PackageImpl.eINSTANCE.getAssertStatement_Message();
-			public final static EReference ASSERTSTATEMENT_EXPRESSION = Java_PackageImpl.eINSTANCE.getAssertStatement_Expression();
+			public final static EReference ASSERT_STATEMENT__MESSAGE = Java_PackageImpl.eINSTANCE.getAssertStatement_Message();
+			public final static EReference ASSERT_STATEMENT__EXPRESSION = Java_PackageImpl.eINSTANCE.getAssertStatement_Expression();
 			
 			public final static EClass ANNOTATIONMEMBERVALUEPAIR = Java_PackageImpl.eINSTANCE.getAnnotationMemberValuePair();
 			
-			public final static EReference ANNOTATIONMEMBERVALUEPAIR_MEMBER = Java_PackageImpl.eINSTANCE.getAnnotationMemberValuePair_Member();
-			public final static EReference ANNOTATIONMEMBERVALUEPAIR_VALUE = Java_PackageImpl.eINSTANCE.getAnnotationMemberValuePair_Value();
+			public final static EReference ANNOTATION_MEMBER_VALUE_PAIR__MEMBER = Java_PackageImpl.eINSTANCE.getAnnotationMemberValuePair_Member();
+			public final static EReference ANNOTATION_MEMBER_VALUE_PAIR__VALUE = Java_PackageImpl.eINSTANCE.getAnnotationMemberValuePair_Value();
 			
 			public final static EClass ANNOTATIONTYPEDECLARATION = Java_PackageImpl.eINSTANCE.getAnnotationTypeDeclaration();
 			
 			
 			public final static EClass ANNOTATIONTYPEMEMBERDECLARATION = Java_PackageImpl.eINSTANCE.getAnnotationTypeMemberDeclaration();
 			
-			public final static EReference ANNOTATIONTYPEMEMBERDECLARATION_DEFAULT = Java_PackageImpl.eINSTANCE.getAnnotationTypeMemberDeclaration_Default();
-			public final static EReference ANNOTATIONTYPEMEMBERDECLARATION_TYPE = Java_PackageImpl.eINSTANCE.getAnnotationTypeMemberDeclaration_Type();
-			public final static EReference ANNOTATIONTYPEMEMBERDECLARATION_USAGES = Java_PackageImpl.eINSTANCE.getAnnotationTypeMemberDeclaration_Usages();
+			public final static EReference ANNOTATION_TYPE_MEMBER_DECLARATION__DEFAULT = Java_PackageImpl.eINSTANCE.getAnnotationTypeMemberDeclaration_Default();
+			public final static EReference ANNOTATION_TYPE_MEMBER_DECLARATION__TYPE = Java_PackageImpl.eINSTANCE.getAnnotationTypeMemberDeclaration_Type();
+			public final static EReference ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES = Java_PackageImpl.eINSTANCE.getAnnotationTypeMemberDeclaration_Usages();
 			
 			public final static EClass ANONYMOUSCLASSDECLARATION = Java_PackageImpl.eINSTANCE.getAnonymousClassDeclaration();
 			
-			public final static EReference ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS = Java_PackageImpl.eINSTANCE.getAnonymousClassDeclaration_BodyDeclarations();
-			public final static EReference ANONYMOUSCLASSDECLARATION_CLASSINSTANCECREATION = Java_PackageImpl.eINSTANCE.getAnonymousClassDeclaration_ClassInstanceCreation();
+			public final static EReference ANONYMOUS_CLASS_DECLARATION__BODY_DECLARATIONS = Java_PackageImpl.eINSTANCE.getAnonymousClassDeclaration_BodyDeclarations();
+			public final static EReference ANONYMOUS_CLASS_DECLARATION__CLASS_INSTANCE_CREATION = Java_PackageImpl.eINSTANCE.getAnonymousClassDeclaration_ClassInstanceCreation();
 			
 			public final static EClass ARRAYACCESS = Java_PackageImpl.eINSTANCE.getArrayAccess();
 			
-			public final static EReference ARRAYACCESS_ARRAY = Java_PackageImpl.eINSTANCE.getArrayAccess_Array();
-			public final static EReference ARRAYACCESS_INDEX = Java_PackageImpl.eINSTANCE.getArrayAccess_Index();
+			public final static EReference ARRAY_ACCESS__ARRAY = Java_PackageImpl.eINSTANCE.getArrayAccess_Array();
+			public final static EReference ARRAY_ACCESS__INDEX = Java_PackageImpl.eINSTANCE.getArrayAccess_Index();
 			
 			public final static EClass ARRAYCREATION = Java_PackageImpl.eINSTANCE.getArrayCreation();
 			
-			public final static EReference ARRAYCREATION_DIMENSIONS = Java_PackageImpl.eINSTANCE.getArrayCreation_Dimensions();
-			public final static EReference ARRAYCREATION_INITIALIZER = Java_PackageImpl.eINSTANCE.getArrayCreation_Initializer();
-			public final static EReference ARRAYCREATION_TYPE = Java_PackageImpl.eINSTANCE.getArrayCreation_Type();
+			public final static EReference ARRAY_CREATION__DIMENSIONS = Java_PackageImpl.eINSTANCE.getArrayCreation_Dimensions();
+			public final static EReference ARRAY_CREATION__INITIALIZER = Java_PackageImpl.eINSTANCE.getArrayCreation_Initializer();
+			public final static EReference ARRAY_CREATION__TYPE = Java_PackageImpl.eINSTANCE.getArrayCreation_Type();
 			
 			public final static EClass ARRAYINITIALIZER = Java_PackageImpl.eINSTANCE.getArrayInitializer();
 			
-			public final static EReference ARRAYINITIALIZER_EXPRESSIONS = Java_PackageImpl.eINSTANCE.getArrayInitializer_Expressions();
+			public final static EReference ARRAY_INITIALIZER__EXPRESSIONS = Java_PackageImpl.eINSTANCE.getArrayInitializer_Expressions();
 			
 			public final static EClass ARRAYLENGTHACCESS = Java_PackageImpl.eINSTANCE.getArrayLengthAccess();
 			
-			public final static EReference ARRAYLENGTHACCESS_ARRAY = Java_PackageImpl.eINSTANCE.getArrayLengthAccess_Array();
+			public final static EReference ARRAY_LENGTH_ACCESS__ARRAY = Java_PackageImpl.eINSTANCE.getArrayLengthAccess_Array();
 			
 			public final static EClass ARRAYTYPE = Java_PackageImpl.eINSTANCE.getArrayType();
 			
-			public final static EReference ARRAYTYPE_ELEMENTTYPE = Java_PackageImpl.eINSTANCE.getArrayType_ElementType();
+			public final static EReference ARRAY_TYPE__ELEMENT_TYPE = Java_PackageImpl.eINSTANCE.getArrayType_ElementType();
 			
-			public final static EAttribute ARRAYTYPE_DIMENSIONS = Java_PackageImpl.eINSTANCE.getArrayType_Dimensions();
+			public final static EAttribute ARRAY_TYPE__DIMENSIONS = Java_PackageImpl.eINSTANCE.getArrayType_Dimensions();
 			public final static EClass ASSIGNMENT = Java_PackageImpl.eINSTANCE.getAssignment();
 			
-			public final static EReference ASSIGNMENT_LEFTHANDSIDE = Java_PackageImpl.eINSTANCE.getAssignment_LeftHandSide();
-			public final static EReference ASSIGNMENT_RIGHTHANDSIDE = Java_PackageImpl.eINSTANCE.getAssignment_RightHandSide();
+			public final static EReference ASSIGNMENT__LEFT_HAND_SIDE = Java_PackageImpl.eINSTANCE.getAssignment_LeftHandSide();
+			public final static EReference ASSIGNMENT__RIGHT_HAND_SIDE = Java_PackageImpl.eINSTANCE.getAssignment_RightHandSide();
 			
-			public final static EAttribute ASSIGNMENT_OPERATOR = Java_PackageImpl.eINSTANCE.getAssignment_Operator();
+			public final static EAttribute ASSIGNMENT__OPERATOR = Java_PackageImpl.eINSTANCE.getAssignment_Operator();
 			public final static EClass BOOLEANLITERAL = Java_PackageImpl.eINSTANCE.getBooleanLiteral();
 			
 			
-			public final static EAttribute BOOLEANLITERAL_VALUE = Java_PackageImpl.eINSTANCE.getBooleanLiteral_Value();
+			public final static EAttribute BOOLEAN_LITERAL__VALUE = Java_PackageImpl.eINSTANCE.getBooleanLiteral_Value();
 			public final static EClass COMMENT = Java_PackageImpl.eINSTANCE.getComment();
 			
 			
-			public final static EAttribute COMMENT_CONTENT = Java_PackageImpl.eINSTANCE.getComment_Content();
-			public final static EAttribute COMMENT_ENCLOSEDBYPARENT = Java_PackageImpl.eINSTANCE.getComment_EnclosedByParent();
-			public final static EAttribute COMMENT_PREFIXOFPARENT = Java_PackageImpl.eINSTANCE.getComment_PrefixOfParent();
+			public final static EAttribute COMMENT__CONTENT = Java_PackageImpl.eINSTANCE.getComment_Content();
+			public final static EAttribute COMMENT__ENCLOSED_BY_PARENT = Java_PackageImpl.eINSTANCE.getComment_EnclosedByParent();
+			public final static EAttribute COMMENT__PREFIX_OF_PARENT = Java_PackageImpl.eINSTANCE.getComment_PrefixOfParent();
 			public final static EClass BLOCKCOMMENT = Java_PackageImpl.eINSTANCE.getBlockComment();
 			
 			
 			public final static EClass BLOCK = Java_PackageImpl.eINSTANCE.getBlock();
 			
-			public final static EReference BLOCK_STATEMENTS = Java_PackageImpl.eINSTANCE.getBlock_Statements();
+			public final static EReference BLOCK__STATEMENTS = Java_PackageImpl.eINSTANCE.getBlock_Statements();
 			
 			public final static EClass BREAKSTATEMENT = Java_PackageImpl.eINSTANCE.getBreakStatement();
 			
-			public final static EReference BREAKSTATEMENT_LABEL = Java_PackageImpl.eINSTANCE.getBreakStatement_Label();
+			public final static EReference BREAK_STATEMENT__LABEL = Java_PackageImpl.eINSTANCE.getBreakStatement_Label();
 			
 			public final static EClass CASTEXPRESSION = Java_PackageImpl.eINSTANCE.getCastExpression();
 			
-			public final static EReference CASTEXPRESSION_EXPRESSION = Java_PackageImpl.eINSTANCE.getCastExpression_Expression();
-			public final static EReference CASTEXPRESSION_TYPE = Java_PackageImpl.eINSTANCE.getCastExpression_Type();
+			public final static EReference CAST_EXPRESSION__EXPRESSION = Java_PackageImpl.eINSTANCE.getCastExpression_Expression();
+			public final static EReference CAST_EXPRESSION__TYPE = Java_PackageImpl.eINSTANCE.getCastExpression_Type();
 			
 			public final static EClass CATCHCLAUSE = Java_PackageImpl.eINSTANCE.getCatchClause();
 			
-			public final static EReference CATCHCLAUSE_EXCEPTION = Java_PackageImpl.eINSTANCE.getCatchClause_Exception();
-			public final static EReference CATCHCLAUSE_BODY = Java_PackageImpl.eINSTANCE.getCatchClause_Body();
+			public final static EReference CATCH_CLAUSE__EXCEPTION = Java_PackageImpl.eINSTANCE.getCatchClause_Exception();
+			public final static EReference CATCH_CLAUSE__BODY = Java_PackageImpl.eINSTANCE.getCatchClause_Body();
 			
 			public final static EClass CHARACTERLITERAL = Java_PackageImpl.eINSTANCE.getCharacterLiteral();
 			
 			
-			public final static EAttribute CHARACTERLITERAL_ESCAPEDVALUE = Java_PackageImpl.eINSTANCE.getCharacterLiteral_EscapedValue();
+			public final static EAttribute CHARACTER_LITERAL__ESCAPED_VALUE = Java_PackageImpl.eINSTANCE.getCharacterLiteral_EscapedValue();
 			public final static EClass CLASSFILE = Java_PackageImpl.eINSTANCE.getClassFile();
 			
-			public final static EReference CLASSFILE_TYPE = Java_PackageImpl.eINSTANCE.getClassFile_Type();
-			public final static EReference CLASSFILE_ATTACHEDSOURCE = Java_PackageImpl.eINSTANCE.getClassFile_AttachedSource();
-			public final static EReference CLASSFILE_PACKAGE = Java_PackageImpl.eINSTANCE.getClassFile_Package();
+			public final static EReference CLASS_FILE__TYPE = Java_PackageImpl.eINSTANCE.getClassFile_Type();
+			public final static EReference CLASS_FILE__ATTACHED_SOURCE = Java_PackageImpl.eINSTANCE.getClassFile_AttachedSource();
+			public final static EReference CLASS_FILE__PACKAGE = Java_PackageImpl.eINSTANCE.getClassFile_Package();
 			
-			public final static EAttribute CLASSFILE_ORIGINALFILEPATH = Java_PackageImpl.eINSTANCE.getClassFile_OriginalFilePath();
+			public final static EAttribute CLASS_FILE__ORIGINAL_FILE_PATH = Java_PackageImpl.eINSTANCE.getClassFile_OriginalFilePath();
 			public final static EClass CLASSINSTANCECREATION = Java_PackageImpl.eINSTANCE.getClassInstanceCreation();
 			
-			public final static EReference CLASSINSTANCECREATION_ANONYMOUSCLASSDECLARATION = Java_PackageImpl.eINSTANCE.getClassInstanceCreation_AnonymousClassDeclaration();
-			public final static EReference CLASSINSTANCECREATION_EXPRESSION = Java_PackageImpl.eINSTANCE.getClassInstanceCreation_Expression();
-			public final static EReference CLASSINSTANCECREATION_TYPE = Java_PackageImpl.eINSTANCE.getClassInstanceCreation_Type();
+			public final static EReference CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION = Java_PackageImpl.eINSTANCE.getClassInstanceCreation_AnonymousClassDeclaration();
+			public final static EReference CLASS_INSTANCE_CREATION__EXPRESSION = Java_PackageImpl.eINSTANCE.getClassInstanceCreation_Expression();
+			public final static EReference CLASS_INSTANCE_CREATION__TYPE = Java_PackageImpl.eINSTANCE.getClassInstanceCreation_Type();
 			
 			public final static EClass CONSTRUCTORDECLARATION = Java_PackageImpl.eINSTANCE.getConstructorDeclaration();
 			
 			
 			public final static EClass CONDITIONALEXPRESSION = Java_PackageImpl.eINSTANCE.getConditionalExpression();
 			
-			public final static EReference CONDITIONALEXPRESSION_ELSEEXPRESSION = Java_PackageImpl.eINSTANCE.getConditionalExpression_ElseExpression();
-			public final static EReference CONDITIONALEXPRESSION_EXPRESSION = Java_PackageImpl.eINSTANCE.getConditionalExpression_Expression();
-			public final static EReference CONDITIONALEXPRESSION_THENEXPRESSION = Java_PackageImpl.eINSTANCE.getConditionalExpression_ThenExpression();
+			public final static EReference CONDITIONAL_EXPRESSION__ELSE_EXPRESSION = Java_PackageImpl.eINSTANCE.getConditionalExpression_ElseExpression();
+			public final static EReference CONDITIONAL_EXPRESSION__EXPRESSION = Java_PackageImpl.eINSTANCE.getConditionalExpression_Expression();
+			public final static EReference CONDITIONAL_EXPRESSION__THEN_EXPRESSION = Java_PackageImpl.eINSTANCE.getConditionalExpression_ThenExpression();
 			
 			public final static EClass CONSTRUCTORINVOCATION = Java_PackageImpl.eINSTANCE.getConstructorInvocation();
 			
 			
 			public final static EClass TYPEDECLARATION = Java_PackageImpl.eINSTANCE.getTypeDeclaration();
 			
-			public final static EReference TYPEDECLARATION_TYPEPARAMETERS = Java_PackageImpl.eINSTANCE.getTypeDeclaration_TypeParameters();
+			public final static EReference TYPE_DECLARATION__TYPE_PARAMETERS = Java_PackageImpl.eINSTANCE.getTypeDeclaration_TypeParameters();
 			
 			public final static EClass CLASSDECLARATION = Java_PackageImpl.eINSTANCE.getClassDeclaration();
 			
-			public final static EReference CLASSDECLARATION_SUPERCLASS = Java_PackageImpl.eINSTANCE.getClassDeclaration_SuperClass();
+			public final static EReference CLASS_DECLARATION__SUPER_CLASS = Java_PackageImpl.eINSTANCE.getClassDeclaration_SuperClass();
 			
 			public final static EClass COMPILATIONUNIT = Java_PackageImpl.eINSTANCE.getCompilationUnit();
 			
-			public final static EReference COMPILATIONUNIT_COMMENTLIST = Java_PackageImpl.eINSTANCE.getCompilationUnit_CommentList();
-			public final static EReference COMPILATIONUNIT_IMPORTS = Java_PackageImpl.eINSTANCE.getCompilationUnit_Imports();
-			public final static EReference COMPILATIONUNIT_PACKAGE = Java_PackageImpl.eINSTANCE.getCompilationUnit_Package();
-			public final static EReference COMPILATIONUNIT_TYPES = Java_PackageImpl.eINSTANCE.getCompilationUnit_Types();
+			public final static EReference COMPILATION_UNIT__COMMENT_LIST = Java_PackageImpl.eINSTANCE.getCompilationUnit_CommentList();
+			public final static EReference COMPILATION_UNIT__IMPORTS = Java_PackageImpl.eINSTANCE.getCompilationUnit_Imports();
+			public final static EReference COMPILATION_UNIT__PACKAGE = Java_PackageImpl.eINSTANCE.getCompilationUnit_Package();
+			public final static EReference COMPILATION_UNIT__TYPES = Java_PackageImpl.eINSTANCE.getCompilationUnit_Types();
 			
-			public final static EAttribute COMPILATIONUNIT_ORIGINALFILEPATH = Java_PackageImpl.eINSTANCE.getCompilationUnit_OriginalFilePath();
+			public final static EAttribute COMPILATION_UNIT__ORIGINAL_FILE_PATH = Java_PackageImpl.eINSTANCE.getCompilationUnit_OriginalFilePath();
 			public final static EClass CONTINUESTATEMENT = Java_PackageImpl.eINSTANCE.getContinueStatement();
 			
-			public final static EReference CONTINUESTATEMENT_LABEL = Java_PackageImpl.eINSTANCE.getContinueStatement_Label();
+			public final static EReference CONTINUE_STATEMENT__LABEL = Java_PackageImpl.eINSTANCE.getContinueStatement_Label();
 			
 			public final static EClass DOSTATEMENT = Java_PackageImpl.eINSTANCE.getDoStatement();
 			
-			public final static EReference DOSTATEMENT_EXPRESSION = Java_PackageImpl.eINSTANCE.getDoStatement_Expression();
-			public final static EReference DOSTATEMENT_BODY = Java_PackageImpl.eINSTANCE.getDoStatement_Body();
+			public final static EReference DO_STATEMENT__EXPRESSION = Java_PackageImpl.eINSTANCE.getDoStatement_Expression();
+			public final static EReference DO_STATEMENT__BODY = Java_PackageImpl.eINSTANCE.getDoStatement_Body();
 			
 			public final static EClass EMPTYSTATEMENT = Java_PackageImpl.eINSTANCE.getEmptyStatement();
 			
 			
 			public final static EClass ENHANCEDFORSTATEMENT = Java_PackageImpl.eINSTANCE.getEnhancedForStatement();
 			
-			public final static EReference ENHANCEDFORSTATEMENT_BODY = Java_PackageImpl.eINSTANCE.getEnhancedForStatement_Body();
-			public final static EReference ENHANCEDFORSTATEMENT_EXPRESSION = Java_PackageImpl.eINSTANCE.getEnhancedForStatement_Expression();
-			public final static EReference ENHANCEDFORSTATEMENT_PARAMETER = Java_PackageImpl.eINSTANCE.getEnhancedForStatement_Parameter();
+			public final static EReference ENHANCED_FOR_STATEMENT__BODY = Java_PackageImpl.eINSTANCE.getEnhancedForStatement_Body();
+			public final static EReference ENHANCED_FOR_STATEMENT__EXPRESSION = Java_PackageImpl.eINSTANCE.getEnhancedForStatement_Expression();
+			public final static EReference ENHANCED_FOR_STATEMENT__PARAMETER = Java_PackageImpl.eINSTANCE.getEnhancedForStatement_Parameter();
 			
 			public final static EClass VARIABLEDECLARATION = Java_PackageImpl.eINSTANCE.getVariableDeclaration();
 			
-			public final static EReference VARIABLEDECLARATION_INITIALIZER = Java_PackageImpl.eINSTANCE.getVariableDeclaration_Initializer();
-			public final static EReference VARIABLEDECLARATION_USAGEINVARIABLEACCESS = Java_PackageImpl.eINSTANCE.getVariableDeclaration_UsageInVariableAccess();
+			public final static EReference VARIABLE_DECLARATION__INITIALIZER = Java_PackageImpl.eINSTANCE.getVariableDeclaration_Initializer();
+			public final static EReference VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS = Java_PackageImpl.eINSTANCE.getVariableDeclaration_UsageInVariableAccess();
 			
-			public final static EAttribute VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS = Java_PackageImpl.eINSTANCE.getVariableDeclaration_ExtraArrayDimensions();
+			public final static EAttribute VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS = Java_PackageImpl.eINSTANCE.getVariableDeclaration_ExtraArrayDimensions();
 			public final static EClass ENUMCONSTANTDECLARATION = Java_PackageImpl.eINSTANCE.getEnumConstantDeclaration();
 			
-			public final static EReference ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION = Java_PackageImpl.eINSTANCE.getEnumConstantDeclaration_AnonymousClassDeclaration();
-			public final static EReference ENUMCONSTANTDECLARATION_ARGUMENTS = Java_PackageImpl.eINSTANCE.getEnumConstantDeclaration_Arguments();
+			public final static EReference ENUM_CONSTANT_DECLARATION__ANONYMOUS_CLASS_DECLARATION = Java_PackageImpl.eINSTANCE.getEnumConstantDeclaration_AnonymousClassDeclaration();
+			public final static EReference ENUM_CONSTANT_DECLARATION__ARGUMENTS = Java_PackageImpl.eINSTANCE.getEnumConstantDeclaration_Arguments();
 			
 			public final static EClass ENUMDECLARATION = Java_PackageImpl.eINSTANCE.getEnumDeclaration();
 			
-			public final static EReference ENUMDECLARATION_ENUMCONSTANTS = Java_PackageImpl.eINSTANCE.getEnumDeclaration_EnumConstants();
+			public final static EReference ENUM_DECLARATION__ENUM_CONSTANTS = Java_PackageImpl.eINSTANCE.getEnumDeclaration_EnumConstants();
 			
 			public final static EClass EXPRESSIONSTATEMENT = Java_PackageImpl.eINSTANCE.getExpressionStatement();
 			
-			public final static EReference EXPRESSIONSTATEMENT_EXPRESSION = Java_PackageImpl.eINSTANCE.getExpressionStatement_Expression();
+			public final static EReference EXPRESSION_STATEMENT__EXPRESSION = Java_PackageImpl.eINSTANCE.getExpressionStatement_Expression();
 			
 			public final static EClass FIELDACCESS = Java_PackageImpl.eINSTANCE.getFieldAccess();
 			
-			public final static EReference FIELDACCESS_FIELD = Java_PackageImpl.eINSTANCE.getFieldAccess_Field();
-			public final static EReference FIELDACCESS_EXPRESSION = Java_PackageImpl.eINSTANCE.getFieldAccess_Expression();
+			public final static EReference FIELD_ACCESS__FIELD = Java_PackageImpl.eINSTANCE.getFieldAccess_Field();
+			public final static EReference FIELD_ACCESS__EXPRESSION = Java_PackageImpl.eINSTANCE.getFieldAccess_Expression();
 			
 			public final static EClass FIELDDECLARATION = Java_PackageImpl.eINSTANCE.getFieldDeclaration();
 			
 			
 			public final static EClass FORSTATEMENT = Java_PackageImpl.eINSTANCE.getForStatement();
 			
-			public final static EReference FORSTATEMENT_EXPRESSION = Java_PackageImpl.eINSTANCE.getForStatement_Expression();
-			public final static EReference FORSTATEMENT_UPDATERS = Java_PackageImpl.eINSTANCE.getForStatement_Updaters();
-			public final static EReference FORSTATEMENT_INITIALIZERS = Java_PackageImpl.eINSTANCE.getForStatement_Initializers();
-			public final static EReference FORSTATEMENT_BODY = Java_PackageImpl.eINSTANCE.getForStatement_Body();
+			public final static EReference FOR_STATEMENT__EXPRESSION = Java_PackageImpl.eINSTANCE.getForStatement_Expression();
+			public final static EReference FOR_STATEMENT__UPDATERS = Java_PackageImpl.eINSTANCE.getForStatement_Updaters();
+			public final static EReference FOR_STATEMENT__INITIALIZERS = Java_PackageImpl.eINSTANCE.getForStatement_Initializers();
+			public final static EReference FOR_STATEMENT__BODY = Java_PackageImpl.eINSTANCE.getForStatement_Body();
 			
 			public final static EClass IFSTATEMENT = Java_PackageImpl.eINSTANCE.getIfStatement();
 			
-			public final static EReference IFSTATEMENT_EXPRESSION = Java_PackageImpl.eINSTANCE.getIfStatement_Expression();
-			public final static EReference IFSTATEMENT_THENSTATEMENT = Java_PackageImpl.eINSTANCE.getIfStatement_ThenStatement();
-			public final static EReference IFSTATEMENT_ELSESTATEMENT = Java_PackageImpl.eINSTANCE.getIfStatement_ElseStatement();
+			public final static EReference IF_STATEMENT__EXPRESSION = Java_PackageImpl.eINSTANCE.getIfStatement_Expression();
+			public final static EReference IF_STATEMENT__THEN_STATEMENT = Java_PackageImpl.eINSTANCE.getIfStatement_ThenStatement();
+			public final static EReference IF_STATEMENT__ELSE_STATEMENT = Java_PackageImpl.eINSTANCE.getIfStatement_ElseStatement();
 			
 			public final static EClass IMPORTDECLARATION = Java_PackageImpl.eINSTANCE.getImportDeclaration();
 			
-			public final static EReference IMPORTDECLARATION_IMPORTEDELEMENT = Java_PackageImpl.eINSTANCE.getImportDeclaration_ImportedElement();
+			public final static EReference IMPORT_DECLARATION__IMPORTED_ELEMENT = Java_PackageImpl.eINSTANCE.getImportDeclaration_ImportedElement();
 			
-			public final static EAttribute IMPORTDECLARATION_STATIC = Java_PackageImpl.eINSTANCE.getImportDeclaration_Static();
+			public final static EAttribute IMPORT_DECLARATION__STATIC = Java_PackageImpl.eINSTANCE.getImportDeclaration_Static();
 			public final static EClass INFIXEXPRESSION = Java_PackageImpl.eINSTANCE.getInfixExpression();
 			
-			public final static EReference INFIXEXPRESSION_RIGHTOPERAND = Java_PackageImpl.eINSTANCE.getInfixExpression_RightOperand();
-			public final static EReference INFIXEXPRESSION_LEFTOPERAND = Java_PackageImpl.eINSTANCE.getInfixExpression_LeftOperand();
-			public final static EReference INFIXEXPRESSION_EXTENDEDOPERANDS = Java_PackageImpl.eINSTANCE.getInfixExpression_ExtendedOperands();
+			public final static EReference INFIX_EXPRESSION__RIGHT_OPERAND = Java_PackageImpl.eINSTANCE.getInfixExpression_RightOperand();
+			public final static EReference INFIX_EXPRESSION__LEFT_OPERAND = Java_PackageImpl.eINSTANCE.getInfixExpression_LeftOperand();
+			public final static EReference INFIX_EXPRESSION__EXTENDED_OPERANDS = Java_PackageImpl.eINSTANCE.getInfixExpression_ExtendedOperands();
 			
-			public final static EAttribute INFIXEXPRESSION_OPERATOR = Java_PackageImpl.eINSTANCE.getInfixExpression_Operator();
+			public final static EAttribute INFIX_EXPRESSION__OPERATOR = Java_PackageImpl.eINSTANCE.getInfixExpression_Operator();
 			public final static EClass INITIALIZER = Java_PackageImpl.eINSTANCE.getInitializer();
 			
-			public final static EReference INITIALIZER_BODY = Java_PackageImpl.eINSTANCE.getInitializer_Body();
+			public final static EReference INITIALIZER__BODY = Java_PackageImpl.eINSTANCE.getInitializer_Body();
 			
 			public final static EClass INSTANCEOFEXPRESSION = Java_PackageImpl.eINSTANCE.getInstanceofExpression();
 			
-			public final static EReference INSTANCEOFEXPRESSION_RIGHTOPERAND = Java_PackageImpl.eINSTANCE.getInstanceofExpression_RightOperand();
-			public final static EReference INSTANCEOFEXPRESSION_LEFTOPERAND = Java_PackageImpl.eINSTANCE.getInstanceofExpression_LeftOperand();
+			public final static EReference INSTANCEOF_EXPRESSION__RIGHT_OPERAND = Java_PackageImpl.eINSTANCE.getInstanceofExpression_RightOperand();
+			public final static EReference INSTANCEOF_EXPRESSION__LEFT_OPERAND = Java_PackageImpl.eINSTANCE.getInstanceofExpression_LeftOperand();
 			
 			public final static EClass INTERFACEDECLARATION = Java_PackageImpl.eINSTANCE.getInterfaceDeclaration();
 			
 			
 			public final static EClass JAVADOC = Java_PackageImpl.eINSTANCE.getJavadoc();
 			
-			public final static EReference JAVADOC_TAGS = Java_PackageImpl.eINSTANCE.getJavadoc_Tags();
+			public final static EReference JAVADOC__TAGS = Java_PackageImpl.eINSTANCE.getJavadoc_Tags();
 			
 			public final static EClass LABELEDSTATEMENT = Java_PackageImpl.eINSTANCE.getLabeledStatement();
 			
-			public final static EReference LABELEDSTATEMENT_BODY = Java_PackageImpl.eINSTANCE.getLabeledStatement_Body();
-			public final static EReference LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS = Java_PackageImpl.eINSTANCE.getLabeledStatement_UsagesInBreakStatements();
-			public final static EReference LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS = Java_PackageImpl.eINSTANCE.getLabeledStatement_UsagesInContinueStatements();
+			public final static EReference LABELED_STATEMENT__BODY = Java_PackageImpl.eINSTANCE.getLabeledStatement_Body();
+			public final static EReference LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS = Java_PackageImpl.eINSTANCE.getLabeledStatement_UsagesInBreakStatements();
+			public final static EReference LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS = Java_PackageImpl.eINSTANCE.getLabeledStatement_UsagesInContinueStatements();
 			
 			public final static EClass LINECOMMENT = Java_PackageImpl.eINSTANCE.getLineComment();
 			
 			
 			public final static EClass MANIFEST = Java_PackageImpl.eINSTANCE.getManifest();
 			
-			public final static EReference MANIFEST_MAINATTRIBUTES = Java_PackageImpl.eINSTANCE.getManifest_MainAttributes();
-			public final static EReference MANIFEST_ENTRYATTRIBUTES = Java_PackageImpl.eINSTANCE.getManifest_EntryAttributes();
+			public final static EReference MANIFEST__MAIN_ATTRIBUTES = Java_PackageImpl.eINSTANCE.getManifest_MainAttributes();
+			public final static EReference MANIFEST__ENTRY_ATTRIBUTES = Java_PackageImpl.eINSTANCE.getManifest_EntryAttributes();
 			
 			public final static EClass MANIFESTATTRIBUTE = Java_PackageImpl.eINSTANCE.getManifestAttribute();
 			
 			
-			public final static EAttribute MANIFESTATTRIBUTE_KEY = Java_PackageImpl.eINSTANCE.getManifestAttribute_Key();
-			public final static EAttribute MANIFESTATTRIBUTE_VALUE = Java_PackageImpl.eINSTANCE.getManifestAttribute_Value();
+			public final static EAttribute MANIFEST_ATTRIBUTE__KEY = Java_PackageImpl.eINSTANCE.getManifestAttribute_Key();
+			public final static EAttribute MANIFEST_ATTRIBUTE__VALUE = Java_PackageImpl.eINSTANCE.getManifestAttribute_Value();
 			public final static EClass MANIFESTENTRY = Java_PackageImpl.eINSTANCE.getManifestEntry();
 			
-			public final static EReference MANIFESTENTRY_ATTRIBUTES = Java_PackageImpl.eINSTANCE.getManifestEntry_Attributes();
+			public final static EReference MANIFEST_ENTRY__ATTRIBUTES = Java_PackageImpl.eINSTANCE.getManifestEntry_Attributes();
 			
-			public final static EAttribute MANIFESTENTRY_NAME = Java_PackageImpl.eINSTANCE.getManifestEntry_Name();
+			public final static EAttribute MANIFEST_ENTRY__NAME = Java_PackageImpl.eINSTANCE.getManifestEntry_Name();
 			public final static EClass MEMBERREF = Java_PackageImpl.eINSTANCE.getMemberRef();
 			
-			public final static EReference MEMBERREF_MEMBER = Java_PackageImpl.eINSTANCE.getMemberRef_Member();
-			public final static EReference MEMBERREF_QUALIFIER = Java_PackageImpl.eINSTANCE.getMemberRef_Qualifier();
+			public final static EReference MEMBER_REF__MEMBER = Java_PackageImpl.eINSTANCE.getMemberRef_Member();
+			public final static EReference MEMBER_REF__QUALIFIER = Java_PackageImpl.eINSTANCE.getMemberRef_Qualifier();
 			
 			public final static EClass METHODDECLARATION = Java_PackageImpl.eINSTANCE.getMethodDeclaration();
 			
-			public final static EReference METHODDECLARATION_RETURNTYPE = Java_PackageImpl.eINSTANCE.getMethodDeclaration_ReturnType();
-			public final static EReference METHODDECLARATION_REDEFINEDMETHODDECLARATION = Java_PackageImpl.eINSTANCE.getMethodDeclaration_RedefinedMethodDeclaration();
-			public final static EReference METHODDECLARATION_REDEFINITIONS = Java_PackageImpl.eINSTANCE.getMethodDeclaration_Redefinitions();
+			public final static EReference METHOD_DECLARATION__RETURN_TYPE = Java_PackageImpl.eINSTANCE.getMethodDeclaration_ReturnType();
+			public final static EReference METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION = Java_PackageImpl.eINSTANCE.getMethodDeclaration_RedefinedMethodDeclaration();
+			public final static EReference METHOD_DECLARATION__REDEFINITIONS = Java_PackageImpl.eINSTANCE.getMethodDeclaration_Redefinitions();
 			
-			public final static EAttribute METHODDECLARATION_EXTRAARRAYDIMENSIONS = Java_PackageImpl.eINSTANCE.getMethodDeclaration_ExtraArrayDimensions();
+			public final static EAttribute METHOD_DECLARATION__EXTRA_ARRAY_DIMENSIONS = Java_PackageImpl.eINSTANCE.getMethodDeclaration_ExtraArrayDimensions();
 			public final static EClass METHODINVOCATION = Java_PackageImpl.eINSTANCE.getMethodInvocation();
 			
-			public final static EReference METHODINVOCATION_EXPRESSION = Java_PackageImpl.eINSTANCE.getMethodInvocation_Expression();
+			public final static EReference METHOD_INVOCATION__EXPRESSION = Java_PackageImpl.eINSTANCE.getMethodInvocation_Expression();
 			
 			public final static EClass METHODREF = Java_PackageImpl.eINSTANCE.getMethodRef();
 			
-			public final static EReference METHODREF_METHOD = Java_PackageImpl.eINSTANCE.getMethodRef_Method();
-			public final static EReference METHODREF_QUALIFIER = Java_PackageImpl.eINSTANCE.getMethodRef_Qualifier();
-			public final static EReference METHODREF_PARAMETERS = Java_PackageImpl.eINSTANCE.getMethodRef_Parameters();
+			public final static EReference METHOD_REF__METHOD = Java_PackageImpl.eINSTANCE.getMethodRef_Method();
+			public final static EReference METHOD_REF__QUALIFIER = Java_PackageImpl.eINSTANCE.getMethodRef_Qualifier();
+			public final static EReference METHOD_REF__PARAMETERS = Java_PackageImpl.eINSTANCE.getMethodRef_Parameters();
 			
 			public final static EClass METHODREFPARAMETER = Java_PackageImpl.eINSTANCE.getMethodRefParameter();
 			
-			public final static EReference METHODREFPARAMETER_TYPE = Java_PackageImpl.eINSTANCE.getMethodRefParameter_Type();
+			public final static EReference METHOD_REF_PARAMETER__TYPE = Java_PackageImpl.eINSTANCE.getMethodRefParameter_Type();
 			
-			public final static EAttribute METHODREFPARAMETER_NAME = Java_PackageImpl.eINSTANCE.getMethodRefParameter_Name();
-			public final static EAttribute METHODREFPARAMETER_VARARGS = Java_PackageImpl.eINSTANCE.getMethodRefParameter_Varargs();
+			public final static EAttribute METHOD_REF_PARAMETER__NAME = Java_PackageImpl.eINSTANCE.getMethodRefParameter_Name();
+			public final static EAttribute METHOD_REF_PARAMETER__VARARGS = Java_PackageImpl.eINSTANCE.getMethodRefParameter_Varargs();
 			public final static EClass MODEL = Java_PackageImpl.eINSTANCE.getModel();
 			
-			public final static EReference MODEL_OWNEDELEMENTS = Java_PackageImpl.eINSTANCE.getModel_OwnedElements();
-			public final static EReference MODEL_ORPHANTYPES = Java_PackageImpl.eINSTANCE.getModel_OrphanTypes();
-			public final static EReference MODEL_UNRESOLVEDITEMS = Java_PackageImpl.eINSTANCE.getModel_UnresolvedItems();
-			public final static EReference MODEL_COMPILATIONUNITS = Java_PackageImpl.eINSTANCE.getModel_CompilationUnits();
-			public final static EReference MODEL_CLASSFILES = Java_PackageImpl.eINSTANCE.getModel_ClassFiles();
-			public final static EReference MODEL_ARCHIVES = Java_PackageImpl.eINSTANCE.getModel_Archives();
+			public final static EReference MODEL__OWNED_ELEMENTS = Java_PackageImpl.eINSTANCE.getModel_OwnedElements();
+			public final static EReference MODEL__ORPHAN_TYPES = Java_PackageImpl.eINSTANCE.getModel_OrphanTypes();
+			public final static EReference MODEL__UNRESOLVED_ITEMS = Java_PackageImpl.eINSTANCE.getModel_UnresolvedItems();
+			public final static EReference MODEL__COMPILATION_UNITS = Java_PackageImpl.eINSTANCE.getModel_CompilationUnits();
+			public final static EReference MODEL__CLASS_FILES = Java_PackageImpl.eINSTANCE.getModel_ClassFiles();
+			public final static EReference MODEL__ARCHIVES = Java_PackageImpl.eINSTANCE.getModel_Archives();
 			
-			public final static EAttribute MODEL_NAME = Java_PackageImpl.eINSTANCE.getModel_Name();
+			public final static EAttribute MODEL__NAME = Java_PackageImpl.eINSTANCE.getModel_Name();
 			public final static EClass MODIFIER = Java_PackageImpl.eINSTANCE.getModifier();
 			
-			public final static EReference MODIFIER_BODYDECLARATION = Java_PackageImpl.eINSTANCE.getModifier_BodyDeclaration();
-			public final static EReference MODIFIER_SINGLEVARIABLEDECLARATION = Java_PackageImpl.eINSTANCE.getModifier_SingleVariableDeclaration();
-			public final static EReference MODIFIER_VARIABLEDECLARATIONSTATEMENT = Java_PackageImpl.eINSTANCE.getModifier_VariableDeclarationStatement();
-			public final static EReference MODIFIER_VARIABLEDECLARATIONEXPRESSION = Java_PackageImpl.eINSTANCE.getModifier_VariableDeclarationExpression();
+			public final static EReference MODIFIER__BODY_DECLARATION = Java_PackageImpl.eINSTANCE.getModifier_BodyDeclaration();
+			public final static EReference MODIFIER__SINGLE_VARIABLE_DECLARATION = Java_PackageImpl.eINSTANCE.getModifier_SingleVariableDeclaration();
+			public final static EReference MODIFIER__VARIABLE_DECLARATION_STATEMENT = Java_PackageImpl.eINSTANCE.getModifier_VariableDeclarationStatement();
+			public final static EReference MODIFIER__VARIABLE_DECLARATION_EXPRESSION = Java_PackageImpl.eINSTANCE.getModifier_VariableDeclarationExpression();
 			
-			public final static EAttribute MODIFIER_VISIBILITY = Java_PackageImpl.eINSTANCE.getModifier_Visibility();
-			public final static EAttribute MODIFIER_INHERITANCE = Java_PackageImpl.eINSTANCE.getModifier_Inheritance();
-			public final static EAttribute MODIFIER_STATIC = Java_PackageImpl.eINSTANCE.getModifier_Static();
-			public final static EAttribute MODIFIER_TRANSIENT = Java_PackageImpl.eINSTANCE.getModifier_Transient();
-			public final static EAttribute MODIFIER_VOLATILE = Java_PackageImpl.eINSTANCE.getModifier_Volatile();
-			public final static EAttribute MODIFIER_NATIVE = Java_PackageImpl.eINSTANCE.getModifier_Native();
-			public final static EAttribute MODIFIER_STRICTFP = Java_PackageImpl.eINSTANCE.getModifier_Strictfp();
-			public final static EAttribute MODIFIER_SYNCHRONIZED = Java_PackageImpl.eINSTANCE.getModifier_Synchronized();
+			public final static EAttribute MODIFIER__VISIBILITY = Java_PackageImpl.eINSTANCE.getModifier_Visibility();
+			public final static EAttribute MODIFIER__INHERITANCE = Java_PackageImpl.eINSTANCE.getModifier_Inheritance();
+			public final static EAttribute MODIFIER__STATIC = Java_PackageImpl.eINSTANCE.getModifier_Static();
+			public final static EAttribute MODIFIER__TRANSIENT = Java_PackageImpl.eINSTANCE.getModifier_Transient();
+			public final static EAttribute MODIFIER__VOLATILE = Java_PackageImpl.eINSTANCE.getModifier_Volatile();
+			public final static EAttribute MODIFIER__NATIVE = Java_PackageImpl.eINSTANCE.getModifier_Native();
+			public final static EAttribute MODIFIER__STRICTFP = Java_PackageImpl.eINSTANCE.getModifier_Strictfp();
+			public final static EAttribute MODIFIER__SYNCHRONIZED = Java_PackageImpl.eINSTANCE.getModifier_Synchronized();
 			public final static EClass NAMESPACEACCESS = Java_PackageImpl.eINSTANCE.getNamespaceAccess();
 			
 			
 			public final static EClass NUMBERLITERAL = Java_PackageImpl.eINSTANCE.getNumberLiteral();
 			
 			
-			public final static EAttribute NUMBERLITERAL_TOKENVALUE = Java_PackageImpl.eINSTANCE.getNumberLiteral_TokenValue();
+			public final static EAttribute NUMBER_LITERAL__TOKEN_VALUE = Java_PackageImpl.eINSTANCE.getNumberLiteral_TokenValue();
 			public final static EClass NULLLITERAL = Java_PackageImpl.eINSTANCE.getNullLiteral();
 			
 			
 			public final static EClass PACKAGE = Java_PackageImpl.eINSTANCE.getPackage();
 			
-			public final static EReference PACKAGE_OWNEDELEMENTS = Java_PackageImpl.eINSTANCE.getPackage_OwnedElements();
-			public final static EReference PACKAGE_MODEL = Java_PackageImpl.eINSTANCE.getPackage_Model();
-			public final static EReference PACKAGE_OWNEDPACKAGES = Java_PackageImpl.eINSTANCE.getPackage_OwnedPackages();
-			public final static EReference PACKAGE_PACKAGE = Java_PackageImpl.eINSTANCE.getPackage_Package();
-			public final static EReference PACKAGE_USAGESINPACKAGEACCESS = Java_PackageImpl.eINSTANCE.getPackage_UsagesInPackageAccess();
+			public final static EReference PACKAGE__OWNED_ELEMENTS = Java_PackageImpl.eINSTANCE.getPackage_OwnedElements();
+			public final static EReference PACKAGE__MODEL = Java_PackageImpl.eINSTANCE.getPackage_Model();
+			public final static EReference PACKAGE__OWNED_PACKAGES = Java_PackageImpl.eINSTANCE.getPackage_OwnedPackages();
+			public final static EReference PACKAGE__PACKAGE = Java_PackageImpl.eINSTANCE.getPackage_Package();
+			public final static EReference PACKAGE__USAGES_IN_PACKAGE_ACCESS = Java_PackageImpl.eINSTANCE.getPackage_UsagesInPackageAccess();
 			
 			public final static EClass PACKAGEACCESS = Java_PackageImpl.eINSTANCE.getPackageAccess();
 			
-			public final static EReference PACKAGEACCESS_PACKAGE = Java_PackageImpl.eINSTANCE.getPackageAccess_Package();
-			public final static EReference PACKAGEACCESS_QUALIFIER = Java_PackageImpl.eINSTANCE.getPackageAccess_Qualifier();
+			public final static EReference PACKAGE_ACCESS__PACKAGE = Java_PackageImpl.eINSTANCE.getPackageAccess_Package();
+			public final static EReference PACKAGE_ACCESS__QUALIFIER = Java_PackageImpl.eINSTANCE.getPackageAccess_Qualifier();
 			
 			public final static EClass PARAMETERIZEDTYPE = Java_PackageImpl.eINSTANCE.getParameterizedType();
 			
-			public final static EReference PARAMETERIZEDTYPE_TYPE = Java_PackageImpl.eINSTANCE.getParameterizedType_Type();
-			public final static EReference PARAMETERIZEDTYPE_TYPEARGUMENTS = Java_PackageImpl.eINSTANCE.getParameterizedType_TypeArguments();
+			public final static EReference PARAMETERIZED_TYPE__TYPE = Java_PackageImpl.eINSTANCE.getParameterizedType_Type();
+			public final static EReference PARAMETERIZED_TYPE__TYPE_ARGUMENTS = Java_PackageImpl.eINSTANCE.getParameterizedType_TypeArguments();
 			
 			public final static EClass PARENTHESIZEDEXPRESSION = Java_PackageImpl.eINSTANCE.getParenthesizedExpression();
 			
-			public final static EReference PARENTHESIZEDEXPRESSION_EXPRESSION = Java_PackageImpl.eINSTANCE.getParenthesizedExpression_Expression();
+			public final static EReference PARENTHESIZED_EXPRESSION__EXPRESSION = Java_PackageImpl.eINSTANCE.getParenthesizedExpression_Expression();
 			
 			public final static EClass POSTFIXEXPRESSION = Java_PackageImpl.eINSTANCE.getPostfixExpression();
 			
-			public final static EReference POSTFIXEXPRESSION_OPERAND = Java_PackageImpl.eINSTANCE.getPostfixExpression_Operand();
+			public final static EReference POSTFIX_EXPRESSION__OPERAND = Java_PackageImpl.eINSTANCE.getPostfixExpression_Operand();
 			
-			public final static EAttribute POSTFIXEXPRESSION_OPERATOR = Java_PackageImpl.eINSTANCE.getPostfixExpression_Operator();
+			public final static EAttribute POSTFIX_EXPRESSION__OPERATOR = Java_PackageImpl.eINSTANCE.getPostfixExpression_Operator();
 			public final static EClass PREFIXEXPRESSION = Java_PackageImpl.eINSTANCE.getPrefixExpression();
 			
-			public final static EReference PREFIXEXPRESSION_OPERAND = Java_PackageImpl.eINSTANCE.getPrefixExpression_Operand();
+			public final static EReference PREFIX_EXPRESSION__OPERAND = Java_PackageImpl.eINSTANCE.getPrefixExpression_Operand();
 			
-			public final static EAttribute PREFIXEXPRESSION_OPERATOR = Java_PackageImpl.eINSTANCE.getPrefixExpression_Operator();
+			public final static EAttribute PREFIX_EXPRESSION__OPERATOR = Java_PackageImpl.eINSTANCE.getPrefixExpression_Operator();
 			public final static EClass PRIMITIVETYPE = Java_PackageImpl.eINSTANCE.getPrimitiveType();
 			
 			
@@ -8159,99 +8159,99 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
 			public final static EClass RETURNSTATEMENT = Java_PackageImpl.eINSTANCE.getReturnStatement();
 			
-			public final static EReference RETURNSTATEMENT_EXPRESSION = Java_PackageImpl.eINSTANCE.getReturnStatement_Expression();
+			public final static EReference RETURN_STATEMENT__EXPRESSION = Java_PackageImpl.eINSTANCE.getReturnStatement_Expression();
 			
 			public final static EClass SINGLEVARIABLEACCESS = Java_PackageImpl.eINSTANCE.getSingleVariableAccess();
 			
-			public final static EReference SINGLEVARIABLEACCESS_VARIABLE = Java_PackageImpl.eINSTANCE.getSingleVariableAccess_Variable();
-			public final static EReference SINGLEVARIABLEACCESS_QUALIFIER = Java_PackageImpl.eINSTANCE.getSingleVariableAccess_Qualifier();
+			public final static EReference SINGLE_VARIABLE_ACCESS__VARIABLE = Java_PackageImpl.eINSTANCE.getSingleVariableAccess_Variable();
+			public final static EReference SINGLE_VARIABLE_ACCESS__QUALIFIER = Java_PackageImpl.eINSTANCE.getSingleVariableAccess_Qualifier();
 			
 			public final static EClass SINGLEVARIABLEDECLARATION = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration();
 			
-			public final static EReference SINGLEVARIABLEDECLARATION_MODIFIER = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_Modifier();
-			public final static EReference SINGLEVARIABLEDECLARATION_TYPE = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_Type();
-			public final static EReference SINGLEVARIABLEDECLARATION_ANNOTATIONS = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_Annotations();
-			public final static EReference SINGLEVARIABLEDECLARATION_METHODDECLARATION = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_MethodDeclaration();
-			public final static EReference SINGLEVARIABLEDECLARATION_CATCHCLAUSE = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_CatchClause();
-			public final static EReference SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_EnhancedForStatement();
+			public final static EReference SINGLE_VARIABLE_DECLARATION__MODIFIER = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_Modifier();
+			public final static EReference SINGLE_VARIABLE_DECLARATION__TYPE = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_Type();
+			public final static EReference SINGLE_VARIABLE_DECLARATION__ANNOTATIONS = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_Annotations();
+			public final static EReference SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_MethodDeclaration();
+			public final static EReference SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_CatchClause();
+			public final static EReference SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_EnhancedForStatement();
 			
-			public final static EAttribute SINGLEVARIABLEDECLARATION_VARARGS = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_Varargs();
+			public final static EAttribute SINGLE_VARIABLE_DECLARATION__VARARGS = Java_PackageImpl.eINSTANCE.getSingleVariableDeclaration_Varargs();
 			public final static EClass STRINGLITERAL = Java_PackageImpl.eINSTANCE.getStringLiteral();
 			
 			
-			public final static EAttribute STRINGLITERAL_ESCAPEDVALUE = Java_PackageImpl.eINSTANCE.getStringLiteral_EscapedValue();
+			public final static EAttribute STRING_LITERAL__ESCAPED_VALUE = Java_PackageImpl.eINSTANCE.getStringLiteral_EscapedValue();
 			public final static EClass SUPERCONSTRUCTORINVOCATION = Java_PackageImpl.eINSTANCE.getSuperConstructorInvocation();
 			
-			public final static EReference SUPERCONSTRUCTORINVOCATION_EXPRESSION = Java_PackageImpl.eINSTANCE.getSuperConstructorInvocation_Expression();
+			public final static EReference SUPER_CONSTRUCTOR_INVOCATION__EXPRESSION = Java_PackageImpl.eINSTANCE.getSuperConstructorInvocation_Expression();
 			
 			public final static EClass SUPERFIELDACCESS = Java_PackageImpl.eINSTANCE.getSuperFieldAccess();
 			
-			public final static EReference SUPERFIELDACCESS_FIELD = Java_PackageImpl.eINSTANCE.getSuperFieldAccess_Field();
+			public final static EReference SUPER_FIELD_ACCESS__FIELD = Java_PackageImpl.eINSTANCE.getSuperFieldAccess_Field();
 			
 			public final static EClass SUPERMETHODINVOCATION = Java_PackageImpl.eINSTANCE.getSuperMethodInvocation();
 			
 			
 			public final static EClass SWITCHCASE = Java_PackageImpl.eINSTANCE.getSwitchCase();
 			
-			public final static EReference SWITCHCASE_EXPRESSION = Java_PackageImpl.eINSTANCE.getSwitchCase_Expression();
+			public final static EReference SWITCH_CASE__EXPRESSION = Java_PackageImpl.eINSTANCE.getSwitchCase_Expression();
 			
-			public final static EAttribute SWITCHCASE_DEFAULT = Java_PackageImpl.eINSTANCE.getSwitchCase_Default();
+			public final static EAttribute SWITCH_CASE__DEFAULT = Java_PackageImpl.eINSTANCE.getSwitchCase_Default();
 			public final static EClass SWITCHSTATEMENT = Java_PackageImpl.eINSTANCE.getSwitchStatement();
 			
-			public final static EReference SWITCHSTATEMENT_EXPRESSION = Java_PackageImpl.eINSTANCE.getSwitchStatement_Expression();
-			public final static EReference SWITCHSTATEMENT_STATEMENTS = Java_PackageImpl.eINSTANCE.getSwitchStatement_Statements();
+			public final static EReference SWITCH_STATEMENT__EXPRESSION = Java_PackageImpl.eINSTANCE.getSwitchStatement_Expression();
+			public final static EReference SWITCH_STATEMENT__STATEMENTS = Java_PackageImpl.eINSTANCE.getSwitchStatement_Statements();
 			
 			public final static EClass SYNCHRONIZEDSTATEMENT = Java_PackageImpl.eINSTANCE.getSynchronizedStatement();
 			
-			public final static EReference SYNCHRONIZEDSTATEMENT_BODY = Java_PackageImpl.eINSTANCE.getSynchronizedStatement_Body();
-			public final static EReference SYNCHRONIZEDSTATEMENT_EXPRESSION = Java_PackageImpl.eINSTANCE.getSynchronizedStatement_Expression();
+			public final static EReference SYNCHRONIZED_STATEMENT__BODY = Java_PackageImpl.eINSTANCE.getSynchronizedStatement_Body();
+			public final static EReference SYNCHRONIZED_STATEMENT__EXPRESSION = Java_PackageImpl.eINSTANCE.getSynchronizedStatement_Expression();
 			
 			public final static EClass TAGELEMENT = Java_PackageImpl.eINSTANCE.getTagElement();
 			
-			public final static EReference TAGELEMENT_FRAGMENTS = Java_PackageImpl.eINSTANCE.getTagElement_Fragments();
+			public final static EReference TAG_ELEMENT__FRAGMENTS = Java_PackageImpl.eINSTANCE.getTagElement_Fragments();
 			
-			public final static EAttribute TAGELEMENT_TAGNAME = Java_PackageImpl.eINSTANCE.getTagElement_TagName();
+			public final static EAttribute TAG_ELEMENT__TAG_NAME = Java_PackageImpl.eINSTANCE.getTagElement_TagName();
 			public final static EClass TEXTELEMENT = Java_PackageImpl.eINSTANCE.getTextElement();
 			
 			
-			public final static EAttribute TEXTELEMENT_TEXT = Java_PackageImpl.eINSTANCE.getTextElement_Text();
+			public final static EAttribute TEXT_ELEMENT__TEXT = Java_PackageImpl.eINSTANCE.getTextElement_Text();
 			public final static EClass THISEXPRESSION = Java_PackageImpl.eINSTANCE.getThisExpression();
 			
 			
 			public final static EClass THROWSTATEMENT = Java_PackageImpl.eINSTANCE.getThrowStatement();
 			
-			public final static EReference THROWSTATEMENT_EXPRESSION = Java_PackageImpl.eINSTANCE.getThrowStatement_Expression();
+			public final static EReference THROW_STATEMENT__EXPRESSION = Java_PackageImpl.eINSTANCE.getThrowStatement_Expression();
 			
 			public final static EClass TRYSTATEMENT = Java_PackageImpl.eINSTANCE.getTryStatement();
 			
-			public final static EReference TRYSTATEMENT_BODY = Java_PackageImpl.eINSTANCE.getTryStatement_Body();
-			public final static EReference TRYSTATEMENT_FINALLY = Java_PackageImpl.eINSTANCE.getTryStatement_Finally();
-			public final static EReference TRYSTATEMENT_CATCHCLAUSES = Java_PackageImpl.eINSTANCE.getTryStatement_CatchClauses();
+			public final static EReference TRY_STATEMENT__BODY = Java_PackageImpl.eINSTANCE.getTryStatement_Body();
+			public final static EReference TRY_STATEMENT__FINALLY = Java_PackageImpl.eINSTANCE.getTryStatement_Finally();
+			public final static EReference TRY_STATEMENT__CATCH_CLAUSES = Java_PackageImpl.eINSTANCE.getTryStatement_CatchClauses();
 			
 			public final static EClass TYPEACCESS = Java_PackageImpl.eINSTANCE.getTypeAccess();
 			
-			public final static EReference TYPEACCESS_TYPE = Java_PackageImpl.eINSTANCE.getTypeAccess_Type();
-			public final static EReference TYPEACCESS_QUALIFIER = Java_PackageImpl.eINSTANCE.getTypeAccess_Qualifier();
+			public final static EReference TYPE_ACCESS__TYPE = Java_PackageImpl.eINSTANCE.getTypeAccess_Type();
+			public final static EReference TYPE_ACCESS__QUALIFIER = Java_PackageImpl.eINSTANCE.getTypeAccess_Qualifier();
 			
 			public final static EClass TYPEDECLARATIONSTATEMENT = Java_PackageImpl.eINSTANCE.getTypeDeclarationStatement();
 			
-			public final static EReference TYPEDECLARATIONSTATEMENT_DECLARATION = Java_PackageImpl.eINSTANCE.getTypeDeclarationStatement_Declaration();
+			public final static EReference TYPE_DECLARATION_STATEMENT__DECLARATION = Java_PackageImpl.eINSTANCE.getTypeDeclarationStatement_Declaration();
 			
 			public final static EClass TYPELITERAL = Java_PackageImpl.eINSTANCE.getTypeLiteral();
 			
-			public final static EReference TYPELITERAL_TYPE = Java_PackageImpl.eINSTANCE.getTypeLiteral_Type();
+			public final static EReference TYPE_LITERAL__TYPE = Java_PackageImpl.eINSTANCE.getTypeLiteral_Type();
 			
 			public final static EClass TYPEPARAMETER = Java_PackageImpl.eINSTANCE.getTypeParameter();
 			
-			public final static EReference TYPEPARAMETER_BOUNDS = Java_PackageImpl.eINSTANCE.getTypeParameter_Bounds();
+			public final static EReference TYPE_PARAMETER__BOUNDS = Java_PackageImpl.eINSTANCE.getTypeParameter_Bounds();
 			
 			public final static EClass UNRESOLVEDITEM = Java_PackageImpl.eINSTANCE.getUnresolvedItem();
 			
 			
 			public final static EClass UNRESOLVEDITEMACCESS = Java_PackageImpl.eINSTANCE.getUnresolvedItemAccess();
 			
-			public final static EReference UNRESOLVEDITEMACCESS_ELEMENT = Java_PackageImpl.eINSTANCE.getUnresolvedItemAccess_Element();
-			public final static EReference UNRESOLVEDITEMACCESS_QUALIFIER = Java_PackageImpl.eINSTANCE.getUnresolvedItemAccess_Qualifier();
+			public final static EReference UNRESOLVED_ITEM_ACCESS__ELEMENT = Java_PackageImpl.eINSTANCE.getUnresolvedItemAccess_Element();
+			public final static EReference UNRESOLVED_ITEM_ACCESS__QUALIFIER = Java_PackageImpl.eINSTANCE.getUnresolvedItemAccess_Qualifier();
 			
 			public final static EClass UNRESOLVEDANNOTATIONDECLARATION = Java_PackageImpl.eINSTANCE.getUnresolvedAnnotationDeclaration();
 			
@@ -8285,31 +8285,31 @@ public class Java_PackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
 			public final static EClass VARIABLEDECLARATIONFRAGMENT = Java_PackageImpl.eINSTANCE.getVariableDeclarationFragment();
 			
-			public final static EReference VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER = Java_PackageImpl.eINSTANCE.getVariableDeclarationFragment_VariablesContainer();
+			public final static EReference VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER = Java_PackageImpl.eINSTANCE.getVariableDeclarationFragment_VariablesContainer();
 			
 			public final static EClass UNRESOLVEDVARIABLEDECLARATIONFRAGMENT = Java_PackageImpl.eINSTANCE.getUnresolvedVariableDeclarationFragment();
 			
 			
 			public final static EClass VARIABLEDECLARATIONEXPRESSION = Java_PackageImpl.eINSTANCE.getVariableDeclarationExpression();
 			
-			public final static EReference VARIABLEDECLARATIONEXPRESSION_MODIFIER = Java_PackageImpl.eINSTANCE.getVariableDeclarationExpression_Modifier();
-			public final static EReference VARIABLEDECLARATIONEXPRESSION_ANNOTATIONS = Java_PackageImpl.eINSTANCE.getVariableDeclarationExpression_Annotations();
+			public final static EReference VARIABLE_DECLARATION_EXPRESSION__MODIFIER = Java_PackageImpl.eINSTANCE.getVariableDeclarationExpression_Modifier();
+			public final static EReference VARIABLE_DECLARATION_EXPRESSION__ANNOTATIONS = Java_PackageImpl.eINSTANCE.getVariableDeclarationExpression_Annotations();
 			
 			public final static EClass VARIABLEDECLARATIONSTATEMENT = Java_PackageImpl.eINSTANCE.getVariableDeclarationStatement();
 			
-			public final static EReference VARIABLEDECLARATIONSTATEMENT_MODIFIER = Java_PackageImpl.eINSTANCE.getVariableDeclarationStatement_Modifier();
-			public final static EReference VARIABLEDECLARATIONSTATEMENT_ANNOTATIONS = Java_PackageImpl.eINSTANCE.getVariableDeclarationStatement_Annotations();
+			public final static EReference VARIABLE_DECLARATION_STATEMENT__MODIFIER = Java_PackageImpl.eINSTANCE.getVariableDeclarationStatement_Modifier();
+			public final static EReference VARIABLE_DECLARATION_STATEMENT__ANNOTATIONS = Java_PackageImpl.eINSTANCE.getVariableDeclarationStatement_Annotations();
 			
-			public final static EAttribute VARIABLEDECLARATIONSTATEMENT_EXTRAARRAYDIMENSIONS = Java_PackageImpl.eINSTANCE.getVariableDeclarationStatement_ExtraArrayDimensions();
+			public final static EAttribute VARIABLE_DECLARATION_STATEMENT__EXTRA_ARRAY_DIMENSIONS = Java_PackageImpl.eINSTANCE.getVariableDeclarationStatement_ExtraArrayDimensions();
 			public final static EClass WILDCARDTYPE = Java_PackageImpl.eINSTANCE.getWildCardType();
 			
-			public final static EReference WILDCARDTYPE_BOUND = Java_PackageImpl.eINSTANCE.getWildCardType_Bound();
+			public final static EReference WILD_CARD_TYPE__BOUND = Java_PackageImpl.eINSTANCE.getWildCardType_Bound();
 			
-			public final static EAttribute WILDCARDTYPE_UPPERBOUND = Java_PackageImpl.eINSTANCE.getWildCardType_UpperBound();
+			public final static EAttribute WILD_CARD_TYPE__UPPER_BOUND = Java_PackageImpl.eINSTANCE.getWildCardType_UpperBound();
 			public final static EClass WHILESTATEMENT = Java_PackageImpl.eINSTANCE.getWhileStatement();
 			
-			public final static EReference WHILESTATEMENT_EXPRESSION = Java_PackageImpl.eINSTANCE.getWhileStatement_Expression();
-			public final static EReference WHILESTATEMENT_BODY = Java_PackageImpl.eINSTANCE.getWhileStatement_Body();
+			public final static EReference WHILE_STATEMENT__EXPRESSION = Java_PackageImpl.eINSTANCE.getWhileStatement_Expression();
+			public final static EReference WHILE_STATEMENT__BODY = Java_PackageImpl.eINSTANCE.getWhileStatement_Body();
 			
 			public final static EEnum ASSIGNMENTKIND = Java_PackageImpl.eINSTANCE.getAssignmentKind();
 			public final static EEnum INFIXEXPRESSIONKIND = Java_PackageImpl.eINSTANCE.getInfixExpressionKind();

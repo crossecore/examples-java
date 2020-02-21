@@ -3,19 +3,19 @@ public interface TypeDeclarationStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<TypeDeclarationStatement> allInstances_ = new Ocllib.QuickSet<TypeDeclarationStatement>(TypeDeclarationStatement.class);
+	public static com.crossecore.ocl.QuickSet<TypeDeclarationStatement> allInstances_ = new com.crossecore.ocl.QuickSet<TypeDeclarationStatement>(TypeDeclarationStatement.class);
 	
 		
-	public static Ocllib.QuickSet<TypeDeclarationStatement> allInstances(){
+	public static com.crossecore.ocl.QuickSet<TypeDeclarationStatement> allInstances(){
 		
-		Ocllib.QuickSet<TypeDeclarationStatement> result = new Ocllib.QuickSet<TypeDeclarationStatement>(TypeDeclarationStatement.class);
+		com.crossecore.ocl.QuickSet<TypeDeclarationStatement> result = new com.crossecore.ocl.QuickSet<TypeDeclarationStatement>(TypeDeclarationStatement.class);
 		result.addAll(TypeDeclarationStatement.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<TypeDeclarationStatement> allInstances = new Ocllib.QuickSet<TypeDeclarationStatement>(TypeDeclarationStatement.class);
+	//public static com.crossecore.ocl.QuickSet<TypeDeclarationStatement> allInstances = new com.crossecore.ocl.QuickSet<TypeDeclarationStatement>(TypeDeclarationStatement.class);
 	
 	
 	AbstractTypeDeclaration getDeclaration();

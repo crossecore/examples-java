@@ -11,7 +11,7 @@ extends VariableDeclarationImpl implements VariableDeclarationFragment
 	public AbstractVariablesContainer getVariablesContainer()
 	{
 		
-			if (eContainerFeatureID() != Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER) return null;
+			if (eContainerFeatureID() != Java_PackageImpl.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER) return null;
 			return (AbstractVariablesContainer)eInternalContainer();
 		
 		
@@ -20,10 +20,10 @@ extends VariableDeclarationImpl implements VariableDeclarationFragment
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS, AbstractVariablesContainer.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS, AbstractVariablesContainer.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS, AbstractVariablesContainer.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS, AbstractVariablesContainer.class, msgs);
 			}
 			msgs = basicSetVariablesContainer(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends VariableDeclarationImpl implements VariableDeclarationFragment
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER , value, value));
 		}
 	}
 
@@ -44,7 +44,7 @@ extends VariableDeclarationImpl implements VariableDeclarationFragment
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER:
+			case Java_PackageImpl.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER:
 				if (eInternalContainer() != null) {
 					msgs = eBasicRemoveFromContainer(msgs);
 				}
@@ -56,21 +56,21 @@ extends VariableDeclarationImpl implements VariableDeclarationFragment
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER:
+			case Java_PackageImpl.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER:
 				return basicSetVariablesContainer(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
 	public NotificationChain basicSetVariablesContainer(AbstractVariablesContainer newobj, NotificationChain msgs) {
-			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER, msgs);
+			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER, msgs);
 			return msgs;
 	}
 	
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER:
+			case Java_PackageImpl.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER:
 				return getVariablesContainer();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -79,7 +79,7 @@ extends VariableDeclarationImpl implements VariableDeclarationFragment
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER:
+			case Java_PackageImpl.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER:
 				setVariablesContainer((AbstractVariablesContainer) newValue);
 				return;
 		}
@@ -89,7 +89,7 @@ extends VariableDeclarationImpl implements VariableDeclarationFragment
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER:
+			case Java_PackageImpl.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER:
 				return getVariablesContainer() != null; //single, volatile
 		}
 		return super.eIsSet(featureID);

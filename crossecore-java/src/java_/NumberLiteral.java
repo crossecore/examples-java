@@ -3,19 +3,19 @@ public interface NumberLiteral
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<NumberLiteral> allInstances_ = new Ocllib.QuickSet<NumberLiteral>(NumberLiteral.class);
+	public static com.crossecore.ocl.QuickSet<NumberLiteral> allInstances_ = new com.crossecore.ocl.QuickSet<NumberLiteral>(NumberLiteral.class);
 	
 		
-	public static Ocllib.QuickSet<NumberLiteral> allInstances(){
+	public static com.crossecore.ocl.QuickSet<NumberLiteral> allInstances(){
 		
-		Ocllib.QuickSet<NumberLiteral> result = new Ocllib.QuickSet<NumberLiteral>(NumberLiteral.class);
+		com.crossecore.ocl.QuickSet<NumberLiteral> result = new com.crossecore.ocl.QuickSet<NumberLiteral>(NumberLiteral.class);
 		result.addAll(NumberLiteral.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<NumberLiteral> allInstances = new Ocllib.QuickSet<NumberLiteral>(NumberLiteral.class);
+	//public static com.crossecore.ocl.QuickSet<NumberLiteral> allInstances = new com.crossecore.ocl.QuickSet<NumberLiteral>(NumberLiteral.class);
 	
 	java.lang.String getTokenValue();
 	void setTokenValue(java.lang.String value);

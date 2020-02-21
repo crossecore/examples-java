@@ -3,19 +3,19 @@ public interface MethodRef
  extends ASTNode
 {
 	
-	public static Ocllib.QuickSet<MethodRef> allInstances_ = new Ocllib.QuickSet<MethodRef>(MethodRef.class);
+	public static com.crossecore.ocl.QuickSet<MethodRef> allInstances_ = new com.crossecore.ocl.QuickSet<MethodRef>(MethodRef.class);
 	
 		
-	public static Ocllib.QuickSet<MethodRef> allInstances(){
+	public static com.crossecore.ocl.QuickSet<MethodRef> allInstances(){
 		
-		Ocllib.QuickSet<MethodRef> result = new Ocllib.QuickSet<MethodRef>(MethodRef.class);
+		com.crossecore.ocl.QuickSet<MethodRef> result = new com.crossecore.ocl.QuickSet<MethodRef>(MethodRef.class);
 		result.addAll(MethodRef.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<MethodRef> allInstances = new Ocllib.QuickSet<MethodRef>(MethodRef.class);
+	//public static com.crossecore.ocl.QuickSet<MethodRef> allInstances = new com.crossecore.ocl.QuickSet<MethodRef>(MethodRef.class);
 	
 	
 	AbstractMethodDeclaration getMethod();
@@ -23,6 +23,6 @@ public interface MethodRef
 	
 	TypeAccess getQualifier();
 	void setQualifier(TypeAccess value);
-	Ocllib.OrderedSet<MethodRefParameter> getParameters();
+	com.crossecore.ocl.OrderedSet<MethodRefParameter> getParameters();
 	
 }

@@ -20,10 +20,10 @@ extends ExpressionImpl implements TypeAccess
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, Java_PackageImpl.TYPE_USAGESINTYPEACCESS, Type.class, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, Java_PackageImpl.TYPE__USAGES_IN_TYPE_ACCESS, Type.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.TYPE_USAGESINTYPEACCESS, Type.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.TYPE__USAGES_IN_TYPE_ACCESS, Type.class, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ExpressionImpl implements TypeAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TYPEACCESS_TYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TYPE_ACCESS__TYPE , value, value));
 		}
 	}
 	private NamespaceAccess _qualifier;
@@ -46,10 +46,10 @@ extends ExpressionImpl implements TypeAccess
 		if (value != _qualifier) {
 			NotificationChain msgs = null;
 			if (_qualifier != null){
-				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPEACCESS_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPE_ACCESS__QUALIFIER, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPEACCESS_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPE_ACCESS__QUALIFIER, null, msgs);
 			}
 			msgs = basicSetQualifier(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends ExpressionImpl implements TypeAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TYPEACCESS_QUALIFIER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TYPE_ACCESS__QUALIFIER , value, value));
 		}
 	}
 
@@ -70,9 +70,9 @@ extends ExpressionImpl implements TypeAccess
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEACCESS_TYPE:
+			case Java_PackageImpl.TYPE_ACCESS__TYPE:
 				if (_type != null){
-					msgs = ((InternalEObject)_type).eInverseRemove(this, Java_PackageImpl.TYPEACCESS_TYPE, Type.class, msgs);
+					msgs = ((InternalEObject)_type).eInverseRemove(this, Java_PackageImpl.TYPE_ACCESS__TYPE, Type.class, msgs);
 				}
 				return basicSetType((Type)otherEnd, msgs);
 		}
@@ -82,17 +82,17 @@ extends ExpressionImpl implements TypeAccess
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEACCESS_TYPE:
+			case Java_PackageImpl.TYPE_ACCESS__TYPE:
 				return basicSetType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetQualifier(NamespaceAccess newobj, NotificationChain msgs) {
-		NamespaceAccess oldobj = _qualifier;
-		_qualifier = newobj;
+	public NotificationChain basicSetType(Type newobj, NotificationChain msgs) {
+		Type oldobj = _type;
+		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPEACCESS_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPE_ACCESS__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -102,11 +102,11 @@ extends ExpressionImpl implements TypeAccess
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetType(Type newobj, NotificationChain msgs) {
-		Type oldobj = _type;
-		_type = newobj;
+	public NotificationChain basicSetQualifier(NamespaceAccess newobj, NotificationChain msgs) {
+		NamespaceAccess oldobj = _qualifier;
+		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPEACCESS_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPE_ACCESS__QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -120,9 +120,9 @@ extends ExpressionImpl implements TypeAccess
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEACCESS_TYPE:
+			case Java_PackageImpl.TYPE_ACCESS__TYPE:
 				return getType();
-			case Java_PackageImpl.TYPEACCESS_QUALIFIER:
+			case Java_PackageImpl.TYPE_ACCESS__QUALIFIER:
 				return getQualifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -131,10 +131,10 @@ extends ExpressionImpl implements TypeAccess
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEACCESS_TYPE:
+			case Java_PackageImpl.TYPE_ACCESS__TYPE:
 				setType((Type) newValue);
 				return;
-			case Java_PackageImpl.TYPEACCESS_QUALIFIER:
+			case Java_PackageImpl.TYPE_ACCESS__QUALIFIER:
 				setQualifier((NamespaceAccess) newValue);
 				return;
 		}
@@ -144,9 +144,9 @@ extends ExpressionImpl implements TypeAccess
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEACCESS_TYPE:
+			case Java_PackageImpl.TYPE_ACCESS__TYPE:
 				return getType() != null; //single, volatile
-			case Java_PackageImpl.TYPEACCESS_QUALIFIER:
+			case Java_PackageImpl.TYPE_ACCESS__QUALIFIER:
 				return _qualifier != null; //single != null;
 		}
 		return super.eIsSet(featureID);

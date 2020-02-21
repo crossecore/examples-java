@@ -3,19 +3,19 @@ public interface CastExpression
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<CastExpression> allInstances_ = new Ocllib.QuickSet<CastExpression>(CastExpression.class);
+	public static com.crossecore.ocl.QuickSet<CastExpression> allInstances_ = new com.crossecore.ocl.QuickSet<CastExpression>(CastExpression.class);
 	
 		
-	public static Ocllib.QuickSet<CastExpression> allInstances(){
+	public static com.crossecore.ocl.QuickSet<CastExpression> allInstances(){
 		
-		Ocllib.QuickSet<CastExpression> result = new Ocllib.QuickSet<CastExpression>(CastExpression.class);
+		com.crossecore.ocl.QuickSet<CastExpression> result = new com.crossecore.ocl.QuickSet<CastExpression>(CastExpression.class);
 		result.addAll(CastExpression.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<CastExpression> allInstances = new Ocllib.QuickSet<CastExpression>(CastExpression.class);
+	//public static com.crossecore.ocl.QuickSet<CastExpression> allInstances = new com.crossecore.ocl.QuickSet<CastExpression>(CastExpression.class);
 	
 	
 	Expression getExpression();

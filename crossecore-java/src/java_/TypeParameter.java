@@ -3,20 +3,20 @@ public interface TypeParameter
  extends Type
 {
 	
-	public static Ocllib.QuickSet<TypeParameter> allInstances_ = new Ocllib.QuickSet<TypeParameter>(TypeParameter.class);
+	public static com.crossecore.ocl.QuickSet<TypeParameter> allInstances_ = new com.crossecore.ocl.QuickSet<TypeParameter>(TypeParameter.class);
 	
 		
-	public static Ocllib.QuickSet<TypeParameter> allInstances(){
+	public static com.crossecore.ocl.QuickSet<TypeParameter> allInstances(){
 		
-		Ocllib.QuickSet<TypeParameter> result = new Ocllib.QuickSet<TypeParameter>(TypeParameter.class);
+		com.crossecore.ocl.QuickSet<TypeParameter> result = new com.crossecore.ocl.QuickSet<TypeParameter>(TypeParameter.class);
 		result.addAll(TypeParameter.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<TypeParameter> allInstances = new Ocllib.QuickSet<TypeParameter>(TypeParameter.class);
+	//public static com.crossecore.ocl.QuickSet<TypeParameter> allInstances = new com.crossecore.ocl.QuickSet<TypeParameter>(TypeParameter.class);
 	
-	Ocllib.OrderedSet<TypeAccess> getBounds();
+	com.crossecore.ocl.OrderedSet<TypeAccess> getBounds();
 	
 }

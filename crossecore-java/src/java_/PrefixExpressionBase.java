@@ -19,7 +19,7 @@ extends ExpressionImpl implements PrefixExpression
 		PrefixExpressionKind oldValue = _operator;
 		_operator = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.PREFIXEXPRESSION_OPERATOR, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.PREFIX_EXPRESSION__OPERATOR, oldValue, value));
 		
 	}
 	
@@ -37,10 +37,10 @@ extends ExpressionImpl implements PrefixExpression
 		if (value != _operand) {
 			NotificationChain msgs = null;
 			if (_operand != null){
-				msgs = ((InternalEObject)_operand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PREFIXEXPRESSION_OPERAND, null, msgs);
+				msgs = ((InternalEObject)_operand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PREFIX_EXPRESSION__OPERAND, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PREFIXEXPRESSION_OPERAND, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PREFIX_EXPRESSION__OPERAND, null, msgs);
 			}
 			msgs = basicSetOperand(value, msgs);
 			if (msgs != null) {
@@ -48,7 +48,7 @@ extends ExpressionImpl implements PrefixExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.PREFIXEXPRESSION_OPERAND , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.PREFIX_EXPRESSION__OPERAND , value, value));
 		}
 	}
 
@@ -63,7 +63,7 @@ extends ExpressionImpl implements PrefixExpression
 		Expression oldobj = _operand;
 		_operand = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PREFIXEXPRESSION_OPERAND, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PREFIX_EXPRESSION__OPERAND, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -77,9 +77,9 @@ extends ExpressionImpl implements PrefixExpression
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.PREFIXEXPRESSION_OPERATOR:
+			case Java_PackageImpl.PREFIX_EXPRESSION__OPERATOR:
 				return getOperator();
-			case Java_PackageImpl.PREFIXEXPRESSION_OPERAND:
+			case Java_PackageImpl.PREFIX_EXPRESSION__OPERAND:
 				return getOperand();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -88,10 +88,10 @@ extends ExpressionImpl implements PrefixExpression
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.PREFIXEXPRESSION_OPERATOR:
+			case Java_PackageImpl.PREFIX_EXPRESSION__OPERATOR:
 				setOperator((PrefixExpressionKind) newValue);
 				return;
-			case Java_PackageImpl.PREFIXEXPRESSION_OPERAND:
+			case Java_PackageImpl.PREFIX_EXPRESSION__OPERAND:
 				setOperand((Expression) newValue);
 				return;
 		}
@@ -101,9 +101,9 @@ extends ExpressionImpl implements PrefixExpression
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.PREFIXEXPRESSION_OPERATOR:
+			case Java_PackageImpl.PREFIX_EXPRESSION__OPERATOR:
 				return OPERATOR_EDEFAULT == null ? _operator != null : !OPERATOR_EDEFAULT.equals(_operator);
-			case Java_PackageImpl.PREFIXEXPRESSION_OPERAND:
+			case Java_PackageImpl.PREFIX_EXPRESSION__OPERAND:
 				return _operand != null; //single != null;
 		}
 		return super.eIsSet(featureID);

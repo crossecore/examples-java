@@ -20,7 +20,7 @@ extends ASTNodeImpl implements MemberRef
 		NamedElement oldvalue = _member;
 		_member = value;
 		if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.MEMBERREF_MEMBER , oldvalue, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.MEMBER_REF__MEMBER , oldvalue, value));
 		}
 	}
 	private TypeAccess _qualifier;
@@ -35,10 +35,10 @@ extends ASTNodeImpl implements MemberRef
 		if (value != _qualifier) {
 			NotificationChain msgs = null;
 			if (_qualifier != null){
-				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MEMBERREF_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MEMBER_REF__QUALIFIER, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MEMBERREF_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MEMBER_REF__QUALIFIER, null, msgs);
 			}
 			msgs = basicSetQualifier(value, msgs);
 			if (msgs != null) {
@@ -46,7 +46,7 @@ extends ASTNodeImpl implements MemberRef
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.MEMBERREF_QUALIFIER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.MEMBER_REF__QUALIFIER , value, value));
 		}
 	}
 
@@ -61,7 +61,7 @@ extends ASTNodeImpl implements MemberRef
 		NamedElement oldobj = _member;
 		_member = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.MEMBERREF_MEMBER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.MEMBER_REF__MEMBER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -75,7 +75,7 @@ extends ASTNodeImpl implements MemberRef
 		TypeAccess oldobj = _qualifier;
 		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.MEMBERREF_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.MEMBER_REF__QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -89,9 +89,9 @@ extends ASTNodeImpl implements MemberRef
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.MEMBERREF_MEMBER:
+			case Java_PackageImpl.MEMBER_REF__MEMBER:
 				return getMember();
-			case Java_PackageImpl.MEMBERREF_QUALIFIER:
+			case Java_PackageImpl.MEMBER_REF__QUALIFIER:
 				return getQualifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -100,10 +100,10 @@ extends ASTNodeImpl implements MemberRef
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.MEMBERREF_MEMBER:
+			case Java_PackageImpl.MEMBER_REF__MEMBER:
 				setMember((NamedElement) newValue);
 				return;
-			case Java_PackageImpl.MEMBERREF_QUALIFIER:
+			case Java_PackageImpl.MEMBER_REF__QUALIFIER:
 				setQualifier((TypeAccess) newValue);
 				return;
 		}
@@ -113,9 +113,9 @@ extends ASTNodeImpl implements MemberRef
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.MEMBERREF_MEMBER:
+			case Java_PackageImpl.MEMBER_REF__MEMBER:
 				return getMember() != null; //single, volatile
-			case Java_PackageImpl.MEMBERREF_QUALIFIER:
+			case Java_PackageImpl.MEMBER_REF__QUALIFIER:
 				return _qualifier != null; //single != null;
 		}
 		return super.eIsSet(featureID);

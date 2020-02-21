@@ -20,7 +20,7 @@ extends ExpressionImpl implements UnresolvedItemAccess
 		UnresolvedItem oldvalue = _element;
 		_element = value;
 		if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.UNRESOLVEDITEMACCESS_ELEMENT , oldvalue, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__ELEMENT , oldvalue, value));
 		}
 	}
 	private ASTNode _qualifier;
@@ -35,10 +35,10 @@ extends ExpressionImpl implements UnresolvedItemAccess
 		if (value != _qualifier) {
 			NotificationChain msgs = null;
 			if (_qualifier != null){
-				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__QUALIFIER, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__QUALIFIER, null, msgs);
 			}
 			msgs = basicSetQualifier(value, msgs);
 			if (msgs != null) {
@@ -46,7 +46,7 @@ extends ExpressionImpl implements UnresolvedItemAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__QUALIFIER , value, value));
 		}
 	}
 
@@ -61,7 +61,7 @@ extends ExpressionImpl implements UnresolvedItemAccess
 		UnresolvedItem oldobj = _element;
 		_element = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.UNRESOLVEDITEMACCESS_ELEMENT, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__ELEMENT, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -75,7 +75,7 @@ extends ExpressionImpl implements UnresolvedItemAccess
 		ASTNode oldobj = _qualifier;
 		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -89,9 +89,9 @@ extends ExpressionImpl implements UnresolvedItemAccess
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.UNRESOLVEDITEMACCESS_ELEMENT:
+			case Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__ELEMENT:
 				return getElement();
-			case Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER:
+			case Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__QUALIFIER:
 				return getQualifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -100,10 +100,10 @@ extends ExpressionImpl implements UnresolvedItemAccess
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.UNRESOLVEDITEMACCESS_ELEMENT:
+			case Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__ELEMENT:
 				setElement((UnresolvedItem) newValue);
 				return;
-			case Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER:
+			case Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__QUALIFIER:
 				setQualifier((ASTNode) newValue);
 				return;
 		}
@@ -113,9 +113,9 @@ extends ExpressionImpl implements UnresolvedItemAccess
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.UNRESOLVEDITEMACCESS_ELEMENT:
+			case Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__ELEMENT:
 				return getElement() != null; //single, volatile
-			case Java_PackageImpl.UNRESOLVEDITEMACCESS_QUALIFIER:
+			case Java_PackageImpl.UNRESOLVED_ITEM_ACCESS__QUALIFIER:
 				return _qualifier != null; //single != null;
 		}
 		return super.eIsSet(featureID);

@@ -20,10 +20,10 @@ extends ASTNodeImpl implements AbstractVariablesContainer
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE, null, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE, null, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {
@@ -31,15 +31,15 @@ extends ASTNodeImpl implements AbstractVariablesContainer
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<VariableDeclarationFragment> _fragments;
+	private com.crossecore.ocl.OrderedSet<VariableDeclarationFragment> _fragments;
 	
-	public Ocllib.OrderedSet<VariableDeclarationFragment> getFragments()
+	public com.crossecore.ocl.OrderedSet<VariableDeclarationFragment> getFragments()
 	{
 		if(_fragments==null){
-			_fragments = new Ocllib.OrderedSet<VariableDeclarationFragment>(VariableDeclarationFragment.class, this, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS, Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER);
+			_fragments = new com.crossecore.ocl.OrderedSet<VariableDeclarationFragment>(VariableDeclarationFragment.class, this, Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS, Java_PackageImpl.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER);
 		}
 		return _fragments;
 	
@@ -54,7 +54,7 @@ extends ASTNodeImpl implements AbstractVariablesContainer
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS:
+			case Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS:
 				return getFragments().basicAdd((VariableDeclarationFragment)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -63,7 +63,7 @@ extends ASTNodeImpl implements AbstractVariablesContainer
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS:
+			case Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS:
 				return getFragments().basicRemove((VariableDeclarationFragment)otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -73,7 +73,7 @@ extends ASTNodeImpl implements AbstractVariablesContainer
 		TypeAccess oldobj = _type;
 		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -87,9 +87,9 @@ extends ASTNodeImpl implements AbstractVariablesContainer
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE:
+			case Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE:
 				return getType();
-			case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS:
+			case Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS:
 				return getFragments();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -98,10 +98,10 @@ extends ASTNodeImpl implements AbstractVariablesContainer
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE:
+			case Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE:
 				setType((TypeAccess) newValue);
 				return;
-			case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS:
+			case Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS:
 				getFragments().clear();
 				getFragments().addAll((java.util.Collection<? extends VariableDeclarationFragment>) newValue);
 				return;
@@ -112,9 +112,9 @@ extends ASTNodeImpl implements AbstractVariablesContainer
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE:
+			case Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE:
 				return _type != null; //single != null;
-			case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS:
+			case Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS:
 				return _fragments != null && !_fragments.isEmpty();
 		}
 		return super.eIsSet(featureID);

@@ -3,19 +3,19 @@ public interface EnhancedForStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<EnhancedForStatement> allInstances_ = new Ocllib.QuickSet<EnhancedForStatement>(EnhancedForStatement.class);
+	public static com.crossecore.ocl.QuickSet<EnhancedForStatement> allInstances_ = new com.crossecore.ocl.QuickSet<EnhancedForStatement>(EnhancedForStatement.class);
 	
 		
-	public static Ocllib.QuickSet<EnhancedForStatement> allInstances(){
+	public static com.crossecore.ocl.QuickSet<EnhancedForStatement> allInstances(){
 		
-		Ocllib.QuickSet<EnhancedForStatement> result = new Ocllib.QuickSet<EnhancedForStatement>(EnhancedForStatement.class);
+		com.crossecore.ocl.QuickSet<EnhancedForStatement> result = new com.crossecore.ocl.QuickSet<EnhancedForStatement>(EnhancedForStatement.class);
 		result.addAll(EnhancedForStatement.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<EnhancedForStatement> allInstances = new Ocllib.QuickSet<EnhancedForStatement>(EnhancedForStatement.class);
+	//public static com.crossecore.ocl.QuickSet<EnhancedForStatement> allInstances = new com.crossecore.ocl.QuickSet<EnhancedForStatement>(EnhancedForStatement.class);
 	
 	
 	Statement getBody();

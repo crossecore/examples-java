@@ -20,10 +20,10 @@ extends ExpressionImpl implements ConditionalExpression
 		if (value != _elseExpression) {
 			NotificationChain msgs = null;
 			if (_elseExpression != null){
-				msgs = ((InternalEObject)_elseExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_elseExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONAL_EXPRESSION__ELSE_EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONAL_EXPRESSION__ELSE_EXPRESSION, null, msgs);
 			}
 			msgs = basicSetElseExpression(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ExpressionImpl implements ConditionalExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CONDITIONAL_EXPRESSION__ELSE_EXPRESSION , value, value));
 		}
 	}
 	private Expression _expression;
@@ -46,10 +46,10 @@ extends ExpressionImpl implements ConditionalExpression
 		if (value != _expression) {
 			NotificationChain msgs = null;
 			if (_expression != null){
-				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONAL_EXPRESSION__EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONAL_EXPRESSION__EXPRESSION, null, msgs);
 			}
 			msgs = basicSetExpression(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends ExpressionImpl implements ConditionalExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CONDITIONAL_EXPRESSION__EXPRESSION , value, value));
 		}
 	}
 	private Expression _thenExpression;
@@ -72,10 +72,10 @@ extends ExpressionImpl implements ConditionalExpression
 		if (value != _thenExpression) {
 			NotificationChain msgs = null;
 			if (_thenExpression != null){
-				msgs = ((InternalEObject)_thenExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_thenExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONAL_EXPRESSION__THEN_EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CONDITIONAL_EXPRESSION__THEN_EXPRESSION, null, msgs);
 			}
 			msgs = basicSetThenExpression(value, msgs);
 			if (msgs != null) {
@@ -83,7 +83,7 @@ extends ExpressionImpl implements ConditionalExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CONDITIONAL_EXPRESSION__THEN_EXPRESSION , value, value));
 		}
 	}
 
@@ -98,7 +98,7 @@ extends ExpressionImpl implements ConditionalExpression
 		Expression oldobj = _thenExpression;
 		_thenExpression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONAL_EXPRESSION__THEN_EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -112,7 +112,7 @@ extends ExpressionImpl implements ConditionalExpression
 		Expression oldobj = _expression;
 		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONAL_EXPRESSION__EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -126,7 +126,7 @@ extends ExpressionImpl implements ConditionalExpression
 		Expression oldobj = _elseExpression;
 		_elseExpression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONDITIONAL_EXPRESSION__ELSE_EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -140,11 +140,11 @@ extends ExpressionImpl implements ConditionalExpression
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION:
+			case Java_PackageImpl.CONDITIONAL_EXPRESSION__ELSE_EXPRESSION:
 				return getElseExpression();
-			case Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION:
+			case Java_PackageImpl.CONDITIONAL_EXPRESSION__EXPRESSION:
 				return getExpression();
-			case Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION:
+			case Java_PackageImpl.CONDITIONAL_EXPRESSION__THEN_EXPRESSION:
 				return getThenExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -153,13 +153,13 @@ extends ExpressionImpl implements ConditionalExpression
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION:
+			case Java_PackageImpl.CONDITIONAL_EXPRESSION__ELSE_EXPRESSION:
 				setElseExpression((Expression) newValue);
 				return;
-			case Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION:
+			case Java_PackageImpl.CONDITIONAL_EXPRESSION__EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
-			case Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION:
+			case Java_PackageImpl.CONDITIONAL_EXPRESSION__THEN_EXPRESSION:
 				setThenExpression((Expression) newValue);
 				return;
 		}
@@ -169,11 +169,11 @@ extends ExpressionImpl implements ConditionalExpression
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.CONDITIONALEXPRESSION_ELSEEXPRESSION:
+			case Java_PackageImpl.CONDITIONAL_EXPRESSION__ELSE_EXPRESSION:
 				return _elseExpression != null; //single != null;
-			case Java_PackageImpl.CONDITIONALEXPRESSION_EXPRESSION:
+			case Java_PackageImpl.CONDITIONAL_EXPRESSION__EXPRESSION:
 				return _expression != null; //single != null;
-			case Java_PackageImpl.CONDITIONALEXPRESSION_THENEXPRESSION:
+			case Java_PackageImpl.CONDITIONAL_EXPRESSION__THEN_EXPRESSION:
 				return _thenExpression != null; //single != null;
 		}
 		return super.eIsSet(featureID);

@@ -20,10 +20,10 @@ extends BodyDeclarationImpl implements Initializer
 		if (value != _body) {
 			NotificationChain msgs = null;
 			if (_body != null){
-				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INITIALIZER_BODY, null, msgs);
+				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INITIALIZER__BODY, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INITIALIZER_BODY, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INITIALIZER__BODY, null, msgs);
 			}
 			msgs = basicSetBody(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends BodyDeclarationImpl implements Initializer
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INITIALIZER_BODY , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INITIALIZER__BODY , value, value));
 		}
 	}
 
@@ -46,7 +46,7 @@ extends BodyDeclarationImpl implements Initializer
 		Block oldobj = _body;
 		_body = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INITIALIZER_BODY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INITIALIZER__BODY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -60,7 +60,7 @@ extends BodyDeclarationImpl implements Initializer
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.INITIALIZER_BODY:
+			case Java_PackageImpl.INITIALIZER__BODY:
 				return getBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -69,7 +69,7 @@ extends BodyDeclarationImpl implements Initializer
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.INITIALIZER_BODY:
+			case Java_PackageImpl.INITIALIZER__BODY:
 				setBody((Block) newValue);
 				return;
 		}
@@ -79,7 +79,7 @@ extends BodyDeclarationImpl implements Initializer
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.INITIALIZER_BODY:
+			case Java_PackageImpl.INITIALIZER__BODY:
 				return _body != null; //single != null;
 		}
 		return super.eIsSet(featureID);

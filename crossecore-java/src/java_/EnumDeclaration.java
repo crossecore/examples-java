@@ -3,12 +3,12 @@ public interface EnumDeclaration
  extends AbstractTypeDeclaration
 {
 	
-	public static Ocllib.QuickSet<EnumDeclaration> allInstances_ = new Ocllib.QuickSet<EnumDeclaration>(EnumDeclaration.class);
+	public static com.crossecore.ocl.QuickSet<EnumDeclaration> allInstances_ = new com.crossecore.ocl.QuickSet<EnumDeclaration>(EnumDeclaration.class);
 	
 		
-	public static Ocllib.QuickSet<EnumDeclaration> allInstances(){
+	public static com.crossecore.ocl.QuickSet<EnumDeclaration> allInstances(){
 		
-		Ocllib.QuickSet<EnumDeclaration> result = new Ocllib.QuickSet<EnumDeclaration>(EnumDeclaration.class);
+		com.crossecore.ocl.QuickSet<EnumDeclaration> result = new com.crossecore.ocl.QuickSet<EnumDeclaration>(EnumDeclaration.class);
 		result.addAll(EnumDeclaration.allInstances_);
 		
 		result.addAll(UnresolvedEnumDeclaration.allInstances_);
@@ -16,8 +16,8 @@ public interface EnumDeclaration
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<EnumDeclaration> allInstances = new Ocllib.QuickSet<EnumDeclaration>(EnumDeclaration.class);
+	//public static com.crossecore.ocl.QuickSet<EnumDeclaration> allInstances = new com.crossecore.ocl.QuickSet<EnumDeclaration>(EnumDeclaration.class);
 	
-	Ocllib.OrderedSet<EnumConstantDeclaration> getEnumConstants();
+	com.crossecore.ocl.OrderedSet<EnumConstantDeclaration> getEnumConstants();
 	
 }

@@ -20,10 +20,10 @@ extends ExpressionImpl implements SingleVariableAccess
 		if (value != _variable) {
 			NotificationChain msgs = null;
 			if (_variable != null){
-				msgs = ((InternalEObject)_variable).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS, VariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)_variable).eInverseRemove(this, Java_PackageImpl.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS, VariableDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS, VariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS, VariableDeclaration.class, msgs);
 			}
 			msgs = basicSetVariable(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ExpressionImpl implements SingleVariableAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLE_VARIABLE_ACCESS__VARIABLE , value, value));
 		}
 	}
 	private Expression _qualifier;
@@ -46,10 +46,10 @@ extends ExpressionImpl implements SingleVariableAccess
 		if (value != _qualifier) {
 			NotificationChain msgs = null;
 			if (_qualifier != null){
-				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SINGLEVARIABLEACCESS_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SINGLE_VARIABLE_ACCESS__QUALIFIER, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SINGLEVARIABLEACCESS_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SINGLE_VARIABLE_ACCESS__QUALIFIER, null, msgs);
 			}
 			msgs = basicSetQualifier(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends ExpressionImpl implements SingleVariableAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLEVARIABLEACCESS_QUALIFIER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLE_VARIABLE_ACCESS__QUALIFIER , value, value));
 		}
 	}
 
@@ -70,9 +70,9 @@ extends ExpressionImpl implements SingleVariableAccess
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE:
+			case Java_PackageImpl.SINGLE_VARIABLE_ACCESS__VARIABLE:
 				if (_variable != null){
-					msgs = ((InternalEObject)_variable).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE, VariableDeclaration.class, msgs);
+					msgs = ((InternalEObject)_variable).eInverseRemove(this, Java_PackageImpl.SINGLE_VARIABLE_ACCESS__VARIABLE, VariableDeclaration.class, msgs);
 				}
 				return basicSetVariable((VariableDeclaration)otherEnd, msgs);
 		}
@@ -82,7 +82,7 @@ extends ExpressionImpl implements SingleVariableAccess
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE:
+			case Java_PackageImpl.SINGLE_VARIABLE_ACCESS__VARIABLE:
 				return basicSetVariable(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -92,7 +92,7 @@ extends ExpressionImpl implements SingleVariableAccess
 		VariableDeclaration oldobj = _variable;
 		_variable = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLE_VARIABLE_ACCESS__VARIABLE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -106,7 +106,7 @@ extends ExpressionImpl implements SingleVariableAccess
 		Expression oldobj = _qualifier;
 		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLEVARIABLEACCESS_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLE_VARIABLE_ACCESS__QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -120,9 +120,9 @@ extends ExpressionImpl implements SingleVariableAccess
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE:
+			case Java_PackageImpl.SINGLE_VARIABLE_ACCESS__VARIABLE:
 				return getVariable();
-			case Java_PackageImpl.SINGLEVARIABLEACCESS_QUALIFIER:
+			case Java_PackageImpl.SINGLE_VARIABLE_ACCESS__QUALIFIER:
 				return getQualifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -131,10 +131,10 @@ extends ExpressionImpl implements SingleVariableAccess
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE:
+			case Java_PackageImpl.SINGLE_VARIABLE_ACCESS__VARIABLE:
 				setVariable((VariableDeclaration) newValue);
 				return;
-			case Java_PackageImpl.SINGLEVARIABLEACCESS_QUALIFIER:
+			case Java_PackageImpl.SINGLE_VARIABLE_ACCESS__QUALIFIER:
 				setQualifier((Expression) newValue);
 				return;
 		}
@@ -144,9 +144,9 @@ extends ExpressionImpl implements SingleVariableAccess
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE:
+			case Java_PackageImpl.SINGLE_VARIABLE_ACCESS__VARIABLE:
 				return getVariable() != null; //single, volatile
-			case Java_PackageImpl.SINGLEVARIABLEACCESS_QUALIFIER:
+			case Java_PackageImpl.SINGLE_VARIABLE_ACCESS__QUALIFIER:
 				return _qualifier != null; //single != null;
 		}
 		return super.eIsSet(featureID);

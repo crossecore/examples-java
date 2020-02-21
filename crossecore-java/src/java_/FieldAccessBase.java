@@ -20,10 +20,10 @@ extends ExpressionImpl implements FieldAccess
 		if (value != _field) {
 			NotificationChain msgs = null;
 			if (_field != null){
-				msgs = ((InternalEObject)_field).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FIELDACCESS_FIELD, null, msgs);
+				msgs = ((InternalEObject)_field).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FIELD_ACCESS__FIELD, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FIELDACCESS_FIELD, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FIELD_ACCESS__FIELD, null, msgs);
 			}
 			msgs = basicSetField(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ExpressionImpl implements FieldAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.FIELDACCESS_FIELD , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.FIELD_ACCESS__FIELD , value, value));
 		}
 	}
 	private Expression _expression;
@@ -46,10 +46,10 @@ extends ExpressionImpl implements FieldAccess
 		if (value != _expression) {
 			NotificationChain msgs = null;
 			if (_expression != null){
-				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FIELDACCESS_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FIELD_ACCESS__EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FIELDACCESS_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FIELD_ACCESS__EXPRESSION, null, msgs);
 			}
 			msgs = basicSetExpression(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends ExpressionImpl implements FieldAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.FIELDACCESS_EXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.FIELD_ACCESS__EXPRESSION , value, value));
 		}
 	}
 
@@ -72,7 +72,7 @@ extends ExpressionImpl implements FieldAccess
 		SingleVariableAccess oldobj = _field;
 		_field = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.FIELDACCESS_FIELD, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.FIELD_ACCESS__FIELD, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -86,7 +86,7 @@ extends ExpressionImpl implements FieldAccess
 		Expression oldobj = _expression;
 		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.FIELDACCESS_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.FIELD_ACCESS__EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -100,9 +100,9 @@ extends ExpressionImpl implements FieldAccess
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.FIELDACCESS_FIELD:
+			case Java_PackageImpl.FIELD_ACCESS__FIELD:
 				return getField();
-			case Java_PackageImpl.FIELDACCESS_EXPRESSION:
+			case Java_PackageImpl.FIELD_ACCESS__EXPRESSION:
 				return getExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,10 +111,10 @@ extends ExpressionImpl implements FieldAccess
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.FIELDACCESS_FIELD:
+			case Java_PackageImpl.FIELD_ACCESS__FIELD:
 				setField((SingleVariableAccess) newValue);
 				return;
-			case Java_PackageImpl.FIELDACCESS_EXPRESSION:
+			case Java_PackageImpl.FIELD_ACCESS__EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
 		}
@@ -124,9 +124,9 @@ extends ExpressionImpl implements FieldAccess
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.FIELDACCESS_FIELD:
+			case Java_PackageImpl.FIELD_ACCESS__FIELD:
 				return _field != null; //single != null;
-			case Java_PackageImpl.FIELDACCESS_EXPRESSION:
+			case Java_PackageImpl.FIELD_ACCESS__EXPRESSION:
 				return _expression != null; //single != null;
 		}
 		return super.eIsSet(featureID);

@@ -8,12 +8,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class TypeDeclarationBase 
 extends AbstractTypeDeclarationImpl implements TypeDeclaration
 {
-	private Ocllib.OrderedSet<TypeParameter> _typeParameters;
+	private com.crossecore.ocl.OrderedSet<TypeParameter> _typeParameters;
 	
-	public Ocllib.OrderedSet<TypeParameter> getTypeParameters()
+	public com.crossecore.ocl.OrderedSet<TypeParameter> getTypeParameters()
 	{
 		if(_typeParameters==null){
-			_typeParameters = new Ocllib.OrderedSet<TypeParameter>(TypeParameter.class, this, Java_PackageImpl.TYPEDECLARATION_TYPEPARAMETERS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPEDECLARATION_TYPEPARAMETERS);
+			_typeParameters = new com.crossecore.ocl.OrderedSet<TypeParameter>(TypeParameter.class, this, Java_PackageImpl.TYPE_DECLARATION__TYPE_PARAMETERS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPE_DECLARATION__TYPE_PARAMETERS);
 		}
 		return _typeParameters;
 	
@@ -30,7 +30,7 @@ extends AbstractTypeDeclarationImpl implements TypeDeclaration
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEDECLARATION_TYPEPARAMETERS:
+			case Java_PackageImpl.TYPE_DECLARATION__TYPE_PARAMETERS:
 				return getTypeParameters();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -39,7 +39,7 @@ extends AbstractTypeDeclarationImpl implements TypeDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEDECLARATION_TYPEPARAMETERS:
+			case Java_PackageImpl.TYPE_DECLARATION__TYPE_PARAMETERS:
 				getTypeParameters().clear();
 				getTypeParameters().addAll((java.util.Collection<? extends TypeParameter>) newValue);
 				return;
@@ -50,7 +50,7 @@ extends AbstractTypeDeclarationImpl implements TypeDeclaration
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEDECLARATION_TYPEPARAMETERS:
+			case Java_PackageImpl.TYPE_DECLARATION__TYPE_PARAMETERS:
 				return _typeParameters != null && !_typeParameters.isEmpty();
 		}
 		return super.eIsSet(featureID);

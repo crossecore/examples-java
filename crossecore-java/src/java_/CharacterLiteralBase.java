@@ -19,7 +19,7 @@ extends ExpressionImpl implements CharacterLiteral
 		java.lang.String oldValue = _escapedValue;
 		_escapedValue = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.CHARACTERLITERAL_ESCAPEDVALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.CHARACTER_LITERAL__ESCAPED_VALUE, oldValue, value));
 		
 	}
 	
@@ -37,7 +37,7 @@ extends ExpressionImpl implements CharacterLiteral
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.CHARACTERLITERAL_ESCAPEDVALUE:
+			case Java_PackageImpl.CHARACTER_LITERAL__ESCAPED_VALUE:
 				return getEscapedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -46,7 +46,7 @@ extends ExpressionImpl implements CharacterLiteral
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.CHARACTERLITERAL_ESCAPEDVALUE:
+			case Java_PackageImpl.CHARACTER_LITERAL__ESCAPED_VALUE:
 				setEscapedValue((java.lang.String) newValue);
 				return;
 		}
@@ -56,7 +56,7 @@ extends ExpressionImpl implements CharacterLiteral
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.CHARACTERLITERAL_ESCAPEDVALUE:
+			case Java_PackageImpl.CHARACTER_LITERAL__ESCAPED_VALUE:
 				return ESCAPEDVALUE_EDEFAULT == null ? _escapedValue != null : !ESCAPEDVALUE_EDEFAULT.equals(_escapedValue);
 		}
 		return super.eIsSet(featureID);

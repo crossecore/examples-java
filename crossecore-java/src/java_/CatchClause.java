@@ -3,19 +3,19 @@ public interface CatchClause
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<CatchClause> allInstances_ = new Ocllib.QuickSet<CatchClause>(CatchClause.class);
+	public static com.crossecore.ocl.QuickSet<CatchClause> allInstances_ = new com.crossecore.ocl.QuickSet<CatchClause>(CatchClause.class);
 	
 		
-	public static Ocllib.QuickSet<CatchClause> allInstances(){
+	public static com.crossecore.ocl.QuickSet<CatchClause> allInstances(){
 		
-		Ocllib.QuickSet<CatchClause> result = new Ocllib.QuickSet<CatchClause>(CatchClause.class);
+		com.crossecore.ocl.QuickSet<CatchClause> result = new com.crossecore.ocl.QuickSet<CatchClause>(CatchClause.class);
 		result.addAll(CatchClause.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<CatchClause> allInstances = new Ocllib.QuickSet<CatchClause>(CatchClause.class);
+	//public static com.crossecore.ocl.QuickSet<CatchClause> allInstances = new com.crossecore.ocl.QuickSet<CatchClause>(CatchClause.class);
 	
 	
 	SingleVariableDeclaration getException();

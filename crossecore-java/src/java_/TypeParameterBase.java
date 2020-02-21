@@ -8,12 +8,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class TypeParameterBase 
 extends TypeImpl implements TypeParameter
 {
-	private Ocllib.OrderedSet<TypeAccess> _bounds;
+	private com.crossecore.ocl.OrderedSet<TypeAccess> _bounds;
 	
-	public Ocllib.OrderedSet<TypeAccess> getBounds()
+	public com.crossecore.ocl.OrderedSet<TypeAccess> getBounds()
 	{
 		if(_bounds==null){
-			_bounds = new Ocllib.OrderedSet<TypeAccess>(TypeAccess.class, this, Java_PackageImpl.TYPEPARAMETER_BOUNDS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPEPARAMETER_BOUNDS);
+			_bounds = new com.crossecore.ocl.OrderedSet<TypeAccess>(TypeAccess.class, this, Java_PackageImpl.TYPE_PARAMETER__BOUNDS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPE_PARAMETER__BOUNDS);
 		}
 		return _bounds;
 	
@@ -30,7 +30,7 @@ extends TypeImpl implements TypeParameter
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEPARAMETER_BOUNDS:
+			case Java_PackageImpl.TYPE_PARAMETER__BOUNDS:
 				return getBounds();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -39,7 +39,7 @@ extends TypeImpl implements TypeParameter
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEPARAMETER_BOUNDS:
+			case Java_PackageImpl.TYPE_PARAMETER__BOUNDS:
 				getBounds().clear();
 				getBounds().addAll((java.util.Collection<? extends TypeAccess>) newValue);
 				return;
@@ -50,7 +50,7 @@ extends TypeImpl implements TypeParameter
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEPARAMETER_BOUNDS:
+			case Java_PackageImpl.TYPE_PARAMETER__BOUNDS:
 				return _bounds != null && !_bounds.isEmpty();
 		}
 		return super.eIsSet(featureID);

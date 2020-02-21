@@ -3,19 +3,19 @@ public interface TypeLiteral
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<TypeLiteral> allInstances_ = new Ocllib.QuickSet<TypeLiteral>(TypeLiteral.class);
+	public static com.crossecore.ocl.QuickSet<TypeLiteral> allInstances_ = new com.crossecore.ocl.QuickSet<TypeLiteral>(TypeLiteral.class);
 	
 		
-	public static Ocllib.QuickSet<TypeLiteral> allInstances(){
+	public static com.crossecore.ocl.QuickSet<TypeLiteral> allInstances(){
 		
-		Ocllib.QuickSet<TypeLiteral> result = new Ocllib.QuickSet<TypeLiteral>(TypeLiteral.class);
+		com.crossecore.ocl.QuickSet<TypeLiteral> result = new com.crossecore.ocl.QuickSet<TypeLiteral>(TypeLiteral.class);
 		result.addAll(TypeLiteral.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<TypeLiteral> allInstances = new Ocllib.QuickSet<TypeLiteral>(TypeLiteral.class);
+	//public static com.crossecore.ocl.QuickSet<TypeLiteral> allInstances = new com.crossecore.ocl.QuickSet<TypeLiteral>(TypeLiteral.class);
 	
 	
 	TypeAccess getType();

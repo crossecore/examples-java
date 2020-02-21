@@ -3,12 +3,12 @@ public interface SingleVariableDeclaration
  extends VariableDeclaration
 {
 	
-	public static Ocllib.QuickSet<SingleVariableDeclaration> allInstances_ = new Ocllib.QuickSet<SingleVariableDeclaration>(SingleVariableDeclaration.class);
+	public static com.crossecore.ocl.QuickSet<SingleVariableDeclaration> allInstances_ = new com.crossecore.ocl.QuickSet<SingleVariableDeclaration>(SingleVariableDeclaration.class);
 	
 		
-	public static Ocllib.QuickSet<SingleVariableDeclaration> allInstances(){
+	public static com.crossecore.ocl.QuickSet<SingleVariableDeclaration> allInstances(){
 		
-		Ocllib.QuickSet<SingleVariableDeclaration> result = new Ocllib.QuickSet<SingleVariableDeclaration>(SingleVariableDeclaration.class);
+		com.crossecore.ocl.QuickSet<SingleVariableDeclaration> result = new com.crossecore.ocl.QuickSet<SingleVariableDeclaration>(SingleVariableDeclaration.class);
 		result.addAll(SingleVariableDeclaration.allInstances_);
 		
 		result.addAll(UnresolvedSingleVariableDeclaration.allInstances_);
@@ -16,7 +16,7 @@ public interface SingleVariableDeclaration
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<SingleVariableDeclaration> allInstances = new Ocllib.QuickSet<SingleVariableDeclaration>(SingleVariableDeclaration.class);
+	//public static com.crossecore.ocl.QuickSet<SingleVariableDeclaration> allInstances = new com.crossecore.ocl.QuickSet<SingleVariableDeclaration>(SingleVariableDeclaration.class);
 	
 	
 	Modifier getModifier();
@@ -27,7 +27,7 @@ public interface SingleVariableDeclaration
 	
 	TypeAccess getType();
 	void setType(TypeAccess value);
-	Ocllib.OrderedSet<Annotation> getAnnotations();
+	com.crossecore.ocl.OrderedSet<Annotation> getAnnotations();
 	
 	AbstractMethodDeclaration getMethodDeclaration();
 	void setMethodDeclaration(AbstractMethodDeclaration value);

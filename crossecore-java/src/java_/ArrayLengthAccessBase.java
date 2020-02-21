@@ -20,10 +20,10 @@ extends ExpressionImpl implements ArrayLengthAccess
 		if (value != _array) {
 			NotificationChain msgs = null;
 			if (_array != null){
-				msgs = ((InternalEObject)_array).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYLENGTHACCESS_ARRAY, null, msgs);
+				msgs = ((InternalEObject)_array).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_LENGTH_ACCESS__ARRAY, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYLENGTHACCESS_ARRAY, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_LENGTH_ACCESS__ARRAY, null, msgs);
 			}
 			msgs = basicSetArray(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ExpressionImpl implements ArrayLengthAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAYLENGTHACCESS_ARRAY , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAY_LENGTH_ACCESS__ARRAY , value, value));
 		}
 	}
 
@@ -46,7 +46,7 @@ extends ExpressionImpl implements ArrayLengthAccess
 		Expression oldobj = _array;
 		_array = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYLENGTHACCESS_ARRAY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAY_LENGTH_ACCESS__ARRAY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -60,7 +60,7 @@ extends ExpressionImpl implements ArrayLengthAccess
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYLENGTHACCESS_ARRAY:
+			case Java_PackageImpl.ARRAY_LENGTH_ACCESS__ARRAY:
 				return getArray();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -69,7 +69,7 @@ extends ExpressionImpl implements ArrayLengthAccess
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYLENGTHACCESS_ARRAY:
+			case Java_PackageImpl.ARRAY_LENGTH_ACCESS__ARRAY:
 				setArray((Expression) newValue);
 				return;
 		}
@@ -79,7 +79,7 @@ extends ExpressionImpl implements ArrayLengthAccess
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYLENGTHACCESS_ARRAY:
+			case Java_PackageImpl.ARRAY_LENGTH_ACCESS__ARRAY:
 				return _array != null; //single != null;
 		}
 		return super.eIsSet(featureID);

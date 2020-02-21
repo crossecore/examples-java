@@ -3,19 +3,19 @@ public interface EmptyStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<EmptyStatement> allInstances_ = new Ocllib.QuickSet<EmptyStatement>(EmptyStatement.class);
+	public static com.crossecore.ocl.QuickSet<EmptyStatement> allInstances_ = new com.crossecore.ocl.QuickSet<EmptyStatement>(EmptyStatement.class);
 	
 		
-	public static Ocllib.QuickSet<EmptyStatement> allInstances(){
+	public static com.crossecore.ocl.QuickSet<EmptyStatement> allInstances(){
 		
-		Ocllib.QuickSet<EmptyStatement> result = new Ocllib.QuickSet<EmptyStatement>(EmptyStatement.class);
+		com.crossecore.ocl.QuickSet<EmptyStatement> result = new com.crossecore.ocl.QuickSet<EmptyStatement>(EmptyStatement.class);
 		result.addAll(EmptyStatement.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<EmptyStatement> allInstances = new Ocllib.QuickSet<EmptyStatement>(EmptyStatement.class);
+	//public static com.crossecore.ocl.QuickSet<EmptyStatement> allInstances = new com.crossecore.ocl.QuickSet<EmptyStatement>(EmptyStatement.class);
 	
 	
 }

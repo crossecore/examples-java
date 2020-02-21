@@ -3,19 +3,19 @@ public interface SuperMethodInvocation
  extends AbstractTypeQualifiedExpression,AbstractMethodInvocation
 {
 	
-	public static Ocllib.QuickSet<SuperMethodInvocation> allInstances_ = new Ocllib.QuickSet<SuperMethodInvocation>(SuperMethodInvocation.class);
+	public static com.crossecore.ocl.QuickSet<SuperMethodInvocation> allInstances_ = new com.crossecore.ocl.QuickSet<SuperMethodInvocation>(SuperMethodInvocation.class);
 	
 		
-	public static Ocllib.QuickSet<SuperMethodInvocation> allInstances(){
+	public static com.crossecore.ocl.QuickSet<SuperMethodInvocation> allInstances(){
 		
-		Ocllib.QuickSet<SuperMethodInvocation> result = new Ocllib.QuickSet<SuperMethodInvocation>(SuperMethodInvocation.class);
+		com.crossecore.ocl.QuickSet<SuperMethodInvocation> result = new com.crossecore.ocl.QuickSet<SuperMethodInvocation>(SuperMethodInvocation.class);
 		result.addAll(SuperMethodInvocation.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<SuperMethodInvocation> allInstances = new Ocllib.QuickSet<SuperMethodInvocation>(SuperMethodInvocation.class);
+	//public static com.crossecore.ocl.QuickSet<SuperMethodInvocation> allInstances = new com.crossecore.ocl.QuickSet<SuperMethodInvocation>(SuperMethodInvocation.class);
 	
 	
 }

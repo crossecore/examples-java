@@ -20,10 +20,10 @@ extends ExpressionImpl implements TypeLiteral
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPELITERAL_TYPE, null, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPE_LITERAL__TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPELITERAL_TYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPE_LITERAL__TYPE, null, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ExpressionImpl implements TypeLiteral
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TYPELITERAL_TYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TYPE_LITERAL__TYPE , value, value));
 		}
 	}
 
@@ -46,7 +46,7 @@ extends ExpressionImpl implements TypeLiteral
 		TypeAccess oldobj = _type;
 		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPELITERAL_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPE_LITERAL__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -60,7 +60,7 @@ extends ExpressionImpl implements TypeLiteral
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPELITERAL_TYPE:
+			case Java_PackageImpl.TYPE_LITERAL__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -69,7 +69,7 @@ extends ExpressionImpl implements TypeLiteral
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPELITERAL_TYPE:
+			case Java_PackageImpl.TYPE_LITERAL__TYPE:
 				setType((TypeAccess) newValue);
 				return;
 		}
@@ -79,7 +79,7 @@ extends ExpressionImpl implements TypeLiteral
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPELITERAL_TYPE:
+			case Java_PackageImpl.TYPE_LITERAL__TYPE:
 				return _type != null; //single != null;
 		}
 		return super.eIsSet(featureID);

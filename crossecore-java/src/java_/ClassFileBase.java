@@ -19,7 +19,7 @@ extends NamedElementImpl implements ClassFile
 		java.lang.String oldValue = _originalFilePath;
 		_originalFilePath = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.CLASSFILE_ORIGINALFILEPATH, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.CLASS_FILE__ORIGINAL_FILE_PATH, oldValue, value));
 		
 	}
 	
@@ -37,7 +37,7 @@ extends NamedElementImpl implements ClassFile
 		AbstractTypeDeclaration oldvalue = _type;
 		_type = value;
 		if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASSFILE_TYPE , oldvalue, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASS_FILE__TYPE , oldvalue, value));
 		}
 	}
 	private CompilationUnit _attachedSource;
@@ -52,7 +52,7 @@ extends NamedElementImpl implements ClassFile
 		CompilationUnit oldvalue = _attachedSource;
 		_attachedSource = value;
 		if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASSFILE_ATTACHEDSOURCE , oldvalue, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASS_FILE__ATTACHED_SOURCE , oldvalue, value));
 		}
 	}
 	private Package _package;
@@ -67,7 +67,7 @@ extends NamedElementImpl implements ClassFile
 		Package oldvalue = _package;
 		_package = value;
 		if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASSFILE_PACKAGE , oldvalue, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASS_FILE__PACKAGE , oldvalue, value));
 		}
 	}
 
@@ -82,7 +82,7 @@ extends NamedElementImpl implements ClassFile
 		Package oldobj = _package;
 		_package = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSFILE_PACKAGE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASS_FILE__PACKAGE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -96,7 +96,7 @@ extends NamedElementImpl implements ClassFile
 		AbstractTypeDeclaration oldobj = _type;
 		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSFILE_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASS_FILE__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -110,7 +110,7 @@ extends NamedElementImpl implements ClassFile
 		CompilationUnit oldobj = _attachedSource;
 		_attachedSource = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSFILE_ATTACHEDSOURCE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASS_FILE__ATTACHED_SOURCE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -124,13 +124,13 @@ extends NamedElementImpl implements ClassFile
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.CLASSFILE_ORIGINALFILEPATH:
+			case Java_PackageImpl.CLASS_FILE__ORIGINAL_FILE_PATH:
 				return getOriginalFilePath();
-			case Java_PackageImpl.CLASSFILE_TYPE:
+			case Java_PackageImpl.CLASS_FILE__TYPE:
 				return getType();
-			case Java_PackageImpl.CLASSFILE_ATTACHEDSOURCE:
+			case Java_PackageImpl.CLASS_FILE__ATTACHED_SOURCE:
 				return getAttachedSource();
-			case Java_PackageImpl.CLASSFILE_PACKAGE:
+			case Java_PackageImpl.CLASS_FILE__PACKAGE:
 				return getPackage();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -139,16 +139,16 @@ extends NamedElementImpl implements ClassFile
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.CLASSFILE_ORIGINALFILEPATH:
+			case Java_PackageImpl.CLASS_FILE__ORIGINAL_FILE_PATH:
 				setOriginalFilePath((java.lang.String) newValue);
 				return;
-			case Java_PackageImpl.CLASSFILE_TYPE:
+			case Java_PackageImpl.CLASS_FILE__TYPE:
 				setType((AbstractTypeDeclaration) newValue);
 				return;
-			case Java_PackageImpl.CLASSFILE_ATTACHEDSOURCE:
+			case Java_PackageImpl.CLASS_FILE__ATTACHED_SOURCE:
 				setAttachedSource((CompilationUnit) newValue);
 				return;
-			case Java_PackageImpl.CLASSFILE_PACKAGE:
+			case Java_PackageImpl.CLASS_FILE__PACKAGE:
 				setPackage((Package) newValue);
 				return;
 		}
@@ -158,13 +158,13 @@ extends NamedElementImpl implements ClassFile
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.CLASSFILE_ORIGINALFILEPATH:
+			case Java_PackageImpl.CLASS_FILE__ORIGINAL_FILE_PATH:
 				return ORIGINALFILEPATH_EDEFAULT == null ? _originalFilePath != null : !ORIGINALFILEPATH_EDEFAULT.equals(_originalFilePath);
-			case Java_PackageImpl.CLASSFILE_TYPE:
+			case Java_PackageImpl.CLASS_FILE__TYPE:
 				return getType() != null; //single, volatile
-			case Java_PackageImpl.CLASSFILE_ATTACHEDSOURCE:
+			case Java_PackageImpl.CLASS_FILE__ATTACHED_SOURCE:
 				return getAttachedSource() != null; //single, volatile
-			case Java_PackageImpl.CLASSFILE_PACKAGE:
+			case Java_PackageImpl.CLASS_FILE__PACKAGE:
 				return getPackage() != null; //single, volatile
 		}
 		return super.eIsSet(featureID);

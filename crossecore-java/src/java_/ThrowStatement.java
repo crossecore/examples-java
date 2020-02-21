@@ -3,19 +3,19 @@ public interface ThrowStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<ThrowStatement> allInstances_ = new Ocllib.QuickSet<ThrowStatement>(ThrowStatement.class);
+	public static com.crossecore.ocl.QuickSet<ThrowStatement> allInstances_ = new com.crossecore.ocl.QuickSet<ThrowStatement>(ThrowStatement.class);
 	
 		
-	public static Ocllib.QuickSet<ThrowStatement> allInstances(){
+	public static com.crossecore.ocl.QuickSet<ThrowStatement> allInstances(){
 		
-		Ocllib.QuickSet<ThrowStatement> result = new Ocllib.QuickSet<ThrowStatement>(ThrowStatement.class);
+		com.crossecore.ocl.QuickSet<ThrowStatement> result = new com.crossecore.ocl.QuickSet<ThrowStatement>(ThrowStatement.class);
 		result.addAll(ThrowStatement.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<ThrowStatement> allInstances = new Ocllib.QuickSet<ThrowStatement>(ThrowStatement.class);
+	//public static com.crossecore.ocl.QuickSet<ThrowStatement> allInstances = new com.crossecore.ocl.QuickSet<ThrowStatement>(ThrowStatement.class);
 	
 	
 	Expression getExpression();

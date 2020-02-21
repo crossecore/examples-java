@@ -20,10 +20,10 @@ extends TypeDeclarationImpl implements ClassDeclaration
 		if (value != _superClass) {
 			NotificationChain msgs = null;
 			if (_superClass != null){
-				msgs = ((InternalEObject)_superClass).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASSDECLARATION_SUPERCLASS, null, msgs);
+				msgs = ((InternalEObject)_superClass).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASS_DECLARATION__SUPER_CLASS, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASSDECLARATION_SUPERCLASS, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASS_DECLARATION__SUPER_CLASS, null, msgs);
 			}
 			msgs = basicSetSuperClass(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends TypeDeclarationImpl implements ClassDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASSDECLARATION_SUPERCLASS , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASS_DECLARATION__SUPER_CLASS , value, value));
 		}
 	}
 
@@ -46,7 +46,7 @@ extends TypeDeclarationImpl implements ClassDeclaration
 		TypeAccess oldobj = _superClass;
 		_superClass = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSDECLARATION_SUPERCLASS, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASS_DECLARATION__SUPER_CLASS, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -60,7 +60,7 @@ extends TypeDeclarationImpl implements ClassDeclaration
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.CLASSDECLARATION_SUPERCLASS:
+			case Java_PackageImpl.CLASS_DECLARATION__SUPER_CLASS:
 				return getSuperClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -69,7 +69,7 @@ extends TypeDeclarationImpl implements ClassDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.CLASSDECLARATION_SUPERCLASS:
+			case Java_PackageImpl.CLASS_DECLARATION__SUPER_CLASS:
 				setSuperClass((TypeAccess) newValue);
 				return;
 		}
@@ -79,7 +79,7 @@ extends TypeDeclarationImpl implements ClassDeclaration
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.CLASSDECLARATION_SUPERCLASS:
+			case Java_PackageImpl.CLASS_DECLARATION__SUPER_CLASS:
 				return _superClass != null; //single != null;
 		}
 		return super.eIsSet(featureID);

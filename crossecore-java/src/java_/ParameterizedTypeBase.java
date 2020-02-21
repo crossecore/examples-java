@@ -20,10 +20,10 @@ extends TypeImpl implements ParameterizedType
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PARAMETERIZEDTYPE_TYPE, null, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PARAMETERIZED_TYPE__TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PARAMETERIZEDTYPE_TYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PARAMETERIZED_TYPE__TYPE, null, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {
@@ -31,15 +31,15 @@ extends TypeImpl implements ParameterizedType
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.PARAMETERIZEDTYPE_TYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.PARAMETERIZED_TYPE__TYPE , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<TypeAccess> _typeArguments;
+	private com.crossecore.ocl.OrderedSet<TypeAccess> _typeArguments;
 	
-	public Ocllib.OrderedSet<TypeAccess> getTypeArguments()
+	public com.crossecore.ocl.OrderedSet<TypeAccess> getTypeArguments()
 	{
 		if(_typeArguments==null){
-			_typeArguments = new Ocllib.OrderedSet<TypeAccess>(TypeAccess.class, this, Java_PackageImpl.PARAMETERIZEDTYPE_TYPEARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PARAMETERIZEDTYPE_TYPEARGUMENTS);
+			_typeArguments = new com.crossecore.ocl.OrderedSet<TypeAccess>(TypeAccess.class, this, Java_PackageImpl.PARAMETERIZED_TYPE__TYPE_ARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PARAMETERIZED_TYPE__TYPE_ARGUMENTS);
 		}
 		return _typeArguments;
 	
@@ -56,7 +56,7 @@ extends TypeImpl implements ParameterizedType
 		TypeAccess oldobj = _type;
 		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PARAMETERIZEDTYPE_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PARAMETERIZED_TYPE__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -70,9 +70,9 @@ extends TypeImpl implements ParameterizedType
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.PARAMETERIZEDTYPE_TYPE:
+			case Java_PackageImpl.PARAMETERIZED_TYPE__TYPE:
 				return getType();
-			case Java_PackageImpl.PARAMETERIZEDTYPE_TYPEARGUMENTS:
+			case Java_PackageImpl.PARAMETERIZED_TYPE__TYPE_ARGUMENTS:
 				return getTypeArguments();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -81,10 +81,10 @@ extends TypeImpl implements ParameterizedType
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.PARAMETERIZEDTYPE_TYPE:
+			case Java_PackageImpl.PARAMETERIZED_TYPE__TYPE:
 				setType((TypeAccess) newValue);
 				return;
-			case Java_PackageImpl.PARAMETERIZEDTYPE_TYPEARGUMENTS:
+			case Java_PackageImpl.PARAMETERIZED_TYPE__TYPE_ARGUMENTS:
 				getTypeArguments().clear();
 				getTypeArguments().addAll((java.util.Collection<? extends TypeAccess>) newValue);
 				return;
@@ -95,9 +95,9 @@ extends TypeImpl implements ParameterizedType
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.PARAMETERIZEDTYPE_TYPE:
+			case Java_PackageImpl.PARAMETERIZED_TYPE__TYPE:
 				return _type != null; //single != null;
-			case Java_PackageImpl.PARAMETERIZEDTYPE_TYPEARGUMENTS:
+			case Java_PackageImpl.PARAMETERIZED_TYPE__TYPE_ARGUMENTS:
 				return _typeArguments != null && !_typeArguments.isEmpty();
 		}
 		return super.eIsSet(featureID);

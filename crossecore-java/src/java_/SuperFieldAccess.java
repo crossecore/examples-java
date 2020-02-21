@@ -3,19 +3,19 @@ public interface SuperFieldAccess
  extends AbstractTypeQualifiedExpression
 {
 	
-	public static Ocllib.QuickSet<SuperFieldAccess> allInstances_ = new Ocllib.QuickSet<SuperFieldAccess>(SuperFieldAccess.class);
+	public static com.crossecore.ocl.QuickSet<SuperFieldAccess> allInstances_ = new com.crossecore.ocl.QuickSet<SuperFieldAccess>(SuperFieldAccess.class);
 	
 		
-	public static Ocllib.QuickSet<SuperFieldAccess> allInstances(){
+	public static com.crossecore.ocl.QuickSet<SuperFieldAccess> allInstances(){
 		
-		Ocllib.QuickSet<SuperFieldAccess> result = new Ocllib.QuickSet<SuperFieldAccess>(SuperFieldAccess.class);
+		com.crossecore.ocl.QuickSet<SuperFieldAccess> result = new com.crossecore.ocl.QuickSet<SuperFieldAccess>(SuperFieldAccess.class);
 		result.addAll(SuperFieldAccess.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<SuperFieldAccess> allInstances = new Ocllib.QuickSet<SuperFieldAccess>(SuperFieldAccess.class);
+	//public static com.crossecore.ocl.QuickSet<SuperFieldAccess> allInstances = new com.crossecore.ocl.QuickSet<SuperFieldAccess>(SuperFieldAccess.class);
 	
 	
 	SingleVariableAccess getField();

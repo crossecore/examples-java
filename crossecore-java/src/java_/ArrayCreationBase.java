@@ -8,12 +8,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ArrayCreationBase 
 extends ExpressionImpl implements ArrayCreation
 {
-	private Ocllib.OrderedSet<Expression> _dimensions;
+	private com.crossecore.ocl.OrderedSet<Expression> _dimensions;
 	
-	public Ocllib.OrderedSet<Expression> getDimensions()
+	public com.crossecore.ocl.OrderedSet<Expression> getDimensions()
 	{
 		if(_dimensions==null){
-			_dimensions = new Ocllib.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.ARRAYCREATION_DIMENSIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYCREATION_DIMENSIONS);
+			_dimensions = new com.crossecore.ocl.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.ARRAY_CREATION__DIMENSIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_CREATION__DIMENSIONS);
 		}
 		return _dimensions;
 	
@@ -30,10 +30,10 @@ extends ExpressionImpl implements ArrayCreation
 		if (value != _initializer) {
 			NotificationChain msgs = null;
 			if (_initializer != null){
-				msgs = ((InternalEObject)_initializer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYCREATION_INITIALIZER, null, msgs);
+				msgs = ((InternalEObject)_initializer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_CREATION__INITIALIZER, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYCREATION_INITIALIZER, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_CREATION__INITIALIZER, null, msgs);
 			}
 			msgs = basicSetInitializer(value, msgs);
 			if (msgs != null) {
@@ -41,7 +41,7 @@ extends ExpressionImpl implements ArrayCreation
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAYCREATION_INITIALIZER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAY_CREATION__INITIALIZER , value, value));
 		}
 	}
 	private TypeAccess _type;
@@ -56,10 +56,10 @@ extends ExpressionImpl implements ArrayCreation
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYCREATION_TYPE, null, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_CREATION__TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYCREATION_TYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_CREATION__TYPE, null, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {
@@ -67,7 +67,7 @@ extends ExpressionImpl implements ArrayCreation
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAYCREATION_TYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAY_CREATION__TYPE , value, value));
 		}
 	}
 
@@ -78,11 +78,11 @@ extends ExpressionImpl implements ArrayCreation
 	}
 	
 	
-	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
-		TypeAccess oldobj = _type;
-		_type = newobj;
+	public NotificationChain basicSetInitializer(ArrayInitializer newobj, NotificationChain msgs) {
+		ArrayInitializer oldobj = _initializer;
+		_initializer = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYCREATION_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAY_CREATION__INITIALIZER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -92,11 +92,11 @@ extends ExpressionImpl implements ArrayCreation
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetInitializer(ArrayInitializer newobj, NotificationChain msgs) {
-		ArrayInitializer oldobj = _initializer;
-		_initializer = newobj;
+	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
+		TypeAccess oldobj = _type;
+		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYCREATION_INITIALIZER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAY_CREATION__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -110,11 +110,11 @@ extends ExpressionImpl implements ArrayCreation
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYCREATION_DIMENSIONS:
+			case Java_PackageImpl.ARRAY_CREATION__DIMENSIONS:
 				return getDimensions();
-			case Java_PackageImpl.ARRAYCREATION_INITIALIZER:
+			case Java_PackageImpl.ARRAY_CREATION__INITIALIZER:
 				return getInitializer();
-			case Java_PackageImpl.ARRAYCREATION_TYPE:
+			case Java_PackageImpl.ARRAY_CREATION__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -123,14 +123,14 @@ extends ExpressionImpl implements ArrayCreation
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYCREATION_DIMENSIONS:
+			case Java_PackageImpl.ARRAY_CREATION__DIMENSIONS:
 				getDimensions().clear();
 				getDimensions().addAll((java.util.Collection<? extends Expression>) newValue);
 				return;
-			case Java_PackageImpl.ARRAYCREATION_INITIALIZER:
+			case Java_PackageImpl.ARRAY_CREATION__INITIALIZER:
 				setInitializer((ArrayInitializer) newValue);
 				return;
-			case Java_PackageImpl.ARRAYCREATION_TYPE:
+			case Java_PackageImpl.ARRAY_CREATION__TYPE:
 				setType((TypeAccess) newValue);
 				return;
 		}
@@ -140,11 +140,11 @@ extends ExpressionImpl implements ArrayCreation
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYCREATION_DIMENSIONS:
+			case Java_PackageImpl.ARRAY_CREATION__DIMENSIONS:
 				return _dimensions != null && !_dimensions.isEmpty();
-			case Java_PackageImpl.ARRAYCREATION_INITIALIZER:
+			case Java_PackageImpl.ARRAY_CREATION__INITIALIZER:
 				return _initializer != null; //single != null;
-			case Java_PackageImpl.ARRAYCREATION_TYPE:
+			case Java_PackageImpl.ARRAY_CREATION__TYPE:
 				return _type != null; //single != null;
 		}
 		return super.eIsSet(featureID);

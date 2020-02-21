@@ -3,19 +3,19 @@ public interface ArrayAccess
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<ArrayAccess> allInstances_ = new Ocllib.QuickSet<ArrayAccess>(ArrayAccess.class);
+	public static com.crossecore.ocl.QuickSet<ArrayAccess> allInstances_ = new com.crossecore.ocl.QuickSet<ArrayAccess>(ArrayAccess.class);
 	
 		
-	public static Ocllib.QuickSet<ArrayAccess> allInstances(){
+	public static com.crossecore.ocl.QuickSet<ArrayAccess> allInstances(){
 		
-		Ocllib.QuickSet<ArrayAccess> result = new Ocllib.QuickSet<ArrayAccess>(ArrayAccess.class);
+		com.crossecore.ocl.QuickSet<ArrayAccess> result = new com.crossecore.ocl.QuickSet<ArrayAccess>(ArrayAccess.class);
 		result.addAll(ArrayAccess.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<ArrayAccess> allInstances = new Ocllib.QuickSet<ArrayAccess>(ArrayAccess.class);
+	//public static com.crossecore.ocl.QuickSet<ArrayAccess> allInstances = new com.crossecore.ocl.QuickSet<ArrayAccess>(ArrayAccess.class);
 	
 	
 	Expression getArray();

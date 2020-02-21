@@ -3,20 +3,20 @@ public interface Javadoc
  extends Comment
 {
 	
-	public static Ocllib.QuickSet<Javadoc> allInstances_ = new Ocllib.QuickSet<Javadoc>(Javadoc.class);
+	public static com.crossecore.ocl.QuickSet<Javadoc> allInstances_ = new com.crossecore.ocl.QuickSet<Javadoc>(Javadoc.class);
 	
 		
-	public static Ocllib.QuickSet<Javadoc> allInstances(){
+	public static com.crossecore.ocl.QuickSet<Javadoc> allInstances(){
 		
-		Ocllib.QuickSet<Javadoc> result = new Ocllib.QuickSet<Javadoc>(Javadoc.class);
+		com.crossecore.ocl.QuickSet<Javadoc> result = new com.crossecore.ocl.QuickSet<Javadoc>(Javadoc.class);
 		result.addAll(Javadoc.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<Javadoc> allInstances = new Ocllib.QuickSet<Javadoc>(Javadoc.class);
+	//public static com.crossecore.ocl.QuickSet<Javadoc> allInstances = new com.crossecore.ocl.QuickSet<Javadoc>(Javadoc.class);
 	
-	Ocllib.OrderedSet<TagElement> getTags();
+	com.crossecore.ocl.OrderedSet<TagElement> getTags();
 	
 }

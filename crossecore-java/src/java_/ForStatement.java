@@ -3,25 +3,25 @@ public interface ForStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<ForStatement> allInstances_ = new Ocllib.QuickSet<ForStatement>(ForStatement.class);
+	public static com.crossecore.ocl.QuickSet<ForStatement> allInstances_ = new com.crossecore.ocl.QuickSet<ForStatement>(ForStatement.class);
 	
 		
-	public static Ocllib.QuickSet<ForStatement> allInstances(){
+	public static com.crossecore.ocl.QuickSet<ForStatement> allInstances(){
 		
-		Ocllib.QuickSet<ForStatement> result = new Ocllib.QuickSet<ForStatement>(ForStatement.class);
+		com.crossecore.ocl.QuickSet<ForStatement> result = new com.crossecore.ocl.QuickSet<ForStatement>(ForStatement.class);
 		result.addAll(ForStatement.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<ForStatement> allInstances = new Ocllib.QuickSet<ForStatement>(ForStatement.class);
+	//public static com.crossecore.ocl.QuickSet<ForStatement> allInstances = new com.crossecore.ocl.QuickSet<ForStatement>(ForStatement.class);
 	
 	
 	Expression getExpression();
 	void setExpression(Expression value);
-	Ocllib.OrderedSet<Expression> getUpdaters();
-	Ocllib.OrderedSet<Expression> getInitializers();
+	com.crossecore.ocl.OrderedSet<Expression> getUpdaters();
+	com.crossecore.ocl.OrderedSet<Expression> getInitializers();
 	
 	Statement getBody();
 	void setBody(Statement value);

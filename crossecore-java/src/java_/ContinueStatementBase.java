@@ -20,10 +20,10 @@ extends StatementImpl implements ContinueStatement
 		if (value != _label) {
 			NotificationChain msgs = null;
 			if (_label != null){
-				msgs = ((InternalEObject)_label).eInverseRemove(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS, LabeledStatement.class, msgs);
+				msgs = ((InternalEObject)_label).eInverseRemove(this, Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS, LabeledStatement.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS, LabeledStatement.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS, LabeledStatement.class, msgs);
 			}
 			msgs = basicSetLabel(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends StatementImpl implements ContinueStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CONTINUESTATEMENT_LABEL , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CONTINUE_STATEMENT__LABEL , value, value));
 		}
 	}
 
@@ -44,9 +44,9 @@ extends StatementImpl implements ContinueStatement
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.CONTINUESTATEMENT_LABEL:
+			case Java_PackageImpl.CONTINUE_STATEMENT__LABEL:
 				if (_label != null){
-					msgs = ((InternalEObject)_label).eInverseRemove(this, Java_PackageImpl.CONTINUESTATEMENT_LABEL, LabeledStatement.class, msgs);
+					msgs = ((InternalEObject)_label).eInverseRemove(this, Java_PackageImpl.CONTINUE_STATEMENT__LABEL, LabeledStatement.class, msgs);
 				}
 				return basicSetLabel((LabeledStatement)otherEnd, msgs);
 		}
@@ -56,7 +56,7 @@ extends StatementImpl implements ContinueStatement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.CONTINUESTATEMENT_LABEL:
+			case Java_PackageImpl.CONTINUE_STATEMENT__LABEL:
 				return basicSetLabel(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -66,7 +66,7 @@ extends StatementImpl implements ContinueStatement
 		LabeledStatement oldobj = _label;
 		_label = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONTINUESTATEMENT_LABEL, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CONTINUE_STATEMENT__LABEL, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -80,7 +80,7 @@ extends StatementImpl implements ContinueStatement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.CONTINUESTATEMENT_LABEL:
+			case Java_PackageImpl.CONTINUE_STATEMENT__LABEL:
 				return getLabel();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -89,7 +89,7 @@ extends StatementImpl implements ContinueStatement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.CONTINUESTATEMENT_LABEL:
+			case Java_PackageImpl.CONTINUE_STATEMENT__LABEL:
 				setLabel((LabeledStatement) newValue);
 				return;
 		}
@@ -99,7 +99,7 @@ extends StatementImpl implements ContinueStatement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.CONTINUESTATEMENT_LABEL:
+			case Java_PackageImpl.CONTINUE_STATEMENT__LABEL:
 				return getLabel() != null; //single, volatile
 		}
 		return super.eIsSet(featureID);

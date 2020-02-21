@@ -20,10 +20,10 @@ extends StatementImpl implements TryStatement
 		if (value != _body) {
 			NotificationChain msgs = null;
 			if (_body != null){
-				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRYSTATEMENT_BODY, null, msgs);
+				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRY_STATEMENT__BODY, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRYSTATEMENT_BODY, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRY_STATEMENT__BODY, null, msgs);
 			}
 			msgs = basicSetBody(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends StatementImpl implements TryStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TRYSTATEMENT_BODY , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TRY_STATEMENT__BODY , value, value));
 		}
 	}
 	private Block _finally;
@@ -46,10 +46,10 @@ extends StatementImpl implements TryStatement
 		if (value != _finally) {
 			NotificationChain msgs = null;
 			if (_finally != null){
-				msgs = ((InternalEObject)_finally).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRYSTATEMENT_FINALLY, null, msgs);
+				msgs = ((InternalEObject)_finally).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRY_STATEMENT__FINALLY, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRYSTATEMENT_FINALLY, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRY_STATEMENT__FINALLY, null, msgs);
 			}
 			msgs = basicSetFinally(value, msgs);
 			if (msgs != null) {
@@ -57,15 +57,15 @@ extends StatementImpl implements TryStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TRYSTATEMENT_FINALLY , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TRY_STATEMENT__FINALLY , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<CatchClause> _catchClauses;
+	private com.crossecore.ocl.OrderedSet<CatchClause> _catchClauses;
 	
-	public Ocllib.OrderedSet<CatchClause> getCatchClauses()
+	public com.crossecore.ocl.OrderedSet<CatchClause> getCatchClauses()
 	{
 		if(_catchClauses==null){
-			_catchClauses = new Ocllib.OrderedSet<CatchClause>(CatchClause.class, this, Java_PackageImpl.TRYSTATEMENT_CATCHCLAUSES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRYSTATEMENT_CATCHCLAUSES);
+			_catchClauses = new com.crossecore.ocl.OrderedSet<CatchClause>(CatchClause.class, this, Java_PackageImpl.TRY_STATEMENT__CATCH_CLAUSES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TRY_STATEMENT__CATCH_CLAUSES);
 		}
 		return _catchClauses;
 	
@@ -78,11 +78,11 @@ extends StatementImpl implements TryStatement
 	}
 	
 	
-	public NotificationChain basicSetBody(Block newobj, NotificationChain msgs) {
-		Block oldobj = _body;
-		_body = newobj;
+	public NotificationChain basicSetFinally(Block newobj, NotificationChain msgs) {
+		Block oldobj = _finally;
+		_finally = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TRYSTATEMENT_BODY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TRY_STATEMENT__FINALLY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -92,11 +92,11 @@ extends StatementImpl implements TryStatement
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetFinally(Block newobj, NotificationChain msgs) {
-		Block oldobj = _finally;
-		_finally = newobj;
+	public NotificationChain basicSetBody(Block newobj, NotificationChain msgs) {
+		Block oldobj = _body;
+		_body = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TRYSTATEMENT_FINALLY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TRY_STATEMENT__BODY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -110,11 +110,11 @@ extends StatementImpl implements TryStatement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.TRYSTATEMENT_BODY:
+			case Java_PackageImpl.TRY_STATEMENT__BODY:
 				return getBody();
-			case Java_PackageImpl.TRYSTATEMENT_FINALLY:
+			case Java_PackageImpl.TRY_STATEMENT__FINALLY:
 				return getFinally();
-			case Java_PackageImpl.TRYSTATEMENT_CATCHCLAUSES:
+			case Java_PackageImpl.TRY_STATEMENT__CATCH_CLAUSES:
 				return getCatchClauses();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -123,13 +123,13 @@ extends StatementImpl implements TryStatement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.TRYSTATEMENT_BODY:
+			case Java_PackageImpl.TRY_STATEMENT__BODY:
 				setBody((Block) newValue);
 				return;
-			case Java_PackageImpl.TRYSTATEMENT_FINALLY:
+			case Java_PackageImpl.TRY_STATEMENT__FINALLY:
 				setFinally((Block) newValue);
 				return;
-			case Java_PackageImpl.TRYSTATEMENT_CATCHCLAUSES:
+			case Java_PackageImpl.TRY_STATEMENT__CATCH_CLAUSES:
 				getCatchClauses().clear();
 				getCatchClauses().addAll((java.util.Collection<? extends CatchClause>) newValue);
 				return;
@@ -140,11 +140,11 @@ extends StatementImpl implements TryStatement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.TRYSTATEMENT_BODY:
+			case Java_PackageImpl.TRY_STATEMENT__BODY:
 				return _body != null; //single != null;
-			case Java_PackageImpl.TRYSTATEMENT_FINALLY:
+			case Java_PackageImpl.TRY_STATEMENT__FINALLY:
 				return _finally != null; //single != null;
-			case Java_PackageImpl.TRYSTATEMENT_CATCHCLAUSES:
+			case Java_PackageImpl.TRY_STATEMENT__CATCH_CLAUSES:
 				return _catchClauses != null && !_catchClauses.isEmpty();
 		}
 		return super.eIsSet(featureID);

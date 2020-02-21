@@ -20,10 +20,10 @@ extends StatementImpl implements SwitchStatement
 		if (value != _expression) {
 			NotificationChain msgs = null;
 			if (_expression != null){
-				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SWITCHSTATEMENT_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SWITCH_STATEMENT__EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SWITCHSTATEMENT_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SWITCH_STATEMENT__EXPRESSION, null, msgs);
 			}
 			msgs = basicSetExpression(value, msgs);
 			if (msgs != null) {
@@ -31,15 +31,15 @@ extends StatementImpl implements SwitchStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SWITCHSTATEMENT_EXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SWITCH_STATEMENT__EXPRESSION , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<Statement> _statements;
+	private com.crossecore.ocl.OrderedSet<Statement> _statements;
 	
-	public Ocllib.OrderedSet<Statement> getStatements()
+	public com.crossecore.ocl.OrderedSet<Statement> getStatements()
 	{
 		if(_statements==null){
-			_statements = new Ocllib.OrderedSet<Statement>(Statement.class, this, Java_PackageImpl.SWITCHSTATEMENT_STATEMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SWITCHSTATEMENT_STATEMENTS);
+			_statements = new com.crossecore.ocl.OrderedSet<Statement>(Statement.class, this, Java_PackageImpl.SWITCH_STATEMENT__STATEMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SWITCH_STATEMENT__STATEMENTS);
 		}
 		return _statements;
 	
@@ -56,7 +56,7 @@ extends StatementImpl implements SwitchStatement
 		Expression oldobj = _expression;
 		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SWITCHSTATEMENT_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SWITCH_STATEMENT__EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -70,9 +70,9 @@ extends StatementImpl implements SwitchStatement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.SWITCHSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.SWITCH_STATEMENT__EXPRESSION:
 				return getExpression();
-			case Java_PackageImpl.SWITCHSTATEMENT_STATEMENTS:
+			case Java_PackageImpl.SWITCH_STATEMENT__STATEMENTS:
 				return getStatements();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -81,10 +81,10 @@ extends StatementImpl implements SwitchStatement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.SWITCHSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.SWITCH_STATEMENT__EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
-			case Java_PackageImpl.SWITCHSTATEMENT_STATEMENTS:
+			case Java_PackageImpl.SWITCH_STATEMENT__STATEMENTS:
 				getStatements().clear();
 				getStatements().addAll((java.util.Collection<? extends Statement>) newValue);
 				return;
@@ -95,9 +95,9 @@ extends StatementImpl implements SwitchStatement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.SWITCHSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.SWITCH_STATEMENT__EXPRESSION:
 				return _expression != null; //single != null;
-			case Java_PackageImpl.SWITCHSTATEMENT_STATEMENTS:
+			case Java_PackageImpl.SWITCH_STATEMENT__STATEMENTS:
 				return _statements != null && !_statements.isEmpty();
 		}
 		return super.eIsSet(featureID);

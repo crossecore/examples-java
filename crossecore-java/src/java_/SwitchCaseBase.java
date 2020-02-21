@@ -19,7 +19,7 @@ extends StatementImpl implements SwitchCase
 		boolean oldValue = _default;
 		_default = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.SWITCHCASE_DEFAULT, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.SWITCH_CASE__DEFAULT, oldValue, value));
 		
 	}
 	
@@ -37,10 +37,10 @@ extends StatementImpl implements SwitchCase
 		if (value != _expression) {
 			NotificationChain msgs = null;
 			if (_expression != null){
-				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SWITCHCASE_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SWITCH_CASE__EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SWITCHCASE_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SWITCH_CASE__EXPRESSION, null, msgs);
 			}
 			msgs = basicSetExpression(value, msgs);
 			if (msgs != null) {
@@ -48,7 +48,7 @@ extends StatementImpl implements SwitchCase
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SWITCHCASE_EXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SWITCH_CASE__EXPRESSION , value, value));
 		}
 	}
 
@@ -63,7 +63,7 @@ extends StatementImpl implements SwitchCase
 		Expression oldobj = _expression;
 		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SWITCHCASE_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SWITCH_CASE__EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -77,9 +77,9 @@ extends StatementImpl implements SwitchCase
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.SWITCHCASE_DEFAULT:
+			case Java_PackageImpl.SWITCH_CASE__DEFAULT:
 				return isDefault();
-			case Java_PackageImpl.SWITCHCASE_EXPRESSION:
+			case Java_PackageImpl.SWITCH_CASE__EXPRESSION:
 				return getExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -88,10 +88,10 @@ extends StatementImpl implements SwitchCase
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.SWITCHCASE_DEFAULT:
+			case Java_PackageImpl.SWITCH_CASE__DEFAULT:
 				setDefault((boolean) newValue);
 				return;
-			case Java_PackageImpl.SWITCHCASE_EXPRESSION:
+			case Java_PackageImpl.SWITCH_CASE__EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
 		}
@@ -101,9 +101,9 @@ extends StatementImpl implements SwitchCase
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.SWITCHCASE_DEFAULT:
+			case Java_PackageImpl.SWITCH_CASE__DEFAULT:
 				return _default != DEFAULT_EDEFAULT;
-			case Java_PackageImpl.SWITCHCASE_EXPRESSION:
+			case Java_PackageImpl.SWITCH_CASE__EXPRESSION:
 				return _expression != null; //single != null;
 		}
 		return super.eIsSet(featureID);

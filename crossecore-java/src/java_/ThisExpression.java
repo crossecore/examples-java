@@ -3,19 +3,19 @@ public interface ThisExpression
  extends AbstractTypeQualifiedExpression
 {
 	
-	public static Ocllib.QuickSet<ThisExpression> allInstances_ = new Ocllib.QuickSet<ThisExpression>(ThisExpression.class);
+	public static com.crossecore.ocl.QuickSet<ThisExpression> allInstances_ = new com.crossecore.ocl.QuickSet<ThisExpression>(ThisExpression.class);
 	
 		
-	public static Ocllib.QuickSet<ThisExpression> allInstances(){
+	public static com.crossecore.ocl.QuickSet<ThisExpression> allInstances(){
 		
-		Ocllib.QuickSet<ThisExpression> result = new Ocllib.QuickSet<ThisExpression>(ThisExpression.class);
+		com.crossecore.ocl.QuickSet<ThisExpression> result = new com.crossecore.ocl.QuickSet<ThisExpression>(ThisExpression.class);
 		result.addAll(ThisExpression.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<ThisExpression> allInstances = new Ocllib.QuickSet<ThisExpression>(ThisExpression.class);
+	//public static com.crossecore.ocl.QuickSet<ThisExpression> allInstances = new com.crossecore.ocl.QuickSet<ThisExpression>(ThisExpression.class);
 	
 	
 }

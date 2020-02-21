@@ -20,10 +20,10 @@ extends ASTNodeImpl implements MethodRef
 		if (value != _method) {
 			NotificationChain msgs = null;
 			if (_method != null){
-				msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS, AbstractMethodDeclaration.class, msgs);
+				msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS, AbstractMethodDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGESINDOCCOMMENTS, AbstractMethodDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS, AbstractMethodDeclaration.class, msgs);
 			}
 			msgs = basicSetMethod(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ASTNodeImpl implements MethodRef
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHODREF_METHOD , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHOD_REF__METHOD , value, value));
 		}
 	}
 	private TypeAccess _qualifier;
@@ -46,10 +46,10 @@ extends ASTNodeImpl implements MethodRef
 		if (value != _qualifier) {
 			NotificationChain msgs = null;
 			if (_qualifier != null){
-				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHODREF_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHOD_REF__QUALIFIER, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHODREF_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHOD_REF__QUALIFIER, null, msgs);
 			}
 			msgs = basicSetQualifier(value, msgs);
 			if (msgs != null) {
@@ -57,15 +57,15 @@ extends ASTNodeImpl implements MethodRef
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHODREF_QUALIFIER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHOD_REF__QUALIFIER , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<MethodRefParameter> _parameters;
+	private com.crossecore.ocl.OrderedSet<MethodRefParameter> _parameters;
 	
-	public Ocllib.OrderedSet<MethodRefParameter> getParameters()
+	public com.crossecore.ocl.OrderedSet<MethodRefParameter> getParameters()
 	{
 		if(_parameters==null){
-			_parameters = new Ocllib.OrderedSet<MethodRefParameter>(MethodRefParameter.class, this, Java_PackageImpl.METHODREF_PARAMETERS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHODREF_PARAMETERS);
+			_parameters = new com.crossecore.ocl.OrderedSet<MethodRefParameter>(MethodRefParameter.class, this, Java_PackageImpl.METHOD_REF__PARAMETERS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHOD_REF__PARAMETERS);
 		}
 		return _parameters;
 	
@@ -80,9 +80,9 @@ extends ASTNodeImpl implements MethodRef
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODREF_METHOD:
+			case Java_PackageImpl.METHOD_REF__METHOD:
 				if (_method != null){
-					msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.METHODREF_METHOD, AbstractMethodDeclaration.class, msgs);
+					msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.METHOD_REF__METHOD, AbstractMethodDeclaration.class, msgs);
 				}
 				return basicSetMethod((AbstractMethodDeclaration)otherEnd, msgs);
 		}
@@ -92,7 +92,7 @@ extends ASTNodeImpl implements MethodRef
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODREF_METHOD:
+			case Java_PackageImpl.METHOD_REF__METHOD:
 				return basicSetMethod(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -102,7 +102,7 @@ extends ASTNodeImpl implements MethodRef
 		AbstractMethodDeclaration oldobj = _method;
 		_method = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHODREF_METHOD, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHOD_REF__METHOD, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -116,7 +116,7 @@ extends ASTNodeImpl implements MethodRef
 		TypeAccess oldobj = _qualifier;
 		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHODREF_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHOD_REF__QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -130,11 +130,11 @@ extends ASTNodeImpl implements MethodRef
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODREF_METHOD:
+			case Java_PackageImpl.METHOD_REF__METHOD:
 				return getMethod();
-			case Java_PackageImpl.METHODREF_QUALIFIER:
+			case Java_PackageImpl.METHOD_REF__QUALIFIER:
 				return getQualifier();
-			case Java_PackageImpl.METHODREF_PARAMETERS:
+			case Java_PackageImpl.METHOD_REF__PARAMETERS:
 				return getParameters();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -143,13 +143,13 @@ extends ASTNodeImpl implements MethodRef
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODREF_METHOD:
+			case Java_PackageImpl.METHOD_REF__METHOD:
 				setMethod((AbstractMethodDeclaration) newValue);
 				return;
-			case Java_PackageImpl.METHODREF_QUALIFIER:
+			case Java_PackageImpl.METHOD_REF__QUALIFIER:
 				setQualifier((TypeAccess) newValue);
 				return;
-			case Java_PackageImpl.METHODREF_PARAMETERS:
+			case Java_PackageImpl.METHOD_REF__PARAMETERS:
 				getParameters().clear();
 				getParameters().addAll((java.util.Collection<? extends MethodRefParameter>) newValue);
 				return;
@@ -160,11 +160,11 @@ extends ASTNodeImpl implements MethodRef
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODREF_METHOD:
+			case Java_PackageImpl.METHOD_REF__METHOD:
 				return getMethod() != null; //single, volatile
-			case Java_PackageImpl.METHODREF_QUALIFIER:
+			case Java_PackageImpl.METHOD_REF__QUALIFIER:
 				return _qualifier != null; //single != null;
-			case Java_PackageImpl.METHODREF_PARAMETERS:
+			case Java_PackageImpl.METHOD_REF__PARAMETERS:
 				return _parameters != null && !_parameters.isEmpty();
 		}
 		return super.eIsSet(featureID);

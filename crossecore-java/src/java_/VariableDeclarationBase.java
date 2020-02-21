@@ -19,7 +19,7 @@ extends NamedElementImpl implements VariableDeclaration
 		int oldValue = _extraArrayDimensions;
 		_extraArrayDimensions = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS, oldValue, value));
 		
 	}
 	
@@ -37,10 +37,10 @@ extends NamedElementImpl implements VariableDeclaration
 		if (value != _initializer) {
 			NotificationChain msgs = null;
 			if (_initializer != null){
-				msgs = ((InternalEObject)_initializer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER, null, msgs);
+				msgs = ((InternalEObject)_initializer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER, null, msgs);
 			}
 			msgs = basicSetInitializer(value, msgs);
 			if (msgs != null) {
@@ -48,15 +48,15 @@ extends NamedElementImpl implements VariableDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER , value, value));
 		}
 	}
-	private Ocllib.Set<SingleVariableAccess> _usageInVariableAccess;
+	private com.crossecore.ocl.Set<SingleVariableAccess> _usageInVariableAccess;
 	
-	public Ocllib.Set<SingleVariableAccess> getUsageInVariableAccess()
+	public com.crossecore.ocl.Set<SingleVariableAccess> getUsageInVariableAccess()
 	{
 		if(_usageInVariableAccess==null){
-			_usageInVariableAccess = new Ocllib.Set<SingleVariableAccess>(SingleVariableAccess.class, this, Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS, Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE);
+			_usageInVariableAccess = new com.crossecore.ocl.Set<SingleVariableAccess>(SingleVariableAccess.class, this, Java_PackageImpl.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS, Java_PackageImpl.SINGLE_VARIABLE_ACCESS__VARIABLE);
 		}
 		return _usageInVariableAccess;
 	
@@ -71,7 +71,7 @@ extends NamedElementImpl implements VariableDeclaration
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS:
+			case Java_PackageImpl.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS:
 				return getUsageInVariableAccess().basicAdd((SingleVariableAccess)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -80,7 +80,7 @@ extends NamedElementImpl implements VariableDeclaration
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS:
+			case Java_PackageImpl.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS:
 				return getUsageInVariableAccess().basicRemove((SingleVariableAccess)otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -90,7 +90,7 @@ extends NamedElementImpl implements VariableDeclaration
 		Expression oldobj = _initializer;
 		_initializer = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -104,11 +104,11 @@ extends NamedElementImpl implements VariableDeclaration
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS:
+			case Java_PackageImpl.VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS:
 				return getExtraArrayDimensions();
-			case Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER:
+			case Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER:
 				return getInitializer();
-			case Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS:
+			case Java_PackageImpl.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS:
 				return getUsageInVariableAccess();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -117,13 +117,13 @@ extends NamedElementImpl implements VariableDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS:
+			case Java_PackageImpl.VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS:
 				setExtraArrayDimensions((int) newValue);
 				return;
-			case Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER:
+			case Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER:
 				setInitializer((Expression) newValue);
 				return;
-			case Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS:
+			case Java_PackageImpl.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS:
 				getUsageInVariableAccess().clear();
 				getUsageInVariableAccess().addAll((java.util.Collection<? extends SingleVariableAccess>) newValue);
 				return;
@@ -134,11 +134,11 @@ extends NamedElementImpl implements VariableDeclaration
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS:
+			case Java_PackageImpl.VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS:
 				return _extraArrayDimensions != EXTRAARRAYDIMENSIONS_EDEFAULT;
-			case Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER:
+			case Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER:
 				return _initializer != null; //single != null;
-			case Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS:
+			case Java_PackageImpl.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS:
 				return getUsageInVariableAccess().isEmpty(); //many, volatile
 		}
 		return super.eIsSet(featureID);

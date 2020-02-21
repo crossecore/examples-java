@@ -19,7 +19,7 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 		int oldValue = _extraArrayDimensions;
 		_extraArrayDimensions = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS, oldValue, value));
 		
 	}
 	
@@ -37,10 +37,10 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 		if (value != _initializer) {
 			NotificationChain msgs = null;
 			if (_initializer != null){
-				msgs = ((InternalEObject)_initializer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER, null, msgs);
+				msgs = ((InternalEObject)_initializer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER, null, msgs);
 			}
 			msgs = basicSetInitializer(value, msgs);
 			if (msgs != null) {
@@ -48,15 +48,15 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER , value, value));
 		}
 	}
-	private Ocllib.Set<SingleVariableAccess> _usageInVariableAccess;
+	private com.crossecore.ocl.Set<SingleVariableAccess> _usageInVariableAccess;
 	
-	public Ocllib.Set<SingleVariableAccess> getUsageInVariableAccess()
+	public com.crossecore.ocl.Set<SingleVariableAccess> getUsageInVariableAccess()
 	{
 		if(_usageInVariableAccess==null){
-			_usageInVariableAccess = new Ocllib.Set<SingleVariableAccess>(SingleVariableAccess.class, this, Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS, Java_PackageImpl.SINGLEVARIABLEACCESS_VARIABLE);
+			_usageInVariableAccess = new com.crossecore.ocl.Set<SingleVariableAccess>(SingleVariableAccess.class, this, Java_PackageImpl.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS, Java_PackageImpl.SINGLE_VARIABLE_ACCESS__VARIABLE);
 		}
 		return _usageInVariableAccess;
 	
@@ -73,10 +73,10 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 		if (value != _anonymousClassDeclaration) {
 			NotificationChain msgs = null;
 			if (_anonymousClassDeclaration != null){
-				msgs = ((InternalEObject)_anonymousClassDeclaration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION, null, msgs);
+				msgs = ((InternalEObject)_anonymousClassDeclaration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ANONYMOUS_CLASS_DECLARATION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ANONYMOUS_CLASS_DECLARATION, null, msgs);
 			}
 			msgs = basicSetAnonymousClassDeclaration(value, msgs);
 			if (msgs != null) {
@@ -84,15 +84,15 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ANONYMOUS_CLASS_DECLARATION , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<Expression> _arguments;
+	private com.crossecore.ocl.OrderedSet<Expression> _arguments;
 	
-	public Ocllib.OrderedSet<Expression> getArguments()
+	public com.crossecore.ocl.OrderedSet<Expression> getArguments()
 	{
 		if(_arguments==null){
-			_arguments = new Ocllib.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.ENUMCONSTANTDECLARATION_ARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENUMCONSTANTDECLARATION_ARGUMENTS);
+			_arguments = new com.crossecore.ocl.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ARGUMENTS);
 		}
 		return _arguments;
 	
@@ -107,7 +107,7 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__USAGE_IN_VARIABLE_ACCESS:
 				return getUsageInVariableAccess().basicAdd((SingleVariableAccess)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -116,7 +116,7 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__USAGE_IN_VARIABLE_ACCESS:
 				return getUsageInVariableAccess().basicRemove((SingleVariableAccess)otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -126,7 +126,7 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 		Expression oldobj = _initializer;
 		_initializer = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -140,7 +140,7 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 		AnonymousClassDeclaration oldobj = _anonymousClassDeclaration;
 		_anonymousClassDeclaration = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ANONYMOUS_CLASS_DECLARATION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -154,15 +154,15 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_EXTRAARRAYDIMENSIONS:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__EXTRA_ARRAY_DIMENSIONS:
 				return getExtraArrayDimensions();
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_INITIALIZER:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__INITIALIZER:
 				return getInitializer();
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__USAGE_IN_VARIABLE_ACCESS:
 				return getUsageInVariableAccess();
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ANONYMOUS_CLASS_DECLARATION:
 				return getAnonymousClassDeclaration();
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_ARGUMENTS:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ARGUMENTS:
 				return getArguments();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -171,20 +171,20 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_EXTRAARRAYDIMENSIONS:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__EXTRA_ARRAY_DIMENSIONS:
 				setExtraArrayDimensions((int) newValue);
 				return;
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_INITIALIZER:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__INITIALIZER:
 				setInitializer((Expression) newValue);
 				return;
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__USAGE_IN_VARIABLE_ACCESS:
 				getUsageInVariableAccess().clear();
 				getUsageInVariableAccess().addAll((java.util.Collection<? extends SingleVariableAccess>) newValue);
 				return;
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ANONYMOUS_CLASS_DECLARATION:
 				setAnonymousClassDeclaration((AnonymousClassDeclaration) newValue);
 				return;
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_ARGUMENTS:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ARGUMENTS:
 				getArguments().clear();
 				getArguments().addAll((java.util.Collection<? extends Expression>) newValue);
 				return;
@@ -195,15 +195,15 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_EXTRAARRAYDIMENSIONS:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__EXTRA_ARRAY_DIMENSIONS:
 				return _extraArrayDimensions != EXTRAARRAYDIMENSIONS_EDEFAULT;
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_INITIALIZER:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__INITIALIZER:
 				return _initializer != null; //single != null;
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__USAGE_IN_VARIABLE_ACCESS:
 				return getUsageInVariableAccess().isEmpty(); //many, volatile
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_ANONYMOUSCLASSDECLARATION:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ANONYMOUS_CLASS_DECLARATION:
 				return _anonymousClassDeclaration != null; //single != null;
-			case Java_PackageImpl.ENUMCONSTANTDECLARATION_ARGUMENTS:
+			case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__ARGUMENTS:
 				return _arguments != null && !_arguments.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -213,9 +213,9 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == VariableDeclaration.class) {
 			switch (derivedFeatureID) {
-				case Java_PackageImpl.ENUMCONSTANTDECLARATION_EXTRAARRAYDIMENSIONS: return Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS;
-				case Java_PackageImpl.ENUMCONSTANTDECLARATION_INITIALIZER: return Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER;
-				case Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS: return Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS;
+				case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__EXTRA_ARRAY_DIMENSIONS: return Java_PackageImpl.VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS;
+				case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__INITIALIZER: return Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER;
+				case Java_PackageImpl.ENUM_CONSTANT_DECLARATION__USAGE_IN_VARIABLE_ACCESS: return Java_PackageImpl.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS;
 				default: return -1;
 			}
 		}
@@ -227,9 +227,9 @@ extends BodyDeclarationImpl implements EnumConstantDeclaration
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == VariableDeclaration.class) {
 			switch (baseFeatureID) {
-				case Java_PackageImpl.VARIABLEDECLARATION_EXTRAARRAYDIMENSIONS: return Java_PackageImpl.ENUMCONSTANTDECLARATION_EXTRAARRAYDIMENSIONS;
-				case Java_PackageImpl.VARIABLEDECLARATION_INITIALIZER: return Java_PackageImpl.ENUMCONSTANTDECLARATION_INITIALIZER;
-				case Java_PackageImpl.VARIABLEDECLARATION_USAGEINVARIABLEACCESS: return Java_PackageImpl.ENUMCONSTANTDECLARATION_USAGEINVARIABLEACCESS;
+				case Java_PackageImpl.VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS: return Java_PackageImpl.ENUM_CONSTANT_DECLARATION__EXTRA_ARRAY_DIMENSIONS;
+				case Java_PackageImpl.VARIABLE_DECLARATION__INITIALIZER: return Java_PackageImpl.ENUM_CONSTANT_DECLARATION__INITIALIZER;
+				case Java_PackageImpl.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS: return Java_PackageImpl.ENUM_CONSTANT_DECLARATION__USAGE_IN_VARIABLE_ACCESS;
 				default: return -1;
 			}
 		}

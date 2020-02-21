@@ -3,19 +3,19 @@ public interface DoStatement
  extends Statement
 {
 	
-	public static Ocllib.QuickSet<DoStatement> allInstances_ = new Ocllib.QuickSet<DoStatement>(DoStatement.class);
+	public static com.crossecore.ocl.QuickSet<DoStatement> allInstances_ = new com.crossecore.ocl.QuickSet<DoStatement>(DoStatement.class);
 	
 		
-	public static Ocllib.QuickSet<DoStatement> allInstances(){
+	public static com.crossecore.ocl.QuickSet<DoStatement> allInstances(){
 		
-		Ocllib.QuickSet<DoStatement> result = new Ocllib.QuickSet<DoStatement>(DoStatement.class);
+		com.crossecore.ocl.QuickSet<DoStatement> result = new com.crossecore.ocl.QuickSet<DoStatement>(DoStatement.class);
 		result.addAll(DoStatement.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<DoStatement> allInstances = new Ocllib.QuickSet<DoStatement>(DoStatement.class);
+	//public static com.crossecore.ocl.QuickSet<DoStatement> allInstances = new com.crossecore.ocl.QuickSet<DoStatement>(DoStatement.class);
 	
 	
 	Expression getExpression();

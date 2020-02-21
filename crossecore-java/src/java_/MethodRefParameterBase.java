@@ -19,7 +19,7 @@ extends ASTNodeImpl implements MethodRefParameter
 		java.lang.String oldValue = _name;
 		_name = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.METHODREFPARAMETER_NAME, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.METHOD_REF_PARAMETER__NAME, oldValue, value));
 		
 	}
 	
@@ -36,7 +36,7 @@ extends ASTNodeImpl implements MethodRefParameter
 		boolean oldValue = _varargs;
 		_varargs = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.METHODREFPARAMETER_VARARGS, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.METHOD_REF_PARAMETER__VARARGS, oldValue, value));
 		
 	}
 	
@@ -54,10 +54,10 @@ extends ASTNodeImpl implements MethodRefParameter
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHODREFPARAMETER_TYPE, null, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHOD_REF_PARAMETER__TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHODREFPARAMETER_TYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHOD_REF_PARAMETER__TYPE, null, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {
@@ -65,7 +65,7 @@ extends ASTNodeImpl implements MethodRefParameter
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHODREFPARAMETER_TYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHOD_REF_PARAMETER__TYPE , value, value));
 		}
 	}
 
@@ -80,7 +80,7 @@ extends ASTNodeImpl implements MethodRefParameter
 		TypeAccess oldobj = _type;
 		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHODREFPARAMETER_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHOD_REF_PARAMETER__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -94,11 +94,11 @@ extends ASTNodeImpl implements MethodRefParameter
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODREFPARAMETER_NAME:
+			case Java_PackageImpl.METHOD_REF_PARAMETER__NAME:
 				return getName();
-			case Java_PackageImpl.METHODREFPARAMETER_VARARGS:
+			case Java_PackageImpl.METHOD_REF_PARAMETER__VARARGS:
 				return isVarargs();
-			case Java_PackageImpl.METHODREFPARAMETER_TYPE:
+			case Java_PackageImpl.METHOD_REF_PARAMETER__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -107,13 +107,13 @@ extends ASTNodeImpl implements MethodRefParameter
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODREFPARAMETER_NAME:
+			case Java_PackageImpl.METHOD_REF_PARAMETER__NAME:
 				setName((java.lang.String) newValue);
 				return;
-			case Java_PackageImpl.METHODREFPARAMETER_VARARGS:
+			case Java_PackageImpl.METHOD_REF_PARAMETER__VARARGS:
 				setVarargs((boolean) newValue);
 				return;
-			case Java_PackageImpl.METHODREFPARAMETER_TYPE:
+			case Java_PackageImpl.METHOD_REF_PARAMETER__TYPE:
 				setType((TypeAccess) newValue);
 				return;
 		}
@@ -123,11 +123,11 @@ extends ASTNodeImpl implements MethodRefParameter
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODREFPARAMETER_NAME:
+			case Java_PackageImpl.METHOD_REF_PARAMETER__NAME:
 				return NAME_EDEFAULT == null ? _name != null : !NAME_EDEFAULT.equals(_name);
-			case Java_PackageImpl.METHODREFPARAMETER_VARARGS:
+			case Java_PackageImpl.METHOD_REF_PARAMETER__VARARGS:
 				return _varargs != VARARGS_EDEFAULT;
-			case Java_PackageImpl.METHODREFPARAMETER_TYPE:
+			case Java_PackageImpl.METHOD_REF_PARAMETER__TYPE:
 				return _type != null; //single != null;
 		}
 		return super.eIsSet(featureID);

@@ -20,10 +20,10 @@ extends StatementImpl implements SynchronizedStatement
 		if (value != _body) {
 			NotificationChain msgs = null;
 			if (_body != null){
-				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SYNCHRONIZEDSTATEMENT_BODY, null, msgs);
+				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SYNCHRONIZED_STATEMENT__BODY, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SYNCHRONIZEDSTATEMENT_BODY, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SYNCHRONIZED_STATEMENT__BODY, null, msgs);
 			}
 			msgs = basicSetBody(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends StatementImpl implements SynchronizedStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SYNCHRONIZEDSTATEMENT_BODY , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SYNCHRONIZED_STATEMENT__BODY , value, value));
 		}
 	}
 	private Expression _expression;
@@ -46,10 +46,10 @@ extends StatementImpl implements SynchronizedStatement
 		if (value != _expression) {
 			NotificationChain msgs = null;
 			if (_expression != null){
-				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SYNCHRONIZEDSTATEMENT_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SYNCHRONIZED_STATEMENT__EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SYNCHRONIZEDSTATEMENT_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SYNCHRONIZED_STATEMENT__EXPRESSION, null, msgs);
 			}
 			msgs = basicSetExpression(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends StatementImpl implements SynchronizedStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SYNCHRONIZEDSTATEMENT_EXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SYNCHRONIZED_STATEMENT__EXPRESSION , value, value));
 		}
 	}
 
@@ -72,7 +72,7 @@ extends StatementImpl implements SynchronizedStatement
 		Block oldobj = _body;
 		_body = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SYNCHRONIZEDSTATEMENT_BODY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SYNCHRONIZED_STATEMENT__BODY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -86,7 +86,7 @@ extends StatementImpl implements SynchronizedStatement
 		Expression oldobj = _expression;
 		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SYNCHRONIZEDSTATEMENT_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SYNCHRONIZED_STATEMENT__EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -100,9 +100,9 @@ extends StatementImpl implements SynchronizedStatement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.SYNCHRONIZEDSTATEMENT_BODY:
+			case Java_PackageImpl.SYNCHRONIZED_STATEMENT__BODY:
 				return getBody();
-			case Java_PackageImpl.SYNCHRONIZEDSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.SYNCHRONIZED_STATEMENT__EXPRESSION:
 				return getExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,10 +111,10 @@ extends StatementImpl implements SynchronizedStatement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.SYNCHRONIZEDSTATEMENT_BODY:
+			case Java_PackageImpl.SYNCHRONIZED_STATEMENT__BODY:
 				setBody((Block) newValue);
 				return;
-			case Java_PackageImpl.SYNCHRONIZEDSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.SYNCHRONIZED_STATEMENT__EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
 		}
@@ -124,9 +124,9 @@ extends StatementImpl implements SynchronizedStatement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.SYNCHRONIZEDSTATEMENT_BODY:
+			case Java_PackageImpl.SYNCHRONIZED_STATEMENT__BODY:
 				return _body != null; //single != null;
-			case Java_PackageImpl.SYNCHRONIZEDSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.SYNCHRONIZED_STATEMENT__EXPRESSION:
 				return _expression != null; //single != null;
 		}
 		return super.eIsSet(featureID);

@@ -3,23 +3,23 @@ public interface Archive
  extends NamedElement
 {
 	
-	public static Ocllib.QuickSet<Archive> allInstances_ = new Ocllib.QuickSet<Archive>(Archive.class);
+	public static com.crossecore.ocl.QuickSet<Archive> allInstances_ = new com.crossecore.ocl.QuickSet<Archive>(Archive.class);
 	
 		
-	public static Ocllib.QuickSet<Archive> allInstances(){
+	public static com.crossecore.ocl.QuickSet<Archive> allInstances(){
 		
-		Ocllib.QuickSet<Archive> result = new Ocllib.QuickSet<Archive>(Archive.class);
+		com.crossecore.ocl.QuickSet<Archive> result = new com.crossecore.ocl.QuickSet<Archive>(Archive.class);
 		result.addAll(Archive.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<Archive> allInstances = new Ocllib.QuickSet<Archive>(Archive.class);
+	//public static com.crossecore.ocl.QuickSet<Archive> allInstances = new com.crossecore.ocl.QuickSet<Archive>(Archive.class);
 	
 	java.lang.String getOriginalFilePath();
 	void setOriginalFilePath(java.lang.String value);
-	Ocllib.Set<ClassFile> getClassFiles();
+	com.crossecore.ocl.Set<ClassFile> getClassFiles();
 	
 	Manifest getManifest();
 	void setManifest(Manifest value);

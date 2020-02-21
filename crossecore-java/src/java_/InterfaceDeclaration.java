@@ -3,12 +3,12 @@ public interface InterfaceDeclaration
  extends TypeDeclaration
 {
 	
-	public static Ocllib.QuickSet<InterfaceDeclaration> allInstances_ = new Ocllib.QuickSet<InterfaceDeclaration>(InterfaceDeclaration.class);
+	public static com.crossecore.ocl.QuickSet<InterfaceDeclaration> allInstances_ = new com.crossecore.ocl.QuickSet<InterfaceDeclaration>(InterfaceDeclaration.class);
 	
 		
-	public static Ocllib.QuickSet<InterfaceDeclaration> allInstances(){
+	public static com.crossecore.ocl.QuickSet<InterfaceDeclaration> allInstances(){
 		
-		Ocllib.QuickSet<InterfaceDeclaration> result = new Ocllib.QuickSet<InterfaceDeclaration>(InterfaceDeclaration.class);
+		com.crossecore.ocl.QuickSet<InterfaceDeclaration> result = new com.crossecore.ocl.QuickSet<InterfaceDeclaration>(InterfaceDeclaration.class);
 		result.addAll(InterfaceDeclaration.allInstances_);
 		
 		result.addAll(UnresolvedInterfaceDeclaration.allInstances_);
@@ -16,7 +16,7 @@ public interface InterfaceDeclaration
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<InterfaceDeclaration> allInstances = new Ocllib.QuickSet<InterfaceDeclaration>(InterfaceDeclaration.class);
+	//public static com.crossecore.ocl.QuickSet<InterfaceDeclaration> allInstances = new com.crossecore.ocl.QuickSet<InterfaceDeclaration>(InterfaceDeclaration.class);
 	
 	
 }

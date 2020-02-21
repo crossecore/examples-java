@@ -19,7 +19,7 @@ extends ASTNodeImpl implements ImportDeclaration
 		boolean oldValue = _static;
 		_static = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.IMPORTDECLARATION_STATIC, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.IMPORT_DECLARATION__STATIC, oldValue, value));
 		
 	}
 	
@@ -37,10 +37,10 @@ extends ASTNodeImpl implements ImportDeclaration
 		if (value != _importedElement) {
 			NotificationChain msgs = null;
 			if (_importedElement != null){
-				msgs = ((InternalEObject)_importedElement).eInverseRemove(this, Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS, NamedElement.class, msgs);
+				msgs = ((InternalEObject)_importedElement).eInverseRemove(this, Java_PackageImpl.NAMED_ELEMENT__USAGES_IN_IMPORTS, NamedElement.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.NAMEDELEMENT_USAGESINIMPORTS, NamedElement.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.NAMED_ELEMENT__USAGES_IN_IMPORTS, NamedElement.class, msgs);
 			}
 			msgs = basicSetImportedElement(value, msgs);
 			if (msgs != null) {
@@ -48,7 +48,7 @@ extends ASTNodeImpl implements ImportDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.IMPORTDECLARATION_IMPORTEDELEMENT , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.IMPORT_DECLARATION__IMPORTED_ELEMENT , value, value));
 		}
 	}
 
@@ -61,9 +61,9 @@ extends ASTNodeImpl implements ImportDeclaration
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.IMPORTDECLARATION_IMPORTEDELEMENT:
+			case Java_PackageImpl.IMPORT_DECLARATION__IMPORTED_ELEMENT:
 				if (_importedElement != null){
-					msgs = ((InternalEObject)_importedElement).eInverseRemove(this, Java_PackageImpl.IMPORTDECLARATION_IMPORTEDELEMENT, NamedElement.class, msgs);
+					msgs = ((InternalEObject)_importedElement).eInverseRemove(this, Java_PackageImpl.IMPORT_DECLARATION__IMPORTED_ELEMENT, NamedElement.class, msgs);
 				}
 				return basicSetImportedElement((NamedElement)otherEnd, msgs);
 		}
@@ -73,7 +73,7 @@ extends ASTNodeImpl implements ImportDeclaration
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.IMPORTDECLARATION_IMPORTEDELEMENT:
+			case Java_PackageImpl.IMPORT_DECLARATION__IMPORTED_ELEMENT:
 				return basicSetImportedElement(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -83,7 +83,7 @@ extends ASTNodeImpl implements ImportDeclaration
 		NamedElement oldobj = _importedElement;
 		_importedElement = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.IMPORTDECLARATION_IMPORTEDELEMENT, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.IMPORT_DECLARATION__IMPORTED_ELEMENT, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -97,9 +97,9 @@ extends ASTNodeImpl implements ImportDeclaration
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.IMPORTDECLARATION_STATIC:
+			case Java_PackageImpl.IMPORT_DECLARATION__STATIC:
 				return isStatic();
-			case Java_PackageImpl.IMPORTDECLARATION_IMPORTEDELEMENT:
+			case Java_PackageImpl.IMPORT_DECLARATION__IMPORTED_ELEMENT:
 				return getImportedElement();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,10 +108,10 @@ extends ASTNodeImpl implements ImportDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.IMPORTDECLARATION_STATIC:
+			case Java_PackageImpl.IMPORT_DECLARATION__STATIC:
 				setStatic((boolean) newValue);
 				return;
-			case Java_PackageImpl.IMPORTDECLARATION_IMPORTEDELEMENT:
+			case Java_PackageImpl.IMPORT_DECLARATION__IMPORTED_ELEMENT:
 				setImportedElement((NamedElement) newValue);
 				return;
 		}
@@ -121,9 +121,9 @@ extends ASTNodeImpl implements ImportDeclaration
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.IMPORTDECLARATION_STATIC:
+			case Java_PackageImpl.IMPORT_DECLARATION__STATIC:
 				return _static != STATIC_EDEFAULT;
-			case Java_PackageImpl.IMPORTDECLARATION_IMPORTEDELEMENT:
+			case Java_PackageImpl.IMPORT_DECLARATION__IMPORTED_ELEMENT:
 				return getImportedElement() != null; //single, volatile
 		}
 		return super.eIsSet(featureID);

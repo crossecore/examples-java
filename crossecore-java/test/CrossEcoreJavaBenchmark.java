@@ -15,9 +15,9 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import Ocllib.QuickSet;
-import Ocllib.Sequence;
-import Ocllib.Set;
+import com.crossecore.ocl.QuickSet;
+import com.crossecore.ocl.Sequence;
+import com.crossecore.ocl.Set;
 import java_.ASTNode;
 import java_.BodyDeclaration;
 import java_.ClassDeclaration;
@@ -49,8 +49,8 @@ public class CrossEcoreJavaBenchmark {
 	@BeforeClass
 	public static void beforeClass(){
 		
-		Function<TypeAccess, Boolean> kk = x->true;
-		kk.apply(null);
+		//Function<TypeAccess, Boolean> kk = x->true;
+		//kk.apply(null);
 		
 		CrossEcoreJavaBenchmark vb = new CrossEcoreJavaBenchmark();
 		try {
@@ -381,7 +381,9 @@ public class CrossEcoreJavaBenchmark {
 		.getCompilationUnits()
 		.collect2(Comment.class, cu->cu.getCommentList())
 		.select(each->each instanceof Javadoc)
-		.collect2(ASTNode.class, o->((Javadoc)o).getTags().collect2(ASTNode.class, t->t.getFragments()))
+		.collect2(ASTNode.class, 
+			o->((Javadoc)o).getTags()
+			.collect2(ASTNode.class, t->t.getFragments()))
 		.select(each -> each instanceof TextElement)
 		.asSequence();
 		

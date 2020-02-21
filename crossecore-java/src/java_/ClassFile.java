@@ -3,19 +3,19 @@ public interface ClassFile
  extends NamedElement
 {
 	
-	public static Ocllib.QuickSet<ClassFile> allInstances_ = new Ocllib.QuickSet<ClassFile>(ClassFile.class);
+	public static com.crossecore.ocl.QuickSet<ClassFile> allInstances_ = new com.crossecore.ocl.QuickSet<ClassFile>(ClassFile.class);
 	
 		
-	public static Ocllib.QuickSet<ClassFile> allInstances(){
+	public static com.crossecore.ocl.QuickSet<ClassFile> allInstances(){
 		
-		Ocllib.QuickSet<ClassFile> result = new Ocllib.QuickSet<ClassFile>(ClassFile.class);
+		com.crossecore.ocl.QuickSet<ClassFile> result = new com.crossecore.ocl.QuickSet<ClassFile>(ClassFile.class);
 		result.addAll(ClassFile.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<ClassFile> allInstances = new Ocllib.QuickSet<ClassFile>(ClassFile.class);
+	//public static com.crossecore.ocl.QuickSet<ClassFile> allInstances = new com.crossecore.ocl.QuickSet<ClassFile>(ClassFile.class);
 	
 	java.lang.String getOriginalFilePath();
 	void setOriginalFilePath(java.lang.String value);

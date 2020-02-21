@@ -20,10 +20,10 @@ extends ExpressionImpl implements ParenthesizedExpression
 		if (value != _expression) {
 			NotificationChain msgs = null;
 			if (_expression != null){
-				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PARENTHESIZEDEXPRESSION_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PARENTHESIZED_EXPRESSION__EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PARENTHESIZEDEXPRESSION_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PARENTHESIZED_EXPRESSION__EXPRESSION, null, msgs);
 			}
 			msgs = basicSetExpression(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ExpressionImpl implements ParenthesizedExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.PARENTHESIZEDEXPRESSION_EXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.PARENTHESIZED_EXPRESSION__EXPRESSION , value, value));
 		}
 	}
 
@@ -46,7 +46,7 @@ extends ExpressionImpl implements ParenthesizedExpression
 		Expression oldobj = _expression;
 		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PARENTHESIZEDEXPRESSION_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PARENTHESIZED_EXPRESSION__EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -60,7 +60,7 @@ extends ExpressionImpl implements ParenthesizedExpression
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.PARENTHESIZEDEXPRESSION_EXPRESSION:
+			case Java_PackageImpl.PARENTHESIZED_EXPRESSION__EXPRESSION:
 				return getExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -69,7 +69,7 @@ extends ExpressionImpl implements ParenthesizedExpression
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.PARENTHESIZEDEXPRESSION_EXPRESSION:
+			case Java_PackageImpl.PARENTHESIZED_EXPRESSION__EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
 		}
@@ -79,7 +79,7 @@ extends ExpressionImpl implements ParenthesizedExpression
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.PARENTHESIZEDEXPRESSION_EXPRESSION:
+			case Java_PackageImpl.PARENTHESIZED_EXPRESSION__EXPRESSION:
 				return _expression != null; //single != null;
 		}
 		return super.eIsSet(featureID);

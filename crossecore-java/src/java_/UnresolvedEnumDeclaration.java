@@ -3,19 +3,19 @@ public interface UnresolvedEnumDeclaration
  extends EnumDeclaration,UnresolvedItem
 {
 	
-	public static Ocllib.QuickSet<UnresolvedEnumDeclaration> allInstances_ = new Ocllib.QuickSet<UnresolvedEnumDeclaration>(UnresolvedEnumDeclaration.class);
+	public static com.crossecore.ocl.QuickSet<UnresolvedEnumDeclaration> allInstances_ = new com.crossecore.ocl.QuickSet<UnresolvedEnumDeclaration>(UnresolvedEnumDeclaration.class);
 	
 		
-	public static Ocllib.QuickSet<UnresolvedEnumDeclaration> allInstances(){
+	public static com.crossecore.ocl.QuickSet<UnresolvedEnumDeclaration> allInstances(){
 		
-		Ocllib.QuickSet<UnresolvedEnumDeclaration> result = new Ocllib.QuickSet<UnresolvedEnumDeclaration>(UnresolvedEnumDeclaration.class);
+		com.crossecore.ocl.QuickSet<UnresolvedEnumDeclaration> result = new com.crossecore.ocl.QuickSet<UnresolvedEnumDeclaration>(UnresolvedEnumDeclaration.class);
 		result.addAll(UnresolvedEnumDeclaration.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<UnresolvedEnumDeclaration> allInstances = new Ocllib.QuickSet<UnresolvedEnumDeclaration>(UnresolvedEnumDeclaration.class);
+	//public static com.crossecore.ocl.QuickSet<UnresolvedEnumDeclaration> allInstances = new com.crossecore.ocl.QuickSet<UnresolvedEnumDeclaration>(UnresolvedEnumDeclaration.class);
 	
 	
 }

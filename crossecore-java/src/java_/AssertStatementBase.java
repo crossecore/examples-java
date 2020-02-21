@@ -20,10 +20,10 @@ extends StatementImpl implements AssertStatement
 		if (value != _message) {
 			NotificationChain msgs = null;
 			if (_message != null){
-				msgs = ((InternalEObject)_message).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSERTSTATEMENT_MESSAGE, null, msgs);
+				msgs = ((InternalEObject)_message).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSERT_STATEMENT__MESSAGE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSERTSTATEMENT_MESSAGE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSERT_STATEMENT__MESSAGE, null, msgs);
 			}
 			msgs = basicSetMessage(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends StatementImpl implements AssertStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASSERTSTATEMENT_MESSAGE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASSERT_STATEMENT__MESSAGE , value, value));
 		}
 	}
 	private Expression _expression;
@@ -46,10 +46,10 @@ extends StatementImpl implements AssertStatement
 		if (value != _expression) {
 			NotificationChain msgs = null;
 			if (_expression != null){
-				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSERTSTATEMENT_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSERT_STATEMENT__EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSERTSTATEMENT_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSERT_STATEMENT__EXPRESSION, null, msgs);
 			}
 			msgs = basicSetExpression(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends StatementImpl implements AssertStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASSERTSTATEMENT_EXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASSERT_STATEMENT__EXPRESSION , value, value));
 		}
 	}
 
@@ -68,11 +68,11 @@ extends StatementImpl implements AssertStatement
 	}
 	
 	
-	public NotificationChain basicSetMessage(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _message;
-		_message = newobj;
+	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _expression;
+		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSERTSTATEMENT_MESSAGE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSERT_STATEMENT__EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -82,11 +82,11 @@ extends StatementImpl implements AssertStatement
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _expression;
-		_expression = newobj;
+	public NotificationChain basicSetMessage(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _message;
+		_message = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSERTSTATEMENT_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSERT_STATEMENT__MESSAGE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -100,9 +100,9 @@ extends StatementImpl implements AssertStatement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ASSERTSTATEMENT_MESSAGE:
+			case Java_PackageImpl.ASSERT_STATEMENT__MESSAGE:
 				return getMessage();
-			case Java_PackageImpl.ASSERTSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.ASSERT_STATEMENT__EXPRESSION:
 				return getExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,10 +111,10 @@ extends StatementImpl implements AssertStatement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ASSERTSTATEMENT_MESSAGE:
+			case Java_PackageImpl.ASSERT_STATEMENT__MESSAGE:
 				setMessage((Expression) newValue);
 				return;
-			case Java_PackageImpl.ASSERTSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.ASSERT_STATEMENT__EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
 		}
@@ -124,9 +124,9 @@ extends StatementImpl implements AssertStatement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ASSERTSTATEMENT_MESSAGE:
+			case Java_PackageImpl.ASSERT_STATEMENT__MESSAGE:
 				return _message != null; //single != null;
-			case Java_PackageImpl.ASSERTSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.ASSERT_STATEMENT__EXPRESSION:
 				return _expression != null; //single != null;
 		}
 		return super.eIsSet(featureID);

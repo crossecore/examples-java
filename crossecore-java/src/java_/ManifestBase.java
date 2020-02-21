@@ -8,22 +8,22 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ManifestBase 
 extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manifest
 {
-	private Ocllib.Set<ManifestAttribute> _mainAttributes;
+	private com.crossecore.ocl.Set<ManifestAttribute> _mainAttributes;
 	
-	public Ocllib.Set<ManifestAttribute> getMainAttributes()
+	public com.crossecore.ocl.Set<ManifestAttribute> getMainAttributes()
 	{
 		if(_mainAttributes==null){
-			_mainAttributes = new Ocllib.Set<ManifestAttribute>(ManifestAttribute.class, this, Java_PackageImpl.MANIFEST_MAINATTRIBUTES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MANIFEST_MAINATTRIBUTES);
+			_mainAttributes = new com.crossecore.ocl.Set<ManifestAttribute>(ManifestAttribute.class, this, Java_PackageImpl.MANIFEST__MAIN_ATTRIBUTES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MANIFEST__MAIN_ATTRIBUTES);
 		}
 		return _mainAttributes;
 	
 	}
-	private Ocllib.Set<ManifestEntry> _entryAttributes;
+	private com.crossecore.ocl.Set<ManifestEntry> _entryAttributes;
 	
-	public Ocllib.Set<ManifestEntry> getEntryAttributes()
+	public com.crossecore.ocl.Set<ManifestEntry> getEntryAttributes()
 	{
 		if(_entryAttributes==null){
-			_entryAttributes = new Ocllib.Set<ManifestEntry>(ManifestEntry.class, this, Java_PackageImpl.MANIFEST_ENTRYATTRIBUTES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MANIFEST_ENTRYATTRIBUTES);
+			_entryAttributes = new com.crossecore.ocl.Set<ManifestEntry>(ManifestEntry.class, this, Java_PackageImpl.MANIFEST__ENTRY_ATTRIBUTES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MANIFEST__ENTRY_ATTRIBUTES);
 		}
 		return _entryAttributes;
 	
@@ -40,9 +40,9 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.MANIFEST_MAINATTRIBUTES:
+			case Java_PackageImpl.MANIFEST__MAIN_ATTRIBUTES:
 				return getMainAttributes();
-			case Java_PackageImpl.MANIFEST_ENTRYATTRIBUTES:
+			case Java_PackageImpl.MANIFEST__ENTRY_ATTRIBUTES:
 				return getEntryAttributes();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -51,11 +51,11 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.MANIFEST_MAINATTRIBUTES:
+			case Java_PackageImpl.MANIFEST__MAIN_ATTRIBUTES:
 				getMainAttributes().clear();
 				getMainAttributes().addAll((java.util.Collection<? extends ManifestAttribute>) newValue);
 				return;
-			case Java_PackageImpl.MANIFEST_ENTRYATTRIBUTES:
+			case Java_PackageImpl.MANIFEST__ENTRY_ATTRIBUTES:
 				getEntryAttributes().clear();
 				getEntryAttributes().addAll((java.util.Collection<? extends ManifestEntry>) newValue);
 				return;
@@ -66,9 +66,9 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.MANIFEST_MAINATTRIBUTES:
+			case Java_PackageImpl.MANIFEST__MAIN_ATTRIBUTES:
 				return _mainAttributes != null && !_mainAttributes.isEmpty();
-			case Java_PackageImpl.MANIFEST_ENTRYATTRIBUTES:
+			case Java_PackageImpl.MANIFEST__ENTRY_ATTRIBUTES:
 				return _entryAttributes != null && !_entryAttributes.isEmpty();
 		}
 		return super.eIsSet(featureID);

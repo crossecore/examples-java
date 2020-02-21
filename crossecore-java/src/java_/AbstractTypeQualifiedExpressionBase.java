@@ -20,10 +20,10 @@ extends ExpressionImpl implements AbstractTypeQualifiedExpression
 		if (value != _qualifier) {
 			NotificationChain msgs = null;
 			if (_qualifier != null){
-				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTTYPEQUALIFIEDEXPRESSION_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACT_TYPE_QUALIFIED_EXPRESSION__QUALIFIER, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTTYPEQUALIFIEDEXPRESSION_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACT_TYPE_QUALIFIED_EXPRESSION__QUALIFIER, null, msgs);
 			}
 			msgs = basicSetQualifier(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ExpressionImpl implements AbstractTypeQualifiedExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACTTYPEQUALIFIEDEXPRESSION_QUALIFIER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACT_TYPE_QUALIFIED_EXPRESSION__QUALIFIER , value, value));
 		}
 	}
 
@@ -46,7 +46,7 @@ extends ExpressionImpl implements AbstractTypeQualifiedExpression
 		TypeAccess oldobj = _qualifier;
 		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACTTYPEQUALIFIEDEXPRESSION_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACT_TYPE_QUALIFIED_EXPRESSION__QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -60,7 +60,7 @@ extends ExpressionImpl implements AbstractTypeQualifiedExpression
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTTYPEQUALIFIEDEXPRESSION_QUALIFIER:
+			case Java_PackageImpl.ABSTRACT_TYPE_QUALIFIED_EXPRESSION__QUALIFIER:
 				return getQualifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -69,7 +69,7 @@ extends ExpressionImpl implements AbstractTypeQualifiedExpression
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTTYPEQUALIFIEDEXPRESSION_QUALIFIER:
+			case Java_PackageImpl.ABSTRACT_TYPE_QUALIFIED_EXPRESSION__QUALIFIER:
 				setQualifier((TypeAccess) newValue);
 				return;
 		}
@@ -79,7 +79,7 @@ extends ExpressionImpl implements AbstractTypeQualifiedExpression
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTTYPEQUALIFIEDEXPRESSION_QUALIFIER:
+			case Java_PackageImpl.ABSTRACT_TYPE_QUALIFIED_EXPRESSION__QUALIFIER:
 				return _qualifier != null; //single != null;
 		}
 		return super.eIsSet(featureID);

@@ -19,18 +19,18 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 		java.lang.String oldValue = _name;
 		_name = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.MANIFESTENTRY_NAME, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.MANIFEST_ENTRY__NAME, oldValue, value));
 		
 	}
 	
 	
 	
-	private Ocllib.Set<ManifestAttribute> _attributes;
+	private com.crossecore.ocl.Set<ManifestAttribute> _attributes;
 	
-	public Ocllib.Set<ManifestAttribute> getAttributes()
+	public com.crossecore.ocl.Set<ManifestAttribute> getAttributes()
 	{
 		if(_attributes==null){
-			_attributes = new Ocllib.Set<ManifestAttribute>(ManifestAttribute.class, this, Java_PackageImpl.MANIFESTENTRY_ATTRIBUTES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MANIFESTENTRY_ATTRIBUTES);
+			_attributes = new com.crossecore.ocl.Set<ManifestAttribute>(ManifestAttribute.class, this, Java_PackageImpl.MANIFEST_ENTRY__ATTRIBUTES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.MANIFEST_ENTRY__ATTRIBUTES);
 		}
 		return _attributes;
 	
@@ -47,9 +47,9 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.MANIFESTENTRY_NAME:
+			case Java_PackageImpl.MANIFEST_ENTRY__NAME:
 				return getName();
-			case Java_PackageImpl.MANIFESTENTRY_ATTRIBUTES:
+			case Java_PackageImpl.MANIFEST_ENTRY__ATTRIBUTES:
 				return getAttributes();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -58,10 +58,10 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.MANIFESTENTRY_NAME:
+			case Java_PackageImpl.MANIFEST_ENTRY__NAME:
 				setName((java.lang.String) newValue);
 				return;
-			case Java_PackageImpl.MANIFESTENTRY_ATTRIBUTES:
+			case Java_PackageImpl.MANIFEST_ENTRY__ATTRIBUTES:
 				getAttributes().clear();
 				getAttributes().addAll((java.util.Collection<? extends ManifestAttribute>) newValue);
 				return;
@@ -72,9 +72,9 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.MANIFESTENTRY_NAME:
+			case Java_PackageImpl.MANIFEST_ENTRY__NAME:
 				return NAME_EDEFAULT == null ? _name != null : !NAME_EDEFAULT.equals(_name);
-			case Java_PackageImpl.MANIFESTENTRY_ATTRIBUTES:
+			case Java_PackageImpl.MANIFEST_ENTRY__ATTRIBUTES:
 				return _attributes != null && !_attributes.isEmpty();
 		}
 		return super.eIsSet(featureID);

@@ -3,12 +3,12 @@ public interface AnnotationTypeMemberDeclaration
  extends BodyDeclaration
 {
 	
-	public static Ocllib.QuickSet<AnnotationTypeMemberDeclaration> allInstances_ = new Ocllib.QuickSet<AnnotationTypeMemberDeclaration>(AnnotationTypeMemberDeclaration.class);
+	public static com.crossecore.ocl.QuickSet<AnnotationTypeMemberDeclaration> allInstances_ = new com.crossecore.ocl.QuickSet<AnnotationTypeMemberDeclaration>(AnnotationTypeMemberDeclaration.class);
 	
 		
-	public static Ocllib.QuickSet<AnnotationTypeMemberDeclaration> allInstances(){
+	public static com.crossecore.ocl.QuickSet<AnnotationTypeMemberDeclaration> allInstances(){
 		
-		Ocllib.QuickSet<AnnotationTypeMemberDeclaration> result = new Ocllib.QuickSet<AnnotationTypeMemberDeclaration>(AnnotationTypeMemberDeclaration.class);
+		com.crossecore.ocl.QuickSet<AnnotationTypeMemberDeclaration> result = new com.crossecore.ocl.QuickSet<AnnotationTypeMemberDeclaration>(AnnotationTypeMemberDeclaration.class);
 		result.addAll(AnnotationTypeMemberDeclaration.allInstances_);
 		
 		result.addAll(UnresolvedAnnotationTypeMemberDeclaration.allInstances_);
@@ -16,7 +16,7 @@ public interface AnnotationTypeMemberDeclaration
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<AnnotationTypeMemberDeclaration> allInstances = new Ocllib.QuickSet<AnnotationTypeMemberDeclaration>(AnnotationTypeMemberDeclaration.class);
+	//public static com.crossecore.ocl.QuickSet<AnnotationTypeMemberDeclaration> allInstances = new com.crossecore.ocl.QuickSet<AnnotationTypeMemberDeclaration>(AnnotationTypeMemberDeclaration.class);
 	
 	
 	Expression getDefault();
@@ -24,6 +24,6 @@ public interface AnnotationTypeMemberDeclaration
 	
 	TypeAccess getType();
 	void setType(TypeAccess value);
-	Ocllib.Set<AnnotationMemberValuePair> getUsages();
+	com.crossecore.ocl.Set<AnnotationMemberValuePair> getUsages();
 	
 }

@@ -3,19 +3,19 @@ public interface UnresolvedType
  extends Type,UnresolvedItem
 {
 	
-	public static Ocllib.QuickSet<UnresolvedType> allInstances_ = new Ocllib.QuickSet<UnresolvedType>(UnresolvedType.class);
+	public static com.crossecore.ocl.QuickSet<UnresolvedType> allInstances_ = new com.crossecore.ocl.QuickSet<UnresolvedType>(UnresolvedType.class);
 	
 		
-	public static Ocllib.QuickSet<UnresolvedType> allInstances(){
+	public static com.crossecore.ocl.QuickSet<UnresolvedType> allInstances(){
 		
-		Ocllib.QuickSet<UnresolvedType> result = new Ocllib.QuickSet<UnresolvedType>(UnresolvedType.class);
+		com.crossecore.ocl.QuickSet<UnresolvedType> result = new com.crossecore.ocl.QuickSet<UnresolvedType>(UnresolvedType.class);
 		result.addAll(UnresolvedType.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<UnresolvedType> allInstances = new Ocllib.QuickSet<UnresolvedType>(UnresolvedType.class);
+	//public static com.crossecore.ocl.QuickSet<UnresolvedType> allInstances = new com.crossecore.ocl.QuickSet<UnresolvedType>(UnresolvedType.class);
 	
 	
 }

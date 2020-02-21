@@ -20,10 +20,10 @@ extends AbstractTypeQualifiedExpressionImpl implements SuperFieldAccess
 		if (value != _field) {
 			NotificationChain msgs = null;
 			if (_field != null){
-				msgs = ((InternalEObject)_field).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SUPERFIELDACCESS_FIELD, null, msgs);
+				msgs = ((InternalEObject)_field).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SUPER_FIELD_ACCESS__FIELD, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SUPERFIELDACCESS_FIELD, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SUPER_FIELD_ACCESS__FIELD, null, msgs);
 			}
 			msgs = basicSetField(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends AbstractTypeQualifiedExpressionImpl implements SuperFieldAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SUPERFIELDACCESS_FIELD , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SUPER_FIELD_ACCESS__FIELD , value, value));
 		}
 	}
 
@@ -46,7 +46,7 @@ extends AbstractTypeQualifiedExpressionImpl implements SuperFieldAccess
 		SingleVariableAccess oldobj = _field;
 		_field = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SUPERFIELDACCESS_FIELD, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SUPER_FIELD_ACCESS__FIELD, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -60,7 +60,7 @@ extends AbstractTypeQualifiedExpressionImpl implements SuperFieldAccess
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.SUPERFIELDACCESS_FIELD:
+			case Java_PackageImpl.SUPER_FIELD_ACCESS__FIELD:
 				return getField();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -69,7 +69,7 @@ extends AbstractTypeQualifiedExpressionImpl implements SuperFieldAccess
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.SUPERFIELDACCESS_FIELD:
+			case Java_PackageImpl.SUPER_FIELD_ACCESS__FIELD:
 				setField((SingleVariableAccess) newValue);
 				return;
 		}
@@ -79,7 +79,7 @@ extends AbstractTypeQualifiedExpressionImpl implements SuperFieldAccess
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.SUPERFIELDACCESS_FIELD:
+			case Java_PackageImpl.SUPER_FIELD_ACCESS__FIELD:
 				return _field != null; //single != null;
 		}
 		return super.eIsSet(featureID);

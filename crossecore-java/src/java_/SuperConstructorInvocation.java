@@ -3,19 +3,19 @@ public interface SuperConstructorInvocation
  extends Statement,AbstractMethodInvocation
 {
 	
-	public static Ocllib.QuickSet<SuperConstructorInvocation> allInstances_ = new Ocllib.QuickSet<SuperConstructorInvocation>(SuperConstructorInvocation.class);
+	public static com.crossecore.ocl.QuickSet<SuperConstructorInvocation> allInstances_ = new com.crossecore.ocl.QuickSet<SuperConstructorInvocation>(SuperConstructorInvocation.class);
 	
 		
-	public static Ocllib.QuickSet<SuperConstructorInvocation> allInstances(){
+	public static com.crossecore.ocl.QuickSet<SuperConstructorInvocation> allInstances(){
 		
-		Ocllib.QuickSet<SuperConstructorInvocation> result = new Ocllib.QuickSet<SuperConstructorInvocation>(SuperConstructorInvocation.class);
+		com.crossecore.ocl.QuickSet<SuperConstructorInvocation> result = new com.crossecore.ocl.QuickSet<SuperConstructorInvocation>(SuperConstructorInvocation.class);
 		result.addAll(SuperConstructorInvocation.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<SuperConstructorInvocation> allInstances = new Ocllib.QuickSet<SuperConstructorInvocation>(SuperConstructorInvocation.class);
+	//public static com.crossecore.ocl.QuickSet<SuperConstructorInvocation> allInstances = new com.crossecore.ocl.QuickSet<SuperConstructorInvocation>(SuperConstructorInvocation.class);
 	
 	
 	Expression getExpression();

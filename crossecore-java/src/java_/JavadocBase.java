@@ -8,12 +8,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class JavadocBase 
 extends CommentImpl implements Javadoc
 {
-	private Ocllib.OrderedSet<TagElement> _tags;
+	private com.crossecore.ocl.OrderedSet<TagElement> _tags;
 	
-	public Ocllib.OrderedSet<TagElement> getTags()
+	public com.crossecore.ocl.OrderedSet<TagElement> getTags()
 	{
 		if(_tags==null){
-			_tags = new Ocllib.OrderedSet<TagElement>(TagElement.class, this, Java_PackageImpl.JAVADOC_TAGS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.JAVADOC_TAGS);
+			_tags = new com.crossecore.ocl.OrderedSet<TagElement>(TagElement.class, this, Java_PackageImpl.JAVADOC__TAGS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.JAVADOC__TAGS);
 		}
 		return _tags;
 	
@@ -30,7 +30,7 @@ extends CommentImpl implements Javadoc
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.JAVADOC_TAGS:
+			case Java_PackageImpl.JAVADOC__TAGS:
 				return getTags();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -39,7 +39,7 @@ extends CommentImpl implements Javadoc
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.JAVADOC_TAGS:
+			case Java_PackageImpl.JAVADOC__TAGS:
 				getTags().clear();
 				getTags().addAll((java.util.Collection<? extends TagElement>) newValue);
 				return;
@@ -50,7 +50,7 @@ extends CommentImpl implements Javadoc
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.JAVADOC_TAGS:
+			case Java_PackageImpl.JAVADOC__TAGS:
 				return _tags != null && !_tags.isEmpty();
 		}
 		return super.eIsSet(featureID);

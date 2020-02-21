@@ -3,12 +3,12 @@ public interface LabeledStatement
  extends NamedElement,Statement
 {
 	
-	public static Ocllib.QuickSet<LabeledStatement> allInstances_ = new Ocllib.QuickSet<LabeledStatement>(LabeledStatement.class);
+	public static com.crossecore.ocl.QuickSet<LabeledStatement> allInstances_ = new com.crossecore.ocl.QuickSet<LabeledStatement>(LabeledStatement.class);
 	
 		
-	public static Ocllib.QuickSet<LabeledStatement> allInstances(){
+	public static com.crossecore.ocl.QuickSet<LabeledStatement> allInstances(){
 		
-		Ocllib.QuickSet<LabeledStatement> result = new Ocllib.QuickSet<LabeledStatement>(LabeledStatement.class);
+		com.crossecore.ocl.QuickSet<LabeledStatement> result = new com.crossecore.ocl.QuickSet<LabeledStatement>(LabeledStatement.class);
 		result.addAll(LabeledStatement.allInstances_);
 		
 		result.addAll(UnresolvedLabeledStatement.allInstances_);
@@ -16,12 +16,12 @@ public interface LabeledStatement
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<LabeledStatement> allInstances = new Ocllib.QuickSet<LabeledStatement>(LabeledStatement.class);
+	//public static com.crossecore.ocl.QuickSet<LabeledStatement> allInstances = new com.crossecore.ocl.QuickSet<LabeledStatement>(LabeledStatement.class);
 	
 	
 	Statement getBody();
 	void setBody(Statement value);
-	Ocllib.Set<BreakStatement> getUsagesInBreakStatements();
-	Ocllib.Set<ContinueStatement> getUsagesInContinueStatements();
+	com.crossecore.ocl.Set<BreakStatement> getUsagesInBreakStatements();
+	com.crossecore.ocl.Set<ContinueStatement> getUsagesInContinueStatements();
 	
 }

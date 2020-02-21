@@ -20,10 +20,10 @@ extends ASTNodeImpl implements AbstractMethodInvocation
 		if (value != _method) {
 			NotificationChain msgs = null;
 			if (_method != null){
-				msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES, AbstractMethodDeclaration.class, msgs);
+				msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACT_METHOD_DECLARATION__USAGES, AbstractMethodDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES, AbstractMethodDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACT_METHOD_DECLARATION__USAGES, AbstractMethodDeclaration.class, msgs);
 			}
 			msgs = basicSetMethod(value, msgs);
 			if (msgs != null) {
@@ -31,25 +31,25 @@ extends ASTNodeImpl implements AbstractMethodInvocation
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<Expression> _arguments;
+	private com.crossecore.ocl.OrderedSet<Expression> _arguments;
 	
-	public Ocllib.OrderedSet<Expression> getArguments()
+	public com.crossecore.ocl.OrderedSet<Expression> getArguments()
 	{
 		if(_arguments==null){
-			_arguments = new Ocllib.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS);
+			_arguments = new com.crossecore.ocl.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__ARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__ARGUMENTS);
 		}
 		return _arguments;
 	
 	}
-	private Ocllib.OrderedSet<TypeAccess> _typeArguments;
+	private com.crossecore.ocl.OrderedSet<TypeAccess> _typeArguments;
 	
-	public Ocllib.OrderedSet<TypeAccess> getTypeArguments()
+	public com.crossecore.ocl.OrderedSet<TypeAccess> getTypeArguments()
 	{
 		if(_typeArguments==null){
-			_typeArguments = new Ocllib.OrderedSet<TypeAccess>(TypeAccess.class, this, Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS);
+			_typeArguments = new com.crossecore.ocl.OrderedSet<TypeAccess>(TypeAccess.class, this, Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS);
 		}
 		return _typeArguments;
 	
@@ -64,9 +64,9 @@ extends ASTNodeImpl implements AbstractMethodInvocation
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD:
+			case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD:
 				if (_method != null){
-					msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD, AbstractMethodDeclaration.class, msgs);
+					msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD, AbstractMethodDeclaration.class, msgs);
 				}
 				return basicSetMethod((AbstractMethodDeclaration)otherEnd, msgs);
 		}
@@ -76,7 +76,7 @@ extends ASTNodeImpl implements AbstractMethodInvocation
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD:
+			case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD:
 				return basicSetMethod(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -86,7 +86,7 @@ extends ASTNodeImpl implements AbstractMethodInvocation
 		AbstractMethodDeclaration oldobj = _method;
 		_method = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -100,11 +100,11 @@ extends ASTNodeImpl implements AbstractMethodInvocation
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD:
+			case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD:
 				return getMethod();
-			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS:
+			case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__ARGUMENTS:
 				return getArguments();
-			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS:
+			case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS:
 				return getTypeArguments();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,14 +113,14 @@ extends ASTNodeImpl implements AbstractMethodInvocation
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD:
+			case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD:
 				setMethod((AbstractMethodDeclaration) newValue);
 				return;
-			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS:
+			case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__ARGUMENTS:
 				getArguments().clear();
 				getArguments().addAll((java.util.Collection<? extends Expression>) newValue);
 				return;
-			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS:
+			case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS:
 				getTypeArguments().clear();
 				getTypeArguments().addAll((java.util.Collection<? extends TypeAccess>) newValue);
 				return;
@@ -131,11 +131,11 @@ extends ASTNodeImpl implements AbstractMethodInvocation
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD:
+			case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD:
 				return getMethod() != null; //single, volatile
-			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS:
+			case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__ARGUMENTS:
 				return _arguments != null && !_arguments.isEmpty();
-			case Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS:
+			case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS:
 				return _typeArguments != null && !_typeArguments.isEmpty();
 		}
 		return super.eIsSet(featureID);

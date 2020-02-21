@@ -19,7 +19,7 @@ extends ExpressionImpl implements InfixExpression
 		InfixExpressionKind oldValue = _operator;
 		_operator = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.INFIXEXPRESSION_OPERATOR, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.INFIX_EXPRESSION__OPERATOR, oldValue, value));
 		
 	}
 	
@@ -37,10 +37,10 @@ extends ExpressionImpl implements InfixExpression
 		if (value != _rightOperand) {
 			NotificationChain msgs = null;
 			if (_rightOperand != null){
-				msgs = ((InternalEObject)_rightOperand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INFIXEXPRESSION_RIGHTOPERAND, null, msgs);
+				msgs = ((InternalEObject)_rightOperand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INFIX_EXPRESSION__RIGHT_OPERAND, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INFIXEXPRESSION_RIGHTOPERAND, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INFIX_EXPRESSION__RIGHT_OPERAND, null, msgs);
 			}
 			msgs = basicSetRightOperand(value, msgs);
 			if (msgs != null) {
@@ -48,7 +48,7 @@ extends ExpressionImpl implements InfixExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INFIXEXPRESSION_RIGHTOPERAND , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INFIX_EXPRESSION__RIGHT_OPERAND , value, value));
 		}
 	}
 	private Expression _leftOperand;
@@ -63,10 +63,10 @@ extends ExpressionImpl implements InfixExpression
 		if (value != _leftOperand) {
 			NotificationChain msgs = null;
 			if (_leftOperand != null){
-				msgs = ((InternalEObject)_leftOperand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INFIXEXPRESSION_LEFTOPERAND, null, msgs);
+				msgs = ((InternalEObject)_leftOperand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INFIX_EXPRESSION__LEFT_OPERAND, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INFIXEXPRESSION_LEFTOPERAND, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INFIX_EXPRESSION__LEFT_OPERAND, null, msgs);
 			}
 			msgs = basicSetLeftOperand(value, msgs);
 			if (msgs != null) {
@@ -74,15 +74,15 @@ extends ExpressionImpl implements InfixExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INFIXEXPRESSION_LEFTOPERAND , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INFIX_EXPRESSION__LEFT_OPERAND , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<Expression> _extendedOperands;
+	private com.crossecore.ocl.OrderedSet<Expression> _extendedOperands;
 	
-	public Ocllib.OrderedSet<Expression> getExtendedOperands()
+	public com.crossecore.ocl.OrderedSet<Expression> getExtendedOperands()
 	{
 		if(_extendedOperands==null){
-			_extendedOperands = new Ocllib.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.INFIXEXPRESSION_EXTENDEDOPERANDS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INFIXEXPRESSION_EXTENDEDOPERANDS);
+			_extendedOperands = new com.crossecore.ocl.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.INFIX_EXPRESSION__EXTENDED_OPERANDS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INFIX_EXPRESSION__EXTENDED_OPERANDS);
 		}
 		return _extendedOperands;
 	
@@ -99,7 +99,7 @@ extends ExpressionImpl implements InfixExpression
 		Expression oldobj = _rightOperand;
 		_rightOperand = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INFIXEXPRESSION_RIGHTOPERAND, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INFIX_EXPRESSION__RIGHT_OPERAND, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -113,7 +113,7 @@ extends ExpressionImpl implements InfixExpression
 		Expression oldobj = _leftOperand;
 		_leftOperand = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INFIXEXPRESSION_LEFTOPERAND, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INFIX_EXPRESSION__LEFT_OPERAND, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -127,13 +127,13 @@ extends ExpressionImpl implements InfixExpression
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.INFIXEXPRESSION_OPERATOR:
+			case Java_PackageImpl.INFIX_EXPRESSION__OPERATOR:
 				return getOperator();
-			case Java_PackageImpl.INFIXEXPRESSION_RIGHTOPERAND:
+			case Java_PackageImpl.INFIX_EXPRESSION__RIGHT_OPERAND:
 				return getRightOperand();
-			case Java_PackageImpl.INFIXEXPRESSION_LEFTOPERAND:
+			case Java_PackageImpl.INFIX_EXPRESSION__LEFT_OPERAND:
 				return getLeftOperand();
-			case Java_PackageImpl.INFIXEXPRESSION_EXTENDEDOPERANDS:
+			case Java_PackageImpl.INFIX_EXPRESSION__EXTENDED_OPERANDS:
 				return getExtendedOperands();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -142,16 +142,16 @@ extends ExpressionImpl implements InfixExpression
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.INFIXEXPRESSION_OPERATOR:
+			case Java_PackageImpl.INFIX_EXPRESSION__OPERATOR:
 				setOperator((InfixExpressionKind) newValue);
 				return;
-			case Java_PackageImpl.INFIXEXPRESSION_RIGHTOPERAND:
+			case Java_PackageImpl.INFIX_EXPRESSION__RIGHT_OPERAND:
 				setRightOperand((Expression) newValue);
 				return;
-			case Java_PackageImpl.INFIXEXPRESSION_LEFTOPERAND:
+			case Java_PackageImpl.INFIX_EXPRESSION__LEFT_OPERAND:
 				setLeftOperand((Expression) newValue);
 				return;
-			case Java_PackageImpl.INFIXEXPRESSION_EXTENDEDOPERANDS:
+			case Java_PackageImpl.INFIX_EXPRESSION__EXTENDED_OPERANDS:
 				getExtendedOperands().clear();
 				getExtendedOperands().addAll((java.util.Collection<? extends Expression>) newValue);
 				return;
@@ -162,13 +162,13 @@ extends ExpressionImpl implements InfixExpression
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.INFIXEXPRESSION_OPERATOR:
+			case Java_PackageImpl.INFIX_EXPRESSION__OPERATOR:
 				return OPERATOR_EDEFAULT == null ? _operator != null : !OPERATOR_EDEFAULT.equals(_operator);
-			case Java_PackageImpl.INFIXEXPRESSION_RIGHTOPERAND:
+			case Java_PackageImpl.INFIX_EXPRESSION__RIGHT_OPERAND:
 				return _rightOperand != null; //single != null;
-			case Java_PackageImpl.INFIXEXPRESSION_LEFTOPERAND:
+			case Java_PackageImpl.INFIX_EXPRESSION__LEFT_OPERAND:
 				return _leftOperand != null; //single != null;
-			case Java_PackageImpl.INFIXEXPRESSION_EXTENDEDOPERANDS:
+			case Java_PackageImpl.INFIX_EXPRESSION__EXTENDED_OPERANDS:
 				return _extendedOperands != null && !_extendedOperands.isEmpty();
 		}
 		return super.eIsSet(featureID);

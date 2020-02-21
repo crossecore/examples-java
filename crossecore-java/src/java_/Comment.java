@@ -3,22 +3,22 @@ public interface Comment
  extends ASTNode
 {
 	
-	public static Ocllib.QuickSet<Comment> allInstances_ = new Ocllib.QuickSet<Comment>(Comment.class);
+	public static com.crossecore.ocl.QuickSet<Comment> allInstances_ = new com.crossecore.ocl.QuickSet<Comment>(Comment.class);
 	
 		
-	public static Ocllib.QuickSet<Comment> allInstances(){
+	public static com.crossecore.ocl.QuickSet<Comment> allInstances(){
 		
-		Ocllib.QuickSet<Comment> result = new Ocllib.QuickSet<Comment>(Comment.class);
+		com.crossecore.ocl.QuickSet<Comment> result = new com.crossecore.ocl.QuickSet<Comment>(Comment.class);
 		result.addAll(Comment.allInstances_);
 		
+		result.addAll(LineComment.allInstances_);
 		result.addAll(Javadoc.allInstances_);
 		result.addAll(BlockComment.allInstances_);
-		result.addAll(LineComment.allInstances_);
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<Comment> allInstances = new Ocllib.QuickSet<Comment>(Comment.class);
+	//public static com.crossecore.ocl.QuickSet<Comment> allInstances = new com.crossecore.ocl.QuickSet<Comment>(Comment.class);
 	
 	java.lang.String getContent();
 	void setContent(java.lang.String value);

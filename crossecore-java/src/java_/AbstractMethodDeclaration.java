@@ -3,12 +3,12 @@ public interface AbstractMethodDeclaration
  extends BodyDeclaration
 {
 	
-	public static Ocllib.QuickSet<AbstractMethodDeclaration> allInstances_ = new Ocllib.QuickSet<AbstractMethodDeclaration>(AbstractMethodDeclaration.class);
+	public static com.crossecore.ocl.QuickSet<AbstractMethodDeclaration> allInstances_ = new com.crossecore.ocl.QuickSet<AbstractMethodDeclaration>(AbstractMethodDeclaration.class);
 	
 		
-	public static Ocllib.QuickSet<AbstractMethodDeclaration> allInstances(){
+	public static com.crossecore.ocl.QuickSet<AbstractMethodDeclaration> allInstances(){
 		
-		Ocllib.QuickSet<AbstractMethodDeclaration> result = new Ocllib.QuickSet<AbstractMethodDeclaration>(AbstractMethodDeclaration.class);
+		com.crossecore.ocl.QuickSet<AbstractMethodDeclaration> result = new com.crossecore.ocl.QuickSet<AbstractMethodDeclaration>(AbstractMethodDeclaration.class);
 		result.addAll(AbstractMethodDeclaration.allInstances_);
 		
 		result.addAll(MethodDeclaration.allInstances_);
@@ -18,15 +18,15 @@ public interface AbstractMethodDeclaration
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<AbstractMethodDeclaration> allInstances = new Ocllib.QuickSet<AbstractMethodDeclaration>(AbstractMethodDeclaration.class);
+	//public static com.crossecore.ocl.QuickSet<AbstractMethodDeclaration> allInstances = new com.crossecore.ocl.QuickSet<AbstractMethodDeclaration>(AbstractMethodDeclaration.class);
 	
 	
 	Block getBody();
 	void setBody(Block value);
-	Ocllib.OrderedSet<SingleVariableDeclaration> getParameters();
-	Ocllib.OrderedSet<TypeAccess> getThrownExceptions();
-	Ocllib.OrderedSet<TypeParameter> getTypeParameters();
-	Ocllib.Set<MethodRef> getUsagesInDocComments();
-	Ocllib.Set<AbstractMethodInvocation> getUsages();
+	com.crossecore.ocl.OrderedSet<SingleVariableDeclaration> getParameters();
+	com.crossecore.ocl.OrderedSet<TypeAccess> getThrownExceptions();
+	com.crossecore.ocl.OrderedSet<TypeParameter> getTypeParameters();
+	com.crossecore.ocl.Set<MethodRef> getUsagesInDocComments();
+	com.crossecore.ocl.Set<AbstractMethodInvocation> getUsages();
 	
 }

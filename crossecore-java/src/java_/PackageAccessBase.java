@@ -20,10 +20,10 @@ extends NamespaceAccessImpl implements PackageAccess
 		if (value != _package) {
 			NotificationChain msgs = null;
 			if (_package != null){
-				msgs = ((InternalEObject)_package).eInverseRemove(this, Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS, Package.class, msgs);
+				msgs = ((InternalEObject)_package).eInverseRemove(this, Java_PackageImpl.PACKAGE__USAGES_IN_PACKAGE_ACCESS, Package.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.PACKAGE_USAGESINPACKAGEACCESS, Package.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.PACKAGE__USAGES_IN_PACKAGE_ACCESS, Package.class, msgs);
 			}
 			msgs = basicSetPackage(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends NamespaceAccessImpl implements PackageAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.PACKAGEACCESS_PACKAGE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.PACKAGE_ACCESS__PACKAGE , value, value));
 		}
 	}
 	private PackageAccess _qualifier;
@@ -46,10 +46,10 @@ extends NamespaceAccessImpl implements PackageAccess
 		if (value != _qualifier) {
 			NotificationChain msgs = null;
 			if (_qualifier != null){
-				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PACKAGEACCESS_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PACKAGE_ACCESS__QUALIFIER, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PACKAGEACCESS_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.PACKAGE_ACCESS__QUALIFIER, null, msgs);
 			}
 			msgs = basicSetQualifier(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends NamespaceAccessImpl implements PackageAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.PACKAGEACCESS_QUALIFIER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.PACKAGE_ACCESS__QUALIFIER , value, value));
 		}
 	}
 
@@ -70,9 +70,9 @@ extends NamespaceAccessImpl implements PackageAccess
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.PACKAGEACCESS_PACKAGE:
+			case Java_PackageImpl.PACKAGE_ACCESS__PACKAGE:
 				if (_package != null){
-					msgs = ((InternalEObject)_package).eInverseRemove(this, Java_PackageImpl.PACKAGEACCESS_PACKAGE, Package.class, msgs);
+					msgs = ((InternalEObject)_package).eInverseRemove(this, Java_PackageImpl.PACKAGE_ACCESS__PACKAGE, Package.class, msgs);
 				}
 				return basicSetPackage((Package)otherEnd, msgs);
 		}
@@ -82,7 +82,7 @@ extends NamespaceAccessImpl implements PackageAccess
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.PACKAGEACCESS_PACKAGE:
+			case Java_PackageImpl.PACKAGE_ACCESS__PACKAGE:
 				return basicSetPackage(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -92,7 +92,7 @@ extends NamespaceAccessImpl implements PackageAccess
 		PackageAccess oldobj = _qualifier;
 		_qualifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PACKAGEACCESS_QUALIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PACKAGE_ACCESS__QUALIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -106,7 +106,7 @@ extends NamespaceAccessImpl implements PackageAccess
 		Package oldobj = _package;
 		_package = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PACKAGEACCESS_PACKAGE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.PACKAGE_ACCESS__PACKAGE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -120,9 +120,9 @@ extends NamespaceAccessImpl implements PackageAccess
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.PACKAGEACCESS_PACKAGE:
+			case Java_PackageImpl.PACKAGE_ACCESS__PACKAGE:
 				return getPackage();
-			case Java_PackageImpl.PACKAGEACCESS_QUALIFIER:
+			case Java_PackageImpl.PACKAGE_ACCESS__QUALIFIER:
 				return getQualifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -131,10 +131,10 @@ extends NamespaceAccessImpl implements PackageAccess
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.PACKAGEACCESS_PACKAGE:
+			case Java_PackageImpl.PACKAGE_ACCESS__PACKAGE:
 				setPackage((Package) newValue);
 				return;
-			case Java_PackageImpl.PACKAGEACCESS_QUALIFIER:
+			case Java_PackageImpl.PACKAGE_ACCESS__QUALIFIER:
 				setQualifier((PackageAccess) newValue);
 				return;
 		}
@@ -144,9 +144,9 @@ extends NamespaceAccessImpl implements PackageAccess
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.PACKAGEACCESS_PACKAGE:
+			case Java_PackageImpl.PACKAGE_ACCESS__PACKAGE:
 				return getPackage() != null; //single, volatile
-			case Java_PackageImpl.PACKAGEACCESS_QUALIFIER:
+			case Java_PackageImpl.PACKAGE_ACCESS__QUALIFIER:
 				return _qualifier != null; //single != null;
 		}
 		return super.eIsSet(featureID);

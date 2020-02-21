@@ -20,10 +20,10 @@ extends StatementImpl implements EnhancedForStatement
 		if (value != _body) {
 			NotificationChain msgs = null;
 			if (_body != null){
-				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY, null, msgs);
+				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCED_FOR_STATEMENT__BODY, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCED_FOR_STATEMENT__BODY, null, msgs);
 			}
 			msgs = basicSetBody(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends StatementImpl implements EnhancedForStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENHANCED_FOR_STATEMENT__BODY , value, value));
 		}
 	}
 	private Expression _expression;
@@ -46,10 +46,10 @@ extends StatementImpl implements EnhancedForStatement
 		if (value != _expression) {
 			NotificationChain msgs = null;
 			if (_expression != null){
-				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCEDFORSTATEMENT_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCED_FOR_STATEMENT__EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCEDFORSTATEMENT_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENHANCED_FOR_STATEMENT__EXPRESSION, null, msgs);
 			}
 			msgs = basicSetExpression(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends StatementImpl implements EnhancedForStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENHANCEDFORSTATEMENT_EXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENHANCED_FOR_STATEMENT__EXPRESSION , value, value));
 		}
 	}
 	private SingleVariableDeclaration _parameter;
@@ -72,10 +72,10 @@ extends StatementImpl implements EnhancedForStatement
 		if (value != _parameter) {
 			NotificationChain msgs = null;
 			if (_parameter != null){
-				msgs = ((InternalEObject)_parameter).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, SingleVariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)_parameter).eInverseRemove(this, Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT, SingleVariableDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, SingleVariableDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT, SingleVariableDeclaration.class, msgs);
 			}
 			msgs = basicSetParameter(value, msgs);
 			if (msgs != null) {
@@ -83,7 +83,7 @@ extends StatementImpl implements EnhancedForStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ENHANCED_FOR_STATEMENT__PARAMETER , value, value));
 		}
 	}
 
@@ -96,9 +96,9 @@ extends StatementImpl implements EnhancedForStatement
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER:
+			case Java_PackageImpl.ENHANCED_FOR_STATEMENT__PARAMETER:
 				if (_parameter != null){
-					msgs = ((InternalEObject)_parameter).eInverseRemove(this, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, SingleVariableDeclaration.class, msgs);
+					msgs = ((InternalEObject)_parameter).eInverseRemove(this, Java_PackageImpl.ENHANCED_FOR_STATEMENT__PARAMETER, SingleVariableDeclaration.class, msgs);
 				}
 				return basicSetParameter((SingleVariableDeclaration)otherEnd, msgs);
 		}
@@ -108,17 +108,17 @@ extends StatementImpl implements EnhancedForStatement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER:
+			case Java_PackageImpl.ENHANCED_FOR_STATEMENT__PARAMETER:
 				return basicSetParameter(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _expression;
-		_expression = newobj;
+	public NotificationChain basicSetBody(Statement newobj, NotificationChain msgs) {
+		Statement oldobj = _body;
+		_body = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCEDFORSTATEMENT_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCED_FOR_STATEMENT__BODY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -132,7 +132,7 @@ extends StatementImpl implements EnhancedForStatement
 		SingleVariableDeclaration oldobj = _parameter;
 		_parameter = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCED_FOR_STATEMENT__PARAMETER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -142,11 +142,11 @@ extends StatementImpl implements EnhancedForStatement
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetBody(Statement newobj, NotificationChain msgs) {
-		Statement oldobj = _body;
-		_body = newobj;
+	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _expression;
+		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ENHANCED_FOR_STATEMENT__EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -160,11 +160,11 @@ extends StatementImpl implements EnhancedForStatement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY:
+			case Java_PackageImpl.ENHANCED_FOR_STATEMENT__BODY:
 				return getBody();
-			case Java_PackageImpl.ENHANCEDFORSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.ENHANCED_FOR_STATEMENT__EXPRESSION:
 				return getExpression();
-			case Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER:
+			case Java_PackageImpl.ENHANCED_FOR_STATEMENT__PARAMETER:
 				return getParameter();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -173,13 +173,13 @@ extends StatementImpl implements EnhancedForStatement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY:
+			case Java_PackageImpl.ENHANCED_FOR_STATEMENT__BODY:
 				setBody((Statement) newValue);
 				return;
-			case Java_PackageImpl.ENHANCEDFORSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.ENHANCED_FOR_STATEMENT__EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
-			case Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER:
+			case Java_PackageImpl.ENHANCED_FOR_STATEMENT__PARAMETER:
 				setParameter((SingleVariableDeclaration) newValue);
 				return;
 		}
@@ -189,11 +189,11 @@ extends StatementImpl implements EnhancedForStatement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ENHANCEDFORSTATEMENT_BODY:
+			case Java_PackageImpl.ENHANCED_FOR_STATEMENT__BODY:
 				return _body != null; //single != null;
-			case Java_PackageImpl.ENHANCEDFORSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.ENHANCED_FOR_STATEMENT__EXPRESSION:
 				return _expression != null; //single != null;
-			case Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER:
+			case Java_PackageImpl.ENHANCED_FOR_STATEMENT__PARAMETER:
 				return _parameter != null; //single != null;
 		}
 		return super.eIsSet(featureID);

@@ -19,7 +19,7 @@ extends TypeImpl implements ArrayType
 		int oldValue = _dimensions;
 		_dimensions = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.ARRAYTYPE_DIMENSIONS, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.ARRAY_TYPE__DIMENSIONS, oldValue, value));
 		
 	}
 	
@@ -37,10 +37,10 @@ extends TypeImpl implements ArrayType
 		if (value != _elementType) {
 			NotificationChain msgs = null;
 			if (_elementType != null){
-				msgs = ((InternalEObject)_elementType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYTYPE_ELEMENTTYPE, null, msgs);
+				msgs = ((InternalEObject)_elementType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_TYPE__ELEMENT_TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYTYPE_ELEMENTTYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_TYPE__ELEMENT_TYPE, null, msgs);
 			}
 			msgs = basicSetElementType(value, msgs);
 			if (msgs != null) {
@@ -48,7 +48,7 @@ extends TypeImpl implements ArrayType
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAYTYPE_ELEMENTTYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAY_TYPE__ELEMENT_TYPE , value, value));
 		}
 	}
 
@@ -63,7 +63,7 @@ extends TypeImpl implements ArrayType
 		TypeAccess oldobj = _elementType;
 		_elementType = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYTYPE_ELEMENTTYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAY_TYPE__ELEMENT_TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -77,9 +77,9 @@ extends TypeImpl implements ArrayType
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYTYPE_DIMENSIONS:
+			case Java_PackageImpl.ARRAY_TYPE__DIMENSIONS:
 				return getDimensions();
-			case Java_PackageImpl.ARRAYTYPE_ELEMENTTYPE:
+			case Java_PackageImpl.ARRAY_TYPE__ELEMENT_TYPE:
 				return getElementType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -88,10 +88,10 @@ extends TypeImpl implements ArrayType
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYTYPE_DIMENSIONS:
+			case Java_PackageImpl.ARRAY_TYPE__DIMENSIONS:
 				setDimensions((int) newValue);
 				return;
-			case Java_PackageImpl.ARRAYTYPE_ELEMENTTYPE:
+			case Java_PackageImpl.ARRAY_TYPE__ELEMENT_TYPE:
 				setElementType((TypeAccess) newValue);
 				return;
 		}
@@ -101,9 +101,9 @@ extends TypeImpl implements ArrayType
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYTYPE_DIMENSIONS:
+			case Java_PackageImpl.ARRAY_TYPE__DIMENSIONS:
 				return _dimensions != DIMENSIONS_EDEFAULT;
-			case Java_PackageImpl.ARRAYTYPE_ELEMENTTYPE:
+			case Java_PackageImpl.ARRAY_TYPE__ELEMENT_TYPE:
 				return _elementType != null; //single != null;
 		}
 		return super.eIsSet(featureID);

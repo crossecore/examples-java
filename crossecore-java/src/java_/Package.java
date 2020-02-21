@@ -3,28 +3,28 @@ public interface Package
  extends NamedElement
 {
 	
-	public static Ocllib.QuickSet<Package> allInstances_ = new Ocllib.QuickSet<Package>(Package.class);
+	public static com.crossecore.ocl.QuickSet<Package> allInstances_ = new com.crossecore.ocl.QuickSet<Package>(Package.class);
 	
 		
-	public static Ocllib.QuickSet<Package> allInstances(){
+	public static com.crossecore.ocl.QuickSet<Package> allInstances(){
 		
-		Ocllib.QuickSet<Package> result = new Ocllib.QuickSet<Package>(Package.class);
+		com.crossecore.ocl.QuickSet<Package> result = new com.crossecore.ocl.QuickSet<Package>(Package.class);
 		result.addAll(Package.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<Package> allInstances = new Ocllib.QuickSet<Package>(Package.class);
+	//public static com.crossecore.ocl.QuickSet<Package> allInstances = new com.crossecore.ocl.QuickSet<Package>(Package.class);
 	
-	Ocllib.Set<AbstractTypeDeclaration> getOwnedElements();
+	com.crossecore.ocl.Set<AbstractTypeDeclaration> getOwnedElements();
 	
 	Model getModel();
 	void setModel(Model value);
-	Ocllib.Set<Package> getOwnedPackages();
+	com.crossecore.ocl.Set<Package> getOwnedPackages();
 	
 	Package getPackage();
 	void setPackage(Package value);
-	Ocllib.Set<PackageAccess> getUsagesInPackageAccess();
+	com.crossecore.ocl.Set<PackageAccess> getUsagesInPackageAccess();
 	
 }

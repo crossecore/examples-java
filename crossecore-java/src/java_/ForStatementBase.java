@@ -20,10 +20,10 @@ extends StatementImpl implements ForStatement
 		if (value != _expression) {
 			NotificationChain msgs = null;
 			if (_expression != null){
-				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FORSTATEMENT_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FOR_STATEMENT__EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FORSTATEMENT_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FOR_STATEMENT__EXPRESSION, null, msgs);
 			}
 			msgs = basicSetExpression(value, msgs);
 			if (msgs != null) {
@@ -31,25 +31,25 @@ extends StatementImpl implements ForStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.FORSTATEMENT_EXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.FOR_STATEMENT__EXPRESSION , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<Expression> _updaters;
+	private com.crossecore.ocl.OrderedSet<Expression> _updaters;
 	
-	public Ocllib.OrderedSet<Expression> getUpdaters()
+	public com.crossecore.ocl.OrderedSet<Expression> getUpdaters()
 	{
 		if(_updaters==null){
-			_updaters = new Ocllib.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.FORSTATEMENT_UPDATERS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FORSTATEMENT_UPDATERS);
+			_updaters = new com.crossecore.ocl.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.FOR_STATEMENT__UPDATERS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FOR_STATEMENT__UPDATERS);
 		}
 		return _updaters;
 	
 	}
-	private Ocllib.OrderedSet<Expression> _initializers;
+	private com.crossecore.ocl.OrderedSet<Expression> _initializers;
 	
-	public Ocllib.OrderedSet<Expression> getInitializers()
+	public com.crossecore.ocl.OrderedSet<Expression> getInitializers()
 	{
 		if(_initializers==null){
-			_initializers = new Ocllib.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.FORSTATEMENT_INITIALIZERS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FORSTATEMENT_INITIALIZERS);
+			_initializers = new com.crossecore.ocl.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.FOR_STATEMENT__INITIALIZERS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FOR_STATEMENT__INITIALIZERS);
 		}
 		return _initializers;
 	
@@ -66,10 +66,10 @@ extends StatementImpl implements ForStatement
 		if (value != _body) {
 			NotificationChain msgs = null;
 			if (_body != null){
-				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FORSTATEMENT_BODY, null, msgs);
+				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FOR_STATEMENT__BODY, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FORSTATEMENT_BODY, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.FOR_STATEMENT__BODY, null, msgs);
 			}
 			msgs = basicSetBody(value, msgs);
 			if (msgs != null) {
@@ -77,7 +77,7 @@ extends StatementImpl implements ForStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.FORSTATEMENT_BODY , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.FOR_STATEMENT__BODY , value, value));
 		}
 	}
 
@@ -92,7 +92,7 @@ extends StatementImpl implements ForStatement
 		Expression oldobj = _expression;
 		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.FORSTATEMENT_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.FOR_STATEMENT__EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -106,7 +106,7 @@ extends StatementImpl implements ForStatement
 		Statement oldobj = _body;
 		_body = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.FORSTATEMENT_BODY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.FOR_STATEMENT__BODY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -120,13 +120,13 @@ extends StatementImpl implements ForStatement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.FORSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.FOR_STATEMENT__EXPRESSION:
 				return getExpression();
-			case Java_PackageImpl.FORSTATEMENT_UPDATERS:
+			case Java_PackageImpl.FOR_STATEMENT__UPDATERS:
 				return getUpdaters();
-			case Java_PackageImpl.FORSTATEMENT_INITIALIZERS:
+			case Java_PackageImpl.FOR_STATEMENT__INITIALIZERS:
 				return getInitializers();
-			case Java_PackageImpl.FORSTATEMENT_BODY:
+			case Java_PackageImpl.FOR_STATEMENT__BODY:
 				return getBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -135,18 +135,18 @@ extends StatementImpl implements ForStatement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.FORSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.FOR_STATEMENT__EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
-			case Java_PackageImpl.FORSTATEMENT_UPDATERS:
+			case Java_PackageImpl.FOR_STATEMENT__UPDATERS:
 				getUpdaters().clear();
 				getUpdaters().addAll((java.util.Collection<? extends Expression>) newValue);
 				return;
-			case Java_PackageImpl.FORSTATEMENT_INITIALIZERS:
+			case Java_PackageImpl.FOR_STATEMENT__INITIALIZERS:
 				getInitializers().clear();
 				getInitializers().addAll((java.util.Collection<? extends Expression>) newValue);
 				return;
-			case Java_PackageImpl.FORSTATEMENT_BODY:
+			case Java_PackageImpl.FOR_STATEMENT__BODY:
 				setBody((Statement) newValue);
 				return;
 		}
@@ -156,13 +156,13 @@ extends StatementImpl implements ForStatement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.FORSTATEMENT_EXPRESSION:
+			case Java_PackageImpl.FOR_STATEMENT__EXPRESSION:
 				return _expression != null; //single != null;
-			case Java_PackageImpl.FORSTATEMENT_UPDATERS:
+			case Java_PackageImpl.FOR_STATEMENT__UPDATERS:
 				return _updaters != null && !_updaters.isEmpty();
-			case Java_PackageImpl.FORSTATEMENT_INITIALIZERS:
+			case Java_PackageImpl.FOR_STATEMENT__INITIALIZERS:
 				return _initializers != null && !_initializers.isEmpty();
-			case Java_PackageImpl.FORSTATEMENT_BODY:
+			case Java_PackageImpl.FOR_STATEMENT__BODY:
 				return _body != null; //single != null;
 		}
 		return super.eIsSet(featureID);

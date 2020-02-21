@@ -3,19 +3,19 @@ public interface UnresolvedVariableDeclarationFragment
  extends VariableDeclarationFragment,UnresolvedItem
 {
 	
-	public static Ocllib.QuickSet<UnresolvedVariableDeclarationFragment> allInstances_ = new Ocllib.QuickSet<UnresolvedVariableDeclarationFragment>(UnresolvedVariableDeclarationFragment.class);
+	public static com.crossecore.ocl.QuickSet<UnresolvedVariableDeclarationFragment> allInstances_ = new com.crossecore.ocl.QuickSet<UnresolvedVariableDeclarationFragment>(UnresolvedVariableDeclarationFragment.class);
 	
 		
-	public static Ocllib.QuickSet<UnresolvedVariableDeclarationFragment> allInstances(){
+	public static com.crossecore.ocl.QuickSet<UnresolvedVariableDeclarationFragment> allInstances(){
 		
-		Ocllib.QuickSet<UnresolvedVariableDeclarationFragment> result = new Ocllib.QuickSet<UnresolvedVariableDeclarationFragment>(UnresolvedVariableDeclarationFragment.class);
+		com.crossecore.ocl.QuickSet<UnresolvedVariableDeclarationFragment> result = new com.crossecore.ocl.QuickSet<UnresolvedVariableDeclarationFragment>(UnresolvedVariableDeclarationFragment.class);
 		result.addAll(UnresolvedVariableDeclarationFragment.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<UnresolvedVariableDeclarationFragment> allInstances = new Ocllib.QuickSet<UnresolvedVariableDeclarationFragment>(UnresolvedVariableDeclarationFragment.class);
+	//public static com.crossecore.ocl.QuickSet<UnresolvedVariableDeclarationFragment> allInstances = new com.crossecore.ocl.QuickSet<UnresolvedVariableDeclarationFragment>(UnresolvedVariableDeclarationFragment.class);
 	
 	
 }

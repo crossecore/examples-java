@@ -19,7 +19,7 @@ extends ExpressionImpl implements BooleanLiteral
 		boolean oldValue = _value;
 		_value = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.BOOLEANLITERAL_VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.BOOLEAN_LITERAL__VALUE, oldValue, value));
 		
 	}
 	
@@ -37,7 +37,7 @@ extends ExpressionImpl implements BooleanLiteral
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.BOOLEANLITERAL_VALUE:
+			case Java_PackageImpl.BOOLEAN_LITERAL__VALUE:
 				return isValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -46,7 +46,7 @@ extends ExpressionImpl implements BooleanLiteral
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.BOOLEANLITERAL_VALUE:
+			case Java_PackageImpl.BOOLEAN_LITERAL__VALUE:
 				setValue((boolean) newValue);
 				return;
 		}
@@ -56,7 +56,7 @@ extends ExpressionImpl implements BooleanLiteral
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.BOOLEANLITERAL_VALUE:
+			case Java_PackageImpl.BOOLEAN_LITERAL__VALUE:
 				return _value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

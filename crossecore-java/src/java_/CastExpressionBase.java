@@ -20,10 +20,10 @@ extends ExpressionImpl implements CastExpression
 		if (value != _expression) {
 			NotificationChain msgs = null;
 			if (_expression != null){
-				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CASTEXPRESSION_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CAST_EXPRESSION__EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CASTEXPRESSION_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CAST_EXPRESSION__EXPRESSION, null, msgs);
 			}
 			msgs = basicSetExpression(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ExpressionImpl implements CastExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CASTEXPRESSION_EXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CAST_EXPRESSION__EXPRESSION , value, value));
 		}
 	}
 	private TypeAccess _type;
@@ -46,10 +46,10 @@ extends ExpressionImpl implements CastExpression
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CASTEXPRESSION_TYPE, null, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CAST_EXPRESSION__TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CASTEXPRESSION_TYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CAST_EXPRESSION__TYPE, null, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends ExpressionImpl implements CastExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CASTEXPRESSION_TYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CAST_EXPRESSION__TYPE , value, value));
 		}
 	}
 
@@ -68,11 +68,11 @@ extends ExpressionImpl implements CastExpression
 	}
 	
 	
-	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _expression;
-		_expression = newobj;
+	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
+		TypeAccess oldobj = _type;
+		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CASTEXPRESSION_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CAST_EXPRESSION__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -82,11 +82,11 @@ extends ExpressionImpl implements CastExpression
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
-		TypeAccess oldobj = _type;
-		_type = newobj;
+	public NotificationChain basicSetExpression(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _expression;
+		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CASTEXPRESSION_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CAST_EXPRESSION__EXPRESSION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -100,9 +100,9 @@ extends ExpressionImpl implements CastExpression
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.CASTEXPRESSION_EXPRESSION:
+			case Java_PackageImpl.CAST_EXPRESSION__EXPRESSION:
 				return getExpression();
-			case Java_PackageImpl.CASTEXPRESSION_TYPE:
+			case Java_PackageImpl.CAST_EXPRESSION__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,10 +111,10 @@ extends ExpressionImpl implements CastExpression
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.CASTEXPRESSION_EXPRESSION:
+			case Java_PackageImpl.CAST_EXPRESSION__EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
-			case Java_PackageImpl.CASTEXPRESSION_TYPE:
+			case Java_PackageImpl.CAST_EXPRESSION__TYPE:
 				setType((TypeAccess) newValue);
 				return;
 		}
@@ -124,9 +124,9 @@ extends ExpressionImpl implements CastExpression
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.CASTEXPRESSION_EXPRESSION:
+			case Java_PackageImpl.CAST_EXPRESSION__EXPRESSION:
 				return _expression != null; //single != null;
-			case Java_PackageImpl.CASTEXPRESSION_TYPE:
+			case Java_PackageImpl.CAST_EXPRESSION__TYPE:
 				return _type != null; //single != null;
 		}
 		return super.eIsSet(featureID);

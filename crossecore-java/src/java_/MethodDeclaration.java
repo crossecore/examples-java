@@ -3,12 +3,12 @@ public interface MethodDeclaration
  extends AbstractMethodDeclaration
 {
 	
-	public static Ocllib.QuickSet<MethodDeclaration> allInstances_ = new Ocllib.QuickSet<MethodDeclaration>(MethodDeclaration.class);
+	public static com.crossecore.ocl.QuickSet<MethodDeclaration> allInstances_ = new com.crossecore.ocl.QuickSet<MethodDeclaration>(MethodDeclaration.class);
 	
 		
-	public static Ocllib.QuickSet<MethodDeclaration> allInstances(){
+	public static com.crossecore.ocl.QuickSet<MethodDeclaration> allInstances(){
 		
-		Ocllib.QuickSet<MethodDeclaration> result = new Ocllib.QuickSet<MethodDeclaration>(MethodDeclaration.class);
+		com.crossecore.ocl.QuickSet<MethodDeclaration> result = new com.crossecore.ocl.QuickSet<MethodDeclaration>(MethodDeclaration.class);
 		result.addAll(MethodDeclaration.allInstances_);
 		
 		result.addAll(UnresolvedMethodDeclaration.allInstances_);
@@ -16,7 +16,7 @@ public interface MethodDeclaration
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<MethodDeclaration> allInstances = new Ocllib.QuickSet<MethodDeclaration>(MethodDeclaration.class);
+	//public static com.crossecore.ocl.QuickSet<MethodDeclaration> allInstances = new com.crossecore.ocl.QuickSet<MethodDeclaration>(MethodDeclaration.class);
 	
 	int getExtraArrayDimensions();
 	void setExtraArrayDimensions(int value);
@@ -26,6 +26,6 @@ public interface MethodDeclaration
 	
 	MethodDeclaration getRedefinedMethodDeclaration();
 	void setRedefinedMethodDeclaration(MethodDeclaration value);
-	Ocllib.Set<MethodDeclaration> getRedefinitions();
+	com.crossecore.ocl.Set<MethodDeclaration> getRedefinitions();
 	
 }

@@ -3,12 +3,12 @@ public interface ClassDeclaration
  extends TypeDeclaration
 {
 	
-	public static Ocllib.QuickSet<ClassDeclaration> allInstances_ = new Ocllib.QuickSet<ClassDeclaration>(ClassDeclaration.class);
+	public static com.crossecore.ocl.QuickSet<ClassDeclaration> allInstances_ = new com.crossecore.ocl.QuickSet<ClassDeclaration>(ClassDeclaration.class);
 	
 		
-	public static Ocllib.QuickSet<ClassDeclaration> allInstances(){
+	public static com.crossecore.ocl.QuickSet<ClassDeclaration> allInstances(){
 		
-		Ocllib.QuickSet<ClassDeclaration> result = new Ocllib.QuickSet<ClassDeclaration>(ClassDeclaration.class);
+		com.crossecore.ocl.QuickSet<ClassDeclaration> result = new com.crossecore.ocl.QuickSet<ClassDeclaration>(ClassDeclaration.class);
 		result.addAll(ClassDeclaration.allInstances_);
 		
 		result.addAll(UnresolvedClassDeclaration.allInstances_);
@@ -16,7 +16,7 @@ public interface ClassDeclaration
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<ClassDeclaration> allInstances = new Ocllib.QuickSet<ClassDeclaration>(ClassDeclaration.class);
+	//public static com.crossecore.ocl.QuickSet<ClassDeclaration> allInstances = new com.crossecore.ocl.QuickSet<ClassDeclaration>(ClassDeclaration.class);
 	
 	
 	TypeAccess getSuperClass();

@@ -19,7 +19,7 @@ extends TypeImpl implements WildCardType
 		boolean oldValue = _upperBound;
 		_upperBound = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.WILDCARDTYPE_UPPERBOUND, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.WILD_CARD_TYPE__UPPER_BOUND, oldValue, value));
 		
 	}
 	
@@ -37,10 +37,10 @@ extends TypeImpl implements WildCardType
 		if (value != _bound) {
 			NotificationChain msgs = null;
 			if (_bound != null){
-				msgs = ((InternalEObject)_bound).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.WILDCARDTYPE_BOUND, null, msgs);
+				msgs = ((InternalEObject)_bound).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.WILD_CARD_TYPE__BOUND, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.WILDCARDTYPE_BOUND, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.WILD_CARD_TYPE__BOUND, null, msgs);
 			}
 			msgs = basicSetBound(value, msgs);
 			if (msgs != null) {
@@ -48,7 +48,7 @@ extends TypeImpl implements WildCardType
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.WILDCARDTYPE_BOUND , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.WILD_CARD_TYPE__BOUND , value, value));
 		}
 	}
 
@@ -63,7 +63,7 @@ extends TypeImpl implements WildCardType
 		TypeAccess oldobj = _bound;
 		_bound = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.WILDCARDTYPE_BOUND, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.WILD_CARD_TYPE__BOUND, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -77,9 +77,9 @@ extends TypeImpl implements WildCardType
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.WILDCARDTYPE_UPPERBOUND:
+			case Java_PackageImpl.WILD_CARD_TYPE__UPPER_BOUND:
 				return isUpperBound();
-			case Java_PackageImpl.WILDCARDTYPE_BOUND:
+			case Java_PackageImpl.WILD_CARD_TYPE__BOUND:
 				return getBound();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -88,10 +88,10 @@ extends TypeImpl implements WildCardType
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.WILDCARDTYPE_UPPERBOUND:
+			case Java_PackageImpl.WILD_CARD_TYPE__UPPER_BOUND:
 				setUpperBound((boolean) newValue);
 				return;
-			case Java_PackageImpl.WILDCARDTYPE_BOUND:
+			case Java_PackageImpl.WILD_CARD_TYPE__BOUND:
 				setBound((TypeAccess) newValue);
 				return;
 		}
@@ -101,9 +101,9 @@ extends TypeImpl implements WildCardType
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.WILDCARDTYPE_UPPERBOUND:
+			case Java_PackageImpl.WILD_CARD_TYPE__UPPER_BOUND:
 				return _upperBound != UPPERBOUND_EDEFAULT;
-			case Java_PackageImpl.WILDCARDTYPE_BOUND:
+			case Java_PackageImpl.WILD_CARD_TYPE__BOUND:
 				return _bound != null; //single != null;
 		}
 		return super.eIsSet(featureID);

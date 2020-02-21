@@ -3,19 +3,19 @@ public interface UnresolvedMethodDeclaration
  extends MethodDeclaration,UnresolvedItem
 {
 	
-	public static Ocllib.QuickSet<UnresolvedMethodDeclaration> allInstances_ = new Ocllib.QuickSet<UnresolvedMethodDeclaration>(UnresolvedMethodDeclaration.class);
+	public static com.crossecore.ocl.QuickSet<UnresolvedMethodDeclaration> allInstances_ = new com.crossecore.ocl.QuickSet<UnresolvedMethodDeclaration>(UnresolvedMethodDeclaration.class);
 	
 		
-	public static Ocllib.QuickSet<UnresolvedMethodDeclaration> allInstances(){
+	public static com.crossecore.ocl.QuickSet<UnresolvedMethodDeclaration> allInstances(){
 		
-		Ocllib.QuickSet<UnresolvedMethodDeclaration> result = new Ocllib.QuickSet<UnresolvedMethodDeclaration>(UnresolvedMethodDeclaration.class);
+		com.crossecore.ocl.QuickSet<UnresolvedMethodDeclaration> result = new com.crossecore.ocl.QuickSet<UnresolvedMethodDeclaration>(UnresolvedMethodDeclaration.class);
 		result.addAll(UnresolvedMethodDeclaration.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<UnresolvedMethodDeclaration> allInstances = new Ocllib.QuickSet<UnresolvedMethodDeclaration>(UnresolvedMethodDeclaration.class);
+	//public static com.crossecore.ocl.QuickSet<UnresolvedMethodDeclaration> allInstances = new com.crossecore.ocl.QuickSet<UnresolvedMethodDeclaration>(UnresolvedMethodDeclaration.class);
 	
 	
 }

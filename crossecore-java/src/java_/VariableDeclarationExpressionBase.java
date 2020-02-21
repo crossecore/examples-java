@@ -20,10 +20,10 @@ extends ExpressionImpl implements VariableDeclarationExpression
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE, null, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE, null, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {
@@ -31,15 +31,15 @@ extends ExpressionImpl implements VariableDeclarationExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<VariableDeclarationFragment> _fragments;
+	private com.crossecore.ocl.OrderedSet<VariableDeclarationFragment> _fragments;
 	
-	public Ocllib.OrderedSet<VariableDeclarationFragment> getFragments()
+	public com.crossecore.ocl.OrderedSet<VariableDeclarationFragment> getFragments()
 	{
 		if(_fragments==null){
-			_fragments = new Ocllib.OrderedSet<VariableDeclarationFragment>(VariableDeclarationFragment.class, this, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS, Java_PackageImpl.VARIABLEDECLARATIONFRAGMENT_VARIABLESCONTAINER);
+			_fragments = new com.crossecore.ocl.OrderedSet<VariableDeclarationFragment>(VariableDeclarationFragment.class, this, Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS, Java_PackageImpl.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER);
 		}
 		return _fragments;
 	
@@ -56,10 +56,10 @@ extends ExpressionImpl implements VariableDeclarationExpression
 		if (value != _modifier) {
 			NotificationChain msgs = null;
 			if (_modifier != null){
-				msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONEXPRESSION, Modifier.class, msgs);
+				msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER__VARIABLE_DECLARATION_EXPRESSION, Modifier.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER_VARIABLEDECLARATIONEXPRESSION, Modifier.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER__VARIABLE_DECLARATION_EXPRESSION, Modifier.class, msgs);
 			}
 			msgs = basicSetModifier(value, msgs);
 			if (msgs != null) {
@@ -67,15 +67,15 @@ extends ExpressionImpl implements VariableDeclarationExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__MODIFIER , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<Annotation> _annotations;
+	private com.crossecore.ocl.OrderedSet<Annotation> _annotations;
 	
-	public Ocllib.OrderedSet<Annotation> getAnnotations()
+	public com.crossecore.ocl.OrderedSet<Annotation> getAnnotations()
 	{
 		if(_annotations==null){
-			_annotations = new Ocllib.OrderedSet<Annotation>(Annotation.class, this, Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_ANNOTATIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_ANNOTATIONS);
+			_annotations = new com.crossecore.ocl.OrderedSet<Annotation>(Annotation.class, this, Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__ANNOTATIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__ANNOTATIONS);
 		}
 		return _annotations;
 	
@@ -90,13 +90,13 @@ extends ExpressionImpl implements VariableDeclarationExpression
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__FRAGMENTS:
+				return getFragments().basicAdd((VariableDeclarationFragment)otherEnd, msgs);
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__MODIFIER:
 				if (_modifier != null){
-					msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER, Modifier.class, msgs);
+					msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__MODIFIER, Modifier.class, msgs);
 				}
 				return basicSetModifier((Modifier)otherEnd, msgs);
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS:
-				return getFragments().basicAdd((VariableDeclarationFragment)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -104,10 +104,10 @@ extends ExpressionImpl implements VariableDeclarationExpression
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER:
-				return basicSetModifier(null, msgs);
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__FRAGMENTS:
 				return getFragments().basicRemove((VariableDeclarationFragment)otherEnd, msgs);
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__MODIFIER:
+				return basicSetModifier(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -116,7 +116,7 @@ extends ExpressionImpl implements VariableDeclarationExpression
 		Modifier oldobj = _modifier;
 		_modifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__MODIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -130,7 +130,7 @@ extends ExpressionImpl implements VariableDeclarationExpression
 		TypeAccess oldobj = _type;
 		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -144,13 +144,13 @@ extends ExpressionImpl implements VariableDeclarationExpression
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_TYPE:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__TYPE:
 				return getType();
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__FRAGMENTS:
 				return getFragments();
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__MODIFIER:
 				return getModifier();
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_ANNOTATIONS:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__ANNOTATIONS:
 				return getAnnotations();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -159,17 +159,17 @@ extends ExpressionImpl implements VariableDeclarationExpression
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_TYPE:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__TYPE:
 				setType((TypeAccess) newValue);
 				return;
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__FRAGMENTS:
 				getFragments().clear();
 				getFragments().addAll((java.util.Collection<? extends VariableDeclarationFragment>) newValue);
 				return;
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__MODIFIER:
 				setModifier((Modifier) newValue);
 				return;
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_ANNOTATIONS:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__ANNOTATIONS:
 				getAnnotations().clear();
 				getAnnotations().addAll((java.util.Collection<? extends Annotation>) newValue);
 				return;
@@ -180,13 +180,13 @@ extends ExpressionImpl implements VariableDeclarationExpression
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_TYPE:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__TYPE:
 				return _type != null; //single != null;
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__FRAGMENTS:
 				return _fragments != null && !_fragments.isEmpty();
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_MODIFIER:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__MODIFIER:
 				return _modifier != null; //single != null;
-			case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_ANNOTATIONS:
+			case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__ANNOTATIONS:
 				return _annotations != null && !_annotations.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -196,8 +196,8 @@ extends ExpressionImpl implements VariableDeclarationExpression
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == AbstractVariablesContainer.class) {
 			switch (derivedFeatureID) {
-				case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_TYPE: return Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE;
-				case Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS: return Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS;
+				case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__TYPE: return Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE;
+				case Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__FRAGMENTS: return Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS;
 				default: return -1;
 			}
 		}
@@ -209,8 +209,8 @@ extends ExpressionImpl implements VariableDeclarationExpression
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == AbstractVariablesContainer.class) {
 			switch (baseFeatureID) {
-				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_TYPE: return Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_TYPE;
-				case Java_PackageImpl.ABSTRACTVARIABLESCONTAINER_FRAGMENTS: return Java_PackageImpl.VARIABLEDECLARATIONEXPRESSION_FRAGMENTS;
+				case Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__TYPE: return Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__TYPE;
+				case Java_PackageImpl.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS: return Java_PackageImpl.VARIABLE_DECLARATION_EXPRESSION__FRAGMENTS;
 				default: return -1;
 			}
 		}

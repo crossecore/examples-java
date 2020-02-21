@@ -20,10 +20,10 @@ extends ExpressionImpl implements InstanceofExpression
 		if (value != _rightOperand) {
 			NotificationChain msgs = null;
 			if (_rightOperand != null){
-				msgs = ((InternalEObject)_rightOperand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOFEXPRESSION_RIGHTOPERAND, null, msgs);
+				msgs = ((InternalEObject)_rightOperand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOF_EXPRESSION__RIGHT_OPERAND, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOFEXPRESSION_RIGHTOPERAND, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOF_EXPRESSION__RIGHT_OPERAND, null, msgs);
 			}
 			msgs = basicSetRightOperand(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ExpressionImpl implements InstanceofExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INSTANCEOFEXPRESSION_RIGHTOPERAND , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INSTANCEOF_EXPRESSION__RIGHT_OPERAND , value, value));
 		}
 	}
 	private Expression _leftOperand;
@@ -46,10 +46,10 @@ extends ExpressionImpl implements InstanceofExpression
 		if (value != _leftOperand) {
 			NotificationChain msgs = null;
 			if (_leftOperand != null){
-				msgs = ((InternalEObject)_leftOperand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND, null, msgs);
+				msgs = ((InternalEObject)_leftOperand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOF_EXPRESSION__LEFT_OPERAND, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.INSTANCEOF_EXPRESSION__LEFT_OPERAND, null, msgs);
 			}
 			msgs = basicSetLeftOperand(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends ExpressionImpl implements InstanceofExpression
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.INSTANCEOF_EXPRESSION__LEFT_OPERAND , value, value));
 		}
 	}
 
@@ -72,7 +72,7 @@ extends ExpressionImpl implements InstanceofExpression
 		Expression oldobj = _leftOperand;
 		_leftOperand = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INSTANCEOF_EXPRESSION__LEFT_OPERAND, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -86,7 +86,7 @@ extends ExpressionImpl implements InstanceofExpression
 		TypeAccess oldobj = _rightOperand;
 		_rightOperand = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INSTANCEOFEXPRESSION_RIGHTOPERAND, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.INSTANCEOF_EXPRESSION__RIGHT_OPERAND, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -100,9 +100,9 @@ extends ExpressionImpl implements InstanceofExpression
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.INSTANCEOFEXPRESSION_RIGHTOPERAND:
+			case Java_PackageImpl.INSTANCEOF_EXPRESSION__RIGHT_OPERAND:
 				return getRightOperand();
-			case Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND:
+			case Java_PackageImpl.INSTANCEOF_EXPRESSION__LEFT_OPERAND:
 				return getLeftOperand();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,10 +111,10 @@ extends ExpressionImpl implements InstanceofExpression
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.INSTANCEOFEXPRESSION_RIGHTOPERAND:
+			case Java_PackageImpl.INSTANCEOF_EXPRESSION__RIGHT_OPERAND:
 				setRightOperand((TypeAccess) newValue);
 				return;
-			case Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND:
+			case Java_PackageImpl.INSTANCEOF_EXPRESSION__LEFT_OPERAND:
 				setLeftOperand((Expression) newValue);
 				return;
 		}
@@ -124,9 +124,9 @@ extends ExpressionImpl implements InstanceofExpression
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.INSTANCEOFEXPRESSION_RIGHTOPERAND:
+			case Java_PackageImpl.INSTANCEOF_EXPRESSION__RIGHT_OPERAND:
 				return _rightOperand != null; //single != null;
-			case Java_PackageImpl.INSTANCEOFEXPRESSION_LEFTOPERAND:
+			case Java_PackageImpl.INSTANCEOF_EXPRESSION__LEFT_OPERAND:
 				return _leftOperand != null; //single != null;
 		}
 		return super.eIsSet(featureID);

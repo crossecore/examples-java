@@ -3,12 +3,12 @@ public interface AnnotationTypeDeclaration
  extends AbstractTypeDeclaration
 {
 	
-	public static Ocllib.QuickSet<AnnotationTypeDeclaration> allInstances_ = new Ocllib.QuickSet<AnnotationTypeDeclaration>(AnnotationTypeDeclaration.class);
+	public static com.crossecore.ocl.QuickSet<AnnotationTypeDeclaration> allInstances_ = new com.crossecore.ocl.QuickSet<AnnotationTypeDeclaration>(AnnotationTypeDeclaration.class);
 	
 		
-	public static Ocllib.QuickSet<AnnotationTypeDeclaration> allInstances(){
+	public static com.crossecore.ocl.QuickSet<AnnotationTypeDeclaration> allInstances(){
 		
-		Ocllib.QuickSet<AnnotationTypeDeclaration> result = new Ocllib.QuickSet<AnnotationTypeDeclaration>(AnnotationTypeDeclaration.class);
+		com.crossecore.ocl.QuickSet<AnnotationTypeDeclaration> result = new com.crossecore.ocl.QuickSet<AnnotationTypeDeclaration>(AnnotationTypeDeclaration.class);
 		result.addAll(AnnotationTypeDeclaration.allInstances_);
 		
 		result.addAll(UnresolvedAnnotationDeclaration.allInstances_);
@@ -16,7 +16,7 @@ public interface AnnotationTypeDeclaration
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<AnnotationTypeDeclaration> allInstances = new Ocllib.QuickSet<AnnotationTypeDeclaration>(AnnotationTypeDeclaration.class);
+	//public static com.crossecore.ocl.QuickSet<AnnotationTypeDeclaration> allInstances = new com.crossecore.ocl.QuickSet<AnnotationTypeDeclaration>(AnnotationTypeDeclaration.class);
 	
 	
 }

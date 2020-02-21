@@ -3,19 +3,19 @@ public interface PrimitiveTypeDouble
  extends PrimitiveType
 {
 	
-	public static Ocllib.QuickSet<PrimitiveTypeDouble> allInstances_ = new Ocllib.QuickSet<PrimitiveTypeDouble>(PrimitiveTypeDouble.class);
+	public static com.crossecore.ocl.QuickSet<PrimitiveTypeDouble> allInstances_ = new com.crossecore.ocl.QuickSet<PrimitiveTypeDouble>(PrimitiveTypeDouble.class);
 	
 		
-	public static Ocllib.QuickSet<PrimitiveTypeDouble> allInstances(){
+	public static com.crossecore.ocl.QuickSet<PrimitiveTypeDouble> allInstances(){
 		
-		Ocllib.QuickSet<PrimitiveTypeDouble> result = new Ocllib.QuickSet<PrimitiveTypeDouble>(PrimitiveTypeDouble.class);
+		com.crossecore.ocl.QuickSet<PrimitiveTypeDouble> result = new com.crossecore.ocl.QuickSet<PrimitiveTypeDouble>(PrimitiveTypeDouble.class);
 		result.addAll(PrimitiveTypeDouble.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<PrimitiveTypeDouble> allInstances = new Ocllib.QuickSet<PrimitiveTypeDouble>(PrimitiveTypeDouble.class);
+	//public static com.crossecore.ocl.QuickSet<PrimitiveTypeDouble> allInstances = new com.crossecore.ocl.QuickSet<PrimitiveTypeDouble>(PrimitiveTypeDouble.class);
 	
 	
 }

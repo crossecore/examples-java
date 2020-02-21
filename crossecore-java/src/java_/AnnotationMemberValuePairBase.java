@@ -20,10 +20,10 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 		if (value != _member) {
 			NotificationChain msgs = null;
 			if (_member != null){
-				msgs = ((InternalEObject)_member).eInverseRemove(this, Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_USAGES, AnnotationTypeMemberDeclaration.class, msgs);
+				msgs = ((InternalEObject)_member).eInverseRemove(this, Java_PackageImpl.ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES, AnnotationTypeMemberDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ANNOTATIONTYPEMEMBERDECLARATION_USAGES, AnnotationTypeMemberDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES, AnnotationTypeMemberDeclaration.class, msgs);
 			}
 			msgs = basicSetMember(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER , value, value));
 		}
 	}
 	private Expression _value;
@@ -46,10 +46,10 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 		if (value != _value) {
 			NotificationChain msgs = null;
 			if (_value != null){
-				msgs = ((InternalEObject)_value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE, null, msgs);
+				msgs = ((InternalEObject)_value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__VALUE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__VALUE, null, msgs);
 			}
 			msgs = basicSetValue(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__VALUE , value, value));
 		}
 	}
 
@@ -70,9 +70,9 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER:
+			case Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
 				if (_member != null){
-					msgs = ((InternalEObject)_member).eInverseRemove(this, Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER, AnnotationTypeMemberDeclaration.class, msgs);
+					msgs = ((InternalEObject)_member).eInverseRemove(this, Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER, AnnotationTypeMemberDeclaration.class, msgs);
 				}
 				return basicSetMember((AnnotationTypeMemberDeclaration)otherEnd, msgs);
 		}
@@ -82,7 +82,7 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER:
+			case Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
 				return basicSetMember(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -92,7 +92,7 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 		Expression oldobj = _value;
 		_value = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__VALUE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -106,7 +106,7 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 		AnnotationTypeMemberDeclaration oldobj = _member;
 		_member = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -120,9 +120,9 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER:
+			case Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
 				return getMember();
-			case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE:
+			case Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -131,10 +131,10 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER:
+			case Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
 				setMember((AnnotationTypeMemberDeclaration) newValue);
 				return;
-			case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE:
+			case Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
 				setValue((Expression) newValue);
 				return;
 		}
@@ -144,9 +144,9 @@ extends NamedElementImpl implements AnnotationMemberValuePair
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_MEMBER:
+			case Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
 				return getMember() != null; //single, volatile
-			case Java_PackageImpl.ANNOTATIONMEMBERVALUEPAIR_VALUE:
+			case Java_PackageImpl.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
 				return _value != null; //single != null;
 		}
 		return super.eIsSet(featureID);

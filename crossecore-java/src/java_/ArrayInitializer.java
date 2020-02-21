@@ -3,20 +3,20 @@ public interface ArrayInitializer
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<ArrayInitializer> allInstances_ = new Ocllib.QuickSet<ArrayInitializer>(ArrayInitializer.class);
+	public static com.crossecore.ocl.QuickSet<ArrayInitializer> allInstances_ = new com.crossecore.ocl.QuickSet<ArrayInitializer>(ArrayInitializer.class);
 	
 		
-	public static Ocllib.QuickSet<ArrayInitializer> allInstances(){
+	public static com.crossecore.ocl.QuickSet<ArrayInitializer> allInstances(){
 		
-		Ocllib.QuickSet<ArrayInitializer> result = new Ocllib.QuickSet<ArrayInitializer>(ArrayInitializer.class);
+		com.crossecore.ocl.QuickSet<ArrayInitializer> result = new com.crossecore.ocl.QuickSet<ArrayInitializer>(ArrayInitializer.class);
 		result.addAll(ArrayInitializer.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<ArrayInitializer> allInstances = new Ocllib.QuickSet<ArrayInitializer>(ArrayInitializer.class);
+	//public static com.crossecore.ocl.QuickSet<ArrayInitializer> allInstances = new com.crossecore.ocl.QuickSet<ArrayInitializer>(ArrayInitializer.class);
 	
-	Ocllib.OrderedSet<Expression> getExpressions();
+	com.crossecore.ocl.OrderedSet<Expression> getExpressions();
 	
 }

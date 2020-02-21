@@ -20,10 +20,10 @@ extends ExpressionImpl implements Annotation
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ANNOTATION_TYPE, null, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ANNOTATION__TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ANNOTATION_TYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ANNOTATION__TYPE, null, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {
@@ -31,15 +31,15 @@ extends ExpressionImpl implements Annotation
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ANNOTATION_TYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ANNOTATION__TYPE , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<AnnotationMemberValuePair> _values;
+	private com.crossecore.ocl.OrderedSet<AnnotationMemberValuePair> _values;
 	
-	public Ocllib.OrderedSet<AnnotationMemberValuePair> getValues()
+	public com.crossecore.ocl.OrderedSet<AnnotationMemberValuePair> getValues()
 	{
 		if(_values==null){
-			_values = new Ocllib.OrderedSet<AnnotationMemberValuePair>(AnnotationMemberValuePair.class, this, Java_PackageImpl.ANNOTATION_VALUES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ANNOTATION_VALUES);
+			_values = new com.crossecore.ocl.OrderedSet<AnnotationMemberValuePair>(AnnotationMemberValuePair.class, this, Java_PackageImpl.ANNOTATION__VALUES, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ANNOTATION__VALUES);
 		}
 		return _values;
 	
@@ -56,7 +56,7 @@ extends ExpressionImpl implements Annotation
 		TypeAccess oldobj = _type;
 		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATION_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ANNOTATION__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -70,9 +70,9 @@ extends ExpressionImpl implements Annotation
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ANNOTATION_TYPE:
+			case Java_PackageImpl.ANNOTATION__TYPE:
 				return getType();
-			case Java_PackageImpl.ANNOTATION_VALUES:
+			case Java_PackageImpl.ANNOTATION__VALUES:
 				return getValues();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -81,10 +81,10 @@ extends ExpressionImpl implements Annotation
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ANNOTATION_TYPE:
+			case Java_PackageImpl.ANNOTATION__TYPE:
 				setType((TypeAccess) newValue);
 				return;
-			case Java_PackageImpl.ANNOTATION_VALUES:
+			case Java_PackageImpl.ANNOTATION__VALUES:
 				getValues().clear();
 				getValues().addAll((java.util.Collection<? extends AnnotationMemberValuePair>) newValue);
 				return;
@@ -95,9 +95,9 @@ extends ExpressionImpl implements Annotation
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ANNOTATION_TYPE:
+			case Java_PackageImpl.ANNOTATION__TYPE:
 				return _type != null; //single != null;
-			case Java_PackageImpl.ANNOTATION_VALUES:
+			case Java_PackageImpl.ANNOTATION__VALUES:
 				return _values != null && !_values.isEmpty();
 		}
 		return super.eIsSet(featureID);

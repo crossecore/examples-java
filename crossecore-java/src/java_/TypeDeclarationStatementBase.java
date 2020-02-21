@@ -20,10 +20,10 @@ extends StatementImpl implements TypeDeclarationStatement
 		if (value != _declaration) {
 			NotificationChain msgs = null;
 			if (_declaration != null){
-				msgs = ((InternalEObject)_declaration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPEDECLARATIONSTATEMENT_DECLARATION, null, msgs);
+				msgs = ((InternalEObject)_declaration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPE_DECLARATION_STATEMENT__DECLARATION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPEDECLARATIONSTATEMENT_DECLARATION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.TYPE_DECLARATION_STATEMENT__DECLARATION, null, msgs);
 			}
 			msgs = basicSetDeclaration(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends StatementImpl implements TypeDeclarationStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TYPEDECLARATIONSTATEMENT_DECLARATION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.TYPE_DECLARATION_STATEMENT__DECLARATION , value, value));
 		}
 	}
 
@@ -46,7 +46,7 @@ extends StatementImpl implements TypeDeclarationStatement
 		AbstractTypeDeclaration oldobj = _declaration;
 		_declaration = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPEDECLARATIONSTATEMENT_DECLARATION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.TYPE_DECLARATION_STATEMENT__DECLARATION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -60,7 +60,7 @@ extends StatementImpl implements TypeDeclarationStatement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEDECLARATIONSTATEMENT_DECLARATION:
+			case Java_PackageImpl.TYPE_DECLARATION_STATEMENT__DECLARATION:
 				return getDeclaration();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -69,7 +69,7 @@ extends StatementImpl implements TypeDeclarationStatement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEDECLARATIONSTATEMENT_DECLARATION:
+			case Java_PackageImpl.TYPE_DECLARATION_STATEMENT__DECLARATION:
 				setDeclaration((AbstractTypeDeclaration) newValue);
 				return;
 		}
@@ -79,7 +79,7 @@ extends StatementImpl implements TypeDeclarationStatement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPEDECLARATIONSTATEMENT_DECLARATION:
+			case Java_PackageImpl.TYPE_DECLARATION_STATEMENT__DECLARATION:
 				return _declaration != null; //single != null;
 		}
 		return super.eIsSet(featureID);

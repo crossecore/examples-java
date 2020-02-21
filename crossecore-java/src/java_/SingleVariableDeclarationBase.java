@@ -19,7 +19,7 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		boolean oldValue = _varargs;
 		_varargs = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.SINGLEVARIABLEDECLARATION_VARARGS, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__VARARGS, oldValue, value));
 		
 	}
 	
@@ -37,10 +37,10 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		if (value != _modifier) {
 			NotificationChain msgs = null;
 			if (_modifier != null){
-				msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION, Modifier.class, msgs);
+				msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER__SINGLE_VARIABLE_DECLARATION, Modifier.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER_SINGLEVARIABLEDECLARATION, Modifier.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER__SINGLE_VARIABLE_DECLARATION, Modifier.class, msgs);
 			}
 			msgs = basicSetModifier(value, msgs);
 			if (msgs != null) {
@@ -48,7 +48,7 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__MODIFIER , value, value));
 		}
 	}
 	private TypeAccess _type;
@@ -63,10 +63,10 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SINGLEVARIABLEDECLARATION_TYPE, null, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SINGLEVARIABLEDECLARATION_TYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__TYPE, null, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {
@@ -74,15 +74,15 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLEVARIABLEDECLARATION_TYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__TYPE , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<Annotation> _annotations;
+	private com.crossecore.ocl.OrderedSet<Annotation> _annotations;
 	
-	public Ocllib.OrderedSet<Annotation> getAnnotations()
+	public com.crossecore.ocl.OrderedSet<Annotation> getAnnotations()
 	{
 		if(_annotations==null){
-			_annotations = new Ocllib.OrderedSet<Annotation>(Annotation.class, this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ANNOTATIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SINGLEVARIABLEDECLARATION_ANNOTATIONS);
+			_annotations = new com.crossecore.ocl.OrderedSet<Annotation>(Annotation.class, this, Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ANNOTATIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ANNOTATIONS);
 		}
 		return _annotations;
 	
@@ -90,7 +90,7 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 	public AbstractMethodDeclaration getMethodDeclaration()
 	{
 		
-			if (eContainerFeatureID() != Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION) return null;
+			if (eContainerFeatureID() != Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION) return null;
 			return (AbstractMethodDeclaration)eInternalContainer();
 		
 		
@@ -99,10 +99,10 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_PARAMETERS, AbstractMethodDeclaration.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACT_METHOD_DECLARATION__PARAMETERS, AbstractMethodDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_PARAMETERS, AbstractMethodDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACT_METHOD_DECLARATION__PARAMETERS, AbstractMethodDeclaration.class, msgs);
 			}
 			msgs = basicSetMethodDeclaration(value, msgs);
 			if (msgs != null) {
@@ -110,13 +110,13 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION , value, value));
 		}
 	}
 	public CatchClause getCatchClause()
 	{
 		
-			if (eContainerFeatureID() != Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE) return null;
+			if (eContainerFeatureID() != Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE) return null;
 			return (CatchClause)eInternalContainer();
 		
 		
@@ -125,10 +125,10 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.CATCHCLAUSE_EXCEPTION, CatchClause.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.CATCH_CLAUSE__EXCEPTION, CatchClause.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.CATCHCLAUSE_EXCEPTION, CatchClause.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.CATCH_CLAUSE__EXCEPTION, CatchClause.class, msgs);
 			}
 			msgs = basicSetCatchClause(value, msgs);
 			if (msgs != null) {
@@ -136,13 +136,13 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE , value, value));
 		}
 	}
 	public EnhancedForStatement getEnhancedForStatement()
 	{
 		
-			if (eContainerFeatureID() != Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT) return null;
+			if (eContainerFeatureID() != Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT) return null;
 			return (EnhancedForStatement)eInternalContainer();
 		
 		
@@ -151,10 +151,10 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, EnhancedForStatement.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ENHANCED_FOR_STATEMENT__PARAMETER, EnhancedForStatement.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ENHANCEDFORSTATEMENT_PARAMETER, EnhancedForStatement.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ENHANCED_FOR_STATEMENT__PARAMETER, EnhancedForStatement.class, msgs);
 			}
 			msgs = basicSetEnhancedForStatement(value, msgs);
 			if (msgs != null) {
@@ -162,7 +162,7 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT , value, value));
 		}
 	}
 
@@ -175,26 +175,26 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION:
-				if (eInternalContainer() != null) {
-					msgs = eBasicRemoveFromContainer(msgs);
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__MODIFIER:
+				if (_modifier != null){
+					msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__MODIFIER, Modifier.class, msgs);
 				}
-				return basicSetMethodDeclaration((AbstractMethodDeclaration)otherEnd, msgs);
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT:
-				if (eInternalContainer() != null) {
-					msgs = eBasicRemoveFromContainer(msgs);
-				}
-				return basicSetEnhancedForStatement((EnhancedForStatement)otherEnd, msgs);
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE:
+				return basicSetModifier((Modifier)otherEnd, msgs);
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE:
 				if (eInternalContainer() != null) {
 					msgs = eBasicRemoveFromContainer(msgs);
 				}
 				return basicSetCatchClause((CatchClause)otherEnd, msgs);
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
-				if (_modifier != null){
-					msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER, Modifier.class, msgs);
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION:
+				if (eInternalContainer() != null) {
+					msgs = eBasicRemoveFromContainer(msgs);
 				}
-				return basicSetModifier((Modifier)otherEnd, msgs);
+				return basicSetMethodDeclaration((AbstractMethodDeclaration)otherEnd, msgs);
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT:
+				if (eInternalContainer() != null) {
+					msgs = eBasicRemoveFromContainer(msgs);
+				}
+				return basicSetEnhancedForStatement((EnhancedForStatement)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -202,31 +202,23 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION:
-				return basicSetMethodDeclaration(null, msgs);
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT:
-				return basicSetEnhancedForStatement(null, msgs);
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE:
-				return basicSetCatchClause(null, msgs);
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__MODIFIER:
 				return basicSetModifier(null, msgs);
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE:
+				return basicSetCatchClause(null, msgs);
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION:
+				return basicSetMethodDeclaration(null, msgs);
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT:
+				return basicSetEnhancedForStatement(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetMethodDeclaration(AbstractMethodDeclaration newobj, NotificationChain msgs) {
-			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION, msgs);
-			return msgs;
-	}
-	public NotificationChain basicSetEnhancedForStatement(EnhancedForStatement newobj, NotificationChain msgs) {
-			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT, msgs);
-			return msgs;
-	}
-	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
-		TypeAccess oldobj = _type;
-		_type = newobj;
+	public NotificationChain basicSetModifier(Modifier newobj, NotificationChain msgs) {
+		Modifier oldobj = _modifier;
+		_modifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLEVARIABLEDECLARATION_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__MODIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -237,14 +229,14 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		return msgs;
 	}
 	public NotificationChain basicSetCatchClause(CatchClause newobj, NotificationChain msgs) {
-			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE, msgs);
+			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE, msgs);
 			return msgs;
 	}
-	public NotificationChain basicSetModifier(Modifier newobj, NotificationChain msgs) {
-		Modifier oldobj = _modifier;
-		_modifier = newobj;
+	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
+		TypeAccess oldobj = _type;
+		_type = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -254,23 +246,31 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 		}
 		return msgs;
 	}
+	public NotificationChain basicSetMethodDeclaration(AbstractMethodDeclaration newobj, NotificationChain msgs) {
+			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION, msgs);
+			return msgs;
+	}
+	public NotificationChain basicSetEnhancedForStatement(EnhancedForStatement newobj, NotificationChain msgs) {
+			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT, msgs);
+			return msgs;
+	}
 	
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_VARARGS:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__VARARGS:
 				return isVarargs();
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__MODIFIER:
 				return getModifier();
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_TYPE:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__TYPE:
 				return getType();
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ANNOTATIONS:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ANNOTATIONS:
 				return getAnnotations();
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION:
 				return getMethodDeclaration();
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE:
 				return getCatchClause();
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT:
 				return getEnhancedForStatement();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -279,26 +279,26 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_VARARGS:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__VARARGS:
 				setVarargs((boolean) newValue);
 				return;
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__MODIFIER:
 				setModifier((Modifier) newValue);
 				return;
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_TYPE:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__TYPE:
 				setType((TypeAccess) newValue);
 				return;
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ANNOTATIONS:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ANNOTATIONS:
 				getAnnotations().clear();
 				getAnnotations().addAll((java.util.Collection<? extends Annotation>) newValue);
 				return;
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION:
 				setMethodDeclaration((AbstractMethodDeclaration) newValue);
 				return;
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE:
 				setCatchClause((CatchClause) newValue);
 				return;
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT:
 				setEnhancedForStatement((EnhancedForStatement) newValue);
 				return;
 		}
@@ -308,19 +308,19 @@ extends VariableDeclarationImpl implements SingleVariableDeclaration
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_VARARGS:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__VARARGS:
 				return _varargs != VARARGS_EDEFAULT;
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_MODIFIER:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__MODIFIER:
 				return _modifier != null; //single != null;
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_TYPE:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__TYPE:
 				return _type != null; //single != null;
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ANNOTATIONS:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ANNOTATIONS:
 				return _annotations != null && !_annotations.isEmpty();
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_METHODDECLARATION:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION:
 				return getMethodDeclaration() != null; //single, volatile
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_CATCHCLAUSE:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE:
 				return getCatchClause() != null; //single, volatile
-			case Java_PackageImpl.SINGLEVARIABLEDECLARATION_ENHANCEDFORSTATEMENT:
+			case Java_PackageImpl.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT:
 				return getEnhancedForStatement() != null; //single, volatile
 		}
 		return super.eIsSet(featureID);

@@ -20,10 +20,10 @@ extends ExpressionImpl implements ClassInstanceCreation
 		if (value != _method) {
 			NotificationChain msgs = null;
 			if (_method != null){
-				msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES, AbstractMethodDeclaration.class, msgs);
+				msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACT_METHOD_DECLARATION__USAGES, AbstractMethodDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTMETHODDECLARATION_USAGES, AbstractMethodDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACT_METHOD_DECLARATION__USAGES, AbstractMethodDeclaration.class, msgs);
 			}
 			msgs = basicSetMethod(value, msgs);
 			if (msgs != null) {
@@ -31,25 +31,25 @@ extends ExpressionImpl implements ClassInstanceCreation
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<Expression> _arguments;
+	private com.crossecore.ocl.OrderedSet<Expression> _arguments;
 	
-	public Ocllib.OrderedSet<Expression> getArguments()
+	public com.crossecore.ocl.OrderedSet<Expression> getArguments()
 	{
 		if(_arguments==null){
-			_arguments = new Ocllib.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS);
+			_arguments = new com.crossecore.ocl.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__ARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__ARGUMENTS);
 		}
 		return _arguments;
 	
 	}
-	private Ocllib.OrderedSet<TypeAccess> _typeArguments;
+	private com.crossecore.ocl.OrderedSet<TypeAccess> _typeArguments;
 	
-	public Ocllib.OrderedSet<TypeAccess> getTypeArguments()
+	public com.crossecore.ocl.OrderedSet<TypeAccess> getTypeArguments()
 	{
 		if(_typeArguments==null){
-			_typeArguments = new Ocllib.OrderedSet<TypeAccess>(TypeAccess.class, this, Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS);
+			_typeArguments = new com.crossecore.ocl.OrderedSet<TypeAccess>(TypeAccess.class, this, Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS);
 		}
 		return _typeArguments;
 	
@@ -66,10 +66,10 @@ extends ExpressionImpl implements ClassInstanceCreation
 		if (value != _anonymousClassDeclaration) {
 			NotificationChain msgs = null;
 			if (_anonymousClassDeclaration != null){
-				msgs = ((InternalEObject)_anonymousClassDeclaration).eInverseRemove(this, Java_PackageImpl.ANONYMOUSCLASSDECLARATION_CLASSINSTANCECREATION, AnonymousClassDeclaration.class, msgs);
+				msgs = ((InternalEObject)_anonymousClassDeclaration).eInverseRemove(this, Java_PackageImpl.ANONYMOUS_CLASS_DECLARATION__CLASS_INSTANCE_CREATION, AnonymousClassDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ANONYMOUSCLASSDECLARATION_CLASSINSTANCECREATION, AnonymousClassDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ANONYMOUS_CLASS_DECLARATION__CLASS_INSTANCE_CREATION, AnonymousClassDeclaration.class, msgs);
 			}
 			msgs = basicSetAnonymousClassDeclaration(value, msgs);
 			if (msgs != null) {
@@ -77,7 +77,7 @@ extends ExpressionImpl implements ClassInstanceCreation
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASSINSTANCECREATION_ANONYMOUSCLASSDECLARATION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION , value, value));
 		}
 	}
 	private Expression _expression;
@@ -92,10 +92,10 @@ extends ExpressionImpl implements ClassInstanceCreation
 		if (value != _expression) {
 			NotificationChain msgs = null;
 			if (_expression != null){
-				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASSINSTANCECREATION_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASS_INSTANCE_CREATION__EXPRESSION, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASSINSTANCECREATION_EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASS_INSTANCE_CREATION__EXPRESSION, null, msgs);
 			}
 			msgs = basicSetExpression(value, msgs);
 			if (msgs != null) {
@@ -103,7 +103,7 @@ extends ExpressionImpl implements ClassInstanceCreation
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASSINSTANCECREATION_EXPRESSION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASS_INSTANCE_CREATION__EXPRESSION , value, value));
 		}
 	}
 	private TypeAccess _type;
@@ -118,10 +118,10 @@ extends ExpressionImpl implements ClassInstanceCreation
 		if (value != _type) {
 			NotificationChain msgs = null;
 			if (_type != null){
-				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASSINSTANCECREATION_TYPE, null, msgs);
+				msgs = ((InternalEObject)_type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASSINSTANCECREATION_TYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE, null, msgs);
 			}
 			msgs = basicSetType(value, msgs);
 			if (msgs != null) {
@@ -129,7 +129,7 @@ extends ExpressionImpl implements ClassInstanceCreation
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASSINSTANCECREATION_TYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE , value, value));
 		}
 	}
 
@@ -142,14 +142,14 @@ extends ExpressionImpl implements ClassInstanceCreation
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.CLASSINSTANCECREATION_METHOD:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__METHOD:
 				if (_method != null){
-					msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD, AbstractMethodDeclaration.class, msgs);
+					msgs = ((InternalEObject)_method).eInverseRemove(this, Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD, AbstractMethodDeclaration.class, msgs);
 				}
 				return basicSetMethod((AbstractMethodDeclaration)otherEnd, msgs);
-			case Java_PackageImpl.CLASSINSTANCECREATION_ANONYMOUSCLASSDECLARATION:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION:
 				if (_anonymousClassDeclaration != null){
-					msgs = ((InternalEObject)_anonymousClassDeclaration).eInverseRemove(this, Java_PackageImpl.CLASSINSTANCECREATION_ANONYMOUSCLASSDECLARATION, AnonymousClassDeclaration.class, msgs);
+					msgs = ((InternalEObject)_anonymousClassDeclaration).eInverseRemove(this, Java_PackageImpl.CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION, AnonymousClassDeclaration.class, msgs);
 				}
 				return basicSetAnonymousClassDeclaration((AnonymousClassDeclaration)otherEnd, msgs);
 		}
@@ -159,9 +159,9 @@ extends ExpressionImpl implements ClassInstanceCreation
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.CLASSINSTANCECREATION_METHOD:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__METHOD:
 				return basicSetMethod(null, msgs);
-			case Java_PackageImpl.CLASSINSTANCECREATION_ANONYMOUSCLASSDECLARATION:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION:
 				return basicSetAnonymousClassDeclaration(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -171,21 +171,7 @@ extends ExpressionImpl implements ClassInstanceCreation
 		AbstractMethodDeclaration oldobj = _method;
 		_method = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD, oldobj, newobj);
-			if (msgs == null){
-				msgs = notification;
-			}
-			else{
-				msgs.add(notification);
-			}
-		}
-		return msgs;
-	}
-	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
-		TypeAccess oldobj = _type;
-		_type = newobj;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSINSTANCECREATION_TYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -199,7 +185,21 @@ extends ExpressionImpl implements ClassInstanceCreation
 		Expression oldobj = _expression;
 		_expression = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSINSTANCECREATION_EXPRESSION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASS_INSTANCE_CREATION__EXPRESSION, oldobj, newobj);
+			if (msgs == null){
+				msgs = notification;
+			}
+			else{
+				msgs.add(notification);
+			}
+		}
+		return msgs;
+	}
+	public NotificationChain basicSetType(TypeAccess newobj, NotificationChain msgs) {
+		TypeAccess oldobj = _type;
+		_type = newobj;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -213,7 +213,7 @@ extends ExpressionImpl implements ClassInstanceCreation
 		AnonymousClassDeclaration oldobj = _anonymousClassDeclaration;
 		_anonymousClassDeclaration = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASSINSTANCECREATION_ANONYMOUSCLASSDECLARATION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -227,17 +227,17 @@ extends ExpressionImpl implements ClassInstanceCreation
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.CLASSINSTANCECREATION_METHOD:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__METHOD:
 				return getMethod();
-			case Java_PackageImpl.CLASSINSTANCECREATION_ARGUMENTS:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__ARGUMENTS:
 				return getArguments();
-			case Java_PackageImpl.CLASSINSTANCECREATION_TYPEARGUMENTS:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE_ARGUMENTS:
 				return getTypeArguments();
-			case Java_PackageImpl.CLASSINSTANCECREATION_ANONYMOUSCLASSDECLARATION:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION:
 				return getAnonymousClassDeclaration();
-			case Java_PackageImpl.CLASSINSTANCECREATION_EXPRESSION:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__EXPRESSION:
 				return getExpression();
-			case Java_PackageImpl.CLASSINSTANCECREATION_TYPE:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -246,24 +246,24 @@ extends ExpressionImpl implements ClassInstanceCreation
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.CLASSINSTANCECREATION_METHOD:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__METHOD:
 				setMethod((AbstractMethodDeclaration) newValue);
 				return;
-			case Java_PackageImpl.CLASSINSTANCECREATION_ARGUMENTS:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__ARGUMENTS:
 				getArguments().clear();
 				getArguments().addAll((java.util.Collection<? extends Expression>) newValue);
 				return;
-			case Java_PackageImpl.CLASSINSTANCECREATION_TYPEARGUMENTS:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE_ARGUMENTS:
 				getTypeArguments().clear();
 				getTypeArguments().addAll((java.util.Collection<? extends TypeAccess>) newValue);
 				return;
-			case Java_PackageImpl.CLASSINSTANCECREATION_ANONYMOUSCLASSDECLARATION:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION:
 				setAnonymousClassDeclaration((AnonymousClassDeclaration) newValue);
 				return;
-			case Java_PackageImpl.CLASSINSTANCECREATION_EXPRESSION:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__EXPRESSION:
 				setExpression((Expression) newValue);
 				return;
-			case Java_PackageImpl.CLASSINSTANCECREATION_TYPE:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE:
 				setType((TypeAccess) newValue);
 				return;
 		}
@@ -273,17 +273,17 @@ extends ExpressionImpl implements ClassInstanceCreation
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.CLASSINSTANCECREATION_METHOD:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__METHOD:
 				return getMethod() != null; //single, volatile
-			case Java_PackageImpl.CLASSINSTANCECREATION_ARGUMENTS:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__ARGUMENTS:
 				return _arguments != null && !_arguments.isEmpty();
-			case Java_PackageImpl.CLASSINSTANCECREATION_TYPEARGUMENTS:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE_ARGUMENTS:
 				return _typeArguments != null && !_typeArguments.isEmpty();
-			case Java_PackageImpl.CLASSINSTANCECREATION_ANONYMOUSCLASSDECLARATION:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION:
 				return _anonymousClassDeclaration != null; //single != null;
-			case Java_PackageImpl.CLASSINSTANCECREATION_EXPRESSION:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__EXPRESSION:
 				return _expression != null; //single != null;
-			case Java_PackageImpl.CLASSINSTANCECREATION_TYPE:
+			case Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE:
 				return _type != null; //single != null;
 		}
 		return super.eIsSet(featureID);
@@ -293,9 +293,9 @@ extends ExpressionImpl implements ClassInstanceCreation
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == AbstractMethodInvocation.class) {
 			switch (derivedFeatureID) {
-				case Java_PackageImpl.CLASSINSTANCECREATION_METHOD: return Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD;
-				case Java_PackageImpl.CLASSINSTANCECREATION_ARGUMENTS: return Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS;
-				case Java_PackageImpl.CLASSINSTANCECREATION_TYPEARGUMENTS: return Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS;
+				case Java_PackageImpl.CLASS_INSTANCE_CREATION__METHOD: return Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD;
+				case Java_PackageImpl.CLASS_INSTANCE_CREATION__ARGUMENTS: return Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__ARGUMENTS;
+				case Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE_ARGUMENTS: return Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS;
 				default: return -1;
 			}
 		}
@@ -307,9 +307,9 @@ extends ExpressionImpl implements ClassInstanceCreation
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == AbstractMethodInvocation.class) {
 			switch (baseFeatureID) {
-				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_METHOD: return Java_PackageImpl.CLASSINSTANCECREATION_METHOD;
-				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_ARGUMENTS: return Java_PackageImpl.CLASSINSTANCECREATION_ARGUMENTS;
-				case Java_PackageImpl.ABSTRACTMETHODINVOCATION_TYPEARGUMENTS: return Java_PackageImpl.CLASSINSTANCECREATION_TYPEARGUMENTS;
+				case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__METHOD: return Java_PackageImpl.CLASS_INSTANCE_CREATION__METHOD;
+				case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__ARGUMENTS: return Java_PackageImpl.CLASS_INSTANCE_CREATION__ARGUMENTS;
+				case Java_PackageImpl.ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS: return Java_PackageImpl.CLASS_INSTANCE_CREATION__TYPE_ARGUMENTS;
 				default: return -1;
 			}
 		}

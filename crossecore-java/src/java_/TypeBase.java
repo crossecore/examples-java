@@ -8,12 +8,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class TypeBase 
 extends NamedElementImpl implements Type
 {
-	private Ocllib.Set<TypeAccess> _usagesInTypeAccess;
+	private com.crossecore.ocl.Set<TypeAccess> _usagesInTypeAccess;
 	
-	public Ocllib.Set<TypeAccess> getUsagesInTypeAccess()
+	public com.crossecore.ocl.Set<TypeAccess> getUsagesInTypeAccess()
 	{
 		if(_usagesInTypeAccess==null){
-			_usagesInTypeAccess = new Ocllib.Set<TypeAccess>(TypeAccess.class, this, Java_PackageImpl.TYPE_USAGESINTYPEACCESS, Java_PackageImpl.TYPEACCESS_TYPE);
+			_usagesInTypeAccess = new com.crossecore.ocl.Set<TypeAccess>(TypeAccess.class, this, Java_PackageImpl.TYPE__USAGES_IN_TYPE_ACCESS, Java_PackageImpl.TYPE_ACCESS__TYPE);
 		}
 		return _usagesInTypeAccess;
 	
@@ -28,7 +28,7 @@ extends NamedElementImpl implements Type
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPE_USAGESINTYPEACCESS:
+			case Java_PackageImpl.TYPE__USAGES_IN_TYPE_ACCESS:
 				return getUsagesInTypeAccess().basicAdd((TypeAccess)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -37,7 +37,7 @@ extends NamedElementImpl implements Type
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPE_USAGESINTYPEACCESS:
+			case Java_PackageImpl.TYPE__USAGES_IN_TYPE_ACCESS:
 				return getUsagesInTypeAccess().basicRemove((TypeAccess)otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -47,7 +47,7 @@ extends NamedElementImpl implements Type
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPE_USAGESINTYPEACCESS:
+			case Java_PackageImpl.TYPE__USAGES_IN_TYPE_ACCESS:
 				return getUsagesInTypeAccess();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -56,7 +56,7 @@ extends NamedElementImpl implements Type
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPE_USAGESINTYPEACCESS:
+			case Java_PackageImpl.TYPE__USAGES_IN_TYPE_ACCESS:
 				getUsagesInTypeAccess().clear();
 				getUsagesInTypeAccess().addAll((java.util.Collection<? extends TypeAccess>) newValue);
 				return;
@@ -67,7 +67,7 @@ extends NamedElementImpl implements Type
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.TYPE_USAGESINTYPEACCESS:
+			case Java_PackageImpl.TYPE__USAGES_IN_TYPE_ACCESS:
 				return getUsagesInTypeAccess().isEmpty(); //many, volatile
 		}
 		return super.eIsSet(featureID);

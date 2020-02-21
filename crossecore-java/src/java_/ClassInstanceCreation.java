@@ -3,19 +3,19 @@ public interface ClassInstanceCreation
  extends Expression,AbstractMethodInvocation
 {
 	
-	public static Ocllib.QuickSet<ClassInstanceCreation> allInstances_ = new Ocllib.QuickSet<ClassInstanceCreation>(ClassInstanceCreation.class);
+	public static com.crossecore.ocl.QuickSet<ClassInstanceCreation> allInstances_ = new com.crossecore.ocl.QuickSet<ClassInstanceCreation>(ClassInstanceCreation.class);
 	
 		
-	public static Ocllib.QuickSet<ClassInstanceCreation> allInstances(){
+	public static com.crossecore.ocl.QuickSet<ClassInstanceCreation> allInstances(){
 		
-		Ocllib.QuickSet<ClassInstanceCreation> result = new Ocllib.QuickSet<ClassInstanceCreation>(ClassInstanceCreation.class);
+		com.crossecore.ocl.QuickSet<ClassInstanceCreation> result = new com.crossecore.ocl.QuickSet<ClassInstanceCreation>(ClassInstanceCreation.class);
 		result.addAll(ClassInstanceCreation.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<ClassInstanceCreation> allInstances = new Ocllib.QuickSet<ClassInstanceCreation>(ClassInstanceCreation.class);
+	//public static com.crossecore.ocl.QuickSet<ClassInstanceCreation> allInstances = new com.crossecore.ocl.QuickSet<ClassInstanceCreation>(ClassInstanceCreation.class);
 	
 	
 	AnonymousClassDeclaration getAnonymousClassDeclaration();

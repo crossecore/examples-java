@@ -3,19 +3,19 @@ public interface Modifier
  extends ASTNode
 {
 	
-	public static Ocllib.QuickSet<Modifier> allInstances_ = new Ocllib.QuickSet<Modifier>(Modifier.class);
+	public static com.crossecore.ocl.QuickSet<Modifier> allInstances_ = new com.crossecore.ocl.QuickSet<Modifier>(Modifier.class);
 	
 		
-	public static Ocllib.QuickSet<Modifier> allInstances(){
+	public static com.crossecore.ocl.QuickSet<Modifier> allInstances(){
 		
-		Ocllib.QuickSet<Modifier> result = new Ocllib.QuickSet<Modifier>(Modifier.class);
+		com.crossecore.ocl.QuickSet<Modifier> result = new com.crossecore.ocl.QuickSet<Modifier>(Modifier.class);
 		result.addAll(Modifier.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<Modifier> allInstances = new Ocllib.QuickSet<Modifier>(Modifier.class);
+	//public static com.crossecore.ocl.QuickSet<Modifier> allInstances = new com.crossecore.ocl.QuickSet<Modifier>(Modifier.class);
 	
 	VisibilityKind getVisibility();
 	void setVisibility(VisibilityKind value);

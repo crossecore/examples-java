@@ -11,7 +11,7 @@ extends NamedElementImpl implements BodyDeclaration
 	public AbstractTypeDeclaration getAbstractTypeDeclaration()
 	{
 		
-			if (eContainerFeatureID() != Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION) return null;
+			if (eContainerFeatureID() != Java_PackageImpl.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION) return null;
 			return (AbstractTypeDeclaration)eInternalContainer();
 		
 		
@@ -20,10 +20,10 @@ extends NamedElementImpl implements BodyDeclaration
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS, AbstractTypeDeclaration.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS, AbstractTypeDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACTTYPEDECLARATION_BODYDECLARATIONS, AbstractTypeDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS, AbstractTypeDeclaration.class, msgs);
 			}
 			msgs = basicSetAbstractTypeDeclaration(value, msgs);
 			if (msgs != null) {
@@ -31,15 +31,15 @@ extends NamedElementImpl implements BodyDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<Annotation> _annotations;
+	private com.crossecore.ocl.OrderedSet<Annotation> _annotations;
 	
-	public Ocllib.OrderedSet<Annotation> getAnnotations()
+	public com.crossecore.ocl.OrderedSet<Annotation> getAnnotations()
 	{
 		if(_annotations==null){
-			_annotations = new Ocllib.OrderedSet<Annotation>(Annotation.class, this, Java_PackageImpl.BODYDECLARATION_ANNOTATIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.BODYDECLARATION_ANNOTATIONS);
+			_annotations = new com.crossecore.ocl.OrderedSet<Annotation>(Annotation.class, this, Java_PackageImpl.BODY_DECLARATION__ANNOTATIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.BODY_DECLARATION__ANNOTATIONS);
 		}
 		return _annotations;
 	
@@ -47,7 +47,7 @@ extends NamedElementImpl implements BodyDeclaration
 	public AnonymousClassDeclaration getAnonymousClassDeclarationOwner()
 	{
 		
-			if (eContainerFeatureID() != Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER) return null;
+			if (eContainerFeatureID() != Java_PackageImpl.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER) return null;
 			return (AnonymousClassDeclaration)eInternalContainer();
 		
 		
@@ -56,10 +56,10 @@ extends NamedElementImpl implements BodyDeclaration
 		if (value != eInternalContainer()) {
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null){
-				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS, AnonymousClassDeclaration.class, msgs);
+				msgs = ((InternalEObject)eInternalContainer()).eInverseRemove(this, Java_PackageImpl.ANONYMOUS_CLASS_DECLARATION__BODY_DECLARATIONS, AnonymousClassDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ANONYMOUSCLASSDECLARATION_BODYDECLARATIONS, AnonymousClassDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.ANONYMOUS_CLASS_DECLARATION__BODY_DECLARATIONS, AnonymousClassDeclaration.class, msgs);
 			}
 			msgs = basicSetAnonymousClassDeclarationOwner(value, msgs);
 			if (msgs != null) {
@@ -67,7 +67,7 @@ extends NamedElementImpl implements BodyDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER , value, value));
 		}
 	}
 	private Modifier _modifier;
@@ -82,10 +82,10 @@ extends NamedElementImpl implements BodyDeclaration
 		if (value != _modifier) {
 			NotificationChain msgs = null;
 			if (_modifier != null){
-				msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER_BODYDECLARATION, Modifier.class, msgs);
+				msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.MODIFIER__BODY_DECLARATION, Modifier.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER_BODYDECLARATION, Modifier.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.MODIFIER__BODY_DECLARATION, Modifier.class, msgs);
 			}
 			msgs = basicSetModifier(value, msgs);
 			if (msgs != null) {
@@ -93,7 +93,7 @@ extends NamedElementImpl implements BodyDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.BODYDECLARATION_MODIFIER , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.BODY_DECLARATION__MODIFIER , value, value));
 		}
 	}
 
@@ -106,17 +106,17 @@ extends NamedElementImpl implements BodyDeclaration
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.BODYDECLARATION_MODIFIER:
+			case Java_PackageImpl.BODY_DECLARATION__MODIFIER:
 				if (_modifier != null){
-					msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.BODYDECLARATION_MODIFIER, Modifier.class, msgs);
+					msgs = ((InternalEObject)_modifier).eInverseRemove(this, Java_PackageImpl.BODY_DECLARATION__MODIFIER, Modifier.class, msgs);
 				}
 				return basicSetModifier((Modifier)otherEnd, msgs);
-			case Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
+			case Java_PackageImpl.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER:
 				if (eInternalContainer() != null) {
 					msgs = eBasicRemoveFromContainer(msgs);
 				}
 				return basicSetAnonymousClassDeclarationOwner((AnonymousClassDeclaration)otherEnd, msgs);
-			case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
+			case Java_PackageImpl.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION:
 				if (eInternalContainer() != null) {
 					msgs = eBasicRemoveFromContainer(msgs);
 				}
@@ -128,11 +128,11 @@ extends NamedElementImpl implements BodyDeclaration
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.BODYDECLARATION_MODIFIER:
+			case Java_PackageImpl.BODY_DECLARATION__MODIFIER:
 				return basicSetModifier(null, msgs);
-			case Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
+			case Java_PackageImpl.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER:
 				return basicSetAnonymousClassDeclarationOwner(null, msgs);
-			case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
+			case Java_PackageImpl.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION:
 				return basicSetAbstractTypeDeclaration(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -142,7 +142,7 @@ extends NamedElementImpl implements BodyDeclaration
 		Modifier oldobj = _modifier;
 		_modifier = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.BODYDECLARATION_MODIFIER, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.BODY_DECLARATION__MODIFIER, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -153,24 +153,24 @@ extends NamedElementImpl implements BodyDeclaration
 		return msgs;
 	}
 	public NotificationChain basicSetAnonymousClassDeclarationOwner(AnonymousClassDeclaration newobj, NotificationChain msgs) {
-			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER, msgs);
+			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER, msgs);
 			return msgs;
 	}
 	public NotificationChain basicSetAbstractTypeDeclaration(AbstractTypeDeclaration newobj, NotificationChain msgs) {
-			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION, msgs);
+			msgs = eBasicSetContainer((InternalEObject)newobj, Java_PackageImpl.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION, msgs);
 			return msgs;
 	}
 	
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
+			case Java_PackageImpl.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION:
 				return getAbstractTypeDeclaration();
-			case Java_PackageImpl.BODYDECLARATION_ANNOTATIONS:
+			case Java_PackageImpl.BODY_DECLARATION__ANNOTATIONS:
 				return getAnnotations();
-			case Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
+			case Java_PackageImpl.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER:
 				return getAnonymousClassDeclarationOwner();
-			case Java_PackageImpl.BODYDECLARATION_MODIFIER:
+			case Java_PackageImpl.BODY_DECLARATION__MODIFIER:
 				return getModifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -179,17 +179,17 @@ extends NamedElementImpl implements BodyDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
+			case Java_PackageImpl.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION:
 				setAbstractTypeDeclaration((AbstractTypeDeclaration) newValue);
 				return;
-			case Java_PackageImpl.BODYDECLARATION_ANNOTATIONS:
+			case Java_PackageImpl.BODY_DECLARATION__ANNOTATIONS:
 				getAnnotations().clear();
 				getAnnotations().addAll((java.util.Collection<? extends Annotation>) newValue);
 				return;
-			case Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
+			case Java_PackageImpl.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER:
 				setAnonymousClassDeclarationOwner((AnonymousClassDeclaration) newValue);
 				return;
-			case Java_PackageImpl.BODYDECLARATION_MODIFIER:
+			case Java_PackageImpl.BODY_DECLARATION__MODIFIER:
 				setModifier((Modifier) newValue);
 				return;
 		}
@@ -199,13 +199,13 @@ extends NamedElementImpl implements BodyDeclaration
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.BODYDECLARATION_ABSTRACTTYPEDECLARATION:
+			case Java_PackageImpl.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION:
 				return getAbstractTypeDeclaration() != null; //single, volatile
-			case Java_PackageImpl.BODYDECLARATION_ANNOTATIONS:
+			case Java_PackageImpl.BODY_DECLARATION__ANNOTATIONS:
 				return _annotations != null && !_annotations.isEmpty();
-			case Java_PackageImpl.BODYDECLARATION_ANONYMOUSCLASSDECLARATIONOWNER:
+			case Java_PackageImpl.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER:
 				return getAnonymousClassDeclarationOwner() != null; //single, volatile
-			case Java_PackageImpl.BODYDECLARATION_MODIFIER:
+			case Java_PackageImpl.BODY_DECLARATION__MODIFIER:
 				return _modifier != null; //single != null;
 		}
 		return super.eIsSet(featureID);

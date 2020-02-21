@@ -8,12 +8,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ASTNodeBase 
 extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements ASTNode
 {
-	private Ocllib.OrderedSet<Comment> _comments;
+	private com.crossecore.ocl.OrderedSet<Comment> _comments;
 	
-	public Ocllib.OrderedSet<Comment> getComments()
+	public com.crossecore.ocl.OrderedSet<Comment> getComments()
 	{
 		if(_comments==null){
-			_comments = new Ocllib.OrderedSet<Comment>(Comment.class, this, Java_PackageImpl.ASTNODE_COMMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASTNODE_COMMENTS);
+			_comments = new com.crossecore.ocl.OrderedSet<Comment>(Comment.class, this, Java_PackageImpl.ASTNODE__COMMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASTNODE__COMMENTS);
 		}
 		return _comments;
 	
@@ -30,7 +30,7 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements ASTNo
 		CompilationUnit oldvalue = _originalCompilationUnit;
 		_originalCompilationUnit = value;
 		if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASTNODE_ORIGINALCOMPILATIONUNIT , oldvalue, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASTNODE__ORIGINAL_COMPILATION_UNIT , oldvalue, value));
 		}
 	}
 	private ClassFile _originalClassFile;
@@ -45,7 +45,7 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements ASTNo
 		ClassFile oldvalue = _originalClassFile;
 		_originalClassFile = value;
 		if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASTNODE_ORIGINALCLASSFILE , oldvalue, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASTNODE__ORIGINAL_CLASS_FILE , oldvalue, value));
 		}
 	}
 
@@ -60,7 +60,7 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements ASTNo
 		CompilationUnit oldobj = _originalCompilationUnit;
 		_originalCompilationUnit = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASTNODE_ORIGINALCOMPILATIONUNIT, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASTNODE__ORIGINAL_COMPILATION_UNIT, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -74,7 +74,7 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements ASTNo
 		ClassFile oldobj = _originalClassFile;
 		_originalClassFile = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASTNODE_ORIGINALCLASSFILE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASTNODE__ORIGINAL_CLASS_FILE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -88,11 +88,11 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements ASTNo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ASTNODE_COMMENTS:
+			case Java_PackageImpl.ASTNODE__COMMENTS:
 				return getComments();
-			case Java_PackageImpl.ASTNODE_ORIGINALCOMPILATIONUNIT:
+			case Java_PackageImpl.ASTNODE__ORIGINAL_COMPILATION_UNIT:
 				return getOriginalCompilationUnit();
-			case Java_PackageImpl.ASTNODE_ORIGINALCLASSFILE:
+			case Java_PackageImpl.ASTNODE__ORIGINAL_CLASS_FILE:
 				return getOriginalClassFile();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -101,14 +101,14 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements ASTNo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ASTNODE_COMMENTS:
+			case Java_PackageImpl.ASTNODE__COMMENTS:
 				getComments().clear();
 				getComments().addAll((java.util.Collection<? extends Comment>) newValue);
 				return;
-			case Java_PackageImpl.ASTNODE_ORIGINALCOMPILATIONUNIT:
+			case Java_PackageImpl.ASTNODE__ORIGINAL_COMPILATION_UNIT:
 				setOriginalCompilationUnit((CompilationUnit) newValue);
 				return;
-			case Java_PackageImpl.ASTNODE_ORIGINALCLASSFILE:
+			case Java_PackageImpl.ASTNODE__ORIGINAL_CLASS_FILE:
 				setOriginalClassFile((ClassFile) newValue);
 				return;
 		}
@@ -118,11 +118,11 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements ASTNo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ASTNODE_COMMENTS:
+			case Java_PackageImpl.ASTNODE__COMMENTS:
 				return _comments != null && !_comments.isEmpty();
-			case Java_PackageImpl.ASTNODE_ORIGINALCOMPILATIONUNIT:
+			case Java_PackageImpl.ASTNODE__ORIGINAL_COMPILATION_UNIT:
 				return getOriginalCompilationUnit() != null; //single, volatile
-			case Java_PackageImpl.ASTNODE_ORIGINALCLASSFILE:
+			case Java_PackageImpl.ASTNODE__ORIGINAL_CLASS_FILE:
 				return getOriginalClassFile() != null; //single, volatile
 		}
 		return super.eIsSet(featureID);

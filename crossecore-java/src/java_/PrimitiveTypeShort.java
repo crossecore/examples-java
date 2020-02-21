@@ -3,19 +3,19 @@ public interface PrimitiveTypeShort
  extends PrimitiveType
 {
 	
-	public static Ocllib.QuickSet<PrimitiveTypeShort> allInstances_ = new Ocllib.QuickSet<PrimitiveTypeShort>(PrimitiveTypeShort.class);
+	public static com.crossecore.ocl.QuickSet<PrimitiveTypeShort> allInstances_ = new com.crossecore.ocl.QuickSet<PrimitiveTypeShort>(PrimitiveTypeShort.class);
 	
 		
-	public static Ocllib.QuickSet<PrimitiveTypeShort> allInstances(){
+	public static com.crossecore.ocl.QuickSet<PrimitiveTypeShort> allInstances(){
 		
-		Ocllib.QuickSet<PrimitiveTypeShort> result = new Ocllib.QuickSet<PrimitiveTypeShort>(PrimitiveTypeShort.class);
+		com.crossecore.ocl.QuickSet<PrimitiveTypeShort> result = new com.crossecore.ocl.QuickSet<PrimitiveTypeShort>(PrimitiveTypeShort.class);
 		result.addAll(PrimitiveTypeShort.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<PrimitiveTypeShort> allInstances = new Ocllib.QuickSet<PrimitiveTypeShort>(PrimitiveTypeShort.class);
+	//public static com.crossecore.ocl.QuickSet<PrimitiveTypeShort> allInstances = new com.crossecore.ocl.QuickSet<PrimitiveTypeShort>(PrimitiveTypeShort.class);
 	
 	
 }

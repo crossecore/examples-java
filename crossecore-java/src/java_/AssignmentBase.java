@@ -19,7 +19,7 @@ extends ExpressionImpl implements Assignment
 		AssignmentKind oldValue = _operator;
 		_operator = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.ASSIGNMENT_OPERATOR, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.ASSIGNMENT__OPERATOR, oldValue, value));
 		
 	}
 	
@@ -37,10 +37,10 @@ extends ExpressionImpl implements Assignment
 		if (value != _leftHandSide) {
 			NotificationChain msgs = null;
 			if (_leftHandSide != null){
-				msgs = ((InternalEObject)_leftHandSide).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE, null, msgs);
+				msgs = ((InternalEObject)_leftHandSide).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT__LEFT_HAND_SIDE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT__LEFT_HAND_SIDE, null, msgs);
 			}
 			msgs = basicSetLeftHandSide(value, msgs);
 			if (msgs != null) {
@@ -48,7 +48,7 @@ extends ExpressionImpl implements Assignment
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASSIGNMENT__LEFT_HAND_SIDE , value, value));
 		}
 	}
 	private Expression _rightHandSide;
@@ -63,10 +63,10 @@ extends ExpressionImpl implements Assignment
 		if (value != _rightHandSide) {
 			NotificationChain msgs = null;
 			if (_rightHandSide != null){
-				msgs = ((InternalEObject)_rightHandSide).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE, null, msgs);
+				msgs = ((InternalEObject)_rightHandSide).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT__RIGHT_HAND_SIDE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ASSIGNMENT__RIGHT_HAND_SIDE, null, msgs);
 			}
 			msgs = basicSetRightHandSide(value, msgs);
 			if (msgs != null) {
@@ -74,7 +74,7 @@ extends ExpressionImpl implements Assignment
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ASSIGNMENT__RIGHT_HAND_SIDE , value, value));
 		}
 	}
 
@@ -85,11 +85,11 @@ extends ExpressionImpl implements Assignment
 	}
 	
 	
-	public NotificationChain basicSetLeftHandSide(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _leftHandSide;
-		_leftHandSide = newobj;
+	public NotificationChain basicSetRightHandSide(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _rightHandSide;
+		_rightHandSide = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSIGNMENT__RIGHT_HAND_SIDE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -99,11 +99,11 @@ extends ExpressionImpl implements Assignment
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetRightHandSide(Expression newobj, NotificationChain msgs) {
-		Expression oldobj = _rightHandSide;
-		_rightHandSide = newobj;
+	public NotificationChain basicSetLeftHandSide(Expression newobj, NotificationChain msgs) {
+		Expression oldobj = _leftHandSide;
+		_leftHandSide = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ASSIGNMENT__LEFT_HAND_SIDE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -117,11 +117,11 @@ extends ExpressionImpl implements Assignment
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ASSIGNMENT_OPERATOR:
+			case Java_PackageImpl.ASSIGNMENT__OPERATOR:
 				return getOperator();
-			case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
+			case Java_PackageImpl.ASSIGNMENT__LEFT_HAND_SIDE:
 				return getLeftHandSide();
-			case Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE:
+			case Java_PackageImpl.ASSIGNMENT__RIGHT_HAND_SIDE:
 				return getRightHandSide();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,13 +130,13 @@ extends ExpressionImpl implements Assignment
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ASSIGNMENT_OPERATOR:
+			case Java_PackageImpl.ASSIGNMENT__OPERATOR:
 				setOperator((AssignmentKind) newValue);
 				return;
-			case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
+			case Java_PackageImpl.ASSIGNMENT__LEFT_HAND_SIDE:
 				setLeftHandSide((Expression) newValue);
 				return;
-			case Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE:
+			case Java_PackageImpl.ASSIGNMENT__RIGHT_HAND_SIDE:
 				setRightHandSide((Expression) newValue);
 				return;
 		}
@@ -146,11 +146,11 @@ extends ExpressionImpl implements Assignment
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ASSIGNMENT_OPERATOR:
+			case Java_PackageImpl.ASSIGNMENT__OPERATOR:
 				return OPERATOR_EDEFAULT == null ? _operator != null : !OPERATOR_EDEFAULT.equals(_operator);
-			case Java_PackageImpl.ASSIGNMENT_LEFTHANDSIDE:
+			case Java_PackageImpl.ASSIGNMENT__LEFT_HAND_SIDE:
 				return _leftHandSide != null; //single != null;
-			case Java_PackageImpl.ASSIGNMENT_RIGHTHANDSIDE:
+			case Java_PackageImpl.ASSIGNMENT__RIGHT_HAND_SIDE:
 				return _rightHandSide != null; //single != null;
 		}
 		return super.eIsSet(featureID);

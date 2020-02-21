@@ -19,7 +19,7 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 		java.lang.String oldValue = _key;
 		_key = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.MANIFESTATTRIBUTE_KEY, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.MANIFEST_ATTRIBUTE__KEY, oldValue, value));
 		
 	}
 	
@@ -36,7 +36,7 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 		java.lang.String oldValue = _value;
 		_value = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.MANIFESTATTRIBUTE_VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.MANIFEST_ATTRIBUTE__VALUE, oldValue, value));
 		
 	}
 	
@@ -54,9 +54,9 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.MANIFESTATTRIBUTE_KEY:
+			case Java_PackageImpl.MANIFEST_ATTRIBUTE__KEY:
 				return getKey();
-			case Java_PackageImpl.MANIFESTATTRIBUTE_VALUE:
+			case Java_PackageImpl.MANIFEST_ATTRIBUTE__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -65,10 +65,10 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.MANIFESTATTRIBUTE_KEY:
+			case Java_PackageImpl.MANIFEST_ATTRIBUTE__KEY:
 				setKey((java.lang.String) newValue);
 				return;
-			case Java_PackageImpl.MANIFESTATTRIBUTE_VALUE:
+			case Java_PackageImpl.MANIFEST_ATTRIBUTE__VALUE:
 				setValue((java.lang.String) newValue);
 				return;
 		}
@@ -78,9 +78,9 @@ extends org.eclipse.emf.ecore.impl.MinimalEObjectImpl.Container implements Manif
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.MANIFESTATTRIBUTE_KEY:
+			case Java_PackageImpl.MANIFEST_ATTRIBUTE__KEY:
 				return KEY_EDEFAULT == null ? _key != null : !KEY_EDEFAULT.equals(_key);
-			case Java_PackageImpl.MANIFESTATTRIBUTE_VALUE:
+			case Java_PackageImpl.MANIFEST_ATTRIBUTE__VALUE:
 				return VALUE_EDEFAULT == null ? _value != null : !VALUE_EDEFAULT.equals(_value);
 		}
 		return super.eIsSet(featureID);

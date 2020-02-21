@@ -8,12 +8,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class BlockBase 
 extends StatementImpl implements Block
 {
-	private Ocllib.OrderedSet<Statement> _statements;
+	private com.crossecore.ocl.OrderedSet<Statement> _statements;
 	
-	public Ocllib.OrderedSet<Statement> getStatements()
+	public com.crossecore.ocl.OrderedSet<Statement> getStatements()
 	{
 		if(_statements==null){
-			_statements = new Ocllib.OrderedSet<Statement>(Statement.class, this, Java_PackageImpl.BLOCK_STATEMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.BLOCK_STATEMENTS);
+			_statements = new com.crossecore.ocl.OrderedSet<Statement>(Statement.class, this, Java_PackageImpl.BLOCK__STATEMENTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.BLOCK__STATEMENTS);
 		}
 		return _statements;
 	
@@ -30,7 +30,7 @@ extends StatementImpl implements Block
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.BLOCK_STATEMENTS:
+			case Java_PackageImpl.BLOCK__STATEMENTS:
 				return getStatements();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -39,7 +39,7 @@ extends StatementImpl implements Block
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.BLOCK_STATEMENTS:
+			case Java_PackageImpl.BLOCK__STATEMENTS:
 				getStatements().clear();
 				getStatements().addAll((java.util.Collection<? extends Statement>) newValue);
 				return;
@@ -50,7 +50,7 @@ extends StatementImpl implements Block
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.BLOCK_STATEMENTS:
+			case Java_PackageImpl.BLOCK__STATEMENTS:
 				return _statements != null && !_statements.isEmpty();
 		}
 		return super.eIsSet(featureID);

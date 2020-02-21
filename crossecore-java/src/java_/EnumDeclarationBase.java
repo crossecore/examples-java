@@ -8,12 +8,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class EnumDeclarationBase 
 extends AbstractTypeDeclarationImpl implements EnumDeclaration
 {
-	private Ocllib.OrderedSet<EnumConstantDeclaration> _enumConstants;
+	private com.crossecore.ocl.OrderedSet<EnumConstantDeclaration> _enumConstants;
 	
-	public Ocllib.OrderedSet<EnumConstantDeclaration> getEnumConstants()
+	public com.crossecore.ocl.OrderedSet<EnumConstantDeclaration> getEnumConstants()
 	{
 		if(_enumConstants==null){
-			_enumConstants = new Ocllib.OrderedSet<EnumConstantDeclaration>(EnumConstantDeclaration.class, this, Java_PackageImpl.ENUMDECLARATION_ENUMCONSTANTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENUMDECLARATION_ENUMCONSTANTS);
+			_enumConstants = new com.crossecore.ocl.OrderedSet<EnumConstantDeclaration>(EnumConstantDeclaration.class, this, Java_PackageImpl.ENUM_DECLARATION__ENUM_CONSTANTS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ENUM_DECLARATION__ENUM_CONSTANTS);
 		}
 		return _enumConstants;
 	
@@ -30,7 +30,7 @@ extends AbstractTypeDeclarationImpl implements EnumDeclaration
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ENUMDECLARATION_ENUMCONSTANTS:
+			case Java_PackageImpl.ENUM_DECLARATION__ENUM_CONSTANTS:
 				return getEnumConstants();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -39,7 +39,7 @@ extends AbstractTypeDeclarationImpl implements EnumDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ENUMDECLARATION_ENUMCONSTANTS:
+			case Java_PackageImpl.ENUM_DECLARATION__ENUM_CONSTANTS:
 				getEnumConstants().clear();
 				getEnumConstants().addAll((java.util.Collection<? extends EnumConstantDeclaration>) newValue);
 				return;
@@ -50,7 +50,7 @@ extends AbstractTypeDeclarationImpl implements EnumDeclaration
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ENUMDECLARATION_ENUMCONSTANTS:
+			case Java_PackageImpl.ENUM_DECLARATION__ENUM_CONSTANTS:
 				return _enumConstants != null && !_enumConstants.isEmpty();
 		}
 		return super.eIsSet(featureID);

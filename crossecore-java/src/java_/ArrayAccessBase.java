@@ -20,10 +20,10 @@ extends ExpressionImpl implements ArrayAccess
 		if (value != _array) {
 			NotificationChain msgs = null;
 			if (_array != null){
-				msgs = ((InternalEObject)_array).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYACCESS_ARRAY, null, msgs);
+				msgs = ((InternalEObject)_array).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_ACCESS__ARRAY, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYACCESS_ARRAY, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_ACCESS__ARRAY, null, msgs);
 			}
 			msgs = basicSetArray(value, msgs);
 			if (msgs != null) {
@@ -31,7 +31,7 @@ extends ExpressionImpl implements ArrayAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAYACCESS_ARRAY , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAY_ACCESS__ARRAY , value, value));
 		}
 	}
 	private Expression _index;
@@ -46,10 +46,10 @@ extends ExpressionImpl implements ArrayAccess
 		if (value != _index) {
 			NotificationChain msgs = null;
 			if (_index != null){
-				msgs = ((InternalEObject)_index).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYACCESS_INDEX, null, msgs);
+				msgs = ((InternalEObject)_index).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_ACCESS__INDEX, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYACCESS_INDEX, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_ACCESS__INDEX, null, msgs);
 			}
 			msgs = basicSetIndex(value, msgs);
 			if (msgs != null) {
@@ -57,7 +57,7 @@ extends ExpressionImpl implements ArrayAccess
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAYACCESS_INDEX , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.ARRAY_ACCESS__INDEX , value, value));
 		}
 	}
 
@@ -72,7 +72,7 @@ extends ExpressionImpl implements ArrayAccess
 		Expression oldobj = _array;
 		_array = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYACCESS_ARRAY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAY_ACCESS__ARRAY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -86,7 +86,7 @@ extends ExpressionImpl implements ArrayAccess
 		Expression oldobj = _index;
 		_index = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAYACCESS_INDEX, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.ARRAY_ACCESS__INDEX, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -100,9 +100,9 @@ extends ExpressionImpl implements ArrayAccess
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYACCESS_ARRAY:
+			case Java_PackageImpl.ARRAY_ACCESS__ARRAY:
 				return getArray();
-			case Java_PackageImpl.ARRAYACCESS_INDEX:
+			case Java_PackageImpl.ARRAY_ACCESS__INDEX:
 				return getIndex();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,10 +111,10 @@ extends ExpressionImpl implements ArrayAccess
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYACCESS_ARRAY:
+			case Java_PackageImpl.ARRAY_ACCESS__ARRAY:
 				setArray((Expression) newValue);
 				return;
-			case Java_PackageImpl.ARRAYACCESS_INDEX:
+			case Java_PackageImpl.ARRAY_ACCESS__INDEX:
 				setIndex((Expression) newValue);
 				return;
 		}
@@ -124,9 +124,9 @@ extends ExpressionImpl implements ArrayAccess
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYACCESS_ARRAY:
+			case Java_PackageImpl.ARRAY_ACCESS__ARRAY:
 				return _array != null; //single != null;
-			case Java_PackageImpl.ARRAYACCESS_INDEX:
+			case Java_PackageImpl.ARRAY_ACCESS__INDEX:
 				return _index != null; //single != null;
 		}
 		return super.eIsSet(featureID);

@@ -19,7 +19,7 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 		int oldValue = _extraArrayDimensions;
 		_extraArrayDimensions = value;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.METHODDECLARATION_EXTRAARRAYDIMENSIONS, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Java_PackageImpl.METHOD_DECLARATION__EXTRA_ARRAY_DIMENSIONS, oldValue, value));
 		
 	}
 	
@@ -37,10 +37,10 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 		if (value != _returnType) {
 			NotificationChain msgs = null;
 			if (_returnType != null){
-				msgs = ((InternalEObject)_returnType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHODDECLARATION_RETURNTYPE, null, msgs);
+				msgs = ((InternalEObject)_returnType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHOD_DECLARATION__RETURN_TYPE, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHODDECLARATION_RETURNTYPE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.METHOD_DECLARATION__RETURN_TYPE, null, msgs);
 			}
 			msgs = basicSetReturnType(value, msgs);
 			if (msgs != null) {
@@ -48,7 +48,7 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHODDECLARATION_RETURNTYPE , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHOD_DECLARATION__RETURN_TYPE , value, value));
 		}
 	}
 	private MethodDeclaration _redefinedMethodDeclaration;
@@ -63,10 +63,10 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 		if (value != _redefinedMethodDeclaration) {
 			NotificationChain msgs = null;
 			if (_redefinedMethodDeclaration != null){
-				msgs = ((InternalEObject)_redefinedMethodDeclaration).eInverseRemove(this, Java_PackageImpl.METHODDECLARATION_REDEFINITIONS, MethodDeclaration.class, msgs);
+				msgs = ((InternalEObject)_redefinedMethodDeclaration).eInverseRemove(this, Java_PackageImpl.METHOD_DECLARATION__REDEFINITIONS, MethodDeclaration.class, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.METHODDECLARATION_REDEFINITIONS, MethodDeclaration.class, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, Java_PackageImpl.METHOD_DECLARATION__REDEFINITIONS, MethodDeclaration.class, msgs);
 			}
 			msgs = basicSetRedefinedMethodDeclaration(value, msgs);
 			if (msgs != null) {
@@ -74,15 +74,15 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION , value, value));
 		}
 	}
-	private Ocllib.Set<MethodDeclaration> _redefinitions;
+	private com.crossecore.ocl.Set<MethodDeclaration> _redefinitions;
 	
-	public Ocllib.Set<MethodDeclaration> getRedefinitions()
+	public com.crossecore.ocl.Set<MethodDeclaration> getRedefinitions()
 	{
 		if(_redefinitions==null){
-			_redefinitions = new Ocllib.Set<MethodDeclaration>(MethodDeclaration.class, this, Java_PackageImpl.METHODDECLARATION_REDEFINITIONS, Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION);
+			_redefinitions = new com.crossecore.ocl.Set<MethodDeclaration>(MethodDeclaration.class, this, Java_PackageImpl.METHOD_DECLARATION__REDEFINITIONS, Java_PackageImpl.METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION);
 		}
 		return _redefinitions;
 	
@@ -97,13 +97,13 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
-				return getRedefinitions().basicAdd((MethodDeclaration)otherEnd, msgs);
-			case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
+			case Java_PackageImpl.METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION:
 				if (_redefinedMethodDeclaration != null){
-					msgs = ((InternalEObject)_redefinedMethodDeclaration).eInverseRemove(this, Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION, MethodDeclaration.class, msgs);
+					msgs = ((InternalEObject)_redefinedMethodDeclaration).eInverseRemove(this, Java_PackageImpl.METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION, MethodDeclaration.class, msgs);
 				}
 				return basicSetRedefinedMethodDeclaration((MethodDeclaration)otherEnd, msgs);
+			case Java_PackageImpl.METHOD_DECLARATION__REDEFINITIONS:
+				return getRedefinitions().basicAdd((MethodDeclaration)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -111,19 +111,19 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
-				return getRedefinitions().basicRemove((MethodDeclaration)otherEnd, msgs);
-			case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
+			case Java_PackageImpl.METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION:
 				return basicSetRedefinedMethodDeclaration(null, msgs);
+			case Java_PackageImpl.METHOD_DECLARATION__REDEFINITIONS:
+				return getRedefinitions().basicRemove((MethodDeclaration)otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 	
-	public NotificationChain basicSetReturnType(TypeAccess newobj, NotificationChain msgs) {
-		TypeAccess oldobj = _returnType;
-		_returnType = newobj;
+	public NotificationChain basicSetRedefinedMethodDeclaration(MethodDeclaration newobj, NotificationChain msgs) {
+		MethodDeclaration oldobj = _redefinedMethodDeclaration;
+		_redefinedMethodDeclaration = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHODDECLARATION_RETURNTYPE, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -133,11 +133,11 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 		}
 		return msgs;
 	}
-	public NotificationChain basicSetRedefinedMethodDeclaration(MethodDeclaration newobj, NotificationChain msgs) {
-		MethodDeclaration oldobj = _redefinedMethodDeclaration;
-		_redefinedMethodDeclaration = newobj;
+	public NotificationChain basicSetReturnType(TypeAccess newobj, NotificationChain msgs) {
+		TypeAccess oldobj = _returnType;
+		_returnType = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.METHOD_DECLARATION__RETURN_TYPE, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -151,13 +151,13 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODDECLARATION_EXTRAARRAYDIMENSIONS:
+			case Java_PackageImpl.METHOD_DECLARATION__EXTRA_ARRAY_DIMENSIONS:
 				return getExtraArrayDimensions();
-			case Java_PackageImpl.METHODDECLARATION_RETURNTYPE:
+			case Java_PackageImpl.METHOD_DECLARATION__RETURN_TYPE:
 				return getReturnType();
-			case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
+			case Java_PackageImpl.METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION:
 				return getRedefinedMethodDeclaration();
-			case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
+			case Java_PackageImpl.METHOD_DECLARATION__REDEFINITIONS:
 				return getRedefinitions();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -166,16 +166,16 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODDECLARATION_EXTRAARRAYDIMENSIONS:
+			case Java_PackageImpl.METHOD_DECLARATION__EXTRA_ARRAY_DIMENSIONS:
 				setExtraArrayDimensions((int) newValue);
 				return;
-			case Java_PackageImpl.METHODDECLARATION_RETURNTYPE:
+			case Java_PackageImpl.METHOD_DECLARATION__RETURN_TYPE:
 				setReturnType((TypeAccess) newValue);
 				return;
-			case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
+			case Java_PackageImpl.METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION:
 				setRedefinedMethodDeclaration((MethodDeclaration) newValue);
 				return;
-			case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
+			case Java_PackageImpl.METHOD_DECLARATION__REDEFINITIONS:
 				getRedefinitions().clear();
 				getRedefinitions().addAll((java.util.Collection<? extends MethodDeclaration>) newValue);
 				return;
@@ -186,13 +186,13 @@ extends AbstractMethodDeclarationImpl implements MethodDeclaration
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.METHODDECLARATION_EXTRAARRAYDIMENSIONS:
+			case Java_PackageImpl.METHOD_DECLARATION__EXTRA_ARRAY_DIMENSIONS:
 				return _extraArrayDimensions != EXTRAARRAYDIMENSIONS_EDEFAULT;
-			case Java_PackageImpl.METHODDECLARATION_RETURNTYPE:
+			case Java_PackageImpl.METHOD_DECLARATION__RETURN_TYPE:
 				return _returnType != null; //single != null;
-			case Java_PackageImpl.METHODDECLARATION_REDEFINEDMETHODDECLARATION:
+			case Java_PackageImpl.METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION:
 				return getRedefinedMethodDeclaration() != null; //single, volatile
-			case Java_PackageImpl.METHODDECLARATION_REDEFINITIONS:
+			case Java_PackageImpl.METHOD_DECLARATION__REDEFINITIONS:
 				return getRedefinitions().isEmpty(); //many, volatile
 		}
 		return super.eIsSet(featureID);

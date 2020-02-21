@@ -3,23 +3,23 @@ public interface ParameterizedType
  extends Type
 {
 	
-	public static Ocllib.QuickSet<ParameterizedType> allInstances_ = new Ocllib.QuickSet<ParameterizedType>(ParameterizedType.class);
+	public static com.crossecore.ocl.QuickSet<ParameterizedType> allInstances_ = new com.crossecore.ocl.QuickSet<ParameterizedType>(ParameterizedType.class);
 	
 		
-	public static Ocllib.QuickSet<ParameterizedType> allInstances(){
+	public static com.crossecore.ocl.QuickSet<ParameterizedType> allInstances(){
 		
-		Ocllib.QuickSet<ParameterizedType> result = new Ocllib.QuickSet<ParameterizedType>(ParameterizedType.class);
+		com.crossecore.ocl.QuickSet<ParameterizedType> result = new com.crossecore.ocl.QuickSet<ParameterizedType>(ParameterizedType.class);
 		result.addAll(ParameterizedType.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<ParameterizedType> allInstances = new Ocllib.QuickSet<ParameterizedType>(ParameterizedType.class);
+	//public static com.crossecore.ocl.QuickSet<ParameterizedType> allInstances = new com.crossecore.ocl.QuickSet<ParameterizedType>(ParameterizedType.class);
 	
 	
 	TypeAccess getType();
 	void setType(TypeAccess value);
-	Ocllib.OrderedSet<TypeAccess> getTypeArguments();
+	com.crossecore.ocl.OrderedSet<TypeAccess> getTypeArguments();
 	
 }

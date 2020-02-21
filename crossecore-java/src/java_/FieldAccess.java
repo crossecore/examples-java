@@ -3,19 +3,19 @@ public interface FieldAccess
  extends Expression
 {
 	
-	public static Ocllib.QuickSet<FieldAccess> allInstances_ = new Ocllib.QuickSet<FieldAccess>(FieldAccess.class);
+	public static com.crossecore.ocl.QuickSet<FieldAccess> allInstances_ = new com.crossecore.ocl.QuickSet<FieldAccess>(FieldAccess.class);
 	
 		
-	public static Ocllib.QuickSet<FieldAccess> allInstances(){
+	public static com.crossecore.ocl.QuickSet<FieldAccess> allInstances(){
 		
-		Ocllib.QuickSet<FieldAccess> result = new Ocllib.QuickSet<FieldAccess>(FieldAccess.class);
+		com.crossecore.ocl.QuickSet<FieldAccess> result = new com.crossecore.ocl.QuickSet<FieldAccess>(FieldAccess.class);
 		result.addAll(FieldAccess.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<FieldAccess> allInstances = new Ocllib.QuickSet<FieldAccess>(FieldAccess.class);
+	//public static com.crossecore.ocl.QuickSet<FieldAccess> allInstances = new com.crossecore.ocl.QuickSet<FieldAccess>(FieldAccess.class);
 	
 	
 	SingleVariableAccess getField();

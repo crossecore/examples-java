@@ -3,19 +3,19 @@ public interface UnresolvedItemAccess
  extends Expression,NamespaceAccess
 {
 	
-	public static Ocllib.QuickSet<UnresolvedItemAccess> allInstances_ = new Ocllib.QuickSet<UnresolvedItemAccess>(UnresolvedItemAccess.class);
+	public static com.crossecore.ocl.QuickSet<UnresolvedItemAccess> allInstances_ = new com.crossecore.ocl.QuickSet<UnresolvedItemAccess>(UnresolvedItemAccess.class);
 	
 		
-	public static Ocllib.QuickSet<UnresolvedItemAccess> allInstances(){
+	public static com.crossecore.ocl.QuickSet<UnresolvedItemAccess> allInstances(){
 		
-		Ocllib.QuickSet<UnresolvedItemAccess> result = new Ocllib.QuickSet<UnresolvedItemAccess>(UnresolvedItemAccess.class);
+		com.crossecore.ocl.QuickSet<UnresolvedItemAccess> result = new com.crossecore.ocl.QuickSet<UnresolvedItemAccess>(UnresolvedItemAccess.class);
 		result.addAll(UnresolvedItemAccess.allInstances_);
 		
 		
 		return result;
 	}
 	
-	//public static Ocllib.QuickSet<UnresolvedItemAccess> allInstances = new Ocllib.QuickSet<UnresolvedItemAccess>(UnresolvedItemAccess.class);
+	//public static com.crossecore.ocl.QuickSet<UnresolvedItemAccess> allInstances = new com.crossecore.ocl.QuickSet<UnresolvedItemAccess>(UnresolvedItemAccess.class);
 	
 	
 	UnresolvedItem getElement();

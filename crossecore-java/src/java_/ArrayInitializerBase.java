@@ -8,12 +8,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ArrayInitializerBase 
 extends ExpressionImpl implements ArrayInitializer
 {
-	private Ocllib.OrderedSet<Expression> _expressions;
+	private com.crossecore.ocl.OrderedSet<Expression> _expressions;
 	
-	public Ocllib.OrderedSet<Expression> getExpressions()
+	public com.crossecore.ocl.OrderedSet<Expression> getExpressions()
 	{
 		if(_expressions==null){
-			_expressions = new Ocllib.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.ARRAYINITIALIZER_EXPRESSIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAYINITIALIZER_EXPRESSIONS);
+			_expressions = new com.crossecore.ocl.OrderedSet<Expression>(Expression.class, this, Java_PackageImpl.ARRAY_INITIALIZER__EXPRESSIONS, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.ARRAY_INITIALIZER__EXPRESSIONS);
 		}
 		return _expressions;
 	
@@ -30,7 +30,7 @@ extends ExpressionImpl implements ArrayInitializer
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYINITIALIZER_EXPRESSIONS:
+			case Java_PackageImpl.ARRAY_INITIALIZER__EXPRESSIONS:
 				return getExpressions();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -39,7 +39,7 @@ extends ExpressionImpl implements ArrayInitializer
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYINITIALIZER_EXPRESSIONS:
+			case Java_PackageImpl.ARRAY_INITIALIZER__EXPRESSIONS:
 				getExpressions().clear();
 				getExpressions().addAll((java.util.Collection<? extends Expression>) newValue);
 				return;
@@ -50,7 +50,7 @@ extends ExpressionImpl implements ArrayInitializer
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.ARRAYINITIALIZER_EXPRESSIONS:
+			case Java_PackageImpl.ARRAY_INITIALIZER__EXPRESSIONS:
 				return _expressions != null && !_expressions.isEmpty();
 		}
 		return super.eIsSet(featureID);

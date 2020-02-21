@@ -20,10 +20,10 @@ extends NamedElementImpl implements LabeledStatement
 		if (value != _body) {
 			NotificationChain msgs = null;
 			if (_body != null){
-				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.LABELEDSTATEMENT_BODY, null, msgs);
+				msgs = ((InternalEObject)_body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.LABELED_STATEMENT__BODY, null, msgs);
 			}
 			if (value != null){
-				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.LABELEDSTATEMENT_BODY, null, msgs);
+				msgs = ((InternalEObject)value).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Java_PackageImpl.LABELED_STATEMENT__BODY, null, msgs);
 			}
 			msgs = basicSetBody(value, msgs);
 			if (msgs != null) {
@@ -31,25 +31,25 @@ extends NamedElementImpl implements LabeledStatement
 			}
 		}
 		else if (eNotificationRequired()){
-			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.LABELEDSTATEMENT_BODY , value, value));
+			eNotify(new ENotificationImpl(this, NotificationImpl.SET,Java_PackageImpl.LABELED_STATEMENT__BODY , value, value));
 		}
 	}
-	private Ocllib.Set<BreakStatement> _usagesInBreakStatements;
+	private com.crossecore.ocl.Set<BreakStatement> _usagesInBreakStatements;
 	
-	public Ocllib.Set<BreakStatement> getUsagesInBreakStatements()
+	public com.crossecore.ocl.Set<BreakStatement> getUsagesInBreakStatements()
 	{
 		if(_usagesInBreakStatements==null){
-			_usagesInBreakStatements = new Ocllib.Set<BreakStatement>(BreakStatement.class, this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS, Java_PackageImpl.BREAKSTATEMENT_LABEL);
+			_usagesInBreakStatements = new com.crossecore.ocl.Set<BreakStatement>(BreakStatement.class, this, Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS, Java_PackageImpl.BREAK_STATEMENT__LABEL);
 		}
 		return _usagesInBreakStatements;
 	
 	}
-	private Ocllib.Set<ContinueStatement> _usagesInContinueStatements;
+	private com.crossecore.ocl.Set<ContinueStatement> _usagesInContinueStatements;
 	
-	public Ocllib.Set<ContinueStatement> getUsagesInContinueStatements()
+	public com.crossecore.ocl.Set<ContinueStatement> getUsagesInContinueStatements()
 	{
 		if(_usagesInContinueStatements==null){
-			_usagesInContinueStatements = new Ocllib.Set<ContinueStatement>(ContinueStatement.class, this, Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS, Java_PackageImpl.CONTINUESTATEMENT_LABEL);
+			_usagesInContinueStatements = new com.crossecore.ocl.Set<ContinueStatement>(ContinueStatement.class, this, Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS, Java_PackageImpl.CONTINUE_STATEMENT__LABEL);
 		}
 		return _usagesInContinueStatements;
 	
@@ -64,9 +64,9 @@ extends NamedElementImpl implements LabeledStatement
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
+			case Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS:
 				return getUsagesInBreakStatements().basicAdd((BreakStatement)otherEnd, msgs);
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
+			case Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS:
 				return getUsagesInContinueStatements().basicAdd((ContinueStatement)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -75,9 +75,9 @@ extends NamedElementImpl implements LabeledStatement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
+			case Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS:
 				return getUsagesInBreakStatements().basicRemove((BreakStatement)otherEnd, msgs);
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
+			case Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS:
 				return getUsagesInContinueStatements().basicRemove((ContinueStatement)otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -87,7 +87,7 @@ extends NamedElementImpl implements LabeledStatement
 		Statement oldobj = _body;
 		_body = newobj;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.LABELEDSTATEMENT_BODY, oldobj, newobj);
+			ENotificationImpl notification = new ENotificationImpl(this, NotificationImpl.SET, Java_PackageImpl.LABELED_STATEMENT__BODY, oldobj, newobj);
 			if (msgs == null){
 				msgs = notification;
 			}
@@ -101,11 +101,11 @@ extends NamedElementImpl implements LabeledStatement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Java_PackageImpl.LABELEDSTATEMENT_BODY:
+			case Java_PackageImpl.LABELED_STATEMENT__BODY:
 				return getBody();
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
+			case Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS:
 				return getUsagesInBreakStatements();
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
+			case Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS:
 				return getUsagesInContinueStatements();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -114,14 +114,14 @@ extends NamedElementImpl implements LabeledStatement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Java_PackageImpl.LABELEDSTATEMENT_BODY:
+			case Java_PackageImpl.LABELED_STATEMENT__BODY:
 				setBody((Statement) newValue);
 				return;
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
+			case Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS:
 				getUsagesInBreakStatements().clear();
 				getUsagesInBreakStatements().addAll((java.util.Collection<? extends BreakStatement>) newValue);
 				return;
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
+			case Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS:
 				getUsagesInContinueStatements().clear();
 				getUsagesInContinueStatements().addAll((java.util.Collection<? extends ContinueStatement>) newValue);
 				return;
@@ -132,11 +132,11 @@ extends NamedElementImpl implements LabeledStatement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Java_PackageImpl.LABELEDSTATEMENT_BODY:
+			case Java_PackageImpl.LABELED_STATEMENT__BODY:
 				return _body != null; //single != null;
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINBREAKSTATEMENTS:
+			case Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS:
 				return getUsagesInBreakStatements().isEmpty(); //many, volatile
-			case Java_PackageImpl.LABELEDSTATEMENT_USAGESINCONTINUESTATEMENTS:
+			case Java_PackageImpl.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS:
 				return getUsagesInContinueStatements().isEmpty(); //many, volatile
 		}
 		return super.eIsSet(featureID);
